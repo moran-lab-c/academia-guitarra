@@ -17,7 +17,7 @@ import { enlaceItem, fecha, plural } from '../componentes/comunes.js';
 // La sesión en curso vive aquí (no en la pantalla), para que no se pierda al volver a dibujar. El programa sale siempre
 // de la preferencia (carril, Obras, Progreso y este selector la cambian): si cambia, la sesión se rehace.
 const sesion = { plan: null, id: null, abierto: null, hechos: new Set(), terminada: false, detalle: null };
-const ETIQUETA = { encargo: ['Encargo', 'encargo'], comprobacion: ['Repaso en frío', 'neutro'], refuerzo: ['Refuerzo', 'refuerzo'], paso: ['Ruta', 'neutro'], obra: ['Obra', 'neutro'], pasada: ['Repertorio', 'neutro'] };
+const ETIQUETA = { encargo: ['Encargo', 'encargo'], comprobacion: ['Repaso en frío', 'neutro'], refuerzo: ['Refuerzo', 'refuerzo'], paso: ['Ruta', 'neutro'], obra: ['Obra', 'neutro'], pasada: ['Repertorio', 'neutro'], libre: ['Opcional', 'neutro'] };
 const dos = n => String(n).padStart(2, '0');
 
 export default function hoy({ min } = {}) {
@@ -100,9 +100,9 @@ function bloque(c, b, desde) {
         h('div', { class: 'fila-entre' }, h('span', null, enlaceItem(c.cat.porId.get(separar(x.id)[0])), ` · ${x.motivo}`),
           sesion.hechos.has(x.id) ? h('span', { class: 'suave' }, 'Registrado') : h('button', { class: 'btn btn-peq', onclick: abrir(x.id) }, 'Registrar')),
         sesion.abierto === x.id && formularioRegistro(c.cat.porId.get(separar(x.id)[0]), { ...extra(b), modo: 'comprobacion', minutos: x.minutos, seccion: separar(x.id)[1] }, guardado(x.id)))),
-      !b.items && !['pausa', 'calentamiento'].includes(b.tipo) && !hecho && h('button', { class: 'btn btn-borde', onclick: abrir(b.id) }, 'Registrar este bloque'),
+      !b.items && !['pausa', 'calentamiento', 'libre'].includes(b.tipo) && !hecho && h('button', { class: 'btn btn-borde', onclick: abrir(b.id) }, 'Registrar este bloque'),
       !b.items && sesion.abierto === b.id && formularioRegistro(item?.tipo === 'competencia' || item?.tipo === 'obra' ? item : null, { ...extra(b), modo: b.modo === 'comprobacion' ? 'comprobacion' : 'trabajo', seccion: b.seccion }, guardado(b.id)),
-      ['pausa', 'calentamiento'].includes(b.tipo) && !hecho && h('button', { class: 'btn btn-borde', onclick: () => { sesion.hechos.add(b.id); repintar(); } }, 'Hecho')));
+      ['pausa', 'calentamiento', 'libre'].includes(b.tipo) && !hecho && h('button', { class: 'btn btn-borde', onclick: () => { sesion.hechos.add(b.id); repintar(); } }, 'Hecho')));
 }
 
 const abrir = clave => () => { sesion.abierto = sesion.abierto === clave ? null : clave; repintar(); };
@@ -121,7 +121,7 @@ function notacionDe(c, b) {
 
 function reparto(p) {
   const por = new Map();
-  for (const b of p.bloques) if (!['pausa', 'calentamiento', 'comprobacion'].includes(b.tipo)) {
+  for (const b of p.bloques) if (!['pausa', 'calentamiento', 'comprobacion', 'libre'].includes(b.tipo)) {
     const a = ['repertorio', 'fl-toque'].includes(b.area) ? 'repertorio' : b.area;
     por.set(a, (por.get(a) ?? 0) + b.minutos);
   }
@@ -148,7 +148,7 @@ function comoSeHaHecho(p) {
     ['Lo que necesita la obra', hay('refuerzo') ? `un refuerzo justo antes de tocarla.${yMas(nc.refuerzos, 'refuerzo', 'refuerzos')}` : nc.refuerzos ? noCabe(nc.refuerzos, 'algo flojo que reforzar', 'cosas flojas que reforzar') : 'nada flojo que reforzar.'],
     ['Puntos flojos', p.bloques.some(b => b.motivos?.some(m => /por detrás/.test(m))) ? 'el área que va por detrás recibe más tiempo, sin frenar nada.' : nc.flojos ? noCabe(nc.flojos, 'un área por detrás', 'áreas por detrás') : 'ningún área va por detrás.'],
     ['Resto y repertorio', obra ? `${obra.modo === 'mantenimiento' ? 'repertorio que ya tocas, para que no se pierda' : obra.modo === 'activo' ? 'repertorio del curso que aún no está aprendido' : obra.modo === 'recuperar' ? 'recuperar lo que falló en una obra' : obra.paso ? 'la obra de tu tramo' : 'tu obra en estudio'}${hay('pasada') ? ' y una pasada para acabar' : ''}.` : 'lo que queda del curso.'],
-    ['Tiempo', `${p.minutos} minutos en ${plural(p.bloques.length, 'bloque')}.`],
+    ['Tiempo', `${p.minutos} minutos en ${plural(p.bloques.length, 'bloque')}${hay('libre') ? `; ${plural(de('libre').minutos, 'minuto')} de tiempo disponible, opcional: no hay nada más que toque hoy` : ''}.`],
   ];
   return h('div', { class: 'tarjeta pila-s' },
     h('div', { class: 'rotulo' }, 'CÓMO SE HA HECHO ESTA SESIÓN'),

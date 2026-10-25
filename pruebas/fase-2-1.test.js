@@ -360,9 +360,11 @@ test('Cobertura · un área abandonada nunca adelanta al paso actual, a la obra 
 });
 
 // ───────────────────────────── Obra final y cierre del curso (decisión 5)
-test('Obra final · ni una lectura inicial ni una pasada aislada la cierran; entera dos veces seguidas de memoria sí, sin exigir grabación ni consolidación', () => {
+test('Obra final · una pasada válida (entera, de memoria, todo bien) la cierra si su preparación está hecha; una lectura no, y no la consolida', () => {
   const entera = (fecha, extra = {}) => practica(LAGRIMA, fecha, { calidad: BIEN, pasadas: 1, ayuda: 'notacion', ...extra });
-  const leyendo = ctxDe({ eventos: [entera('2026-11-01')], hoy: '2026-11-01' });
+  const preparacion = hecho('comp:int.pieza-sin-parar', '2026-10-31'); // con la obra entera, la preparación del cierre
+  const final = eventos => ctxDe({ eventos, hoy: '2026-11-01' }).rutaActual('clasica').final;
+  const leyendo = ctxDe({ eventos: [preparacion, entera('2026-11-01')], hoy: '2026-11-01' });
   const f = leyendo.rutaActual('clasica').final;
   assert.equal(estadoObra(leyendo, LAGRIMA).clave, 'aprendida'); // primera realización, como obra
   assert.notEqual(f.estado, 'hecho');
@@ -370,31 +372,54 @@ test('Obra final · ni una lectura inicial ni una pasada aislada la cierran; ent
   assert.equal(f.progreso.aprendida, false);
   assert.deepEqual(f.progreso.requisitos, [{ id: 'memoria', cumplido: false, exigible: true }, { id: 'grabacion', cumplido: false, exigible: false }]);
   // «De memoria» marcado, pero leyendo: no cuenta.
-  const trampa = ctxDe({ eventos: [entera('2026-11-01', { calidad: { ...BIEN, memoria: 'bien' } })], hoy: '2026-11-01' });
-  assert.equal(trampa.rutaActual('clasica').final.progreso.aprendida, false);
-  // Una sola pasada, aunque sea de memoria y sin fallos, es una pasada aislada: no la cierra.
-  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 2 };
-  const aislada = ctxDe({ eventos: [entera('2026-11-01', { ...memoria, pasadas: 1 })], hoy: '2026-11-01' }).rutaActual('clasica').final;
-  assert.equal(aislada.progreso.aprendida, false);
-  assert.notEqual(aislada.estado, 'hecho');
-  // Entera dos veces seguidas de memoria, sin grabar: aprendida con requisitos (la grabación es opcional por ahora); no
-  // consolidada.
-  const aprendida = ctxDe({ eventos: [entera('2026-11-01', memoria)], hoy: '2026-11-01' }).rutaActual('clasica').final;
+  assert.equal(final([preparacion, entera('2026-11-01', { calidad: { ...BIEN, memoria: 'bien' } })]).progreso.aprendida, false);
+  // Una pasada válida de memoria, pero sin la preparación del tramo de cierre: todavía no.
+  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
+  const sinPreparar = final([entera('2026-11-01', memoria)]);
+  assert.equal(sinPreparar.progreso.preparada, false);
+  assert.equal(sinPreparar.progreso.aprendida, false);
+  // Con un aspecto «con fallos» no es válida.
+  assert.equal(final([preparacion, entera('2026-11-01', { ...memoria, calidad: { ...memoria.calidad, dinamica: 'fallos' } })]).progreso.aprendida, false);
+  // Hecha la preparación, una sola pasada válida basta (por defecto, 1): aprendida con requisitos, sin grabar.
+  const aprendida = final([preparacion, entera('2026-11-01', memoria)]);
+  assert.equal(aprendida.progreso.pasadas, 1);
+  assert.equal(aprendida.progreso.aprendida, true);
   assert.equal(aprendida.estado, 'hecho');
+  // Aprendida no es consolidada ni dominada.
   assert.equal(aprendida.progreso.consolidada, false);
+  assert.equal(aprendida.progreso.dominada, false);
   // La grabación, si la hay, queda como evidencia.
-  const grabada = ctxDe({ eventos: [entera('2026-11-01', { ...memoria, grabacion: true })], hoy: '2026-11-01' }).rutaActual('clasica').final;
-  assert.equal(grabada.progreso.requisitos[1].cumplido, true);
+  assert.equal(final([preparacion, entera('2026-11-01', { ...memoria, grabacion: true })]).progreso.requisitos[1].cumplido, true);
   // Consolidada solo tras una comprobación en frío días después, también de memoria.
-  const consolidada = ctxDe({ eventos: [entera('2026-11-01', memoria), practica(LAGRIMA, '2026-11-05', { ...memoria, modo: 'comprobacion', pasadas: 1 })], hoy: '2026-11-05' }).rutaActual('clasica').final;
+  const consolidada = ctxDe({ eventos: [preparacion, entera('2026-11-01', memoria), practica(LAGRIMA, '2026-11-05', { ...memoria, modo: 'comprobacion' })], hoy: '2026-11-05' }).rutaActual('clasica').final;
   assert.equal(consolidada.progreso.consolidada, true);
   assert.equal(consolidada.progreso.dominada, false);
+});
+
+test('Obra final · el número de pasadas lo puede ajustar el profesor (por defecto, 1) y la lógica no impone ningún otro mínimo', () => {
+  const memoria = pasadas => practica(LAGRIMA, '2026-11-01', { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas });
+  const preparacion = hecho('comp:int.pieza-sin-parar', '2026-10-31');
+  const conAjuste = (pasadas, eventos) => {
+    const estado = estadoInicial();
+    if (pasadas != null) estado.ajustes[LAGRIMA] = { pasadas, por: 'profesor', motivo: 'prueba' };
+    return ctxDe({ estado, eventos: [preparacion, ...eventos], hoy: '2026-11-01' }).rutaActual('clasica').final.progreso;
+  };
+  assert.equal(conAjuste(null, [memoria(1)]).pasadas, 1); // sin ajuste: 1
+  assert.equal(conAjuste(null, [memoria(1)]).aprendida, true);
+  // El profesor pide 2 pasadas seguidas: una no basta, dos sí, y se dice quién lo pidió.
+  assert.equal(conAjuste(2, [memoria(1)]).aprendida, false);
+  const dos = conAjuste(2, [memoria(2)]);
+  assert.deepEqual([dos.aprendida, dos.pasadas, dos.ajustadoPor], [true, 2, 'profesor']);
+  assert.equal(conAjuste(3, [memoria(2)]).aprendida, false);
+  // El profesor pide 1: se respeta (no hay un mínimo de 2 por debajo de su ajuste).
+  const una = conAjuste(1, [memoria(1)]);
+  assert.deepEqual([una.aprendida, una.pasadas], [true, 1]);
 });
 
 test('Obra final · con todo el curso hecho, «aprendida con requisitos» cierra el curso aunque no esté consolidada', () => {
   // Un curso 1 sin tramos en borrador (solo para esta prueba): tramos 1 y 2, cierre y obra final.
   const sinBorradores = entidadesReales().filter(e => !['tramo:c1.t3', 'tramo:c1.t4', 'tramo:c1.t5'].includes(e.id));
-  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 2 };
+  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
   const eventos = [...tramo1('2026-10-01'), ...tramo2('2026-10-01'), ...[...COMPS_T1, `${LAGRIMA}#A`].map(k => frioOk(k, '2026-10-05')), ...cierreT2('2026-10-05'),
     hecho('comp:int.pieza-sin-parar', '2026-10-06'), practica(LAGRIMA, '2026-10-06', memoria)];
   const ctx = ctxCon(sinBorradores, { eventos, hoy: '2026-10-07' });
@@ -509,8 +534,8 @@ test('Repertorio en espera · entra el repertorio activo del curso (la obra fina
     assert.ok(!plan.bloques.some(b => b.item === SOR && b.tipo !== 'comprobacion' && b.area !== 'lectura'), `${m}′: Sor como repertorio`);
   }
   // Con la obra final ya aprendida con sus requisitos, se consolida lo aprendido del curso (no Sor).
-  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 2 };
-  const plan = planificar(ctxDe({ eventos: [...finDisponible(), practica(LAGRIMA, '2026-10-06', memoria)], hoy: '2026-10-07' }), { minutos: 60 });
+  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
+  const plan = planificar(ctxDe({ eventos: [...finDisponible(), hecho('comp:int.pieza-sin-parar', '2026-10-06'), practica(LAGRIMA, '2026-10-06', memoria)], hoy: '2026-10-07' }), { minutos: 60 });
   const rep = plan.bloques.find(b => b.tipo === 'obra');
   assert.ok(rep, plan.bloques.map(b => `${b.tipo}:${b.item}`).join(' · '));
   assert.equal(rep.item, LAGRIMA);
@@ -538,4 +563,46 @@ test('Repertorio en espera · varios días: el repertorio no desaparece (tampoco
   assert.ok(comprobadaYTrabajada > 0, 'algún día se comprueba Lágrima en frío y después se trabaja');
   assert.ok((suma.repertorio ?? 0) / total >= 0.25, `repertorio ${Math.round(100 * (suma.repertorio ?? 0) / total)} %`);
   assert.ok((suma.lectura ?? 0) / total <= 0.3, `lectura ${Math.round(100 * (suma.lectura ?? 0) / total)} %`);
+});
+
+// ───────────────────────────── Sesiones largas: trabajo, pasada y tiempo disponible
+test('Sesiones largas · con solo Lágrima por hacer, 90 minutos no son un bloque gigante: trabajo de unos 25 como mucho, pasada de lo que dura la obra, vuelta tras la pausa y el resto como tiempo disponible', () => {
+  const sesiones = practicarDias(finDisponible(), 90, 30, '2026-10-07');
+  const pasadaLagrima = Math.max(5, Math.ceil(cat.porId.get(LAGRIMA).duracionMin.valor) + 2);
+  let libres = 0, vueltas = 0;
+  for (const plan of sesiones) {
+    const donde = plan.bloques.map(b => `${b.tipo}:${b.item ?? ''}(${b.minutos})`).join(' · ');
+    assert.equal(plan.total, 90, donde);
+    // Ningún bloque de obra pasa de unos 25 minutos seguidos (25 y, como mucho, unos minutos sueltos).
+    assert.ok(plan.bloques.filter(b => b.tipo === 'obra').every(b => b.minutos <= 29), `bloque excesivo · ${donde}`);
+    // La pasada dura lo que la obra y un margen, no lo que sobre.
+    for (const p of plan.bloques.filter(b => b.tipo === 'pasada' && b.item === LAGRIMA)) assert.equal(p.minutos, pasadaLagrima, donde);
+    // La vuelta a la obra es otro bloque, después de una pausa o de otro bloque.
+    for (const v of plan.bloques.filter(b => b.vuelta)) {
+      const i = plan.bloques.indexOf(v);
+      assert.ok(plan.bloques[i - 1].item !== v.item || plan.bloques[i - 1].tipo === 'pausa', `vuelta pegada · ${donde}`);
+      assert.ok(plan.bloques.findIndex(b => b.tipo === 'obra' && b.item === v.item && !b.vuelta) < i, donde);
+      vueltas++;
+    }
+    // Lo que sobra no se rellena: tiempo disponible, opcional y sin contenido.
+    const libre = plan.bloques.find(b => b.tipo === 'libre');
+    if (libre) {
+      libres++;
+      assert.ok(!libre.item && /Opcional/.test(libre.paraQue) && /Tiempo disponible/.test(libre.titulo), donde);
+      assert.equal(plan.bloques.at(-1), libre, donde);
+      const lagrima = plan.bloques.filter(b => b.item === LAGRIMA && b.tipo !== 'comprobacion').reduce((s, b) => s + b.minutos, 0);
+      assert.ok(lagrima <= 2 * 29 + pasadaLagrima, `${lagrima} min de Lágrima · ${donde}`);
+    }
+  }
+  assert.ok(vueltas > 0, 'la obra vuelve tras la pausa en alguna sesión');
+  assert.ok(libres > 0, 'con todo lo disponible aprendido, queda tiempo disponible');
+});
+
+test('Sesiones largas · con candidatos de sobra no aparece tiempo disponible, y la pasada sigue durando lo que la obra', () => {
+  const ctx = ctxDe({ eventos: tramo1('2026-10-20'), hoy: '2026-10-22' });
+  for (const minutos of [20, 30, 45, 60, 90]) {
+    const plan = planificar(ctx, { minutos });
+    assert.ok(!plan.bloques.some(b => b.tipo === 'libre'), `${minutos}′`);
+    for (const p of plan.bloques.filter(b => b.tipo === 'pasada')) assert.equal(p.minutos, 5, `${minutos}′`);
+  }
 });

@@ -140,15 +140,18 @@ function enLaRuta(c, enRutas) {
       : h('p', { class: 'suave' }, 'Fuera de la ruta: para tocar por gusto o adelantar.'),
     enRutas.finalDe.map(f => {
       // Como obra final: primera realización, aprendida con sus requisitos, consolidada y dominada (el modelo de siempre).
-      const pf = progresoFinal(c, f.obra, f.requisitos);
+      // El de la ruta sabe si la preparación del tramo de cierre está hecha (sin ella no queda aprendida).
+      const pf = c.ruta?.(f.curso)?.final?.progreso ?? progresoFinal(c, f.obra, f.requisitos);
+      const pasadas = pf.pasadas > 1 ? ` (${pf.pasadas} pasadas seguidas${pf.ajustadoPor === 'profesor' ? ', como pide tu profesor' : ', según tu ajuste'})` : '';
       const marca = (ok, t) => h('li', { class: ok ? '' : 'suave' }, `${ok ? '✓' : '○'} ${t}`);
       return h('div', { class: 'pila-s' },
         h('p', { class: 'pequeno', style: 'margin:0' }, `★ Obra final del curso ${String(f.numero).padStart(2, '0')}: ${textoRequisitos(f.requisitos) ?? 'entera'}.`),
         h('ul', { class: 'lista-limpia pequeno' },
           marca(pf.primera, 'Primera realización (entera, como pida su criterio; puede ser leyendo)'),
-          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? 'De memoria, sin mirar: entera dos veces seguidas' : r.exigible ? 'Grabada' : 'Grabada (opcional por ahora: no se exige hasta que la grabación forme parte de la evaluación)')),
-          marca(pf.aprendida, 'Aprendida con sus requisitos: permite cerrar el curso'),
-          marca(pf.consolidada, 'Consolidada (en frío, días después): nivel posterior, no hace falta para pasar de curso'),
+          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? `De memoria, sin mirar: entera y con todos los aspectos bien${pasadas}` : r.exigible ? 'Grabada' : 'Grabada (opcional por ahora: no se exige hasta que la grabación forme parte de la evaluación)')),
+          marca(pf.preparada, 'Preparación del tramo de cierre hecha'),
+          marca(pf.aprendida, `Aprendida con sus requisitos: permite cerrar el curso${pf.pasadas > 1 ? '' : ' (basta una pasada válida)'}`),
+          marca(pf.consolidada, 'Consolidada (comprobaciones en frío, días después): nivel posterior, no hace falta para pasar de curso'),
           marca(pf.dominada, 'Dominada')));
     }));
 }

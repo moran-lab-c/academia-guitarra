@@ -306,27 +306,27 @@ const minuscula = t => (t ? t[0].toLowerCase() + t.slice(1) : t); // «Parte B»
 // La obra final con sus requisitos. Su progreso usa el modelo de siempre, con el criterio de la obra más lo que pide el
 // curso (p. ej., de memoria). Decisión de David (Fase 2.1):
 //   primera realización: la obra entera sale como pide su criterio normal (puede ser leyendo);
-//   aprendida con requisitos: sale con los requisitos exigibles (de memoria) y no como una pasada aislada, sino entera
-//     dos veces seguidas en el mismo intento (PASADAS_OBRA_FINAL) → la obra final queda hecha y permite cerrar el curso;
+//   aprendida con requisitos: hecha la preparación del tramo de cierre, una pasada válida de la obra entera, de memoria
+//     y con todos sus aspectos bien → la obra final queda hecha y permite cerrar el curso. Las pasadas son las de su
+//     criterio (1 por defecto) o las que ajuste el profesor: aquí no se impone ningún mínimo;
 //   consolidada: solidez 2 con esos requisitos (comprobaciones en frío días después): nivel posterior, no hace falta
 //     para pasar de curso;
 //   dominada: el «dominado» de siempre, con esos requisitos.
-// Una pasada leyendo, o una sola pasada aunque sea de memoria, no la cierra. La grabación es evidencia opcional («la he grabado») y no se exige hasta que forme
-// parte de la evaluación (Fase 5): se muestra, pero no bloquea.
+// Una pasada leyendo, o antes de la preparación, no la cierra; una pasada válida no la consolida. La grabación es
+// evidencia opcional («la he grabado») y no se exige hasta que forme parte de la evaluación (Fase 5): se muestra, pero
+// no bloquea.
 export const REQUISITOS_EXIGIBLES = ['memoria'];
-export const PASADAS_OBRA_FINAL = 2;
-// «de memoria, entera dos veces seguidas (grabada, opcional por ahora)»: los requisitos como se leen en la ruta y en la obra.
+// «de memoria (grabada, opcional por ahora)»: los requisitos como se leen en la ruta y en la obra.
 export function textoRequisitos(requisitos = []) {
-  const exigibles = requisitos.filter(r => REQUISITOS_EXIGIBLES.includes(r)).map(r => (r === 'memoria' ? 'de memoria, entera dos veces seguidas' : r));
+  const exigibles = requisitos.filter(r => REQUISITOS_EXIGIBLES.includes(r)).map(r => (r === 'memoria' ? 'de memoria' : r));
   const opcionales = requisitos.filter(r => !REQUISITOS_EXIGIBLES.includes(r)).map(r => (r === 'grabacion' ? 'grabada' : r));
   if (!exigibles.length && !opcionales.length) return null;
   return [exigibles.join(' y '), opcionales.length ? `(${opcionales.join(' y ')}, opcional por ahora)` : ''].filter(Boolean).join(' ');
 }
-export function progresoFinal(ctx, obraId, requisitos = []) {
+export function progresoFinal(ctx, obraId, requisitos = [], { preparada = false } = {}) {
   const obra = ctx.cat.porId.get(obraId);
-  const propio = ctx.estado.ajustes?.[obraId] || {};
-  const ajuste = { ...propio, ...(requisitos.includes('memoria') ? { memoria: true } : {}),
-    pasadas: Math.max(PASADAS_OBRA_FINAL, propio.pasadas ?? criterioDe(obra).pasadas) };
+  const propio = ctx.estado.ajustes?.[obraId];
+  const ajuste = { ...(propio || {}), ...(requisitos.includes('memoria') ? { memoria: true } : {}) };
   const crit = criterioDe(obra, ajuste);
   const eventos = ctx.eventos.filter(ev => ev.tipo === 'practica' && ev.item === obraId && !ev.seccion && !ev.fragmento);
   const intentos = intentosPorItem(eventos, ctx.cat, { [obraId]: ajuste }).get(obraId);
@@ -337,9 +337,9 @@ export function progresoFinal(ctx, obraId, requisitos = []) {
     grabacion: requisitos.includes('grabacion') ? okConRequisitos.some(ev => ev.grabacion === true) : null,
   };
   const requisitosOk = requisitos.filter(r => REQUISITOS_EXIGIBLES.includes(r)).every(r => cumple[r] !== false);
-  const aprendida = estaHecho(dom.estado) && requisitosOk;
+  const aprendida = preparada && estaHecho(dom.estado) && requisitosOk;
   return {
-    primera: estaHecho(ctx.estadoDe(obraId)), aprendida, consolidada: aprendida && dom.solidez >= 2, dominada: aprendida && dom.estado === 'dominado',
+    primera: estaHecho(ctx.estadoDe(obraId)), preparada, pasadas: crit.pasadas, ajustadoPor: propio?.pasadas != null ? (propio.por ?? 'yo') : null, aprendida, consolidada: aprendida && dom.solidez >= 2, dominada: aprendida && dom.estado === 'dominado',
     requisitos: requisitos.map(r => ({ id: r, cumplido: cumple[r], exigible: REQUISITOS_EXIGIBLES.includes(r) })), solidez: dom.solidez, estadoConRequisitos: dom.estado,
   };
 }
@@ -351,7 +351,7 @@ function finalDelCurso(ctx, curso, res) {
   const cierre = res.tramos.find(t => t.cierre);
   const preparada = cierre ? cierre.pasos.filter(p => p.tipo === 'preparacion').every(p => HECHO.has(p.estado)) : true;
   const requisitos = curso.obraFinal.requisitos || [];
-  const progreso = progresoFinal(ctx, obra.id, requisitos);
+  const progreso = progresoFinal(ctx, obra.id, requisitos, { preparada });
   // Recomendada solo cuando la ruta llega al tramo de cierre (no porque sus pasos se hayan hecho antes de tiempo).
   const estado = progreso.aprendida ? 'hecho' : cierre?.alcanzado ? (preparada ? 'recomendado' : 'proximo') : 'futuro';
   return {

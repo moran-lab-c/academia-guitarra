@@ -2,7 +2,7 @@
 
 Rama `revision-fase-2`, sin fusionar en `main`. Fecha: 25/10/2026.
 
-Este informe sustituye al de la primera ronda de la Fase 2.1 (commit 6e05f48). Recoge sus decisiones definitivas (1 a 7) y los puntos 8 a 13, y también la comprobación final de cierre: la lectura y *Lágrima* como obra final (apartado B, puntos 10 a 13).
+Este informe sustituye al de la primera ronda de la Fase 2.1 (commit 6e05f48). Recoge sus decisiones definitivas (1 a 7), los puntos 8 a 13, la comprobación final de la lectura y las dos últimas decisiones: el criterio de la obra final (opción 1) y las sesiones largas (apartado B, puntos 10 a 15).
 
 No he cambiado la arquitectura, no he añadido contenido y no he empezado la Fase 3: ni VexFlow, ni metrónomo, ni cursos nuevos, ni evaluación inicial completa.
 
@@ -84,12 +84,19 @@ Sus datos reales no están en el repositorio y no los he tocado. Todo se ha prob
 
 ### D5. Cierre del curso con la obra final «aprendida con requisitos»
 
-- **El curso se cierra cuando la obra final sale entera y de memoria dos veces seguidas en el mismo intento** (`PASADAS_OBRA_FINAL = 2`). *Consolidada* (estable en frío días después) y *dominada* son niveles posteriores: no hacen falta para pasar de curso.
+- **«Aprendida con requisitos» (decisión final, opción 1):** preparación del tramo de cierre hecha, obra entera, de memoria, los 8 aspectos en «bien» y una pasada válida.
+  - **Las pasadas** son un ajuste que puede cambiar el profesor. Por defecto es 1, y la lógica no impone ningún mínimo por encima de su ajuste.
+  - **Una pasada válida basta para aprendida**, pero no consolida. *Consolidada* (estable en frío días después) y *dominada* son niveles posteriores: no hacen falta para pasar de curso.
 - **La grabación es evidencia opcional.**
   - Al registrar se puede marcar «La he grabado (opcional)», pero no se exige.
   - En el contenido sigue declarada (`requisitos: ["memoria", "grabacion"]`) para cuando exista la infraestructura.
   - Lo exigible está en la lógica: `REQUISITOS_EXIGIBLES = ['memoria']`.
-- **Ni una lectura inicial ni una pasada aislada la cierran**, aunque esa pasada sea de memoria y sin fallos. Solo marcan la primera realización.
+- **Lo que no la cierra:**
+  - una lectura inicial;
+  - una pasada con algún aspecto «con fallos»;
+  - una pasada antes de completar la preparación.
+
+  Todas ellas solo marcan la primera realización.
 - **La obra final se recomienda solo cuando la ruta alcanza el tramo de cierre.**
 - **Código:** `progresoFinal` y `textoRequisitos` en `logica/ruta.js`; `web/vistas/obra.js` y `web/componentes/registro.js`.
 
@@ -156,9 +163,20 @@ Sus datos reales no están en el repositorio y no los he tocado. Todo se ha prob
 10. **Un paso de lectura podía ser el «paso actual».** Pasaba cuando el sitio actual era una obra, o con la ruta en espera: el paso de lectura recibía prioridad 1 y el peso de paso. A 20 minutos dejaba fuera la obra eje o el repertorio activo. Ahora un paso de lectura nunca ocupa el sitio del paso actual ni del segundo paso: entra por la lectura.
 11. **Sin obra principal ese día, el repertorio activo iba detrás de cualquier lectura** (6,5 frente a 3,5-6). A 30 minutos podía faltar hasta 6 días seguidos. Ahora va a 3,6, delante de la lectura atrasada (3,7), como ya ocurría en espera.
 12. **Mientras la ruta espera, el tope de la cobertura (5,5) quedaba detrás de la lectura (5).** Con 30 minutos, una lectura atrasada dejaba fuera la técnica 10-14 días seguidos. Ahora el tope es 4,9: detrás del repertorio activo y la consolidación, y delante de la lectura solo para un área olvidada de verdad. La racha sin técnica baja a 5-7 días.
-13. **Una sola pasada de memoria cerraba la obra final.** Ahora hacen falta dos pasadas completas seguidas, de memoria y sin ayuda, en un mismo intento. La consolidación sigue siendo la comprobación en frío días después.
+13. **Obra final.** Primero exigí dos pasadas seguidas. Por su decisión, queda la opción 1:
+    - una pasada válida, de memoria y con todo «bien»;
+    - la preparación del tramo de cierre hecha;
+    - las pasadas, como ajuste del profesor (1 por defecto), sin el antiguo `Math.max(2, …)`, que ignoraba ese ajuste.
 
-No he cambiado ningún peso. Los textos de la ficha de la obra, la pantalla Curso, el tramo de cierre y su paso de preparación dicen ahora «de memoria, entera dos veces seguidas».
+    La ficha muestra la preparación como requisito y, si hay ajuste, cuántas pasadas pide y quién lo decidió.
+14. **Sesiones largas.** Con solo *Lágrima* por hacer, 90 minutos acababan en 49 de trabajo y 27 de «pasada». Ahora:
+    - un bloque de obra no pasa de unos 25 minutos;
+    - la pasada dura lo que la obra (2 minutos) y un margen, y se queda en 5;
+    - con 90 o más, la obra vuelve en otro bloque tras la pausa;
+    - lo que aún sobra aparece como «Tiempo disponible — práctica libre», opcional, sin contenido y sin contar en el reparto por áreas.
+15. **Textos.** Vuelven a decir «de memoria»; desaparece «dos veces seguidas».
+
+No he cambiado ningún peso.
 
 **Interfaz.** Solo cambian textos y una línea de estado, sin cambios visuales importantes:
 - la línea de etapas en el paso;
@@ -172,11 +190,11 @@ No he cambiado ningún peso. Los textos de la ficha de la obra, la pantalla Curs
 
 | | |
 |---|---|
-| Total | **112** (antes 99) |
-| Nuevas | **13**: 10 en `fase-2-1.test.js` (de 17 a 27, una de ellas de la comprobación final de la lectura) y 3 en `persistencia.test.js` (de 3 a 6) |
-| Reescritas | las de `fase-2-1.test.js` y las 6 de `persistencia.test.js`, según las decisiones definitivas; en la comprobación final, la de la obra final (una pasada aislada no la cierra) y dos que usaban una sola pasada de memoria |
+| Total | **115** (antes 99) |
+| Nuevas | **16**: 13 en `fase-2-1.test.js` (de 17 a 30: una de lectura, una del ajuste de pasadas del profesor y dos de sesiones largas, además de las de las decisiones) y 3 en `persistencia.test.js` (de 3 a 6) |
+| Reescritas | las de `fase-2-1.test.js` y las 6 de `persistencia.test.js`, según las decisiones definitivas; la de la obra final, con la opción 1; y una de `revision.test.js`, que acepta que la obra vuelva tras la pausa |
 | Corregidas porque afirmaban algo falso | 3: dos en `ruta.test.js` (refuerzo de lectura antes de Sor y orden de la cola) y una en `revision.test.js` (la coma del refuerzo de lectura, ahora con un catálogo de prueba en el que Sor pide 2,5) |
-| Pasan | **112**, también con `TZ=Europe/Madrid` |
+| Pasan | **115**, también con `TZ=Europe/Madrid` |
 | Fallan | **0** |
 
 ### Las nuevas detectan lo que corrigen
@@ -199,7 +217,7 @@ No he cambiado ningún peso. Los textos de la ficha de la obra, la pantalla Curs
 
 | Archivo | Pruebas | Qué cubre |
 |---|---|---|
-| `fase-2-1.test.js` | 27 | **Aplicación (3):** realizada, aprendida y consolidada; el tramo y la preparación. **Refuerzos (1):** uno con varios orígenes. **Obra eje (1):** Lágrima B en 30, 45, 60, 90 y 120 minutos; Sor no la desplaza. **Lectura (6):** la ruta manda el orden; Sor como recurso; nada si está cubierta; no frena; `exige`; 21 días con la lectura tres niveles por detrás sin ocupar el sitio del paso actual ni dejar fuera el repertorio activo o la técnica. **Comprobaciones (5):** muchas y pocas en 20, 30, 60 y 90 minutos; jerarquía (crítica, ruta, fallo, vencida, a punto de olvidarse); ascenso cada 4 semanas y tope de antigüedad; simulación de varios días (lo de la ruta en 14 días, lo de fuera en 28, nunca por encima del tope). **Cobertura (2):** abandono prolongado de varias áreas; nunca adelanta a la ruta. **Obra final (2):** ni una lectura ni una pasada aislada la cierran; dos seguidas de memoria sí; cierra el curso sin consolidar. **Fallos en frío (3):** obra conocida; obra aprendida aquí con aspecto; sin aspecto (revisión general). **Curso en preparación (2).** **Repertorio en espera (2):** la obra final antes que la lectura y la cobertura; Sor nunca por defecto; 14 días con repertorio diario, también el de su comprobación en frío |
+| `fase-2-1.test.js` | 30 | **Aplicación (3):** realizada, aprendida y consolidada; el tramo y la preparación. **Refuerzos (1):** uno con varios orígenes. **Obra eje (1):** Lágrima B en 30, 45, 60, 90 y 120 minutos; Sor no la desplaza. **Lectura (6):** la ruta manda el orden; Sor como recurso; nada si está cubierta; no frena; `exige`; 21 días con la lectura tres niveles por detrás sin ocupar el sitio del paso actual ni dejar fuera el repertorio activo o la técnica. **Comprobaciones (5):** muchas y pocas en 20, 30, 60 y 90 minutos; jerarquía (crítica, ruta, fallo, vencida, a punto de olvidarse); ascenso cada 4 semanas y tope de antigüedad; simulación de varios días (lo de la ruta en 14 días, lo de fuera en 28, nunca por encima del tope). **Cobertura (2):** abandono prolongado de varias áreas; nunca adelanta a la ruta. **Obra final (3):** una pasada válida la cierra si la preparación está hecha; una lectura, un aspecto con fallos o la falta de preparación no; no consolida; el profesor ajusta las pasadas (por defecto 1, sin mínimo impuesto); cierra el curso sin consolidar. **Sesiones largas (2):** 30 días a 90′ con trabajo de unos 25 como mucho, pasada según la duración, vuelta tras la pausa y tiempo disponible; con candidatos de sobra no aparece tiempo disponible. **Fallos en frío (3):** obra conocida; obra aprendida aquí con aspecto; sin aspecto (revisión general). **Curso en preparación (2).** **Repertorio en espera (2):** la obra final antes que la lectura y la cobertura; Sor nunca por defecto; 14 días con repertorio diario, también el de su comprobación en frío |
 | `persistencia.test.js` | 6 | Los 5 casos del apartado E y el corte de luz |
 | `revision.test.js` | 15 | Los hallazgos de la revisión de la Fase 2 |
 | `ruta.test.js` | 10 | Modelo de ruta, validador, apertura de tramos, ruta ↔ obra, refuerzos, obras conocidas, «Hoy» y migración |
@@ -231,8 +249,8 @@ Mientras la ruta espera, el orden es el de D7. Después se reparte el tiempo por
 |---|---|
 | **20′** | calentamiento 3 · comprobaciones 4 (melodía acompañada, sonido) · paso actual 13 (mayor y menor homónimos). El panel dice que el refuerzo no cabe hoy. |
 | **30′** | calentamiento 3 · comprobaciones 4 · paso 9 · *Lágrima*, parte B, 14 |
-| **60′** | calentamiento 5 · comprobaciones 4 · paso 15 · lectura 6 (notas de las cuerdas 4-6) · refuerzo de la media cejilla 10 («la piden la aplicación y la obra de Lágrima, parte B») · *Lágrima* B 13 + pasada 7 |
-| **90′** | calentamiento 5 · comprobaciones 6 (+ I-IV-V7-I) · paso 20 · escalas 5 · lectura 9 · pausa 5 · refuerzo 13 · *Lágrima* B 18 + pasada 9 |
+| **60′** | calentamiento 5 · comprobaciones 4 · paso 15 · lectura 6 (notas de las cuerdas 4-6) · refuerzo de la media cejilla 10 («la piden la aplicación y la obra de Lágrima, parte B») · *Lágrima* B 15 + pasada 5 |
+| **90′** | calentamiento 5 · comprobaciones 6 (+ I-IV-V7-I) · paso 20 · escalas 5 · lectura 9 · pausa 5 · refuerzo 13 · *Lágrima* B 22 + pasada 5 |
 
 En todas las duraciones:
 - la obra principal es Lágrima B, en cuanto cabe;
@@ -246,12 +264,24 @@ En todas las duraciones:
 |---|---|
 | **20′** | calentamiento 3 · comprobaciones 4 · *Lágrima* entera (obra final, repertorio activo) 13 |
 | **30′** | calentamiento 3 · comprobaciones 4 · técnica 5 · *Lágrima* 18 |
-| **60′** | calentamiento 5 · comprobaciones 4 · técnica 9 · escalas 7 · ritmo 5 · *Lágrima* 19 + pasada 11 |
-| **90′** | calentamiento 5 · comprobaciones 6 · técnica 11 · escalas 8 · lectura 16 · pausa 5 · ritmo 5 · *Lágrima* 22 + pasada 12 |
+| **60′** | calentamiento 5 · comprobaciones 4 · técnica 9 · escalas 7 · ritmo 5 · *Lágrima* 25 + pasada 5 |
+| **90′** | calentamiento 5 · comprobaciones 6 · técnica 11 · escalas 8 · lectura 16 · pausa 5 · ritmo 5 · *Lágrima* 29 (25 y 4 sueltos) + pasada 5 |
 
 En este ejemplo, todas las áreas llevan 11 días sin aparecer. A 30 y 60′ entran por orden de días de más, y la lectura, que lleva menos tiempo fuera, entra los días siguientes.
 
-El día que *Lágrima* toca comprobarla en frío, a 60′: calentamiento 5 · comprobación de *Lágrima* 4 · técnica 9 · escalas 7 · ritmo 5 · *Lágrima* 19 + pasada 11.
+El día que *Lágrima* toca comprobarla en frío, a 60′: calentamiento 5 · comprobación de *Lágrima* 4 · técnica 9 · escalas 7 · ritmo 5 · *Lágrima* 25 + pasada 5.
+
+**Ejemplo 2b: todo lo disponible aprendido, 90′, sin encargos, con pocas comprobaciones y sin necesidad de lectura** (antes, 49 + 27 de *Lágrima*):
+
+| Minutos | Bloque |
+|---|---|
+| 5 | calentamiento |
+| 4 | comprobaciones (2) |
+| 25 | *Lágrima* (repertorio activo, obra final) |
+| 5 | pausa |
+| 25 | otra vez *Lágrima* («volver a la obra después de descansar») |
+| 5 | pasada |
+| 21 | **Tiempo disponible — práctica libre** («Opcional: lo que tocaba hoy ya está en la sesión…») |
 
 **Ejemplo 3: alumno nuevo, a 20′.** Calentamiento 3 · paso 1 (sonido clásico) 7 · *Lágrima* A 10.
 
@@ -298,7 +328,7 @@ La solución se mantiene: no he cambiado el almacenamiento en este cierre. Estas
 
 - ***Lágrima* (Tárrega).**
   - **Es la obra final pedagógica del curso 1, confirmada por usted**: integra y evalúa las competencias del curso.
-  - Requisitos: «de memoria, entera dos veces seguidas» (exigible) y «grabación» (opcional por ahora).
+  - Requisitos: preparación del tramo de cierre, «de memoria» con una pasada válida (exigible; las pasadas, ajustables por el profesor) y «grabación» (opcional por ahora).
   - Se distinguen la primera realización, aprendida con requisitos (cierra el curso), consolidada y dominada (posteriores).
   - **No está marcada como conocida en ningún sitio del producto.** En la primera ronda se quitó la nota «David la toca en parte».
   - Tiene dos secciones (A y B). La partitura está fuera (IMSLP) y la tablatura está «por hacer», como se avisa.
@@ -319,7 +349,8 @@ La solución se mantiene: no he cambiado el almacenamiento en este cierre. Estas
 ## G. Documentación actualizada
 
 - **`docs/Plan de la academia.md`:**
-  - **obra final y cierre del curso:** *Lágrima* confirmada; aprendida con requisitos (dos pasadas seguidas de memoria); consolidada y dominada son posteriores; grabación opcional;
+  - **obra final y cierre del curso:** *Lágrima* confirmada; aprendida con requisitos (preparación hecha y una pasada válida de memoria; pasadas ajustables por el profesor); consolidada y dominada son posteriores; grabación opcional;
+  - **forma de la sesión:** tope de trabajo por obra, pasada según la duración, vuelta tras la pausa y tiempo disponible;
   - **paso de aplicación:** realizada, aprendida y consolidada;
   - **fallos en frío:** para cualquier obra y sin diagnósticos inventados;
   - **la lectura no frena**, salvo `exige`;
@@ -329,9 +360,10 @@ La solución se mantiene: no he cambiado el almacenamiento en este cierre. Estas
   - **estado del paso:** con sus etapas;
   - **refuerzos:** nivel de trabajo en lugar de medio nivel;
   - **`falloEnFrio`** para cualquier obra, con los casos indeterminados;
-  - **obra final:** con `REQUISITOS_EXIGIBLES` y `PASADAS_OBRA_FINAL`; *Lágrima* confirmada;
+  - **obra final:** con `REQUISITOS_EXIGIBLES`, la preparación (`preparada`) y las pasadas del ajuste; *Lágrima* confirmada;
+  - **planificador:** `TOPE_OBRA`, `minutosPasada`, la vuelta a la obra y el bloque `libre`;
   - **planificador:** franjas, escala de prioridades, lectura por necesidad, cobertura y modo espera;
-  - **pruebas:** 112;
+  - **pruebas:** 115;
   - **decisión de la Fase 2:** sin la regla del medio nivel.
 - **Cabecera de `logica/planificador.js`:** el orden definitivo.
 - **Este informe.**
@@ -342,25 +374,16 @@ He buscado en los dos documentos las reglas antiguas: medio nivel, grabación ob
 
 ## H. Veredicto
 
-**FASE 2.1 CERRADA — PENDIENTE ÚNICAMENTE DE SU APROBACIÓN FINAL.**
+**FASE 2.1 CERRADA — LISTA PARA APROBACIÓN FINAL.**
 
-- **Decisiones y comprobación final:** las siete decisiones, los puntos 8 a 13 y la comprobación final están aplicados, con sus pruebas.
-- **Pruebas:** las 112 en verde, también con `TZ=Europe/Madrid`.
+- **Decisiones:** las siete decisiones, los puntos 8 a 13, la comprobación de la lectura y las dos últimas decisiones (obra final, opción 1, y sesiones largas) están aplicados, con sus pruebas.
+- **Pruebas:** las 115 en verde, también con `TZ=Europe/Madrid`.
 - **Pantallas**, revisadas en el navegador con datos de prueba y sin errores:
-  - Hoy a 20 y 60 minutos;
-  - el paso de aplicación;
-  - el Curso;
-  - el cierre de *Lágrima* con una pasada y con dos.
+  - Hoy a 20, 60 y 90 minutos (también con todo lo disponible aprendido);
+  - Curso, el paso de aplicación y la ficha de *Lágrima*;
+  - el cierre de *Lágrima* con una pasada válida y con el profesor pidiendo 2.
 
-**Observaciones, ninguna bloquea:**
-
-1. **Los pesos del planificador** siguen sin tocar.
-   - La lectura se queda en un 6-15 % de media, o un 23 % en espera.
-   - Supera al repertorio en una sesión como mucho 3 días de cada 28, nunca más de 2 seguidos, y solo a 20-30 minutos.
-   - Si quiere menos lectura, el ajuste es un número (`PESO.lectura`).
-2. **Matiz al orden que usted fijó.** Un área olvidada de verdad (unos 3 días después de agotar su margen) pasa por delante de la lectura, aunque nunca del repertorio activo. Es la corrección mínima para que la lectura no deje fuera la técnica semanas; si prefiere el orden estricto, es un número (`tope`).
-3. **«Aprendida con requisitos» = dos pasadas seguidas de memoria en un mismo intento.** Así lo he interpretado. Si prefiere exigirlo en dos días distintos, es otro número.
-4. **Con todo lo disponible del curso aprendido** y la ruta esperando contenido nuevo, una sesión de 90′ puede quedarse en comprobaciones y *Lágrima* durante unos 70 minutos, porque no quedan más candidatos. Es un límite del contenido en preparación, no de la lectura.
+**Nada pendiente de decisión.** Los pesos del planificador siguen como estaban y se pueden ajustar cuando lo vea con su uso: la lectura ocupa un 6-15 % de media, o un 23 % en espera.
 
 No he empezado la Fase 3.
 
@@ -368,18 +391,18 @@ No he empezado la Fase 3.
 
 ### Archivos cambiados en este cierre
 
-- **Lógica:** `logica/ruta.js`, `logica/planificador.js` (en la comprobación final: el paso de lectura, la prioridad del repertorio activo, el tope de la cobertura en espera y `PASADAS_OBRA_FINAL`).
+- **Lógica:** `logica/ruta.js` (obra final: preparación, pasadas del ajuste) y `logica/planificador.js` (el paso de lectura, la prioridad del repertorio activo, el tope de la cobertura en espera, el tope de trabajo por obra, la pasada, la vuelta a la obra y el tiempo disponible).
 - **Interfaz:** `web/vistas/hoy.js`, `web/vistas/paso.js`, `web/vistas/obra.js`, `web/componentes/registro.js`, `web/demo/componentes.js` (solo el texto).
-- **Contenido:** `contenido/rutas/clasica-c1.json` (solo las dos frases del tramo de cierre: grabación opcional y dos veces seguidas).
+- **Contenido:** `contenido/rutas/clasica-c1.json` (solo las dos frases del tramo de cierre: la grabación, opcional).
 - **Pruebas:** `pruebas/fase-2-1.test.js`, `pruebas/persistencia.test.js`, `pruebas/revision.test.js`, `pruebas/ruta.test.js`.
 - **Documentos:** `docs/Plan de la academia.md`, `docs/Arquitectura de la academia.md` y este informe.
 
 ### Resultado final de `node --test`
 
 ```
-# tests 112
+# tests 115
 # suites 0
-# pass 112
+# pass 115
 # fail 0
 # cancelled 0
 # skipped 0

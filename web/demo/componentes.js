@@ -53,7 +53,7 @@ export const RUTA = {
     { id: 't4', orden: 4, titulo: 'Escalas y ligados', estado: 'por-llegar', borrador: true, hechos: 0, total: 8, pasos: [p(null, 'obra', 'repertorio', 'Estudio en Do', 'futuro')] },
     { id: 't5', orden: 5, titulo: 'Polifonía antigua', estado: 'por-llegar', borrador: true, hechos: 0, total: 8, pasos: [p(null, 'obra', 'repertorio', 'Españoleta', 'futuro')] },
   ],
-  final: { id: 'final', titulo: 'Lágrima, completa', detalle: 'de memoria, entera dos veces seguidas (grabada, opcional por ahora)', estado: 'futuro', conocida: false, href: '#/obra/lagrima' },
+  final: { id: 'final', titulo: 'Lágrima, completa', detalle: 'de memoria (grabada, opcional por ahora)', estado: 'futuro', conocida: false, href: '#/obra/lagrima' },
   siguienteCurso: { numero: 2, nombre: 'Cejilla y posiciones' },
 };
 

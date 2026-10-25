@@ -132,8 +132,9 @@ for (const [nombre, { programa, ctx }] of Object.entries(escenarios())) {
         if (!['calentamiento', 'comprobacion'].includes(b.tipo)) assert.ok(b.minutos >= MIN_BLOQUE, `bloque de ${b.minutos} min · ${donde}`);
         assert.ok(typeof b.paraQue === 'string' && b.paraQue.length > 0, `bloque sin para qué · ${donde}`);
       }
-      // Nada se trabaja dos veces en la misma sesión (la pasada es la segunda mitad de su obra).
-      const trabajo = plan.bloques.filter(b => b.item && !['pasada', 'comprobacion'].includes(b.tipo)).map(b => `${b.item}#${b.seccion ?? ''}`);
+      // Nada se trabaja dos veces en la misma sesión (la pasada es la segunda mitad de su obra, y en sesiones largas la
+      // obra puede volver tras la pausa: un segundo bloque, no uno gigante).
+      const trabajo = plan.bloques.filter(b => b.item && !b.vuelta && !['pasada', 'comprobacion'].includes(b.tipo)).map(b => `${b.item}#${b.seccion ?? ''}`);
       assert.equal(new Set(trabajo).size, trabajo.length, `repetido · ${donde}`);
       // Las comprobaciones en frío no se comen la sesión: como mucho 6 minutos, y al principio.
       const frio = plan.bloques.filter(b => b.tipo === 'comprobacion');

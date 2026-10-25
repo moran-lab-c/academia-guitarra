@@ -35,7 +35,7 @@ const REPARTO = {
 // Orden dentro de la sesión: calentar, comprobar en frío, el encargo, el paso de la ruta, las áreas, el refuerzo justo
 // antes de la obra que lo necesita, la obra y una pasada para acabar tocando música.
 const ORDEN = ['calentamiento', 'comprobacion', 'encargo', 'paso', 'tecnica', 'fl-tecnica', 'escalas', 'fl-compas', 'lectura', 'ritmo',
-  'diapason', 'teoria', 'armonia', 'fl-armonia', 'oido', 'refuerzo', 'obra', 'repertorio', 'fl-toque', 'fl-acompanamiento', 'pasada'];
+  'diapason', 'teoria', 'armonia', 'fl-armonia', 'oido', 'refuerzo', 'obra', 'repertorio', 'fl-toque', 'fl-acompanamiento', 'vuelta', 'pasada', 'libre'];
 const OBRAS_AREA = { repertorio: 'clasica', 'fl-toque': 'flamenca' };
 // Para qué es cada bloque: decide qué formato se recomienda (no cuál se permite).
 export const PROPOSITO = { lectura: 'lectura', tecnica: 'tecnica', escalas: 'tecnica', 'fl-tecnica': 'tecnica', repertorio: 'repertorio', 'fl-toque': 'repertorio' };
@@ -43,6 +43,8 @@ const PRINCIPALES = new Set(['tecnica', 'repertorio', 'fl-tecnica', 'fl-toque'])
 const PROGRAMAS_DE = { clasica: ['clasica', 'comun'], flamenca: ['flamenca', 'comun'] };
 // Peso de cada candidato en el reparto del tiempo [Decisión, ajustable].
 const PESO = { paso: 25, siguiente: 15, obra: 35, refuerzo: 18, lectura: 12, estudio: 25 };
+const TOPE_OBRA = 25; // minutos seguidos, como mucho, de trabajo sobre una obra en un mismo bloque
+const MARGEN_PASADA = 2; // minutos de más sobre lo que dura la obra, para colocarse y tocarla entera
 const TOPE_FRIO = minutos => (minutos >= 90 ? 6 : 4); // minutos para comprobaciones en frío (aprobado: 2-4, 6 con 90 o más)
 const LECTURA_DEL_DIA = 'lectura-del-dia'; // clave compartida: una sola lectura por sesión, también con «los dos»
 
@@ -143,16 +145,35 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados, frio }
   const minutosPor = repartir(libre, elegidos.map(c => c.peso));
   elegidos.forEach((c, i) => bloques.push(c.crear(minutosPor[i])));
   const resto = minutos - pausas * 5 - bloques.reduce((s, b) => s + b.minutos, 0);
-  if (resto > 0 && bloques.length) bloques.at(-1).minutos += resto; // por si no ha entrado nada más
+  let sobra = 0; // lo que no tiene a qué ir: no se rellena, queda como tiempo disponible
+  if (resto > 0 && !elegidos.length && resto >= MIN_BLOQUE) sobra = resto;
+  else if (resto > 0 && bloques.length) bloques.at(-1).minutos += resto; // los minutos sueltos del redondeo
 
-  // La obra en dos: trabajo y, al final, una pasada (estudio intercalado). Un encargo no se parte.
+  // La obra en dos: trabajo y, al final, una pasada (estudio intercalado) de lo que dura la obra. Un encargo no se parte.
   const obra = bloques.find(b => b.tipo === 'obra' && b.modo !== 'comprobacion' && b.minutos >= 15);
   if (obra && minutos >= 45) {
-    const pasada = Math.max(MIN_BLOQUE, Math.round(obra.minutos * 0.35));
+    const pasada = minutosPasada(ctx, obra);
     obra.minutos -= pasada;
     bloques.push({ ...obra, tipo: 'pasada', minutos: pasada, titulo: `Pasada: ${obra.nombre}`,
       paraQue: 'Acabar tocando música: una pasada entera, aunque haya fallos.', motivos: ['Una pasada entera al final, para acabar tocando música.'] });
   }
+  // Un bloque de trabajo sobre una obra no pasa de TOPE_OBRA seguidos. En sesiones de 90 o más, la obra puede volver
+  // después de la pausa (otro bloque, no uno gigante); lo que aún sobre es tiempo disponible, opcional. No limita lo
+  // que él toque la obra: solo lo que el planificador concentra en un bloque.
+  for (const b of bloques.filter(x => x.tipo === 'obra' && x.minutos > TOPE_OBRA)) {
+    let exceso = b.minutos - TOPE_OBRA;
+    b.minutos = TOPE_OBRA;
+    if (b === obra && minutos >= 90 && exceso >= MIN_BLOQUE) {
+      const m = Math.min(exceso, TOPE_OBRA);
+      bloques.push({ ...b, vuelta: true, trasPausa: true, minutos: m, titulo: `Otra vez: ${b.nombre}`,
+        paraQue: 'Volver a la obra después de descansar: lo que haya salido flojo en el primer bloque.',
+        motivos: [...b.motivos, `Un bloque de obra no pasa de ${TOPE_OBRA} minutos seguidos: la obra vuelve después de la pausa.`] });
+      exceso -= m;
+    }
+    if (exceso >= MIN_BLOQUE) sobra += exceso;
+    else b.minutos += exceso; // unos minutos de más no merecen un bloque aparte
+  }
+  if (sobra) bloques.push(bloqueLibre(sobra, programa));
   return { bloques: ordenar(bloques), avisos, noCaben, esperan };
 }
 
@@ -509,7 +530,7 @@ function candidatosRepertorio(ctx, programa, reservados, ruta, comprobados = new
     : (espera ? 'Mientras la ruta espera, repertorio del curso que aún no está aprendido.' : 'Repertorio del curso que aún no está aprendido.');
   return {
     activo: activo && crear(activo.clave, 'activo', textoActivo,
-      [activo.esFinal ? 'Es la obra final del curso: queda aprendida cuando sale entera dos veces seguidas, de memoria.' : 'Repertorio activo del curso, todavía sin aprender.']),
+      [activo.esFinal ? 'Es la obra final del curso: queda aprendida cuando, hecha su preparación, sale entera y de memoria con todos los aspectos bien.' : 'Repertorio activo del curso, todavía sin aprender.']),
     consolidacion: aprendidas[0] && crear(aprendidas[0], 'mantenimiento', espera ? 'Mientras la ruta espera, mantener vivo lo que ya tocas.' : 'Mantener vivo lo que ya tocas.',
       [`Ya la tocas${ultima(aprendidas[0]) ? ` y lleva ${diasEntre(ultima(aprendidas[0]), ctx.hoy)} días sin tocarse` : ''}: una pasada para consolidarla.`]),
   };
@@ -567,7 +588,7 @@ function desfase(ctx, area, ref) {
 }
 
 function ordenar(bloques) {
-  const pos = b => ORDEN.indexOf(b.tipo === 'area' ? b.area : b.tipo);
+  const pos = b => ORDEN.indexOf(b.vuelta ? 'vuelta' : b.tipo === 'area' ? b.area : b.tipo);
   return bloques.sort((a, b) => pos(a) - pos(b));
 }
 
@@ -575,16 +596,31 @@ function conPausas(bloques, pausas, minutos) {
   if (!pausas) return bloques;
   const res = [];
   let acumulado = 0, hechas = 0;
+  const pausa = () => { res.push({ tipo: 'pausa', area: 'pausa', minutos: 5, titulo: 'Pausa', paraQue: 'Descansar las manos.', motivos: ['Cinco minutos de descanso: manos sueltas, agua.'] }); acumulado += 5; hechas++; };
+  let reservadas = bloques.filter(b => b.trasPausa).length; // la vuelta a la obra va tras una pausa: se le guarda
   for (const b of bloques) {
+    if (b.trasPausa) { reservadas--; if (hechas < pausas && res.length && res.at(-1).tipo !== 'pausa') pausa(); }
     res.push(b);
     acumulado += b.minutos;
-    if (hechas < pausas && acumulado >= (minutos * (hechas + 1)) / (pausas + 1) && b !== bloques.at(-1)) {
-      res.push({ tipo: 'pausa', area: 'pausa', minutos: 5, titulo: 'Pausa', paraQue: 'Descansar las manos.', motivos: ['Cinco minutos de descanso: manos sueltas, agua.'] });
-      acumulado += 5; hechas++;
-    }
+    if (hechas + reservadas < pausas && acumulado >= (minutos * (hechas + 1)) / (pausas + 1) && b !== bloques.at(-1) && !bloques[bloques.indexOf(b) + 1]?.trasPausa) pausa();
   }
   return res;
 }
+
+// Lo que dura una pasada entera: la duración de la obra (o de la sección, si la tiene) y un pequeño margen.
+function minutosPasada(ctx, b) {
+  const obra = ctx.cat.porId.get(b.item);
+  const dur = d => (typeof d === 'object' ? d?.valor : d) ?? null;
+  const min = dur(seccionDe(obra, b.seccion)?.duracionMin) ?? dur(obra?.duracionMin);
+  return Math.max(MIN_BLOQUE, min ? Math.ceil(min) + MARGEN_PASADA : MIN_BLOQUE);
+}
+
+// El tiempo que sobra cuando ya no queda nada que toque hoy: opcional, sin contenido inventado.
+const bloqueLibre = (minutos, programa) => ({
+  tipo: 'libre', area: 'libre', programa, minutos, titulo: 'Tiempo disponible — práctica libre',
+  paraQue: 'Opcional: lo que tocaba hoy ya está en la sesión. Si quieres, vuelve a la obra, toca repertorio, repasa algo, toca libremente o termina aquí.',
+  motivos: ['No queda nada más que toque hoy, y la sesión no se rellena con nada inventado.', 'Es opcional: la sesión está completa sin este rato.'],
+});
 
 // Enteros de al menos MIN_BLOQUE, proporcionales a los pesos y que suman exactamente total.
 export function repartir(total, pesos) {
