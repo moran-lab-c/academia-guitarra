@@ -158,10 +158,11 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados, frio }
 
 // Los candidatos de la sesión, de más a menos prioritario. Escala de prioridades (menor = antes):
 //   1 paso actual · 2 obra principal (la obra eje) · 3,xx refuerzos (lo que necesita la obra) · 3,4 tope de la cobertura
-//   · 3,5 lectura atrasada · 4 segundo paso · 5 lectura ligada a la ruta · 6 dosis de lectura y obras en estudio
-//   · 7 obra recomendada y demás pasos · 8 resto de áreas.
-// Mientras la ruta espera (decisión 7): refuerzos 3,xx · repertorio activo del curso 4 · consolidación 4,5 · lectura 5
-//   · tope de la cobertura 5,5.
+//   · 3,5 reparación · 3,6 repertorio activo (si no hay obra principal) · 3,7 lectura atrasada · 4 segundo paso
+//   · 5 lectura ligada a la ruta · 6 dosis de lectura y obras en estudio · 7 obra recomendada y demás pasos · 8 resto de áreas.
+// Un paso de lectura nunca es el paso actual ni el segundo paso: lo elige la lectura (5), con su prioridad y su peso.
+// Mientras la ruta espera (decisión 7): refuerzos 3,xx · repertorio activo del curso 4 · consolidación 4,5
+//   · tope de la cobertura 4,9 · lectura 5.
 function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()) {
   const lista = [];
   const reservados = new Set(usados); // lo que ya tiene un candidato, para que cada área elija otra cosa
@@ -179,7 +180,8 @@ function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()
   // 3. El objetivo actual de la ruta: su paso actual (y otro paso abierto si hay tiempo) y la obra eje del tramo.
   const deTrabajo = enRuta.filter(p => ['habilidad', 'aplicacion', 'preparacion'].includes(p.tipo) && !p.porConfirmar && !p.insertado)
     .sort((a, b) => (b.estado === 'actual') - (a.estado === 'actual'));
-  deTrabajo.slice(0, 2).forEach((p, i) => {
+  const instrumentales = deTrabajo.filter(p => !esLectura(p));
+  instrumentales.slice(0, 2).forEach((p, i) => {
     const c = candidatoPaso(ctx, p, programa, ref, i === 0);
     if (c) anadir({ ...c, prioridad: i === 0 ? 1 : 4, peso: i === 0 ? PESO.paso : PESO.siguiente });
   });
@@ -208,7 +210,7 @@ function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()
   // Sin ruta en espera, solo si no hay ninguna obra en la sesión.
   if (!pasoObra) {
     const { activo, consolidacion } = candidatosRepertorio(ctx, programa, reservados, ruta, comprobados);
-    if (activo) anadir({ ...activo, prioridad: espera ? 4 : 6.5 });
+    if (activo) anadir({ ...activo, prioridad: espera ? 4 : 3.6 });
     if (libreDe(consolidacion)) anadir({ ...consolidacion, prioridad: espera ? 4.5 : 7.5 });
   }
 
@@ -229,7 +231,7 @@ function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()
       conClave(candidatoArea(ctx, 'lectura', programa, ref, reservados), LECTURA_DEL_DIA, false), // la lectura de su nivel: su ruta o pasajes de sus obras
     ].find(libreDe);
     if (recurso) {
-      const prioridad = espera ? 5 : nec.desfase >= 1 ? 3.5 : recurso.deRuta ? 5 : 6;
+      const prioridad = espera ? 5 : nec.desfase >= 1 ? 3.7 : recurso.deRuta ? 5 : 6;
       const crear = recurso.crear;
       anadir({ ...recurso, prioridad, peso: pesoLectura, crear: m => { const b = crear(m); b.motivos = [...b.motivos, `Hoy hace falta lectura: ${nec.motivo}.`]; return b; } });
     }
@@ -245,7 +247,7 @@ function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()
     if (r && !usados.has(r.obra.id)) anadir({ ...candidatoObraEstudio(ctx, r.obra, programa, ['No tienes ninguna obra en estudio; te propongo esta.', ...r.razones.slice(0, 2)]), prioridad: 7 });
   }
   // Los demás pasos abiertos de la ruta, en su orden, antes que cualquier otra cosa del área (la lectura ya tiene su sitio).
-  deTrabajo.slice(2).filter(p => !esLectura(p)).forEach((p, i) => {
+  instrumentales.slice(2).forEach((p, i) => {
     const c = candidatoPaso(ctx, p, programa, ref, false);
     if (libreDe(c)) anadir({ ...c, prioridad: 7 + i / 100, peso: PESO.siguiente * 0.8 });
   });
@@ -256,10 +258,11 @@ function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()
 
   // Cobertura (decisión 4): cada área del reparto del curso tiene un margen de días sin aparecer según su peso
   // (margenDias). Pasado el margen, cada día de más sube un punto la prioridad de su mejor candidato (para que entre; su
-  // tiempo sigue saliendo del reparto), sin pasar nunca de 3,4 (5,5 mientras la ruta espera): no adelanta al profesor, a
-  // las comprobaciones, al objetivo de la ruta ni a lo que necesita la obra. Si el área ya entra hoy por algo
-  // prioritario, no sube nada.
-  const tope = espera ? 5.5 : 3.4;
+  // tiempo sigue saliendo del reparto), sin pasar nunca de 3,4 (4,9 mientras la ruta espera): no adelanta al profesor, a
+  // las comprobaciones, al objetivo de la ruta, a lo que necesita la obra ni al repertorio activo. Un área olvidada de
+  // verdad sí llega a pasar por delante de la lectura (3,7 o 5), para que una lectura atrasada no la deje fuera semanas.
+  // Si el área ya entra hoy por algo prioritario, no sube nada.
+  const tope = espera ? 4.9 : 3.4;
   const margenes = margenDias(ctx, programa);
   const cubiertas = new Set(lista.filter(c => c.prioridad <= tope).map(c => c.area));
   for (const c of [...lista].sort((a, b) => a.prioridad - b.prioridad)) {
@@ -506,7 +509,7 @@ function candidatosRepertorio(ctx, programa, reservados, ruta, comprobados = new
     : (espera ? 'Mientras la ruta espera, repertorio del curso que aún no está aprendido.' : 'Repertorio del curso que aún no está aprendido.');
   return {
     activo: activo && crear(activo.clave, 'activo', textoActivo,
-      [activo.esFinal ? 'Es la obra final del curso: queda aprendida cuando sale entera con sus requisitos (de memoria).' : 'Repertorio activo del curso, todavía sin aprender.']),
+      [activo.esFinal ? 'Es la obra final del curso: queda aprendida cuando sale entera dos veces seguidas, de memoria.' : 'Repertorio activo del curso, todavía sin aprender.']),
     consolidacion: aprendidas[0] && crear(aprendidas[0], 'mantenimiento', espera ? 'Mientras la ruta espera, mantener vivo lo que ya tocas.' : 'Mantener vivo lo que ya tocas.',
       [`Ya la tocas${ultima(aprendidas[0]) ? ` y lleva ${diasEntre(ultima(aprendidas[0]), ctx.hoy)} días sin tocarse` : ''}: una pasada para consolidarla.`]),
   };

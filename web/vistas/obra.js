@@ -146,7 +146,7 @@ function enLaRuta(c, enRutas) {
         h('p', { class: 'pequeno', style: 'margin:0' }, `★ Obra final del curso ${String(f.numero).padStart(2, '0')}: ${textoRequisitos(f.requisitos) ?? 'entera'}.`),
         h('ul', { class: 'lista-limpia pequeno' },
           marca(pf.primera, 'Primera realización (entera, como pida su criterio; puede ser leyendo)'),
-          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? 'De memoria, sin mirar' : r.exigible ? 'Grabada' : 'Grabada (opcional por ahora: no se exige hasta que la grabación forme parte de la evaluación)')),
+          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? 'De memoria, sin mirar: entera dos veces seguidas' : r.exigible ? 'Grabada' : 'Grabada (opcional por ahora: no se exige hasta que la grabación forme parte de la evaluación)')),
           marca(pf.aprendida, 'Aprendida con sus requisitos: permite cerrar el curso'),
           marca(pf.consolidada, 'Consolidada (en frío, días después): nivel posterior, no hace falta para pasar de curso'),
           marca(pf.dominada, 'Dominada')));

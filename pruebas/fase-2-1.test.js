@@ -19,11 +19,11 @@ const SOR = 'obra:sor.op60-1';
 const MAL = Object.fromEntries(Object.keys(BIEN).map(d => [d, 'mal']));
 const conocimiento = id => cat.porId.get(id.split('#')[0])?.criterio?.tipo === 'conocimiento';
 const hecho = (id, fecha, extra = {}) => (conocimiento(id) ? tanda({ [id]: [20, 20, 1200] }, fecha) : practica(id, fecha, { calidad: BIEN, pasadas: 3, ...extra }));
-const frioOk = (clave, fecha) => {
+const frioOk = (clave, fecha, hora) => {
   const [id, s] = clave.split('#');
-  if (conocimiento(id)) return tanda({ [id]: [20, 20, 1200] }, fecha);
+  if (conocimiento(id)) return tanda({ [id]: [20, 20, 1200] }, fecha, hora);
   const obra = cat.porId.get(id).tipo === 'obra';
-  return practica(id, fecha, { ...(s ? { seccion: s } : {}), modo: 'comprobacion', calidad: BIEN, pasadas: obra ? 1 : 2, ayuda: obra ? 'notacion' : 'ninguna' });
+  return practica(id, fecha, { ...(s ? { seccion: s } : {}), modo: 'comprobacion', calidad: BIEN, pasadas: obra ? 1 : 2, ayuda: obra ? 'notacion' : 'ninguna', hora });
 };
 const seccion = (s, fecha, extra = {}) => practica(LAGRIMA, fecha, { seccion: s, calidad: BIEN, pasadas: 1, ayuda: 'notacion', ...extra });
 const COMPS_T1 = ['comp:tec.sonido-clasico', 'comp:tec.presion-minima', 'comp:lec.notas-1pos-agudas', 'comp:teo.tono-semitono', 'comp:teo.escala-mayor',
@@ -181,6 +181,42 @@ test('Lectura · si un tramo exige una lectura, lo declara en sus datos («exige
   assert.ok(validarCatalogo(mal).some(x => x.includes('no es un paso de este tramo')));
 });
 
+// Varios días de práctica registrando cada bloque como la app (una práctica con sus minutos; lo de conocimiento, además,
+// con su tanda) y las comprobaciones en frío bien.
+const practicarDias = (eventos, minutos, dias, desde) => {
+  const evs = [...eventos], sesiones = [];
+  for (let d = 0, dia = desde; d < dias; d++, dia = sumarDias(dia, 1)) {
+    const plan = planificar(ctxDe({ eventos: evs, hoy: dia }), { minutos });
+    let hora = 8;
+    for (const b of plan.bloques.filter(x => x.tipo === 'comprobacion')) for (const x of b.items) evs.push(frioOk(x.id, dia, hora++));
+    for (const b of plan.bloques.filter(x => x.item && !['comprobacion', 'pasada'].includes(x.tipo))) {
+      if (conocimiento(b.item)) evs.push(tanda({ [b.item]: [20, 20, 1200] }, dia, hora));
+      evs.push(practica(b.item, dia, { ...(b.seccion ? { seccion: b.seccion } : {}), calidad: BIEN, pasadas: 3, area: b.area, min: b.minutos, hora: hora++, ...(b.paso ? { paso: b.paso } : {}) }));
+    }
+    sesiones.push(plan);
+  }
+  return sesiones;
+};
+const peorRacha = (sesiones, falta) => sesiones.reduce(([r, peor], s) => (falta(s) ? [r + 1, Math.max(peor, r + 1)] : [0, peor]), [0, 0])[1];
+
+test('Lectura · aunque vaya varios niveles por detrás durante semanas, no ocupa el sitio del paso actual ni deja fuera el repertorio activo o la técnica', () => {
+  const minutosDe = (plan, f) => plan.bloques.filter(f).reduce((s, b) => s + b.minutos, 0);
+  // Técnica y repertorio en 3 por el diagnóstico, lectura en 0: va tres niveles por detrás todo el tiempo.
+  const atrasada = practicarDias([diagnostico('2026-09-25', { niveles: { tecnica: 3, repertorio: 3 } })], 30, 21, '2026-10-07');
+  const corta = practicarDias([diagnostico('2026-09-25', { niveles: { tecnica: 2 } }), ...tramo1('2026-10-01')], 20, 14, '2026-10-07');
+  for (const plan of [...atrasada, ...corta]) {
+    assert.ok(!plan.bloques.some(b => b.area === 'lectura' && b.motivos.some(m => /Tu paso actual/.test(m))), 'un paso de lectura como paso actual');
+  }
+  assert.ok(peorRacha(atrasada, p => !p.bloques.some(b => b.area === 'repertorio')) <= 1, 'días seguidos sin repertorio');
+  assert.ok(peorRacha(atrasada, p => minutosDe(p, b => b.area === 'lectura') > minutosDe(p, b => b.area === 'repertorio')) <= 2, 'días seguidos con más lectura que repertorio');
+  const total = atrasada.reduce((s, p) => s + minutosDe(p, b => !['calentamiento', 'pausa'].includes(b.tipo)), 0);
+  assert.ok(atrasada.reduce((s, p) => s + minutosDe(p, b => b.area === 'lectura'), 0) / total <= 0.2, 'la lectura no se come las sesiones');
+  // Mientras la ruta espera, una lectura atrasada no deja la técnica fuera más que su margen y unos días.
+  const espera = practicarDias([diagnostico('2026-09-25', { niveles: { tecnica: 2 } }), ...tramo1('2026-10-01'), hecho('comp:tec.media-cejilla', '2026-10-02'), seccion('B', '2026-10-03')], 30, 21, '2026-10-07');
+  assert.ok(espera.some(p => p.avisos.some(a => /Has terminado lo disponible/.test(a))), 'llega a esperar');
+  assert.ok(peorRacha(espera, p => !p.bloques.some(b => b.area === 'tecnica' && b.tipo !== 'calentamiento')) <= 7, 'días seguidos sin técnica');
+});
+
 // ───────────────────────────── Comprobaciones en frío (decisión 3): una cola con jerarquía
 // Tramos 1 y 2 hechos el 1/10: el 20/10 hay muchas comprobaciones vencidas a la vez.
 const muchas = () => [...tramo1('2026-10-01'), ...tramo2('2026-10-01')];
@@ -324,7 +360,7 @@ test('Cobertura · un área abandonada nunca adelanta al paso actual, a la obra 
 });
 
 // ───────────────────────────── Obra final y cierre del curso (decisión 5)
-test('Obra final · una lectura inicial no la cierra; de memoria sí, sin exigir grabación ni consolidación', () => {
+test('Obra final · ni una lectura inicial ni una pasada aislada la cierran; entera dos veces seguidas de memoria sí, sin exigir grabación ni consolidación', () => {
   const entera = (fecha, extra = {}) => practica(LAGRIMA, fecha, { calidad: BIEN, pasadas: 1, ayuda: 'notacion', ...extra });
   const leyendo = ctxDe({ eventos: [entera('2026-11-01')], hoy: '2026-11-01' });
   const f = leyendo.rutaActual('clasica').final;
@@ -336,8 +372,13 @@ test('Obra final · una lectura inicial no la cierra; de memoria sí, sin exigir
   // «De memoria» marcado, pero leyendo: no cuenta.
   const trampa = ctxDe({ eventos: [entera('2026-11-01', { calidad: { ...BIEN, memoria: 'bien' } })], hoy: '2026-11-01' });
   assert.equal(trampa.rutaActual('clasica').final.progreso.aprendida, false);
-  // De memoria, sin grabar: aprendida con requisitos (la grabación es opcional por ahora); no consolidada.
-  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria' };
+  // Una sola pasada, aunque sea de memoria y sin fallos, es una pasada aislada: no la cierra.
+  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 2 };
+  const aislada = ctxDe({ eventos: [entera('2026-11-01', { ...memoria, pasadas: 1 })], hoy: '2026-11-01' }).rutaActual('clasica').final;
+  assert.equal(aislada.progreso.aprendida, false);
+  assert.notEqual(aislada.estado, 'hecho');
+  // Entera dos veces seguidas de memoria, sin grabar: aprendida con requisitos (la grabación es opcional por ahora); no
+  // consolidada.
   const aprendida = ctxDe({ eventos: [entera('2026-11-01', memoria)], hoy: '2026-11-01' }).rutaActual('clasica').final;
   assert.equal(aprendida.estado, 'hecho');
   assert.equal(aprendida.progreso.consolidada, false);
@@ -353,7 +394,7 @@ test('Obra final · una lectura inicial no la cierra; de memoria sí, sin exigir
 test('Obra final · con todo el curso hecho, «aprendida con requisitos» cierra el curso aunque no esté consolidada', () => {
   // Un curso 1 sin tramos en borrador (solo para esta prueba): tramos 1 y 2, cierre y obra final.
   const sinBorradores = entidadesReales().filter(e => !['tramo:c1.t3', 'tramo:c1.t4', 'tramo:c1.t5'].includes(e.id));
-  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
+  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 2 };
   const eventos = [...tramo1('2026-10-01'), ...tramo2('2026-10-01'), ...[...COMPS_T1, `${LAGRIMA}#A`].map(k => frioOk(k, '2026-10-05')), ...cierreT2('2026-10-05'),
     hecho('comp:int.pieza-sin-parar', '2026-10-06'), practica(LAGRIMA, '2026-10-06', memoria)];
   const ctx = ctxCon(sinBorradores, { eventos, hoy: '2026-10-07' });
@@ -468,7 +509,7 @@ test('Repertorio en espera · entra el repertorio activo del curso (la obra fina
     assert.ok(!plan.bloques.some(b => b.item === SOR && b.tipo !== 'comprobacion' && b.area !== 'lectura'), `${m}′: Sor como repertorio`);
   }
   // Con la obra final ya aprendida con sus requisitos, se consolida lo aprendido del curso (no Sor).
-  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
+  const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 2 };
   const plan = planificar(ctxDe({ eventos: [...finDisponible(), practica(LAGRIMA, '2026-10-06', memoria)], hoy: '2026-10-07' }), { minutos: 60 });
   const rep = plan.bloques.find(b => b.tipo === 'obra');
   assert.ok(rep, plan.bloques.map(b => `${b.tipo}:${b.item}`).join(' · '));
@@ -484,7 +525,7 @@ test('Repertorio en espera · varios días: el repertorio no desaparece (tampoco
   for (let d = 0; d < 14; d++, dia = sumarDias(dia, 1)) {
     const plan = planificar(ctxDe({ eventos: evs, hoy: dia }), { minutos: 60 });
     let hora = 8;
-    for (const b of plan.bloques.filter(x => x.tipo === 'comprobacion')) for (const x of b.items) evs.push({ ...frioOk(x.id, dia), hora: hora++ });
+    for (const b of plan.bloques.filter(x => x.tipo === 'comprobacion')) for (const x of b.items) evs.push(frioOk(x.id, dia, hora++));
     for (const b of plan.bloques) {
       if (['calentamiento', 'pausa', 'comprobacion'].includes(b.tipo)) continue;
       suma[b.area] = (suma[b.area] ?? 0) + b.minutos; total += b.minutos;
