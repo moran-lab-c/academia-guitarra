@@ -78,5 +78,94 @@
     "descripcion": "De principio a fin, siguiendo aunque haya un error.",
     "proposito": "Tocar para uno mismo o para otros pide no pararse a corregir.",
     "criterio": { "tipo": "ejecucion", "dimensiones": ["continuidad", "ritmo"], "pasadas": 1, "detalle": "una pieza de la etapa entera, sin parar, a su tempo", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:esc.arpegio-pami", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "Arpegio p-a-m-i",
+    "descripcion": "El arpegio al revés: después del bajo, a, m e i de la cuerda aguda a la grave, con las cuatro notas iguales.",
+    "proposito": "Completa el arpegio de base (Plan, unidad 3) y prepara los arpegios descendentes de las obras.",
+    "requiere": ["comp:esc.arpegio-pima"],
+    "transfiere": [{ "desde": "comp:fl.arpegio", "nota": "El arpegio flamenco ya da independencia de dedos; aquí cuenta que a, m e i suenen igual." }],
+    "erroresComunes": ["Que la a suene más débil que la i", "Que las notas se amontonen después de la a (la i llega antes de tiempo)"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "sonido", "control"], "pasadas": 3, "detalle": "corcheas alternando Do mayor y Sol7, todas las notas iguales", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.arpegio-nota-destacada", "programa": "clasica", "area": "tecnica", "subarea": "mano derecha", "nivel": 1,
+    "nombre": "Destacar una nota dentro del arpegio",
+    "descripcion": "En un arpegio p-i-m-a, la nota de a se oye por encima de las demás, que siguen piano y regulares.",
+    "proposito": "Es la melodía acompañada dentro de un arpegio: lo que piden los estudios de arpegio con melodía y, más adelante, las obras.",
+    "requiere": ["comp:esc.arpegio-pima", "comp:tec.melodia-acompanada"],
+    "erroresComunes": ["Que al acentuar la a se descuadre el ritmo", "Que suba el volumen de todo el arpegio y no solo de la a"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["ritmo", "sonido", "dinamica", "control"], "pasadas": 3, "detalle": "La menor y Mi mayor en corcheas: la a destacada en todo el pasaje y las otras tres notas iguales", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:esc.la-menor-1pos", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "La menor natural, armónica y melódica en primera posición",
+    "descripcion": "Una octava, de La2 (5.ª al aire) a La3 (3.ª, traste 2). La armónica sube el Sol a Sol♯; la melódica sube Fa♯ y Sol♯ al subir y baja como la natural.",
+    "proposito": "Las tres formas del menor, en los dedos y en el oído: de dónde sale la sensible (Sol♯) que lleva a La.",
+    "requiere": ["comp:esc.mi-mayor-1pos"],
+    "erroresComunes": ["Tocar Sol♯ en la forma natural o al bajar la melódica", "Repetir dedo en el cambio de cuerda"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "las tres formas seguidas, apoyando i-m, subiendo y bajando; el tempo se apunta para ver cómo sube", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.alternancia-im-ma", "programa": "clasica", "area": "tecnica", "subarea": "mano derecha", "nivel": 1,
+    "nombre": "Alternar i-m y m-a, apoyando",
+    "descripcion": "Escalas apoyando sin repetir dedo, también al cambiar de cuerda, con i-m y con m-a igual de regulares.",
+    "proposito": "La base de las escalas y de la sincronía de las dos manos (Plan, unidad 4).",
+    "transfiere": [{ "desde": "comp:fl.picado", "nota": "El picado ya alterna i-m apoyando: falta m-a y el sonido clásico." }],
+    "erroresComunes": ["Repetir dedo en el cambio de cuerda", "Que m-a vaya más lento o más débil que i-m", "La mano izquierda llega tarde a la nota"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "sonido", "control"], "pasadas": 3, "detalle": "una escala de Do o de Sol mayor con i-m y otra vez con m-a, sin repetir dedo", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:esc.do-sol-mayor-1pos", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "Do mayor y Sol mayor en primera posición",
+    "descripcion": "Do mayor en una octava (Do3-Do4) y Sol mayor en dos (Sol2-Sol4), un dedo por traste.",
+    "proposito": "Las dos tonalidades de lo que viene (Plan, unidad 4); Sol mayor, además, con su Fa♯ en dos sitios del mástil.",
+    "requiere": ["comp:esc.mi-mayor-1pos"],
+    "erroresComunes": ["Olvidar el Fa♯ de Sol mayor en la 1.ª cuerda (traste 2)", "Tocar Fa natural (4.ª, traste 3) en Sol mayor, que pide Fa♯ (traste 4)"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "las dos escalas, apoyando, subiendo y bajando; el tempo se apunta para ver cómo sube", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:esc.cromatica-1pos", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "Escala cromática en primera posición",
+    "descripcion": "Todos los semitonos de La2 a La3, un dedo por traste, subiendo y bajando por los mismos trastes.",
+    "proposito": "Coloca los cuatro dedos, uno por traste, y une las manos nota a nota.",
+    "erroresComunes": ["Levantar los dedos de golpe al cambiar de cuerda", "Dedos que se separan mucho del mástil"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "subiendo y bajando, dedos cerca de los trastes; el tempo se apunta para ver cómo sube", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.ligados-1pos", "programa": "clasica", "area": "tecnica", "subarea": "mano izquierda", "nivel": 1,
+    "nombre": "Ligados ascendentes y descendentes",
+    "descripcion": "Ascendente: el dedo cae con fuerza sobre la cuerda y la hace sonar sin pulsarla. Descendente: el dedo tira de la cuerda hacia abajo al soltarla.",
+    "proposito": "Los adornos y los pasajes ligados del repertorio (Plan, unidad 4); prepara los ligados con dedo fijo del curso 2.",
+    "erroresComunes": ["Que la segunda nota suene mucho más débil", "En el descendente, levantar el dedo sin tirar de la cuerda", "Tensar la mano entera para martillear"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["ritmo", "sonido", "limpieza", "control"], "pasadas": 3, "detalle": "desde la cuerda al aire con cada dedo, en la 1.ª y en la 2.ª: las dos notas casi igual de fuertes", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.apagar-voces", "programa": "clasica", "area": "tecnica", "nivel": 1,
+    "nombre": "Dos voces: apagar la que termina",
+    "descripcion": "El bajo dura lo que está escrito y se apaga (con el pulgar o soltando la presión) mientras la melodía sigue sonando.",
+    "proposito": "El control de voces de la polifonía antigua (Plan, unidad 5): que se oigan dos líneas y no una mancha.",
+    "requiere": ["comp:tec.melodia-acompanada"],
+    "erroresComunes": ["Dejar sonar el bajo encima del silencio", "Cortar también la melodía al apagar el bajo"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "cada bajo dura dos tiempos y se apaga en el tercero sin cortar la melodía", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.mordente", "programa": "clasica", "area": "tecnica", "subarea": "mano izquierda", "nivel": 1,
+    "nombre": "Mordente",
+    "descripcion": "Un adorno rápido: la nota, la de abajo y vuelta, con un ligado descendente y otro ascendente, sin perder el pulso.",
+    "proposito": "Los adornos de la música española y europea del siglo XVII (Plan, unidad 5).",
+    "requiere": ["comp:tec.ligados-1pos"],
+    "erroresComunes": ["Que el adorno retrase el tiempo siguiente", "Que la nota de abajo apenas se oiga"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "los cuatro mordentes del ejercicio, claros y a tempo, sin que la melodía se pare", "naturaleza": "decision", "justificacion": "Cómo se ejecuta el mordente en cada estilo (con la nota de abajo o la de arriba, en el tiempo o antes) depende de la edición y del estilo: aquí se trabaja la mecánica; la versión de cada obra la decide su edición o su profesor." }
+  },
+  {
+    "id": "comp:esc.re-mayor-1pos", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "Escala de Re mayor en primera posición",
+    "descripcion": "Una octava, de Re3 (4.ª al aire) a Re4 (2.ª, traste 3), con Fa♯ (4.ª, traste 4) y Do♯ (2.ª, traste 2).",
+    "proposito": "La tonalidad de la polifonía de la unidad 5 del Plan.",
+    "requiere": ["comp:esc.do-sol-mayor-1pos"],
+    "erroresComunes": ["Fa natural en la 4.ª cuerda", "Do natural en la 2.ª"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "apoyando i-m, subiendo y bajando; el tempo se apunta para ver cómo sube", "naturaleza": "decision" }
   }
 ]

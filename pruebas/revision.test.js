@@ -6,7 +6,7 @@ import { planificar, MIN_BLOQUE } from '../logica/planificador.js';
 import { estadoInicial } from '../logica/esquema.js';
 import { indexar, conPropio } from '../logica/catalogo.js';
 import { contexto } from '../logica/progreso.js';
-import { ctxDe, catalogoReal, entidadesReales, practica, tanda, diagnostico, enDia, BIEN } from './ayuda.js';
+import { ctxDe, catalogoReal, entidadesReales, entidadesHastaTramo2, practica, tanda, diagnostico, enDia, BIEN } from './ayuda.js';
 
 const cat = catalogoReal();
 const LAGRIMA = 'obra:tarrega.lagrima';
@@ -59,7 +59,7 @@ test('el refuerzo de lectura antes de una obra para leer que aún no está a su 
 });
 
 test('apertura y cierre de tramos: visible no es recomendado, y los tramos en borrador no dejan pasar al cierre', () => {
-  const ctx = ctxDe({ eventos: [...tramo1('2026-10-20'), ...tramo2('2026-10-21')], hoy: '2026-10-22' });
+  const ctx = ctxDe({ eventos: [...tramo1('2026-10-20'), ...tramo2('2026-10-21')], hoy: '2026-10-22', entidades: entidadesHastaTramo2() });
   const r = ctx.rutaActual('clasica');
   assert.equal(r.tramos[0].completo, true);
   assert.equal(r.tramos[1].completo, true);
@@ -75,6 +75,13 @@ test('apertura y cierre de tramos: visible no es recomendado, y los tramos en bo
   const elegido = ctxDe({ estado }).rutaActual('clasica');
   assert.equal(elegido.tramos[1].estado, 'abierto');
   assert.equal(elegido.tramos[0].estado, 'abierto');
+  // Con el contenido real (Fase 3), los tramos 3-5 ya no están en borrador: tras el 2 se abre el 3, y el cierre del curso
+  // sigue esperando a que los tres estén hechos.
+  const real = ctxDe({ eventos: [...tramo1('2026-10-20'), ...tramo2('2026-10-21')], hoy: '2026-10-22' }).rutaActual('clasica');
+  assert.ok(real.tramos.slice(2, 5).every(t => !t.borrador && t.total > 0));
+  assert.equal(real.tramos[2].estado, 'abierto');
+  assert.equal(real.tramos.find(t => t.cierre).estado, 'por-llegar');
+  assert.equal(real.final.estado, 'futuro');
 });
 
 test('la lectura atrasada no marca el sitio actual ni frena el tramo', () => {
@@ -113,7 +120,8 @@ function escenarios() {
     'obra conocida': { programa: 'clasica', ctx: ctxDe({ estado: conocida, eventos: tramo1('2026-10-20').slice(0, -1), hoy: '2026-10-21' }) },
     'obra en estudio fuera de la ruta': { programa: 'clasica', ctx: ctxDe({ estado: enEstudio, eventos: tramo1('2026-10-20'), hoy: '2026-10-28' }) },
     'diagnóstico con técnica alta': { programa: 'clasica', ctx: ctxDe({ eventos: [diagnostico('2026-10-31', { niveles: { tecnica: 2 } })] }) },
-    'tramo 2 hecho, cierre en borrador': { programa: 'clasica', ctx: ctxDe({ eventos: [...tramo1('2026-10-20'), ...tramo2('2026-10-21')], hoy: '2026-10-30' }) },
+    'tramo 2 hecho, cierre en borrador': { programa: 'clasica', ctx: ctxDe({ eventos: [...tramo1('2026-10-20'), ...tramo2('2026-10-21')], hoy: '2026-10-30', entidades: entidadesHastaTramo2() }) },
+    'tramo 3, sin obra eje todavía': { programa: 'clasica', ctx: ctxDe({ eventos: [...tramo1('2026-10-20'), ...tramo2('2026-10-21')], hoy: '2026-10-30' }) },
     flamenco: { programa: 'flamenca', ctx: ctxDe() },
     'los dos': { programa: 'ambas', ctx: ctxDe({ eventos: tramo1('2026-10-20'), hoy: '2026-10-26' }) },
   };

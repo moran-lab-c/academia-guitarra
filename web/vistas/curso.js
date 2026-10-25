@@ -91,10 +91,13 @@ function tarjetaAhora(c, r, actual) {
   }
   const rel = relacionesPaso(c, actual.id);
   const obra = rel?.prepara.find(x => !x.contiene) ?? rel?.prepara[0];
+  const tramo = tramoDe(r, actual.id);
+  const sinObraEje = c.cat.porId.get(tramo?.id)?.porVerificar?.find(x => x.campo === 'obraEje'); // decisión pendiente
   return h('div', { class: 'tarjeta tarjeta-ahora pila-s' },
     h('div', { class: 'rotulo' }, h('span', { class: 'rotulo-verde' }, 'AHORA'), ` · PASO ${actual.numero} · ${(NOMBRE_AREA[actual.area] ?? '').toUpperCase()}`),
     h('div', { class: 'display display-m' }, actual.titulo),
     h('p', { class: 'suave' }, [actual.objetivo, obra && `Lo necesitas para ${obra.seccionTitulo ? `la ${obra.seccionTitulo.charAt(0).toLowerCase()}${obra.seccionTitulo.slice(1)} de ` : ''}${obra.titulo}.`].filter(Boolean).join(' ')),
+    sinObraEje && h('p', { class: 'pequeno ocre' }, `Tramo ${tramo.orden}: la obra eje está pendiente de decidir. ${sinObraEje.motivo}`),
     h('div', { class: 'fila empuja' },
       h('a', { class: 'btn btn-papel', href: actual.href }, 'Abrir el paso'),
       obra && h('a', { class: 'btn btn-borde', href: enlace('/obra', obra.obra) }, 'Ver ', h('span', { class: 'titulo-obra' }, obra.titulo))));

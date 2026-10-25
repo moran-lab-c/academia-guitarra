@@ -33,9 +33,50 @@
   { "id": "paso:c1.t2.08", "programa": "clasica", "clase": "obra", "titulo": "Lágrima, parte B", "objetivo": "La parte B entera, con el cambio de modo claro.", "contenido": ["obra:tarrega.lagrima#B"] },
   { "id": "paso:c1.t2.09", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 2", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo." },
 
-  { "id": "tramo:c1.t3", "programa": "clasica", "curso": "curso:c1", "orden": 3, "borrador": true, "titulo": "El arpegio clásico", "objetivos": ["Su Estudio en Mi menor y los arpegios de Giuliani", "Inversiones y análisis armónico de su estudio"], "pasos": [] },
-  { "id": "tramo:c1.t4", "programa": "clasica", "curso": "curso:c1", "orden": 4, "borrador": true, "titulo": "Escalas y ligados", "objetivos": ["Estudio en Do de Tárrega o lecciones de Aguado", "Intervalos con su calidad y armaduras hasta dos alteraciones"], "pasos": [] },
-  { "id": "tramo:c1.t5", "programa": "clasica", "curso": "curso:c1", "orden": 5, "borrador": true, "titulo": "Polifonía antigua", "objetivos": ["Españoleta de Sanz o una pieza de Dowland", "Control de voces y cadencias"], "pasos": [] },
+  {
+    "id": "tramo:c1.t3", "programa": "clasica", "curso": "curso:c1", "orden": 3,
+    "titulo": "El arpegio clásico",
+    "objetivos": ["Arpegios p-i-m-a y p-a-m-i, con una nota destacada", "La menor en sus tres formas", "Inversiones de las triadas y 3.ª, 5.ª y 8.ª de oído", "Obra eje: pendiente de decidir (el Plan propone su Estudio en Mi menor)"],
+    "porVerificar": [{"campo": "obraEje", "motivo": "El Plan propone su Estudio en Mi menor, que no está en la app; la decisión está pendiente (ver INFORME-FASE-3). Mientras, el tramo se trabaja con sus ejercicios."}],
+    "pasos": ["paso:c1.t3.01", "paso:c1.t3.02", "paso:c1.t3.03", "paso:c1.t3.04", "paso:c1.t3.05", "paso:c1.t3.06", "paso:c1.t3.07"]
+  },
+  {"id": "paso:c1.t3.01", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Arpegio p-i-m-a", "objetivo": "Las cuatro notas iguales sobre Do y Sol7, los acordes de los arpegios de Giuliani.", "trabaja": ["comp:esc.arpegio-pima"], "contenido": ["ej:arp.pima-do-sol7", "ej:giuliani.op1"]},
+  {"id": "paso:c1.t3.02", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Arpegio p-a-m-i", "objetivo": "El arpegio al revés, con la a tan clara como la i.", "trabaja": ["comp:esc.arpegio-pami"], "contenido": ["ej:arp.pami-do-sol7"], "requiere": ["paso:c1.t3.01"]},
+  {"id": "paso:c1.t3.03", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Una nota destacada dentro del arpegio", "objetivo": "La melodía acompañada dentro de un arpegio: la a por encima, lo demás piano.", "trabaja": ["comp:tec.arpegio-nota-destacada"], "contenido": ["ej:arp.nota-destacada"], "requiere": ["paso:c1.t3.01", "paso:c1.t1.07"]},
+  {"id": "paso:c1.t3.04", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "La menor en sus tres formas", "objetivo": "Natural, armónica y melódica: de dónde sale el Sol♯.", "trabaja": ["comp:esc.la-menor-1pos"], "contenido": ["ej:esc.la-menor-3-formas"]},
+  {"id": "paso:c1.t3.05", "programa": "clasica", "clase": "habilidad", "area": "teoria", "titulo": "Inversiones de las triadas", "objetivo": "Qué acorde suena cuando el bajo no es la fundamental.", "trabaja": ["comp:teo.inversiones"]},
+  {"id": "paso:c1.t3.06", "programa": "clasica", "clase": "habilidad", "area": "oido", "titulo": "3.ª, 5.ª y 8.ª de oído", "objetivo": "Las notas de los acordes, reconocidas de oído.", "trabaja": ["comp:oid.intervalos-3-5-8"]},
+  {"id": "paso:c1.t3.07", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 3", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo."},
+
+  {
+    "id": "tramo:c1.t4", "programa": "clasica", "curso": "curso:c1", "orden": 4,
+    "titulo": "Escalas y ligados",
+    "objetivos": ["Do y Sol mayor y la cromática, con i-m y m-a", "Ligados ascendentes y descendentes", "Intervalos con su calidad, armaduras hasta dos alteraciones y las triadas de Do mayor", "Obra eje: pendiente de decidir (Estudio en Do de Tárrega o lecciones de Aguado)"],
+    "porVerificar": [{"campo": "obraEje", "motivo": "El Plan cita el Estudio en Do de Tárrega o las lecciones de Aguado sin identificar cuál; la decisión está pendiente (ver INFORME-FASE-3)."}],
+    "pasos": ["paso:c1.t4.01", "paso:c1.t4.02", "paso:c1.t4.03", "paso:c1.t4.04", "paso:c1.t4.05", "paso:c1.t4.06", "paso:c1.t4.07"]
+  },
+  {"id": "paso:c1.t4.01", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Alternar i-m y m-a", "objetivo": "Escalas apoyando sin repetir dedo, también con m-a.", "trabaja": ["comp:tec.alternancia-im-ma"], "contenido": ["ej:esc.do-mayor-1pos"]},
+  {"id": "paso:c1.t4.02", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Do mayor y Sol mayor", "objetivo": "Do en una octava y Sol en dos, con las manos a la vez.", "trabaja": ["comp:esc.do-sol-mayor-1pos"], "contenido": ["ej:esc.do-mayor-1pos", "ej:esc.sol-mayor-1pos"]},
+  {"id": "paso:c1.t4.03", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Escala cromática", "objetivo": "Un dedo por traste, de La2 a La3 y vuelta.", "trabaja": ["comp:esc.cromatica-1pos"], "contenido": ["ej:esc.cromatica-1pos"]},
+  {"id": "paso:c1.t4.04", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Ligados ascendentes y descendentes", "objetivo": "Que la nota ligada suene casi como la pulsada.", "trabaja": ["comp:tec.ligados-1pos"], "contenido": ["ej:tec.ligados-1pos"], "requiere": ["paso:c1.t1.02"]},
+  {"id": "paso:c1.t4.05", "programa": "clasica", "clase": "habilidad", "area": "teoria", "titulo": "Intervalos y armaduras", "objetivo": "Intervalos con su calidad y las armaduras de hasta dos alteraciones.", "trabaja": ["comp:teo.intervalos", "comp:teo.armaduras-0-2"]},
+  {"id": "paso:c1.t4.06", "programa": "clasica", "clase": "habilidad", "area": "armonia", "titulo": "Las triadas de Do mayor, y escala mayor o menor de oído", "objetivo": "Qué acordes salen de cada grado, y reconocer el modo de una escala.", "trabaja": ["comp:arm.triadas-do-mayor", "comp:oid.escala-mayor-menor"]},
+  {"id": "paso:c1.t4.07", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 4", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo."},
+
+  {
+    "id": "tramo:c1.t5", "programa": "clasica", "curso": "curso:c1", "orden": 5,
+    "titulo": "Polifonía antigua", "obraEje": "obra:sanz.espanoleta",
+    "objetivos": ["La Españoleta de Sanz con las dos voces claras", "Apagar voces y el mordente", "Re mayor, 6/8 y la hemiolia, y las cadencias"],
+    "pasos": ["paso:c1.t5.01", "paso:c1.t5.02", "paso:c1.t5.03", "paso:c1.t5.04", "paso:c1.t5.05", "paso:c1.t5.06", "paso:c1.t5.07", "paso:c1.t5.08"]
+  },
+  {"id": "paso:c1.t5.01", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Dos voces: apagar la que termina", "objetivo": "El bajo dura lo escrito y se calla mientras sigue la melodía.", "trabaja": ["comp:tec.apagar-voces"], "contenido": ["ej:tec.apagar-voces"], "requiere": ["paso:c1.t1.07"]},
+  {"id": "paso:c1.t5.02", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Mordente", "objetivo": "La nota, la de abajo y vuelta, sin perder el pulso.", "trabaja": ["comp:tec.mordente"], "contenido": ["ej:tec.mordente"], "requiere": ["paso:c1.t4.04"]},
+  {"id": "paso:c1.t5.03", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Escala de Re mayor", "objetivo": "La tonalidad de la polifonía de este tramo.", "trabaja": ["comp:esc.re-mayor-1pos"], "contenido": ["ej:esc.re-mayor-1pos"]},
+  {"id": "paso:c1.t5.04", "programa": "clasica", "clase": "habilidad", "area": "ritmo", "titulo": "6/8 y la hemiolia", "objetivo": "Contar 6/8 en dos y oír la hemiolia de las danzas.", "trabaja": ["comp:rit.ternario-hemiolia"], "contenido": ["ej:rit.hemiolia"], "requiere": ["paso:c1.t2.05"]},
+  {"id": "paso:c1.t5.05", "programa": "clasica", "clase": "habilidad", "area": "armonia", "titulo": "Cadencias, y final conclusivo o suspensivo de oído", "objetivo": "Cómo acaba una frase, explicado y escuchado.", "trabaja": ["comp:arm.cadencias", "comp:oid.cadencia-conclusiva-suspensiva"]},
+  {"id": "paso:c1.t5.06", "programa": "clasica", "clase": "aplicacion", "area": "tecnica", "titulo": "Las dos voces de la Españoleta", "objetivo": "Apagar el bajo dentro de la obra, antes de tocarla entera.", "trabaja": ["comp:tec.apagar-voces"], "contenido": ["obra:sanz.espanoleta"], "requiere": ["paso:c1.t5.01"]},
+  {"id": "paso:c1.t5.07", "programa": "clasica", "clase": "obra", "titulo": "Españoleta", "objetivo": "La danza entera, con las dos voces claras.", "contenido": ["obra:sanz.espanoleta"]},
+  {"id": "paso:c1.t5.08", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 5", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo."},
 
   {
     "id": "tramo:c1.cierre", "programa": "clasica", "curso": "curso:c1", "orden": 6, "cierre": true,

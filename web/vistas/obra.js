@@ -34,7 +34,7 @@ export default function obra({ id }) {
   const n = necesidades(c, id, sec?.id ?? null);
   const final = enRutas.finalDe[0];
   const tramos = [...new Map(enRutas.pasos.filter(p => p.tramo).map(p => [`${p.seccion ?? ''}`, p])).values()];
-  const meta = [o.compositor, o.subtitulo?.toLowerCase(), (o.tonalidad || []).join(' y '), o.compas,
+  const meta = [o.compositor, o.subtitulo && o.subtitulo[0].toLowerCase() + o.subtitulo.slice(1), (o.tonalidad || []).join(' y '), o.compas,
     ...(o.nivel?.referencias || []).map(x => `${x.sistema}${x.nivel != null ? ` nivel ${x.nivel}` : ''}${x.curso != null ? ` ${x.curso}.º` : ''}`)].filter(Boolean).join(' · ');
   const rec = formatoPara(o, c, { proposito: 'repertorio', seccion: sec });
   const tecnicaLectura = avisoTecnicaLectura(o, c.tecnica(o.programa), c.niveles.lectura?.efectivo ?? 0);
@@ -195,5 +195,7 @@ function ficha(o) {
       fila('Lectura que pide', o.lecturaNecesaria ? `${decimal(o.lecturaNecesaria.nivel)} (${nat(o.lecturaNecesaria.naturaleza)})` : null),
       fila('Duración', o.duracionMin ? `${o.duracionMin.valor ?? o.duracionMin} min aprox.` : null),
       fila('Notación', o.notacion?.donde ? `Fuera de la app: ${o.notacion.donde}` : null),
+      fila('Por qué está', o.porQue),
+      fila('Por verificar', (o.porVerificar || []).length ? h('ul', { class: 'lista-limpia pila-s' }, o.porVerificar.map(x => h('li', { class: 'ocre' }, `${x.campo}: ${x.motivo}`))) : null),
       fila('Nota', [o.nota, o.notaSecciones].filter(Boolean).join(' '))));
 }

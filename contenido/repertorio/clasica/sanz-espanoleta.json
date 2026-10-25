@@ -1,0 +1,63 @@
+{
+  "id": "obra:sanz.espanoleta",
+  "programa": "clasica",
+  "clase": "obra",
+  "compositor": "Gaspar Sanz",
+  "titulo": "Españoleta",
+  "subtitulo": "De la «Instrucción de música sobre la guitarra española»",
+  "periodo": "barroco",
+  "estilo": "Danza barroca española",
+  "nivel": {
+    "curso": 1,
+    "naturaleza": "decision",
+    "referencias": [
+      {
+        "sistema": "RCM 2018",
+        "nivel": "2-3",
+        "naturaleza": "dato",
+        "nota": "Según el Plan (apartado 4, etapa 1, unidad 5)."
+      },
+      {
+        "sistema": "Profesionales (Madrid)",
+        "curso": 2,
+        "naturaleza": "dato",
+        "nota": "Según el Plan (apartado 4, etapa 3)."
+      }
+    ]
+  },
+  "dificultad": {
+    "valor": 1.5,
+    "naturaleza": "estimacion"
+  },
+  "lecturaNecesaria": {
+    "nivel": 2,
+    "naturaleza": "estimacion",
+    "nota": "Dos voces en primera posición; depende de la edición."
+  },
+  "pide": [
+    "comp:tec.apagar-voces"
+  ],
+  "desarrolla": [
+    "comp:tec.mordente",
+    "comp:arm.cadencias",
+    "comp:int.pieza-sin-parar"
+  ],
+  "objetivos": [
+    "Dos voces claras: el bajo dura lo que está escrito y se apaga",
+    "Los adornos sin que corten el pulso",
+    "Una danza antigua entera, con sus cadencias"
+  ],
+  "porQue": "Es la obra de la unidad 5 del Plan (polifonía antigua): dos voces sencillas en primera posición, adornos y cadencias, en una música muy distinta de Lágrima. Cierra la etapa 1 por el lado de la polifonía, antes de las voces independientes del curso 3.",
+  "notacion": {
+    "partitura": "externa",
+    "tablatura": "pendiente",
+    "donde": "Ediciones modernas para guitarra; el original está en cifra para guitarra barroca de cinco órdenes"
+  },
+  "porVerificar": [
+    { "campo": "edicion", "motivo": "Hay versiones de distinta dificultad (el Plan la cita en la etapa 1 y en la 3): qué edición se usa lo decide su profesor." },
+    { "campo": "fuente", "motivo": "El libro de la «Instrucción» en que aparece y su año están por comprobar con el facsímil." },
+    { "campo": "tonalidad y compás", "motivo": "Dependen de la edición: no se dan como dato." },
+    { "campo": "duración y secciones", "motivo": "Sin la edición delante no se dividen en partes ni se dan compases." },
+    { "campo": "desarrolla", "motivo": "Los adornos (mordentes) y las cadencias concretas dependen de la edición." }
+  ]
+}

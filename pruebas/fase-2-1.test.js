@@ -11,7 +11,7 @@ import { indexar, conPropio } from '../logica/catalogo.js';
 import { contexto } from '../logica/progreso.js';
 import { estadoInicial } from '../logica/esquema.js';
 import { sumarDias } from '../logica/fechas.js';
-import { ctxDe, catalogoReal, entidadesReales, practica, tanda, diagnostico, enDia, BIEN } from './ayuda.js';
+import { ctxDe, catalogoReal, entidadesReales, entidadesHastaTramo2, practica, tanda, diagnostico, enDia, BIEN } from './ayuda.js';
 
 const cat = catalogoReal();
 const LAGRIMA = 'obra:tarrega.lagrima';
@@ -183,10 +183,11 @@ test('Lectura · si un tramo exige una lectura, lo declara en sus datos («exige
 
 // Varios días de práctica registrando cada bloque como la app (una práctica con sus minutos; lo de conocimiento, además,
 // con su tanda) y las comprobaciones en frío bien.
-const practicarDias = (eventos, minutos, dias, desde) => {
+// entidades: el catálogo (por defecto, el real; entidadesHastaTramo2() para la ruta en espera).
+const practicarDias = (eventos, minutos, dias, desde, entidades = null) => {
   const evs = [...eventos], sesiones = [];
   for (let d = 0, dia = desde; d < dias; d++, dia = sumarDias(dia, 1)) {
-    const plan = planificar(ctxDe({ eventos: evs, hoy: dia }), { minutos });
+    const plan = planificar(ctxDe({ eventos: evs, hoy: dia, entidades }), { minutos });
     let hora = 8;
     for (const b of plan.bloques.filter(x => x.tipo === 'comprobacion')) for (const x of b.items) evs.push(frioOk(x.id, dia, hora++));
     for (const b of plan.bloques.filter(x => x.item && !['comprobacion', 'pasada'].includes(x.tipo))) {
@@ -211,8 +212,9 @@ test('Lectura · aunque vaya varios niveles por detrás durante semanas, no ocup
   assert.ok(peorRacha(atrasada, p => minutosDe(p, b => b.area === 'lectura') > minutosDe(p, b => b.area === 'repertorio')) <= 2, 'días seguidos con más lectura que repertorio');
   const total = atrasada.reduce((s, p) => s + minutosDe(p, b => !['calentamiento', 'pausa'].includes(b.tipo)), 0);
   assert.ok(atrasada.reduce((s, p) => s + minutosDe(p, b => b.area === 'lectura'), 0) / total <= 0.2, 'la lectura no se come las sesiones');
-  // Mientras la ruta espera, una lectura atrasada no deja la técnica fuera más que su margen y unos días.
-  const espera = practicarDias([diagnostico('2026-09-25', { niveles: { tecnica: 2 } }), ...tramo1('2026-10-01'), hecho('comp:tec.media-cejilla', '2026-10-02'), seccion('B', '2026-10-03')], 30, 21, '2026-10-07');
+  // Mientras la ruta espera (con los tramos 3-5 en preparación), una lectura atrasada no deja la técnica fuera más que
+  // su margen y unos días.
+  const espera = practicarDias([diagnostico('2026-09-25', { niveles: { tecnica: 2 } }), ...tramo1('2026-10-01'), hecho('comp:tec.media-cejilla', '2026-10-02'), seccion('B', '2026-10-03')], 30, 21, '2026-10-07', entidadesHastaTramo2());
   assert.ok(espera.some(p => p.avisos.some(a => /Has terminado lo disponible/.test(a))), 'llega a esperar');
   assert.ok(peorRacha(espera, p => !p.bloques.some(b => b.area === 'tecnica' && b.tipo !== 'calentamiento')) <= 7, 'días seguidos sin técnica');
 });
@@ -251,7 +253,7 @@ test('Comprobaciones · pocas: entran todas, también en 20 y 30 minutos', () =>
 test('Comprobaciones · jerarquía: lo que necesita la obra activa, la ruta, lo que falló, lo vencido y, al final, lo que solo está a punto de olvidarse', () => {
   const eventos = [
     ...tramo1('2026-10-01'), // tramo 2 abierto; Lágrima B (obra eje) pide sonido clásico y melodía acompañada
-    hecho('comp:esc.arpegio-pima', '2026-10-01'), practica('comp:esc.arpegio-pima', '2026-10-10', { modo: 'comprobacion', calidad: MAL, pasadas: 2 }), // fuera de la ruta y falló
+    hecho('comp:tec.tremolo-lento', '2026-10-01'), practica('comp:tec.tremolo-lento', '2026-10-10', { modo: 'comprobacion', calidad: MAL, pasadas: 2 }), // fuera de la ruta (curso 2) y falló
     hecho('comp:tec.cejilla-completa', '2026-10-12'), // fuera de la ruta, vencida, sin fallo
   ];
   const cola = colaDeRepasos(ctxDe({ eventos, hoy: '2026-10-20' }), 'clasica');
@@ -260,17 +262,17 @@ test('Comprobaciones · jerarquía: lo que necesita la obra activa, la ruta, lo 
   assert.equal(de('comp:tec.melodia-acompanada').franja, 1);
   assert.match(de('comp:tec.sonido-clasico').motivo, /lo necesita la obra que estás trabajando/);
   assert.equal(de('comp:esc.mi-mayor-1pos').franja, 2);
-  assert.equal(de('comp:esc.arpegio-pima').franja, 3);
-  assert.match(de('comp:esc.arpegio-pima').motivo, /falló la última vez/);
+  assert.equal(de('comp:tec.tremolo-lento').franja, 3);
+  assert.match(de('comp:tec.tremolo-lento').motivo, /falló la última vez/);
   assert.equal(de('comp:tec.cejilla-completa').franja, 4);
   const pos = id => cola.findIndex(x => x.id === id);
-  assert.ok(pos('comp:tec.sonido-clasico') < pos('comp:esc.mi-mayor-1pos') && pos('comp:esc.mi-mayor-1pos') < pos('comp:esc.arpegio-pima') && pos('comp:esc.arpegio-pima') < pos('comp:tec.cejilla-completa'));
+  assert.ok(pos('comp:tec.sonido-clasico') < pos('comp:esc.mi-mayor-1pos') && pos('comp:esc.mi-mayor-1pos') < pos('comp:tec.tremolo-lento') && pos('comp:tec.tremolo-lento') < pos('comp:tec.cejilla-completa'));
   // La ruta va antes que lo de fuera aunque esto sea más antiguo (si no lleva semanas esperando).
-  const fuera = colaDeRepasos(ctxDe({ eventos: [hecho('comp:esc.mi-mayor-1pos', '2026-10-28'), hecho('comp:esc.arpegio-pima', '2026-10-15')], hoy: '2026-11-01' }), 'clasica');
-  assert.deepEqual(fuera.map(x => x.id), ['comp:esc.mi-mayor-1pos', 'comp:esc.arpegio-pima']);
+  const fuera = colaDeRepasos(ctxDe({ eventos: [hecho('comp:esc.mi-mayor-1pos', '2026-10-28'), hecho('comp:tec.tremolo-lento', '2026-10-15')], hoy: '2026-11-01' }), 'clasica');
+  assert.deepEqual(fuera.map(x => x.id), ['comp:esc.mi-mayor-1pos', 'comp:tec.tremolo-lento']);
   // Lo que solo está a punto de olvidarse va al final.
-  const casi = colaDeRepasos(ctxDe({ eventos: [hecho('comp:esc.arpegio-pima', '2026-10-20'), frioOk('comp:esc.arpegio-pima', '2026-10-24'), hecho('comp:tec.cejilla-completa', '2026-10-25')], hoy: '2026-10-30' }), 'clasica');
-  assert.equal(casi.at(-1).id, 'comp:esc.arpegio-pima');
+  const casi = colaDeRepasos(ctxDe({ eventos: [hecho('comp:tec.tremolo-lento', '2026-10-20'), frioOk('comp:tec.tremolo-lento', '2026-10-24'), hecho('comp:tec.cejilla-completa', '2026-10-25')], hoy: '2026-10-30' }), 'clasica');
+  assert.equal(casi.at(-1).id, 'comp:tec.tremolo-lento');
   assert.equal(casi.at(-1).franja, 5);
 });
 
@@ -417,7 +419,7 @@ test('Obra final · el número de pasadas lo puede ajustar el profesor (por defe
 });
 
 test('Obra final · con todo el curso hecho, «aprendida con requisitos» cierra el curso aunque no esté consolidada', () => {
-  // Un curso 1 sin tramos en borrador (solo para esta prueba): tramos 1 y 2, cierre y obra final.
+  // Un curso 1 solo con los tramos 1 y 2, el cierre y la obra final (solo para esta prueba).
   const sinBorradores = entidadesReales().filter(e => !['tramo:c1.t3', 'tramo:c1.t4', 'tramo:c1.t5'].includes(e.id));
   const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
   const eventos = [...tramo1('2026-10-01'), ...tramo2('2026-10-01'), ...[...COMPS_T1, `${LAGRIMA}#A`].map(k => frioOk(k, '2026-10-05')), ...cierreT2('2026-10-05'),
@@ -508,7 +510,7 @@ test('Curso en preparación · los niveles no le llevan a un curso sin ruta: se 
 });
 
 test('Curso en preparación · al terminar lo disponible, la ruta lo dice y la sesión consolida (nunca vacía); también mientras esperan los cierres', () => {
-  const ctx = ctxDe({ eventos: finDisponible(), hoy: '2026-10-07' });
+  const ctx = ctxDe({ eventos: finDisponible(), hoy: '2026-10-07', entidades: entidadesHastaTramo2() });
   const r = ctx.rutaActual('clasica');
   assert.equal(r.curso.id, 'curso:c1');
   assert.equal(r.actual, null);
@@ -520,12 +522,12 @@ test('Curso en preparación · al terminar lo disponible, la ruta lo dice y la s
     assert.ok(plan.avisos.some(a => /Has terminado lo disponible del curso 1; los tramos 3, 4, 5 del curso 1 y el curso 2 están en preparación/.test(a)), `${m}′`);
     assert.ok(plan.bloques.some(b => ['obra', 'area', 'refuerzo', 'comprobacion'].includes(b.tipo)), `${m}′: sesión vacía`);
   }
-  const esperando = ctxDe({ eventos: [...tramo1('2026-10-01'), ...tramo2('2026-10-01')], hoy: '2026-10-02' }).rutaActual('clasica');
+  const esperando = ctxDe({ eventos: [...tramo1('2026-10-01'), ...tramo2('2026-10-01')], hoy: '2026-10-02', entidades: entidadesHastaTramo2() }).rutaActual('clasica');
   assert.equal(esperando.continuidad.motivo, 'cierres');
 });
 
 test('Repertorio en espera · entra el repertorio activo del curso (la obra final) antes que la lectura y la cobertura; Sor no es la obra por defecto', () => {
-  const ctx = ctxDe({ eventos: finDisponible(), hoy: '2026-10-07' });
+  const ctx = ctxDe({ eventos: finDisponible(), hoy: '2026-10-07', entidades: entidadesHastaTramo2() });
   for (const m of [20, 30, 60, 90]) {
     const plan = planificar(ctx, { minutos: m });
     const obras = plan.bloques.filter(b => b.tipo === 'obra');
@@ -535,7 +537,7 @@ test('Repertorio en espera · entra el repertorio activo del curso (la obra fina
   }
   // Con la obra final ya aprendida con sus requisitos, se consolida lo aprendido del curso (no Sor).
   const memoria = { calidad: { ...BIEN, memoria: 'bien' }, ayuda: 'ninguna', formato: 'memoria', pasadas: 1 };
-  const plan = planificar(ctxDe({ eventos: [...finDisponible(), hecho('comp:int.pieza-sin-parar', '2026-10-06'), practica(LAGRIMA, '2026-10-06', memoria)], hoy: '2026-10-07' }), { minutos: 60 });
+  const plan = planificar(ctxDe({ eventos: [...finDisponible(), hecho('comp:int.pieza-sin-parar', '2026-10-06'), practica(LAGRIMA, '2026-10-06', memoria)], hoy: '2026-10-07', entidades: entidadesHastaTramo2() }), { minutos: 60 });
   const rep = plan.bloques.find(b => b.tipo === 'obra');
   assert.ok(rep, plan.bloques.map(b => `${b.tipo}:${b.item}`).join(' · '));
   assert.equal(rep.item, LAGRIMA);
@@ -544,11 +546,12 @@ test('Repertorio en espera · entra el repertorio activo del curso (la obra fina
 
 test('Repertorio en espera · varios días: el repertorio no desaparece (tampoco el día que la obra final toca comprobarla en frío) y la lectura no se come las sesiones', () => {
   const evs = finDisponible();
+  const hastaT2 = entidadesHastaTramo2();
   const suma = {};
   let total = 0, comprobadaYTrabajada = 0;
   let dia = '2026-10-07';
   for (let d = 0; d < 14; d++, dia = sumarDias(dia, 1)) {
-    const plan = planificar(ctxDe({ eventos: evs, hoy: dia }), { minutos: 60 });
+    const plan = planificar(ctxDe({ eventos: evs, hoy: dia, entidades: hastaT2 }), { minutos: 60 });
     let hora = 8;
     for (const b of plan.bloques.filter(x => x.tipo === 'comprobacion')) for (const x of b.items) evs.push(frioOk(x.id, dia, hora++));
     for (const b of plan.bloques) {
@@ -567,7 +570,7 @@ test('Repertorio en espera · varios días: el repertorio no desaparece (tampoco
 
 // ───────────────────────────── Sesiones largas: trabajo, pasada y tiempo disponible
 test('Sesiones largas · con solo Lágrima por hacer, 90 minutos no son un bloque gigante: trabajo de unos 25 como mucho, pasada de lo que dura la obra, vuelta tras la pausa y el resto como tiempo disponible', () => {
-  const sesiones = practicarDias(finDisponible(), 90, 30, '2026-10-07');
+  const sesiones = practicarDias(finDisponible(), 90, 30, '2026-10-07', entidadesHastaTramo2());
   const pasadaLagrima = Math.max(5, Math.ceil(cat.porId.get(LAGRIMA).duracionMin.valor) + 2);
   let libres = 0, vueltas = 0;
   for (const plan of sesiones) {

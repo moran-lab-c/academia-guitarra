@@ -1,0 +1,12 @@
+{
+  "titulo": "Ligados ascendentes y descendentes desde la cuerda al aire",
+  "compas": "4/4",
+  "armadura": "C",
+  "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
+  "compases": [
+    {"voces":[[{"d":"8","c":1,"t":0,"mano":"m","lig":"h"},{"d":"8","c":1,"t":1,"dedo":1},{"d":"8","c":1,"t":0,"mano":"m","lig":"h"},{"d":"8","c":1,"t":2,"dedo":2},{"d":"8","c":1,"t":0,"mano":"m","lig":"h"},{"d":"8","c":1,"t":3,"dedo":3},{"d":"8","c":1,"t":0,"mano":"m","lig":"h"},{"d":"8","c":1,"t":4,"dedo":4}]]},
+    {"voces":[[{"d":"8","c":1,"t":1,"dedo":1,"mano":"m","lig":"p"},{"d":"8","c":1,"t":0},{"d":"8","c":1,"t":2,"dedo":2,"mano":"m","lig":"p"},{"d":"8","c":1,"t":0},{"d":"8","c":1,"t":3,"dedo":3,"mano":"m","lig":"p"},{"d":"8","c":1,"t":0},{"d":"8","c":1,"t":4,"dedo":4,"mano":"m","lig":"p"},{"d":"8","c":1,"t":0}]]},
+    {"voces":[[{"d":"8","c":2,"t":0,"mano":"m","lig":"h"},{"d":"8","c":2,"t":1,"dedo":1},{"d":"8","c":2,"t":0,"mano":"m","lig":"h"},{"d":"8","c":2,"t":2,"dedo":2},{"d":"8","c":2,"t":0,"mano":"m","lig":"h"},{"d":"8","c":2,"t":3,"dedo":3},{"d":"8","c":2,"t":0,"mano":"m","lig":"h"},{"d":"8","c":2,"t":4,"dedo":4}]]},
+    {"voces":[[{"d":"8","c":2,"t":1,"dedo":1,"mano":"m","lig":"p"},{"d":"8","c":2,"t":0},{"d":"8","c":2,"t":2,"dedo":2,"mano":"m","lig":"p"},{"d":"8","c":2,"t":0},{"d":"8","c":2,"t":3,"dedo":3,"mano":"m","lig":"p"},{"d":"8","c":2,"t":0},{"d":"8","c":2,"t":4,"dedo":4,"mano":"m","lig":"p"},{"d":"8","c":2,"t":0}]]}
+  ]
+}

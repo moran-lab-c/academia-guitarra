@@ -1,0 +1,12 @@
+{
+  "titulo": "Arpegio p-a-m-i sobre Do y Sol7",
+  "compas": "4/4",
+  "armadura": "C",
+  "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
+  "compases": [
+    {"voces":[[{"d":"8","c":5,"t":3,"mano":"p","dedo":3},{"d":"8","c":1,"t":0,"mano":"a"},{"d":"8","c":2,"t":1,"mano":"m","dedo":1},{"d":"8","c":3,"t":0,"mano":"i"},{"d":"8","c":5,"t":3},{"d":"8","c":1,"t":0},{"d":"8","c":2,"t":1},{"d":"8","c":3,"t":0}]]},
+    {"voces":[[{"d":"8","c":6,"t":3,"mano":"p","dedo":3},{"d":"8","c":1,"t":1,"mano":"a","dedo":1},{"d":"8","c":2,"t":0,"mano":"m"},{"d":"8","c":3,"t":0,"mano":"i"},{"d":"8","c":6,"t":3},{"d":"8","c":1,"t":1},{"d":"8","c":2,"t":0},{"d":"8","c":3,"t":0}]]},
+    {"voces":[[{"d":"8","c":6,"t":3,"mano":"p","dedo":3},{"d":"8","c":1,"t":1,"mano":"a","dedo":1},{"d":"8","c":2,"t":0,"mano":"m"},{"d":"8","c":3,"t":0,"mano":"i"},{"d":"8","c":6,"t":3},{"d":"8","c":1,"t":1},{"d":"8","c":2,"t":0},{"d":"8","c":3,"t":0}]]},
+    {"voces":[[{"d":"8","c":5,"t":3,"mano":"p","dedo":3},{"d":"8","c":1,"t":0,"mano":"a"},{"d":"8","c":2,"t":1,"mano":"m","dedo":1},{"d":"8","c":3,"t":0,"mano":"i"},{"d":"8","c":5,"t":3},{"d":"8","c":1,"t":0},{"d":"8","c":2,"t":1},{"d":"8","c":3,"t":0}]]}
+  ]
+}

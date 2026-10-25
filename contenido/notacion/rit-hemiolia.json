@@ -1,0 +1,12 @@
+{
+  "titulo": "6/8 en dos y la hemiolia (tres negras en lugar de dos negras con puntillo)",
+  "compas": "6/8",
+  "armadura": "C",
+  "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
+  "compases": [
+    {"voces":[[{"d":"4","c":5,"t":0,"p":true,"art":["acento"]},{"d":"4","c":5,"t":0,"p":true,"art":["acento"]}]]},
+    {"voces":[[{"d":"8","c":5,"t":0,"art":["acento"]},{"d":"8","c":5,"t":0},{"d":"8","c":5,"t":0},{"d":"8","c":5,"t":0,"art":["acento"]},{"d":"8","c":5,"t":0},{"d":"8","c":5,"t":0}]]},
+    {"voces":[[{"d":"4","c":5,"t":0,"art":["acento"]},{"d":"4","c":5,"t":0,"art":["acento"]},{"d":"4","c":5,"t":0,"art":["acento"]}]]},
+    {"voces":[[{"d":"4","c":5,"t":0,"p":true,"art":["acento"]},{"d":"4","c":5,"t":0,"p":true,"art":["acento"]}]]}
+  ]
+}

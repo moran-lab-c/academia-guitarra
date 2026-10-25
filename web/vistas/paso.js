@@ -187,6 +187,8 @@ function paraQueSirve(c, rel) {
         h('div', null, h('a', { href: enlace('/obra', x.obra), class: 'titulo-obra' }, x.titulo), x.seccionTitulo ? `, ${x.seccionTitulo[0].toLowerCase()}${x.seccionTitulo.slice(1)}` : '',
           h('div', { class: 'pequeno suave' }, n ? `${n.resumen.laTienes} de ${n.pide.length} habilidades ya las tienes` : '')));
     })) : h('p', { class: 'suave' }, 'Prepara el resto del curso.'),
+    // Un tramo cuya obra eje está por decidir lo dice, para que no parezca que falta algo por error.
+    rel.tramo?.porVerificar?.some(x => x.campo === 'obraEje') && h('p', { class: 'pequeno ocre' }, `La obra eje del tramo ${rel.tramo.orden} está pendiente de decidir: ${rel.tramo.porVerificar.find(x => x.campo === 'obraEje').motivo}`),
     abre.length > 0 && h('div', { class: 'pila-s' }, h('span', { class: 'pequeno suave' }, 'Y abre después:'),
       abre.map(a => h('a', { href: enlace('/competencia', a.id), class: 'fila', style: 'gap:8px' }, iconoArea(a.area, 14), a.nombre)),
       lejanas.map(o => h('a', { href: enlace('/obra', o.id), class: 'fila', style: 'gap:8px' }, iconoArea('estrella', 14), h('span', { class: 'titulo-obra' }, o.titulo)))));

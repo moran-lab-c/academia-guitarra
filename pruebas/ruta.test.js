@@ -170,7 +170,7 @@ test('«¿Qué hago hoy?»: profesor, comprobaciones cortas por prioridad, la ru
   estado.tareasProfesor.push({ id: 't1', item: 'obra:sor.op60-1', minutos: 12, hasta: '2026-11-03' });
   const eventos = [
     practica('comp:esc.mi-mayor-1pos', '2026-10-28', { calidad: BIEN, pasadas: 3 }), // de la ruta y vencida
-    practica('comp:esc.arpegio-pima', '2026-10-01', { calidad: BIEN, pasadas: 3 }), // fuera de la ruta, vencida hace 28 días
+    practica('comp:tec.tremolo-lento', '2026-10-01', { calidad: BIEN, pasadas: 3 }), // fuera de la ruta (curso 2), vencida hace 28 días
   ];
   const ctx = ctxDe({ estado, eventos, hoy: '2026-11-01' });
   const plan = planificar(ctx, { minutos: 60 });
@@ -179,7 +179,7 @@ test('«¿Qué hago hoy?»: profesor, comprobaciones cortas por prioridad, la ru
   const frio = plan.bloques[1];
   assert.ok(frio.minutos <= 4);
   // Primero la ruta; lo de fuera ya no espera para siempre: hay sitio y entra detrás (Fase 2.1, decisión 3).
-  assert.deepEqual(frio.items.map(x => x.id), ['comp:esc.mi-mayor-1pos', 'comp:esc.arpegio-pima']);
+  assert.deepEqual(frio.items.map(x => x.id), ['comp:esc.mi-mayor-1pos', 'comp:tec.tremolo-lento']);
   assert.ok(plan.bloques.some(b => b.tipo === 'paso' && /Tu paso actual/.test(b.motivos[0])));
   assert.ok(plan.bloques.some(b => b.tipo === 'obra' && b.item === 'obra:tarrega.lagrima'));
   assert.ok(plan.bloques.every(b => typeof b.paraQue === 'string' && b.paraQue.length > 0));

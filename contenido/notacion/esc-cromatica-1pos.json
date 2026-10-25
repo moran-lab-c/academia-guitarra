@@ -1,0 +1,10 @@
+{
+  "titulo": "Escala cromática de La2 a La3, primera posición (subiendo)",
+  "compas": "4/4",
+  "armadura": "C",
+  "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
+  "compases": [
+    {"voces":[[{"d":"8","c":5,"t":0},{"d":"8","c":5,"t":1,"dedo":1},{"d":"8","c":5,"t":2,"dedo":2},{"d":"8","c":5,"t":3,"dedo":3},{"d":"8","c":5,"t":4,"dedo":4},{"d":"8","c":4,"t":0},{"d":"8","c":4,"t":1,"dedo":1},{"d":"8","c":4,"t":2,"dedo":2}]]},
+    {"voces":[[{"d":"8","c":4,"t":3,"dedo":3},{"d":"8","c":4,"t":4,"dedo":4},{"d":"8","c":3,"t":0},{"d":"8","c":3,"t":1,"dedo":1},{"d":"2","c":3,"t":2,"dedo":2}]]}
+  ]
+}

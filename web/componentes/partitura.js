@@ -163,9 +163,12 @@ export function dibujar(VF, plan, vista, ancho) {
       if (vocesT.length) fmt.joinVoices(vocesT);
       const disponible = c.ancho - (c.primero ? c.cabecera : 0) - 24;
       fmt.format([...vocesP, ...vocesT], Math.max(40, disponible));
+      // Las vigas agrupan por pulsos del compás: de negra en 2/4, 3/4 y 4/4; de negra con puntillo en 6/8, 9/8 y 12/8.
+      // Los silencios se pasan (sin viga) para que no descuadren los grupos.
+      const groups = Beam.getDefaultBeamGroups(`${plan.compas.num}/${plan.compas.den}`);
       const vigas = [
-        ...notasP.flatMap(({ lista, plica }) => Beam.generateBeams(lista.filter(x => !x.isRest()), { maintainStemDirections: !!plica, ...(plica ? { stemDirection: plica } : {}) })),
-        ...(!conPartitura ? notasT.flatMap(({ lista }) => Beam.generateBeams(lista.filter(x => x instanceof TabNote), { stemDirection: -1, maintainStemDirections: true })) : []),
+        ...notasP.flatMap(({ lista, plica }) => Beam.generateBeams(lista, { groups, beamRests: false, maintainStemDirections: !!plica, ...(plica ? { stemDirection: plica } : {}) })),
+        ...(!conPartitura ? notasT.flatMap(({ lista }) => Beam.generateBeams(lista.filter(x => x instanceof TabNote), { groups, stemDirection: -1, maintainStemDirections: true })) : []),
       ];
       vocesP.forEach(v => v.draw(ctx, stave));
       vocesT.forEach(v => v.draw(ctx, tab));

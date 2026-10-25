@@ -83,5 +83,468 @@
     "trabaja": [
       "comp:tec.presion-minima"
     ]
+  },
+  {
+    "id": "ej:arp.pima-do-sol7",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Arpegio p-i-m-a sobre Do y Sol7",
+    "objetivo": "Las cuatro notas iguales y el pulgar sin acentuar de más.",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "Do mayor y Sol7 de primera posición, fijos en la mano izquierda: solo suenan el bajo y las tres cuerdas agudas.",
+      "p en el bajo (5.ª en Do, 6.ª en Sol7); i, m y a en la 3.ª, 2.ª y 1.ª.",
+      "Prepara cada dedo en su cuerda antes de tocarla.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Mover toda la mano en vez de los dedos",
+      "Un dedo que suena más que los otros"
+    ],
+    "trabaja": [
+      "comp:esc.arpegio-pima"
+    ],
+    "notacion": {
+      "fuente": "notacion/arp-pima-do-sol7.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    },
+    "nota": "Los mismos acordes de los arpegios de Giuliani, op. 1 (ver «Giuliani, 120 arpegios»), que siguen con muchos más patrones."
+  },
+  {
+    "id": "ej:arp.pami-do-sol7",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Arpegio p-a-m-i sobre Do y Sol7",
+    "objetivo": "El arpegio al revés, con la a tan clara como la i.",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "Los mismos acordes que en p-i-m-a.",
+      "Después del bajo, a en la 1.ª, m en la 2.ª e i en la 3.ª.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "La a débil",
+      "Correr después de la a"
+    ],
+    "trabaja": [
+      "comp:esc.arpegio-pami"
+    ],
+    "notacion": {
+      "fuente": "notacion/arp-pami-do-sol7.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:arp.nota-destacada",
+    "programa": "clasica",
+    "area": "tecnica",
+    "titulo": "Arpegio con la nota de «a» destacada",
+    "objetivo": "Que la nota de a se oiga por encima y las otras sigan piano.",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "La menor y Mi mayor de primera posición, p-i-m-a en corcheas.",
+      "La a, más fuerte (apoyando, si puedes); p, i y m, piano y regulares.",
+      "Primero solo la a, luego el arpegio entero.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Que con el acento se descuadre el ritmo",
+      "Que suba todo el arpegio y no solo la a"
+    ],
+    "trabaja": [
+      "comp:tec.arpegio-nota-destacada"
+    ],
+    "notacion": {
+      "fuente": "notacion/arp-nota-destacada.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica de mano derecha: tablatura. En la partitura se ven los acentos de la a y la dinámica."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:esc.la-menor-3-formas",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "La menor natural, armónica y melódica",
+    "objetivo": "Las tres formas seguidas, sabiendo qué cambia en cada una.",
+    "duracionMin": [
+      5,
+      8
+    ],
+    "instrucciones": [
+      "Una octava, de La2 (5.ª al aire) a La3 (3.ª, traste 2), un dedo por traste.",
+      "Natural; armónica (Sol♯: 3.ª, traste 1); melódica (Fa♯ y Sol♯ al subir, natural al bajar).",
+      "Apoyando i-m, en corcheas.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Sol♯ en la natural",
+      "Bajar la melódica con Fa♯ y Sol♯"
+    ],
+    "trabaja": [
+      "comp:esc.la-menor-1pos"
+    ],
+    "notacion": {
+      "fuente": "notacion/esc-la-menor-3-formas.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Escala: tablatura para tocarla; la partitura enseña qué cambia en cada forma (los sostenidos)."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:esc.do-mayor-1pos",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Escala de Do mayor, una octava",
+    "objetivo": "Do mayor limpia, primero con i-m y después con m-a.",
+    "duracionMin": [
+      3,
+      5
+    ],
+    "instrucciones": [
+      "De Do3 (5.ª, traste 3) a Do4 (2.ª, traste 1) y vuelta, un dedo por traste.",
+      "Una vez con i-m y otra con m-a, sin repetir dedo al cambiar de cuerda.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Repetir dedo en el cambio de cuerda"
+    ],
+    "trabaja": [
+      "comp:esc.do-sol-mayor-1pos",
+      "comp:tec.alternancia-im-ma"
+    ],
+    "notacion": {
+      "fuente": "notacion/esc-do-mayor-1pos.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:esc.sol-mayor-1pos",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Escala de Sol mayor, dos octavas",
+    "objetivo": "Sol mayor de Sol2 a Sol4 con sus dos Fa♯.",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "De Sol2 (6.ª, traste 3) a Sol4 (1.ª, traste 3) y vuelta, un dedo por traste.",
+      "Fa♯ en la 4.ª (traste 4) y en la 1.ª (traste 2).",
+      "Una vez con i-m y otra con m-a.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Fa natural en la 4.ª cuerda",
+      "Correr en la bajada"
+    ],
+    "trabaja": [
+      "comp:esc.do-sol-mayor-1pos",
+      "comp:tec.alternancia-im-ma"
+    ],
+    "notacion": {
+      "fuente": "notacion/esc-sol-mayor-1pos.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:esc.cromatica-1pos",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Escala cromática, primera posición",
+    "objetivo": "Un dedo por traste, sin que los dedos se alejen del mástil.",
+    "duracionMin": [
+      3,
+      5
+    ],
+    "instrucciones": [
+      "De La2 (5.ª al aire) a La3 (3.ª, traste 2), todos los semitonos.",
+      "Un dedo por traste (traste 1, dedo 1; traste 4, dedo 4).",
+      "Vuelve bajando por los mismos trastes (la partitura solo escribe la subida: al bajar se suele escribir con bemoles).",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Levantar todos los dedos al cambiar de cuerda",
+      "Pisar lejos del traste"
+    ],
+    "trabaja": [
+      "comp:esc.cromatica-1pos"
+    ],
+    "notacion": {
+      "fuente": "notacion/esc-cromatica-1pos.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:tec.ligados-1pos",
+    "programa": "clasica",
+    "area": "tecnica",
+    "titulo": "Ligados desde la cuerda al aire",
+    "objetivo": "Que la nota ligada suene casi tan fuerte como la pulsada.",
+    "duracionMin": [
+      3,
+      5
+    ],
+    "instrucciones": [
+      "Ascendente: pulsa la cuerda al aire y deja caer el dedo con fuerza en el traste, sin volver a pulsar.",
+      "Descendente: pulsa la nota pisada y tira del dedo hacia abajo al soltarla, como si pulsaras con la mano izquierda.",
+      "Con cada dedo, en la 1.ª y en la 2.ª. Si la mano se cansa, para."
+    ],
+    "tempo": {
+      "regla": "Despacio: primero que suenen las dos notas; la velocidad no importa aquí.",
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Segunda nota muy débil",
+      "Tensión en el pulgar de la mano izquierda"
+    ],
+    "trabaja": [
+      "comp:tec.ligados-1pos"
+    ],
+    "notacion": {
+      "fuente": "notacion/tec-ligados-1pos.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica de mano izquierda: tablatura. La partitura marca cada ligado con su arco."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:tec.apagar-voces",
+    "programa": "clasica",
+    "area": "tecnica",
+    "titulo": "Dos voces: el bajo se apaga",
+    "objetivo": "Que el bajo dure dos tiempos y se calle mientras sigue la melodía.",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "Melodía en negras con i y m; bajo (4.ª o 5.ª al aire) con p.",
+      "En el tercer tiempo, apaga el bajo apoyando el pulgar en esa cuerda, sin cortar la melodía.",
+      "En el último compás, los dos bajos suenan su blanca entera."
+    ],
+    "tempo": {
+      "regla": "Lento: lo que cuenta es que el silencio del bajo se oiga.",
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "El bajo sigue sonando en el silencio",
+      "Cortar también la melodía"
+    ],
+    "trabaja": [
+      "comp:tec.apagar-voces"
+    ],
+    "notacion": {
+      "fuente": "notacion/tec-apagar-voces.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "partitura",
+      "motivo": "Para ver dónde termina cada voz hace falta la partitura (las plicas y el silencio del bajo); la tablatura, para saber dónde se toca."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion",
+      "nota": "Dos voces sencillas en primera posición."
+    }
+  },
+  {
+    "id": "ej:tec.mordente",
+    "programa": "clasica",
+    "area": "tecnica",
+    "titulo": "Mordente con ligados",
+    "objetivo": "El adorno claro y a tempo, sin que la melodía se pare.",
+    "duracionMin": [
+      3,
+      5
+    ],
+    "instrucciones": [
+      "Cada mordente: pulsa la nota, ligado descendente a la de abajo y ascendente de vuelta, todo en el primer tiempo.",
+      "Primero despacio, cada mordente solo; luego la melodía entera.",
+      "Deja los dos dedos puestos cuando la nota de abajo está pisada."
+    ],
+    "tempo": {
+      "regla": "Despacio hasta que las tres notas del mordente salgan iguales; el tempo se apunta para ver cómo sube.",
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Que el adorno retrase el tiempo siguiente",
+      "La nota de abajo no se oye"
+    ],
+    "trabaja": [
+      "comp:tec.mordente"
+    ],
+    "notacion": {
+      "fuente": "notacion/tec-mordente.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    },
+    "porVerificar": [
+      {
+        "campo": "estilo",
+        "motivo": "Aquí el mordente va con la nota de abajo y en el tiempo; cómo se hace en cada obra (p. ej., en Sanz) lo dicen su edición o su profesor."
+      }
+    ]
+  },
+  {
+    "id": "ej:esc.re-mayor-1pos",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Escala de Re mayor, una octava",
+    "objetivo": "Re mayor con Fa♯ y Do♯ en su sitio.",
+    "duracionMin": [
+      3,
+      5
+    ],
+    "instrucciones": [
+      "De Re3 (4.ª al aire) a Re4 (2.ª, traste 3) y vuelta, un dedo por traste.",
+      "Fa♯ con el dedo 4 en la 4.ª; Do♯ con el dedo 2 en la 2.ª.",
+      "Apoyando i-m.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Fa natural en la 4.ª",
+      "Do natural en la 2.ª"
+    ],
+    "trabaja": [
+      "comp:esc.re-mayor-1pos"
+    ],
+    "notacion": {
+      "fuente": "notacion/esc-re-mayor-1pos.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es técnica: tablatura. La partitura, para ver qué notas son y cuánto dura cada una."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
   }
 ]

@@ -178,8 +178,8 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados, frio }
 }
 
 // Los candidatos de la sesión, de más a menos prioritario. Escala de prioridades (menor = antes):
-//   1 paso actual · 2 obra principal (la obra eje) · 3,xx refuerzos (lo que necesita la obra) · 3,4 tope de la cobertura
-//   · 3,5 reparación · 3,6 repertorio activo (si no hay obra principal) · 3,7 lectura atrasada · 4 segundo paso
+//   1 paso actual · 2 obra principal (la obra eje) · 3,xx refuerzos (lo que necesita la obra) · 3,5 reparación
+//   · 3,6 repertorio activo (si no hay obra principal) · 3,65 tope de la cobertura · 3,7 lectura atrasada · 4 segundo paso
 //   · 5 lectura ligada a la ruta · 6 dosis de lectura y obras en estudio · 7 obra recomendada y demás pasos · 8 resto de áreas.
 // Un paso de lectura nunca es el paso actual ni el segundo paso: lo elige la lectura (5), con su prioridad y su peso.
 // Mientras la ruta espera (decisión 7): refuerzos 3,xx · repertorio activo del curso 4 · consolidación 4,5
@@ -279,11 +279,12 @@ function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()
 
   // Cobertura (decisión 4): cada área del reparto del curso tiene un margen de días sin aparecer según su peso
   // (margenDias). Pasado el margen, cada día de más sube un punto la prioridad de su mejor candidato (para que entre; su
-  // tiempo sigue saliendo del reparto), sin pasar nunca de 3,4 (4,9 mientras la ruta espera): no adelanta al profesor, a
-  // las comprobaciones, al objetivo de la ruta, a lo que necesita la obra ni al repertorio activo. Un área olvidada de
-  // verdad sí llega a pasar por delante de la lectura (3,7 o 5), para que una lectura atrasada no la deje fuera semanas.
-  // Si el área ya entra hoy por algo prioritario, no sube nada.
-  const tope = espera ? 4.9 : 3.4;
+  // tiempo sigue saliendo del reparto), sin pasar nunca de 3,65 (4,9 mientras la ruta espera): no adelanta al profesor,
+  // a las comprobaciones, al objetivo de la ruta, a lo que necesita la obra ni al repertorio activo (3,6). Un área
+  // olvidada de verdad sí llega a pasar por delante de la lectura (3,7 o 5), para que una lectura atrasada no la deje
+  // fuera semanas. Si el área ya entra hoy por algo prioritario, no sube nada. (Fase 3: el tope era 3,4, por delante del
+  // repertorio activo, contra la regla aprobada; no se notaba mientras todos los tramos tenían obra eje.)
+  const tope = espera ? 4.9 : 3.65;
   const margenes = margenDias(ctx, programa);
   const cubiertas = new Set(lista.filter(c => c.prioridad <= tope).map(c => c.area));
   for (const c of [...lista].sort((a, b) => a.prioridad - b.prioridad)) {

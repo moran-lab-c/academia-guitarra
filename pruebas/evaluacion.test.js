@@ -20,6 +20,8 @@ const conId = (ev, i = 0) => ({ id: `d${i}`, t: enDia('2026-11-01'), ...ev });
 const app = (comp, aciertos, preguntas = 10) => ({ item: comp, tipo: 'app', aciertos, preguntas, resultado: resultadoPreguntas({ criterio: { tipo: 'conocimiento', aciertos: 0.9, preguntas: 20 } }, aciertos, preguntas) });
 const hecho = (ctx, id) => ({ item: id, tipo: 'autoevaluada', resultado: resultadoEjecucion(ctx.cat.porId.get(id), { calidad: BIEN, pasadas: 3 }), calidad: { sonido: 'bien' } });
 const falla = id => ({ item: id, tipo: 'autoevaluada', resultado: 'no' });
+// Las competencias de técnica de un nivel, del catálogo real (crece con el contenido).
+const tecnicaDe = (ctx, nivel) => ctx.cat.competencias.filter(c => c.area === 'tecnica' && c.nivel === nivel).map(c => c.id);
 
 test('Evaluación · las preguntas que corrige la app son correctas por construcción y repetibles con la misma semilla', () => {
   // Diapasón y lectura: la nota de la respuesta es la que suena en esa cuerda y traste (y la que se dibuja en el pentagrama).
@@ -73,6 +75,43 @@ test('Evaluación · las preguntas que corrige la app son correctas por construc
   assert.equal(preguntas('comp:tec.sonido-clasico', 3), null); // la ejecución no la corrige la app
 });
 
+test('Evaluación · las preguntas del contenido nuevo (intervalos, armaduras, inversiones, triadas, cadencias y oído) también salen de la teoría', () => {
+  const SEMIS = { '2.ª mayor': 2, '3.ª menor': 3, '3.ª mayor': 4, '4.ª justa': 5, '5.ª justa': 7, '6.ª mayor': 9, '8.ª justa': 12 };
+  for (const q of preguntas('comp:teo.intervalos', 60, 'i')) {
+    const [, a, b] = /de (\S+) a (\S+) \(subiendo\)/.exec(q.enunciado);
+    assert.equal(((pc(b) - pc(a) + 12) % 12) || 12, SEMIS[respuesta(q)], q.enunciado);
+  }
+  // Armaduras: las alteraciones de la escala mayor (su fórmula) son las de la armadura.
+  const alteraciones = t => { const e = escala(t[0] === 's' ? 'bb' : t, 'mayor'); const s = e.filter(n => n.acc === '#').length, b = e.filter(n => n.acc === 'b').length; return s ? `${s} sostenido${s > 1 ? 's' : ''}` : b ? `${b} bemol${b > 1 ? 'es' : ''}` : 'ninguna alteración'; };
+  const TONO = { 'Do mayor': 'c', 'Sol mayor': 'g', 'Re mayor': 'd', 'Fa mayor': 'f', 'Si♭ mayor': 'sb' };
+  for (const q of preguntas('comp:teo.armaduras-0-2', 40, 'a')) {
+    const m = /¿Qué armadura tiene (.+)\?/.exec(q.enunciado);
+    if (m) assert.equal(respuesta(q), alteraciones(TONO[m[1]]), q.enunciado);
+    else assert.equal(alteraciones(TONO[respuesta(q)]), /lleva (.+) en la armadura/.exec(q.enunciado)[1], q.enunciado);
+  }
+  // Inversiones: la posición la da qué nota del acorde está en el bajo.
+  for (const q of preguntas('comp:teo.inversiones', 30, 'v')) {
+    const [, notas, bajo] = /\((.+)\) con (\S+) en el bajo/.exec(q.enunciado);
+    assert.equal(respuesta(q), ['estado fundamental', 'primera inversión', 'segunda inversión'][notas.split(' – ').indexOf(bajo)]);
+  }
+  // Triadas de Do mayor: la calidad sale de los semitonos de cada triada construida sobre la escala.
+  const DO = [0, 2, 4, 5, 7, 9, 11]; // Do mayor: Do, Re, Mi, Fa, Sol, La, Si
+  const GRADOS = ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii°'];
+  for (const q of preguntas('comp:arm.triadas-do-mayor', 30, 't')) {
+    const i = GRADOS.indexOf(/grado (\S+)\?/.exec(q.enunciado)[1]);
+    const [r, t, q5] = [DO[i], DO[(i + 2) % 7], DO[(i + 4) % 7]].map((x, k, a) => (x - a[0] + 12) % 12);
+    assert.equal(respuesta(q).split(' ')[1], t === 4 ? 'mayor' : q5 === 6 ? 'disminuido' : 'menor', q.enunciado);
+    assert.equal(r, 0);
+  }
+  // Oído: lo que suena es lo que dice la respuesta.
+  for (const q of preguntas('comp:oid.intervalos-3-5-8', 30, 'o')) assert.equal({ 4: '3.ª', 7: '5.ª', 12: '8.ª' }[q.audio.secuencia[1][0] - q.audio.secuencia[0][0]], respuesta(q));
+  for (const q of preguntas('comp:oid.escala-mayor-menor', 30, 'e')) assert.equal(q.audio.secuencia[2][0] - q.audio.secuencia[0][0] === 4 ? 'Mayor' : 'Menor', respuesta(q));
+  for (const q of preguntas('comp:oid.cadencia-conclusiva-suspensiva', 30, 'c')) {
+    const [primero, , , ultimo] = q.audio.secuencia;
+    assert.equal(ultimo[0] === primero[0] ? 'Conclusivo' : 'Suspensivo', respuesta(q)); // acaba en la tónica o en la dominante
+  }
+});
+
 test('Evaluación · adaptativa: empieza en su hipótesis, sube si supera, baja si falla y no vuelve a pedir lo que ya consta', () => {
   const ctx = ctxDe();
   // Técnica tiene competencias de nivel 1, 2 y 6. Con «bastante», empieza en el 2.
@@ -89,7 +128,7 @@ test('Evaluación · adaptativa: empieza en su hipótesis, sube si supera, baja 
   const res = resultadoModulo(ctx, 'tecnica', r, { hipotesis: 2 });
   assert.equal(res.nivel, 2);
   assert.deepEqual(res.frontera, ['comp:tec.tremolo-a-tempo']);
-  assert.equal(res.porConfirmar.length, 4); // el nivel 1 no se ha probado: se da por sabido y queda por confirmar
+  assert.deepEqual(res.porConfirmar.sort(), tecnicaDe(ctx, 1).sort()); // el nivel 1 no se ha probado: se da por sabido y queda por confirmar
   assert.equal(res.confianza, 'baja'); // dos de seis, autoevaluadas
   // Si falla el nivel de partida, baja al anterior.
   const mal = [falla('comp:tec.cejilla-completa'), hecho(ctx, 'comp:tec.tremolo-lento')];
@@ -100,7 +139,7 @@ test('Evaluación · adaptativa: empieza en su hipótesis, sube si supera, baja 
   const vistas = [];
   for (let resp = [], x = siguiente(conProgreso, 'tecnica', resp); !x.fin; x = siguiente(conProgreso, 'tecnica', resp)) { vistas.push(x.comp.id); resp.push(hecho(conProgreso, x.comp.id)); }
   assert.ok(!vistas.includes('comp:tec.sonido-clasico'));
-  assert.deepEqual(vistas.slice(0, 3), ['comp:tec.media-cejilla', 'comp:tec.melodia-acompanada', 'comp:tec.presion-minima']);
+  assert.deepEqual(vistas.filter(id => tecnicaDe(conProgreso, 1).includes(id)).sort(), tecnicaDe(conProgreso, 1).filter(id => id !== 'comp:tec.sonido-clasico').sort());
   assert.equal(modulos(conProgreso, 'clasica').find(m => m.area === 'tecnica').yaConsta, 1);
 });
 
@@ -124,7 +163,7 @@ test('Evaluación · el resultado: nivel, confianza y evidencia; lo superado se 
   // 8 de 10 está cerca (casi), no superado: con el 90 % del criterio no basta.
   assert.equal(app('comp:x', 8).resultado, 'casi');
   // La ejecución autoevaluada da confianza media.
-  const tec = resultadoModulo(ctx, 'tecnica', ['comp:tec.sonido-clasico', 'comp:tec.melodia-acompanada', 'comp:tec.presion-minima', 'comp:tec.media-cejilla'].map(id => hecho(ctx, id)));
+  const tec = resultadoModulo(ctx, 'tecnica', tecnicaDe(ctx, 1).map(id => hecho(ctx, id)));
   assert.deepEqual([tec.nivel, tec.confianza], [1, 'media']);
 });
 
@@ -139,7 +178,7 @@ test('Evaluación · el perfil es por áreas, con su confianza, su fecha y cuán
   assert.deepEqual([t.nivel, t.estimado, t.fuente, t.confianza, t.fecha], [2, true, 'evaluacion', 'baja', '2026-11-01']);
   assert.deepEqual([t.reevaluar.fecha, t.reevaluar.vencida], ['2026-11-22', false]); // confianza baja: a las tres semanas
   assert.ok(t.evidencias.some(x => x.item === 'comp:tec.cejilla-completa' && x.tipo === 'autoevaluada' && x.resultado === 'ok'));
-  assert.equal(t.porConfirmar.length, 4);
+  assert.deepEqual(t.porConfirmar.sort(), tecnicaDe(c, 1).sort());
   const l = p.find(x => x.area === 'lectura');
   assert.deepEqual([l.nivel, l.fuente, l.confianza], [0, 'evaluacion', 'alta']); // seguro de que todavía no: lo corrigió la app
   assert.equal(p.find(x => x.area === 'oido').fuente, 'sin-datos');

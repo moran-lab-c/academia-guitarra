@@ -197,5 +197,186 @@
       "naturaleza": "decision",
       "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
     }
+  },
+  {
+    "id": "comp:teo.inversiones",
+    "programa": "comun",
+    "area": "teoria",
+    "nivel": 1,
+    "nombre": "Inversiones de las triadas",
+    "descripcion": "Una triada está en estado fundamental si la nota más grave es la fundamental; en primera inversión, si es la tercera; en segunda, si es la quinta. Do mayor con Mi en el bajo: primera inversión.",
+    "proposito": "Saber qué acorde suena cuando el bajo no es la fundamental, como pasa a menudo en los arpegios y en los estudios (Plan, unidad 3).",
+    "requiere": [
+      "comp:teo.triada-mayor-menor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:teo.intervalos",
+    "programa": "comun",
+    "area": "teoria",
+    "nivel": 1,
+    "nombre": "Intervalos con su calidad",
+    "descripcion": "El número (de Do a Mi, una 3.ª) y la calidad, que sale de los semitonos: 3.ª mayor (4) o menor (3); 4.ª y 5.ª justas (5 y 7); 2.ª y 6.ª mayores (2 y 9); 8.ª justa (12).",
+    "proposito": "Nombrar lo que se toca y lo que se oye; es la base de los acordes y de las escalas (Plan, unidad 4).",
+    "requiere": [
+      "comp:teo.tono-semitono"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:teo.armaduras-0-2",
+    "programa": "comun",
+    "area": "teoria",
+    "nivel": 1,
+    "nombre": "Armaduras de hasta dos alteraciones",
+    "descripcion": "Do mayor, ninguna; Sol mayor, Fa♯; Re mayor, Fa♯ y Do♯; Fa mayor, Si♭; Si♭ mayor, Si♭ y Mi♭. Cada una sale de aplicar la fórmula de la escala mayor.",
+    "proposito": "Leer la tonalidad de una partitura antes de tocarla (Plan, unidad 4).",
+    "requiere": [
+      "comp:teo.escala-mayor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:arm.triadas-do-mayor",
+    "programa": "comun",
+    "area": "armonia",
+    "nivel": 1,
+    "nombre": "Las triadas de Do mayor",
+    "descripcion": "Sobre cada grado de la escala de Do mayor se forma una triada con sus notas: I, IV y V mayores; ii, iii y vi menores; vii° disminuida.",
+    "proposito": "Saber qué acordes «caben» en una tonalidad y por qué unos son mayores y otros menores (Plan, unidad 4).",
+    "requiere": [
+      "comp:teo.triada-mayor-menor",
+      "comp:teo.escala-mayor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:arm.cadencias",
+    "programa": "comun",
+    "area": "armonia",
+    "nivel": 1,
+    "nombre": "Cadencias",
+    "descripcion": "Cómo acaba una frase: perfecta (V-I) y plagal (IV-I), conclusivas; semicadencia (acaba en V), suspensiva; rota (V-vi), que engaña al oído.",
+    "proposito": "Entender dónde respira y dónde termina la música que toca (Plan, unidad 5).",
+    "requiere": [
+      "comp:arm.i-iv-v7-i"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:oid.intervalos-3-5-8",
+    "programa": "comun",
+    "area": "oido",
+    "nivel": 1,
+    "nombre": "3.ª, 5.ª y 8.ª de oído",
+    "descripcion": "Reconocer, entre dos notas seguidas, si forman una tercera, una quinta o una octava.",
+    "proposito": "Las notas de los acordes, de oído (Plan, unidad 3); ayuda a afinar y a encontrar el bajo.",
+    "requiere": [
+      "comp:oid.mayor-menor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:oid.escala-mayor-menor",
+    "programa": "comun",
+    "area": "oido",
+    "nivel": 1,
+    "nombre": "Escala mayor o menor, de oído",
+    "descripcion": "Oír una escala y decir si es mayor o menor (natural).",
+    "proposito": "Reconocer el modo de una melodía (Plan, unidad 4).",
+    "requiere": [
+      "comp:oid.mayor-menor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:oid.cadencia-conclusiva-suspensiva",
+    "programa": "comun",
+    "area": "oido",
+    "nivel": 1,
+    "nombre": "Final conclusivo o suspensivo, de oído",
+    "descripcion": "Oír un enlace de acordes y decir si acaba en reposo (en la tónica) o queda en el aire (en la dominante).",
+    "proposito": "Oír dónde termina una frase de las obras que toca (Plan, unidad 5).",
+    "requiere": [
+      "comp:oid.mayor-menor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:rit.ternario-hemiolia",
+    "programa": "comun",
+    "area": "ritmo",
+    "nivel": 1,
+    "nombre": "3/4, 6/8 y la hemiolia",
+    "descripcion": "6/8 se cuenta en dos (dos negras con puntillo) y 3/4 en tres; la hemiolia es meter tres negras donde había dos negras con puntillo, muy típica de las danzas barrocas.",
+    "proposito": "El ritmo de las danzas de la polifonía antigua (Plan, unidad 5).",
+    "requiere": [
+      "comp:rit.figuras-basicas"
+    ],
+    "erroresComunes": [
+      "Contar 6/8 en seis sin agrupar de tres en tres",
+      "Acelerar en la hemiolia"
+    ],
+    "criterio": {
+      "tipo": "ejecucion",
+      "dimensiones": [
+        "precision",
+        "ritmo",
+        "continuidad"
+      ],
+      "pasadas": 2,
+      "detalle": "el ejercicio de la hemiolia contando en voz alta y palmeando, y luego tocándolo, con el metrónomo en dos por compás",
+      "naturaleza": "decision",
+      "justificacion": "El Plan lo pone en la unidad 5 (etapa 1) por las danzas antiguas, aunque los compases compuestos en general son de la etapa 2: aquí solo se pide contar 6/8 en dos y reconocer la hemiolia."
+    }
   }
 ]

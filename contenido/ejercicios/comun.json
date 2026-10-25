@@ -25,8 +25,53 @@
       "comp:arm.i-iv-v7-i"
     ],
     "notacion": {
-      "partitura": "pendiente",
-      "tablatura": "pendiente"
+      "fuente": "notacion/arm-mi-la-si7.json",
+      "vistas": [
+        "tablatura",
+        "partitura"
+      ],
+      "principal": "tablatura",
+      "motivo": "Es para tocar y oír la progresión: tablatura. La partitura enseña las notas de cada acorde (el Re♯ y el La de Si7)."
+    }
+  },
+  {
+    "id": "ej:rit.hemiolia",
+    "programa": "comun",
+    "area": "ritmo",
+    "titulo": "6/8 en dos y la hemiolia",
+    "objetivo": "Contar 6/8 en dos y oír cómo la hemiolia mete tres negras en el mismo espacio.",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "Metrónomo en dos por compás (una negra con puntillo por golpe).",
+      "Cuenta en voz alta «1 y a 2 y a» y palmea las notas; luego tócalas en la 5.ª al aire.",
+      "En el tercer compás, la hemiolia: tres negras acentuadas, del mismo largo, en el espacio de dos negras con puntillo."
+    ],
+    "tempo": {
+      "regla": "Lento al principio: que la hemiolia no acelere.",
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Acelerar en la hemiolia",
+      "Perder el «1» del compás siguiente"
+    ],
+    "trabaja": [
+      "comp:rit.ternario-hemiolia"
+    ],
+    "notacion": {
+      "fuente": "notacion/rit-hemiolia.json",
+      "vistas": [
+        "partitura",
+        "tablatura"
+      ],
+      "principal": "partitura",
+      "motivo": "Es leer ritmo: partitura. La tablatura solo dice que todo va en la 5.ª al aire."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
     }
   }
 ]
