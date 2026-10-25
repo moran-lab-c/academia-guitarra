@@ -17,7 +17,7 @@ export function cargarContenido(dir) {
   }
   errores.push(...validarCatalogo(entidades));
   // Cada notación propia tiene que existir y estar bien escrita.
-  for (const e of entidades) for (const n of [e.notacion, ...(e.secciones || []).map(s => s.notacion)]) {
+  for (const e of entidades) for (const n of [e.notacion, ...(e.secciones || []).map(s => s.notacion), ...(e.fragmentos || []).map(f => f.notacion)]) {
     if (!n?.fuente) continue;
     const p = path.join(dir, n.fuente);
     if (!/^notacion\/[\w.-]+\.json$/.test(n.fuente) || !fs.existsSync(p)) { errores.push(`${e.id}: no existe ${n.fuente}`); continue; }

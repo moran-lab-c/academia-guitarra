@@ -80,10 +80,15 @@ export function areaDe(item) {
 
 export const nombreDe = item => item?.nombre ?? item?.titulo ?? item?.id ?? '';
 
-// Lo que pide una obra entera o una de sus secciones (la obra entera pide lo de todas sus partes).
+// Lo que pide una obra entera, una de sus secciones o uno de sus fragmentos (la obra entera pide lo de todas sus partes;
+// un fragmento, lo suyo).
 export function pideDe(obra, seccion = null) {
-  const secciones = seccion ? (obra.secciones || []).filter(s => s.id === seccion) : obra.secciones || [];
-  return [...new Set([...(obra.pide || []), ...secciones.flatMap(s => s.pide || [])])];
+  const frag = seccion ? (obra.fragmentos || []).find(f => f.id === seccion) : null;
+  const partes = frag ? [frag] : seccion ? (obra.secciones || []).filter(s => s.id === seccion) : obra.secciones || [];
+  return [...new Set([...(obra.pide || []), ...partes.flatMap(s => s.pide || [])])];
 }
 
-export const seccionDe = (obra, id) => (id ? (obra?.secciones || []).find(s => s.id === id) ?? null : null);
+// Una sección («obra#A») o un fragmento («obra#B-cejilla»): comparten la clave y se llevan igual en el dominio, pero un
+// fragmento no completa ni la obra ni su sección. Devuelve la parte, o null.
+export const seccionDe = (obra, id) => (id ? (obra?.secciones || []).find(s => s.id === id) ?? (obra?.fragmentos || []).find(f => f.id === id) ?? null : null);
+export const esFragmento = (obra, id) => !!(id && (obra?.fragmentos || []).some(f => f.id === id));

@@ -43,6 +43,10 @@ export function validarCatalogo(entidades) {
   const notacion = (de, n, donde = '') => {
     if (n == null) return;
     for (const f of FORMATOS) if (n[f] != null && ![true, false, 'externa', 'pendiente'].includes(n[f])) err.push(`${de.id}${donde}: ${f} debe ser true, false, «externa» o «pendiente»`);
+    // «vistas»: qué necesita de verdad este contenido de su notación propia (solo tablatura, solo partitura o las dos).
+    if (n.vistas != null && (!n.fuente || !Array.isArray(n.vistas) || !n.vistas.length || n.vistas.some(v => !FORMATOS.includes(v)))) err.push(`${de.id}${donde}: «vistas» va con una notación propia y solo admite partitura y tablatura`);
+    if (n.vistas && n.principal && !n.vistas.includes(n.principal)) err.push(`${de.id}${donde}: su formato principal no está entre sus vistas`);
+    if (n.compases != null && !(Array.isArray(n.compases) && n.compases.length === 2 && n.compases.every(Number.isInteger) && n.compases[0] >= 1 && n.compases[0] <= n.compases[1])) err.push(`${de.id}${donde}: «compases» debe ser [desde, hasta]`);
     if (n.principal != null) {
       if (!FORMATOS.includes(n.principal)) err.push(`${de.id}${donde}: formato principal desconocido «${n.principal}»`);
       else if (!n.fuente && ![true, 'externa'].includes(n[n.principal])) err.push(`${de.id}${donde}: su formato principal (${n.principal}) no está disponible`);
@@ -59,6 +63,11 @@ export function validarCatalogo(entidades) {
       if (c.tempo.obligatorio && !c.tempo.fuente && !c.tempo.justificacion) err.push(`${de.id}: un tempo obligatorio debe decir de dónde sale`);
     }
   };
+  // Lo que aún no se ha podido comprobar se dice campo a campo («porVerificar»), no se presenta como dato.
+  const porVerificar = de => {
+    if (de.porVerificar == null) return;
+    if (!Array.isArray(de.porVerificar) || de.porVerificar.some(x => typeof x?.campo !== 'string' || !x.campo || typeof x.motivo !== 'string' || !x.motivo)) err.push(`${de.id}: «porVerificar» es una lista de { campo, motivo }`);
+  };
   // Lo que contiene un paso: un ejercicio, una lección, una competencia, una obra o una sección («obra:x#A»).
   const contenido = (de, lista) => {
     for (const clave of lista || []) {
@@ -66,7 +75,7 @@ export function validarCatalogo(entidades) {
       const x = ref(de, id);
       if (!x) continue;
       misma(de, x);
-      if (seccion && !(x.secciones || []).some(s => s.id === seccion)) err.push(`${de.id}: ${id} no tiene la sección ${seccion}`);
+      if (seccion && !(x.secciones || []).some(s => s.id === seccion) && !(x.fragmentos || []).some(f => f.id === seccion)) err.push(`${de.id}: ${id} no tiene la sección ${seccion}`);
     }
   };
 
@@ -134,8 +143,21 @@ export function validarCatalogo(entidades) {
           refs({ ...e, id: `${e.id}#${s.id}` }, s.pide, 'competencia');
           refs({ ...e, id: `${e.id}#${s.id}` }, s.desarrolla, 'competencia');
         }
+        // Fragmentos: un pasaje con su propio propósito, lo que pide y, si la tiene, su notación. Su clave es «obra#id».
+        for (const f of e.fragmentos || []) {
+          const fid = `${e.id}#${f.id}`;
+          if (!f.id) { err.push(`${e.id}: un fragmento sin id`); continue; }
+          if ((e.secciones || []).some(s => s.id === f.id) || (e.fragmentos || []).filter(x => x.id === f.id).length > 1) err.push(`${fid}: id repetido (secciones y fragmentos comparten nombres)`);
+          if (!f.titulo || !f.proposito) err.push(`${fid}: un fragmento dice su título y para qué es`);
+          if (f.seccion != null && !(e.secciones || []).some(s => s.id === f.seccion)) err.push(`${fid}: su sección ${f.seccion} no existe`);
+          if (f.compases != null && !(Array.isArray(f.compases) && f.compases.length === 2 && f.compases.every(Number.isInteger) && f.compases[0] <= f.compases[1])) err.push(`${fid}: «compases» debe ser [desde, hasta]`);
+          notacion(e, f.notacion, ` (fragmento ${f.id})`);
+          refs({ ...e, id: fid }, f.pide, 'competencia');
+        }
+        porVerificar(e);
         break;
       case 'ejercicio': {
+        porVerificar(e);
         const area = porId.get(e.area);
         if (!area || area.tipo !== 'area') err.push(`${e.id}: área desconocida «${e.area}»`);
         else if (area.programa !== e.programa) err.push(`${e.id}: es ${e.programa} pero su área es ${area.programa}`);

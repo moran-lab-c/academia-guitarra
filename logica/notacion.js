@@ -6,9 +6,13 @@
 //     partitura: 'externa'|'pendiente'|false, si no hay fuente: fuera de la app (IMSLP, un libro), por hacer o no hay
 //     tablatura: 'externa'|'pendiente'|false,
 //     principal: 'partitura'|'tablatura'|null, el formato para el que está pensado (null: lo decide el momento)
-//     motivo: '…' }                          por qué ese formato principal
-// Una sección puede llevar su propia «notacion» y su «lecturaNecesaria».
+//     motivo: '…',                           por qué ese formato principal
+//     vistas: ['tablatura'],                 con notación propia: lo que necesita de verdad (por defecto, las dos)
+//     compases: [9, 16] }                    con notación propia: solo ese tramo (un fragmento de su obra)
+// Una sección o un fragmento pueden llevar su propia «notacion» y su «lecturaNecesaria».
+// «Ambas» (pentagrama y tablatura unidos) es una forma de verlas cuando el contenido tiene las dos; no es un formato.
 import { FORMATOS } from './esquema.js';
+import { validarNotacion } from './partitura.js';
 
 const OTRO = { partitura: 'tablatura', tablatura: 'partitura' };
 const NOMBRE = { partitura: 'partitura', tablatura: 'tablatura' };
@@ -16,10 +20,15 @@ const NOMBRE = { partitura: 'partitura', tablatura: 'tablatura' };
 export const decimal = x => String(Math.round(x * 10) / 10).replace('.', ',');
 const HECHOS = ['completado', 'dominado', 'necesita-repaso'];
 
-// Estado de cada formato: 'app' (se ve en la app), 'externa', 'pendiente' o null.
+// Estado de cada formato: 'app' (se ve en la app), 'externa', 'pendiente' o null. Con una notación propia salen las dos
+// vistas, salvo que el contenido diga que solo necesita una («vistas»): un ejercicio técnico sin pentagrama, o una
+// lectura en la que la tablatura daría la respuesta.
 export function formatos(item, seccion) {
   const n = { ...(item?.notacion || {}), ...(seccion?.notacion || {}) };
-  if (n.fuente) return { partitura: 'app', tablatura: 'app' }; // una sola fuente, dos vistas
+  if (n.fuente) {
+    const vistas = Array.isArray(n.vistas) && n.vistas.length ? n.vistas : FORMATOS;
+    return { partitura: vistas.includes('partitura') ? 'app' : null, tablatura: vistas.includes('tablatura') ? 'app' : null };
+  }
   const estado = v => (v === 'externa' || v === 'pendiente' ? v : v === true ? 'app' : null);
   return { partitura: estado(n.partitura), tablatura: estado(n.tablatura) };
 }
@@ -35,16 +44,19 @@ export function recomendarFormato(item, cx = {}) {
   const sec = cx.seccion ?? null;
   const disp = disponibles(item, sec);
   const pendientes = FORMATOS.filter(x => formatos(item, sec)[x] === 'pendiente');
+  const valeElegido = cx.elegido && (disp.includes(cx.elegido) || (cx.elegido === 'ambas' && disp.length === 2 && disp.every(x => formatos(item, sec)[x] === 'app')));
   const resultado = (f, motivo) => ({
     disponibles: disp, pendientes, recomendado: f,
     alternativa: f && disp.includes(OTRO[f]) ? OTRO[f] : null,
-    mostrar: cx.elegido && disp.includes(cx.elegido) ? cx.elegido : f,
-    elegidoPorTi: !!(cx.elegido && disp.includes(cx.elegido) && cx.elegido !== f),
+    mostrar: valeElegido ? cx.elegido : f,
+    elegidoPorTi: !!(valeElegido && cx.elegido !== f),
     motivo,
   });
   if (!item?.notacion) return resultado(null, 'No necesita notación.');
   if (!disp.length) return resultado(null, pendientes.length ? `La ${pendientes.map(x => NOMBRE[x]).join(' y la ')} está por hacer.` : 'Sin notación todavía.');
   if (disp.length === 1) {
+    const n = { ...(item.notacion || {}), ...(sec?.notacion || {}) };
+    if (n.fuente && n.vistas) return resultado(disp[0], n.motivo ?? `Este contenido solo necesita ${NOMBRE[disp[0]]}.`);
     const falta = pendientes.length ? ` (la ${NOMBRE[OTRO[disp[0]]]} está por hacer)` : '';
     return resultado(disp[0], `Solo hay ${NOMBRE[disp[0]]}${falta}.`);
   }
@@ -92,23 +104,5 @@ export function pasajesDeLectura(obra, lectura) {
   return (obra?.secciones || []).filter(s => s.lecturaNecesaria != null && s.lecturaNecesaria <= lectura && disponibles(obra, s).includes('partitura'));
 }
 
-// Notación propia de la app (contenido/notacion/*.json). De cada nota (cuerda y traste) salen la partitura y la tablatura.
-const DURACIONES = ['1', '2', '4', '8', '16', '32'];
-export function validarPartitura(p, nombre = 'notación') {
-  const err = [];
-  if (!p || typeof p !== 'object') return [`${nombre}: no es un objeto`];
-  if (!/^\d+\/\d+$/.test(p.compas ?? '')) err.push(`${nombre}: falta el compás (p. ej., «4/4»)`);
-  if (!Array.isArray(p.compases) || !p.compases.length) return [...err, `${nombre}: sin compases`];
-  const posicion = (x, donde) => {
-    if (!(Number.isInteger(x?.c) && x.c >= 1 && x.c <= 6)) err.push(`${donde}: cuerda fuera de 1-6`);
-    if (!(Number.isInteger(x?.t) && x.t >= 0 && x.t <= 24)) err.push(`${donde}: traste fuera de 0-24`);
-  };
-  p.compases.forEach((m, i) => (m.voces || []).forEach((voz, v) => voz.forEach((n, k) => {
-    const donde = `${nombre}, compás ${i + 1}, voz ${v + 1}, nota ${k + 1}`;
-    if (!DURACIONES.includes(String(n.d))) err.push(`${donde}: duración «${n.d}» (vale ${DURACIONES.join(', ')})`);
-    if (n.s) return; // silencio
-    if (Array.isArray(n.acorde)) n.acorde.forEach(x => posicion(x, donde)); else posicion(n, donde);
-  })));
-  if (p.compases.some(m => !Array.isArray(m.voces) || !m.voces.length)) err.push(`${nombre}: hay compases sin voces`);
-  return err;
-}
+// Notación propia de la app (contenido/notacion/*.json): la valida logica/partitura.js (también la que va a dibujar).
+export const validarPartitura = (p, nombre) => validarNotacion(p, nombre);

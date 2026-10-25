@@ -76,7 +76,7 @@ test('los pasajes que ya puede leer, si tienen partitura, entran como lectura', 
 });
 
 test('la notación propia se valida: cuerda, traste y duración de cada nota', () => {
-  assert.deepEqual(validarPartitura({ compas: '4/4', compases: [{ voces: [[{ d: '8', c: 6, t: 0 }, { d: '4', s: true }, { d: '2', acorde: [{ c: 5, t: 2 }, { c: 4, t: 2 }] }]] }] }), []);
+  assert.deepEqual(validarPartitura({ compas: '4/4', compases: [{ voces: [[{ d: '8', c: 6, t: 0 }, { d: '8', s: true }, { d: '4', s: true }, { d: '2', acorde: [{ c: 5, t: 2 }, { c: 4, t: 2 }] }]] }] }), []);
   const err = validarPartitura({ compas: '4/4', compases: [{ voces: [[{ d: '7', c: 9, t: 30 }]] }] });
   assert.equal(err.length, 3);
 });

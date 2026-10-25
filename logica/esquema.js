@@ -8,6 +8,7 @@ export const MARCAS_OBRA = ['objetivo-futuro', 'aspiracional', 'en-preparacion',
 // Lo que ya sabía tocar antes de la academia: no se vuelve a aprender desde cero, se comprueba.
 export const CONOCIDA = ['parcial', 'entera', 'dominada'];
 export const FORMATOS = ['partitura', 'tablatura'];           // las dos siempre que el contenido las tenga
+export const VISTAS = [...FORMATOS, 'ambas'];                // cómo se ve: una de las dos o las dos unidas
 export const TIPOS_EVENTO = ['practica', 'bateria', 'sesion', 'nota', 'diagnostico', 'evaluacion'];
 export const AYUDAS = ['ninguna', 'notacion', 'referencia'];  // notacion = leyendo partitura o tablatura; referencia = audio, vídeo o profesor
 export const CALIDADES = ['bien', 'fallos', 'mal'];
@@ -48,7 +49,7 @@ export function validarEstado(e) {
   if (!Number.isInteger(e.esquema) || e.esquema < 1) err.push('Falta la versión del formato (esquema)');
   for (const k of ['perfil', 'preferencias', 'obras', 'focos', 'contenidoPropio']) if (!esObjeto(e[k])) err.push(`«${k}» debe ser un objeto`);
   if (e.ajustes != null && !esObjeto(e.ajustes)) err.push('«ajustes» debe ser un objeto');
-  if (e.formatos != null && (!esObjeto(e.formatos) || Object.values(e.formatos).some(f => !FORMATOS.includes(f)))) err.push('«formatos» solo admite partitura o tablatura');
+  if (e.formatos != null && (!esObjeto(e.formatos) || Object.values(e.formatos).some(f => !VISTAS.includes(f)))) err.push('«formatos» solo admite partitura, tablatura o ambas');
   for (const k of ['tareasProfesor', 'objetivos']) if (!Array.isArray(e[k])) err.push(`«${k}» debe ser una lista`);
   if (esObjeto(e.obras)) for (const [id, o] of Object.entries(e.obras)) {
     if (!esObjeto(o)) { err.push(`obras.${id} no es un objeto`); continue; }
