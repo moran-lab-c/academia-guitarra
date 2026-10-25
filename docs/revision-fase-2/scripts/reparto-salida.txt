@@ -1,0 +1,16 @@
+2026-10-27 → 2026-11-07, 60′/día, minutos útiles 660
+  lectura         222 min  34 %
+  tecnica         117 min  18 %
+  armonia          83 min  13 %
+  oido             77 min  12 %
+  comprobacion     48 min  7 %
+  escalas          46 min  7 %
+  diapason         42 min  6 %
+  teoria           25 min  4 %
+  bloque más largo: 24 min (2026-11-03, Lectura: Leer las notas de las cuerdas 4-6 en primera posición)
+2026-11-09 → 2026-11-20, 60′/día, minutos útiles 660
+  tecnica         303 min  46 %
+  escalas         220 min  33 %
+  ritmo           122 min  18 %
+  diapason         15 min  2 %
+  bloque más largo: 26 min (2026-11-10, Técnica: Cejilla completa)

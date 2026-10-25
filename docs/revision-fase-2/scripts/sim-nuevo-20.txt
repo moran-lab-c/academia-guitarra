@@ -1,0 +1,45 @@
+2026-10-25 curso=1 actual=c1.t1.01 tramos=appppp final=futuro · frío=0 · obra=tarrega.lagrima#A · ref=[] · 
+2026-10-26 curso=1 actual=c1.t1.02 tramos=appppp final=futuro · frío=0 · obra=- · ref=[] · 
+2026-10-27 curso=1 actual=c1.t1.04 tramos=appppp final=futuro · frío=0 · obra=- · ref=[] · 
+2026-10-28 curso=1 actual=c1.t1.04 tramos=appppp final=futuro · frío=1 · obra=- · ref=[] · 1 repaso espera a otro día: hoy no son urgentes.
+2026-10-29 curso=1 actual=c1.t1.04 tramos=appppp final=futuro · frío=1 · obra=- · ref=[] · 2 repasos esperan a otro día: hoy no son urgentes.
+2026-10-30 curso=1 actual=c1.t1.06 tramos=appppp final=futuro · frío=2 · obra=- · ref=[] · 2 repasos esperan a otro día: hoy no son urgentes.
+2026-10-31 curso=1 actual=c1.t1.07 tramos=appppp final=futuro · frío=2 · obra=- · ref=[] · 1 repaso espera a otro día: hoy no son urgentes.
+2026-11-01 curso=1 actual=c1.t1.08 tramos=appppp final=futuro · frío=2 · obra=- · ref=[] · 
+2026-11-02 curso=1 actual=c1.t1.08 tramos=appppp final=futuro · frío=1 · obra=- · ref=[] · 
+2026-11-03 curso=1 actual=c1.t2.01 tramos=aapppp final=futuro · frío=1 · obra=- · ref=[lec.notas-1pos-agudas(lect)] · 1 repaso espera a otro día: hoy no son urgentes.
+2026-11-04 curso=1 actual=c1.t2.02 tramos=aapppp final=futuro · frío=2 · obra=- · ref=[lec.notas-1pos-agudas(lect)] · 1 repaso espera a otro día: hoy no son urgentes.
+2026-11-05 curso=1 actual=c1.t2.04 tramos=aapppp final=futuro · frío=1 · obra=- · ref=[lec.notas-1pos-agudas(lect)] · 3 repasos esperan a otro día: hoy no son urgentes.
+2026-11-06 curso=1 actual=c1.t2.05 tramos=happpp final=futuro · frío=1 · obra=- · ref=[lec.notas-1pos-agudas(lect)] · 5 repasos esperan a otro día: hoy no son urgentes.
+2026-11-07 curso=1 actual=c1.t2.06 tramos=happpp final=futuro · frío=2 · obra=- · ref=[lec.notas-1pos-agudas(lect)] · 6 repasos esperan a otro día: hoy no son urgentes.
+2026-11-08 curso=1 actual=c1.t2.06 tramos=happpp final=futuro · frío=2 · obra=sor.op60-1 · ref=[] · 6 repasos esperan a otro día: hoy no son urgentes.
+2026-11-09 curso=1 actual=c1.t2.08 tramos=happpp final=futuro · frío=2 · obra=tarrega.lagrima#B · ref=[] · 6 repasos esperan a otro día: hoy no son urgentes.
+2026-11-10 curso=1 actual=- tramos=happpp final=futuro · frío=2 · obra=- · ref=[] · 6 repasos esperan a otro día: hoy no son urgentes.
+2026-11-11 curso=1 actual=- tramos=happpp final=futuro · frío=2 · obra=- · ref=[] · 5 repasos esperan a otro día: hoy no son urgentes.
+2026-11-12 curso=1 actual=- tramos=happpp final=futuro · frío=2 · obra=- · ref=[] · 4 repasos esperan a otro día: hoy no son urgentes.
+2026-11-13 curso=1 actual=- tramos=happpp final=futuro · frío=1 · obra=- · ref=[] · 4 repasos esperan a otro día: hoy no son urgentes.
+2026-11-14 curso=1 actual=- tramos=happpp final=futuro · frío=1 · obra=- · ref=[] · 4 repasos esperan a otro día: hoy no son urgentes.
+2026-11-15 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=- · ref=[] · 3 repasos esperan a otro día: hoy no son urgentes.
+2026-11-16 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=- · ref=[] · 3 repasos esperan a otro día: hoy no son urgentes.
+2026-11-17 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=tarrega.lagrima · ref=[] · 1 repaso espera a otro día: hoy no son urgentes.
+2026-11-18 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 1 repaso espera a otro día: hoy no son urgentes.
+2026-11-19 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 2 repasos esperan a otro día: hoy no son urgentes.
+2026-11-20 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 4 repasos esperan a otro día: hoy no son urgentes.
+2026-11-21 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+2026-11-22 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 8 repasos esperan a otro día: hoy no son urgentes.
+2026-11-23 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 9 repasos esperan a otro día: hoy no son urgentes.
+2026-11-24 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 10 repasos esperan a otro día: hoy no son urgentes.
+2026-11-25 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 11 repasos esperan a otro día: hoy no son urgentes.
+2026-11-26 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 12 repasos esperan a otro día: hoy no son urgentes.
+2026-11-27 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 13 repasos esperan a otro día: hoy no son urgentes.
+2026-11-28 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 15 repasos esperan a otro día: hoy no son urgentes.
+2026-11-29 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 17 repasos esperan a otro día: hoy no son urgentes.
+2026-11-30 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 17 repasos esperan a otro día: hoy no son urgentes.
+2026-12-01 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 17 repasos esperan a otro día: hoy no son urgentes.
+2026-12-02 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 19 repasos esperan a otro día: hoy no son urgentes.
+2026-12-03 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 21 repasos esperan a otro día: hoy no son urgentes.
+2026-12-04 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 23 repasos esperan a otro día: hoy no son urgentes.
+2026-12-05 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 23 repasos esperan a otro día: hoy no son urgentes.
+2026-12-06 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 23 repasos esperan a otro día: hoy no son urgentes.
+2026-12-07 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 23 repasos esperan a otro día: hoy no son urgentes.
+2026-12-08 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 23 repasos esperan a otro día: hoy no son urgentes.

@@ -1,0 +1,23 @@
+
+### M1 · Migración 1 → 2 al arrancar, con datos válidos
+  OK  estado convertido (esquema 2, programaPrincipal flamenca, rev 8)
+  OK  encargo, tramo elegido y obra propia convertidos
+  OK  nada se pierde (perfil, marcas)
+  OK  historial convertido (sesión con «programa»)
+  OK  la copia antes-de-migrar guarda los datos originales tal cual
+  OK  el historial original queda apartado, byte a byte
+  OK  al reiniciar no vuelve a migrar ni a apartar nada
+
+### M2 · Migración que falla (un evento viejo no pasa la validación)
+  OK  avisa (500)
+  OK  estado.json intacto
+  OK  historial intacto
+  OK  no aparta el historial
+  OK  no deja guardar el estado (500)
+  MAL GET /api/eventos devuelve el historial sin tocar en memoria (sesión v2: ruta=undefined, programa=clasica)
+  MAL POST /api/eventos con la migración fallida: 200 y el historial ha cambiado (se ha añadido una línea)
+
+### P1 · Lo nuevo de la Fase 2 sobrevive a reiniciar el servidor
+  OK  conocida (parcial, con secciones), tramo elegido, formatos por sección, ajustes y encargo con formato: iguales tras reiniciar
+  OK  una comprobación de sección con encargo: igual tras reiniciar
+  OK  «conocida» con un nivel inventado se rechaza (400)

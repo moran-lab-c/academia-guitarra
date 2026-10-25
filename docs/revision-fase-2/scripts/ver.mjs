@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import { ctxDe } from 'file:///C:/Users/david/The%20Cave/08%20-%20Guitarra/Academia/app/pruebas/ayuda.js';
+import { planificar } from 'file:///C:/Users/david/The%20Cave/08%20-%20Guitarra/Academia/app/logica/planificador.js';
+const dir = process.argv[2];
+const estado = JSON.parse(fs.readFileSync(dir + '/estado.json', 'utf8')).estado;
+const eventos = fs.readFileSync(dir + '/historial/2026-10.jsonl', 'utf8').trim().split('\n').map(JSON.parse);
+const ctx = ctxDe({ estado, eventos, hoy: '2026-10-25' });
+const r = ctx.rutaActual('clasica');
+for (const t of r.tramos) console.log(t.orden, t.estado, t.pasos.map(p => `${p.numero ?? 'R'}:${p.estado}`).join(' '));
+for (const m of [20, 30, 60, 90]) console.log(m, planificar(ctx, { minutos: m }).bloques.map(b => `${b.tipo}(${b.minutos})`).join(' '));
