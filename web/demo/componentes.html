@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Componentes de B+ (muestra)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap">
+  <link rel="stylesheet" href="../estilos/tokens.css">
+  <link rel="stylesheet" href="../estilos/componentes.css">
+  <style>
+    /* Solo de la muestra: la página de ejemplo no usa base.css para comprobar que los componentes se valen solos. */
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fondo); color: var(--texto); font: 14px/1.45 var(--f-ui); }
+    main { padding: 28px 32px 80px; display: flex; flex-direction: column; gap: 36px; }
+    h2.rotulo { margin: 0 0 12px; font: 12px var(--f-dato); letter-spacing: .12em; color: var(--texto-3); text-transform: uppercase; }
+    .fila { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+    .mat { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; max-width: 760px; text-align: center; font-size: 12px; color: var(--texto-2); }
+    .mat > div { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .iconos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; max-width: 900px; }
+    .iconos > div { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--texto-2); }
+    .tarj { background: var(--sup-1); border-radius: var(--r-3); padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; max-width: 420px; color: var(--texto); text-decoration: none; }
+    .tarj .titulo { font: 22px/1.05 var(--f-display); }
+    .barra button { height: 32px; padding: 0 12px; border: 1px solid var(--borde); border-radius: 8px; background: transparent; color: var(--texto); font: 13px var(--f-ui); cursor: pointer; }
+    .aviso { color: var(--texto-3); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main id="muestra"></main>
+  <script type="module" src="./componentes.js"></script>
+</body>
+</html>

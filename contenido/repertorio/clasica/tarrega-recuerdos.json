@@ -1,0 +1,54 @@
+{
+  "id": "obra:tarrega.recuerdos",
+  "programa": "clasica",
+  "clase": "obra",
+  "compositor": "Francisco Tárrega",
+  "titulo": "Recuerdos de la Alhambra",
+  "periodo": "romántico",
+  "estilo": "Estudio de trémolo",
+  "tonalidad": [
+    "La menor",
+    "La mayor"
+  ],
+  "nivel": {
+    "curso": 6,
+    "naturaleza": "decision",
+    "referencias": [
+      {
+        "sistema": "Profesionales (Madrid)",
+        "curso": "5 y 6",
+        "naturaleza": "dato"
+      }
+    ]
+  },
+  "dificultad": {
+    "valor": 6,
+    "naturaleza": "estimacion"
+  },
+  "lecturaNecesaria": {
+    "nivel": 5,
+    "naturaleza": "estimacion"
+  },
+  "pide": [
+    "comp:tec.tremolo-a-tempo",
+    "comp:tec.cejilla-completa"
+  ],
+  "desarrolla": [
+    "comp:tec.tremolo-a-tempo",
+    "comp:arm.tono-homonimo"
+  ],
+  "objetivos": [
+    "Trémolo regular y cantabile durante toda la obra"
+  ],
+  "relacionadas": [
+    {
+      "id": "obra:tarrega.lagrima",
+      "relacion": "El mismo cambio de modo, de menor a mayor"
+    }
+  ],
+  "notacion": {
+    "partitura": "externa",
+    "tablatura": "pendiente",
+    "donde": "IMSLP (dominio público)"
+  }
+}

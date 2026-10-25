@@ -1,0 +1,89 @@
+/* B+ «Estudio»: los valores de la identidad visual aprobada el 25/10/2026. Todo color, letra y tiempo sale de aquí.
+   El tema oscuro es el principal; el claro queda preparado (data-tema="claro" en <html>) y no condiciona el diseño.
+   Papel, tinta y verde vienen del Style Bible de Archivo de Tinta. */
+:root {
+  color-scheme: dark;
+  /* Entorno: grafito, nunca negro puro; superficies apenas distintas. */
+  --fondo: #1D1D1B;
+  --carril: #20201E;
+  --sup-1: #242422;
+  --sup-2: #2E2E2B;
+  --sup-3: #3A3A36;
+  --borde: #3A3A36;
+  --borde-suave: #2E2E2B;
+  /* Texto: claro, nunca blanco puro. --texto-3 solo sobre --fondo o --sup-1 (contraste 4,5:1). */
+  --texto: #E6E3DC;
+  --texto-2: #B4B1A8;
+  --texto-3: #8F8E89;
+  --texto-apagado: #6E6D68;
+  /* Material musical: papel de atril y tinta. Lo más claro de la pantalla. */
+  --papel: #F6F5F1;
+  --hoja: #FBFAF7;
+  --tinta: #1D1D1B;
+  --tinta-2: #4A4A47;
+  /* Acentos: un solo color vivo (el verde señala: «ahora» y lo importante) y el ocre para avisar. */
+  --verde: #3DFF6E;
+  --verde-borde: #12A33E;
+  --ocre: #D9A54A;
+  --ocre-fondo: #3A3226;
+  --ocre-borde: #5A4A2E;
+  --encargo-fondo: #2B2620;
+  /* Un tono apagado por área, solo en marcas pequeñas. */
+  --a-tecnica: #D7A86E;
+  --a-escalas: #E2957A;
+  --a-repertorio: #BFA2DC;
+  --a-interpretacion: #DDB7CF;
+  --a-lectura: #86B6EA;
+  --a-ritmo: #86CDB3;
+  --a-teoria: #C8C67F;
+  --a-armonia: #E58FA6;
+  --a-oido: #7FC9DA;
+  --a-diapason: #A9A6EC;
+  --a-flamenco: #E07A5F;
+  /* Letra. */
+  --f-display: 'Archivo Black', 'Arial Black', Impact, sans-serif;
+  --f-ui: Archivo, system-ui, 'Segoe UI', sans-serif;
+  --f-obra: 'Source Serif 4', Georgia, serif;
+  --f-dato: 'Courier Prime', 'Courier New', monospace;
+  /* Formas. */
+  --r-1: 6px;
+  --r-2: 10px;
+  --r-3: 14px;
+  --r-4: 16px;
+  --sombra-papel: 0 18px 40px rgba(0, 0, 0, 0.35);
+  /* Movimiento: corto en lo pequeño, medio en transiciones, largo solo en títulos con intención. */
+  --t-corta: 200ms;
+  --t-media: 520ms;
+  --t-larga: 820ms;
+  --curva: cubic-bezier(.2, .7, .2, 1);
+  --curva-subida: cubic-bezier(.16, .84, .24, 1);
+  --curva-trazo: cubic-bezier(.65, 0, .35, 1);
+}
+
+/* Tema claro, preparado para más adelante: mismas piezas, otros valores. */
+:root[data-tema="claro"] {
+  color-scheme: light;
+  --fondo: #F6F5F1;
+  --carril: #EEECE6;
+  --sup-1: #FFFFFF;
+  --sup-2: #ECEAE4;
+  --sup-3: #E2DFD8;
+  --borde: #D6D3CB;
+  --borde-suave: #E6E4DE;
+  --texto: #1D1D1B;
+  --texto-2: #4A4A47;
+  --texto-3: #6B6A65;
+  --texto-apagado: #8F8E89;
+  --papel: #FBFAF7;
+  --hoja: #FFFFFF;
+  --ocre: #9A6A12;
+  --ocre-fondo: #F5E9D2;
+  --ocre-borde: #E2C99A;
+  --encargo-fondo: #F7EEDD;
+  --verde: #12A33E;
+  --sombra-papel: 0 8px 24px rgba(29, 29, 27, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-corta: 0ms; --t-media: 0ms; --t-larga: 0ms; }
+}

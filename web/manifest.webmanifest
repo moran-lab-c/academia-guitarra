@@ -1,0 +1,10 @@
+{
+  "name": "Academia de guitarra",
+  "short_name": "Academia",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1d1c1a",
+  "theme_color": "#1d1c1a",
+  "icons": [{ "src": "/web/iconos/icono.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

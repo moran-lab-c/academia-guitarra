@@ -1,0 +1,254 @@
+/* Componentes de B+ «Estudio»: marcas, ruta del curso, atril, título cinético, momento de entrada, selector de formato y
+   formulario de registro. Todo valor sale de tokens.css; aquí solo se añade --punteado (el gris del camino por recorrer). */
+:root { --punteado: #5A5955; }
+:root[data-tema="claro"] { --punteado: #B9B6AD; }
+
+/* ============================================================ Marcas */
+.icono { display: block; flex: none; }
+
+/* El círculo de estado (leyenda de Main.dc.html). --g: diámetro. */
+.glifo {
+  --p: clamp(7px, calc(var(--g, 34px) * .35), 14px);
+  --sello: clamp(2px, calc(var(--g, 34px) * .085), 3px);
+  position: relative; box-sizing: border-box; flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: var(--g, 34px); height: var(--g, 34px); border-radius: 50%;
+  background: var(--ruta-fondo, var(--fondo)); color: var(--texto);
+  transition: transform var(--t-corta) var(--curva), box-shadow var(--t-corta) var(--curva);
+}
+.glifo--obra { border-radius: max(4px, calc(var(--g, 34px) * .2)); }
+.glifo--por-llegar { border: 1.5px dashed var(--punteado); color: var(--texto-3); }
+.glifo--disponible { border: 1.5px solid var(--texto-2); }
+.glifo--recomendado { border: 2px solid var(--texto); box-shadow: 0 0 0 4px color-mix(in srgb, var(--texto) 12%, transparent); }
+.glifo--ahora { border: 2px solid var(--texto); background: var(--sup-3); color: var(--papel); }
+.glifo--hecho { background: var(--texto); color: var(--fondo); }
+.glifo--dominado { background: var(--texto); color: var(--fondo); box-shadow: 0 0 0 var(--sello) var(--ruta-fondo, var(--fondo)), 0 0 0 calc(var(--sello) + 1.5px) var(--texto); }
+.glifo--repaso { border: 2px solid var(--ocre); background: var(--ocre-fondo); color: var(--ocre); }
+.glifo--refuerzo { border: 2px dashed var(--ocre); color: var(--ocre); }
+.glifo--en-curso.glifo--disponible, .glifo--en-curso.glifo--recomendado, .glifo--en-curso.glifo--por-llegar { border: 2px solid var(--texto-2); border-style: solid; background: var(--sup-3); color: var(--texto); }
+.glifo__punto {
+  position: absolute; right: calc(var(--p) * -.4); top: calc(var(--p) * -.4); width: var(--p); height: var(--p); box-sizing: border-box;
+  border-radius: 50%; background: var(--verde); border: calc(var(--p) * .18) solid var(--ruta-fondo, var(--fondo));
+}
+
+.leyenda-estados { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 11px; color: var(--texto-2); }
+.leyenda-estados__item { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Fichas de texto. */
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; box-sizing: border-box; padding: 3px 7px; border: 1px solid var(--borde); border-radius: var(--r-1);
+  font: 11px/1.2 var(--f-ui); color: var(--texto-2); white-space: nowrap;
+}
+.chip--ahora { background: var(--verde); border-color: transparent; color: var(--tinta); font-weight: 700; }
+.chip--encargo { background: var(--ocre); border-color: transparent; color: var(--tinta); font-weight: 700; }
+.chip--repaso { background: var(--ocre-fondo); border-color: var(--ocre-borde); color: var(--ocre); }
+.chip--refuerzo { border: 1px dashed var(--ocre); color: var(--ocre); }
+.chip__punto { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+
+/* ============================================================ Ruta del curso */
+.ruta { --ruta-fondo: var(--fondo); position: relative; width: 100%; min-height: 120px; }
+.ruta__svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.ruta__camino { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ruta__camino--hecho { stroke: var(--texto); stroke-width: 3; }
+.ruta__camino--falta { stroke: var(--punteado); stroke-width: 2; stroke-dasharray: 1 7; }
+.ruta__camino--despues { stroke: var(--borde); stroke-width: 2; stroke-dasharray: 1 7; }
+
+.ruta__tramo { position: absolute; display: flex; flex-direction: column; gap: 3px; }
+.ruta__tramo-nombre { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; font: 11px/1.25 var(--f-dato); letter-spacing: .12em; color: var(--texto-3); }
+.ruta__tramo-estado { font-size: 12px; line-height: 1.3; color: var(--texto-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ruta__tramo--abierto .ruta__tramo-nombre { color: var(--texto); }
+.ruta__tramo--por-llegar .ruta__tramo-estado { color: var(--texto-3); }
+
+.paso { position: absolute; display: block; box-sizing: border-box; color: inherit; text-decoration: none; border-radius: 50%; }
+.paso:focus-visible { outline: none; }
+.paso:focus-visible .glifo, .paso:focus-visible .medalla { outline: 2px solid var(--texto); outline-offset: 4px; }
+a.paso:hover .glifo, a.paso:hover .medalla { transform: scale(1.07); }
+.paso--ficha, .paso--pista { cursor: default; }
+
+/* Etiquetas: cuelgan del nodo, así el clic en el texto también abre el paso. */
+.paso__et {
+  position: absolute; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 2px;
+  text-align: center; font-size: 12px;
+}
+.paso__et--arriba { bottom: calc(100% + 8px); }
+.paso__et--abajo { top: calc(100% + 8px); }
+.paso__kick { font: 10px/1.25 var(--f-dato); letter-spacing: .1em; color: var(--texto-3); text-transform: uppercase; }
+.paso__ahora { color: var(--verde); }
+.paso__tit, .paso__det { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; max-width: 100%; }
+.paso__tit { -webkit-line-clamp: 3; font-size: 12px; font-weight: 600; line-height: 1.3; color: var(--texto); }
+.paso__tit--obra { font: italic 500 14px/1.25 var(--f-obra); }
+.paso__det { -webkit-line-clamp: 2; font-size: 11px; line-height: 1.3; color: var(--texto-2); }
+.paso__det--ocre { color: var(--ocre); }
+.paso__det--suave { color: var(--texto-3); }
+.paso__det--obra { font: italic 12px/1.3 var(--f-obra); }
+.paso--actual .paso__tit { font-size: 13px; font-weight: 700; }
+.paso--futuro .paso__tit { color: var(--texto-2); }
+.paso--futuro .paso__tit--obra { color: var(--texto-2); }
+.paso__marca {
+  position: absolute; right: -7px; top: -7px; width: 16px; height: 16px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--ruta-fondo, var(--fondo)); border-radius: 50%; font-style: normal; line-height: 1;
+}
+.paso__marca--p { background: var(--ocre); color: var(--tinta); font: 9px/1 var(--f-display); }
+.paso__marca--repaso { right: -6px; top: -6px; background: var(--ocre-fondo); color: var(--ocre); font: 700 10px/1 var(--f-ui); border-color: var(--ruta-fondo, var(--fondo)); }
+.paso--refuerzo .glifo--ahora { border-style: dashed; border-color: var(--ocre); }
+.paso--refuerzo .paso__kick { color: var(--ocre); }
+
+/* Los hechos, comprimidos: puntos con una palabra sola cuando importa (una obra, un repaso). */
+.paso--punto .paso__et { gap: 0; }
+.paso--punto .paso__tit--obra { font-size: 13px; font-weight: 400; color: var(--texto-2); }
+.paso--punto .paso__et--ocre .paso__tit { font-size: 11px; font-weight: 400; color: var(--ocre); }
+/* Los siguientes, más pequeños. */
+.paso--menudo .paso__tit { font-size: 11px; font-weight: 500; color: var(--texto-2); }
+.paso--menudo .paso__tit--obra { font-size: 12px; font-weight: 400; color: var(--texto-3); }
+/* Los tramos en borrador: ficha con su número de pasos. */
+.glifo--ficha { font: 13px/1 var(--f-display); }
+.paso--ficha .paso__tit { font-weight: 400; color: var(--texto-2); }
+.paso--ficha .paso__kick { color: var(--texto-3); }
+/* La medalla de la obra final. */
+.medalla {
+  box-sizing: border-box; width: var(--g, 76px); height: var(--g, 76px); border-radius: 50%; border: 2px solid var(--texto); background: var(--ruta-fondo, var(--fondo));
+  display: flex; align-items: center; justify-content: center; transition: transform var(--t-corta) var(--curva);
+}
+.medalla__int { width: calc(var(--g, 76px) - 14px); height: calc(var(--g, 76px) - 14px); border-radius: 50%; background: var(--sup-2); color: var(--papel); display: flex; align-items: center; justify-content: center; }
+.paso--medalla-hecho .medalla__int { background: var(--texto); color: var(--fondo); }
+.paso--medalla-futuro .medalla { border-color: var(--texto-2); }
+.paso--medalla-proximo .medalla { border-color: var(--texto-2); }
+.paso--medalla-recomendado .medalla__int { background: var(--sup-3); }
+.paso__et--medalla .paso__kick { color: var(--texto); letter-spacing: .12em; }
+.paso__et--medalla .paso__tit { font-size: 17px; line-height: 1.2; font-weight: 500; }
+.paso__et--medalla .paso__det { font-size: 11px; }
+.paso__despues { display: flex; flex-direction: column; align-items: center; gap: 1px; margin-top: 10px; padding-top: 8px; border-top: 1px dotted var(--punteado); font-size: 12px; color: var(--texto-3); }
+/* La pista del curso siguiente, al final del camino punteado. */
+.paso--pista { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 6px; background: var(--ruta-fondo, var(--fondo)); text-align: center; }
+.paso--pista .paso__tit { font-size: 12px; font-weight: 400; color: var(--texto-3); }
+
+/* El camino se dibuja y los nodos aparecen en secuencia (solo con animar y sin «reducir movimiento»). */
+@keyframes ruta-pop { from { transform: scale(0); } 70% { transform: scale(1.18); } to { transform: scale(1); } }
+@keyframes ruta-aparece { from { opacity: 0; translate: 0 6px; } to { opacity: 1; translate: 0 0; } }
+.ruta--anima .paso .glifo, .ruta--anima .paso .medalla { animation: ruta-pop 420ms cubic-bezier(.3, .7, .4, 1) backwards; animation-delay: var(--d, 0ms); }
+.ruta--anima .paso__et, .ruta--anima .paso--pista { animation: ruta-aparece var(--t-media) var(--curva) backwards; animation-delay: calc(var(--d, 0ms) + 140ms); }
+
+/* «Dónde estás»: los pasos del tramo actual en una fila de puntos. */
+.mini-ruta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; min-height: 14px; }
+.mini { position: relative; box-sizing: border-box; flex: none; display: block; width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--texto-2); }
+.mini--obra { width: 11px; height: 11px; border-radius: 3px; }
+.mini--hecho { background: var(--texto); box-shadow: none; }
+.mini--ahora { width: 14px; height: 14px; background: var(--sup-3); box-shadow: inset 0 0 0 2px var(--texto); }
+.mini--repaso { box-shadow: inset 0 0 0 1.5px var(--ocre); }
+.mini--refuerzo { box-shadow: none; border: 1.5px dashed var(--ocre); }
+.mini--futuro, .mini--fin { box-shadow: inset 0 0 0 1.5px var(--punteado); }
+.mini__punto { position: absolute; right: -3px; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--verde); }
+
+/* ============================================================ Atril: el papel donde va la música */
+.atril {
+  margin: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px; background: var(--papel); color: var(--tinta); border: 0; border-radius: 6px;
+  padding: clamp(18px, 3vw, 30px) clamp(20px, 4vw, 48px) clamp(16px, 2.6vw, 26px); box-shadow: var(--sombra-papel); font: italic 14px/1.5 var(--f-obra);
+}
+.atril a { color: inherit; }
+.atril__cabecera { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; }
+.atril__titulo { font: italic 400 22px/1.2 var(--f-obra); }
+.atril__subtitulo { font: 400 14px/1.3 var(--f-obra); color: var(--tinta-2); }
+.atril__contenido { min-width: 0; }
+.atril__contenido svg { display: block; max-width: 100%; }
+.atril__nota { font: italic 14px/1.4 var(--f-obra); color: var(--tinta-2); }
+
+/* ============================================================ Título cinético */
+@keyframes tc-subir { from { transform: translateY(112%); } to { transform: translateY(0); } }
+@keyframes tc-aparecer { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
+@keyframes tc-marca { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes tc-revela { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes tc-punto { 0% { transform: scale(0); } 70% { transform: scale(1.18); } 100% { transform: scale(1); } }
+
+.titulo-cinetico { display: flex; flex-direction: column; gap: 6px; }
+.tc-etiqueta { font: 12px/1.3 var(--f-dato); letter-spacing: .14em; color: var(--texto-3); text-transform: uppercase; }
+.tc-titulo { margin: 0; font: 400 var(--tc-tam, clamp(34px, 3.4vw, 48px)) / 1 var(--f-display); letter-spacing: -.005em; color: var(--tc-color, var(--texto)); }
+.tc-linea { display: block; overflow: hidden; padding: 0 .06em .08em; margin-bottom: -.08em; }
+.tc-pal { display: inline-block; white-space: nowrap; }
+.tc-l { display: inline-block; }
+.tc--anima .tc-l { animation: tc-subir var(--t-larga) var(--curva-subida) backwards; animation-delay: var(--d, 0ms); }
+.tc--anima .tc-etiqueta, .tc--anima .tc-aparece { animation: tc-aparecer 640ms var(--curva) backwards; animation-delay: var(--d, 0ms); }
+.tc--anima .tc-marca { transform-origin: left center; animation: tc-marca 760ms var(--curva-trazo) backwards; animation-delay: var(--d, 0ms); }
+.tc--anima .entrada__trazo { animation: tc-revela 1300ms var(--curva-trazo) backwards; animation-delay: var(--d, 0ms); }
+.tc--anima .tc-punto { animation: tc-punto 420ms cubic-bezier(.3, .7, .4, 1) backwards; animation-delay: var(--d, 0ms); }
+
+/* El momento de entrada (a un curso, a una obra, a la sesión): pantalla completa, una vez. */
+.entrada {
+  position: fixed; inset: 0; z-index: 200; box-sizing: border-box; display: flex; flex-direction: column; overflow: auto;
+  padding: clamp(24px, 8vh, 110px) clamp(20px, 8vw, 120px) clamp(20px, 5vh, 56px); background: var(--fondo); color: var(--texto);
+  transition: opacity 220ms ease;
+}
+.entrada--sale { opacity: 0; pointer-events: none; }
+.entrada__sup { display: flex; justify-content: space-between; gap: 24px; }
+.entrada__etiqueta { font: 14px/1.3 var(--f-dato); letter-spacing: .24em; color: var(--texto-3); text-transform: uppercase; }
+.entrada__centro { margin-top: clamp(8px, 4vh, 40px); }
+.entrada__sobre { font: 400 clamp(26px, 4.4vw, 64px) / 1 var(--f-display); letter-spacing: .02em; color: var(--texto); }
+.entrada__titulo { --tc-tam: clamp(44px, min(11.7vw, 19vh), 168px); --tc-color: var(--papel); line-height: .9; letter-spacing: -.01em; margin-top: .12em; }
+.entrada__marca { display: block; width: 300px; max-width: 60%; height: 10px; margin-top: clamp(14px, 3vh, 32px); background: var(--verde); }
+.entrada__inferior { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 32px; margin-top: 22px; }
+.entrada__subtitulo { margin: 0; max-width: 760px; font-size: clamp(16px, 1.5vw, 22px); line-height: 1.45; color: var(--texto-2); }
+.entrada__accion { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; margin-left: auto; }
+.entrada__boton {
+  display: inline-flex; align-items: center; gap: 10px; box-sizing: border-box; height: 50px; padding: 0 24px; border: 0; border-radius: 12px; cursor: pointer;
+  background: var(--papel); color: var(--tinta); font: 700 16px/1 var(--f-ui); text-decoration: none;
+}
+.entrada__boton:focus-visible { outline: 2px solid var(--verde); outline-offset: 3px; }
+.entrada__pie { font-size: 13px; color: var(--texto-3); }
+/* El camino de abajo: un punto verde, un círculo por tramo y la estrella. */
+.entrada__camino { position: relative; flex: none; height: 104px; margin: auto clamp(24px, 5vw, 80px) 0; padding-top: 24px; }
+.entrada__trazo { position: absolute; inset: 24px 0 auto 0; height: 64px; }
+.entrada__trazo svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.entrada__trazo path { fill: none; stroke: var(--punteado); stroke-width: 2.5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.entrada__punto, .entrada__rotulo { position: absolute; }
+.entrada__punto { box-sizing: border-box; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--fondo); border: 2px solid var(--texto-2); }
+.entrada__punto--ahora { width: 20px; height: 20px; margin: -10px 0 0 -10px; background: var(--verde); border: 3px solid var(--fondo); }
+.entrada__punto--fin { width: 28px; height: 28px; margin: -14px 0 0 -14px; border: 0; background: none; color: var(--papel); font-size: 26px; line-height: 28px; text-align: center; }
+.entrada__rotulo { width: max-content; max-width: 120px; transform: translateX(-50%); text-align: center; font-size: 12px; line-height: 1.3; color: var(--texto-3); }
+.entrada__rotulo--final { max-width: 160px; transform: translateX(-85%); text-align: right; display: flex; flex-direction: column; gap: 2px; }
+.entrada__rotulo--final b { font: 10px/1.2 var(--f-dato); letter-spacing: .14em; color: var(--texto); font-weight: 400; }
+.entrada__rotulo--final i { font: italic 16px/1.2 var(--f-obra); color: var(--texto); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ruta--anima *, .tc--anima *, .entrada--sale { animation: none !important; transition: none !important; }
+}
+
+/* ============================================================ Selector Partitura | Tablatura */
+.notacion__barra { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.notacion .segmentado { display: inline-flex; gap: 2px; padding: 4px; background: var(--sup-1); border-radius: 11px; }
+.notacion .segmentado button {
+  height: 34px; padding: 0 14px; border: 0; border-radius: 8px; background: transparent; color: var(--texto-2);
+  font: 400 13px/1 var(--f-ui); cursor: pointer; transition: background var(--t-corta) var(--curva), color var(--t-corta) var(--curva);
+}
+.notacion .segmentado button:hover:not(:disabled):not([aria-pressed="true"]) { color: var(--texto); }
+.notacion .segmentado button[aria-pressed="true"] { background: var(--sup-3); color: var(--papel); font-weight: 600; }
+.notacion .segmentado button:disabled { opacity: .55; cursor: default; }
+.notacion .segmentado button:focus-visible { outline: 2px solid var(--texto); outline-offset: 1px; }
+.notacion__volver { padding: 0; border: 0; background: none; color: var(--texto-2); font: 13px var(--f-ui); text-decoration: underline; cursor: pointer; }
+.notacion__volver:hover { color: var(--texto); }
+.notacion__motivo { margin: 8px 0; font-size: 12.5px; line-height: 1.45; color: var(--texto-3); }
+.notacion > .atril { margin: 8px 0; padding: 20px clamp(20px, 4vw, 40px); }
+
+/* ============================================================ Registro: «Cómo ha salido» como en la lámina P5 */
+form.tarjeta :is(input:not([type="radio"], [type="checkbox"]), select, textarea) {
+  background: var(--sup-2); color: var(--texto); border: 1px solid var(--borde); border-radius: var(--r-1); padding: 6px 9px;
+}
+form.tarjeta :is(input, select, textarea):focus-visible { outline: 2px solid var(--texto-2); outline-offset: 1px; }
+form.tarjeta label { color: var(--texto-2); }
+form.tarjeta button[type="button"] {
+  height: 30px; padding: 0 11px; border: 1px solid var(--borde); border-radius: 8px; background: transparent; color: var(--texto); font: 12px var(--f-ui); cursor: pointer;
+}
+form.tarjeta button[type="submit"] {
+  height: 44px; padding: 0 22px; border: 0; border-radius: 10px; background: var(--papel); color: var(--tinta); font: 700 14px var(--f-ui); cursor: pointer;
+}
+.aspectos { display: grid; gap: 7px; margin-top: 10px; }
+.aspectos .fila { display: grid; grid-template-columns: minmax(5.5em, 7.5em) repeat(3, minmax(0, 1fr)); gap: 4px; align-items: center; padding: 0; border: 0; }
+.aspectos .fila > span { font-size: 13px; color: var(--texto); }
+.aspectos label.check {
+  position: relative; display: flex; align-items: center; justify-content: center; box-sizing: border-box; height: 30px; margin: 0; padding: 0 4px;
+  border: 1px solid var(--borde); border-radius: 7px; color: var(--texto-2); font-size: 12px; text-align: center; cursor: pointer;
+  transition: background var(--t-corta) var(--curva), color var(--t-corta) var(--curva);
+}
+.aspectos label.check input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.aspectos label.check:hover { color: var(--texto); }
+.aspectos label.check:has(input:checked) { border-color: transparent; background: var(--texto); color: var(--tinta); font-weight: 700; }
+.aspectos label.check:has(input[value="fallos"]:checked) { background: var(--ocre); }
+.aspectos label.check:has(input[value="mal"]:checked) { background: var(--a-escalas); }
+.aspectos label.check:has(input:focus-visible) { outline: 2px solid var(--texto); outline-offset: 2px; }

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "tramo:f1.t1", "programa": "flamenca", "curso": "curso:f1", "orden": 1,
+    "titulo": "Soleá: compás y mano derecha",
+    "objetivos": ["El compás de 12 con sus acentos, sin pensarlo", "Rasgueo, picado y la cadencia andaluza en la soleá"],
+    "pasos": ["paso:f1.t1.01", "paso:f1.t1.02", "paso:f1.t1.03", "paso:f1.t1.04", "paso:f1.t1.05"]
+  },
+  { "id": "paso:f1.t1.01", "programa": "flamenca", "clase": "habilidad", "area": "fl-compas", "titulo": "Compás de 12 de la soleá", "objetivo": "Contar y palmear el compás con sus acentos.", "trabaja": ["comp:fl.compas-12"] },
+  { "id": "paso:f1.t1.02", "programa": "flamenca", "clase": "habilidad", "area": "fl-tecnica", "titulo": "Rasgueo de cuatro dedos", "objetivo": "Un rasgueo continuo y parejo dentro del compás.", "trabaja": ["comp:fl.rasgueo-cuatro"] },
+  { "id": "paso:f1.t1.03", "programa": "flamenca", "clase": "habilidad", "area": "fl-tecnica", "titulo": "Picado i-m", "objetivo": "Picado limpio y regular, apoyando.", "trabaja": ["comp:fl.picado"] },
+  { "id": "paso:f1.t1.04", "programa": "flamenca", "clase": "habilidad", "area": "fl-armonia", "titulo": "Cadencia andaluza", "objetivo": "El modo flamenco por arriba y su cadencia.", "trabaja": ["comp:fla.cadencia-andaluza"] },
+  { "id": "paso:f1.t1.05", "programa": "flamenca", "clase": "evaluacion", "titulo": "Cierre del tramo 1", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo." }
+]

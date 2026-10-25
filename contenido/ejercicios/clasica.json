@@ -1,0 +1,87 @@
+[
+  {
+    "id": "ej:esc.mi-mayor-1pos",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Escala de Mi mayor, dos octavas en primera posición",
+    "objetivo": "Apoyando i-m con sonido clásico y cambio de cuerda limpio.",
+    "duracionMin": [
+      5,
+      8
+    ],
+    "instrucciones": [
+      "De Mi2 (6.ª al aire) a Mi4 (1.ª al aire) y vuelta, un dedo por traste.",
+      "Apoyando i-m, en corcheas.",
+      "Empieza en el tempo más alto al que salga limpia y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Repetir dedo en el cambio de cuerda",
+      "Que suene más el i que el m"
+    ],
+    "trabaja": [
+      "comp:esc.mi-mayor-1pos"
+    ],
+    "notacion": {
+      "fuente": "notacion/esc-mi-mayor-1pos.json",
+      "principal": "tablatura",
+      "motivo": "Es técnica (apoyando i-m y cambio de cuerda): tablatura. La partitura, para ver qué notas son."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:giuliani.op1",
+    "programa": "clasica",
+    "area": "escalas",
+    "titulo": "Giuliani, 120 arpegios (op. 1, primera parte)",
+    "objetivo": "Independencia y regularidad de p, i, m y a.",
+    "duracionMin": [
+      5,
+      10
+    ],
+    "instrucciones": [
+      "Acordes de Do mayor y Sol7 fijos en la mano izquierda.",
+      "Un patrón cada día, despacio y con todas las notas iguales.",
+      "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "trabaja": [
+      "comp:esc.arpegio-pima"
+    ],
+    "notacion": {
+      "partitura": "externa",
+      "tablatura": "pendiente",
+      "donde": "IMSLP (dominio público)"
+    }
+  },
+  {
+    "id": "ej:tec.presion-decreciente",
+    "programa": "clasica",
+    "area": "tecnica",
+    "titulo": "Presión decreciente",
+    "objetivo": "Encontrar la presión mínima de cada dedo.",
+    "duracionMin": [
+      3,
+      5
+    ],
+    "instrucciones": [
+      "Pisa una nota y tócala; afloja la presión poco a poco mientras la repites hasta que trastee.",
+      "Vuelve a apretar lo justo para que suene limpia.",
+      "Con cada dedo y en varias cuerdas."
+    ],
+    "trabaja": [
+      "comp:tec.presion-minima"
+    ]
+  }
+]

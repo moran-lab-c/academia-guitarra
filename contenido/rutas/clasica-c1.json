@@ -1,0 +1,46 @@
+[
+  {
+    "id": "tramo:c1.t1", "programa": "clasica", "curso": "curso:c1", "orden": 1,
+    "titulo": "Melodía acompañada en Mi mayor", "obraEje": "obra:tarrega.lagrima#A",
+    "objetivos": ["La parte A de Lágrima con la melodía por encima del acompañamiento", "Sonido clásico y presión justa", "Saber por qué Mi mayor lleva cuatro sostenidos y por qué Si7 resuelve en Mi", "Leer las notas de las cuerdas agudas y llevar el pulso"],
+    "pasos": ["paso:c1.t1.01", "paso:c1.t1.02", "paso:c1.t1.03", "paso:c1.t1.04", "paso:c1.t1.05", "paso:c1.t1.06", "paso:c1.t1.07", "paso:c1.t1.08", "paso:c1.t1.09", "paso:c1.t1.10", "paso:c1.t1.11"]
+  },
+  { "id": "paso:c1.t1.01", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Sonido clásico, apoyando y tirando", "objetivo": "Pulsar con uña y yema, preparando el dedo, igual en todas las cuerdas.", "trabaja": ["comp:tec.sonido-clasico"] },
+  { "id": "paso:c1.t1.02", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Presión justa", "objetivo": "La mínima fuerza para que la nota suene limpia.", "trabaja": ["comp:tec.presion-minima"], "contenido": ["ej:tec.presion-decreciente"] },
+  { "id": "paso:c1.t1.03", "programa": "clasica", "clase": "habilidad", "area": "lectura", "titulo": "Notas de las cuerdas 1-3", "objetivo": "Leer en el pentagrama las notas de las cuerdas agudas en primera posición.", "trabaja": ["comp:lec.notas-1pos-agudas"] },
+  { "id": "paso:c1.t1.04", "programa": "clasica", "clase": "habilidad", "area": "teoria", "titulo": "Tono, semitono y la escala mayor", "objetivo": "De dónde salen la escala mayor y sus triadas.", "trabaja": ["comp:teo.tono-semitono", "comp:teo.escala-mayor", "comp:teo.triada-mayor-menor"] },
+  { "id": "paso:c1.t1.05", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Escala de Mi mayor en primera posición", "objetivo": "La tonalidad de la parte A, en los dedos.", "trabaja": ["comp:esc.mi-mayor-1pos"], "contenido": ["ej:esc.mi-mayor-1pos"] },
+  { "id": "paso:c1.t1.06", "programa": "clasica", "clase": "habilidad", "area": "ritmo", "titulo": "Pulso estable con metrónomo", "objetivo": "Mantener el pulso sin acelerar ni frenar.", "trabaja": ["comp:rit.pulso"] },
+  { "id": "paso:c1.t1.07", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Melodía por encima del acompañamiento", "objetivo": "La melodía con más peso y el acompañamiento más suave, con la misma mano.", "trabaja": ["comp:tec.melodia-acompanada"], "requiere": ["paso:c1.t1.01"] },
+  { "id": "paso:c1.t1.08", "programa": "clasica", "clase": "habilidad", "area": "armonia", "titulo": "I-IV-V7-I en Mi, y mayor o menor de oído", "objetivo": "Por qué Si7 pide resolver en Mi, tocado y escuchado.", "trabaja": ["comp:arm.i-iv-v7-i", "comp:oid.mayor-menor"], "contenido": ["ej:arm.mi-la-si7"] },
+  { "id": "paso:c1.t1.09", "programa": "clasica", "clase": "aplicacion", "area": "tecnica", "titulo": "La melodía de Lágrima, sola y con el bajo", "objetivo": "Aplicar la melodía acompañada a un pasaje real antes de la obra.", "trabaja": ["comp:tec.melodia-acompanada"], "contenido": ["obra:tarrega.lagrima#A"], "requiere": ["paso:c1.t1.07"] },
+  { "id": "paso:c1.t1.10", "programa": "clasica", "clase": "obra", "titulo": "Lágrima, parte A", "objetivo": "La parte A entera, con la melodía por encima.", "contenido": ["obra:tarrega.lagrima#A"] },
+  { "id": "paso:c1.t1.11", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 1", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo." },
+
+  {
+    "id": "tramo:c1.t2", "programa": "clasica", "curso": "curso:c1", "orden": 2,
+    "titulo": "El cambio de modo", "obraEje": "obra:tarrega.lagrima#B",
+    "objetivos": ["La parte B de Lágrima (Mi menor)", "Media cejilla", "Mayor y menor homónimos", "Leer las cuerdas graves y las figuras básicas"],
+    "pasos": ["paso:c1.t2.01", "paso:c1.t2.02", "paso:c1.t2.03", "paso:c1.t2.04", "paso:c1.t2.05", "paso:c1.t2.06", "paso:c1.t2.07", "paso:c1.t2.08", "paso:c1.t2.09"]
+  },
+  { "id": "paso:c1.t2.01", "programa": "clasica", "clase": "habilidad", "area": "armonia", "titulo": "Mayor y menor homónimos", "objetivo": "De Mi mayor a Mi menor: qué cambia y por qué suena así.", "trabaja": ["comp:arm.tono-homonimo"] },
+  { "id": "paso:c1.t2.02", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Media cejilla", "objetivo": "Varias cuerdas con el dedo 1 estirado, todas sonando y la mano suelta.", "trabaja": ["comp:tec.media-cejilla"], "requiere": ["paso:c1.t1.02"] },
+  { "id": "paso:c1.t2.03", "programa": "clasica", "clase": "habilidad", "area": "lectura", "titulo": "Notas de las cuerdas 4-6", "objetivo": "Leer las notas de las cuerdas graves en primera posición.", "trabaja": ["comp:lec.notas-1pos-graves"] },
+  { "id": "paso:c1.t2.04", "programa": "clasica", "clase": "habilidad", "area": "diapason", "titulo": "Las notas de la primera posición", "objetivo": "Dónde está cada nota natural en el mástil.", "trabaja": ["comp:dia.notas-1pos"] },
+  { "id": "paso:c1.t2.05", "programa": "clasica", "clase": "habilidad", "area": "ritmo", "titulo": "Figuras básicas", "objetivo": "Leer y palmear negras, corcheas, blancas y sus silencios.", "trabaja": ["comp:rit.figuras-basicas"], "requiere": ["paso:c1.t1.06"] },
+  { "id": "paso:c1.t2.06", "programa": "clasica", "clase": "obra", "papel": "lectura", "titulo": "Estudio op. 60, n.º 1", "objetivo": "Una obra entera leída desde el pentagrama.", "contenido": ["obra:sor.op60-1"] },
+  { "id": "paso:c1.t2.07", "programa": "clasica", "clase": "aplicacion", "area": "tecnica", "titulo": "La media cejilla dentro de Lágrima", "objetivo": "El pasaje de la parte B con media cejilla, aislado y lento.", "trabaja": ["comp:tec.media-cejilla"], "contenido": ["obra:tarrega.lagrima#B"], "requiere": ["paso:c1.t2.02"] },
+  { "id": "paso:c1.t2.08", "programa": "clasica", "clase": "obra", "titulo": "Lágrima, parte B", "objetivo": "La parte B entera, con el cambio de modo claro.", "contenido": ["obra:tarrega.lagrima#B"] },
+  { "id": "paso:c1.t2.09", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 2", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo." },
+
+  { "id": "tramo:c1.t3", "programa": "clasica", "curso": "curso:c1", "orden": 3, "borrador": true, "titulo": "El arpegio clásico", "objetivos": ["Su Estudio en Mi menor y los arpegios de Giuliani", "Inversiones y análisis armónico de su estudio"], "pasos": [] },
+  { "id": "tramo:c1.t4", "programa": "clasica", "curso": "curso:c1", "orden": 4, "borrador": true, "titulo": "Escalas y ligados", "objetivos": ["Estudio en Do de Tárrega o lecciones de Aguado", "Intervalos con su calidad y armaduras hasta dos alteraciones"], "pasos": [] },
+  { "id": "tramo:c1.t5", "programa": "clasica", "curso": "curso:c1", "orden": 5, "borrador": true, "titulo": "Polifonía antigua", "objetivos": ["Españoleta de Sanz o una pieza de Dowland", "Control de voces y cadencias"], "pasos": [] },
+
+  {
+    "id": "tramo:c1.cierre", "programa": "clasica", "curso": "curso:c1", "orden": 6, "cierre": true,
+    "titulo": "Cierre del curso", "objetivos": ["Lágrima entera, de memoria y grabada"],
+    "pasos": ["paso:c1.cierre.01"]
+  },
+  { "id": "paso:c1.cierre.01", "programa": "clasica", "clase": "preparacion", "area": "interpretacion", "titulo": "Preparar la obra final", "objetivo": "Unir la parte A y la B, tocarla entera sin parar, de memoria, y hacer una grabación de prueba.", "trabaja": ["comp:int.pieza-sin-parar"], "contenido": ["obra:tarrega.lagrima"] }
+]

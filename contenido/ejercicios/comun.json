@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ej:arm.mi-la-si7",
+    "programa": "comun",
+    "area": "armonia",
+    "titulo": "Mi–La–Si7–Mi (I–IV–V7–I)",
+    "objetivo": "Oír y tocar la tensión del V7 y su resolución.",
+    "duracionMin": [
+      5,
+      8
+    ],
+    "instrucciones": [
+      "Un acorde por compás a ♩=60, primero con el pulgar y luego en arpegio p-i-m-a.",
+      "Ocho compases sin cortar el pulso en los cambios.",
+      "Después, canta la fundamental de cada acorde (Mi, La, Si, Mi) mientras tocas.",
+      "Fíjate en Si7: el Re♯ sube a Mi y el La baja a Sol♯."
+    ],
+    "tempo": {
+      "inicial": 60,
+      "unidad": "♩",
+      "naturaleza": "decision",
+      "nota": "Un acorde por compás a ♩=60: lento para oír cada cambio."
+    },
+    "trabaja": [
+      "comp:arm.i-iv-v7-i"
+    ],
+    "notacion": {
+      "partitura": "pendiente",
+      "tablatura": "pendiente"
+    }
+  }
+]

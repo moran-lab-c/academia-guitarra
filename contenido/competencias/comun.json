@@ -1,0 +1,201 @@
+[
+  {
+    "id": "comp:lec.notas-1pos-agudas",
+    "programa": "comun",
+    "area": "lectura",
+    "nivel": 1,
+    "nombre": "Leer las notas de las cuerdas 1-3 en primera posición",
+    "descripcion": "Ver una nota en el pentagrama (clave de sol con el 8: la guitarra suena una octava más grave), decir su nombre y tocarla; del Sol de la 3.ª al aire al Sol de la 1.ª en el traste 3.",
+    "proposito": "El primer paso de la lectura en guitarra: una posición y tres cuerdas.",
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:lec.notas-1pos-graves",
+    "programa": "comun",
+    "area": "lectura",
+    "nivel": 1,
+    "nombre": "Leer las notas de las cuerdas 4-6 en primera posición",
+    "descripcion": "Del Mi de la 6.ª al aire al Fa de la 4.ª en el traste 3, con las líneas adicionales de abajo.",
+    "proposito": "Completa la primera posición: bajos y acompañamientos.",
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:rit.pulso",
+    "programa": "comun",
+    "area": "ritmo",
+    "nivel": 1,
+    "nombre": "Pulso estable con metrónomo",
+    "descripcion": "Palmear negras con el metrónomo sin adelantarse ni retrasarse; después seguir sin él y volver a encajar.",
+    "proposito": "Todo lo demás del ritmo se apoya en el pulso.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "16 compases con metrónomo y 8 sin él, volviendo a encajar",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "ritmo",
+        "continuidad"
+      ],
+      "pasadas": 2
+    }
+  },
+  {
+    "id": "comp:rit.figuras-basicas",
+    "programa": "comun",
+    "area": "ritmo",
+    "nivel": 1,
+    "nombre": "Leer y palmear figuras básicas",
+    "descripcion": "Redonda, blanca, negra, corcheas y sus silencios, contando en voz alta.",
+    "proposito": "La tablatura no siempre dice el ritmo; el pentagrama, sí.",
+    "requiere": [
+      "comp:rit.pulso"
+    ],
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "ritmos de cuatro compases leídos a primera vista, contando en voz alta",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "precision",
+        "ritmo",
+        "continuidad"
+      ],
+      "pasadas": 2
+    }
+  },
+  {
+    "id": "comp:teo.tono-semitono",
+    "programa": "comun",
+    "area": "teoria",
+    "nivel": 1,
+    "nombre": "Tono y semitono",
+    "descripcion": "Un semitono es un traste y un tono, dos. Entre las notas naturales hay semitono en Mi-Fa y Si-Do, y tono en las demás.",
+    "proposito": "Con esto se construyen escalas, intervalos y acordes.",
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:teo.escala-mayor",
+    "programa": "comun",
+    "area": "teoria",
+    "nivel": 1,
+    "nombre": "La escala mayor y su fórmula",
+    "descripcion": "Tono, tono, semitono, tono, tono, tono, semitono. Con la fórmula sale cualquier escala mayor: en Mi, para cumplirla hacen falta cuatro sostenidos (Fa♯, Do♯, Sol♯, Re♯).",
+    "proposito": "Explica las tonalidades y las armaduras de lo que toca.",
+    "requiere": [
+      "comp:teo.tono-semitono"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:teo.triada-mayor-menor",
+    "programa": "comun",
+    "area": "teoria",
+    "nivel": 1,
+    "nombre": "Triadas mayor y menor",
+    "descripcion": "Mayor: fundamental, tercera mayor (4 semitonos) y quinta justa (7). Menor: tercera menor (3) y quinta justa. Mi mayor = Mi, Sol♯, Si; Mi menor = Mi, Sol, Si.",
+    "proposito": "Saber qué notas tiene cada acorde que toca y por qué suena mayor o menor.",
+    "requiere": [
+      "comp:teo.tono-semitono"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:arm.i-iv-v7-i",
+    "programa": "comun",
+    "area": "armonia",
+    "nivel": 1,
+    "nombre": "I-IV-V7-I y por qué el V7 resuelve",
+    "descripcion": "En una tonalidad mayor, los acordes del primer, cuarto y quinto grado. En Mi: Mi-La-Si7-Mi. En Si7, Re♯ (la sensible) sube medio tono a Mi y La (la séptima) baja a Sol♯; juntas forman un tritono, el intervalo más inestable, y por eso el acorde pide resolver.",
+    "proposito": "La progresión más básica de la música tonal y la idea de tensión y resolución.",
+    "requiere": [
+      "comp:teo.triada-mayor-menor",
+      "comp:teo.escala-mayor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:arm.tono-homonimo",
+    "programa": "comun",
+    "area": "armonia",
+    "nivel": 1,
+    "nombre": "Mayor y menor homónimos",
+    "descripcion": "Mi mayor y Mi menor comparten tónica y dominante (Si7) y cambian el color. Lágrima pasa de uno a otro; Recuerdos de la Alhambra, de La menor a La mayor.",
+    "proposito": "Entender el cambio de carácter de las obras que cambian de modo.",
+    "requiere": [
+      "comp:teo.triada-mayor-menor"
+    ],
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:oid.mayor-menor",
+    "programa": "comun",
+    "area": "oido",
+    "nivel": 1,
+    "nombre": "Mayor o menor, de oído",
+    "descripcion": "Distinguir al oír una triada mayor de una menor.",
+    "proposito": "El primer paso para reconocer lo que se toca sin mirarlo.",
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  },
+  {
+    "id": "comp:dia.notas-1pos",
+    "programa": "comun",
+    "area": "diapason",
+    "nivel": 1,
+    "nombre": "Las notas naturales de la primera posición en el mástil",
+    "descripcion": "Para cualquier nota natural de la primera posición, decir en qué cuerda y traste está (y al revés).",
+    "proposito": "Pasar de pensar en números de traste a pensar en notas.",
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 20,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  }
+]

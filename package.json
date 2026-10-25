@@ -1,0 +1,10 @@
+{
+  "name": "academia-guitarra",
+  "private": true,
+  "type": "module",
+  "description": "Academia personal de guitarra de David. Sin dependencias: Node 22 o superior y un navegador.",
+  "scripts": {
+    "start": "node servidor/servidor.js --abrir",
+    "test": "node --test"
+  }
+}

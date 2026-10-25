@@ -1,0 +1,83 @@
+{
+  "id": "obra:tarrega.lagrima",
+  "programa": "clasica",
+  "clase": "obra",
+  "compositor": "Francisco Tárrega",
+  "titulo": "Lágrima",
+  "subtitulo": "Preludio",
+  "periodo": "romántico",
+  "estilo": "Preludio romántico español",
+  "tonalidad": [
+    "Mi mayor",
+    "Mi menor"
+  ],
+  "compas": "3/4",
+  "duracionMin": {
+    "valor": 2,
+    "naturaleza": "estimacion"
+  },
+  "nivel": {
+    "curso": 1,
+    "naturaleza": "decision",
+    "referencias": [
+      {
+        "sistema": "RCM 2018",
+        "nivel": 4,
+        "naturaleza": "dato"
+      },
+      {
+        "sistema": "Profesionales (Madrid)",
+        "curso": 1,
+        "naturaleza": "dato"
+      }
+    ]
+  },
+  "dificultad": {
+    "valor": 1.6,
+    "naturaleza": "estimacion"
+  },
+  "lecturaNecesaria": {
+    "nivel": 3,
+    "naturaleza": "estimacion",
+    "nota": "Cuatro sostenidos y dos voces."
+  },
+  "pide": [
+    "comp:tec.sonido-clasico"
+  ],
+  "desarrolla": [
+    "comp:tec.melodia-acompanada",
+    "comp:arm.tono-homonimo",
+    "comp:int.pieza-sin-parar"
+  ],
+  "objetivos": [
+    "Melodía por encima del acompañamiento",
+    "El cambio de Mi mayor a Mi menor y vuelta"
+  ],
+  "nota": "David la toca en parte (24/10/2026).",
+  "notacion": {
+    "partitura": "externa",
+    "tablatura": "pendiente",
+    "donde": "IMSLP (dominio público)"
+  },
+  "secciones": [
+    {
+      "id": "A",
+      "titulo": "Parte A",
+      "tonalidad": "Mi mayor",
+      "pide": [
+        "comp:tec.sonido-clasico",
+        "comp:tec.melodia-acompanada"
+      ]
+    },
+    {
+      "id": "B",
+      "titulo": "Parte B",
+      "tonalidad": "Mi menor",
+      "pide": [
+        "comp:tec.melodia-acompanada",
+        "comp:tec.media-cejilla"
+      ]
+    }
+  ],
+  "notaSecciones": "Lo que pide cada parte sale del plan (unidades 1 y 2 de la etapa 1) y está por revisar con la partitura."
+}

@@ -1,0 +1,4 @@
+[
+  { "id": "programa:clasica", "nombre": "Programa clásico", "principal": true, "descripcion": "El programa principal: siete cursos de guitarra clásica, cada uno con su ruta, todas las áreas y su obra final." },
+  { "id": "programa:flamenca", "nombre": "Programa flamenco", "principal": false, "descripcion": "Un programa aparte, que no se mezcla con el clásico: compás, técnica, toque, acompañamiento y armonía flamenca, curso a curso." }
+]

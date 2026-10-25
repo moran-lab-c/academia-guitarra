@@ -1,0 +1,19 @@
+[
+  {
+    "id": "curso:c1", "programa": "clasica", "numero": 1, "nombre": "Sonido y control",
+    "salto": "Del sonido de tablatura y flamenco al sonido clásico: melodía por encima del acompañamiento, presión justa, primera posición limpia.",
+    "obraFinal": {
+      "obra": "obra:tarrega.lagrima",
+      "requisitos": ["memoria", "grabacion"],
+      "justificacion": "Reúne lo central del curso: el sonido clásico, la melodía por encima del acompañamiento, el cambio de Mi mayor a Mi menor con la media cejilla y tocar una obra entera sin parar. No es la más difícil del curso: es la que mejor lo cierra.",
+      "naturaleza": "decision"
+    },
+    "duracionOrientativaMeses": [6, 9], "naturaleza": "decision"
+  },
+  { "id": "curso:c2", "programa": "clasica", "numero": 2, "nombre": "Cejilla y posiciones", "salto": "Cejilla completa y posiciones bajas; arpegio con melodía.", "hito": "Dos obras con cejilla, de memoria.", "borrador": true, "duracionOrientativaMeses": [9, 15], "naturaleza": "decision" },
+  { "id": "curso:c3", "programa": "clasica", "numero": 3, "nombre": "Dos voces y todo el mástil", "salto": "Voces independientes y posiciones hasta la XII.", "hito": "Una obra a dos voces con las voces claramente separadas, grabada.", "borrador": true, "duracionOrientativaMeses": [9, 15], "naturaleza": "decision" },
+  { "id": "curso:c4", "programa": "clasica", "numero": 4, "nombre": "Velocidad y estilos", "salto": "Escalas y arpegios rápidos; Renacimiento y Barroco con su estilo.", "hito": "Programa de 10 minutos de tres épocas.", "borrador": true, "duracionOrientativaMeses": [9, 15], "naturaleza": "decision" },
+  { "id": "curso:c5", "programa": "clasica", "numero": 5, "nombre": "Obras de concierto", "salto": "Sostener obras de 4-6 minutos que mezclan técnicas.", "hito": "Programa de 15-20 minutos.", "borrador": true, "duracionOrientativaMeses": [9, 15], "naturaleza": "decision" },
+  { "id": "curso:c6", "programa": "clasica", "numero": 6, "nombre": "Trémolo y gran forma", "salto": "Trémolo a tempo de obra, resistencia y formas largas.", "hito": "Recuerdos de la Alhambra (o una obra larga equivalente) de memoria.", "borrador": true, "duracionOrientativaMeses": [9, 15], "naturaleza": "decision" },
+  { "id": "curso:c7", "programa": "clasica", "numero": 7, "nombre": "Autonomía", "salto": "Digitar e interpretar solo; obras mayores.", "hito": "Recital personal de 25-30 minutos, grabado, con digitaciones propias en al menos una obra.", "borrador": true, "duracionOrientativaMeses": [9, 15], "naturaleza": "decision" }
+]

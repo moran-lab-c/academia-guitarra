@@ -1,0 +1,170 @@
+[
+  {
+    "id": "comp:fl.compas-12",
+    "programa": "flamenca",
+    "area": "fl-compas",
+    "nivel": 1,
+    "nombre": "Compás de 12 de la soleá",
+    "descripcion": "Contar y palmear los 12 tiempos con los acentos en el 3, el 6, el 8, el 10 y el 12.",
+    "proposito": "El compás de la soleá, las alegrías y la bulería.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "cuatro compases seguidos con el metrónomo, acentos claros",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "ritmo",
+        "continuidad"
+      ],
+      "pasadas": 2,
+      "tempo": {
+        "referencia": 100,
+        "unidad": "♩",
+        "obligatorio": false,
+        "naturaleza": "estimacion",
+        "fuente": "Velocidad real de la soleá: 70-120 según fuentes de flamenco (nota Guitarra de la vault)"
+      }
+    }
+  },
+  {
+    "id": "comp:fl.compas-tangos",
+    "programa": "flamenca",
+    "area": "fl-compas",
+    "nivel": 1,
+    "nombre": "Compás de tangos",
+    "descripcion": "El compás binario de cuatro tiempos de los tangos, estable, con el rasgueo de base.",
+    "proposito": "La base de los palos binarios.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "ocho compases seguidos con el metrónomo",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "ritmo",
+        "continuidad"
+      ],
+      "pasadas": 2
+    }
+  },
+  {
+    "id": "comp:fl.picado",
+    "programa": "flamenca",
+    "area": "fl-tecnica",
+    "nivel": 1,
+    "nombre": "Picado i-m",
+    "descripcion": "Notas punteadas alternando índice y medio, apoyando, con la mano quieta.",
+    "proposito": "Las escalas rápidas de las falsetas. Su punto flojo es la velocidad.",
+    "erroresComunes": [
+      "El cambio de cuerda",
+      "Mover la mano en vez de los dedos"
+    ],
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "semicorcheas (cuatro notas por pulso) en una escala de dos octavas; el tempo es tuyo y se apunta para ver cómo sube",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "precision",
+        "ritmo",
+        "limpieza",
+        "control"
+      ],
+      "pasadas": 3
+    }
+  },
+  {
+    "id": "comp:fl.tremolo",
+    "programa": "flamenca",
+    "area": "fl-tecnica",
+    "nivel": 1,
+    "nombre": "Trémolo flamenco p-i-a-m-i",
+    "descripcion": "Una nota de bajo con el pulgar y cuatro notas agudas con i, a, m, i.",
+    "proposito": "El trémolo de las falsetas.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "las cuatro notas agudas iguales, ocho compases",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "ritmo",
+        "sonido",
+        "limpieza",
+        "control"
+      ],
+      "pasadas": 3
+    }
+  },
+  {
+    "id": "comp:fl.alzapua",
+    "programa": "flamenca",
+    "area": "fl-tecnica",
+    "nivel": 1,
+    "nombre": "Alzapúa",
+    "descripcion": "El pulgar toca una nota en el bajo y luego las cuerdas agudas hacia abajo y hacia arriba.",
+    "proposito": "Típica de bulerías y soleá.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "regular y a compás, ocho compases",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "ritmo",
+        "limpieza",
+        "control"
+      ],
+      "pasadas": 3
+    }
+  },
+  {
+    "id": "comp:fl.rasgueo-cuatro",
+    "programa": "flamenca",
+    "area": "fl-tecnica",
+    "nivel": 1,
+    "nombre": "Rasgueo de cuatro dedos",
+    "descripcion": "Meñique, anular, medio e índice, uno detrás de otro, limpio y a compás.",
+    "proposito": "El rasgueo base de los palos.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "limpio y a compás con el metrónomo, cuatro compases",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "ritmo",
+        "limpieza",
+        "control"
+      ],
+      "pasadas": 3
+    }
+  },
+  {
+    "id": "comp:fl.arpegio",
+    "programa": "flamenca",
+    "area": "fl-tecnica",
+    "nivel": 1,
+    "nombre": "Arpegio flamenco",
+    "descripcion": "Arpegio de mano derecha con ataque y todas las notas iguales.",
+    "proposito": "Las falsetas de arpegio.",
+    "criterio": {
+      "tipo": "ejecucion",
+      "detalle": "a compás, todas las notas iguales, ocho compases",
+      "naturaleza": "decision",
+      "dimensiones": [
+        "precision",
+        "ritmo",
+        "sonido",
+        "control"
+      ],
+      "pasadas": 3
+    }
+  },
+  {
+    "id": "comp:fla.cadencia-andaluza",
+    "programa": "flamenca",
+    "area": "fl-armonia",
+    "nivel": 1,
+    "nombre": "Cadencia andaluza y modo flamenco por arriba",
+    "descripcion": "La menor, Sol, Fa, Mi: la bajada que acaba en Mi, que es el reposo del modo flamenco por arriba.",
+    "proposito": "La armonía de la soleá y de casi todos los palos por arriba.",
+    "criterio": {
+      "tipo": "conocimiento",
+      "preguntas": 10,
+      "aciertos": 0.9,
+      "naturaleza": "decision",
+      "justificacion": "El 80-90 % de aciertos es el criterio habitual del aprendizaje para el dominio (Slavin, 1987); el 90 %, porque reconocerlo tiene que llegar a ser casi automático. Ajustable."
+    }
+  }
+]

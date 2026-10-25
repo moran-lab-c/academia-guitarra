@@ -1,0 +1,60 @@
+{
+  "id": "obra:tarrega.adelita",
+  "programa": "clasica",
+  "clase": "obra",
+  "compositor": "Francisco Tárrega",
+  "titulo": "Adelita",
+  "subtitulo": "Mazurca",
+  "periodo": "romántico",
+  "estilo": "Mazurca romántica",
+  "tonalidad": [
+    "Mi menor",
+    "Mi mayor"
+  ],
+  "compas": "3/4",
+  "nivel": {
+    "curso": 3,
+    "naturaleza": "decision",
+    "referencias": [
+      {
+        "sistema": "RCM 2018",
+        "nivel": 6,
+        "naturaleza": "dato"
+      },
+      {
+        "sistema": "Profesionales (Madrid)",
+        "curso": "1 y 3",
+        "naturaleza": "dato"
+      }
+    ]
+  },
+  "dificultad": {
+    "valor": 3,
+    "naturaleza": "estimacion"
+  },
+  "lecturaNecesaria": {
+    "nivel": 4,
+    "naturaleza": "estimacion"
+  },
+  "pide": [
+    "comp:tec.melodia-acompanada"
+  ],
+  "desarrolla": [
+    "comp:arm.tono-homonimo"
+  ],
+  "objetivos": [
+    "Fraseo romántico",
+    "Otro cambio de modo, de Mi menor a Mi mayor"
+  ],
+  "relacionadas": [
+    {
+      "id": "obra:tarrega.lagrima",
+      "relacion": "Mismo autor y el mismo cambio de modo, al revés"
+    }
+  ],
+  "notacion": {
+    "partitura": "externa",
+    "tablatura": "pendiente",
+    "donde": "IMSLP (dominio público)"
+  }
+}

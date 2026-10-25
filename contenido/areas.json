@@ -1,0 +1,17 @@
+[
+  { "id": "tecnica", "nombre": "Técnica", "programa": "clasica", "max": 7, "descripcion": "Mano derecha, mano izquierda, postura, relajación y coordinación." },
+  { "id": "escalas", "nombre": "Escalas y arpegios", "programa": "clasica", "max": 7, "descripcion": "Escalas y arpegios como trabajo técnico, conociendo su tonalidad." },
+  { "id": "repertorio", "nombre": "Repertorio", "programa": "clasica", "max": 7, "descripcion": "Obras y estudios. Se mide por obras completadas." },
+  { "id": "interpretacion", "nombre": "Interpretación", "programa": "clasica", "max": 7, "descripcion": "Musicalidad, estilo, memoria y tocar de principio a fin." },
+  { "id": "lectura", "nombre": "Lectura", "programa": "comun", "max": 7, "descripcion": "Pentagrama: notas, posiciones, leer tocando y primera vista." },
+  { "id": "ritmo", "nombre": "Ritmo", "programa": "comun", "max": 7, "descripcion": "Pulso, subdivisión, figuras, compases y leer ritmos." },
+  { "id": "teoria", "nombre": "Teoría", "programa": "comun", "max": 7, "descripcion": "Notas, intervalos, escalas, tonalidades y acordes." },
+  { "id": "armonia", "nombre": "Armonía", "programa": "comun", "max": 7, "descripcion": "Funciones, cadencias, progresiones, tensión y resolución." },
+  { "id": "oido", "nombre": "Oído", "programa": "comun", "max": 7, "descripcion": "Reconocer y reproducir lo que se oye." },
+  { "id": "diapason", "nombre": "Diapasón", "programa": "comun", "max": 7, "descripcion": "Notas en el mástil, posiciones, relación pentagrama-mástil, armónicos y el instrumento." },
+  { "id": "fl-compas", "nombre": "Compás", "programa": "flamenca", "max": 6, "descripcion": "El compás de cada palo, contado, palmeado y tocado." },
+  { "id": "fl-tecnica", "nombre": "Técnica flamenca", "programa": "flamenca", "max": 6, "descripcion": "Rasgueados, picado, pulgar, alzapúa, arpegio, trémolo y golpe." },
+  { "id": "fl-toque", "nombre": "Toque", "programa": "flamenca", "max": 6, "descripcion": "Falsetas y obras. Se mide por obras completadas." },
+  { "id": "fl-acompanamiento", "nombre": "Acompañamiento", "programa": "flamenca", "max": 6, "descripcion": "Acompañar al cante y al baile." },
+  { "id": "fl-armonia", "nombre": "Armonía flamenca", "programa": "flamenca", "max": 6, "descripcion": "Modo flamenco, cadencia andaluza, ruedas y tonalidades de cada palo." }
+]

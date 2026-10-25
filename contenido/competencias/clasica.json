@@ -1,0 +1,82 @@
+[
+  {
+    "id": "comp:tec.sonido-clasico", "programa": "clasica", "area": "tecnica", "subarea": "mano derecha", "nivel": 1,
+    "nombre": "Sonido clásico, apoyando y tirando",
+    "descripcion": "Pulsar con uña y yema a la vez, preparando el dedo en la cuerda antes de tocar, apoyando (el dedo descansa en la cuerda de al lado) y tirando (pasa por encima).",
+    "proposito": "Es la base de todo el sonido clásico; el ataque flamenco es más seco y más rápido.",
+    "erroresComunes": ["Chasquido de uña por no preparar el dedo", "Mano que salta en vez de mover solo el dedo", "Sonido distinto entre i y m"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["sonido", "limpieza", "control"], "pasadas": 3, "detalle": "igual en las seis cuerdas y con i, m y a", "naturaleza": "decision", "justificacion": "Aquí cuenta el sonido, no la velocidad: no hay tempo." }
+  },
+  {
+    "id": "comp:tec.melodia-acompanada", "programa": "clasica", "area": "tecnica", "subarea": "mano derecha", "nivel": 1,
+    "nombre": "Melodía por encima del acompañamiento",
+    "descripcion": "La melodía apoyando (o tirando con más peso) y el acompañamiento tirando y más suave, en la misma mano y a la vez.",
+    "proposito": "Casi todo el repertorio romántico (Tárrega) es una melodía con su acompañamiento.",
+    "erroresComunes": ["Todas las notas al mismo volumen", "Acompañamiento que tapa la melodía", "Perder el pulso al apoyar"],
+    "requiere": ["comp:tec.sonido-clasico"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "sonido", "dinamica", "continuidad"], "pasadas": 2, "detalle": "en un pasaje de melodía y bajo (por ejemplo, la parte A de Lágrima), la melodía se oye por encima en toda la frase", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.presion-minima", "programa": "clasica", "area": "tecnica", "subarea": "mano izquierda", "nivel": 1,
+    "nombre": "Presión justa de la mano izquierda",
+    "descripcion": "Pisar con la punta del dedo, cerca del traste y con la mínima fuerza para que la nota suene limpia.",
+    "proposito": "El exceso de presión cansa, frena los cambios y es la tensión que más limita la velocidad.",
+    "erroresComunes": ["Apretar el mástil con el pulgar", "Dedo lejos del traste", "Tensión que sube al hombro"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["limpieza", "control"], "pasadas": 3, "detalle": "en el ejercicio de presión decreciente, cada dedo encuentra el punto justo sin trastear", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.media-cejilla", "programa": "clasica", "area": "tecnica", "subarea": "mano izquierda", "nivel": 1,
+    "nombre": "Media cejilla",
+    "descripcion": "El dedo 1 pisa varias cuerdas agudas a la vez en un mismo traste.",
+    "proposito": "Primer paso hacia la cejilla completa; aparece pronto en el repertorio.",
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["limpieza", "control"], "pasadas": 3, "detalle": "media cejilla en el II: todas las notas bajo la cejilla suenan durante cuatro tiempos", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.cejilla-completa", "programa": "clasica", "area": "tecnica", "subarea": "mano izquierda", "nivel": 2,
+    "nombre": "Cejilla completa",
+    "descripcion": "El dedo 1 pisa las seis cuerdas en un traste, con el peso del brazo y no con la fuerza del pulgar.",
+    "proposito": "La mayoría del repertorio intermedio la pide.",
+    "requiere": ["comp:tec.media-cejilla", "comp:tec.presion-minima"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["limpieza", "control"], "pasadas": 3, "detalle": "Fa mayor con cejilla en el I: las seis cuerdas suenan cuatro tiempos, sin tensión en el pulgar", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:tec.tremolo-lento", "programa": "clasica", "area": "tecnica", "subarea": "mano derecha", "nivel": 2,
+    "nombre": "Trémolo p-a-m-i lento",
+    "descripcion": "Una nota de bajo con el pulgar y tres repeticiones de la nota aguda con a, m, i.",
+    "proposito": "La base de las obras de trémolo (Recuerdos de la Alhambra).",
+    "erroresComunes": ["Las tres notas desiguales (la de i suele sonar más fuerte)", "El pulgar que se adelanta"],
+    "transfiere": [{ "desde": "comp:fl.tremolo", "nota": "El trémolo flamenco (p-i-a-m-i) ya da regularidad en la mano; aquí cambia el orden y el número de notas." }],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["ritmo", "sonido", "limpieza", "control"], "pasadas": 3, "detalle": "a un tempo en el que las tres notas salgan iguales, ocho compases; el tempo se apunta para ver cómo sube", "naturaleza": "decision", "justificacion": "Lo que se busca es la igualdad de las tres notas, no una velocidad fija." }
+  },
+  {
+    "id": "comp:tec.tremolo-a-tempo", "programa": "clasica", "area": "tecnica", "subarea": "mano derecha", "nivel": 6,
+    "nombre": "Trémolo p-a-m-i a tempo de obra",
+    "descripcion": "El trémolo regular a la velocidad de las obras de trémolo, con cambios de acorde y de posición sin cortarlo.",
+    "proposito": "Lo que pide Recuerdos de la Alhambra.",
+    "requiere": ["comp:tec.tremolo-lento", "comp:tec.cejilla-completa"],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["ritmo", "sonido", "limpieza", "control", "continuidad"], "pasadas": 2, "detalle": "dos minutos al tempo de la edición que estudie (o el que fije su profesor), sin tensión", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:esc.mi-mayor-1pos", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "Escala de Mi mayor en primera posición",
+    "descripcion": "Dos octavas, de Mi2 (6.ª al aire) a Mi4 (1.ª al aire), un dedo por traste.",
+    "proposito": "La tonalidad de Lágrima; trabaja apoyando i-m y el cambio de cuerda.",
+    "transfiere": [{ "desde": "comp:fl.picado", "nota": "El picado ya es apoyando i-m: falta el sonido clásico y saber qué notas son." }],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "apoyando i-m, subiendo y bajando; el tempo se apunta para ver cómo sube", "naturaleza": "decision", "justificacion": "No hay una velocidad publicada que se pueda comprobar para este nivel: el tempo es tuyo y lo puedes fijar tú o tu profesor." }
+  },
+  {
+    "id": "comp:esc.arpegio-pima", "programa": "clasica", "area": "escalas", "nivel": 1,
+    "nombre": "Arpegio p-i-m-a",
+    "descripcion": "Pulgar en el bajo y los dedos i, m y a, cada uno en su cuerda, en corcheas regulares.",
+    "proposito": "El arpegio clásico de base (Giuliani, op. 1).",
+    "transfiere": [{ "desde": "comp:fl.arpegio", "nota": "El arpegio flamenco ya da independencia de dedos; el clásico pide un sonido más igualado y más suave." }],
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "sonido", "control"], "pasadas": 3, "detalle": "corcheas alternando Do mayor y Sol7, todas las notas iguales", "naturaleza": "decision" }
+  },
+  {
+    "id": "comp:int.pieza-sin-parar", "programa": "clasica", "area": "interpretacion", "nivel": 1,
+    "nombre": "Tocar una pieza entera sin parar",
+    "descripcion": "De principio a fin, siguiendo aunque haya un error.",
+    "proposito": "Tocar para uno mismo o para otros pide no pararse a corregir.",
+    "criterio": { "tipo": "ejecucion", "dimensiones": ["continuidad", "ritmo"], "pasadas": 1, "detalle": "una pieza de la etapa entera, sin parar, a su tempo", "naturaleza": "decision" }
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "id": "obra:sor.op60-1",
+  "programa": "clasica",
+  "clase": "estudio",
+  "compositor": "Fernando Sor",
+  "titulo": "Estudio op. 60, n.º 1",
+  "catalogo": "op. 60, n.º 1",
+  "subtitulo": "De «Introduction à l'étude de la guitare»",
+  "periodo": "clásico",
+  "estilo": "Estudio",
+  "nivel": {
+    "curso": 1,
+    "naturaleza": "decision",
+    "referencias": [
+      {
+        "sistema": "RCM 2018",
+        "nivel": "Preparatorio",
+        "naturaleza": "dato"
+      }
+    ]
+  },
+  "dificultad": {
+    "valor": 1,
+    "naturaleza": "estimacion"
+  },
+  "lecturaNecesaria": {
+    "nivel": 1,
+    "naturaleza": "estimacion"
+  },
+  "pide": [],
+  "desarrolla": [
+    "comp:lec.notas-1pos-agudas",
+    "comp:lec.notas-1pos-graves"
+  ],
+  "objetivos": [
+    "Una pieza sencilla para leer entera desde el pentagrama"
+  ],
+  "notacion": {
+    "partitura": "externa",
+    "tablatura": "pendiente",
+    "donde": "IMSLP (dominio público)"
+  }
+}
