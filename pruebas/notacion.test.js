@@ -1,7 +1,7 @@
 // Partitura y tablatura: la app recomienda, nunca quita (casos A-D de su revisión del 24/10/2026).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { recomendarFormato, disponibles, avisoTecnicaLectura, pasajesDeLectura, validarPartitura } from '../logica/notacion.js';
+import { recomendarFormato, disponibles, avisoTecnicaLectura, textoTablatura, pasajesDeLectura, validarPartitura } from '../logica/notacion.js';
 import { catalogoReal } from './ayuda.js';
 
 const cat = catalogoReal();
@@ -58,9 +58,16 @@ test('lo que no hay (o está por hacer) no se ofrece, y se dice', () => {
   assert.equal(recomendarFormato(cat.porId.get('ej:tec.presion-decreciente'), {}).recomendado, null); // no necesita notación
 });
 
-test('el aviso «tu técnica permite esta obra, pero tu lectura…» no quita la partitura', () => {
-  assert.match(avisoTecnicaLectura(cat.porId.get('obra:tarrega.lagrima'), 1, 0.5), /la partitura sigue disponible/);
+test('el aviso «tu técnica permite esta obra, pero tu lectura…» no quita la partitura y dice la verdad sobre la tablatura', () => {
+  assert.match(avisoTecnicaLectura(obra, 1, 0.5), /te recomienda tablatura; la partitura sigue disponible/);
+  assert.match(avisoTecnicaLectura(obra, 1, 0.5), /tu lectura \(0,5\)/); // decimales con coma
+  // Lágrima tiene la tablatura por hacer: no se recomienda lo que no existe.
+  const lagrima = avisoTecnicaLectura(cat.porId.get('obra:tarrega.lagrima'), 1, 0.5);
+  assert.match(lagrima, /tablatura está por hacer/);
+  assert.doesNotMatch(lagrima, /te recomienda tablatura/);
   assert.equal(avisoTecnicaLectura(cat.porId.get('obra:tarrega.lagrima'), 1, 3), null);
+  assert.equal(textoTablatura(cat.porId.get('obra:sor.op60-1')), 'La tablatura está por hacer: de momento, solo partitura.');
+  assert.equal(textoTablatura(obra), 'La tablatura está a un toque.');
 });
 
 test('los pasajes que ya puede leer, si tienen partitura, entran como lectura', () => {

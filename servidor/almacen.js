@@ -130,7 +130,7 @@ export function crearAlmacen(dir) {
   function importar(paquete, { simular = false } = {}) {
     const err = validarExportacion(paquete);
     if (err.length) throw new ErrorUsuario(err.join(' · '));
-    const datos = migrar({ estado: structuredClone(paquete.estado), eventos: paquete.eventos });
+    const datos = migrar(structuredClone({ estado: paquete.estado, eventos: paquete.eventos })); // una migración a medias no toca lo que hay en memoria
     const errores = [...validarEstado(datos.estado), ...datos.eventos.flatMap(validarEvento)];
     if (errores.length) throw new ErrorUsuario(`El archivo tiene errores: ${errores.slice(0, 5).join(' · ')}`);
     const fechas = datos.eventos.map(ev => ev.t).sort();

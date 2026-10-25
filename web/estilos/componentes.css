@@ -32,6 +32,22 @@
 
 .leyenda-estados { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 11px; color: var(--texto-2); }
 .leyenda-estados__item { display: inline-flex; align-items: center; gap: 6px; }
+.leyenda-estados__final { color: var(--texto); font-size: 12px; line-height: 1; }
+.tarjeta-ruta > .leyenda-estados { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--borde-suave); }
+/* El fondo que «recortan» los sellos y anillos de la ruta: el mismo de la tarjeta que la contiene. */
+.tarjeta-ruta { --ruta-fondo: var(--sup-1); }
+
+/* Bloques de Hoy: se ven abribles (chevron que gira y fondo al pasar). */
+.bloque-sesion { transition: background var(--t-corta) var(--curva); }
+.bloque-sesion:not(.bloque-sesion--abierto):hover { background: var(--sup-2); }
+.bloque-sesion.tarjeta-borde:not(.bloque-sesion--abierto):hover { background: var(--sup-1); }
+.bloque-sesion.tarjeta-ahora:not(.bloque-sesion--abierto):hover { background: var(--sup-3); }
+.bloque__abrir { flex: 1; display: flex; align-items: center; gap: 12px; text-align: left; padding: 4px 0; min-height: 0; height: auto; cursor: pointer; }
+.bloque__abrir:hover:not(:disabled) { background: transparent; color: var(--texto); }
+.bloque__texto { flex: 1; display: block; }
+.bloque__chevron { flex: none; width: 8px; height: 8px; margin-right: 4px; border-right: 1.6px solid var(--texto-2); border-bottom: 1.6px solid var(--texto-2); transform: rotate(-45deg); transition: transform var(--t-corta) var(--curva); }
+.bloque__abrir:hover .bloque__chevron { border-color: var(--texto); }
+.bloque__abrir[aria-expanded="true"] .bloque__chevron { transform: rotate(45deg); }
 
 /* Fichas de texto. */
 .chip {
@@ -45,7 +61,7 @@
 .chip__punto { width: 8px; height: 8px; border-radius: 50%; flex: none; }
 
 /* ============================================================ Ruta del curso */
-.ruta { --ruta-fondo: var(--fondo); position: relative; width: 100%; min-height: 120px; }
+.ruta { position: relative; width: 100%; min-height: 120px; }
 .ruta__svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
 .ruta__camino { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .ruta__camino--hecho { stroke: var(--texto); stroke-width: 3; }

@@ -58,11 +58,15 @@ export function planificar(ctx, { minutos, programa = 'clasica' }) {
   }
   const bloques = conPausas(partes.flatMap(p => p.bloques), pausas, minutos);
   bloques.forEach((b, i) => { b.id = `b${i + 1}`; });
-  return { minutos, programa, bloques, avisos: partes.flatMap(p => p.avisos), total: bloques.reduce((s, b) => s + b.minutos, 0) };
+  // Lo que había para hoy y no ha cabido (para no decir «no hay» cuando lo que pasa es que no entra).
+  const noCaben = {};
+  for (const p of partes) for (const [k, v] of Object.entries(p.noCaben)) noCaben[k] = (noCaben[k] ?? 0) + v;
+  return { minutos, programa, bloques, avisos: partes.flatMap(p => p.avisos), noCaben, total: bloques.reduce((s, b) => s + b.minutos, 0) };
 }
 
 function planPrograma(ctx, minutos, programa, { calentar, pausas, usados }) {
   const bloques = [], avisos = [];
+  const noCaben = { encargos: 0, comprobaciones: 0, paso: 0, refuerzos: 0, flojos: 0 };
   let libre = minutos - pausas * 5;
   let huecos = numBloques(minutos);
 
@@ -76,7 +80,7 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados }) {
 
   // 1. Encargos del profesor: primero y con sus minutos.
   for (const t of encargosActivos(ctx, programa)) {
-    if (libre < MIN_BLOQUE) { avisos.push(`No cabe el encargo «${tituloEncargo(ctx, t)}»: elige más tiempo o hazlo otro rato.`); continue; }
+    if (libre < MIN_BLOQUE) { avisos.push(`No cabe el encargo «${tituloEncargo(ctx, t)}»: elige más tiempo o hazlo otro rato.`); noCaben.encargos++; continue; }
     const m = Math.min(t.minutos || 15, libre);
     bloques.push(bloqueEncargo(ctx, t, m, programa));
     if (t.item) { usados.add(t.item); usados.add(separar(t.item)[0]); }
@@ -102,16 +106,24 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados }) {
       motivos: ['Tócalo antes de practicarlo hoy, sin calentar ese pasaje y sin ayuda: así se sabe si se ha quedado.'] });
     libre -= gastado; huecos--;
   }
-  const esperan = criticas.filter(p => !usados.has(p.id)).length + demas.length;
-  if (esperan) avisos.push(`${esperan} ${esperan === 1 ? 'repaso espera' : 'repasos esperan'} a otro día: hoy no son urgentes.`);
+  // Las críticas que no caben no son «no urgentes»: se dice que no caben. Las demás sí esperan sin prisa.
+  const sinSitio = criticas.filter(p => !usados.has(p.id)).length;
+  noCaben.comprobaciones = sinSitio;
+  if (sinSitio) avisos.push(sinSitio === 1 ? '1 comprobación en frío de tu ruta no cabe hoy: queda para otro día.' : `${sinSitio} comprobaciones en frío de tu ruta no caben hoy: quedan para otro día.`);
+  if (demas.length) avisos.push(demas.length === 1 ? '1 repaso espera a otro día: hoy no es urgente.' : `${demas.length} repasos esperan a otro día: hoy no son urgentes.`);
 
   // 3-6. Lo demás, por prioridad; entra lo que quepa y el tiempo se reparte por pesos.
   const candidatos = candidatosSesion(ctx, programa, usados, avisos);
   const k = Math.max(0, Math.min(huecos, Math.floor(libre / MIN_BLOQUE)));
   const elegidos = [];
   for (const c of candidatos) {
-    if (elegidos.length >= k) break;
     if (c.claves.some(x => usados.has(x))) continue;
+    if (elegidos.length >= k) { // había sitio para esto en la sesión, pero no tiempo
+      if (c.tipo === 'paso' && c.prioridad === 1) noCaben.paso++;
+      else if (c.tipo === 'refuerzo') noCaben.refuerzos++;
+      else if (c.tipo === 'area' && c.desfase >= 1) noCaben.flojos++;
+      continue;
+    }
     c.claves.forEach(x => usados.add(x));
     elegidos.push(c);
   }
@@ -128,7 +140,7 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados }) {
     bloques.push({ ...obra, tipo: 'pasada', minutos: pasada, titulo: `Pasada: ${obra.nombre}`,
       paraQue: 'Acabar tocando música: una pasada entera, aunque haya fallos.', motivos: ['Una pasada entera al final, para acabar tocando música.'] });
   }
-  return { bloques: ordenar(bloques), avisos };
+  return { bloques: ordenar(bloques), avisos, noCaben };
 }
 
 // Los candidatos de la sesión, de más a menos prioritario.

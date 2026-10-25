@@ -5,7 +5,7 @@ import { h } from '../nucleo/dom.js';
 import { ctx, cambiar } from '../nucleo/almacen.js';
 import { enlace, repintar } from '../nucleo/rutas.js';
 import { explicar, formatoPara } from '../../logica/recomendador.js';
-import { avisoTecnicaLectura } from '../../logica/notacion.js';
+import { avisoTecnicaLectura, textoTablatura, decimal } from '../../logica/notacion.js';
 import { necesidades, obraEnRutas, estadoObra } from '../../logica/ruta.js';
 import { MARCAS_OBRA, CONOCIDA } from '../../logica/esquema.js';
 import { formularioRegistro } from '../componentes/registro.js';
@@ -94,7 +94,10 @@ function loQueNecesitas(n, sec) {
   const titulo = sec ? `LO QUE NECESITAS PARA LA ${sec.titulo.toUpperCase()}` : 'LO QUE NECESITAS PARA ESTA OBRA';
   return h('div', { class: 'tarjeta tarjeta-borde pila-s' },
     h('div', { class: 'rotulo' }, titulo),
-    !n.pide.length && h('p', { class: 'suave' }, 'No pide nada que no tengas todavía (o está sin clasificar).'),
+    // Sin habilidades en «pide» no se puede decir «no pide nada que no tengas» si la lectura que pide no llega.
+    !n.pide.length && h('p', { class: 'suave' }, n.lectura && n.lectura.pide > n.lectura.tienes
+      ? 'No pide ninguna habilidad de la ruta (o está sin clasificar); lo que pide es lectura, más abajo.'
+      : 'No pide nada que no tengas todavía (o está sin clasificar).'),
     GRUPOS.map(([clave, nombre, tipo]) => {
       const lista = n.pide.filter(x => x.situacion === clave);
       if (!lista.length) return null;
@@ -106,7 +109,7 @@ function loQueNecesitas(n, sec) {
             h('span', { class: 'pequeno' }, clave === 'la-tienes' ? 'Ver' : 'Practicar →'));
         }));
     }),
-    n.lectura && h('p', { class: 'pequeno suave' }, `Lectura: para tocarla solo con partitura pide ${n.lectura.pide}; tienes ${String(Math.round(n.lectura.tienes * 10) / 10).replace('.', ',')}. No frena nada: la tablatura sigue a un toque.`));
+    n.lectura && h('p', { class: 'pequeno suave' }, `Lectura: para tocarla solo con partitura pide ${decimal(n.lectura.pide)}; tienes ${decimal(n.lectura.tienes)}. No frena nada. ${textoTablatura(n.obra, n.seccion)}`));
 }
 
 function conocidaDeAntes(c, o, est) {
@@ -163,8 +166,8 @@ function ficha(o) {
     h('table', null,
       fila('Catálogo', o.catalogo), fila('Época', o.periodo), fila('Estilo', o.estilo), fila('Clase', o.clase),
       fila('Curso', o.nivel ? `${o.nivel.curso} (${nat(o.nivel.naturaleza)})` : 'Sin clasificar'),
-      fila('Dificultad', o.dificultad ? `${String(o.dificultad.valor).replace('.', ',')} de 7 (${nat(o.dificultad.naturaleza)})` : null),
-      fila('Lectura que pide', o.lecturaNecesaria ? `${o.lecturaNecesaria.nivel} (${nat(o.lecturaNecesaria.naturaleza)})` : null),
+      fila('Dificultad', o.dificultad ? `${decimal(o.dificultad.valor)} de 7 (${nat(o.dificultad.naturaleza)})` : null),
+      fila('Lectura que pide', o.lecturaNecesaria ? `${decimal(o.lecturaNecesaria.nivel)} (${nat(o.lecturaNecesaria.naturaleza)})` : null),
       fila('Duración', o.duracionMin ? `${o.duracionMin.valor ?? o.duracionMin} min aprox.` : null),
       fila('Notación', o.notacion?.donde ? `Fuera de la app: ${o.notacion.donde}` : null),
       fila('Nota', [o.nota, o.notaSecciones].filter(Boolean).join(' '))));

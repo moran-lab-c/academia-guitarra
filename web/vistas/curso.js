@@ -6,7 +6,8 @@ import { enlace } from '../nucleo/rutas.js';
 import { relacionesPaso } from '../../logica/ruta.js';
 import { mapaRuta } from '../componentes/ruta.js';
 import { momentoEntrada } from '../componentes/titulo.js';
-import { chipEstado, colorArea, NOMBRE_AREA } from '../componentes/marcas.js';
+import { chipEstado, colorArea, leyendaEstados, NOMBRE_AREA } from '../componentes/marcas.js';
+import { plural } from '../componentes/comunes.js';
 
 const NOMBRE_PROGRAMA = { clasica: 'Programa clásico', flamenca: 'Programa flamenco' };
 const PAPEL = { final: '★ Obra final', lectura: 'Para leer', aplicacion: 'Aplicación', obra: 'Obra del tramo' };
@@ -38,7 +39,7 @@ export default function curso({ id } = {}) {
         h('p', { class: 'lead suave', style: 'max-width:46em' }, cur.salto, ' Todas las áreas, con su peso.')),
       r.tramos.length > 0 && h('div', { class: 'pila-s', style: 'align-items:flex-end' },
         h('div', { class: 'fila', style: 'align-items:baseline' }, h('span', { class: 'display display-m' }, r.progreso.hechos),
-          h('span', { class: 'suave' }, `de ${r.progreso.total} pasos${actual ? ` · tramo ${tramoDe(r, actual.id)?.orden} de ${r.tramos.length}` : ''}`)),
+          h('span', { class: 'suave' }, `de ${plural(r.progreso.total, 'paso')}${actual ? ` · tramo ${tramoDe(r, actual.id)?.orden} de ${r.tramos.length}` : ''}`)),
         h('div', { class: 'barra-trozos', style: 'width:320px', 'aria-label': 'Avance por tramos' },
           r.tramos.map(t => h('span', { style: `flex:${Math.max(1, t.total)}` }, h('i', { style: `width:${t.total ? Math.round((t.hechos / t.total) * 100) : 0}%` })))),
         actual && h('a', { class: 'btn btn-papel', href: actual.href }, `Seguir: ${actual.titulo}`, flecha()))),
@@ -47,7 +48,7 @@ export default function curso({ id } = {}) {
       cursos.map(x => h('a', { class: 'pildora', href: enlace('/curso', x.id), 'aria-current': x.id === cur.id ? 'page' : null }, `${dos(x.numero)} · ${x.nombre}`))),
 
     r.tramos.length
-      ? h('section', { class: 'tarjeta tarjeta-ruta', 'aria-label': 'La ruta del curso' }, mapaRuta(r, { animar: true, clave: `ruta-${cur.id}` }))
+      ? h('section', { class: 'tarjeta tarjeta-ruta', 'aria-label': 'La ruta del curso' }, mapaRuta(r, { animar: true, clave: `ruta-${cur.id}` }), leyendaEstados())
       : h('section', { class: 'tarjeta' },
         h('div', { class: 'rotulo' }, 'RUTA EN PREPARACIÓN'),
         h('p', null, `La ruta de este curso se escribe en la Fase 3, con su contenido real. Lo que se sabe ya: ${cur.salto}`),
@@ -70,7 +71,7 @@ function entrada(cur, r, etiqueta) {
   return momentoEntrada({
     etiqueta: `${etiqueta.split(' · ')[0]} · EMPIEZAS UN CURSO`, derecha: etiqueta.split(' · ')[1]?.replace('CURSO ', '').replace(' DE ', ' / '),
     sobretitulo: `Curso ${dos(cur.numero)}`, titulo: cur.nombre.toUpperCase().split(' ').length > 2 ? partir(cur.nombre.toUpperCase()) : cur.nombre.toUpperCase(),
-    subtitulo: cur.salto, pie: `${r.tramos.length} tramos · ${r.progreso.total} pasos · todas las áreas`,
+    subtitulo: cur.salto, pie: `${plural(r.tramos.length, 'tramo')} · ${plural(r.progreso.total, 'paso')} · todas las áreas`,
     accion: { texto: 'Ver la ruta del curso' }, ruta: r, clave,
   });
 }

@@ -136,11 +136,19 @@ test('si la migración de los datos falla, arranca, avisa y no toca nada', async
   await parar();
   const estado = JSON.stringify({ rev: 1, estado: { esquema: 1, perfil: {}, preferencias: { rutaPrincipal: 'clasica' }, obras: {}, tareasProfesor: [], objetivos: [], focos: {}, contenidoPropio: { obras: [], ejercicios: [] } } });
   fs.writeFileSync(path.join(dir, 'estado.json'), estado);
-  fs.writeFileSync(path.join(dir, 'historial', `${mes(new Date().toISOString())}.jsonl`), JSON.stringify({ ...evento('viejo'), ayuda: 'partitura' }) + '\n');
+  const historial = path.join(dir, 'historial', `${mes(new Date().toISOString())}.jsonl`);
+  const sesionVieja = { id: 'sesion-vieja', t: new Date().toISOString(), tipo: 'sesion', ruta: 'clasica', minutosPlan: 30, bloques: [] };
+  const lineas = JSON.stringify(sesionVieja) + '\n' + JSON.stringify({ ...evento('viejo'), ayuda: 'partitura' }) + '\n';
+  fs.writeFileSync(historial, lineas);
   await arrancar();
   const r = await pedir('/api/estado');
   assert.equal(r.status, 500);
   assert.match((await r.json()).error, /no se han podido pasar al esquema/);
   assert.equal(fs.readFileSync(path.join(dir, 'estado.json'), 'utf8'), estado);
+  assert.equal(fs.readFileSync(historial, 'utf8'), lineas); // el historial, intacto en disco…
+  const { eventos } = await json('/api/eventos');
+  const s = eventos.find(e => e.id === 'sesion-vieja'); // …y en memoria: la migración a medias no cambió «ruta» por «programa»
+  assert.equal(s.ruta, 'clasica');
+  assert.equal(s.programa, undefined);
   assert.ok(fs.readdirSync(path.join(dir, 'copias')).some(f => f.startsWith('antes-de-migrar-1-a-')));
 });

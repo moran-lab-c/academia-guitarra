@@ -3,13 +3,23 @@
 import { h } from '../nucleo/dom.js';
 import { segmentosSuaves } from './marcas.js';
 
-// Las claves ya mostradas en esta carga de la página: la pantalla se redibuja entera con cada cambio de datos y la
-// animación no debe repetirse. Se anota cuando la animación arranca de verdad (no al crear el elemento), así un
-// redibujado inmediato no se la come.
-const vistas = new Set();
+// Las claves ya mostradas: la pantalla se redibuja entera con cada cambio de datos y la animación no debe repetirse,
+// ni al recargar la página. Se guardan en este navegador (las últimas MAX_VISTAS) y, si no hay almacenamiento local,
+// al menos en memoria. Se anota cuando la animación arranca de verdad (no al crear el elemento), así un redibujado
+// inmediato no se la come.
+const CLAVE_VISTAS = 'academia.animacionesVistas';
+const MAX_VISTAS = 200;
+const vistas = new Set(leerVistas());
 const abiertos = new Set();
 export const yaMostrado = clave => vistas.has(clave);
-export const marcarMostrado = clave => vistas.add(clave);
+export function marcarMostrado(clave) {
+  if (vistas.has(clave)) return;
+  vistas.add(clave);
+  try { localStorage.setItem(CLAVE_VISTAS, JSON.stringify([...vistas].slice(-MAX_VISTAS))); } catch { /* sin almacenamiento: queda en memoria */ }
+}
+function leerVistas() {
+  try { const v = JSON.parse(localStorage.getItem(CLAVE_VISTAS)); return Array.isArray(v) ? v : []; } catch { return []; }
+}
 const reducido = () => globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
 // Palabras con sus letras sueltas (cada una sube con su retraso). Devuelve [nodos, retraso de la última letra].
@@ -44,7 +54,7 @@ export function tituloCinetico({ etiqueta, lineas, clave, nivel = 1 } = {}) {
   });
   return h('header', {
     class: `titulo-cinetico${anima ? ' tc--anima' : ''}`,
-    onanimationstart: () => { if (clave) vistas.add(clave); },
+    onanimationstart: () => { if (clave) marcarMostrado(clave); },
   },
   etiqueta && h('div', { class: 'tc-etiqueta', style: '--d:80ms' }, etiqueta),
   h(`h${Math.min(6, Math.max(1, nivel))}`, { class: 'tc-titulo', 'aria-label': l.join(' ') }, h('span', { 'aria-hidden': 'true' }, cuerpo)));
@@ -59,7 +69,7 @@ export function tituloCinetico({ etiqueta, lineas, clave, nivel = 1 } = {}) {
 export function momentoEntrada({ etiqueta, derecha, sobretitulo, titulo, subtitulo, pie, accion, ruta, clave } = {}) {
   const vacio = document.createDocumentFragment();
   if (clave && (vistas.has(clave) || abiertos.has(clave))) return vacio;
-  if (clave) { vistas.add(clave); abiertos.add(clave); }
+  if (clave) { marcarMostrado(clave); abiertos.add(clave); }
   const anima = !reducido();
   const id = `entrada-${Math.random().toString(36).slice(2, 8)}`;
   const l = trozos(titulo);
@@ -123,8 +133,9 @@ export function momentoEntrada({ etiqueta, derecha, sobretitulo, titulo, subtitu
 // ponytail: la curva usa coordenadas relativas y se estira con el ancho; si hace falta fidelidad exacta, medir como mapaRuta.
 function caminoDecorativo(ruta, inicio) {
   const n = ruta.tramos.length;
+  const fin = ruta.final ? n + 1 : n; // el último punto: la estrella de la obra final, solo si el curso la tiene
   const AN = 1000, AL = 64, paso = 180;
-  const pts = Array.from({ length: n + 2 }, (_, i) => [6 + (i / (n + 1)) * (AN - 12), 28 + Math.sin(i * 1.9 + 0.6) * 9]);
+  const pts = Array.from({ length: fin + 1 }, (_, i) => [6 + (i / fin) * (AN - 12), 28 + Math.sin(i * 1.9 + 0.6) * 9]);
   const NS = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('viewBox', `0 0 ${AN} ${AL}`);
@@ -135,13 +146,13 @@ function caminoDecorativo(ruta, inicio) {
 
   const en = (i, extra, cuando) => `left:${(pts[i][0] / AN) * 100}%;top:${24 + pts[i][1] + extra}px;--d:${Math.round(inicio + cuando)}ms`;
   const puntos = pts.map((_, i) => h('span', {
-    class: `entrada__punto tc-punto${i === 0 ? ' entrada__punto--ahora' : i === n + 1 ? ' entrada__punto--fin' : ''}`, style: en(i, 0, 250 + i * paso),
-  }, i === n + 1 && '★'));
+    class: `entrada__punto tc-punto${i === 0 ? ' entrada__punto--ahora' : ruta.final && i === fin ? ' entrada__punto--fin' : ''}`, style: en(i, 0, 250 + i * paso),
+  }, ruta.final && i === fin && '★'));
   const rotulos = ruta.tramos.map((tr, i) => h('span', { class: 'entrada__rotulo tc-aparece', style: en(i + 1, 16, 400 + (i + 1) * paso) }, tr.titulo));
   if (ruta.final) rotulos.push(h('span', { class: 'entrada__rotulo entrada__rotulo--final tc-aparece', style: en(n + 1, 18, 550 + (n + 1) * paso) },
     h('b', null, 'OBRA FINAL'), h('i', null, ruta.final.titulo)));
   return {
-    fin: inicio + 250 + (n + 1) * paso + 420,
+    fin: inicio + 250 + fin * paso + 420,
     el: h('div', { class: 'entrada__camino', 'aria-hidden': 'true' }, h('div', { class: 'entrada__trazo tc-trazo', style: `--d:${Math.round(inicio)}ms` }, svg), puntos, rotulos),
   };
 }

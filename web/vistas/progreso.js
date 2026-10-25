@@ -2,18 +2,18 @@
 // si va por detrás, hecho frente a dominado, los minutos de la semana y lo que está a punto de olvidarse.
 import { h } from '../nucleo/dom.js';
 import { ctx } from '../nucleo/almacen.js';
-import { enlace, repintar } from '../nucleo/rutas.js';
-import { estadoEtiqueta, enlaceItem, nivelArea, fecha, NOMBRE_PROGRAMA } from '../componentes/comunes.js';
+import { enlace } from '../nucleo/rutas.js';
+import { estadoEtiqueta, enlaceItem, nivelArea, fecha, plural, NOMBRE_PROGRAMA } from '../componentes/comunes.js';
 import { colorArea } from '../componentes/marcas.js';
 import { diasEntre } from '../../logica/fechas.js';
 import { programaElegido } from './curso.js';
+import { elegirPrograma } from './repertorio.js';
 
 const dos = n => String(n).padStart(2, '0');
-let elegido = null;
 
 export default function progreso() {
   const c = ctx();
-  const programa = elegido ?? programaElegido(c);
+  const programa = programaElegido(c);
   const actual = c.cursoActual(programa);
   const cursos = c.cat.cursos.filter(x => x.programa === programa);
   const ref = c.resumen[programa]?.referencia ?? 0;
@@ -29,13 +29,13 @@ export default function progreso() {
         h('h1', { class: 'display display-g' }, 'Progreso'),
         h('p', { class: 'suave', style: 'max-width:46em' }, 'Hecho: lo has completado. Dominado: lo has vuelto a tocar en frío, sin ayuda y con días de por medio (tres aciertos espaciados). Cada área tiene su propio nivel: una floja no te baja de curso.')),
       h('div', { class: 'segmentado', role: 'group', 'aria-label': 'Programa' },
-        [['clasica', 'Clásico'], ['flamenca', 'Flamenco']].map(([v, t]) => h('button', { type: 'button', 'aria-pressed': String(v === programa), onclick: () => { elegido = v; repintar(); } }, t)))),
+        [['clasica', 'Clásico'], ['flamenca', 'Flamenco']].map(([v, t]) => h('button', { type: 'button', 'aria-pressed': String(v === programa), onclick: () => elegirPrograma(v) }, t)))),
 
     h('section', { class: 'tarjeta pila-s' },
       h('div', { class: 'rotulo' }, 'CURSOS'),
       h('ol', { class: 'lista-limpia fila', style: 'gap:8px' }, cursos.map(x => {
         const r = c.ruta(x.id);
-        const estado = r.terminado ? '✓ terminado' : x.id === actual?.id ? `● ${r.progreso.hechos} de ${r.progreso.total} pasos` : x.borrador ? '○ en preparación' : '○ por llegar';
+        const estado = r.terminado ? '✓ terminado' : x.id === actual?.id ? `● ${r.progreso.hechos} de ${plural(r.progreso.total, 'paso')}` : x.borrador ? '○ en preparación' : '○ por llegar';
         return h('li', null, h('a', { class: 'pildora', href: enlace('/curso', x.id), 'aria-current': x.id === actual?.id ? 'step' : null },
           `${dos(x.numero)} · ${x.nombre}`, h('span', { class: 'pequeno suave' }, ` · ${estado}`)));
       }))),
@@ -46,9 +46,9 @@ export default function progreso() {
       const detras = !['tecnica', 'repertorio', 'fl-tecnica', 'fl-toque'].includes(a.id) && n && !n.sinContenido && ref - n.nivel >= 1;
       return h('div', { class: 'tarjeta pila-s', style: `--c:${colorArea(a.id)}` },
         h('div', { class: 'fila-entre' }, h('a', { class: 'fila', style: 'gap:8px', href: a.id === 'repertorio' || a.id === 'fl-toque' ? '#/repertorio' : enlace('/area', a.id) }, h('i', { class: 'punto' }), h('strong', null, a.nombre)),
-          detras && h('span', { class: 'ocre pequeno' }, `${ref - n.nivel} por detrás`)),
+          detras && h('span', { class: 'ocre pequeno' }, `${plural(ref - n.nivel, 'nivel', 'niveles')} por detrás`)),
         nivelArea(n),
-        n && !n.sinContenido && h('span', { class: 'pequeno suave' }, `${hechos} hechas de ${n.total} · ${n.conteo.dominado ?? 0} dominadas${n.conteo['necesita-repaso'] ? ` · ${n.conteo['necesita-repaso']} para repasar` : ''}`),
+        n && !n.sinContenido && h('span', { class: 'pequeno suave' }, `${plural(hechos, 'hecha')} de ${n.total} · ${plural(n.conteo.dominado ?? 0, 'dominada')}${n.conteo['necesita-repaso'] ? ` · ${n.conteo['necesita-repaso']} para repasar` : ''}`),
         h('span', { class: 'pequeno suave' }, `Esta semana: ${c.minutos7d[a.id] ?? 0} min`));
     })),
 

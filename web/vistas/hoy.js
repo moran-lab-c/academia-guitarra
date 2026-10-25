@@ -3,7 +3,7 @@
 // A la derecha, dónde está en su ruta y cómo se ha hecho la sesión.
 import { h } from '../nucleo/dom.js';
 import { repintar, enlace, ir } from '../nucleo/rutas.js';
-import { ctx, datos, registrar } from '../nucleo/almacen.js';
+import { ctx, datos, registrar, cambiar } from '../nucleo/almacen.js';
 import { planificar, DURACIONES, PROPOSITO } from '../../logica/planificador.js';
 import { formatoPara } from '../../logica/recomendador.js';
 import { separar } from '../../logica/catalogo.js';
@@ -12,10 +12,11 @@ import { selectorFormato } from '../componentes/notacion.js';
 import { tituloCinetico } from '../componentes/titulo.js';
 import { miniRuta } from '../componentes/ruta.js';
 import { chipEstado, colorArea, NOMBRE_AREA } from '../componentes/marcas.js';
-import { enlaceItem, fecha } from '../componentes/comunes.js';
+import { enlaceItem, fecha, plural } from '../componentes/comunes.js';
 
-// La sesión en curso vive aquí (no en la pantalla), para que no se pierda al volver a dibujar.
-const sesion = { plan: null, programa: null, id: null, abierto: null, hechos: new Set(), terminada: false, detalle: null };
+// La sesión en curso vive aquí (no en la pantalla), para que no se pierda al volver a dibujar. El programa sale siempre
+// de la preferencia (carril, Obras, Progreso y este selector la cambian): si cambia, la sesión se rehace.
+const sesion = { plan: null, id: null, abierto: null, hechos: new Set(), terminada: false, detalle: null };
 const ETIQUETA = { encargo: ['Encargo', 'encargo'], comprobacion: ['Repaso en frío', 'neutro'], refuerzo: ['Refuerzo', 'refuerzo'], paso: ['Ruta', 'neutro'], obra: ['Obra', 'neutro'], pasada: ['Repertorio', 'neutro'] };
 const dos = n => String(n).padStart(2, '0');
 
@@ -23,7 +24,7 @@ export default function hoy({ min } = {}) {
   const c = ctx(), d = datos();
   const prefs = d.estado.preferencias || {};
   const minutos = Number(min) || prefs.minutosHabituales || 60;
-  const programa = sesion.programa ?? (prefs.programaPrincipal ?? prefs.rutaPrincipal ?? 'clasica');
+  const programa = prefs.programaPrincipal ?? prefs.rutaPrincipal ?? 'clasica';
   if (!sesion.plan || sesion.plan.minutos !== minutos || sesion.plan.programa !== programa) nuevaSesion(c, minutos, programa);
   const p = sesion.plan;
   const progPrincipal = programa === 'flamenca' ? 'flamenca' : 'clasica';
@@ -40,7 +41,7 @@ export default function hoy({ min } = {}) {
         h('div', { class: 'pila-s', style: 'align-items:flex-end' },
           h('div', { class: 'segmentado', role: 'group', 'aria-label': 'Tiempo disponible' },
             DURACIONES.map(m => h('button', { type: 'button', 'aria-pressed': String(m === minutos), onclick: () => ir('/hoy', String(m)) }, m < 120 ? String(m) : '2 h'))),
-          h('select', { 'aria-label': 'Programa', onchange: e => { sesion.programa = e.target.value; sesion.plan = null; repintar(); } },
+          h('select', { 'aria-label': 'Programa', onchange: e => { const v = e.target.value; cambiar(x => { (x.preferencias ??= {}).programaPrincipal = v; }); } },
             [['clasica', 'Programa clásico'], ['flamenca', 'Programa flamenco'], ['ambas', 'Los dos, en bloques separados']].map(([v, t]) => h('option', { value: v, selected: programa === v }, t))))),
       p.avisos.map(a => h('div', { class: 'aviso' }, a)),
       h('ol', { class: 'lista-limpia pila-s', 'aria-label': 'Bloques de la sesión' }, p.bloques.map(b => {
@@ -62,7 +63,7 @@ export default function hoy({ min } = {}) {
 }
 
 function nuevaSesion(c, minutos, programa) {
-  Object.assign(sesion, { plan: planificar(c, { minutos, programa }), programa, id: crypto.randomUUID(), abierto: null, hechos: new Set(), terminada: false, detalle: null });
+  Object.assign(sesion, { plan: planificar(c, { minutos, programa }), id: crypto.randomUUID(), abierto: null, hechos: new Set(), terminada: false, detalle: null });
 }
 
 const reloj = m => `${Math.floor(m / 60)}:${dos(m % 60)}`;
@@ -74,13 +75,15 @@ function bloque(c, b, desde) {
   const actual = b.tipo === 'paso' && b.actual;
   const [etq, tipo] = actual ? ['Ahora', 'ahora'] : b.modo === 'comprobacion' ? ['Comprobar', 'refuerzo'] : b.tipo === 'area' ? [NOMBRE_AREA[b.area] ?? 'Área', 'neutro'] : ETIQUETA[b.tipo] ?? [null, 'neutro'];
   const nombre = item?.tipo === 'obra' ? h('span', null, h('span', { class: 'titulo-obra' }, item.titulo), b.nombre.length > item.titulo.length ? b.nombre.slice(item.titulo.length) : '') : b.titulo;
-  return h('li', { class: `tarjeta bloque-sesion${actual ? ' tarjeta-ahora' : ''}${b.tipo === 'refuerzo' ? ' tarjeta-borde' : ''}`, style: hecho ? 'opacity:.55' : '' },
+  return h('li', { class: `tarjeta bloque-sesion${actual ? ' tarjeta-ahora' : ''}${b.tipo === 'refuerzo' ? ' tarjeta-borde' : ''}${abierto ? ' bloque-sesion--abierto' : ''}`, style: hecho ? 'opacity:.55' : '' },
     h('div', { class: 'fila', style: 'gap:14px;align-items:center' },
       h('span', { class: 'dato suave', style: 'width:84px' }, `${reloj(desde)}-${reloj(desde + b.minutos)}`),
       h('i', { class: 'punto', style: `--c:${colorArea(b.area)}` }),
-      h('button', { class: 'btn-fantasma', style: 'flex:1;display:block;text-align:left;padding:4px 0;min-height:0;height:auto', 'aria-expanded': String(abierto), onclick: () => { sesion.detalle = abierto ? null : b.id; repintar(); } },
-        h('div', { style: 'font-weight:600' }, b.tipo === 'obra' || b.tipo === 'pasada' || b.tipo === 'encargo' ? nombre : b.titulo),
-        h('div', { class: 'pequeno suave', style: 'font-weight:400' }, b.paraQue)),
+      h('button', { class: 'btn-fantasma bloque__abrir', 'aria-expanded': String(abierto), title: abierto ? 'Cerrar el detalle' : 'Ver el detalle', onclick: () => { sesion.detalle = abierto ? null : b.id; repintar(); } },
+        h('span', { class: 'bloque__texto' },
+          h('div', { style: 'font-weight:600' }, b.tipo === 'obra' || b.tipo === 'pasada' || b.tipo === 'encargo' ? nombre : b.titulo),
+          h('div', { class: 'pequeno suave', style: 'font-weight:400' }, b.paraQue)),
+        h('span', { class: 'bloque__chevron', 'aria-hidden': 'true' })),
       etq && chipEstado(etq, tipo),
       h('span', { class: 'display', style: 'width:36px;text-align:right' }, b.minutos)),
     abierto && h('div', { class: 'pila-s', style: 'margin-top:10px' },
@@ -125,17 +128,23 @@ function reparto(p) {
     h('span', { class: 'pequeno suave' }, lista.map(([a, m]) => `${NOMBRE_AREA[a] ?? a} ${m}`).join(' · '), ' min'));
 }
 
-// Las prioridades que han entrado hoy, en su orden.
+// Las prioridades que han entrado hoy, en su orden. Distingue «no hay» de «hay, pero hoy no cabe».
 function comoSeHaHecho(p) {
   const hay = t => p.bloques.some(b => b.tipo === t);
+  const de = t => p.bloques.find(b => b.tipo === t);
+  const nc = p.noCaben ?? {};
+  const noCabe = (n, uno, varios) => (n === 1 ? `hay ${uno}, pero hoy no cabe.` : `hay ${n} ${varios}, pero hoy no caben.`);
+  const yMas = (n, uno, varios) => (n ? ` ${n === 1 ? `1 ${uno} más no cabe hoy` : `${n} ${varios} más no caben hoy`}.` : '');
+  const obra = de('obra');
   const lista = [
-    ['Profesor', hay('encargo') ? 'su encargo entra primero, con sus minutos.' : 'hoy no hay encargos pendientes.'],
-    ['Repasos críticos', hay('comprobacion') ? 'lo vencido de tu ruta, en frío y al principio (2-4 min).' : 'nada urgente que comprobar.'],
-    ['Tu sitio en la ruta', hay('paso') ? 'el paso en el que estás y, si cabe, el siguiente.' : 'no cabe hoy.'],
-    ['Lo que necesita la obra', hay('refuerzo') ? 'un refuerzo justo antes de tocarla.' : 'nada flojo que reforzar.'],
-    ['Puntos flojos', p.bloques.some(b => b.motivos?.some(m => /por detrás/.test(m))) ? 'el área que va por detrás recibe más tiempo, sin frenar nada.' : 'ningún área va por detrás.'],
-    ['Resto y repertorio', hay('obra') ? 'la obra de tu tramo y una pasada para acabar.' : 'lo que queda del curso.'],
-    ['Tiempo', `${p.minutos} minutos en ${p.bloques.length} bloques.`],
+    ['Profesor', hay('encargo') ? `su encargo entra primero, con sus minutos.${yMas(nc.encargos, 'encargo', 'encargos')}` : nc.encargos ? noCabe(nc.encargos, 'un encargo', 'encargos') : 'hoy no hay encargos pendientes.'],
+    ['Repasos críticos', hay('comprobacion') ? `lo vencido de tu ruta, en frío y al principio (${plural(de('comprobacion').minutos, 'minuto')}).${yMas(nc.comprobaciones, 'comprobación', 'comprobaciones')}`
+      : nc.comprobaciones ? noCabe(nc.comprobaciones, 'una comprobación vencida de tu ruta', 'comprobaciones vencidas de tu ruta') : 'nada urgente que comprobar.'],
+    ['Tu sitio en la ruta', hay('paso') ? 'el paso en el que estás y, si cabe, el siguiente.' : nc.paso ? noCabe(1, 'un paso recomendado') : 'ahora no hay ningún paso recomendado.'],
+    ['Lo que necesita la obra', hay('refuerzo') ? `un refuerzo justo antes de tocarla.${yMas(nc.refuerzos, 'refuerzo', 'refuerzos')}` : nc.refuerzos ? noCabe(nc.refuerzos, 'algo flojo que reforzar', 'cosas flojas que reforzar') : 'nada flojo que reforzar.'],
+    ['Puntos flojos', p.bloques.some(b => b.motivos?.some(m => /por detrás/.test(m))) ? 'el área que va por detrás recibe más tiempo, sin frenar nada.' : nc.flojos ? noCabe(nc.flojos, 'un área por detrás', 'áreas por detrás') : 'ningún área va por detrás.'],
+    ['Resto y repertorio', obra ? `${obra.paso ? 'la obra de tu tramo' : 'tu obra en estudio'}${hay('pasada') ? ' y una pasada para acabar' : ''}.` : 'lo que queda del curso.'],
+    ['Tiempo', `${p.minutos} minutos en ${plural(p.bloques.length, 'bloque')}.`],
   ];
   return h('div', { class: 'tarjeta pila-s' },
     h('div', { class: 'rotulo' }, 'CÓMO SE HA HECHO ESTA SESIÓN'),

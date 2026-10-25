@@ -62,9 +62,13 @@ export function glifoEstado(estado, { tam = 34, obra = false, icono = null, etiq
   }, icono, e === 'ahora' && h('i', { class: 'glifo__punto' }));
 }
 
+// La leyenda bajo el mapa del curso, con los nombres aprobados para los estados de la ruta.
+const LEYENDA = [['ahora', 'Ahora'], ['recomendado', 'Recomendado'], ['disponible', 'Próximo'], ['por-llegar', 'Más adelante'], ['hecho', 'Hecho'],
+  ['dominado', 'Dominado'], ['repaso', 'Repaso'], ['refuerzo', 'Refuerzo']];
 export function leyendaEstados() {
-  return h('div', { class: 'leyenda-estados', role: 'list' }, ['hecho', 'dominado', 'ahora', 'disponible', 'por-llegar', 'repaso', 'refuerzo']
-    .map(e => h('span', { class: 'leyenda-estados__item', role: 'listitem' }, glifoEstado(e, { tam: 12 }), NOMBRE_GLIFO[e])));
+  return h('div', { class: 'leyenda-estados', role: 'list', 'aria-label': 'Leyenda de la ruta' },
+    LEYENDA.map(([e, nombre]) => h('span', { class: 'leyenda-estados__item', role: 'listitem' }, glifoEstado(e, { tam: 12 }), nombre)),
+    h('span', { class: 'leyenda-estados__item', role: 'listitem' }, h('span', { class: 'leyenda-estados__final', 'aria-hidden': 'true' }, '★'), 'Obra final'));
 }
 
 // Ficha de texto: tipo 'neutro' (con borde), 'ahora' (verde), 'encargo' (ocre sólido), 'repaso' (ocre con borde), 'refuerzo' (ocre discontinuo).

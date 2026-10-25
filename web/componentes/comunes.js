@@ -30,6 +30,9 @@ export function nivelArea(n) {
     h('div', { class: 'barra' }, h('i', { style: `width:${Math.min(100, ((n.estimado ? n.nivel : n.nivel + n.progreso) / n.max) * 100)}%` })));
 }
 
+// «1 paso», «3 pasos»: el número con su palabra en singular o plural.
+export const plural = (n, uno, varios = `${uno}s`) => `${n} ${n === 1 ? uno : varios}`;
+
 export const fecha = d => (d ? new Date(d.length === 10 ? d + 'T12:00:00' : d).toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short' }) : '—');
 export const aviso = (texto, error) => h('div', { class: `aviso${error ? ' error' : ''}` }, texto);
 export const tarjeta = (...hijos) => h('div', { class: 'tarjeta' }, ...hijos);

@@ -179,24 +179,25 @@ button[type="submit"]:not(.principal):not(.btn-papel) { font-weight: 700; }
 a > button { pointer-events: none; }
 
 /* ───────── Chips, píldoras y etiquetas ───────── */
-.chip, .etiqueta {
+/* La ficha (.chip) vive en componentes.css; aquí solo la etiqueta antigua y las variantes de la demo. */
+.etiqueta {
   display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: var(--r-1);
   font-size: 11.5px; font-weight: 600; line-height: 1.3; white-space: nowrap;
   color: var(--texto-2); background: transparent; box-shadow: inset 0 0 0 1px var(--borde);
 }
-.chip-ocre { color: var(--ocre); box-shadow: inset 0 0 0 1px var(--ocre-borde); }
-.chip-encargo { background: var(--ocre); color: var(--tinta); box-shadow: none; font-weight: 700; }
-.chip-ahora { background: var(--verde); color: var(--tinta); box-shadow: none; font-weight: 700; }
-.chip-papel { background: var(--papel); color: var(--tinta); box-shadow: none; font-weight: 700; }
+.chip-ocre { color: var(--ocre); border-color: var(--ocre-borde); }
+.chip-encargo { background: var(--ocre); color: var(--tinta); border-color: transparent; font-weight: 700; }
+.chip-ahora { background: var(--verde); color: var(--tinta); border-color: transparent; font-weight: 700; }
+.chip-papel { background: var(--papel); color: var(--tinta); border-color: transparent; font-weight: 700; }
 .chip-dato { font-family: var(--f-dato); letter-spacing: 0.1em; text-transform: uppercase; font-size: 10.5px; font-weight: 700; }
-.chip-area { color: var(--c, var(--texto-2)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c, var(--borde)) 45%, transparent); }
+.chip-area { color: var(--c, var(--texto-2)); border-color: color-mix(in srgb, var(--c, var(--borde)) 45%, transparent); }
 /* Píldora: filtros y pestañas ligeras (como «Todas · Del curso · Cerca»). */
 .pildora {
   display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 99px;
   background: transparent; color: var(--texto-2); box-shadow: inset 0 0 0 1px var(--borde); font-size: 14px; font-weight: 500; text-decoration: none; cursor: pointer; border: 0;
 }
 .pildora:hover { color: var(--texto); box-shadow: inset 0 0 0 1px var(--texto-3); background: transparent; }
-.pildora[aria-pressed="true"], .pildora[aria-current="true"], .pildora.activa { background: var(--papel); color: var(--tinta); box-shadow: none; font-weight: 700; }
+.pildora[aria-pressed="true"], .pildora[aria-current]:not([aria-current="false"]), .pildora.activa { background: var(--papel); color: var(--tinta); box-shadow: none; font-weight: 700; }
 
 /* Estado de una competencia, obra o paso (los nombres vienen de la lógica y no cambian). */
 .e-pendiente { color: var(--texto-3); }
@@ -270,9 +271,11 @@ td:last-child, th:last-child { padding-right: 0; }
 .barra-verde > i { background: var(--verde); }
 .barra-ocre > i { background: var(--ocre); }
 .barra-gruesa { height: 10px; }
-/* Barra por segmentos: cada <i> con su ancho y su --c. */
+/* Barra por segmentos: cada <i> con su ancho y su --c; o cada <span> un trozo (su fondo) con su <i> de relleno. */
 .barra-trozos { display: flex; gap: 2px; height: 6px; margin-top: 6px; }
 .barra-trozos > i { display: block; height: 100%; background: var(--c, var(--texto)); border-radius: 99px; }
+.barra-trozos > span { display: block; height: 100%; min-width: 4px; background: var(--sup-3); border-radius: 99px; overflow: hidden; }
+.barra-trozos > span > i { display: block; height: 100%; background: var(--c, var(--texto)); border-radius: 99px; }
 
 /* ───────── Texto auxiliar ───────── */
 .motivos { margin: 8px 0 0; padding-left: 18px; color: var(--texto-2); font-size: 13.5px; }

@@ -84,7 +84,8 @@ const enlacesCarril = CARRIL.map(([destino, texto, ic, prefijos]) => ({
 const botonesPrograma = PROGRAMAS.map(([valor, texto, nombre]) => ({
   valor,
   el: h('button', { type: 'button', title: nombre, 'aria-label': nombre, onclick: () => {
-    if (programaActual() !== valor) cambiar(e => { (e.preferencias ??= {}).programaPrincipal = valor; });
+    // Se compara con la preferencia tal cual: con «los dos» guardado, elegir Clásico también la cambia.
+    if ((datos().estado?.preferencias?.programaPrincipal ?? 'clasica') !== valor) cambiar(e => { (e.preferencias ??= {}).programaPrincipal = valor; });
   } }, texto),
 }));
 menu.replaceChildren(

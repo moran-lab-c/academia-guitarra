@@ -12,7 +12,8 @@ import { FORMATOS } from './esquema.js';
 
 const OTRO = { partitura: 'tablatura', tablatura: 'partitura' };
 const NOMBRE = { partitura: 'partitura', tablatura: 'tablatura' };
-const r1 = x => Math.round(x * 10) / 10;
+// Un número con un decimal y coma, como se escribe en España: 0.3 → «0,3».
+export const decimal = x => String(Math.round(x * 10) / 10).replace('.', ',');
 const HECHOS = ['completado', 'dominado', 'necesita-repaso'];
 
 // Estado de cada formato: 'app' (se ve en la app), 'externa', 'pendiente' o null.
@@ -60,17 +61,30 @@ export function recomendarFormato(item, cx = {}) {
   const laConoce = HECHOS.includes(cx.estadoItem);
   const exigente = item.dificultad?.valor != null && cx.tecnica != null && item.dificultad.valor > cx.tecnica + 1;
   if (hueco <= 0 && exigente) return resultado('tablatura', 'Técnicamente te exige mucho: mientras la montas, tablatura para no sumar la carga de leer; después, partitura.');
-  if (hueco <= 0) return resultado('partitura', `Tu lectura (${r1(L)}) llega a la que pide (${pide}): intenta trabajarla desde partitura. La tablatura sigue a mano.`);
+  if (hueco <= 0) return resultado('partitura', `Tu lectura (${decimal(L)}) llega a la que pide (${decimal(pide)}): intenta trabajarla desde partitura. La tablatura sigue a mano.`);
   if (laConoce && hueco <= 1) return resultado('partitura', 'Ya la tocas: leer algo que conoces es de lo mejor para la lectura. La tablatura, para lo que se te escape.');
-  if (hueco <= 1) return resultado('tablatura', `Tu lectura (${r1(L)}) está cerca de la que pide (${pide}): tablatura para montarla, y partitura en los pasajes que puedas leer.`);
-  return resultado('tablatura', `Tu lectura (${r1(L)}) está por debajo de la que pide (${pide}): tablatura, y la lectura sigue avanzando por su lado.`);
+  if (hueco <= 1) return resultado('tablatura', `Tu lectura (${decimal(L)}) está cerca de la que pide (${decimal(pide)}): tablatura para montarla, y partitura en los pasajes que puedas leer.`);
+  return resultado('tablatura', `Tu lectura (${decimal(L)}) está por debajo de la que pide (${decimal(pide)}): tablatura, y la lectura sigue avanzando por su lado.`);
+}
+
+// Lo que hay de tablatura, dicho con verdad: en la app, fuera de ella, por hacer o nada.
+export function textoTablatura(item, seccion) {
+  return {
+    app: 'La tablatura está a un toque.',
+    externa: 'Hay tablatura fuera de la app.',
+    pendiente: 'La tablatura está por hacer: de momento, solo partitura.',
+  }[formatos(item, seccion).tablatura] ?? 'No hay tablatura.';
 }
 
 // «Tu técnica permite esta obra, pero tu lectura…». tecnica = nivel alcanzado (trabaja en el siguiente).
 export function avisoTecnicaLectura(obra, tecnica, lectura) {
   const dif = obra?.dificultad?.valor, pide = obra?.lecturaNecesaria?.nivel;
   if (dif == null || pide == null || tecnica + 1 < dif || lectura >= pide) return null;
-  return `Tu técnica permite esta obra, pero tu lectura (${r1(lectura)}) todavía está por debajo de la que pide para estudiarla solo con partitura (${pide}). La app te recomienda tablatura; la partitura sigue disponible.`;
+  const tab = formatos(obra).tablatura;
+  const base = `Tu técnica permite esta obra, pero tu lectura (${decimal(lectura)}) todavía está por debajo de la que pide para estudiarla solo con partitura (${decimal(pide)}).`;
+  if (tab === 'app') return `${base} La app te recomienda tablatura; la partitura sigue disponible.`;
+  if (tab === 'externa') return `${base} La app te recomienda tablatura (la tienes fuera de la app); la partitura sigue disponible.`;
+  return `${base} ${textoTablatura(obra)} No frena nada: la lectura sigue avanzando por su lado.`;
 }
 
 // Secciones que ya puede leer y que tienen partitura: entran como lectura sobre su propio repertorio.

@@ -6,17 +6,18 @@ import { repintar, enlace } from '../nucleo/rutas.js';
 import { recomendar, viabilidad } from '../../logica/recomendador.js';
 import { necesidades, estadoObra } from '../../logica/ruta.js';
 import { CLASES_OBRA } from '../../logica/validarCatalogo.js';
+import { decimal, textoTablatura } from '../../logica/notacion.js';
 import { NOMBRE_MARCA, NOMBRE_VIABILIDAD } from '../componentes/comunes.js';
 import { chipEstado } from '../componentes/marcas.js';
 import { programaElegido } from './curso.js';
 
 const PAPEL = { final: '★ Obra final', lectura: 'Para leer', aplicacion: 'Aplicación', obra: 'Obra del tramo' };
-const filtro = { programa: null, marca: '', viabilidad: '' };
+const filtro = { marca: '', viabilidad: '' }; // el programa es la preferencia, como en el carril
 let anadiendo = false;
 
 export default function repertorio() {
   const c = ctx();
-  const programa = filtro.programa ?? programaElegido(c);
+  const programa = programaElegido(c);
   const ruta = c.rutaActual(programa);
   const delCurso = new Set((ruta?.obras || []).map(x => x.obra.id));
   const obras = c.cat.obras.filter(o => o.programa === programa)
@@ -32,7 +33,7 @@ export default function repertorio() {
         h('div', { class: 'rotulo' }, programa === 'flamenca' ? 'PROGRAMA FLAMENCO' : 'PROGRAMA CLÁSICO', ruta && ` · CURSO ${String(ruta.curso.numero).padStart(2, '0')}`),
         h('h1', { class: 'display display-g' }, 'Obras')),
       h('div', { class: 'segmentado', role: 'group', 'aria-label': 'Programa' },
-        [['clasica', 'Clásico'], ['flamenca', 'Flamenco']].map(([v, t]) => h('button', { type: 'button', 'aria-pressed': String(v === programa), onclick: () => { filtro.programa = v; repintar(); } }, t)))),
+        [['clasica', 'Clásico'], ['flamenca', 'Flamenco']].map(([v, t]) => h('button', { type: 'button', 'aria-pressed': String(v === programa), onclick: () => elegirPrograma(v) }, t)))),
 
     h('section', { class: 'pila-s' },
       h('div', { class: 'rotulo' }, 'LAS DE TU CURSO'),
@@ -64,16 +65,20 @@ export default function repertorio() {
 function tarjetaObra(c, x) {
   const n = necesidades(c, x.obra.id);
   const r = n?.resumen ?? {};
-  const partes = [[r.laTienes, 'ya las tienes'], [r.falta, 'te faltan (las trabaja la ruta)'], [r.refuerzo, 'necesitan refuerzo'], [r.porConsolidar, 'todavía no consolidadas'], [r.estimada, 'por confirmar']]
-    .filter(([k], i) => i === 0 || k).map(([k, t]) => `${k} ${t}`);
+  const partes = [[r.laTienes, 'ya la tienes', 'ya las tienes'], [r.falta, 'te falta (la trabaja la ruta)', 'te faltan (las trabaja la ruta)'], [r.refuerzo, 'necesita refuerzo', 'necesitan refuerzo'],
+    [r.porConsolidar, 'todavía no consolidada', 'todavía no consolidadas'], [r.estimada, 'por confirmar', 'por confirmar']]
+    .filter(([k], i) => i === 0 || k).map(([k, uno, varios]) => `${k} ${k === 1 ? uno : varios}`);
   return h('a', { class: `tarjeta tarjeta-enlace pila-s${x.papeles.includes('final') ? ' tarjeta-borde' : ''}`, href: enlace('/obra', x.obra.id) },
     h('div', { class: 'fila', style: 'gap:6px' }, x.papeles.map(p => chipEstado(PAPEL[p] ?? p, p === 'final' ? 'encargo' : 'neutro'))),
     h('span', { class: 'titulo-obra', style: 'font-size:22px' }, x.obra.titulo),
     h('span', { class: 'pequeno suave' }, `${x.obra.compositor} · tramo${x.tramos.length > 1 ? 's' : ''} ${x.tramos.join(', ')}`),
     h('span', null, x.estado.texto),
     n && h('span', { class: 'pequeno suave' }, n.pide.length ? `Pide ${n.pide.length}: ${partes.join(', ')}.` : 'Lo que pide, por clasificar.'),
-    n?.lectura && h('span', { class: 'pequeno suave' }, `Lectura que pide: nivel ${n.lectura.pide}; la tuya, ${n.lectura.tienes}. ${n.lectura.pide > n.lectura.tienes ? 'Se toca con tablatura mientras tanto.' : ''}`));
+    n?.lectura && h('span', { class: 'pequeno suave' }, `Lectura que pide: nivel ${decimal(n.lectura.pide)}; la tuya, ${decimal(n.lectura.tienes)}.${n.lectura.pide > n.lectura.tienes ? ` ${textoTablatura(x.obra)}` : ''}`));
 }
+
+// El programa se elige en un solo sitio: la preferencia (la misma que cambian el carril, Hoy y Progreso).
+export const elegirPrograma = v => cambiar(x => { (x.preferencias ??= {}).programaPrincipal = v; });
 
 // Las obras que añade él o su profesor van a sus datos, no al catálogo; se pueden clasificar después.
 function formularioObra(programa) {

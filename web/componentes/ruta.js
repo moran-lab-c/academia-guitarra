@@ -6,6 +6,7 @@
 import { h } from '../nucleo/dom.js';
 import { iconoArea, glifoEstado, colorArea, NOMBRE_AREA, segmentosSuaves } from './marcas.js';
 import { yaMostrado, marcarMostrado } from './titulo.js';
+import { plural } from './comunes.js';
 
 const SEPARACION = 8;       // entre el nodo y su etiqueta
 const MARGEN = 84;          // de los centros a los bordes (cabe media etiqueta)
@@ -254,9 +255,9 @@ function nodoPaso(it, i, anim) {
 function nodoFicha(it, i, anim) {
   const t = it.tramo;
   return h('span', {
-    class: 'paso paso--ficha', role: 'img', 'aria-label': `Tramo ${t.orden}, ${t.titulo}, ${t.total} pasos: en borrador`,
+    class: 'paso paso--ficha', role: 'img', 'aria-label': `Tramo ${t.orden}, ${t.titulo}, ${t.total ? plural(t.total, 'paso') : 'sin pasos todavía'}: en borrador`,
     style: `left:${px(it.x - it.d / 2)};top:${px(it.y - it.d / 2)};width:${it.d}px;height:${it.d}px${anim ? `;--d:${anim(i)}ms` : ''}`,
-  }, h('span', { class: 'glifo glifo--por-llegar glifo--ficha', style: `--g:${it.d}px`, 'aria-hidden': 'true' }, t.total), it.et && etiqueta(it.et));
+  }, h('span', { class: 'glifo glifo--por-llegar glifo--ficha', style: `--g:${it.d}px`, 'aria-hidden': 'true' }, t.total || null), it.et && etiqueta(it.et)); // sin pasos, sin «0»
 }
 
 function nodoMedalla(it, i, anim) {
@@ -277,7 +278,7 @@ function nodoPista(it, i, anim) {
 function rotulos(filas) {
   return filas.flatMap(f => f.cabecera.grupos.map(gr => {
     const t = gr.tramo;
-    const estado = t.estado === 'hecho' ? `${t.hechos} de ${t.total} · hecho` : t.estado === 'abierto' ? `${t.hechos} de ${t.total} · en curso` : `${t.total} pasos · por llegar`;
+    const estado = t.estado === 'hecho' ? `${t.hechos} de ${t.total} · hecho` : t.estado === 'abierto' ? `${t.hechos} de ${t.total} · en curso` : `${plural(t.total, 'paso')} · por llegar`;
     return h('div', { class: `ruta__tramo ruta__tramo--${t.estado}`, style: `left:${px(gr.x0)};top:${px(f.cabecera.y)};max-width:${px(gr.ancho)}` },
       h('span', { class: 'ruta__tramo-nombre' }, gr.nombre), h('span', { class: 'ruta__tramo-estado' }, estado));
   }));
@@ -351,7 +352,9 @@ export function mapaRuta(ruta, { animar = false, clave } = {}) {
 // «Dónde estás»: una fila de puntos con el tramo actual (hechos llenos, el actual con su punto verde, obras cuadradas) y,
 // al final, el punto discontinuo de la obra final.
 export function miniRuta(ruta) {
-  const t = ruta.tramos.find(x => x.estado === 'abierto') ?? ruta.tramos.find(x => x.estado === 'por-llegar' && x.pasos?.length) ?? ruta.tramos.at(-1);
+  // El tramo del paso actual (puede haber varios abiertos); si no hay paso actual, el primero abierto.
+  const t = ruta.tramos.find(x => x.pasos?.some(p => p.id === ruta.actual)) ?? ruta.tramos.find(x => x.estado === 'abierto')
+    ?? ruta.tramos.find(x => x.estado === 'por-llegar' && x.pasos?.length) ?? ruta.tramos.at(-1);
   const pasos = t?.pasos ?? [];
   const clase = p => {
     if (p.id === ruta.actual || p.estado === 'actual') return 'ahora';
@@ -362,7 +365,7 @@ export function miniRuta(ruta) {
   const actual = pasos.find(p => p.id === ruta.actual || p.estado === 'actual');
   return h('span', {
     class: 'mini-ruta', role: 'img',
-    'aria-label': t ? `Tramo ${t.orden}: ${t.hechos} de ${t.total} pasos hechos${actual ? `, ahora el paso ${actual.numero ?? ''}: ${actual.titulo}` : ''}` : 'Sin tramo abierto',
+    'aria-label': t ? `Tramo ${t.orden}: ${t.hechos} de ${plural(t.total, 'paso')} hechos${actual ? `, ahora el paso ${actual.numero ?? ''}: ${actual.titulo}` : ''}` : 'Sin tramo abierto',
   },
   pasos.map(p => h('i', { class: `mini mini--${clase(p)}${p.tipo === 'obra' ? ' mini--obra' : ''}` }, clase(p) === 'ahora' && h('b', { class: 'mini__punto' }))),
   ruta.final && h('i', { class: 'mini mini--fin' }));

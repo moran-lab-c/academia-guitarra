@@ -6,6 +6,7 @@
 // (desbloqueado: la app ya lo propone) · proximo · futuro. Ningún paso se bloquea: todos se pueden abrir.
 import { estaHecho } from './dominio.js';
 import { separar, pideDe, seccionDe, nombreDe } from './catalogo.js';
+import { decimal } from './notacion.js';
 
 const ORDEN_SITUACION = ['refuerzo', 'falta', 'estimada', 'por-consolidar', 'la-tienes'];
 
@@ -147,25 +148,29 @@ function vistaPaso(ctx, p, e, estado, numero) {
 
 // Antes de una obra (o de su aplicación) que está al alcance, la ruta pide reforzar lo que esa obra necesita y está
 // flojo: lo que falló en frío o necesita repaso, y la lectura si la obra es para leer y la lectura no llega.
+// Un paso en «repaso» también cuenta (toca reforzarlo), y cada cosa se refuerza una sola vez por tramo: antes del
+// primer paso que la necesita.
+const SIN_REFUERZO = new Set(['hecho', 'dominado']);
 function insertarRefuerzos(ctx, res, L) {
   for (const tramo of res.tramos) {
     if (tramo.estado !== 'abierto') continue;
     const enTramo = new Set(tramo.pasos.filter(p => !HECHO.has(p.estado)).flatMap(p => p.claves || []));
-    const nuevos = [];
+    const nuevos = [], yaReforzado = new Set();
     for (const p of tramo.pasos) {
-      if (!['obra', 'aplicacion'].includes(p.tipo) || HECHO.has(p.estado) || !p.obra) continue;
+      if (!['obra', 'aplicacion'].includes(p.tipo) || SIN_REFUERZO.has(p.estado) || !p.obra) continue;
       const [obraId, seccion] = separar(p.obra);
       const obra = ctx.cat.porId.get(obraId);
-      const motivoObra = `${obra.titulo}${seccion ? `, ${seccionDe(obra, seccion)?.titulo?.toLowerCase() ?? seccion}` : ''}`;
-      const comps = pideDe(obra, seccion).filter(c => situacion(ctx, c) === 'refuerzo');
+      const motivoObra = `${obra.titulo}${seccion ? `, ${minuscula(seccionDe(obra, seccion)?.titulo) ?? seccion}` : ''}`;
+      const comps = pideDe(obra, seccion).filter(c => situacion(ctx, c) === 'refuerzo' && !yaReforzado.has(c));
       const lista = comps.map(c => ({ comp: c, porLectura: false, motivo: ctx.estadoDe(c) === 'necesita-repaso' ? `Necesita repaso y la pide ${motivoObra}` : `Falló en frío y la pide ${motivoObra}` }));
       const pideLectura = (seccionDe(obra, seccion)?.lecturaNecesaria ?? obra.lecturaNecesaria?.nivel) ?? null;
       if (p.papel === 'lectura' && pideLectura != null && pideLectura - L > 0.5) {
         const lectura = ctx.cat.competencias.find(c => c.area === 'lectura' && c.programa !== otroPrograma(res.curso.programa)
           && c.nivel <= Math.floor(L) + 1 && ctx.estadoDe(c.id) !== 'dominado' && !enTramo.has(c.id));
-        if (lectura) lista.push({ comp: lectura.id, porLectura: true, motivo: `Para leer ${motivoObra}: tu lectura (${redondear(L)}) está por debajo de la que pide (${pideLectura})` });
+        if (lectura) lista.push({ comp: lectura.id, porLectura: true, motivo: `Para leer ${motivoObra}: tu lectura (${decimal(L)}) está por debajo de la que pide (${decimal(pideLectura)})` });
       }
-      for (const r of lista.slice(0, 2)) {
+      for (const r of lista.filter(x => !yaReforzado.has(x.comp)).slice(0, 2)) {
+        yaReforzado.add(r.comp);
         const c = ctx.cat.porId.get(r.comp);
         nuevos.push({ antes: p.id, paso: {
           id: `refuerzo:${p.id}:${r.comp}`, numero: null, tipo: 'refuerzo', papel: null, area: c.area, titulo: nombreDe(c), objetivo: null,
@@ -179,7 +184,7 @@ function insertarRefuerzos(ctx, res, L) {
 }
 
 const otroPrograma = p => (p === 'clasica' ? 'flamenca' : 'clasica');
-const redondear = x => String(Math.round(x * 10) / 10).replace('.', ',');
+const minuscula = t => (t ? t[0].toLowerCase() + t.slice(1) : t); // «Parte B» → «parte B»
 
 function finalDelCurso(ctx, curso, res) {
   if (!curso.obraFinal) return null;

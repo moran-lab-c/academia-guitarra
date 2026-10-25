@@ -13,6 +13,8 @@ import { fecha } from '../componentes/comunes.js';
 
 const NOMBRE_ESTADO = { dominado: 'Dominado', hecho: 'Hecho', repaso: 'Toca reforzarlo', actual: 'Ahora', recomendado: 'Recomendado', proximo: 'Próximo', futuro: 'Más adelante' };
 const SITUACION = { 'la-tienes': ['Ya la tienes', 'neutro'], 'por-consolidar': ['Por consolidar', 'neutro'], refuerzo: ['Necesita refuerzo', 'refuerzo'], falta: ['Te falta', 'repaso'], estimada: ['Por confirmar', 'neutro'] };
+// Nombre corto de cada aspecto para «Cómo vas» («Continuidad bien», no «Sin bien»).
+const CORTO = { precision: 'Notas', ritmo: 'Ritmo', continuidad: 'Continuidad', limpieza: 'Limpieza', control: 'Control', sonido: 'Sonido', dinamica: 'Dinámica', articulacion: 'Articulación', fraseo: 'Fraseo', memoria: 'Memoria' };
 let abierto = null; // { comp, modo }
 
 export default function paso({ id }) {
@@ -171,7 +173,7 @@ function comoVas(c, rel) {
       chipEstado(SITUACION[k.situacion]?.[0] ?? k.estado, SITUACION[k.situacion]?.[1] ?? 'neutro'))),
     eventos.length > 0 && h('ul', { class: 'lista-limpia pila-s pequeno' }, eventos.map(e => h('li', { class: 'fila-entre' },
       h('span', { class: 'suave' }, fecha(e.t), e.modo === 'comprobacion' ? ' · en frío' : ''),
-      h('span', null, Object.entries(e.calidad || {}).map(([d, v]) => `${DIMENSIONES[d]?.split(' ')[0]} ${v === 'bien' ? 'bien' : v === 'fallos' ? 'con fallos' : 'mal'}`).join(' · ') || (e.tanda ? `${e.tanda[0]}/${e.tanda[1]}` : ''))))),
+      h('span', null, Object.entries(e.calidad || {}).map(([d, v]) => `${CORTO[d] ?? DIMENSIONES[d] ?? d} ${v === 'bien' ? 'bien' : v === 'fallos' ? 'con fallos' : 'mal'}`).join(' · ') || (e.tanda ? `${e.tanda[0]}/${e.tanda[1]}` : ''))))),
     h('div', { class: 'fila' },
       h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: rel.comps[0].comp, modo: 'trabajo' }; repintar(); } }, 'Registrar práctica'),
       h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: rel.comps[0].comp, modo: 'comprobacion' }; repintar(); } }, 'Comprobación en frío')),
