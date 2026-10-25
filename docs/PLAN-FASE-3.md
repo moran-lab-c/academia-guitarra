@@ -109,3 +109,21 @@ Algunas pruebas de la Fase 2.1 comprueban el modo espera y el curso en preparaci
 ## Fuera de alcance
 
 Transcripción o reconocimiento de audio y vídeo, OCR musical, IA que escuche, grabación avanzada, móvil, nube, cuentas, pagos, gamificación, contenido masivo sin verificar y rediseño visual.
+
+## Estado al cierre (25/10/2026)
+
+| Bloque | Estado | Commit |
+|---|---|---|
+| 3A | Plan, modelo de notación y `logica/partitura.js` | `6505678` |
+| 3B | VexFlow 5.0.0 confirmado; partitura, tablatura y «Ambas» en ejercicio, paso, competencia, obra, sección, fragmento y «Hoy» | `5853da7` |
+| 3C | Metrónomo y su integración con el registro y el profesor | `97fc7ba` |
+| 3D | Evaluación inicial por áreas, perfil y «Mi punto de partida» | `2d679da` |
+| 3E | Tramos 3-5 del curso 1: 19 competencias, 13 ejercicios con notación propia, la *Españoleta* | `bf349ca` |
+| 3F | Pruebas de integración, revisión independiente (UI, QA, Pedagogía) e informe | `216e34d` y siguientes |
+
+Cambios respecto a este plan, explicados en `INFORME-FASE-3.md`:
+- **Dominio:** una prueba del diagnóstico solo cuenta si salió bien; una no superada ya no deja la competencia «en curso».
+- **Ruta:** `estimada` también es verdad cuando una obra que ya sabía tocar deja evidencia favorable (por confirmar, nunca convalidada).
+- **Planificador:** el tope de la cobertura pasa de 3,4 a 3,65 para cumplir la regla aprobada en la Fase 2.1 («nunca adelanta al repertorio activo», que va a 3,6). Salió al dejar los tramos 3 y 4 sin obra eje.
+- **Fragmentos:** el modelo está y se prueba, pero no se ha añadido ninguno de obras reales: sus compases no se pueden verificar desde aquí.
+- **Obras eje de los tramos 3 y 4:** pendientes de su decisión, como estaba previsto; los tramos se trabajan con sus ejercicios y la app lo dice.
