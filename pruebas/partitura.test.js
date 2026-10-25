@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { prepararNotacion, validarNotacion, grafia, armadura } from '../logica/partitura.js';
+import { prepararNotacion, validarNotacion, grafia, armadura, sistemas } from '../logica/partitura.js';
 import { formatos, recomendarFormato } from '../logica/notacion.js';
 import { validarCatalogo } from '../logica/validarCatalogo.js';
 import { seccionDe, pideDe, esFragmento } from '../logica/catalogo.js';
@@ -136,4 +136,20 @@ test('Fragmentos · tienen su clave («obra#id»), lo que piden y su notación; 
   assert.ok(conObra({ ...obra, fragmentos: [{ ...obra.fragmentos[0], seccion: 'C' }] }).some(e => /sección C no existe/.test(e)));
   assert.ok(conObra({ ...obra, fragmentos: [{ ...obra.fragmentos[0], proposito: '' }] }).some(e => /para qué es/.test(e)));
   assert.ok(conObra({ ...obra, notacion: { partitura: 'externa', vistas: ['tablatura'] } }).some(e => /«vistas» va con una notación propia/.test(e)));
+});
+
+test('Notación · el reparto en líneas nunca pasa del ancho, empieza cada línea con su cabecera y no estira de más una línea corta', () => {
+  const escala = prepararNotacion(JSON.parse(fs.readFileSync(new URL('../contenido/notacion/esc-mi-mayor-1pos.json', import.meta.url))));
+  for (const ancho of [300, 600, 900, 1200]) {
+    const lineas = sistemas(escala, ancho, 'ambas');
+    assert.deepEqual(lineas.flatMap(l => l.compases.map(c => c.numero)), [1, 2, 3, 4], `${ancho}`);   // todos, en orden
+    assert.ok(lineas.every(l => l.ancho <= ancho), `${ancho}: ${lineas.map(l => l.ancho)}`);
+    assert.ok(lineas.every(l => l.compases[0].primero && l.compases[0].cabecera > 0 && l.compases.slice(1).every(c => !c.primero)), `${ancho}`);
+  }
+  // Una sola línea corta en una pantalla ancha: se estira como mucho 1,5 veces, no hasta el borde.
+  const corto = prepararNotacion({ compas: '4/4', compases: [{ voces: [[nota(1, 0, '1')]] }] });
+  const [l] = sistemas(corto, 1200);
+  assert.ok(l.ancho < 1200 * 0.5, `${l.ancho}`);
+  // Sin notación válida, no hay líneas.
+  assert.deepEqual(sistemas(prepararNotacion({ compas: '4/4', compases: [] }), 900), []);
 });

@@ -164,3 +164,46 @@ export function prepararNotacion(p, { compases = null } = {}) {
     parcial: p.parcial ?? null, compases: salida, avisos, total,
   };
 }
+
+// En qué líneas va cada compás, para un ancho disponible (en píxeles). Cada compás pide sitio según sus notas; la
+// primera de cada línea, además, la clave y la armadura (y la primera de todas, el compás). Ninguna línea pasa del
+// ancho; las que van llenas se estiran hasta el borde, y la última se queda con su ancho natural si va corta.
+export function sistemas(plan, ancho, vista = 'partitura') {
+  if (!plan?.ok || !plan.compases.length) return [];
+  const alter = Math.abs(armadura(plan.armadura)?.alteraciones ?? 0);
+  const cabecera = (primeraLinea) => (vista === 'tablatura' ? 34 : 34 + alter * 11) + (primeraLinea ? 30 : 0) + 10;
+  // Cada nota pide su sitio, y más si lleva alteración, digitación o mano derecha; con dos voces, algo más.
+  const natural = m => {
+    const porVoz = m.voces.map(v => v.reduce((s, n) => s + 23 + (n.alteraciones?.length || n.dedo != null || n.mano ? 12 : 0) + (n.puntillo ? 6 : 0), 0));
+    return Math.max(m.voces.length > 1 ? 120 : 90, 30 + Math.max(...porVoz) + (m.voces.length > 1 ? 14 : 0));
+  };
+  const lineas = [];
+  let actual = null;
+  plan.compases.forEach((m, i) => {
+    const base = natural(m);
+    if (!actual || actual.usado + base > ancho) {
+      if (actual) lineas.push(actual);
+      actual = { compases: [], usado: 0 };
+      const w = Math.min(ancho, base + cabecera(lineas.length === 0));
+      actual.compases.push({ indice: i, numero: m.numero, ancho: w, primero: true, cabecera: cabecera(lineas.length === 0) });
+      actual.usado = w;
+    } else {
+      actual.compases.push({ indice: i, numero: m.numero, ancho: base, primero: false, cabecera: 0 });
+      actual.usado += base;
+    }
+  });
+  lineas.push(actual);
+  return lineas.map((l, k) => {
+    const ultima = k === lineas.length - 1;
+    // La última línea, si va corta, se estira un poco (hasta 1,5 veces) pero no hasta el borde.
+    const factor = ultima && l.usado < ancho * 0.7 ? Math.min(1.5, ancho / l.usado) : ancho / l.usado;
+    let x = 0;
+    const compases = l.compases.map(c => {
+      const w = Math.floor(c.ancho * factor);
+      const r = { ...c, x, ancho: w };
+      x += w;
+      return r;
+    });
+    return { compases, ancho: x };
+  });
+}

@@ -6,7 +6,7 @@ import { repintar, enlace, ir } from '../nucleo/rutas.js';
 import { ctx, datos, registrar, cambiar } from '../nucleo/almacen.js';
 import { planificar, DURACIONES, PROPOSITO } from '../../logica/planificador.js';
 import { formatoPara } from '../../logica/recomendador.js';
-import { separar } from '../../logica/catalogo.js';
+import { separar, seccionDe } from '../../logica/catalogo.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { selectorFormato } from '../componentes/notacion.js';
 import { tituloCinetico } from '../componentes/titulo.js';
@@ -93,7 +93,7 @@ function bloque(c, b, desde) {
     abierto && h('div', { class: 'pila-s', style: 'margin-top:10px' },
       h('ul', { class: 'motivos' }, b.motivos.map(m => h('li', null, m))),
       b.instrucciones && (Array.isArray(b.instrucciones) ? h('ol', null, b.instrucciones.map(i => h('li', null, i))) : h('p', null, b.instrucciones)),
-      notacionDe(c, b),
+      notacionDe(c, b, abierto),
       h('div', { class: 'fila pequeno suave' }, item && ['Ficha: ', enlaceItem(item)], b.paso && [' · ', h('a', { href: enlace('/paso', b.paso) }, 'Paso de la ruta')], b.ejercicio && [' · ', h('a', { href: enlace('/ejercicio', b.ejercicio) }, 'Ejercicio')]),
       b.criterio && !b.items && h('p', { class: 'pequeno suave' }, `Criterio: ${b.criterio}`),
       b.items && b.items.map(x => h('div', { class: 'tarjeta-s pila-s' },
@@ -110,13 +110,14 @@ const guardado = clave => () => { sesion.hechos.add(clave); sesion.abierto = nul
 const extra = b => ({ area: b.area, minutos: b.minutos, encargo: b.encargo, sesion: sesion.id, idLibre: b.encargo ? `encargo:${b.encargo}` : null, paso: b.paso ?? null });
 
 // La recomendación se recalcula al dibujar, para que el selector refleje lo que acaba de elegir.
-function notacionDe(c, b) {
+// Con el bloque abierto, la notación se ve sobre el atril; cerrado, solo el selector (para no llenar «Hoy»).
+function notacionDe(c, b, abierto = false) {
   const item = b.ejercicio ? c.cat.porId.get(b.ejercicio) : b.item ? c.cat.porId.get(separar(b.item)[0]) : null;
   if (!item?.notacion) return null;
-  const seccion = b.seccion ? (item.secciones || []).find(s => s.id === b.seccion) : null;
+  const seccion = seccionDe(item, b.seccion);
   const encargo = b.encargo ? c.estado.tareasProfesor.find(t => t.id === b.encargo) : null;
   const rec = formatoPara(item, c, { proposito: b.tipo === 'encargo' ? undefined : PROPOSITO[b.area], seccion, encargo });
-  return selectorFormato(item, rec, seccion ? `${item.id}#${seccion.id}` : item.id, seccion, { compacto: true });
+  return selectorFormato(item, rec, seccion ? `${item.id}#${seccion.id}` : item.id, seccion, { compacto: !abierto });
 }
 
 function reparto(p) {

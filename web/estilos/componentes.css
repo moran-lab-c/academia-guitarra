@@ -238,7 +238,7 @@ a.paso:hover .glifo, a.paso:hover .medalla { transform: scale(1.07); }
   font: 400 13px/1 var(--f-ui); cursor: pointer; transition: background var(--t-corta) var(--curva), color var(--t-corta) var(--curva);
 }
 .notacion .segmentado button:hover:not(:disabled):not([aria-pressed="true"]) { color: var(--texto); }
-.notacion .segmentado button[aria-pressed="true"] { background: var(--sup-3); color: var(--papel); font-weight: 600; }
+.notacion .segmentado button[aria-pressed="true"], .notacion .segmentado button[aria-pressed="true"]:hover { background: var(--sup-3); color: var(--papel); font-weight: 600; }
 .notacion .segmentado button:disabled { opacity: .55; cursor: default; }
 .notacion .segmentado button:focus-visible { outline: 2px solid var(--texto); outline-offset: 1px; }
 .notacion__volver { padding: 0; border: 0; background: none; color: var(--texto-2); font: 13px var(--f-ui); text-decoration: underline; cursor: pointer; }
@@ -272,3 +272,13 @@ form.tarjeta button[type="submit"] {
 .aspectos label.check:has(input[value="fallos"]:checked) { background: var(--ocre); }
 .aspectos label.check:has(input[value="mal"]:checked) { background: var(--a-escalas); }
 .aspectos label.check:has(input:focus-visible) { outline: 2px solid var(--texto); outline-offset: 2px; }
+
+/* ============================================================ Notación dibujada (VexFlow) sobre el atril */
+.partitura { min-height: 60px; color: var(--tinta); }
+.partitura svg { display: block; max-width: 100%; height: auto; }
+.partitura svg text { font-style: normal; }
+.partitura__estado { margin: 0; font: italic 14px/1.5 var(--f-obra); color: var(--tinta-2); }
+.partitura__estado--error { color: var(--tinta); }
+.partitura__estado--error details { margin-top: 6px; font: 12.5px/1.4 var(--f-ui); font-style: normal; }
+.partitura__aviso { margin: 8px 0 0; font: italic 13px/1.4 var(--f-obra); color: var(--tinta-2); }
+.pildora--fragmento { box-shadow: inset 0 0 0 1px var(--texto-3); border-style: dashed; }

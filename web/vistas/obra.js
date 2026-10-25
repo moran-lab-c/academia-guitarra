@@ -7,6 +7,7 @@ import { enlace, repintar } from '../nucleo/rutas.js';
 import { explicar, formatoPara } from '../../logica/recomendador.js';
 import { avisoTecnicaLectura, textoTablatura, decimal } from '../../logica/notacion.js';
 import { necesidades, obraEnRutas, estadoObra, progresoFinal, textoRequisitos } from '../../logica/ruta.js';
+import { seccionDe, esFragmento } from '../../logica/catalogo.js';
 import { MARCAS_OBRA, CONOCIDA } from '../../logica/esquema.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { selectorFormato } from '../componentes/notacion.js';
@@ -23,7 +24,7 @@ export default function obra({ id }) {
   const o = c.cat.porId.get(id);
   if (!o || o.tipo !== 'obra') return h('p', { class: 'suave' }, 'Esta obra no existe.');
   if (vista.id !== id) Object.assign(vista, { id, seccion: null, abierto: null });
-  const sec = vista.seccion ? (o.secciones || []).find(s => s.id === vista.seccion) : null;
+  const sec = seccionDe(o, vista.seccion); // una sección o un fragmento
   const clave = sec ? `${id}#${sec.id}` : id;
   const r = explicar(o, c);
   const est = estadoObra(c, id);
@@ -48,9 +49,15 @@ export default function obra({ id }) {
     h('div', { class: 'con-lateral' },
       h('section', { class: 'pila' },
         h('div', { class: 'fila-entre' },
-          (o.secciones || []).length > 0 && h('div', { class: 'fila', role: 'group', 'aria-label': 'Fragmento' },
-            [null, ...o.secciones].map(s => h('button', { class: 'pildora', 'aria-pressed': String((s?.id ?? null) === vista.seccion), onclick: () => { vista.seccion = s?.id ?? null; repintar(); } },
-              s ? `${s.titulo}${['completado', 'dominado'].includes(c.estadoDe(`${id}#${s.id}`)) ? ' ✓' : ''}` : 'Toda la obra')))),
+          ((o.secciones || []).length > 0 || (o.fragmentos || []).length > 0) && h('div', { class: 'fila', role: 'group', 'aria-label': 'Parte de la obra' },
+            [null, ...(o.secciones || [])].map(s => h('button', { class: 'pildora', 'aria-pressed': String((s?.id ?? null) === vista.seccion), onclick: () => { vista.seccion = s?.id ?? null; repintar(); } },
+              s ? `${s.titulo}${['completado', 'dominado'].includes(c.estadoDe(`${id}#${s.id}`)) ? ' ✓' : ''}` : 'Toda la obra')),
+            (o.fragmentos || []).map(f => h('button', { class: 'pildora pildora--fragmento', title: f.proposito, 'aria-pressed': String(f.id === vista.seccion), onclick: () => { vista.seccion = f.id; repintar(); } },
+              `Fragmento: ${f.titulo}${['completado', 'dominado'].includes(c.estadoDe(`${id}#${f.id}`)) ? ' ✓' : ''}`)))),
+        sec && esFragmento(o, sec.id) && h('div', { class: 'tarjeta-s pila-s' },
+          h('div', { class: 'rotulo' }, `FRAGMENTO${sec.seccion ? ` DE LA ${(seccionDe(o, sec.seccion)?.titulo ?? sec.seccion).toUpperCase()}` : ''}${sec.compases ? ` · COMPASES ${sec.compases[0]}-${sec.compases[1]}` : ''}`),
+          h('p', { style: 'margin:0' }, sec.proposito),
+          (sec.porVerificar || []).length > 0 && h('p', { class: 'pequeno ocre', style: 'margin:0' }, `Por verificar: ${sec.porVerificar.map(x => `${x.campo} (${x.motivo})`).join('; ')}.`)),
         tecnicaLectura && h('div', { class: 'aviso' }, tecnicaLectura),
         selectorFormato(o, rec, clave, sec),
         practicarHoy(c, o, sec, est),

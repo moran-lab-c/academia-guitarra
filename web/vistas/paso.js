@@ -10,6 +10,10 @@ import { separar, nombreDe } from '../../logica/catalogo.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { glifoEstado, iconoArea, chipEstado, NOMBRE_AREA, colorArea } from '../componentes/marcas.js';
 import { fecha } from '../componentes/comunes.js';
+import { selectorFormato } from '../componentes/notacion.js';
+import { formatoPara } from '../../logica/recomendador.js';
+import { PROPOSITO } from '../../logica/planificador.js';
+import { seccionDe } from '../../logica/catalogo.js';
 
 const NOMBRE_ESTADO = { dominado: 'Dominado', hecho: 'Hecho', repaso: 'Toca reforzarlo', actual: 'Ahora', recomendado: 'Recomendado', proximo: 'Próximo', futuro: 'Más adelante' };
 const SITUACION = { 'la-tienes': ['Ya la tienes', 'neutro'], 'por-consolidar': ['Por consolidar', 'neutro'], refuerzo: ['Necesita refuerzo', 'refuerzo'], falta: ['Te falta', 'repaso'], estimada: ['Por confirmar', 'neutro'] };
@@ -56,6 +60,7 @@ export default function paso({ id }) {
     h('div', { class: 'con-lateral' },
       h('section', { class: 'pila' },
         loQueVasAHacer(c, rel, p),
+        material(c, rel),
         p.clase === 'evaluacion' ? evaluacion(c, tramo) : rel.comps.length > 0 && cuandoEstaBien(c, rel),
         rel.comps.length > 0 && deHechoADominado(rel)),
       h('aside', { class: 'pila' },
@@ -97,6 +102,19 @@ function loQueVasAHacer(c, rel, p) {
     h('ol', { class: 'lista-limpia pila-s' }, filas),
     !rel.contenido.some(x => x.item?.tipo === 'ejercicio' || x.item?.tipo === 'leccion') && p.clase === 'habilidad'
       && h('p', { class: 'pequeno suave' }, 'Las lecciones y ejercicios propios de este paso llegan con el contenido (Fase 3); mientras, practica la competencia con su criterio.'));
+}
+
+// El material del paso, sobre el atril: la notación del primer contenido que la tenga (un ejercicio, o la sección o el
+// fragmento de obra que trabaja), con su selector Partitura | Tab | Ambas. Sin notación, no se pinta nada.
+function material(c, rel) {
+  const x = rel.contenido.find(k => k.item?.notacion && (k.item.tipo === 'ejercicio' || k.item.tipo === 'obra'));
+  if (!x) return null;
+  const parte = x.item.tipo === 'obra' ? seccionDe(x.item, x.seccion) : null;
+  const clave = parte ? `${x.item.id}#${parte.id}` : x.item.id;
+  const proposito = x.item.tipo === 'obra' ? 'repertorio' : PROPOSITO[x.item.area];
+  return h('div', { class: 'pila-s' },
+    h('div', { class: 'rotulo' }, `MATERIAL · ${(x.item.titulo ?? '').toUpperCase()}${parte ? `, ${parte.titulo.toUpperCase()}` : ''}`),
+    selectorFormato(x.item, formatoPara(x.item, c, { proposito, seccion: parte }), clave, parte));
 }
 
 const fila = (n, titulo, detalle, href, derecha) => h('li', { class: 'fila', style: 'gap:14px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--borde-suave)' },

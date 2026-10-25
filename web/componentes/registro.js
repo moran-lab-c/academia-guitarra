@@ -33,7 +33,7 @@ export function formularioRegistro(item, extra = {}, alGuardar = () => {}) {
       campo(`Tempo (${crit.tempo?.unidad ?? '♩'}=, opcional)`, num('tempo', null)),
       campo('Ayuda', elegir('ayuda', [['ninguna', 'Ninguna (sin mirar)'], ['notacion', 'Leyendo partitura o tablatura'], ['referencia', 'Con audio, vídeo o profesor']], item?.tipo === 'obra' ? 'notacion' : 'ninguna')),
       item?.notacion && campo('Leído en', elegir('formato', [['', '—'], ['partitura', 'Partitura'], ['tablatura', 'Tablatura'], ['memoria', 'De memoria']], c.estado.formatos?.[item.id] ?? '')),
-      item?.tipo === 'obra' && campo('Qué parte', elegir('seccion', [['', 'Toda la obra'], ...secciones.map(s => [s.id, s.titulo ?? `Sección ${s.id}`])], extra.seccion ?? '')),
+      item?.tipo === 'obra' && campo('Qué parte', elegir('seccion', [['', 'Toda la obra'], ...secciones.map(s => [s.id, s.titulo ?? `Sección ${s.id}`]), ...(item.fragmentos || []).map(f => [f.id, `Fragmento: ${f.titulo}`])], extra.seccion ?? '')),
       item?.tipo === 'obra' && campo('O compases sueltos', h('input', { name: 'fragmento', placeholder: 'p. ej., 9-16', style: 'width:8em' })),
     ];
 
