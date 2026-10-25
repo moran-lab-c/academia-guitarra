@@ -165,12 +165,12 @@ test('una obra que ya conocía no se reinicia: se comprueba con una pasada y que
   assert.equal(solo.deEvaluacion, true);
 });
 
-test('«¿Qué hago hoy?»: profesor, comprobaciones críticas cortas, la ruta y su obra; lo demás espera', () => {
+test('«¿Qué hago hoy?»: profesor, comprobaciones cortas por prioridad, la ruta y su obra; lo que no cabe sigue en la cola', () => {
   const estado = estadoInicial();
   estado.tareasProfesor.push({ id: 't1', item: 'obra:sor.op60-1', minutos: 12, hasta: '2026-11-03' });
   const eventos = [
-    practica('comp:esc.mi-mayor-1pos', '2026-10-28', { calidad: BIEN, pasadas: 3 }), // de la ruta y vencida: crítica
-    practica('comp:esc.arpegio-pima', '2026-10-01', { calidad: BIEN, pasadas: 3 }), // vencida, pero fuera de la ruta: espera
+    practica('comp:esc.mi-mayor-1pos', '2026-10-28', { calidad: BIEN, pasadas: 3 }), // de la ruta y vencida
+    practica('comp:esc.arpegio-pima', '2026-10-01', { calidad: BIEN, pasadas: 3 }), // fuera de la ruta, vencida hace 28 días
   ];
   const ctx = ctxDe({ estado, eventos, hoy: '2026-11-01' });
   const plan = planificar(ctx, { minutos: 60 });
@@ -178,8 +178,8 @@ test('«¿Qué hago hoy?»: profesor, comprobaciones críticas cortas, la ruta y
   assert.deepEqual(plan.bloques.slice(0, 3).map(b => b.tipo), ['calentamiento', 'comprobacion', 'encargo']);
   const frio = plan.bloques[1];
   assert.ok(frio.minutos <= 4);
-  assert.deepEqual(frio.items.map(x => x.id), ['comp:esc.mi-mayor-1pos']);
-  assert.ok(plan.avisos.some(a => /repaso espera a otro día/.test(a)));
+  // Lo de fuera de la ruta ya no espera para siempre (Fase 2.1, punto 5): con 28 días vencida, entra primero.
+  assert.deepEqual(frio.items.map(x => x.id), ['comp:esc.arpegio-pima', 'comp:esc.mi-mayor-1pos']);
   assert.ok(plan.bloques.some(b => b.tipo === 'paso' && /Tu paso actual/.test(b.motivos[0])));
   assert.ok(plan.bloques.some(b => b.tipo === 'obra' && b.item === 'obra:tarrega.lagrima'));
   assert.ok(plan.bloques.every(b => typeof b.paraQue === 'string' && b.paraQue.length > 0));
@@ -187,7 +187,7 @@ test('«¿Qué hago hoy?»: profesor, comprobaciones críticas cortas, la ruta y
   const corto = planificar(ctx, { minutos: 20 });
   assert.ok(!corto.bloques.some(b => b.tipo === 'comprobacion'));
   assert.deepEqual(corto.bloques.map(b => b.tipo), ['calentamiento', 'encargo', 'paso']);
-  assert.ok(corto.avisos.some(a => /esperan? a otro día/.test(a)));
+  assert.ok(corto.avisos.some(a => /2 comprobaciones siguen en la cola/.test(a)));
   // Con la técnica por delante (diagnóstico), la lectura va por detrás: más tiempo, sin frenar la ruta.
   const conDiag = planificar(ctxDe({ estado: estadoInicial(), eventos: [diagnostico('2026-10-31', { niveles: { tecnica: 2 } })] }), { minutos: 60 });
   const lectura = conDiag.bloques.filter(b => b.area === 'lectura');

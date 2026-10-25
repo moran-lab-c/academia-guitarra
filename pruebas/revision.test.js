@@ -88,7 +88,7 @@ test('«¿Qué hago hoy?» dice lo que no cabe, sin confundirlo con «no hay»',
   assert.ok(largo.bloques.some(b => b.tipo === 'refuerzo'));
   // Las comprobaciones críticas que no caben no se anuncian como «no urgentes».
   assert.ok(corto.avisos.every(a => !/comprobaci.*no son urgentes/.test(a)));
-  if (corto.noCaben.comprobaciones) assert.ok(corto.avisos.some(a => /de tu ruta no caben? hoy/.test(a)));
+  if (corto.noCaben.comprobaciones) assert.ok(corto.avisos.some(a => /siguen? en la cola/.test(a)));
   assert.ok(corto.avisos.every(a => !/^1 repasos|^1 comprobaciones/.test(a))); // plurales
 });
 

@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { crearAlmacen, ErrorUsuario } from './almacen.js';
+import { crearAlmacen, ErrorUsuario, ErrorBloqueado } from './almacen.js';
 import { cargarContenido } from './catalogo.js';
 import { ESQUEMA } from '../logica/esquema.js';
 import { dia } from '../logica/fechas.js';
@@ -24,8 +24,8 @@ const TIPOS = {
 const ESTATICOS = { web: null, logica: ['.js'], contenido: ['.md', '.json'] };
 const MB = 1024 * 1024;
 
-export function crearServidor({ datos }) {
-  const almacen = crearAlmacen(datos);
+export function crearServidor({ datos, alPaso }) {
+  const almacen = crearAlmacen(datos, { alPaso });
   const servidor = http.createServer(async (req, res) => {
     try {
       // Solo peticiones dirigidas a esta dirección (evita que una web ajena llegue por DNS rebinding).
@@ -41,7 +41,7 @@ export function crearServidor({ datos }) {
       if (req.method !== 'GET') return fin(res, 405);
       return servirEstatico(res, decodeURIComponent(url.pathname));
     } catch (e) {
-      const codigo = e instanceof ErrorUsuario ? 400 : 500;
+      const codigo = e instanceof ErrorUsuario ? 400 : e instanceof ErrorBloqueado ? 503 : 500;
       if (codigo === 500) console.error(e);
       json(res, codigo, { error: e.message });
     }

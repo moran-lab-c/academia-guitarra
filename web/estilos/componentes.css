@@ -34,8 +34,12 @@
 .leyenda-estados__item { display: inline-flex; align-items: center; gap: 6px; }
 .leyenda-estados__final { color: var(--texto); font-size: 12px; line-height: 1; }
 .tarjeta-ruta > .leyenda-estados { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--borde-suave); }
-/* El fondo que «recortan» los sellos y anillos de la ruta: el mismo de la tarjeta que la contiene. */
-.tarjeta-ruta { --ruta-fondo: var(--sup-1); }
+/* El fondo que «recortan» los sellos y anillos de los glifos de estado: el mismo de la tarjeta que los contiene
+   (en el mapa y fuera de él: pasos vecinos, «de hecho a dominado», «se apoya en», la leyenda). */
+.tarjeta, .tarjeta-ruta { --ruta-fondo: var(--sup-1); }
+.tarjeta-ahora { --ruta-fondo: var(--sup-2); }
+.tarjeta-borde { --ruta-fondo: var(--fondo); }
+.tarjeta-aviso, .tarjeta-encargo { --ruta-fondo: var(--encargo-fondo); }
 
 /* Bloques de Hoy: se ven abribles (chevron que gira y fondo al pasar). */
 .bloque-sesion { transition: background var(--t-corta) var(--curva); }

@@ -29,12 +29,15 @@ test('una estimación del diagnóstico vale hasta que una comprobación la desmi
   assert.equal(ctxDe({ eventos: [diag, ...fallo], hoy: '2026-11-05' }).niveles.tecnica.nivel, 0);
 });
 
-test('un área floja no baja la etapa: la marcan la técnica y el repertorio', () => {
+test('un área floja no baja el curso: lo marcan la técnica y el repertorio', () => {
   const lagrima = practica('obra:tarrega.lagrima', '2026-11-01', { calidad: BIEN, pasadas: 1 });
   const sor = practica('obra:sor.op60-1', '2026-11-01', { calidad: BIEN, pasadas: 1 });
   const ctx = ctxDe({ eventos: [diagnostico('2026-11-01', { niveles: { tecnica: 2 } }), lagrima, sor] });
   assert.equal(ctx.niveles.repertorio.nivel, 1);
   assert.equal(ctx.niveles.lectura.nivel, 0);
-  assert.equal(ctx.resumen.clasica.curso.id, 'curso:c2'); // min(técnica 2, repertorio 1) + 1
+  assert.equal(ctx.resumen.clasica.porNiveles, 2); // min(técnica 2, repertorio 1) + 1: la lectura no lo baja
+  // El curso 2 aún no tiene ruta: se queda en el 1 y se dice que el 2 está en preparación (Fase 2.1, punto 8).
+  assert.equal(ctx.resumen.clasica.curso.id, 'curso:c1');
+  assert.equal(ctx.resumen.clasica.enPreparacion.id, 'curso:c2');
   assert.equal(ctx.resumen.clasica.referencia, 2);
 });

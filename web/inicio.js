@@ -47,9 +47,10 @@ function icono(trazo) {
   return t.content.firstChild;
 }
 
+// La preferencia tal cual: 'clasica', 'flamenca' o 'ambas' (los dos programas en bloques separados).
 const programaActual = () => {
   const p = datos().estado?.preferencias || {};
-  return (p.programaPrincipal ?? p.rutaPrincipal ?? 'clasica') === 'flamenca' ? 'flamenca' : 'clasica';
+  return p.programaPrincipal ?? p.rutaPrincipal ?? 'clasica';
 };
 
 ruta('/', hoy);
@@ -84,13 +85,14 @@ const enlacesCarril = CARRIL.map(([destino, texto, ic, prefijos]) => ({
 const botonesPrograma = PROGRAMAS.map(([valor, texto, nombre]) => ({
   valor,
   el: h('button', { type: 'button', title: nombre, 'aria-label': nombre, onclick: () => {
-    // Se compara con la preferencia tal cual: con «los dos» guardado, elegir Clásico también la cambia.
-    if ((datos().estado?.preferencias?.programaPrincipal ?? 'clasica') !== valor) cambiar(e => { (e.preferencias ??= {}).programaPrincipal = valor; });
+    // Con «los dos» guardado, elegir uno también la cambia.
+    if (programaActual() !== valor) cambiar(e => { (e.preferencias ??= {}).programaPrincipal = valor; });
   } }, texto),
 }));
+const grupoPrograma = h('div', { class: 'rail-programa', role: 'group', 'aria-label': 'Programa' }, botonesPrograma.map(b => b.el));
 menu.replaceChildren(
   h('a', { class: 'rail-logo', href: '#/', 'aria-label': 'Academia de guitarra, ir a Hoy' }, 'A'),
-  h('div', { class: 'rail-programa', role: 'group', 'aria-label': 'Programa' }, botonesPrograma.map(b => b.el)),
+  grupoPrograma,
   ...enlacesCarril.map(e => e.el));
 document.getElementById('salto')?.addEventListener('click', e => { e.preventDefault(); vista.focus(); });
 
@@ -99,8 +101,11 @@ function marcarCarril(hash) {
     const activo = prefijos.some(p => hash === p || (p !== '/' && hash.startsWith(p + '/')));
     if (activo) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current');
   }
+  // Con «los dos», los dos botones se ven marcados (y el grupo lo dice), no solo «Clásico».
   const prog = programaActual();
-  for (const { valor, el } of botonesPrograma) el.setAttribute('aria-pressed', String(valor === prog));
+  for (const { valor, el } of botonesPrograma) el.setAttribute('aria-pressed', String(prog === 'ambas' || valor === prog));
+  grupoPrograma.setAttribute('aria-label', prog === 'ambas' ? 'Programa: los dos' : 'Programa');
+  grupoPrograma.title = prog === 'ambas' ? 'Los dos programas, en bloques separados' : '';
 }
 
 function pintar() {

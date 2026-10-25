@@ -177,5 +177,5 @@ function comoVas(c, rel) {
     h('div', { class: 'fila' },
       h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: rel.comps[0].comp, modo: 'trabajo' }; repintar(); } }, 'Registrar práctica'),
       h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: rel.comps[0].comp, modo: 'comprobacion' }; repintar(); } }, 'Comprobación en frío')),
-    abierto && rel.comps.some(k => k.comp === abierto.comp) && formularioRegistro(c.cat.porId.get(abierto.comp), { modo: abierto.modo }, () => { abierto = null; repintar(); }));
+    abierto && rel.comps.some(k => k.comp === abierto.comp) && formularioRegistro(c.cat.porId.get(abierto.comp), { modo: abierto.modo, paso: rel.paso.id }, () => { abierto = null; repintar(); }));
 }

@@ -11,10 +11,17 @@ import { migrar } from '../logica/migraciones.js';
 import { dia, diasEntre, mes } from '../logica/fechas.js';
 
 export class ErrorUsuario extends Error {}
+// Escribir ahora pondría datos nuevos sobre unos cuya integridad no está garantizada (p. ej., tras una migración fallida).
+export class ErrorBloqueado extends Error {}
 
-export function crearAlmacen(dir) {
+// opciones.alPaso(nombre): solo para las pruebas; se llama antes de cada paso del cambio de una importación.
+export function crearAlmacen(dir, { alPaso = () => {} } = {}) {
   const r = { estado: path.join(dir, 'estado.json'), historial: path.join(dir, 'historial'), copias: path.join(dir, 'copias'), adjuntos: path.join(dir, 'adjuntos') };
-  for (const d of [dir, r.historial, r.copias, r.adjuntos]) fs.mkdirSync(d, { recursive: true });
+  // Una importación (o migración) se prepara al lado y se cambia con renombrados; el diario dice por dónde iba.
+  const imp = { diario: path.join(dir, 'importando.json'), historial: path.join(dir, 'historial.nuevo'), estado: `${r.estado}.nuevo` };
+  fs.mkdirSync(dir, { recursive: true });
+  recuperarImportacion(); // antes de crear carpetas: si se cortó a medias, primero se deja todo como estaba
+  for (const d of [r.historial, r.copias, r.adjuntos]) fs.mkdirSync(d, { recursive: true });
 
   let doc = null;          // { rev, estado }
   let errorEstado = null;  // si estado.json no se puede leer, no se toca hasta restaurar una copia
@@ -101,7 +108,10 @@ export function crearAlmacen(dir) {
   }
 
   // Añade eventos nuevos; los repetidos (mismo id, p. ej. un reenvío tras perder la conexión) se ignoran.
+  // Con los datos en error (estado ilegible o migración fallida) no se escribe nada: la app los guarda en el navegador y
+  // los vuelve a enviar cuando los datos estén bien.
   function anadirEventos(lista) {
+    if (errorEstado) throw new ErrorBloqueado(`No se guarda nada mientras los datos tengan un problema: ${errorEstado}`);
     if (!Array.isArray(lista)) throw new ErrorUsuario('Se esperaba una lista de eventos');
     refrescarHistorial();
     const nuevos = [];
@@ -142,19 +152,59 @@ export function crearAlmacen(dir) {
     if (simular) return resumen;
     const sello = new Date().toISOString().replace(/[:.]/g, '-');
     if (!errorEstado) hacerCopia(`antes-de-importar-${sello}`);
-    // El historial actual no se borra: se aparta dentro de copias/.
-    fs.renameSync(r.historial, path.join(r.copias, `historial-antes-de-importar-${sello}`));
-    fs.mkdirSync(r.historial);
-    const porMes = new Map();
-    for (const ev of datos.eventos) (porMes.get(mes(ev.t)) ?? porMes.set(mes(ev.t), []).get(mes(ev.t))).push(ev);
-    for (const [m, evs] of porMes) escribir(path.join(r.historial, `${m}.jsonl`), evs.map(ev => JSON.stringify(ev) + '\n').join(''));
-    doc = { rev: (doc?.rev ?? 0) + 1, estado: datos.estado };
+    // Atómica para él: 1) se prepara todo al lado (historial.nuevo, estado.json.nuevo) sin tocar nada; 2) se cambia con
+    // tres renombrados. Si algo falla, se deshace y todo sigue como estaba; si se corta la luz, se deshace al arrancar.
+    // El historial anterior no se borra: queda apartado en copias/.
+    const apartado = path.join(r.copias, `historial-antes-de-importar-${sello}`);
+    const nuevoDoc = { rev: (doc?.rev ?? 0) + 1, estado: datos.estado };
+    fs.rmSync(imp.historial, { recursive: true, force: true });
+    escribirDiario({ fase: 'preparando', apartado: path.basename(apartado) });
+    try {
+      fs.mkdirSync(imp.historial);
+      const porMes = new Map();
+      for (const ev of datos.eventos) (porMes.get(mes(ev.t)) ?? porMes.set(mes(ev.t), []).get(mes(ev.t))).push(ev);
+      for (const [m, evs] of porMes) escribir(path.join(imp.historial, `${m}.jsonl`), evs.map(ev => JSON.stringify(ev) + '\n').join(''));
+      escribir(imp.estado, JSON.stringify(nuevoDoc, null, 1));
+      escribirDiario({ fase: 'cambiando', apartado: path.basename(apartado) });
+      alPaso('apartar');
+      fs.renameSync(r.historial, apartado);
+      alPaso('historial');
+      fs.renameSync(imp.historial, r.historial);
+      alPaso('estado');
+      fs.renameSync(imp.estado, r.estado);
+    } catch (e) {
+      recuperarImportacion();
+      throw new Error(`No se ha podido importar (${e.message}). No se ha cambiado nada: todo sigue como estaba.`);
+    }
+    fs.rmSync(imp.diario, { force: true });
+    doc = nuevoDoc;
     errorEstado = null;
-    escribir(r.estado, JSON.stringify(doc, null, 1));
     mtimeEstado = mtime(r.estado);
     archivos.clear();
     cargarHistorial();
     return resumen;
+  }
+
+  function escribirDiario(d) { escribir(imp.diario, JSON.stringify(d)); }
+
+  // Deja las cosas como estaban si una importación quedó a medias (por un error o por un corte). Si ya había terminado
+  // el último renombrado, se queda lo nuevo. Nada se borra: lo que sobra va a copias/.
+  function recuperarImportacion() {
+    if (!fs.existsSync(imp.diario)) return;
+    let d = null;
+    try { d = JSON.parse(fs.readFileSync(imp.diario, 'utf8')); } catch { d = null; }
+    const terminada = d?.fase === 'cambiando' && !fs.existsSync(imp.estado);
+    const apartado = d?.apartado ? path.join(r.copias, path.basename(d.apartado)) : null;
+    if (!terminada && apartado && fs.existsSync(apartado)) {
+      if (fs.existsSync(r.historial)) fs.renameSync(r.historial, `${apartado}-sin-terminar`); // el nuevo, si ya estaba en su sitio
+      fs.renameSync(apartado, r.historial);
+    }
+    if (!terminada) fs.rmSync(imp.estado, { force: true });
+    if (fs.existsSync(imp.historial)) {
+      fs.mkdirSync(r.copias, { recursive: true });
+      fs.renameSync(imp.historial, path.join(r.copias, `historial-sin-importar-${Date.now()}`));
+    }
+    fs.rmSync(imp.diario, { force: true });
   }
 
   function migrarSiHace() {

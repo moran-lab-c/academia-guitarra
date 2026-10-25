@@ -94,6 +94,9 @@ export function validarCatalogo(entidades) {
         if (!Number.isInteger(e.orden)) err.push(`${e.id}: falta su orden`);
         refs(e, e.pasos, 'paso');
         if (e.obraEje) contenido(e, [e.obraEje]);
+        // «exige»: pasos que el tramo pide expresamente para cerrarse aunque por su clase no frenen (p. ej., una lectura).
+        if (e.exige != null && !Array.isArray(e.exige)) err.push(`${e.id}: «exige» debe ser una lista de pasos`);
+        for (const id of e.exige || []) if (!(e.pasos || []).includes(id)) err.push(`${e.id}: exige ${id}, que no es un paso de este tramo`);
         break;
       }
       case 'competencia': {

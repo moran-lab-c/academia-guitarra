@@ -45,7 +45,7 @@ test('lo que toca comprobar en frío va al principio, antes de practicarlo', () 
   assert.deepEqual(plan.bloques[i].items.map(x => x.id), ['comp:esc.mi-mayor-1pos']);
 });
 
-test('las rutas no se mezclan; con las dos, cada una en sus bloques', () => {
+test('los programas no se mezclan; con los dos, cada uno en sus bloques', () => {
   const ctx = ctxDe({ estado: conLagrima() });
   assert.ok(itemsDe(planificar(ctx, { minutos: 60, programa: 'clasica' })).every(id => rutaDe(id) !== 'flamenca'));
   assert.ok(itemsDe(planificar(ctx, { minutos: 60, programa: 'flamenca' })).every(id => rutaDe(id) !== 'clasica'));

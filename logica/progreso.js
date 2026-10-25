@@ -5,7 +5,7 @@ import { calcularDominio } from './dominio.js';
 import { nivelesPorArea, resumenPrograma } from './niveles.js';
 import { focos } from './recomendador.js';
 import { areaDe } from './catalogo.js';
-import { rutaDelCurso, cursoActual } from './ruta.js';
+import { rutaDelCurso, cursoActual, cursoPedido } from './ruta.js';
 import { PROGRAMAS } from './esquema.js';
 
 export function contexto(cat, estado, eventos, ahora = new Date()) {
@@ -16,6 +16,8 @@ export function contexto(cat, estado, eventos, ahora = new Date()) {
   const ctx = {
     cat, estado, eventos, hoy, dom, niveles,
     estadoDe: id => dom.get(id)?.estado ?? 'pendiente',
+    // Pasos con alguna práctica registrada para ellos (evidencia de que una aplicación se ha trabajado).
+    pasosPracticados: new Set(eventos.filter(ev => ev.tipo === 'practica' && ev.paso).map(ev => ev.paso)),
     marca: id => estado.obras?.[id]?.marca ?? null,
     ruta: cursoId => (rutas.has(cursoId) ? rutas.get(cursoId) : rutas.set(cursoId, rutaDelCurso(ctx, cursoId)).get(cursoId)),
     resumen: {},
@@ -23,7 +25,12 @@ export function contexto(cat, estado, eventos, ahora = new Date()) {
   ctx.tecnica = programa => niveles[programa === 'flamenca' ? 'fl-tecnica' : 'tecnica']?.nivel ?? 0;
   for (const p of PROGRAMAS) {
     const r = resumenPrograma(cat, niveles, p);
-    ctx.resumen[p] = { ...r, curso: cursoActual(ctx, p, r.porNiveles) ?? r.curso };
+    const curso = cursoActual(ctx, p, r.porNiveles) ?? r.curso;
+    // Si los niveles (o haber terminado la ruta) piden un curso que aún no tiene ruta, se queda en el último que la tiene
+    // y se dice cuál está en preparación.
+    const pedido = Math.min(cursoPedido(ctx, p, r.porNiveles), ctx.cat.cursos.filter(c => c.programa === p).length);
+    const enPreparacion = curso && pedido > curso.numero ? ctx.cat.cursos.find(c => c.programa === p && c.numero === pedido) ?? null : null;
+    ctx.resumen[p] = { ...r, curso, enPreparacion };
   }
   ctx.cursoActual = programa => ctx.resumen[programa]?.curso ?? null;
   ctx.rutaActual = programa => (ctx.cursoActual(programa) ? ctx.ruta(ctx.cursoActual(programa).id) : null);

@@ -8,7 +8,7 @@ test('el contenido real no tiene errores', () => {
   assert.deepEqual(validarCatalogo(entidadesReales()), []);
 });
 
-test('detecta ids repetidos, referencias rotas, rutas mezcladas, círculos y datos sin naturaleza', () => {
+test('detecta ids repetidos, referencias rotas, programas mezclados, círculos y datos sin naturaleza', () => {
   const base = entidadesReales();
   const con = (...extra) => validarCatalogo([...base, ...extra]);
   const comp = { id: 'comp:x', tipo: 'competencia', programa: 'comun', area: 'teoria', nivel: 1, criterio: { tipo: 'conocimiento', naturaleza: 'decision' } };

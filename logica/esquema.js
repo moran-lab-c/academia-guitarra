@@ -72,6 +72,8 @@ export function validarEvento(ev) {
   if (ev.tipo === 'practica' && typeof ev.item !== 'string') err.push(`Evento ${ev.id}: práctica sin item`);
   if (ev.ayuda != null && !AYUDAS.includes(ev.ayuda)) err.push(`Evento ${ev.id}: ayuda desconocida «${ev.ayuda}»`);
   if (ev.formato != null && ![...FORMATOS, 'memoria'].includes(ev.formato)) err.push(`Evento ${ev.id}: formato desconocido «${ev.formato}»`);
+  if (ev.grabacion != null && typeof ev.grabacion !== 'boolean') err.push(`Evento ${ev.id}: «grabacion» debe ser sí o no`);
+  if (ev.paso != null && typeof ev.paso !== 'string') err.push(`Evento ${ev.id}: «paso» debe ser un id de paso`);
   for (const [d, v] of Object.entries(ev.calidad || {})) {
     if (!(d in DIMENSIONES)) err.push(`Evento ${ev.id}: aspecto desconocido «${d}»`);
     else if (!CALIDADES.includes(v)) err.push(`Evento ${ev.id}: valor «${v}» en ${d}`);

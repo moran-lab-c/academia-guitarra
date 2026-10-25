@@ -6,7 +6,7 @@ import { ctx, cambiar } from '../nucleo/almacen.js';
 import { enlace, repintar } from '../nucleo/rutas.js';
 import { explicar, formatoPara } from '../../logica/recomendador.js';
 import { avisoTecnicaLectura, textoTablatura, decimal } from '../../logica/notacion.js';
-import { necesidades, obraEnRutas, estadoObra } from '../../logica/ruta.js';
+import { necesidades, obraEnRutas, estadoObra, progresoFinal } from '../../logica/ruta.js';
 import { MARCAS_OBRA, CONOCIDA } from '../../logica/esquema.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { selectorFormato } from '../componentes/notacion.js';
@@ -138,7 +138,19 @@ function enLaRuta(c, enRutas) {
     enRutas.pasos.length ? h('ul', { class: 'lista-limpia pila-s' }, enRutas.pasos.map(p => h('li', null,
       h('a', { href: p.href }, p.titulo), h('div', { class: 'pequeno suave' }, `curso ${String(p.curso).padStart(2, '0')} · tramo ${p.tramo} · ${{ aplicacion: 'aplicación', obra: p.papel === 'lectura' ? 'obra para leer' : 'obra', preparacion: 'preparación de la obra final' }[p.clase] ?? p.clase}`))))
       : h('p', { class: 'suave' }, 'Fuera de la ruta: para tocar por gusto o adelantar.'),
-    enRutas.finalDe.map(f => h('p', { class: 'pequeno' }, `★ Obra final del curso ${String(f.numero).padStart(2, '0')}: ${f.requisitos.map(r => (r === 'memoria' ? 'de memoria' : 'grabada')).join(' y ')}.`)));
+    enRutas.finalDe.map(f => {
+      // Como obra final: primera realización, aprendida con sus requisitos, consolidada y dominada (el modelo de siempre).
+      const pf = progresoFinal(c, f.obra, f.requisitos);
+      const marca = (ok, t) => h('li', { class: ok ? '' : 'suave' }, `${ok ? '✓' : '○'} ${t}`);
+      return h('div', { class: 'pila-s' },
+        h('p', { class: 'pequeno', style: 'margin:0' }, `★ Obra final del curso ${String(f.numero).padStart(2, '0')}: ${f.requisitos.map(r => (r === 'memoria' ? 'de memoria' : 'grabada')).join(' y ')}.`),
+        h('ul', { class: 'lista-limpia pequeno' },
+          marca(pf.primera, 'Primera realización (entera, como pida su criterio; puede ser leyendo)'),
+          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? 'De memoria, sin mirar' : 'Grabada')),
+          marca(pf.aprendida, 'Aprendida con sus requisitos: cierra el curso'),
+          marca(pf.consolidada, 'Consolidada (en frío, días después)'),
+          marca(pf.dominada, 'Dominada')));
+    }));
 }
 
 function progreso(c, o) {

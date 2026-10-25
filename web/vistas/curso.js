@@ -80,8 +80,14 @@ const partir = t => { const p = t.split(' '); const m = Math.ceil(p.length / 2) 
 
 function tarjetaAhora(c, r, actual) {
   if (!actual) {
-    return h('div', { class: 'tarjeta pila-s' }, h('div', { class: 'rotulo' }, r.terminado ? 'CURSO TERMINADO' : 'SIN PASO RECOMENDADO'),
-      h('p', { class: 'suave' }, r.terminado ? 'Has cerrado este curso con su obra final.' : 'Lo que queda está por llegar o en preparación.'));
+    const k = r.continuidad;
+    const preparacion = k && [k.tramosEnPreparacion.length && `${k.tramosEnPreparacion.length === 1 ? 'el tramo' : 'los tramos'} ${k.tramosEnPreparacion.map(t => t.orden).join(', ')}`,
+      k.siguienteCurso && `el curso ${dos(k.siguienteCurso.numero)}`].filter(Boolean).join(' y ');
+    const rotulo = r.terminado && !k ? 'CURSO TERMINADO' : k?.motivo === 'cierres' ? 'ESPERANDO LOS CIERRES' : k ? 'LO DISPONIBLE, HECHO' : 'SIN PASO RECOMENDADO';
+    const texto = k?.motivo === 'cierres' ? 'Todo lo de la ruta está hecho; faltan las comprobaciones en frío de los cierres, que «Hoy» va metiendo poco a poco.'
+      : k ? `${r.terminado ? 'Has cerrado este curso con su obra final. ' : 'Has terminado lo que hay publicado del curso. '}${preparacion ? `${preparacion[0].toUpperCase()}${preparacion.slice(1)} ${preparacion.includes(' y ') || k.tramosEnPreparacion.length > 1 ? 'están' : 'está'} en preparación. ` : ''}Mientras, «Hoy» propone consolidar: comprobaciones, refuerzos y el repertorio que ya tocas.`
+        : r.terminado ? 'Has cerrado este curso con su obra final.' : 'Lo que queda está por llegar o en preparación.';
+    return h('div', { class: 'tarjeta pila-s' }, h('div', { class: 'rotulo' }, rotulo), h('p', { class: 'suave' }, texto));
   }
   const rel = relacionesPaso(c, actual.id);
   const obra = rel?.prepara.find(x => !x.contiene) ?? rel?.prepara[0];

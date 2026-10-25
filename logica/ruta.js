@@ -4,7 +4,7 @@
 //
 // Estados de un paso en la ruta: dominado · hecho · repaso (hecho, pero toca reforzarlo) · actual · recomendado
 // (desbloqueado: la app ya lo propone) · proximo · futuro. Ningún paso se bloquea: todos se pueden abrir.
-import { estaHecho } from './dominio.js';
+import { estaHecho, criterioDe, valorarIntento, intentosPorItem, estadoDominio } from './dominio.js';
 import { separar, pideDe, seccionDe, nombreDe } from './catalogo.js';
 import { decimal } from './notacion.js';
 
@@ -35,10 +35,20 @@ export function conocida(ctx, obraId, seccion = null) {
   return (k.secciones || []).includes(seccion) ? k : null;
 }
 
+// Las obras (o secciones) que contiene un paso.
+const obrasDe = (ctx, paso) => (paso.contenido || []).filter(x => ctx.cat.porId.get(separar(x)[0])?.tipo === 'obra');
+// Pasos que llevan una competencia a una obra (aplicación) o preparan una obra (preparación): saber la competencia no
+// basta; tiene que haber evidencia de que se ha trabajado esa obra o ese pasaje (Fase 2.1, punto 1).
+const CON_OBRA = new Set(['aplicacion', 'preparacion']);
+// Evidencia de haber trabajado una obra o sección: algún intento registrado de ella (o de la obra entera, que la
+// contiene), o una práctica registrada para ese paso concreto.
+const trabajada = (ctx, clave) => ctx.dom.has(clave) || (separar(clave)[1] != null && ctx.dom.has(separar(clave)[0]));
+export const aplicacionTrabajada = (ctx, paso) => obrasDe(ctx, paso).every(k => trabajada(ctx, k)) || !!ctx.pasosPracticados?.has(paso.id);
+
 // El estado de lo que contiene un paso, juntando sus competencias u obras.
 export function estadoPaso(ctx, paso) {
   if (paso.clase === 'evaluacion') return estadoEvaluacion(ctx, paso);
-  const claves = paso.clase === 'obra' ? (paso.contenido || []).filter(x => ctx.cat.porId.get(separar(x)[0])?.tipo === 'obra') : paso.trabaja || [];
+  const claves = paso.clase === 'obra' ? obrasDe(ctx, paso) : paso.trabaja || [];
   if (!claves.length) return { estado: 'pendiente', claves };
   const estados = claves.map(k => ctx.estadoDe(k));
   const conocidaObra = paso.clase === 'obra' && claves.every(k => conocida(ctx, ...separar(k)));
@@ -48,7 +58,13 @@ export function estadoPaso(ctx, paso) {
   else if (estados.every(e => e === 'dominado')) estado = 'dominado';
   else if (estados.every(estaHecho)) estado = 'hecho';
   else if (estados.some(e => e !== 'pendiente')) estado = 'en-curso';
-  return { estado, claves, conocida: conocidaObra && estado === 'pendiente', porConfirmar };
+  // Una aplicación sin evidencia de su obra no está hecha (ni en repaso), aunque la competencia esté aprendida.
+  let faltaObra = false;
+  if (CON_OBRA.has(paso.clase) && obrasDe(ctx, paso).length && !aplicacionTrabajada(ctx, paso)) {
+    faltaObra = estados.every(estaHecho);
+    estado = 'pendiente';
+  }
+  return { estado, claves, conocida: conocidaObra && estado === 'pendiente', porConfirmar, faltaObra };
 }
 
 // El cierre de un tramo se hace solo: cuando todo lo del tramo se ha comprobado en frío días después (solidez 2 o más).
@@ -61,13 +77,17 @@ function estadoEvaluacion(ctx, paso) {
   return { estado, claves };
 }
 
-const clavesDelTramo = (ctx, tramo) => [...new Set((tramo?.pasos || []).map(id => ctx.cat.porId.get(id)).filter(p => p && p.clase !== 'evaluacion')
-  .flatMap(p => (p.clase === 'obra' ? (p.contenido || []).filter(x => ctx.cat.porId.get(separar(x)[0])?.tipo === 'obra') : p.trabaja || [])))];
+// Lo que se comprueba en el cierre: lo que frena el tramo (la lectura no, salvo que el tramo la exija).
+const clavesDelTramo = (ctx, tramo) => [...new Set((tramo?.pasos || []).map(id => ctx.cat.porId.get(id)).filter(p => p && frena(p, tramo))
+  .flatMap(p => (p.clase === 'obra' ? obrasDe(ctx, p) : p.trabaja || [])))];
 
 const HECHO = new Set(['hecho', 'dominado', 'repaso']);
-// La lectura avanza a su ritmo: sus pasos se recomiendan, pero no frenan la ruta ni el curso (decisión del 25/10/2026).
-const NO_FRENAN = new Set(['lectura']);
-const frena = p => p.clase !== 'evaluacion' && p.nucleo !== false && !NO_FRENAN.has(p.area);
+// La lectura avanza a su ritmo: sus pasos (de habilidad o una obra para leer) se recomiendan, pero no frenan la ruta ni el
+// curso (decisión del 25/10/2026). Si un tramo necesita de verdad una lectura, lo declara en sus datos: «exige».
+export const esLectura = p => p.area === 'lectura' || p.papel === 'lectura';
+const frena = (p, tramo) => p.clase !== 'evaluacion' && ((tramo?.exige || []).includes(p.id) || (p.nucleo !== false && !esLectura(p)));
+// Un curso tiene ruta cuando al menos un tramo tiene pasos (un curso en borrador puede no tener ninguno).
+export const tieneRuta = (ctx, cursoId) => (ctx.cat.tramosDe.get(cursoId) || []).some(t => t.pasos?.length);
 
 // La ruta de un curso, lista para dibujar y para planificar.
 export function rutaDelCurso(ctx, cursoId) {
@@ -83,7 +103,7 @@ export function rutaDelCurso(ctx, cursoId) {
   for (const t of tramos) {
     const pasos = (t.pasos || []).map(id => ctx.cat.porId.get(id)).filter(Boolean);
     const base = pasos.map(p => ({ p, e: estadoPaso(ctx, p) }));
-    const sinEvaluar = base.filter(x => frena(x.p));
+    const sinEvaluar = base.filter(x => frena(x.p, t));
     const vacio = !pasos.length;
     const empezado = base.some(x => x.e.estado !== 'pendiente');
     const abierto = !vacio && (anteriorHecho || elegido === t.id || empezado) && !(t.cierre && !anteriorHecho);
@@ -116,68 +136,139 @@ export function rutaDelCurso(ctx, cursoId) {
   // El sitio actual: lo recomendado que ya está empezado; si no, lo primero recomendado (lo que el diagnóstico da por
   // sabido se confirma en frío y no cuenta como sitio actual).
   const recomendados = res.tramos.flatMap(t => t.pasos).filter(p => p.estado === 'recomendado' && !p.insertado && !p.porConfirmar && p.tipo !== 'evaluacion');
-  const principales = recomendados.filter(p => !NO_FRENAN.has(p.area)); // la lectura atrasada sigue recomendada, pero no marca el sitio
-  const actual = principales.find(p => p.enCurso) ?? principales[0] ?? recomendados.find(p => p.enCurso) ?? recomendados[0] ?? null;
+  // La lectura (pasos de lectura y obras para leer) sigue recomendada, pero no marca el sitio: tampoco cuando es lo único
+  // que queda (entonces no hay «Ahora» y la ruta dice que lo demás está hecho).
+  const principales = recomendados.filter(p => !esLectura(p));
+  const actual = principales.find(p => p.enCurso) ?? principales[0] ?? null;
   if (actual) { actual.estado = 'actual'; res.actual = actual.id; }
 
   res.final = finalDelCurso(ctx, curso, res);
   if (res.final) { res.progreso.total++; if (res.final.estado === 'hecho') res.progreso.hechos++; }
   const siguiente = ctx.cat.cursos.find(c => c.programa === curso.programa && c.numero === curso.numero + 1);
-  res.siguienteCurso = siguiente ? { id: siguiente.id, numero: siguiente.numero, nombre: siguiente.nombre } : null;
+  res.siguienteCurso = siguiente ? { id: siguiente.id, numero: siguiente.numero, nombre: siguiente.nombre, enPreparacion: !tieneRuta(ctx, siguiente.id) } : null;
   res.terminado = !!res.final && res.final.estado === 'hecho' && res.tramos.every(t => t.completo);
+  res.continuidad = continuidad(res);
   res.areas = areasDelCurso(ctx, res);
   res.obras = obrasDelCurso(ctx, curso, res);
   return res;
 }
 
+// Cuando no queda nada que recomendar en la ruta (y el curso no está terminado, o lo está y el siguiente no tiene ruta),
+// por qué: se esperan las comprobaciones de un cierre, o lo que queda está en preparación. La sesión sigue con
+// consolidación (comprobaciones, refuerzos y repertorio) y la pantalla lo dice. null si hay algo que hacer en la ruta.
+function continuidad(res) {
+  const quedan = res.tramos.flatMap(t => t.pasos).some(p => ['actual', 'recomendado'].includes(p.estado) && p.tipo !== 'evaluacion' && !esLectura(p) && !p.insertado);
+  if (quedan || (res.final && res.final.estado === 'recomendado')) return null;
+  const tramos = res.tramos.filter(t => t.borrador).map(t => ({ orden: t.orden, titulo: t.titulo }));
+  const cierres = res.tramos.filter(t => t.estado === 'abierto').flatMap(t => t.pasos).filter(p => p.tipo === 'evaluacion' && !HECHO.has(p.estado));
+  const siguiente = res.siguienteCurso?.enPreparacion ? res.siguienteCurso : null;
+  if (!cierres.length && !tramos.length && !siguiente) return null;
+  return { motivo: cierres.length ? 'cierres' : 'en-preparacion', cierres: cierres.map(p => p.id), tramosEnPreparacion: tramos, siguienteCurso: siguiente };
+}
+
 function vistaPaso(ctx, p, e, estado, numero) {
   const obraClave = (p.contenido || []).find(x => ctx.cat.porId.get(separar(x)[0])?.tipo === 'obra') ?? null;
-  const area = p.area ?? ctx.cat.porId.get((p.trabaja || [])[0])?.area ?? (p.clase === 'obra' ? (p.programa === 'flamenca' ? 'fl-toque' : 'repertorio') : null);
+  // Una obra para leer cuenta como lectura (color, mapa y planificador); las demás obras, como repertorio.
+  const area = p.area ?? ctx.cat.porId.get((p.trabaja || [])[0])?.area ?? (p.papel === 'lectura' ? 'lectura' : p.clase === 'obra' ? (p.programa === 'flamenca' ? 'fl-toque' : 'repertorio') : null);
+  const fallo = p.clase === 'obra' && obraClave && estado !== 'hecho' && estado !== 'dominado' ? falloConocida(ctx, obraClave) : null;
   const encargo = (ctx.estado.tareasProfesor || []).some(t => t.estado !== 'hecha' && t.estado !== 'cancelada' && (!t.hasta || t.hasta >= ctx.hoy)
     && t.item && ((p.trabaja || []).includes(t.item) || (p.contenido || []).some(x => separar(x)[0] === t.item)));
   let detalle = null;
   if (e.conocida) detalle = 'La conoces: se comprueba, no se aprende de cero';
+  else if (fallo) detalle = `La conocías; la comprobación falló${fallo.aspectos.length ? ` en ${fallo.aspectos.map(d => NOMBRE_ASPECTO[d] ?? d).join(', ')}` : ''}: se recupera, no se aprende de cero`;
+  else if (e.faltaObra) detalle = `La técnica ya está; falta aplicarla en ${tituloClave(ctx, obraClave)}`;
   else if (e.porConfirmar) detalle = 'El diagnóstico lo da por sabido: se confirma en frío';
   else if (estado === 'repaso') detalle = 'Toca reforzarlo';
   return {
     id: p.id, numero, tipo: p.clase, papel: p.papel ?? null, area, titulo: p.titulo, objetivo: p.objetivo ?? null, detalle, estado,
-    enCurso: e.estado === 'en-curso', encargo, conocida: !!e.conocida, porConfirmar: !!e.porConfirmar, insertado: false,
+    enCurso: e.estado === 'en-curso', encargo, conocida: !!e.conocida, porConfirmar: !!e.porConfirmar, faltaObra: !!e.faltaObra, recuperar: fallo, insertado: false,
     obra: obraClave, claves: e.claves, href: `#/paso/${encodeURIComponent(p.id)}`,
   };
 }
 
+const tituloClave = (ctx, clave) => {
+  const [id, s] = separar(clave);
+  const obra = ctx.cat.porId.get(id);
+  return `${obra?.titulo ?? id}${s ? `, ${minuscula(seccionDe(obra, s)?.titulo) ?? s}` : ''}`;
+};
+const NOMBRE_ASPECTO = {
+  precision: 'las notas', ritmo: 'el ritmo', continuidad: 'la continuidad', limpieza: 'la limpieza', control: 'el control', sonido: 'el sonido',
+  dinamica: 'la dinámica', articulacion: 'la articulación', fraseo: 'el fraseo', memoria: 'la memoria',
+};
+
+// Una obra (o sección) que conocía de antes y cuya última comprobación en frío no salió: qué aspectos fallaron y qué
+// competencias de las que pide la trabajan (las que miran esos aspectos). No reinicia la obra: dice qué recuperar.
+// null si no era conocida, si no se ha comprobado o si la última comprobación salió bien.
+export function falloConocida(ctx, clave) {
+  const [id, seccion] = separar(clave);
+  if (!conocida(ctx, id, seccion)) return null;
+  const obra = ctx.cat.porId.get(id);
+  const ultimo = ctx.eventos.filter(ev => ev.tipo === 'practica' && ev.item === id && (ev.seccion ?? null) === seccion && !ev.fragmento
+    && (ev.modo === 'comprobacion' || ev.enFrio === true)).sort((a, b) => a.t.localeCompare(b.t)).at(-1);
+  if (!ultimo) return null;
+  const crit = criterioDe(obra, ctx.estado.ajustes?.[clave] ?? ctx.estado.ajustes?.[id]);
+  if (valorarIntento({ ...ultimo, enFrio: true }, crit) === 'ok') return null;
+  const valor = d => ultimo.calidad?.[d] ?? 'fallos';
+  const mal = crit.dimensiones.filter(d => valor(d) === 'mal');
+  const aspectos = mal.length ? mal : crit.dimensiones.filter(d => valor(d) === 'fallos' && ultimo.calidad?.[d]);
+  const comps = pideDe(obra, seccion).map(c => ({ c, n: criterioDe(ctx.cat.porId.get(c)).dimensiones.filter(d => aspectos.includes(d)).length }))
+    .filter(x => x.n > 0).sort((a, b) => b.n - a.n).map(x => x.c);
+  return { aspectos, comps, fecha: ultimo.t.slice(0, 10) };
+}
+
 // Antes de una obra (o de su aplicación) que está al alcance, la ruta pide reforzar lo que esa obra necesita y está
-// flojo: lo que falló en frío o necesita repaso, y la lectura si la obra es para leer y la lectura no llega.
-// Un paso en «repaso» también cuenta (toca reforzarlo), y cada cosa se refuerza una sola vez por tramo: antes del
-// primer paso que la necesita.
+// flojo: lo que falló en frío o necesita repaso, lo que falló en la comprobación de una obra que ya conocía, y la
+// lectura si la obra es para leer y la lectura no llega. Un paso en «repaso» también cuenta (toca reforzarlo).
+// Cada necesidad se refuerza una sola vez por tramo, antes del primer paso que la necesita, y guarda todos sus
+// orígenes (p. ej., la aplicación y la obra de la parte B): un problema, varios motivos, un solo ejercicio.
 const SIN_REFUERZO = new Set(['hecho', 'dominado']);
+const MAX_REFUERZOS_POR_PASO = 2;
 function insertarRefuerzos(ctx, res, L) {
   for (const tramo of res.tramos) {
     if (tramo.estado !== 'abierto') continue;
     const enTramo = new Set(tramo.pasos.filter(p => !HECHO.has(p.estado)).flatMap(p => p.claves || []));
-    const nuevos = [], yaReforzado = new Set();
+    const nuevos = [], porComp = new Map(); // competencia → refuerzo ya insertado en este tramo
     for (const p of tramo.pasos) {
       if (!['obra', 'aplicacion'].includes(p.tipo) || SIN_REFUERZO.has(p.estado) || !p.obra) continue;
       const [obraId, seccion] = separar(p.obra);
       const obra = ctx.cat.porId.get(obraId);
-      const motivoObra = `${obra.titulo}${seccion ? `, ${minuscula(seccionDe(obra, seccion)?.titulo) ?? seccion}` : ''}`;
-      const comps = pideDe(obra, seccion).filter(c => situacion(ctx, c) === 'refuerzo' && !yaReforzado.has(c));
-      const lista = comps.map(c => ({ comp: c, porLectura: false, motivo: ctx.estadoDe(c) === 'necesita-repaso' ? `Necesita repaso y la pide ${motivoObra}` : `Falló en frío y la pide ${motivoObra}` }));
+      const motivoObra = tituloClave(ctx, p.obra);
+      const lista = pideDe(obra, seccion).filter(c => situacion(ctx, c) === 'refuerzo')
+        .map(c => ({ comp: c, porLectura: false, causa: ctx.estadoDe(c) === 'necesita-repaso' ? 'Necesita repaso' : 'Falló en frío' }))
+        .map(x => ({ ...x, motivo: `${x.causa} y la pide ${motivoObra}` }));
+      for (const c of p.recuperar?.comps || []) {
+        if (!lista.some(x => x.comp === c)) lista.push({ comp: c, porLectura: false, motivo: `La comprobación de ${motivoObra} falló en ${p.recuperar.aspectos.map(d => NOMBRE_ASPECTO[d] ?? d).join(', ')}, y eso lo trabaja` });
+      }
       const pideLectura = (seccionDe(obra, seccion)?.lecturaNecesaria ?? obra.lecturaNecesaria?.nivel) ?? null;
       if (p.papel === 'lectura' && pideLectura != null && pideLectura - L > 0.5) {
         const lectura = ctx.cat.competencias.find(c => c.area === 'lectura' && c.programa !== otroPrograma(res.curso.programa)
           && c.nivel <= Math.floor(L) + 1 && ctx.estadoDe(c.id) !== 'dominado' && !enTramo.has(c.id));
         if (lectura) lista.push({ comp: lectura.id, porLectura: true, motivo: `Para leer ${motivoObra}: tu lectura (${decimal(L)}) está por debajo de la que pide (${decimal(pideLectura)})` });
       }
-      for (const r of lista.filter(x => !yaReforzado.has(x.comp)).slice(0, 2)) {
-        yaReforzado.add(r.comp);
+      let nuevosAqui = 0;
+      for (const r of lista) {
+        const origen = { paso: p.id, tipo: p.tipo, obra: p.obra, causa: r.causa ?? null, motivo: r.motivo };
+        const ya = porComp.get(r.comp);
+        if (ya) { ya.origenes.push(origen); continue; } // la misma necesidad, otro origen: no se repite el ejercicio
+        if (nuevosAqui >= MAX_REFUERZOS_POR_PASO) continue;
+        nuevosAqui++;
         const c = ctx.cat.porId.get(r.comp);
-        nuevos.push({ antes: p.id, paso: {
+        const paso = {
           id: `refuerzo:${p.id}:${r.comp}`, numero: null, tipo: 'refuerzo', papel: null, area: c.area, titulo: nombreDe(c), objetivo: null,
           detalle: r.motivo, estado: 'recomendado', enCurso: false, encargo: false, conocida: false, porConfirmar: false, insertado: true,
-          obra: p.obra, claves: [r.comp], comp: r.comp, porLectura: r.porLectura, href: `#/competencia/${encodeURIComponent(r.comp)}`,
-        } });
+          obra: p.obra, claves: [r.comp], comp: r.comp, porLectura: r.porLectura, origenes: [origen], href: `#/competencia/${encodeURIComponent(r.comp)}`,
+        };
+        porComp.set(r.comp, paso);
+        nuevos.push({ antes: p.id, paso });
       }
+    }
+    // Con varios orígenes, el texto los nombra todos: «Falló en frío y la piden la aplicación y la obra de Lágrima, parte B».
+    const PAPEL = { aplicacion: 'la aplicación', obra: 'la obra' };
+    for (const r of porComp.values()) if (r.origenes.length > 1) {
+      const obras = [...new Set(r.origenes.map(o => tituloClave(ctx, o.obra)))].join(' y ');
+      const pasos = [...new Set(r.origenes.map(o => PAPEL[o.tipo] ?? o.tipo))].join(' y ');
+      const causa = r.origenes[0].causa;
+      r.detalle = causa ? `${causa} y la piden ${pasos} de ${obras}` : `${r.detalle} (también la piden ${pasos} de ${obras})`;
     }
     for (const n of nuevos) tramo.pasos.splice(tramo.pasos.findIndex(p => p.id === n.antes), 0, n.paso);
   }
@@ -186,19 +277,47 @@ function insertarRefuerzos(ctx, res, L) {
 const otroPrograma = p => (p === 'clasica' ? 'flamenca' : 'clasica');
 const minuscula = t => (t ? t[0].toLowerCase() + t.slice(1) : t); // «Parte B» → «parte B»
 
+// La obra final con sus requisitos. Su progreso usa el modelo de siempre, con el criterio de la obra más lo que pide el
+// curso (p. ej., de memoria) y la grabación:
+//   primera realización: la obra entera sale como pide su criterio normal (puede ser leyendo);
+//   aprendida: sale con todos los requisitos (de memoria y, si se pide, grabada) → la obra final queda hecha;
+//   consolidada: solidez 2 con esos requisitos (una comprobación en frío días después);
+//   dominada: el «dominado» de siempre, con esos requisitos.
+// Una pasada leyendo no la cierra. La grabación, hasta la Fase 5, la declara él al registrar («la he grabado»).
+export const REQUISITOS_VERIFICABLES = ['memoria', 'grabacion'];
+export function progresoFinal(ctx, obraId, requisitos = []) {
+  const obra = ctx.cat.porId.get(obraId);
+  const ajuste = { ...(ctx.estado.ajustes?.[obraId] || {}), ...(requisitos.includes('memoria') ? { memoria: true } : {}) };
+  const crit = criterioDe(obra, ajuste);
+  const eventos = ctx.eventos.filter(ev => ev.tipo === 'practica' && ev.item === obraId && !ev.seccion && !ev.fragmento);
+  const intentos = intentosPorItem(eventos, ctx.cat, { [obraId]: ajuste }).get(obraId);
+  const dom = estadoDominio(intentos, ctx.hoy);
+  const okConRequisitos = eventos.filter(ev => valorarIntento({ ...ev, enFrio: ev.modo === 'comprobacion' || ev.enFrio === true }, crit) === 'ok');
+  const cumple = {
+    memoria: requisitos.includes('memoria') ? okConRequisitos.length > 0 : null,
+    grabacion: requisitos.includes('grabacion') ? okConRequisitos.some(ev => ev.grabacion === true) : null,
+  };
+  const requisitosOk = requisitos.every(r => cumple[r] !== false);
+  const aprendida = estaHecho(dom.estado) && requisitosOk;
+  return {
+    primera: estaHecho(ctx.estadoDe(obraId)), aprendida, consolidada: aprendida && dom.solidez >= 2, dominada: aprendida && dom.estado === 'dominado',
+    requisitos: requisitos.map(r => ({ id: r, cumplido: cumple[r] })), solidez: dom.solidez, estadoConRequisitos: dom.estado,
+  };
+}
+
 function finalDelCurso(ctx, curso, res) {
   if (!curso.obraFinal) return null;
   const obra = ctx.cat.porId.get(curso.obraFinal.obra);
   if (!obra) return null;
   const cierre = res.tramos.find(t => t.cierre);
   const preparada = cierre ? cierre.pasos.filter(p => p.tipo === 'preparacion').every(p => HECHO.has(p.estado)) : true;
-  const hecha = estaHecho(ctx.estadoDe(obra.id));
-  const estado = hecha ? 'hecho' : cierre?.estado === 'abierto' || cierre?.estado === 'hecho' ? (preparada ? 'recomendado' : 'proximo') : 'futuro';
   const requisitos = curso.obraFinal.requisitos || [];
+  const progreso = progresoFinal(ctx, obra.id, requisitos);
+  const estado = progreso.aprendida ? 'hecho' : cierre?.estado === 'abierto' || cierre?.estado === 'hecho' ? (preparada ? 'recomendado' : 'proximo') : 'futuro';
   return {
     id: `final:${curso.id}`, obra: obra.id, titulo: `${obra.titulo}, completa`,
-    detalle: requisitos.length ? `de ${requisitos.map(r => (r === 'memoria' ? 'memoria' : 'grabada')).join(' y ')}`.replace('de memoria y grabada', 'de memoria y grabada').replace('de grabada', 'grabada') : null,
-    requisitos, justificacion: curso.obraFinal.justificacion, estado, conocida: !!conocida(ctx, obra.id),
+    detalle: requisitos.length ? `de ${requisitos.map(r => (r === 'memoria' ? 'memoria' : 'grabada')).join(' y ')}`.replace('de grabada', 'grabada') : null,
+    requisitos, progreso, justificacion: curso.obraFinal.justificacion, estado, conocida: !!conocida(ctx, obra.id),
     href: `#/obra/${encodeURIComponent(obra.id)}`,
   };
 }
@@ -231,12 +350,20 @@ function obrasDelCurso(ctx, curso, res) {
   return [...porObra.values()].map(x => ({ ...x, papeles: [...x.papeles], tramos: [...x.tramos], secciones: [...x.secciones], estado: estadoObra(ctx, x.obra.id) }));
 }
 
-// El curso que toca: el que marcan sus niveles o, si ya terminó la ruta de ese, el siguiente.
-export function cursoActual(ctx, programa, porNiveles = 1) {
+// El curso que piden los niveles o, si ya terminó la ruta de ese, el siguiente (puede no tener ruta todavía).
+export function cursoPedido(ctx, programa, porNiveles = 1) {
   const cursos = ctx.cat.cursos.filter(c => c.programa === programa);
   let numero = porNiveles;
-  for (const c of cursos) if (c.numero >= numero && (ctx.ruta ? ctx.ruta(c.id) : rutaDelCurso(ctx, c.id))?.terminado) numero = c.numero + 1;
-  return cursos.find(c => c.numero === Math.min(numero, cursos.length)) ?? null;
+  for (const c of cursos) if (c.numero >= numero && tieneRuta(ctx, c.id) && (ctx.ruta ? ctx.ruta(c.id) : rutaDelCurso(ctx, c.id))?.terminado) numero = c.numero + 1;
+  return numero;
+}
+
+// El curso que toca: el pedido, pero nunca uno sin ruta (en preparación): ahí se quedaría sin recomendaciones. Se queda
+// en el último curso con ruta, que sigue con consolidación hasta que el siguiente se publique (Fase 2.1, punto 8).
+export function cursoActual(ctx, programa, porNiveles = 1) {
+  const cursos = ctx.cat.cursos.filter(c => c.programa === programa);
+  const numero = Math.min(cursoPedido(ctx, programa, porNiveles), cursos.length);
+  return cursos.filter(c => c.numero <= numero && tieneRuta(ctx, c.id)).at(-1) ?? cursos.find(c => c.numero === numero) ?? null;
 }
 
 // Dónde se trabaja una competencia: pasos de la ruta y ejercicios.
@@ -274,7 +401,7 @@ export function obraEnRutas(ctx, obraId) {
     const clave = (p.contenido || []).find(x => separar(x)[0] === obraId);
     return { paso: p.id, titulo: p.titulo, clase: p.clase, papel: p.papel ?? null, seccion: clave ? separar(clave)[1] : null, tramo: tramo?.orden ?? null, tramoTitulo: tramo?.titulo ?? null, curso: curso?.numero ?? null, cursoId: curso?.id ?? null, href: `#/paso/${encodeURIComponent(p.id)}` };
   });
-  const finalDe = (ctx.cat.finalDe.get(obraId) || []).map(c => ({ curso: c.id, numero: c.numero, nombre: c.nombre, justificacion: c.obraFinal.justificacion, requisitos: c.obraFinal.requisitos || [] }));
+  const finalDe = (ctx.cat.finalDe.get(obraId) || []).map(c => ({ curso: c.id, obra: obraId, numero: c.numero, nombre: c.nombre, justificacion: c.obraFinal.justificacion, requisitos: c.obraFinal.requisitos || [] }));
   return { pasos, finalDe };
 }
 

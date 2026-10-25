@@ -6,7 +6,7 @@ import { catalogoReal } from './ayuda.js';
 
 const cat = catalogoReal();
 // Una obra con las dos notaciones (una sola fuente da partitura y tablatura) que pide lectura 3.
-const obra = { id: 'obra:x', tipo: 'obra', ruta: 'clasica', notacion: { fuente: 'notacion/x.json' }, lecturaNecesaria: { nivel: 3 }, dificultad: { valor: 2 } };
+const obra = { id: 'obra:x', tipo: 'obra', programa: 'clasica', notacion: { fuente: 'notacion/x.json' }, lecturaNecesaria: { nivel: 3 }, dificultad: { valor: 2 } };
 
 test('caso A: un ejercicio de técnica se enseña en tablatura (y la partitura está si se quiere)', () => {
   const r = recomendarFormato(cat.porId.get('ej:esc.mi-mayor-1pos'), { lectura: 5, proposito: 'tecnica' });

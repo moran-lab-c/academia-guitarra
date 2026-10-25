@@ -56,6 +56,9 @@ export default function hoy({ min } = {}) {
         h('span', { class: 'rotulo' }, 'DÓNDE ESTÁS'),
         h('span', { class: 'display display-m' }, `Curso ${dos(ruta.curso.numero)} · ${ruta.curso.nombre}`),
         miniRuta(ruta),
+        ruta.continuidad && h('span', { class: 'pequeno ocre' }, ruta.continuidad.motivo === 'cierres'
+          ? 'Lo de la ruta está hecho: faltan las comprobaciones en frío de los cierres.'
+          : 'Has terminado lo disponible; lo siguiente está en preparación. Mientras, consolidar.'),
         h('span', { class: 'suave' }, tramo ? `Tramo ${tramo.orden}, ${tramo.titulo.toLowerCase()}.` : '', ruta.final ? h('span', null, ' Al final del curso, ★ ', h('span', { class: 'titulo-obra' }, ruta.final.titulo.replace(', completa', '')), ` completa, ${ruta.final.detalle ?? ''}.`) : '')),
       comoSeHaHecho(p),
       encargos(c),
@@ -73,7 +76,8 @@ function bloque(c, b, desde) {
   const hecho = sesion.hechos.has(b.id);
   const abierto = sesion.detalle === b.id;
   const actual = b.tipo === 'paso' && b.actual;
-  const [etq, tipo] = actual ? ['Ahora', 'ahora'] : b.modo === 'comprobacion' ? ['Comprobar', 'refuerzo'] : b.tipo === 'area' ? [NOMBRE_AREA[b.area] ?? 'Área', 'neutro'] : ETIQUETA[b.tipo] ?? [null, 'neutro'];
+  const [etq, tipo] = actual ? ['Ahora', 'ahora'] : b.modo === 'comprobacion' ? ['Comprobar', 'refuerzo'] : b.modo === 'recuperar' ? ['Recuperar', 'refuerzo']
+    : b.modo === 'mantenimiento' ? ['Repertorio', 'neutro'] : b.tipo === 'area' ? [NOMBRE_AREA[b.area] ?? 'Área', 'neutro'] : ETIQUETA[b.tipo] ?? [null, 'neutro'];
   const nombre = item?.tipo === 'obra' ? h('span', null, h('span', { class: 'titulo-obra' }, item.titulo), b.nombre.length > item.titulo.length ? b.nombre.slice(item.titulo.length) : '') : b.titulo;
   return h('li', { class: `tarjeta bloque-sesion${actual ? ' tarjeta-ahora' : ''}${b.tipo === 'refuerzo' ? ' tarjeta-borde' : ''}${abierto ? ' bloque-sesion--abierto' : ''}`, style: hecho ? 'opacity:.55' : '' },
     h('div', { class: 'fila', style: 'gap:14px;align-items:center' },
@@ -103,7 +107,7 @@ function bloque(c, b, desde) {
 
 const abrir = clave => () => { sesion.abierto = sesion.abierto === clave ? null : clave; repintar(); };
 const guardado = clave => () => { sesion.hechos.add(clave); sesion.abierto = null; repintar(); };
-const extra = b => ({ area: b.area, minutos: b.minutos, encargo: b.encargo, sesion: sesion.id, idLibre: b.encargo ? `encargo:${b.encargo}` : null });
+const extra = b => ({ area: b.area, minutos: b.minutos, encargo: b.encargo, sesion: sesion.id, idLibre: b.encargo ? `encargo:${b.encargo}` : null, paso: b.paso ?? null });
 
 // La recomendación se recalcula al dibujar, para que el selector refleje lo que acaba de elegir.
 function notacionDe(c, b) {
@@ -138,12 +142,12 @@ function comoSeHaHecho(p) {
   const obra = de('obra');
   const lista = [
     ['Profesor', hay('encargo') ? `su encargo entra primero, con sus minutos.${yMas(nc.encargos, 'encargo', 'encargos')}` : nc.encargos ? noCabe(nc.encargos, 'un encargo', 'encargos') : 'hoy no hay encargos pendientes.'],
-    ['Repasos críticos', hay('comprobacion') ? `lo vencido de tu ruta, en frío y al principio (${plural(de('comprobacion').minutos, 'minuto')}).${yMas(nc.comprobaciones, 'comprobación', 'comprobaciones')}`
-      : nc.comprobaciones ? noCabe(nc.comprobaciones, 'una comprobación vencida de tu ruta', 'comprobaciones vencidas de tu ruta') : 'nada urgente que comprobar.'],
+    ['Comprobaciones en frío', hay('comprobacion') ? `las de más prioridad, en frío y al principio (${plural(de('comprobacion').minutos, 'minuto')}).${yMas(nc.comprobaciones, 'comprobación vencida', 'comprobaciones vencidas')} Lo que no entra sigue en la cola.`
+      : nc.comprobaciones ? noCabe(nc.comprobaciones, 'una comprobación vencida', 'comprobaciones vencidas') : 'nada que comprobar hoy.'],
     ['Tu sitio en la ruta', hay('paso') ? 'el paso en el que estás y, si cabe, el siguiente.' : nc.paso ? noCabe(1, 'un paso recomendado') : 'ahora no hay ningún paso recomendado.'],
     ['Lo que necesita la obra', hay('refuerzo') ? `un refuerzo justo antes de tocarla.${yMas(nc.refuerzos, 'refuerzo', 'refuerzos')}` : nc.refuerzos ? noCabe(nc.refuerzos, 'algo flojo que reforzar', 'cosas flojas que reforzar') : 'nada flojo que reforzar.'],
     ['Puntos flojos', p.bloques.some(b => b.motivos?.some(m => /por detrás/.test(m))) ? 'el área que va por detrás recibe más tiempo, sin frenar nada.' : nc.flojos ? noCabe(nc.flojos, 'un área por detrás', 'áreas por detrás') : 'ningún área va por detrás.'],
-    ['Resto y repertorio', obra ? `${obra.paso ? 'la obra de tu tramo' : 'tu obra en estudio'}${hay('pasada') ? ' y una pasada para acabar' : ''}.` : 'lo que queda del curso.'],
+    ['Resto y repertorio', obra ? `${obra.modo === 'mantenimiento' ? 'repertorio que ya tocas, para que no se pierda' : obra.modo === 'recuperar' ? 'la obra de tu tramo, para recuperar lo que falló' : obra.paso ? 'la obra de tu tramo' : 'tu obra en estudio'}${hay('pasada') ? ' y una pasada para acabar' : ''}.` : 'lo que queda del curso.'],
     ['Tiempo', `${p.minutos} minutos en ${plural(p.bloques.length, 'bloque')}.`],
   ];
   return h('div', { class: 'tarjeta pila-s' },
