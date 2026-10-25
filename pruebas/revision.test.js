@@ -4,7 +4,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { planificar, MIN_BLOQUE } from '../logica/planificador.js';
 import { estadoInicial } from '../logica/esquema.js';
-import { ctxDe, catalogoReal, practica, tanda, diagnostico, BIEN } from './ayuda.js';
+import { indexar, conPropio } from '../logica/catalogo.js';
+import { contexto } from '../logica/progreso.js';
+import { ctxDe, catalogoReal, entidadesReales, practica, tanda, diagnostico, enDia, BIEN } from './ayuda.js';
 
 const cat = catalogoReal();
 const LAGRIMA = 'obra:tarrega.lagrima';
@@ -45,11 +47,15 @@ test('lo que pide la obra y falla no se refuerza dos veces en el mismo tramo (ap
   assert.equal(ids.filter(c => c === 'comp:tec.melodia-acompanada').length, 1, ids.join(', '));
 });
 
-test('el refuerzo de lectura antes de Sor dice su número con coma', () => {
-  const r = ctxDe({ eventos: falloCejilla(), hoy: '2026-10-26' }).rutaActual('clasica');
+test('el refuerzo de lectura antes de una obra para leer que aún no está a su nivel dice sus números con coma', () => {
+  // Solo para esta prueba, Sor pide lectura 2,5 (más que el nivel 1 que trabaja): antes de ella, un refuerzo de lectura.
+  const entidades = entidadesReales().map(e => (e.id === 'obra:sor.op60-1' ? { ...e, lecturaNecesaria: { nivel: 2.5, naturaleza: 'estimacion' } } : e));
+  const estado = estadoInicial();
+  const eventos = tramo1('2026-10-20').filter(e => !e.resultados?.['comp:lec.notas-1pos-agudas'] && e.item !== 'comp:lec.notas-1pos-agudas');
+  const r = contexto(indexar(conPropio(entidades, estado)), estado, eventos, new Date(enDia('2026-10-21', 12))).rutaActual('clasica');
   const lect = r.tramos[1].pasos.find(p => p.insertado && p.porLectura);
   assert.ok(lect, 'hay refuerzo de lectura');
-  assert.match(lect.detalle, /tu lectura \(0,3\)/);
+  assert.match(lect.detalle, /pide lectura de nivel 2,5 y ahora trabajas el 1/);
 });
 
 test('apertura y cierre de tramos: visible no es recomendado, y los tramos en borrador no dejan pasar al cierre', () => {

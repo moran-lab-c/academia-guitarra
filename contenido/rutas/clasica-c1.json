@@ -39,8 +39,8 @@
 
   {
     "id": "tramo:c1.cierre", "programa": "clasica", "curso": "curso:c1", "orden": 6, "cierre": true,
-    "titulo": "Cierre del curso", "objetivos": ["Lágrima entera, de memoria y grabada"],
+    "titulo": "Cierre del curso", "objetivos": ["Lágrima entera y de memoria (la grabación, opcional por ahora)"],
     "pasos": ["paso:c1.cierre.01"]
   },
-  { "id": "paso:c1.cierre.01", "programa": "clasica", "clase": "preparacion", "area": "interpretacion", "titulo": "Preparar la obra final", "objetivo": "Unir la parte A y la B, tocarla entera sin parar, de memoria, y hacer una grabación de prueba.", "trabaja": ["comp:int.pieza-sin-parar"], "contenido": ["obra:tarrega.lagrima"] }
+  { "id": "paso:c1.cierre.01", "programa": "clasica", "clase": "preparacion", "area": "interpretacion", "titulo": "Preparar la obra final", "objetivo": "Unir la parte A y la B y tocarla entera sin parar, de memoria. Una grabación de prueba ayuda, pero por ahora es opcional.", "trabaja": ["comp:int.pieza-sin-parar"], "contenido": ["obra:tarrega.lagrima"] }
 ]

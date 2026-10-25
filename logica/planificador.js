@@ -1,21 +1,22 @@
 // «¿Qué hago hoy?». Determinista: con los mismos datos, la misma sesión.
 // Qué entra, por este orden (decisión de David del 25/10/2026, con las correcciones de la Fase 2.1):
 //   1. los encargos del profesor, con sus minutos;
-//   2. las comprobaciones en frío, de una sola cola con prioridad (ver colaDeRepasos), 2-4 minutos al principio
-//      (6 con 90 o más); lo que no cabe sigue en la cola para otro día y nada queda relegado para siempre;
+//   2. las comprobaciones en frío, de una sola cola con jerarquía y puntuación (ver colaDeRepasos), 2-4 minutos al
+//      principio (6 con 90 o más); lo que no cabe sigue en la cola para otro día y nada queda relegado para siempre;
 //   3. el objetivo actual de la ruta: el paso en el que está y la obra eje de su tramo (una obra para leer no la sustituye);
-//   4. lo que esa obra necesita y está flojo (los refuerzos de la ruta, uno por necesidad);
-//   5. los puntos flojos: una sola lectura al día (la de la ruta si la hay; recibe más tiempo si va por detrás, sin frenar nada);
-//   6. el resto de la práctica del curso; un área principal que lleva días sin aparecer sube de prioridad (sin pasar
-//      por delante del profesor, la ruta ni los refuerzos).
-// Si la ruta no tiene nada que proponer (cierres pendientes o lo que queda está en preparación), la sesión consolida:
-// comprobaciones, refuerzos y repertorio que ya toca. Después se reparte el tiempo y cada bloque dice para qué es.
+//   4. lo que esa obra necesita (los refuerzos de la ruta, uno por necesidad, y la vuelta a la obra que falló en frío);
+//   5. la lectura, solo si hace falta (necesidadLectura), con el mejor recurso disponible; una sola por sesión;
+//   6. el resto de la práctica del curso; un área que pasa su margen de días sin aparecer sube de prioridad (sin pasar
+//      por delante del profesor, las comprobaciones, la ruta ni los refuerzos).
+// Si la ruta espera (cierres pendientes o lo que queda está en preparación): comprobaciones, necesidades y reparaciones,
+// repertorio activo del curso, consolidación, lectura si hace falta y cobertura. Después se reparte el tiempo y cada
+// bloque dice para qué es.
 import { diasEntre } from './fechas.js';
 import { estaHecho, textoCriterio } from './dominio.js';
 import { pasajesDeLectura } from './notacion.js';
 import { recomendar, formatoPara } from './recomendador.js';
-import { areaDe, nombreDe, separar, seccionDe } from './catalogo.js';
-import { relacionesPaso, estimada, esLectura } from './ruta.js';
+import { areaDe, nombreDe, separar, seccionDe, pideDe } from './catalogo.js';
+import { relacionesPaso, estimada, esLectura, nivelLecturaTrabajo } from './ruta.js';
 
 export const DURACIONES = [20, 30, 45, 60, 90, 120];
 export const MIN_BLOQUE = 5;
@@ -43,8 +44,6 @@ const PROGRAMAS_DE = { clasica: ['clasica', 'comun'], flamenca: ['flamenca', 'co
 // Peso de cada candidato en el reparto del tiempo [Decisión, ajustable].
 const PESO = { paso: 25, siguiente: 15, obra: 35, refuerzo: 18, lectura: 12, estudio: 25 };
 const TOPE_FRIO = minutos => (minutos >= 90 ? 6 : 4); // minutos para comprobaciones en frío (aprobado: 2-4, 6 con 90 o más)
-// Áreas principales de cada programa: si llevan días sin aparecer, suben de prioridad (punto 9 de la Fase 2.1).
-const IMPORTANTES = new Set(['tecnica', 'repertorio', 'fl-tecnica', 'fl-toque']);
 const LECTURA_DEL_DIA = 'lectura-del-dia'; // clave compartida: una sola lectura por sesión, también con «los dos»
 
 export function planificar(ctx, { minutos, programa = 'clasica' }) {
@@ -127,7 +126,7 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados, frio }
   const esperan = cola.filter(x => !usados.has(x.id));
 
   // 3-6. Lo demás, por prioridad; entra lo que quepa y el tiempo se reparte por pesos.
-  const candidatos = candidatosSesion(ctx, programa, usados, avisos);
+  const candidatos = candidatosSesion(ctx, programa, usados, avisos, new Set(items.map(x => x.id)));
   const k = Math.max(0, Math.min(huecos, Math.floor(libre / MIN_BLOQUE)));
   const elegidos = [];
   for (const c of candidatos) {
@@ -157,11 +156,16 @@ function planPrograma(ctx, minutos, programa, { calentar, pausas, usados, frio }
   return { bloques: ordenar(bloques), avisos, noCaben, esperan };
 }
 
-// Los candidatos de la sesión, de más a menos prioritario.
-function candidatosSesion(ctx, programa, usados, avisos) {
+// Los candidatos de la sesión, de más a menos prioritario. Escala de prioridades (menor = antes):
+//   1 paso actual · 2 obra principal (la obra eje) · 3,xx refuerzos (lo que necesita la obra) · 3,4 tope de la cobertura
+//   · 3,5 lectura atrasada · 4 segundo paso · 5 lectura ligada a la ruta · 6 dosis de lectura y obras en estudio
+//   · 7 obra recomendada y demás pasos · 8 resto de áreas.
+// Mientras la ruta espera (decisión 7): refuerzos 3,xx · repertorio activo del curso 4 · consolidación 4,5 · lectura 5
+//   · tope de la cobertura 5,5.
+function candidatosSesion(ctx, programa, usados, avisos, comprobados = new Set()) {
   const lista = [];
   const reservados = new Set(usados); // lo que ya tiene un candidato, para que cada área elija otra cosa
-  const anadir = c => { c.claves.forEach(x => reservados.add(x)); lista.push(c); };
+  const anadir = c => { [...c.claves, ...(c.reserva || [])].forEach(x => reservados.add(x)); lista.push(c); };
   const libreDe = c => c && !c.claves.some(x => reservados.has(x));
   const ruta = ctx.rutaActual(programa);
   const ref = ctx.resumen[programa]?.referencia ?? 0;
@@ -169,6 +173,8 @@ function candidatosSesion(ctx, programa, usados, avisos) {
   const pasos = abiertos.flatMap(t => t.pasos);
   const tramoDe = new Map(abiertos.flatMap(t => t.pasos.map(p => [p.id, t])));
   const enRuta = pasos.filter(p => ['actual', 'recomendado'].includes(p.estado));
+  const espera = !!ruta?.continuidad;
+  const sinAparecer = diasSinAparecer(ctx);
 
   // 3. El objetivo actual de la ruta: su paso actual (y otro paso abierto si hay tiempo) y la obra eje del tramo.
   const deTrabajo = enRuta.filter(p => ['habilidad', 'aplicacion', 'preparacion'].includes(p.tipo) && !p.porConfirmar && !p.insertado)
@@ -178,49 +184,67 @@ function candidatosSesion(ctx, programa, usados, avisos) {
     if (c) anadir({ ...c, prioridad: i === 0 ? 1 : 4, peso: i === 0 ? PESO.paso : PESO.siguiente });
   });
   // La obra principal es la obra eje del tramo (o, si ya está hecha, la siguiente obra de la ruta que no sea para leer).
-  // Una obra para leer (Sor) no la sustituye: entra como la lectura del día (5).
+  // Una obra para leer (Sor) nunca la sustituye: solo puede entrar como recurso de lectura (5).
   const obrasRuta = enRuta.filter(p => p.tipo === 'obra' && !usados.has(separar(p.obra)[0]));
   const principales = obrasRuta.filter(p => !esLectura(p));
   const pasoObra = principales.find(p => tramoDe.get(p.id)?.obraEje === p.obra) ?? principales[0] ?? null;
   if (pasoObra) anadir({ ...candidatoObraRuta(ctx, pasoObra, programa, ruta), prioridad: 2 });
 
-  // 4. Lo que la obra necesita y está flojo: un candidato por necesidad (la ruta ya los ha unido); la lectura, aparte.
+  // 4. Lo que necesitan las obras (necesidades y reparaciones): un candidato por necesidad (la ruta ya los ha unido),
+  // todos por delante de la cobertura de áreas; el refuerzo de lectura va con la lectura.
   pasos.filter(p => p.insertado && p.estado === 'recomendado' && !p.porLectura).forEach((p, i) => {
     const c = candidatoRefuerzo(ctx, p, programa, ref);
-    if (libreDe(c)) anadir({ ...c, prioridad: i === 0 ? 3 : 5, peso: PESO.refuerzo });
+    if (libreDe(c)) anadir({ ...c, prioridad: 3 + i / 100, peso: PESO.refuerzo });
+  });
+  // Y la vuelta a una obra (o sección) ya aprendida cuya comprobación en frío ha fallado: recuperar lo que falló o, si no
+  // consta qué, una revisión general. Puede convivir con la obra principal aunque sea otra parte de la misma obra.
+  pasos.filter(p => p.tipo === 'obra' && p.estado === 'repaso' && p.recuperar && !esLectura(p)).forEach((p, i) => {
+    const c = { ...candidatoObraRuta(ctx, p, programa, ruta), claves: [p.obra, `reparar:${p.obra}`] };
+    if (libreDe(c)) anadir({ ...c, prioridad: 3.5 + i / 100 });
   });
 
-  // 5. Una sola lectura al día. Si un paso de lectura de la ruta ya entra, es esa. Si no: el refuerzo de lectura que pide
-  // la obra para leer del tramo; si no hace falta, la propia obra para leer; si no, la lectura del curso (o sobre su
-  // repertorio). Va antes si la lectura va por detrás, y su tiempo baja si esta semana ya ha tenido de sobra.
-  const dLectura = desfase(ctx, 'lectura', ref);
-  const pesoLectura = PESO.lectura * (1 + 0.25 * Math.min(4, dLectura.niveles)) * factorSemana(ctx, programa, 'lectura');
-  const prioLectura = deRuta => (dLectura.niveles >= 1 ? 3.5 : deRuta ? 5 : 6);
+  // Mientras la ruta espera: el repertorio activo del curso (lo que aún no está aprendido, con la obra final delante) y la
+  // consolidación de lo aprendido, antes que la lectura y la cobertura. Una obra para leer no es repertorio por defecto.
+  // Sin ruta en espera, solo si no hay ninguna obra en la sesión.
+  if (!pasoObra) {
+    const { activo, consolidacion } = candidatosRepertorio(ctx, programa, reservados, ruta, comprobados);
+    if (activo) anadir({ ...activo, prioridad: espera ? 4 : 6.5 });
+    if (libreDe(consolidacion)) anadir({ ...consolidacion, prioridad: espera ? 4.5 : 7.5 });
+  }
+
+  // 5. Lectura: primero se mira si hay una necesidad de lectura hoy; si la hay, se busca el mejor recurso; si no, nada.
+  // Una sola actividad de lectura por sesión (también con «los dos»).
   const pasoLectura = obrasRuta.find(esLectura) ?? null;
-  const refLectura = pasos.find(p => p.insertado && p.porLectura && p.estado === 'recomendado') ?? null;
-  // Mientras su lectura quede más de medio nivel por debajo de lo que pide la obra para leer, se prepara con el refuerzo
-  // (y si hoy no puede ser, con la lectura de su nivel) en vez de leer la obra.
-  const lectura = [
-    refLectura ? conClave(candidatoRefuerzo(ctx, refLectura, programa, ref), LECTURA_DEL_DIA, true) : pasoLectura && candidatoObraLectura(ctx, pasoLectura, programa, ref),
-    conClave(candidatoArea(ctx, 'lectura', programa, ref, reservados), LECTURA_DEL_DIA, false),
-  ].find(libreDe);
-  if (lectura) anadir({ ...lectura, prioridad: prioLectura(lectura.deRuta), peso: pesoLectura });
+  const nec = necesidadLectura(ctx, programa, ref, pasoLectura, sinAparecer);
+  const yaHayLectura = lista.some(c => c.claves.includes(LECTURA_DEL_DIA));
+  if (nec.hay && !yaHayLectura) {
+    const pesoLectura = PESO.lectura * (1 + 0.25 * Math.min(4, nec.desfase)) * factorSemana(ctx, programa, 'lectura');
+    const refLectura = pasos.find(p => p.insertado && p.porLectura && p.estado === 'recomendado') ?? null;
+    // La ruta manda el orden: si antes de la obra para leer queda un paso de lectura (p. ej., las notas de las cuerdas
+    // 4-6 antes de Sor), va ese (lo elige la lectura del área, que prefiere lo de su ruta y sus pasajes).
+    const lecturaAntes = pasoLectura && pasos.slice(0, pasos.indexOf(pasoLectura)).some(p => esLectura(p) && p.tipo !== 'obra' && !p.insertado && ['actual', 'recomendado', 'proximo'].includes(p.estado));
+    const recurso = [
+      refLectura && conClave(candidatoRefuerzo(ctx, refLectura, programa, ref), LECTURA_DEL_DIA, true), // preparar una obra para leer que aún no está a su nivel
+      pasoLectura && !lecturaAntes && aportaObraLectura(ctx, pasoLectura) && candidatoObraLectura(ctx, pasoLectura, programa, ref), // Sor, si su lectura aporta algo
+      conClave(candidatoArea(ctx, 'lectura', programa, ref, reservados), LECTURA_DEL_DIA, false), // la lectura de su nivel: su ruta o pasajes de sus obras
+    ].find(libreDe);
+    if (recurso) {
+      const prioridad = espera ? 5 : nec.desfase >= 1 ? 3.5 : recurso.deRuta ? 5 : 6;
+      const crear = recurso.crear;
+      anadir({ ...recurso, prioridad, peso: pesoLectura, crear: m => { const b = crear(m); b.motivos = [...b.motivos, `Hoy hace falta lectura: ${nec.motivo}.`]; return b; } });
+    }
+  }
 
   // 6. El resto: obras que está estudiando fuera de la ruta y las demás áreas del curso.
   for (const o of ctx.cat.obras.filter(x => x.programa === programa && ctx.marca(x.id) === 'en-estudio')) {
-    if (usados.has(o.id) || usados.has(`obra-base:${o.id}`) || (pasoObra && separar(pasoObra.obra)[0] === o.id)) continue;
+    if (usados.has(o.id) || reservados.has(`obra-base:${o.id}`) || (pasoObra && separar(pasoObra.obra)[0] === o.id)) continue;
     anadir({ ...candidatoObraEstudio(ctx, o, programa), prioridad: 6 });
   }
   if (!pasoObra && !lista.some(c => c.tipo === 'obra')) {
     const r = recomendar(ctx, { programa, limite: 1 }).find(x => x.viabilidad.clase === 'estudiable');
     if (r && !usados.has(r.obra.id)) anadir({ ...candidatoObraEstudio(ctx, r.obra, programa, ['No tienes ninguna obra en estudio; te propongo esta.', ...r.razones.slice(0, 2)]), prioridad: 7 });
   }
-  // Sin obra de la ruta ni en estudio: mantener vivo lo que ya toca (repertorio aprendido que más tiempo lleva sin tocarse).
-  if (!lista.some(c => c.tipo === 'obra')) {
-    const m = candidatoMantenimiento(ctx, programa, reservados, ruta);
-    if (m) anadir({ ...m, prioridad: 7.5 });
-  }
-  // Los demás pasos abiertos de la ruta, en su orden, antes que cualquier otra cosa del área (la lectura ya tiene su bloque).
+  // Los demás pasos abiertos de la ruta, en su orden, antes que cualquier otra cosa del área (la lectura ya tiene su sitio).
   deTrabajo.slice(2).filter(p => !esLectura(p)).forEach((p, i) => {
     const c = candidatoPaso(ctx, p, programa, ref, false);
     if (libreDe(c)) anadir({ ...c, prioridad: 7 + i / 100, peso: PESO.siguiente * 0.8 });
@@ -230,27 +254,68 @@ function candidatosSesion(ctx, programa, usados, avisos) {
     if (c) anadir({ ...c, prioridad: 8 + a.orden / 100, peso: a.peso });
   }
 
-  // Cobertura: un área principal que lleva días sin aparecer sube un punto de prioridad por día (hasta 4,5: detrás del
-  // paso actual, la obra eje, el primer refuerzo, la lectura atrasada y el segundo paso) y algo de peso. Nunca adelanta
-  // al profesor (va antes, aparte), a las comprobaciones ni a la ruta.
-  // Si el área ya entra hoy por algo más prioritario (un paso, la obra, un refuerzo), no hace falta subir nada; si no,
-  // solo sube su mejor candidato.
-  const sinAparecer = diasSinAparecer(ctx);
-  const cubiertas = new Set(lista.filter(c => c.prioridad <= 4.5).map(c => c.area));
+  // Cobertura (decisión 4): cada área del reparto del curso tiene un margen de días sin aparecer según su peso
+  // (margenDias). Pasado el margen, cada día de más sube un punto la prioridad de su mejor candidato (para que entre; su
+  // tiempo sigue saliendo del reparto), sin pasar nunca de 3,4 (5,5 mientras la ruta espera): no adelanta al profesor, a
+  // las comprobaciones, al objetivo de la ruta ni a lo que necesita la obra. Si el área ya entra hoy por algo
+  // prioritario, no sube nada.
+  const tope = espera ? 5.5 : 3.4;
+  const margenes = margenDias(ctx, programa);
+  const cubiertas = new Set(lista.filter(c => c.prioridad <= tope).map(c => c.area));
   for (const c of [...lista].sort((a, b) => a.prioridad - b.prioridad)) {
-    const d = IMPORTANTES.has(c.area) && !cubiertas.has(c.area) ? sinAparecer(c.area) : 0;
-    if (d < 1) continue;
+    if (!(c.area in margenes) || cubiertas.has(c.area) || c.prioridad <= tope) continue;
+    const exceso = sinAparecer(c.area) - margenes[c.area];
+    if (exceso < 1) continue;
     cubiertas.add(c.area);
-    c.prioridad = Math.min(c.prioridad, Math.max(4.5, 8 - d));
-    c.peso *= 1 + 0.25 * Math.min(4, d);
+    c.prioridad = Math.max(tope, Math.min(c.prioridad, 8 - exceso));
+    c.exceso = exceso; // a igual prioridad, entra antes lo que más tiempo lleva olvidado
+    const d = sinAparecer(c.area);
     const crear = c.crear;
-    c.crear = minutos => { const b = crear(minutos); b.motivos = [...b.motivos, `${nombreArea(ctx, c.area)} lleva ${d} ${d === 1 ? 'día' : 'días'} sin aparecer: sube de prioridad para no quedarse olvidada.`]; return b; };
+    c.crear = minutos => { const b = crear(minutos); b.motivos = [...b.motivos, `${nombreArea(ctx, c.area)} lleva ${d} ${d === 1 ? 'día' : 'días'} sin aparecer (su margen es de ${margenes[c.area]}): sube de prioridad para no quedarse olvidada.`]; return b; };
   }
 
   // Si la ruta no tiene nada que proponer, se dice por qué y la sesión consolida.
-  if (ruta?.continuidad) avisos.push(textoContinuidad(ruta, ctx.resumen[programa]?.enPreparacion));
+  if (espera) avisos.push(textoContinuidad(ruta, ctx.resumen[programa]?.enPreparacion));
   else if (ctx.resumen[programa]?.enPreparacion) avisos.push(`Tus niveles ya apuntan al curso ${ctx.resumen[programa].enPreparacion.numero}, que está en preparación: sigues con la ruta del curso ${ruta?.curso.numero ?? ''}.`);
-  return lista.sort((a, b) => a.prioridad - b.prioridad);
+  return lista.sort((a, b) => a.prioridad - b.prioridad || (b.exceso ?? 0) - (a.exceso ?? 0));
+}
+
+// ¿Hace falta lectura hoy? Sí si va por detrás de su técnica y su repertorio; si la obra para leer de su tramo pide más
+// lectura de la que tiene; si esta semana lleva menos lectura de la que le toca en el reparto (sin historia todavía, una
+// dosis diaria); o si lleva más días sin aparecer que su margen. Si no, está cubierta y no entra nada de lectura.
+function necesidadLectura(ctx, programa, ref, pasoLectura, sinAparecer) {
+  const L = ctx.niveles.lectura?.efectivo ?? 0;
+  const d = desfase(ctx, 'lectura', ref).niveles;
+  const obra = pasoLectura && ctx.cat.porId.get(separar(pasoLectura.obra)[0]);
+  const pide = obra ? (seccionDe(obra, separar(pasoLectura.obra)[1])?.lecturaNecesaria ?? obra.lecturaNecesaria?.nivel ?? null) : null;
+  const semana = semanaDe(ctx, programa, 'lectura');
+  const margen = margenDias(ctx, programa).lectura;
+  if (d >= 1) return { hay: true, desfase: d, motivo: 'va por detrás de tu técnica y tu repertorio' };
+  if (pide != null && L < pide) return { hay: true, desfase: d, motivo: `la obra para leer de tu tramo pide lectura ${String(pide).replace('.', ',')} y la tuya es ${String(Math.round(L * 10) / 10).replace('.', ',')}` };
+  if (semana && semana.conHistoria && semana.real < semana.objetivo) return { hay: true, desfase: d, motivo: 'esta semana lleva menos lectura de la que le toca' };
+  if (semana && !semana.conHistoria) return { hay: true, desfase: d, motivo: 'un poco cada día' };
+  if (margen != null && sinAparecer('lectura') > margen) return { hay: true, desfase: d, motivo: 'lleva días sin aparecer' };
+  return { hay: false, desfase: d };
+}
+
+// Sor (o cualquier obra para leer) aporta si se puede leer en su nivel de trabajo y todavía le queda algo de lectura por
+// dar: su lectura no llega aún a la que pide la obra, o alguna competencia de lectura que desarrolla no está dominada.
+function aportaObraLectura(ctx, p) {
+  const [id, seccion] = separar(p.obra);
+  const obra = ctx.cat.porId.get(id);
+  const pide = seccionDe(obra, seccion)?.lecturaNecesaria ?? obra.lecturaNecesaria?.nivel ?? null;
+  if (pide != null && pide > nivelLecturaTrabajo(ctx)) return false; // aún no: antes, su refuerzo de lectura
+  const L = ctx.niveles.lectura?.efectivo ?? 0;
+  const desarrolla = (obra.desarrolla || []).filter(c => ctx.cat.porId.get(c)?.area === 'lectura');
+  return (pide != null && L < pide) || desarrolla.some(c => ctx.estadoDe(c) !== 'dominado');
+}
+
+// Margen de días sin aparecer de cada área del reparto base del curso: cuanto más peso tiene, menos puede faltar.
+// margen = 100 / (porcentaje × 4 bloques de contenido de una sesión de 60 minutos), redondeado y al menos 1:
+// en el curso 1 clásico, repertorio 1 día; técnica y lectura, 2; escalas, 3; ritmo y oído, 4; teoría, armonía y mástil, 5.
+function margenDias(ctx, programa) {
+  const base = repartoDe(ctx, programa);
+  return Object.fromEntries(Object.entries(base).map(([a, pct]) => [a, Math.max(1, Math.round(100 / (pct * 4)))]));
 }
 
 const conClave = (c, clave, deRuta) => (c ? { ...c, claves: [...c.claves, clave], deRuta } : null);
@@ -266,16 +331,18 @@ function textoContinuidad(ruta, enPreparacion) {
   return `Has terminado lo disponible del curso ${ruta.curso.numero}; ${partes.join(' y ')} ${partes.length > 1 || k.tramosEnPreparacion.length > 1 ? 'están' : 'está'} en preparación. ${mientras}`;
 }
 
-// Días que lleva cada área sin aparecer en su práctica (sin contar hoy). Si nunca ha aparecido, los días desde la primera
-// práctica registrada; sin historial, 0 (no hay nada que se haya olvidado todavía).
+// Días que lleva cada área sin aparecer en su práctica (sin contar hoy): prácticas y tandas, no las comprobaciones en
+// frío (unos minutos de comprobar no son practicar el área). Si nunca ha aparecido, los días desde la primera práctica
+// registrada; sin historial, 0 (no hay nada que se haya olvidado todavía).
 function diasSinAparecer(ctx) {
   const ultima = new Map();
   let primera = null;
+  const anotar = (area, t) => { if (area && (!ultima.has(area) || t > ultima.get(area))) ultima.set(area, t); };
   for (const ev of ctx.eventos) {
-    if (ev.tipo !== 'practica' || diasEntre(ev.t, ctx.hoy) < 0) continue;
+    if (!['practica', 'bateria'].includes(ev.tipo) || ev.modo === 'comprobacion' || diasEntre(ev.t, ctx.hoy) < 0) continue;
     if (!primera || ev.t < primera) primera = ev.t;
-    const area = ev.area ?? areaDe(ctx.cat.porId.get(separar(ev.item)[0]));
-    if (area && (!ultima.has(area) || ev.t > ultima.get(area))) ultima.set(area, ev.t);
+    if (ev.tipo === 'bateria') for (const id of Object.keys(ev.resultados || {})) anotar(areaDe(ctx.cat.porId.get(id)), ev.t);
+    else anotar(ev.area ?? areaDe(ctx.cat.porId.get(separar(ev.item)[0])), ev.t);
   }
   return area => {
     const desde = ultima.get(area) ?? primera;
@@ -301,8 +368,10 @@ function candidatoPaso(ctx, p, programa, ref, esActual) {
   if (para) motivos.push(`${para}.`);
   motivos.push(...desfase(ctx, item.area, ref).motivos);
   const area = p.area ?? item.area;
+  // Una aplicación trabaja el pasaje, no la competencia suelta: no choca con la comprobación en frío de esa competencia.
   return {
-    tipo: 'paso', area, claves: [comp, p.id, ...(esLectura({ area }) ? [LECTURA_DEL_DIA] : [])],
+    tipo: 'paso', area, claves: [...(aplica ? [`aplicacion:${p.obra}`] : [comp]), p.id, ...(esLectura({ area }) ? [LECTURA_DEL_DIA] : [])],
+    reserva: aplica ? [comp] : [], // que ningún otro bloque elija la misma competencia
     crear: minutos => ({
       tipo: 'paso', area, programa, minutos, paso: p.id, item: comp, seccion: null, nombre: p.titulo, actual: esActual,
       titulo: `${nombreArea(ctx, area)}: ${p.titulo}`, ejercicio: ejercicio?.id ?? null,
@@ -320,8 +389,9 @@ function paraQueDePaso(rel) {
   return `Lo necesitas para ${obra.seccionTitulo ? `la ${minuscula(obra.seccionTitulo)} de ` : ''}${obra.titulo}`;
 }
 
-// La obra del tramo (o la sección que toca). Si ya la conocía, una pasada de comprobación en vez de aprenderla; si la
-// conocía y la comprobación falló, se recupera lo que falló (sin aprenderla de cero).
+// La obra del tramo (o la sección que toca). Si ya la conocía, una pasada de comprobación en vez de aprenderla; si su
+// última comprobación en frío falló, se recupera lo que falló (sin aprenderla de cero) o, si no consta qué falló, una
+// revisión general valorando cada aspecto.
 function candidatoObraRuta(ctx, p, programa, ruta) {
   const [id, seccion] = separar(p.obra);
   const obra = ctx.cat.porId.get(id);
@@ -331,12 +401,16 @@ function candidatoObraRuta(ctx, p, programa, ruta) {
   const esFinal = ruta?.final?.obra === id;
   const base = { claves: [p.obra, `obra-base:${id}`], tipo: 'obra', area };
   if (p.recuperar) {
+    const general = p.recuperar.indeterminado === 'aspecto';
     return { ...base, peso: PESO.obra, crear: minutos => ({
       tipo: 'obra', modo: 'recuperar', area, programa, minutos, paso: p.id, item: id, seccion, nombre,
-      titulo: `Obra: ${nombre} (recuperar)`, criterio: textoCriterio(obra, ctx.estado.ajustes?.[id]),
+      titulo: `Obra: ${nombre} (${general ? 'revisión general' : 'recuperar'})`, criterio: textoCriterio(obra, ctx.estado.ajustes?.[id]),
       notacion: formatoPara(obra, ctx, { proposito: 'repertorio', seccion: sec }),
-      paraQue: 'La conocías: no se aprende de cero, se recupera lo que falló en la comprobación.',
-      motivos: [`${p.detalle}.`, 'Trabaja primero lo que falló (el refuerzo va antes) y después vuelve a tocarla entera; la próxima comprobación en frío dirá si ya está.'],
+      paraQue: general ? 'La comprobación falló sin que conste en qué: tócala entera valorando cada aspecto, para saber qué reforzar.'
+        : p.recuperar.conocida ? 'La conocías: no se aprende de cero, se recupera lo que falló en la comprobación.' : 'Recuperar lo que falló en la comprobación en frío.',
+      motivos: [`${p.detalle}.`, general ? 'No se inventa un diagnóstico: sin saber qué aspecto falló, no se propone un refuerzo concreto.'
+        : p.recuperar.indeterminado ? 'Ninguna competencia de la ruta trabaja ese aspecto todavía: se trabaja dentro de la obra.'
+          : 'Trabaja primero lo que falló (el refuerzo va antes) y después vuelve a tocarla entera; la próxima comprobación en frío dirá si ya está.'],
     }) };
   }
   if (p.conocida) {
@@ -387,32 +461,54 @@ function candidatoObraLectura(ctx, p, programa, ref) {
   };
 }
 
-// Repertorio que ya toca y lleva más tiempo sin tocarse (obras o secciones aprendidas): para no perderlo cuando la ruta
-// no propone obra (cierres pendientes o lo que queda en preparación).
-function candidatoMantenimiento(ctx, programa, reservados, ruta) {
+// Repertorio del curso cuando la ruta no propone obra (decisión 7). Nunca una obra para leer por defecto (esa entra por
+// la lectura, si hace falta):
+//   activo        lo que el curso aún no tiene aprendido: primero la obra final (si no está aprendida con sus
+//                 requisitos), después las obras de la ruta en su orden; la sección que falte, o la obra entera;
+//   consolidación lo ya aprendido del curso que más tiempo lleva sin tocarse, para que no se pierda.
+// La comprobación en frío de hoy no saca de la sesión la obra activa: se comprueba al principio y después se trabaja
+// (la consolidación, en cambio, ya la ha hecho esa pasada en frío).
+function candidatosRepertorio(ctx, programa, reservados, ruta, comprobados = new Set()) {
   const area = programa === 'flamenca' ? 'fl-toque' : 'repertorio';
-  const claves = [];
-  for (const o of ctx.cat.obras.filter(x => x.programa === programa)) {
-    if (reservados.has(o.id) || reservados.has(`obra-base:${o.id}`)) continue;
-    if (estaHecho(ctx.estadoDe(o.id))) { claves.push(o.id); continue; }
-    for (const s of o.secciones || []) if (estaHecho(ctx.estadoDe(`${o.id}#${s.id}`))) claves.push(`${o.id}#${s.id}`);
-  }
+  const ocupada = k => reservados.has(k) && !comprobados.has(k);
+  const obrasCurso = (ruta?.obras || []).filter(x => !x.papeles.every(pp => pp === 'lectura') && !reservados.has(`obra-base:${x.obra.id}`) && !ocupada(x.obra.id));
+  obrasCurso.sort((a, b) => b.papeles.includes('final') - a.papeles.includes('final'));
   const ultima = k => ctx.dom.get(k)?.ultimaPractica ?? '';
-  const clave = claves.sort((a, b) => ultima(a).localeCompare(ultima(b)) || a.localeCompare(b))[0];
-  if (!clave) return null;
-  const [id, seccion] = separar(clave);
-  const obra = ctx.cat.porId.get(id);
-  const sec = seccionDe(obra, seccion);
-  const nombre = obra.titulo + (sec ? `, ${minuscula(sec.titulo)}` : '');
-  const hace = ultima(clave) ? diasEntre(ultima(clave), ctx.hoy) : null;
+  let activo = null;
+  for (const x of obrasCurso) {
+    const o = x.obra;
+    const esFinal = x.papeles.includes('final') && ruta?.final?.obra === o.id;
+    const pendiente = (o.secciones || []).map(sec => `${o.id}#${sec.id}`).find(k => !estaHecho(ctx.estadoDe(k)));
+    const clave = pendiente ?? (!estaHecho(ctx.estadoDe(o.id)) || (esFinal && !ruta.final.progreso?.aprendida) ? o.id : null);
+    if (clave && !ocupada(clave)) { activo = { clave, esFinal: esFinal && clave === o.id }; break; }
+  }
+  const aprendidas = obrasCurso.flatMap(x => [x.obra.id, ...(x.obra.secciones || []).map(sec => `${x.obra.id}#${sec.id}`)])
+    .filter(k => estaHecho(ctx.estadoDe(k)) && !reservados.has(k) && (!activo || separar(k)[0] !== separar(activo.clave)[0]))
+    .sort((a, b) => ultima(a).localeCompare(ultima(b)) || a.localeCompare(b));
+  const crear = (clave, modo, paraQue, motivos) => {
+    const [id, seccion] = separar(clave);
+    const obra = ctx.cat.porId.get(id);
+    const sec = seccionDe(obra, seccion);
+    const nombre = obra.titulo + (sec ? `, ${minuscula(sec.titulo)}` : '');
+    if (comprobados.has(clave)) motivos = [...motivos, 'Ya la has comprobado en frío al principio: ahora se trabaja lo que haya salido flojo.'];
+    return {
+      tipo: 'obra', area, claves: [comprobados.has(clave) ? `trabajo:${clave}` : clave, `obra-base:${id}`], peso: PESO.estudio,
+      crear: minutos => ({
+        tipo: 'obra', modo, area, programa, minutos, item: id, seccion, nombre, titulo: `Repertorio: ${nombre}`,
+        criterio: textoCriterio(obra, ctx.estado.ajustes?.[id]), notacion: formatoPara(obra, ctx, { proposito: 'repertorio', seccion: sec }),
+        paraQue, motivos,
+      }),
+    };
+  };
+  const espera = !!ruta?.continuidad;
+  const textoActivo = activo?.esFinal
+    ? (espera ? 'Mientras la ruta espera, la obra final del curso: unir lo aprendido y prepararla con sus requisitos.' : 'La obra final del curso: unir lo aprendido y prepararla con sus requisitos.')
+    : (espera ? 'Mientras la ruta espera, repertorio del curso que aún no está aprendido.' : 'Repertorio del curso que aún no está aprendido.');
   return {
-    tipo: 'obra', area, claves: [clave, `obra-base:${id}`], peso: PESO.estudio,
-    crear: minutos => ({
-      tipo: 'obra', modo: 'mantenimiento', area, programa, minutos, item: id, seccion, nombre, titulo: `Repertorio: ${nombre}`,
-      criterio: textoCriterio(obra, ctx.estado.ajustes?.[id]), notacion: formatoPara(obra, ctx, { proposito: 'repertorio', seccion: sec }),
-      paraQue: ruta?.continuidad ? 'Mientras la ruta espera, mantener vivo lo que ya tocas.' : 'Mantener vivo lo que ya tocas.',
-      motivos: [`Ya la tocas${hace != null ? ` y lleva ${hace} ${hace === 1 ? 'día' : 'días'} sin tocarse` : ''}: una pasada para que no se pierda.`],
-    }),
+    activo: activo && crear(activo.clave, 'activo', textoActivo,
+      [activo.esFinal ? 'Es la obra final del curso: queda aprendida cuando sale entera con sus requisitos (de memoria).' : 'Repertorio activo del curso, todavía sin aprender.']),
+    consolidacion: aprendidas[0] && crear(aprendidas[0], 'mantenimiento', espera ? 'Mientras la ruta espera, mantener vivo lo que ya tocas.' : 'Mantener vivo lo que ya tocas.',
+      [`Ya la tocas${ultima(aprendidas[0]) ? ` y lleva ${diasEntre(ultima(aprendidas[0]), ctx.hoy)} días sin tocarse` : ''}: una pasada para consolidarla.`]),
   };
 }
 
@@ -527,47 +623,69 @@ function bloqueEncargo(ctx, t, minutos, programa) {
   };
 }
 
-// La cola de comprobaciones en frío (los repasos). Entra todo lo que toca comprobar: lo vencido, lo que está a punto de
-// olvidarse (más del 80 % de su intervalo, Plan 7, regla 7) y lo que el diagnóstico da por sabido en su ruta. Cada cosa
-// tiene una prioridad sencilla, que es la suma de:
-//   riesgo de pérdida   tiempo sin comprobar / su intervalo (1 = le toca hoy), hasta 2;
-//   relación            +2 si es de un tramo abierto de su ruta, de la obra final o de una obra que estudia; +1 si es
-//                       de otro tramo del curso actual; 0 si es de fuera (cursos anteriores, áreas sueltas);
-//   lo que falló        +1 si la última comprobación en frío falló (para saber si el refuerzo ha servido);
-//   antigüedad          +1 por cada semana que lleva vencida.
-// Lo de hoy entra por orden de prioridad hasta el tope de minutos; lo demás sigue en la cola. Como lo nuevo nunca pasa
-// de unos 5 puntos y lo que espera gana uno por semana, nada se queda relegado para siempre. Cada cosa dice sus motivos.
+// La cola de comprobaciones en frío (los repasos), decisión de David (Fase 2.1). Entra todo lo que toca comprobar: lo
+// vencido, lo que está a punto de olvidarse (más del 80 % de su intervalo, Plan 7, regla 7) y lo que el diagnóstico da
+// por sabido en su ruta. Primero manda una jerarquía mínima (la franja) y, dentro de cada franja, una puntuación:
+//   franja 1  necesidad crítica actual: lo que pide la obra principal de su tramo o lo que tiene un refuerzo abierto;
+//   franja 2  la ruta y la obra activa: lo de su curso actual, la obra final y las obras que estudia;
+//   franja 3  lo que falló en su última comprobación en frío;
+//   franja 4  lo demás que está vencido;
+//   franja 5  lo que solo está a punto de olvidarse.
+//   puntuación = riesgo de olvido (hasta 2) + relación con la ruta (+2 tramo abierto u obra activa, +1 resto del curso)
+//                + 1 si falló la última vez + 1 por semana vencida (hasta 4).
+// Para que nada quede relegado para siempre, cada 4 semanas vencida una cosa sube una franja (sin llegar nunca a la 1).
+// Entra por orden lo que cabe en el tope de minutos; lo demás sigue en la cola. Cada cosa dice sus motivos.
+const TOPE_SEMANAS = 4;
+const NOMBRE_FRANJA = { 1: 'lo necesita la obra que estás trabajando', 2: 'de tu ruta', 3: 'falló la última vez', 4: 'vencida', 5: 'a punto de olvidarse' };
 export function colaDeRepasos(ctx, programa) {
   const programas = PROGRAMAS_DE[programa];
   const ruta = ctx.rutaActual(programa);
-  const deTramo = new Set(), deCurso = new Set();
-  for (const t of ruta?.tramos || []) for (const p of t.pasos) for (const k of p.claves || []) (t.estado === 'abierto' ? deTramo : deCurso).add(k);
+  const abiertos = (ruta?.tramos || []).filter(t => t.estado === 'abierto');
+  const deTramo = new Set(abiertos.flatMap(t => t.pasos.flatMap(p => p.claves || [])));
+  const deCurso = new Set((ruta?.tramos || []).flatMap(t => t.pasos.flatMap(p => p.claves || [])));
   if (ruta?.final) deTramo.add(ruta.final.obra);
   for (const o of ctx.cat.obras) if (ctx.marca(o.id) === 'en-estudio') deTramo.add(o.id);
+  // Lo crítico ahora: lo que pide la obra eje del tramo (y la propia obra) y lo que tiene un refuerzo abierto.
+  const criticas = new Set(abiertos.flatMap(t => t.pasos).filter(p => p.insertado && p.comp).map(p => p.comp));
+  for (const t of abiertos) if (t.obraEje) {
+    const [id, sec] = separar(t.obraEje);
+    const obra = ctx.cat.porId.get(id);
+    if (obra && !estaHecho(ctx.estadoDe(t.obraEje))) for (const c of pideDe(obra, sec)) criticas.add(c);
+  }
   const relacion = (id, base) => (deTramo.has(id) || deTramo.has(base) ? 2 : deCurso.has(id) || deCurso.has(base) ? 1 : 0);
   const r1 = x => Math.round(x * 10) / 10;
   const cola = [];
+  const meter = (id, item, seccion, d, estimadaDiag) => {
+    const base = separar(id)[0];
+    const rel = relacion(id, base);
+    const diasVencida = d ? Math.max(0, diasEntre(d.proxima, ctx.hoy)) : 0;
+    const vencida = d ? d.urgencia >= 1 : false;
+    const fallo = d?.ultimoFrio?.res === 'no';
+    let franja = criticas.has(id) ? 1 : rel > 0 || estimadaDiag ? 2 : fallo ? 3 : vencida ? 4 : 5;
+    const sube = franja > 2 ? Math.min(franja - 2, Math.floor(diasVencida / (7 * TOPE_SEMANAS))) : 0;
+    franja -= sube;
+    const puntos = estimadaDiag ? 0.5 + rel
+      : Math.min(2, d.urgencia) + rel + (fallo ? 1 : 0) + Math.min(TOPE_SEMANAS, diasVencida / 7);
+    const motivos = [estimadaDiag ? 'El diagnóstico lo da por sabido: confírmalo' : d.estado === 'necesita-repaso' ? 'Necesita repaso' : vencida ? 'Toca comprobarlo' : 'A punto de olvidarse'];
+    if (franja === 1) motivos.push(NOMBRE_FRANJA[1]);
+    else if (rel === 2) motivos.push(item.tipo === 'obra' ? 'de una obra de tu ruta' : 'de tu tramo');
+    else if (rel === 1) motivos.push('de tu curso');
+    if (fallo) motivos.push('falló la última vez');
+    if (diasVencida) motivos.push(`vencida hace ${diasVencida} ${diasVencida === 1 ? 'día' : 'días'}`);
+    if (sube) motivos.push(`lleva más de ${TOPE_SEMANAS * sube} semanas esperando: sube de prioridad`);
+    cola.push({ id, item, seccion, franja, prioridad: r1(puntos), vencida, diasVencida, motivo: `${motivos.join(', ')}.` });
+  };
   for (const [id, d] of ctx.dom) {
     const [base, seccion] = separar(id);
     const item = ctx.cat.porId.get(base);
     if (!item || !programas.includes(item.programa) || !d.solidez || !(d.urgencia >= 0.8)) continue;
-    const rel = relacion(id, base);
-    const diasVencida = Math.max(0, diasEntre(d.proxima, ctx.hoy));
-    const fallo = d.ultimoFrio?.res === 'no' ? 1 : 0;
-    const prioridad = r1(Math.min(2, d.urgencia) + 2 * (rel === 2) + (rel === 1) + fallo + diasVencida / 7);
-    const motivos = [d.estado === 'necesita-repaso' ? 'Necesita repaso' : d.urgencia >= 1 ? 'Toca comprobarlo' : 'A punto de olvidarse'];
-    if (diasVencida) motivos.push(`vencida hace ${diasVencida} ${diasVencida === 1 ? 'día' : 'días'}`);
-    if (rel === 2) motivos.push(item.tipo === 'obra' ? 'de una obra de tu ruta' : 'de tu tramo');
-    if (fallo) motivos.push('falló la última vez');
-    cola.push({ id, item, seccion, prioridad, vencida: d.urgencia >= 1, diasVencida, motivo: `${motivos.join(', ')}.` });
+    meter(id, item, seccion, d, false);
   }
   for (const c of ctx.cat.competencias) {
-    if (programas.includes(c.programa) && (deTramo.has(c.id) || deCurso.has(c.id)) && estimada(ctx, c.id)) {
-      cola.push({ id: c.id, item: c, seccion: null, prioridad: r1(0.5 + relacion(c.id, c.id)), vencida: false, diasVencida: 0, motivo: 'El diagnóstico lo da por sabido: confírmalo.' });
-    }
+    if (programas.includes(c.programa) && deCurso.has(c.id) && estimada(ctx, c.id)) meter(c.id, c, null, null, true);
   }
   return cola.map(x => ({ ...x, minutos: x.item.tipo === 'obra' ? 4 : 2, nombre: nombreDe(x.item) + (x.seccion ? ` (${seccionDe(x.item, x.seccion)?.titulo ?? x.seccion})` : '') }))
-    .sort((a, b) => b.prioridad - a.prioridad || a.id.localeCompare(b.id));
+    .sort((a, b) => a.franja - b.franja || b.prioridad - a.prioridad || a.id.localeCompare(b.id));
 }
 
 // El reparto base del curso para un programa.
@@ -576,11 +694,17 @@ const repartoDe = (ctx, programa) => (REPARTO[programa].find(([hasta]) => (ctx.c
 // El déficit de la semana: lo que lleva menos minutos de los que le tocan sube y lo que va sobrado baja (de ×0,6 a ×1,5).
 // También para la lectura: así no se come la sesión cuando la ruta tiene poco (en vez de un tope fijo por área).
 function factorSemana(ctx, programa, area) {
+  const sem = semanaDe(ctx, programa, area);
+  if (!sem?.conHistoria) return 1; // con poca historia, el déficit no dice nada todavía
+  return Math.max(0.6, Math.min(1.5, 1 + (0.5 * (sem.objetivo - sem.real)) / sem.objetivo));
+}
+
+// La parte de un área en los minutos de la semana frente a la que le toca en el reparto (null si no está en el reparto).
+function semanaDe(ctx, programa, area) {
   const base = repartoDe(ctx, programa);
+  if (!base[area]) return null;
   const total7 = Object.keys(base).reduce((s, a) => s + (ctx.minutos7d[a] ?? 0), 0);
-  if (!base[area] || total7 < 60) return 1; // con poca historia, el déficit no dice nada todavía
-  const real = (ctx.minutos7d[area] ?? 0) / total7, objetivo = base[area] / 100;
-  return Math.max(0.6, Math.min(1.5, 1 + (0.5 * (objetivo - real)) / objetivo));
+  return { conHistoria: total7 >= 60, real: total7 ? (ctx.minutos7d[area] ?? 0) / total7 : 0, objetivo: base[area] / 100 };
 }
 
 // Las áreas del resto de la práctica, por peso; avisa de las que aún no tienen contenido.

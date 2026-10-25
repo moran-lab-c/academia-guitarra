@@ -6,7 +6,7 @@ import { ctx, cambiar } from '../nucleo/almacen.js';
 import { enlace, repintar } from '../nucleo/rutas.js';
 import { explicar, formatoPara } from '../../logica/recomendador.js';
 import { avisoTecnicaLectura, textoTablatura, decimal } from '../../logica/notacion.js';
-import { necesidades, obraEnRutas, estadoObra, progresoFinal } from '../../logica/ruta.js';
+import { necesidades, obraEnRutas, estadoObra, progresoFinal, textoRequisitos } from '../../logica/ruta.js';
 import { MARCAS_OBRA, CONOCIDA } from '../../logica/esquema.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { selectorFormato } from '../componentes/notacion.js';
@@ -143,12 +143,12 @@ function enLaRuta(c, enRutas) {
       const pf = progresoFinal(c, f.obra, f.requisitos);
       const marca = (ok, t) => h('li', { class: ok ? '' : 'suave' }, `${ok ? '✓' : '○'} ${t}`);
       return h('div', { class: 'pila-s' },
-        h('p', { class: 'pequeno', style: 'margin:0' }, `★ Obra final del curso ${String(f.numero).padStart(2, '0')}: ${f.requisitos.map(r => (r === 'memoria' ? 'de memoria' : 'grabada')).join(' y ')}.`),
+        h('p', { class: 'pequeno', style: 'margin:0' }, `★ Obra final del curso ${String(f.numero).padStart(2, '0')}: ${textoRequisitos(f.requisitos) ?? 'entera'}.`),
         h('ul', { class: 'lista-limpia pequeno' },
           marca(pf.primera, 'Primera realización (entera, como pida su criterio; puede ser leyendo)'),
-          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? 'De memoria, sin mirar' : 'Grabada')),
-          marca(pf.aprendida, 'Aprendida con sus requisitos: cierra el curso'),
-          marca(pf.consolidada, 'Consolidada (en frío, días después)'),
+          ...pf.requisitos.map(r => marca(r.cumplido, r.id === 'memoria' ? 'De memoria, sin mirar' : r.exigible ? 'Grabada' : 'Grabada (opcional por ahora: no se exige hasta que la grabación forme parte de la evaluación)')),
+          marca(pf.aprendida, 'Aprendida con sus requisitos: permite cerrar el curso'),
+          marca(pf.consolidada, 'Consolidada (en frío, días después): nivel posterior, no hace falta para pasar de curso'),
           marca(pf.dominada, 'Dominada')));
     }));
 }

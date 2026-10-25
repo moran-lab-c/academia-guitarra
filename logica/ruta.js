@@ -37,8 +37,13 @@ export function conocida(ctx, obraId, seccion = null) {
 
 // Las obras (o secciones) que contiene un paso.
 const obrasDe = (ctx, paso) => (paso.contenido || []).filter(x => ctx.cat.porId.get(separar(x)[0])?.tipo === 'obra');
-// Pasos que llevan una competencia a una obra (aplicación) o preparan una obra (preparación): saber la competencia no
-// basta; tiene que haber evidencia de que se ha trabajado esa obra o ese pasaje (Fase 2.1, punto 1).
+// Pasos que llevan una competencia a una obra (aplicación) o preparan una obra (preparación). Decisión de David
+// (Fase 2.1): se separan tres cosas que antes iban juntas:
+//   realizado   se ha trabajado la aplicación (evidencia de ese pasaje): basta para dar el paso por hecho;
+//   aprendido   la competencia que aplica está adquirida (completada);
+//   consolidado / dominado   lo dicen después las comprobaciones en frío de esa competencia.
+// Trabajar el pasaje no significa dominarlo, y si la competencia falla después, el paso pasa a «repaso» y sale refuerzo.
+// La preparación de la obra final es más que una aplicación (reúne el curso): además de su evidencia, pide su competencia.
 const CON_OBRA = new Set(['aplicacion', 'preparacion']);
 // Evidencia de haber trabajado una obra o sección: algún intento registrado de ella (o de la obra entera, que la
 // contiene), o una práctica registrada para ese paso concreto.
@@ -58,13 +63,20 @@ export function estadoPaso(ctx, paso) {
   else if (estados.every(e => e === 'dominado')) estado = 'dominado';
   else if (estados.every(estaHecho)) estado = 'hecho';
   else if (estados.some(e => e !== 'pendiente')) estado = 'en-curso';
-  // Una aplicación sin evidencia de su obra no está hecha (ni en repaso), aunque la competencia esté aprendida.
-  let faltaObra = false;
-  if (CON_OBRA.has(paso.clase) && obrasDe(ctx, paso).length && !aplicacionTrabajada(ctx, paso)) {
-    faltaObra = estados.every(estaHecho);
-    estado = 'pendiente';
+  let faltaObra = false, etapas = null;
+  if (CON_OBRA.has(paso.clase) && obrasDe(ctx, paso).length) {
+    const solidez = k => ctx.dom.get(k)?.solidez ?? 0;
+    etapas = {
+      realizado: aplicacionTrabajada(ctx, paso), aprendido: estados.every(estaHecho),
+      consolidado: estados.every(estaHecho) && claves.every(k => solidez(k) >= 2), dominado: estados.every(e => e === 'dominado'),
+    };
+    // Sin evidencia de la obra no está hecha (ni en repaso), aunque la competencia esté aprendida. Con evidencia, está
+    // hecha (realizada) aunque la competencia aún no lo esté; en repaso si la competencia ha fallado después.
+    if (!etapas.realizado) { faltaObra = etapas.aprendido; estado = 'pendiente'; }
+    else if (paso.clase === 'preparacion' && !etapas.aprendido) estado = estados.some(e => e !== 'pendiente') || etapas.realizado ? 'en-curso' : 'pendiente';
+    else estado = claves.some(k => situacion(ctx, k) === 'refuerzo') ? 'repaso' : etapas.dominado ? 'dominado' : 'hecho';
   }
-  return { estado, claves, conocida: conocidaObra && estado === 'pendiente', porConfirmar, faltaObra };
+  return { estado, claves, conocida: conocidaObra && estado === 'pendiente', porConfirmar, faltaObra, etapas };
 }
 
 // El cierre de un tramo se hace solo: cuando todo lo del tramo se ha comprobado en frío días después (solidez 2 o más).
@@ -110,7 +122,7 @@ export function rutaDelCurso(ctx, cursoId) {
     const hecho = !vacio && base.every(x => HECHO.has(x.e.estado));
     const completo = !vacio && sinEvaluar.every(x => HECHO.has(x.e.estado)); // lo que frena la ruta, hecho
     const tramo = { id: t.id, orden: t.orden, titulo: t.titulo, objetivos: t.objetivos || [], obraEje: t.obraEje ?? null, borrador: !!t.borrador || vacio,
-      cierre: !!t.cierre, estado: hecho ? 'hecho' : abierto ? 'abierto' : 'por-llegar', completo, hechos: 0, total: pasos.length, pasos: [] };
+      cierre: !!t.cierre, estado: hecho ? 'hecho' : abierto ? 'abierto' : 'por-llegar', alcanzado: abierto, completo, hechos: 0, total: pasos.length, pasos: [] };
     const esSiguiente = !abierto && !siguienteMarcado && abiertoVisto;
     for (const { p, e } of base) {
       numero++;
@@ -170,18 +182,18 @@ function vistaPaso(ctx, p, e, estado, numero) {
   const obraClave = (p.contenido || []).find(x => ctx.cat.porId.get(separar(x)[0])?.tipo === 'obra') ?? null;
   // Una obra para leer cuenta como lectura (color, mapa y planificador); las demás obras, como repertorio.
   const area = p.area ?? ctx.cat.porId.get((p.trabaja || [])[0])?.area ?? (p.papel === 'lectura' ? 'lectura' : p.clase === 'obra' ? (p.programa === 'flamenca' ? 'fl-toque' : 'repertorio') : null);
-  const fallo = p.clase === 'obra' && obraClave && estado !== 'hecho' && estado !== 'dominado' ? falloConocida(ctx, obraClave) : null;
+  const fallo = p.clase === 'obra' && obraClave && estado !== 'hecho' && estado !== 'dominado' ? falloEnFrio(ctx, obraClave) : null;
   const encargo = (ctx.estado.tareasProfesor || []).some(t => t.estado !== 'hecha' && t.estado !== 'cancelada' && (!t.hasta || t.hasta >= ctx.hoy)
     && t.item && ((p.trabaja || []).includes(t.item) || (p.contenido || []).some(x => separar(x)[0] === t.item)));
   let detalle = null;
   if (e.conocida) detalle = 'La conoces: se comprueba, no se aprende de cero';
-  else if (fallo) detalle = `La conocías; la comprobación falló${fallo.aspectos.length ? ` en ${fallo.aspectos.map(d => NOMBRE_ASPECTO[d] ?? d).join(', ')}` : ''}: se recupera, no se aprende de cero`;
+  else if (fallo) detalle = textoFallo(fallo);
   else if (e.faltaObra) detalle = `La técnica ya está; falta aplicarla en ${tituloClave(ctx, obraClave)}`;
   else if (e.porConfirmar) detalle = 'El diagnóstico lo da por sabido: se confirma en frío';
   else if (estado === 'repaso') detalle = 'Toca reforzarlo';
   return {
     id: p.id, numero, tipo: p.clase, papel: p.papel ?? null, area, titulo: p.titulo, objetivo: p.objetivo ?? null, detalle, estado,
-    enCurso: e.estado === 'en-curso', encargo, conocida: !!e.conocida, porConfirmar: !!e.porConfirmar, faltaObra: !!e.faltaObra, recuperar: fallo, insertado: false,
+    enCurso: e.estado === 'en-curso', encargo, conocida: !!e.conocida, porConfirmar: !!e.porConfirmar, faltaObra: !!e.faltaObra, etapas: e.etapas ?? null, recuperar: fallo, insertado: false,
     obra: obraClave, claves: e.claves, href: `#/paso/${encodeURIComponent(p.id)}`,
   };
 }
@@ -196,24 +208,33 @@ const NOMBRE_ASPECTO = {
   dinamica: 'la dinámica', articulacion: 'la articulación', fraseo: 'el fraseo', memoria: 'la memoria',
 };
 
-// Una obra (o sección) que conocía de antes y cuya última comprobación en frío no salió: qué aspectos fallaron y qué
-// competencias de las que pide la trabajan (las que miran esos aspectos). No reinicia la obra: dice qué recuperar.
-// null si no era conocida, si no se ha comprobado o si la última comprobación salió bien.
-export function falloConocida(ctx, clave) {
+// Una obra (o sección) cuya última comprobación en frío ha fallado (resultado «no»), sea nueva, aprendida, consolidada o
+// conocida de antes (decisión de David, Fase 2.1). Dice qué aspectos fallaron (los marcados «mal»; si no hay, los
+// marcados «con fallos») y qué competencias de las que pide los trabajan (las que miran esos aspectos en su criterio).
+// No inventa diagnósticos: si no consta qué aspecto falló, o ninguna competencia lo trabaja, lo dice (indeterminado) y
+// no propone un refuerzo concreto. null si no hay comprobación en frío o la última no falló. No reinicia la obra.
+export function falloEnFrio(ctx, clave) {
   const [id, seccion] = separar(clave);
-  if (!conocida(ctx, id, seccion)) return null;
   const obra = ctx.cat.porId.get(id);
   const ultimo = ctx.eventos.filter(ev => ev.tipo === 'practica' && ev.item === id && (ev.seccion ?? null) === seccion && !ev.fragmento
     && (ev.modo === 'comprobacion' || ev.enFrio === true)).sort((a, b) => a.t.localeCompare(b.t)).at(-1);
-  if (!ultimo) return null;
+  if (!ultimo || !obra) return null;
   const crit = criterioDe(obra, ctx.estado.ajustes?.[clave] ?? ctx.estado.ajustes?.[id]);
-  if (valorarIntento({ ...ultimo, enFrio: true }, crit) === 'ok') return null;
-  const valor = d => ultimo.calidad?.[d] ?? 'fallos';
-  const mal = crit.dimensiones.filter(d => valor(d) === 'mal');
-  const aspectos = mal.length ? mal : crit.dimensiones.filter(d => valor(d) === 'fallos' && ultimo.calidad?.[d]);
+  if (valorarIntento({ ...ultimo, enFrio: true }, crit) !== 'no') return null;
+  const marcado = d => ultimo.calidad?.[d];
+  const mal = crit.dimensiones.filter(d => marcado(d) === 'mal');
+  const aspectos = mal.length ? mal : crit.dimensiones.filter(d => marcado(d) === 'fallos');
   const comps = pideDe(obra, seccion).map(c => ({ c, n: criterioDe(ctx.cat.porId.get(c)).dimensiones.filter(d => aspectos.includes(d)).length }))
     .filter(x => x.n > 0).sort((a, b) => b.n - a.n).map(x => x.c);
-  return { aspectos, comps, fecha: ultimo.t.slice(0, 10) };
+  const indeterminado = !aspectos.length ? 'aspecto' : !comps.length ? 'competencia' : null;
+  return { aspectos, comps, indeterminado, conocida: !!conocida(ctx, id, seccion), fecha: ultimo.t.slice(0, 10) };
+}
+
+const textoAspectos = f => f.aspectos.map(d => NOMBRE_ASPECTO[d] ?? d).join(', ');
+function textoFallo(f) {
+  if (f.indeterminado === 'aspecto') return 'La comprobación en frío falló, pero no consta en qué aspecto: repásala entera valorando cada aspecto para saber qué reforzar';
+  if (f.indeterminado === 'competencia') return `La comprobación en frío falló en ${textoAspectos(f)}; ninguna competencia de la ruta lo trabaja todavía: revísalo en la propia obra`;
+  return f.conocida ? `La conocías; la comprobación falló en ${textoAspectos(f)}: se recupera, no se aprende de cero` : `La comprobación en frío falló en ${textoAspectos(f)}: se refuerza eso y se vuelve a la obra`;
 }
 
 // Antes de una obra (o de su aplicación) que está al alcance, la ruta pide reforzar lo que esa obra necesita y está
@@ -237,13 +258,16 @@ function insertarRefuerzos(ctx, res, L) {
         .map(c => ({ comp: c, porLectura: false, causa: ctx.estadoDe(c) === 'necesita-repaso' ? 'Necesita repaso' : 'Falló en frío' }))
         .map(x => ({ ...x, motivo: `${x.causa} y la pide ${motivoObra}` }));
       for (const c of p.recuperar?.comps || []) {
-        if (!lista.some(x => x.comp === c)) lista.push({ comp: c, porLectura: false, motivo: `La comprobación de ${motivoObra} falló en ${p.recuperar.aspectos.map(d => NOMBRE_ASPECTO[d] ?? d).join(', ')}, y eso lo trabaja` });
+        if (!lista.some(x => x.comp === c)) lista.push({ comp: c, porLectura: false, motivo: `La comprobación de ${motivoObra} falló en ${textoAspectos(p.recuperar)}, y eso lo trabaja` });
       }
+      // Una obra para leer que pide más que el nivel de lectura que está trabajando (el alcanzado + 1, la misma regla que
+      // para cualquier área) se prepara con una competencia de lectura de su nivel que aún no tenga hecha. Sin umbrales
+      // de «medio nivel»: si la obra está en su nivel de trabajo, ella misma es el recurso (ver el planificador).
       const pideLectura = (seccionDe(obra, seccion)?.lecturaNecesaria ?? obra.lecturaNecesaria?.nivel) ?? null;
-      if (p.papel === 'lectura' && pideLectura != null && pideLectura - L > 0.5) {
+      if (p.papel === 'lectura' && pideLectura != null && pideLectura > nivelLecturaTrabajo(ctx)) {
         const lectura = ctx.cat.competencias.find(c => c.area === 'lectura' && c.programa !== otroPrograma(res.curso.programa)
-          && c.nivel <= Math.floor(L) + 1 && ctx.estadoDe(c.id) !== 'dominado' && !enTramo.has(c.id));
-        if (lectura) lista.push({ comp: lectura.id, porLectura: true, motivo: `Para leer ${motivoObra}: tu lectura (${decimal(L)}) está por debajo de la que pide (${decimal(pideLectura)})` });
+          && c.nivel <= nivelLecturaTrabajo(ctx) && !estaHecho(ctx.estadoDe(c.id)) && !enTramo.has(c.id));
+        if (lectura) lista.push({ comp: lectura.id, porLectura: true, motivo: `Para leer ${motivoObra}: pide lectura de nivel ${decimal(pideLectura)} y ahora trabajas el ${nivelLecturaTrabajo(ctx)} (tu lectura: ${decimal(L)})` });
       }
       let nuevosAqui = 0;
       for (const r of lista) {
@@ -275,16 +299,28 @@ function insertarRefuerzos(ctx, res, L) {
 }
 
 const otroPrograma = p => (p === 'clasica' ? 'flamenca' : 'clasica');
+// El nivel de lectura en el que trabaja: el alcanzado + 1 (como en todas las áreas).
+export const nivelLecturaTrabajo = ctx => Math.floor(ctx.niveles.lectura?.nivel ?? 0) + 1;
 const minuscula = t => (t ? t[0].toLowerCase() + t.slice(1) : t); // «Parte B» → «parte B»
 
 // La obra final con sus requisitos. Su progreso usa el modelo de siempre, con el criterio de la obra más lo que pide el
-// curso (p. ej., de memoria) y la grabación:
+// curso (p. ej., de memoria). Decisión de David (Fase 2.1):
 //   primera realización: la obra entera sale como pide su criterio normal (puede ser leyendo);
-//   aprendida: sale con todos los requisitos (de memoria y, si se pide, grabada) → la obra final queda hecha;
-//   consolidada: solidez 2 con esos requisitos (una comprobación en frío días después);
+//   aprendida con requisitos: sale con los requisitos exigibles (de memoria) → la obra final queda hecha y permite
+//     cerrar el curso;
+//   consolidada: solidez 2 con esos requisitos (comprobaciones en frío días después): nivel posterior, no hace falta
+//     para pasar de curso;
 //   dominada: el «dominado» de siempre, con esos requisitos.
-// Una pasada leyendo no la cierra. La grabación, hasta la Fase 5, la declara él al registrar («la he grabado»).
-export const REQUISITOS_VERIFICABLES = ['memoria', 'grabacion'];
+// Una pasada leyendo no la cierra. La grabación es evidencia opcional («la he grabado») y no se exige hasta que forme
+// parte de la evaluación (Fase 5): se muestra, pero no bloquea.
+export const REQUISITOS_EXIGIBLES = ['memoria'];
+// «de memoria (grabada, opcional por ahora)»: los requisitos como se leen en la ruta y en la obra.
+export function textoRequisitos(requisitos = []) {
+  const exigibles = requisitos.filter(r => REQUISITOS_EXIGIBLES.includes(r)).map(r => (r === 'memoria' ? 'de memoria' : r));
+  const opcionales = requisitos.filter(r => !REQUISITOS_EXIGIBLES.includes(r)).map(r => (r === 'grabacion' ? 'grabada' : r));
+  if (!exigibles.length && !opcionales.length) return null;
+  return [exigibles.join(' y '), opcionales.length ? `(${opcionales.join(' y ')}, opcional por ahora)` : ''].filter(Boolean).join(' ');
+}
 export function progresoFinal(ctx, obraId, requisitos = []) {
   const obra = ctx.cat.porId.get(obraId);
   const ajuste = { ...(ctx.estado.ajustes?.[obraId] || {}), ...(requisitos.includes('memoria') ? { memoria: true } : {}) };
@@ -297,11 +333,11 @@ export function progresoFinal(ctx, obraId, requisitos = []) {
     memoria: requisitos.includes('memoria') ? okConRequisitos.length > 0 : null,
     grabacion: requisitos.includes('grabacion') ? okConRequisitos.some(ev => ev.grabacion === true) : null,
   };
-  const requisitosOk = requisitos.every(r => cumple[r] !== false);
+  const requisitosOk = requisitos.filter(r => REQUISITOS_EXIGIBLES.includes(r)).every(r => cumple[r] !== false);
   const aprendida = estaHecho(dom.estado) && requisitosOk;
   return {
     primera: estaHecho(ctx.estadoDe(obraId)), aprendida, consolidada: aprendida && dom.solidez >= 2, dominada: aprendida && dom.estado === 'dominado',
-    requisitos: requisitos.map(r => ({ id: r, cumplido: cumple[r] })), solidez: dom.solidez, estadoConRequisitos: dom.estado,
+    requisitos: requisitos.map(r => ({ id: r, cumplido: cumple[r], exigible: REQUISITOS_EXIGIBLES.includes(r) })), solidez: dom.solidez, estadoConRequisitos: dom.estado,
   };
 }
 
@@ -313,10 +349,11 @@ function finalDelCurso(ctx, curso, res) {
   const preparada = cierre ? cierre.pasos.filter(p => p.tipo === 'preparacion').every(p => HECHO.has(p.estado)) : true;
   const requisitos = curso.obraFinal.requisitos || [];
   const progreso = progresoFinal(ctx, obra.id, requisitos);
-  const estado = progreso.aprendida ? 'hecho' : cierre?.estado === 'abierto' || cierre?.estado === 'hecho' ? (preparada ? 'recomendado' : 'proximo') : 'futuro';
+  // Recomendada solo cuando la ruta llega al tramo de cierre (no porque sus pasos se hayan hecho antes de tiempo).
+  const estado = progreso.aprendida ? 'hecho' : cierre?.alcanzado ? (preparada ? 'recomendado' : 'proximo') : 'futuro';
   return {
     id: `final:${curso.id}`, obra: obra.id, titulo: `${obra.titulo}, completa`,
-    detalle: requisitos.length ? `de ${requisitos.map(r => (r === 'memoria' ? 'memoria' : 'grabada')).join(' y ')}`.replace('de grabada', 'grabada') : null,
+    detalle: textoRequisitos(requisitos),
     requisitos, progreso, justificacion: curso.obraFinal.justificacion, estado, conocida: !!conocida(ctx, obra.id),
     href: `#/obra/${encodeURIComponent(obra.id)}`,
   };

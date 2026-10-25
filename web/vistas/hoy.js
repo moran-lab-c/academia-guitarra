@@ -77,7 +77,7 @@ function bloque(c, b, desde) {
   const abierto = sesion.detalle === b.id;
   const actual = b.tipo === 'paso' && b.actual;
   const [etq, tipo] = actual ? ['Ahora', 'ahora'] : b.modo === 'comprobacion' ? ['Comprobar', 'refuerzo'] : b.modo === 'recuperar' ? ['Recuperar', 'refuerzo']
-    : b.modo === 'mantenimiento' ? ['Repertorio', 'neutro'] : b.tipo === 'area' ? [NOMBRE_AREA[b.area] ?? 'Área', 'neutro'] : ETIQUETA[b.tipo] ?? [null, 'neutro'];
+    : b.modo === 'mantenimiento' || b.modo === 'activo' ? ['Repertorio', 'neutro'] : b.tipo === 'area' ? [NOMBRE_AREA[b.area] ?? 'Área', 'neutro'] : ETIQUETA[b.tipo] ?? [null, 'neutro'];
   const nombre = item?.tipo === 'obra' ? h('span', null, h('span', { class: 'titulo-obra' }, item.titulo), b.nombre.length > item.titulo.length ? b.nombre.slice(item.titulo.length) : '') : b.titulo;
   return h('li', { class: `tarjeta bloque-sesion${actual ? ' tarjeta-ahora' : ''}${b.tipo === 'refuerzo' ? ' tarjeta-borde' : ''}${abierto ? ' bloque-sesion--abierto' : ''}`, style: hecho ? 'opacity:.55' : '' },
     h('div', { class: 'fila', style: 'gap:14px;align-items:center' },
@@ -147,7 +147,7 @@ function comoSeHaHecho(p) {
     ['Tu sitio en la ruta', hay('paso') ? 'el paso en el que estás y, si cabe, el siguiente.' : nc.paso ? noCabe(1, 'un paso recomendado') : 'ahora no hay ningún paso recomendado.'],
     ['Lo que necesita la obra', hay('refuerzo') ? `un refuerzo justo antes de tocarla.${yMas(nc.refuerzos, 'refuerzo', 'refuerzos')}` : nc.refuerzos ? noCabe(nc.refuerzos, 'algo flojo que reforzar', 'cosas flojas que reforzar') : 'nada flojo que reforzar.'],
     ['Puntos flojos', p.bloques.some(b => b.motivos?.some(m => /por detrás/.test(m))) ? 'el área que va por detrás recibe más tiempo, sin frenar nada.' : nc.flojos ? noCabe(nc.flojos, 'un área por detrás', 'áreas por detrás') : 'ningún área va por detrás.'],
-    ['Resto y repertorio', obra ? `${obra.modo === 'mantenimiento' ? 'repertorio que ya tocas, para que no se pierda' : obra.modo === 'recuperar' ? 'la obra de tu tramo, para recuperar lo que falló' : obra.paso ? 'la obra de tu tramo' : 'tu obra en estudio'}${hay('pasada') ? ' y una pasada para acabar' : ''}.` : 'lo que queda del curso.'],
+    ['Resto y repertorio', obra ? `${obra.modo === 'mantenimiento' ? 'repertorio que ya tocas, para que no se pierda' : obra.modo === 'activo' ? 'repertorio del curso que aún no está aprendido' : obra.modo === 'recuperar' ? 'recuperar lo que falló en una obra' : obra.paso ? 'la obra de tu tramo' : 'tu obra en estudio'}${hay('pasada') ? ' y una pasada para acabar' : ''}.` : 'lo que queda del curso.'],
     ['Tiempo', `${p.minutos} minutos en ${plural(p.bloques.length, 'bloque')}.`],
   ];
   return h('div', { class: 'tarjeta pila-s' },

@@ -68,7 +68,7 @@ export function formularioRegistro(item, extra = {}, alGuardar = () => {}) {
     requisitos.length > 0 && h('div', { class: 'pila-s' },
       h('span', { class: 'pequeno suave' }, 'Obra final: cuenta la obra entera con sus requisitos (una pasada leyendo no la cierra).'),
       requisitos.includes('memoria') && h('label', { class: 'check' }, h('input', { type: 'checkbox', name: 'deMemoria' }), 'De memoria, sin mirar la partitura'),
-      requisitos.includes('grabacion') && h('label', { class: 'check' }, h('input', { type: 'checkbox', name: 'grabada' }), 'La he grabado')),
+      requisitos.includes('grabacion') && h('label', { class: 'check' }, h('input', { type: 'checkbox', name: 'grabada' }), 'La he grabado (opcional)')),
     h('label', { style: 'display:flex' }, 'Nota (dificultades, observaciones)', h('textarea', { name: 'nota' })),
     aviso,
     h('button', { class: 'principal', type: 'submit' }, 'Guardar'));

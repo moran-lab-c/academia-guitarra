@@ -134,9 +134,9 @@ test('una obra que necesita algo flojo genera un refuerzo justo antes, y la sesi
   const refuerzo = plan.bloques.find(b => b.tipo === 'refuerzo' && b.item === 'comp:tec.media-cejilla');
   assert.ok(refuerzo, plan.bloques.map(b => `${b.tipo} ${b.item}`).join(' · '));
   assert.match(refuerzo.paraQue, /Lágrima/);
-  // Y una obra para leer cuando la lectura no llega: refuerzo de lectura antes del estudio de Sor.
+  // Sor pide la lectura del nivel que ya trabaja (1): no se inventa un refuerzo de lectura antes de ella (decisión 2).
   const sor = t2.pasos.findIndex(p => p.id === 'paso:c1.t2.06');
-  assert.ok(t2.pasos[sor - 1].insertado && /lectura/.test(t2.pasos[sor - 1].detalle), t2.pasos[sor - 1].detalle);
+  assert.ok(!t2.pasos[sor - 1].porLectura);
 });
 
 test('una obra que ya conocía no se reinicia: se comprueba con una pasada y queda aprendida', () => {
@@ -178,8 +178,8 @@ test('«¿Qué hago hoy?»: profesor, comprobaciones cortas por prioridad, la ru
   assert.deepEqual(plan.bloques.slice(0, 3).map(b => b.tipo), ['calentamiento', 'comprobacion', 'encargo']);
   const frio = plan.bloques[1];
   assert.ok(frio.minutos <= 4);
-  // Lo de fuera de la ruta ya no espera para siempre (Fase 2.1, punto 5): con 28 días vencida, entra primero.
-  assert.deepEqual(frio.items.map(x => x.id), ['comp:esc.arpegio-pima', 'comp:esc.mi-mayor-1pos']);
+  // Primero la ruta; lo de fuera ya no espera para siempre: hay sitio y entra detrás (Fase 2.1, decisión 3).
+  assert.deepEqual(frio.items.map(x => x.id), ['comp:esc.mi-mayor-1pos', 'comp:esc.arpegio-pima']);
   assert.ok(plan.bloques.some(b => b.tipo === 'paso' && /Tu paso actual/.test(b.motivos[0])));
   assert.ok(plan.bloques.some(b => b.tipo === 'obra' && b.item === 'obra:tarrega.lagrima'));
   assert.ok(plan.bloques.every(b => typeof b.paraQue === 'string' && b.paraQue.length > 0));

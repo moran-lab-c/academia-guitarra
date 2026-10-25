@@ -42,7 +42,12 @@ export default function paso({ id }) {
           ` · PASO ${vista?.numero ?? '?'} DE ${total}`, area && ' · ', area && h('span', { style: `color:${colorArea(area)}` }, (NOMBRE_AREA[area] ?? area).toUpperCase())),
         h('h1', { class: 'display display-g' }, p.titulo),
         p.objetivo && h('p', { class: 'lead suave', style: 'max-width:44em' }, p.objetivo),
-        vista?.detalle && h('p', { class: 'ocre' }, vista.detalle)),
+        vista?.detalle && h('p', { class: 'ocre' }, vista.detalle),
+        // Aplicación: realizada (pasaje trabajado), aprendida (competencia) y consolidada son cosas distintas.
+        vista?.etapas && h('p', { class: 'pequeno suave', style: 'margin:0' }, [
+          [vista.etapas.realizado, vista.etapas.realizado ? 'Aplicación trabajada' : 'Aplicación sin trabajar todavía'],
+          [vista.etapas.aprendido, 'competencia aprendida'], [vista.etapas.consolidado, 'consolidada'],
+        ].map(([ok, t]) => `${ok ? '✓' : '○'} ${t}`).join(' · '))),
       h('div', { class: 'fila' },
         practicar && h('a', { class: 'btn btn-papel btn-grande', href: practicar }, 'Practicar este paso'),
         obraClave && h('a', { class: 'btn btn-borde', href: enlace('/obra', obraClave.item.id) }, 'Ir a ', h('span', { class: 'titulo-obra' }, obraClave.item.titulo)))),
