@@ -342,6 +342,8 @@ function margenDias(ctx, programa) {
   return Object.fromEntries(Object.entries(base).map(([a, pct]) => [a, Math.max(1, Math.round(100 / (pct * 4)))]));
 }
 
+// «Lágrima (Parte A)»: el nombre de una obra o de una parte suya.
+const tituloDe = (ctx, clave) => { const [id, s] = separar(clave); const o = ctx.cat.porId.get(id); return `${o?.titulo ?? id}${s ? ` (${seccionDe(o, s)?.titulo ?? s})` : ''}`; };
 const conClave = (c, clave, deRuta) => (c ? { ...c, claves: [...c.claves, clave], deRuta } : null);
 
 function textoContinuidad(ruta, enPreparacion) {
@@ -705,7 +707,8 @@ export function colaDeRepasos(ctx, programa) {
     franja -= sube;
     const puntos = estimadaDiag ? 0.5 + rel
       : Math.min(2, d.urgencia) + rel + (fallo ? 1 : 0) + Math.min(TOPE_SEMANAS, diasVencida / 7);
-    const motivos = [estimadaDiag ? 'El diagnóstico lo da por sabido: confírmalo' : d.estado === 'necesita-repaso' ? 'Necesita repaso' : vencida ? 'Toca comprobarlo' : 'A punto de olvidarse'];
+    const evid = estimadaDiag ? ctx.evidencias?.get(id) : null;
+    const motivos = [estimadaDiag ? (evid?.resultado === 'favorable' && !ctx.niveles[item.area]?.estimado ? `${tituloDe(ctx, evid.fuente)} ya lo apunta: confírmalo` : 'El diagnóstico lo da por sabido: confírmalo') : d.estado === 'necesita-repaso' ? 'Necesita repaso' : vencida ? 'Toca comprobarlo' : 'A punto de olvidarse'];
     if (franja === 1) motivos.push(NOMBRE_FRANJA[1]);
     else if (rel === 2) motivos.push(item.tipo === 'obra' ? 'de una obra de tu ruta' : 'de tu tramo');
     else if (rel === 1) motivos.push('de tu curso');

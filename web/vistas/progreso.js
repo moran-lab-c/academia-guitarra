@@ -27,7 +27,8 @@ export default function progreso() {
       h('div', { class: 'pila-s' },
         h('div', { class: 'rotulo' }, `PROGRAMA ${NOMBRE_PROGRAMA[programa].toUpperCase()}${actual ? ` · CURSO ${dos(actual.numero)} DE ${dos(cursos.length)}` : ''}`),
         h('h1', { class: 'display display-g' }, 'Progreso'),
-        h('p', { class: 'suave', style: 'max-width:46em' }, 'Hecho: lo has completado. Dominado: lo has vuelto a tocar en frío, sin ayuda y con días de por medio (tres aciertos espaciados). Cada área tiene su propio nivel: una floja no te baja de curso.')),
+        h('p', { class: 'suave', style: 'max-width:46em' }, 'Hecho: lo has completado. Dominado: lo has vuelto a tocar en frío, sin ayuda y con días de por medio (tres aciertos espaciados). Cada área tiene su propio nivel: una floja no te baja de curso.'),
+        h('a', { href: '#/evaluaciones', class: 'pequeno' }, 'Mi punto de partida: evaluación inicial por áreas →')),
       h('div', { class: 'segmentado', role: 'group', 'aria-label': 'Programa' },
         [['clasica', 'Clásico'], ['flamenca', 'Flamenco']].map(([v, t]) => h('button', { type: 'button', 'aria-pressed': String(v === programa), onclick: () => elegirPrograma(v) }, t)))),
 

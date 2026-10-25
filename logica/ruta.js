@@ -20,11 +20,13 @@ export function situacion(ctx, compId) {
   return estimada(ctx, compId) ? 'estimada' : 'falta';
 }
 
-// Sin practicar, pero el diagnóstico estimó su área por encima de su nivel: se confirma, no se vuelve a estudiar.
+// Sin practicar, pero la evaluación inicial estimó su área por encima de su nivel, o una obra que ya sabía tocar dejó
+// evidencia favorable de ella: se confirma en frío, no se vuelve a estudiar.
 export function estimada(ctx, compId) {
   const c = ctx.cat.porId.get(compId);
   const n = c && ctx.niveles[c.area];
-  return !!(n?.estimado && c.nivel <= n.nivel && ctx.estadoDe(compId) === 'pendiente');
+  if (!c || ctx.estadoDe(compId) !== 'pendiente') return false;
+  return !!(n?.estimado && c.nivel <= n.nivel) || ctx.evidencias?.get(compId)?.resultado === 'favorable';
 }
 
 // La obra (o una sección suya) que él ya sabía tocar antes de la academia: { nivel } o null.

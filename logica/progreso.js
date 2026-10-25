@@ -7,6 +7,7 @@ import { focos } from './recomendador.js';
 import { areaDe } from './catalogo.js';
 import { rutaDelCurso, cursoActual, cursoPedido } from './ruta.js';
 import { PROGRAMAS } from './esquema.js';
+import { evidenciasVigentes } from './evaluacion.js';
 
 export function contexto(cat, estado, eventos, ahora = new Date()) {
   const hoy = dia(ahora);
@@ -15,6 +16,7 @@ export function contexto(cat, estado, eventos, ahora = new Date()) {
   const rutas = new Map();
   const ctx = {
     cat, estado, eventos, hoy, dom, niveles,
+    evidencias: evidenciasVigentes(eventos), // lo que dejaron en cada competencia las obras que ya sabía tocar
     estadoDe: id => dom.get(id)?.estado ?? 'pendiente',
     // Pasos con alguna práctica registrada para ellos (evidencia de que una aplicación se ha trabajado).
     pasosPracticados: new Set(eventos.filter(ev => ev.tipo === 'practica' && ev.paso).map(ev => ev.paso)),

@@ -65,6 +65,19 @@ export function notacionDibujada(item, parte, vista) {
   return contenedor;
 }
 
+// Una notación que no viene de un archivo del contenido (p. ej., la nota de una pregunta de lectura de la evaluación).
+// Se dibuja igual, con un ancho fijo y sin caché.
+export function notacionSuelta(json, vista = 'partitura', etiqueta = 'Notación', ancho = 240) {
+  const contenedor = h('div', { class: 'partitura partitura--suelta', 'data-vista': vista, 'aria-label': etiqueta, role: 'img' }, h('p', { class: 'partitura__estado' }, 'Dibujando…'));
+  cargarVexFlow()
+    .then(VF => {
+      const plan = prepararNotacion(json);
+      mostrar(contenedor, plan.ok ? dibujar(VF, plan, vista, ancho) : { error: plan.avisos[0], errores: plan.errores });
+    })
+    .catch(e => mostrar(contenedor, { error: `No se ha podido dibujar la notación (${e.message}).` }));
+  return contenedor;
+}
+
 function mostrar(contenedor, r) {
   if (r.error) {
     contenedor.replaceChildren(h('div', { class: 'partitura__estado partitura__estado--error' }, r.error,
@@ -105,7 +118,7 @@ export function dibujar(VF, plan, vista, ancho) {
       if (c.primero) {
         stave?.addClef('treble', 'default', '8vb').addKeySignature(plan.armadura);
         tab?.addClef('tab');
-        if (l === 0) (stave ?? tab).addTimeSignature(`${plan.compas.num}/${plan.compas.den}`);
+        if (l === 0 && plan.compasVisible) (stave ?? tab).addTimeSignature(`${plan.compas.num}/${plan.compas.den}`);
         if (l === 0 && plan.tempo && stave) stave.setTempo({ duration: plan.tempo.figura ?? '4', bpm: plan.tempo.bpm }, -10 - 16 * textoEncima);
       }
       stave?.setContext(ctx).draw();

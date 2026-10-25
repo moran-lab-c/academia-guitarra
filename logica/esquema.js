@@ -12,6 +12,12 @@ export const VISTAS = [...FORMATOS, 'ambas'];                // cómo se ve: una
 export const TIPOS_EVENTO = ['practica', 'bateria', 'sesion', 'nota', 'diagnostico', 'evaluacion'];
 export const AYUDAS = ['ninguna', 'notacion', 'referencia'];  // notacion = leyendo partitura o tablatura; referencia = audio, vídeo o profesor
 export const CALIDADES = ['bien', 'fallos', 'mal'];
+export const RESULTADOS = ['ok', 'casi', 'no'];
+// Evaluación inicial (evento «diagnostico»): cómo se probó cada competencia, la confianza de la estimación de un área y
+// lo que dejó en una competencia la pasada de una obra que ya sabía tocar. Ver logica/evaluacion.js.
+export const TIPOS_PRUEBA = ['app', 'autoevaluada', 'repertorio'];
+export const CONFIANZAS = ['baja', 'media', 'alta'];
+export const EVIDENCIAS = ['favorable', 'dudosa', 'en-contra'];
 // Aspectos de calidad que puede pedir un criterio (cada obra o ejercicio usa los suyos).
 export const DIMENSIONES = {
   precision: 'Notas correctas', ritmo: 'Ritmo y pulso', continuidad: 'Sin paradas', limpieza: 'Limpieza (sin trastear ni ruidos)',
@@ -80,6 +86,33 @@ export function validarEvento(ev) {
     if (!(d in DIMENSIONES)) err.push(`Evento ${ev.id}: aspecto desconocido «${d}»`);
     else if (!CALIDADES.includes(v)) err.push(`Evento ${ev.id}: valor «${v}» en ${d}`);
   }
+  if (ev.tipo === 'diagnostico') err.push(...validarDiagnostico(ev));
+  return err;
+}
+
+// Los campos de la evaluación inicial. Todos opcionales: un diagnóstico antiguo ({ niveles, pruebas: [{ item, resultado }] })
+// sigue siendo válido.
+function validarDiagnostico(ev) {
+  const err = [], donde = `Evento ${ev.id}`;
+  const nivel = n => Number.isInteger(n) && n >= 0 && n <= 7;
+  if (ev.modulo != null && typeof ev.modulo !== 'string') err.push(`${donde}: «modulo» debe ser un área`);
+  if (ev.niveles != null && (!esObjeto(ev.niveles) || !Object.values(ev.niveles).every(nivel))) err.push(`${donde}: cada nivel estimado va de 0 a 7`);
+  if (ev.confianza != null && (!esObjeto(ev.confianza) || !Object.values(ev.confianza).every(c => CONFIANZAS.includes(c)))) err.push(`${donde}: confianza desconocida (${CONFIANZAS.join(', ')})`);
+  if (ev.hipotesis != null && !nivel(ev.hipotesis)) err.push(`${donde}: la hipótesis es un nivel de 0 a 7`);
+  if (ev.pruebas != null && !Array.isArray(ev.pruebas)) err.push(`${donde}: «pruebas» debe ser una lista`);
+  else (ev.pruebas || []).forEach((p, i) => {
+    if (!esObjeto(p) || typeof p.item !== 'string') return err.push(`${donde}: la prueba ${i + 1} no dice qué competencia`);
+    if (!RESULTADOS.includes(p.resultado)) err.push(`${donde}: resultado «${p.resultado}» en la prueba ${i + 1}`);
+    if (p.tipo != null && !TIPOS_PRUEBA.includes(p.tipo)) err.push(`${donde}: tipo de prueba «${p.tipo}»`);
+    if (p.aciertos != null && !(Number.isInteger(p.aciertos) && Number.isInteger(p.preguntas) && p.aciertos >= 0 && p.aciertos <= p.preguntas)) err.push(`${donde}: aciertos y preguntas de la prueba ${i + 1}`);
+    for (const [d, v] of Object.entries(p.calidad || {})) if (!(d in DIMENSIONES) || !CALIDADES.includes(v)) err.push(`${donde}: aspecto «${d}» en la prueba ${i + 1}`);
+  });
+  if (ev.evidencias != null && !Array.isArray(ev.evidencias)) err.push(`${donde}: «evidencias» debe ser una lista`);
+  else (ev.evidencias || []).forEach((x, i) => {
+    if (!esObjeto(x) || typeof x.item !== 'string' || typeof x.fuente !== 'string') return err.push(`${donde}: la evidencia ${i + 1} no dice de qué competencia ni de qué obra`);
+    if (!EVIDENCIAS.includes(x.resultado)) err.push(`${donde}: evidencia «${x.resultado}»`);
+    if ([...(x.aspectos || []), ...(x.sinObservar || [])].some(d => !(d in DIMENSIONES))) err.push(`${donde}: aspecto desconocido en la evidencia ${i + 1}`);
+  });
   return err;
 }
 

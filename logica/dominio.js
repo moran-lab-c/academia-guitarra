@@ -104,8 +104,9 @@ export function intentosPorItem(eventos, cat, ajustes = {}) {
         vistos.add(marca);
       }
     } else if (ev.tipo === 'diagnostico') {
-      // Una prueba superada en el diagnóstico es un primer acierto en frío (se convalida, y se confirma después).
-      for (const p of ev.pruebas || []) if (cat.porId.has(p.item)) anadir(p.item, { t: ev.t, enFrio: true, sinAyuda: true, res: p.resultado, min: 0 });
+      // Una prueba superada en el diagnóstico es un primer acierto en frío (se convalida, y se confirma después). Una
+      // no superada no cuenta como intento: no está «en curso», es lo que falta (lo dice el perfil de la evaluación).
+      for (const p of ev.pruebas || []) if (p.resultado === 'ok' && cat.porId.has(p.item)) anadir(p.item, { t: ev.t, enFrio: true, sinAyuda: true, res: p.resultado, min: 0 });
     }
   }
   return porItem;

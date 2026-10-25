@@ -63,6 +63,7 @@ export default function ajustes() {
         h('td', null, h('button', { onclick: async () => { pantalla.propuesta = { tipo: 'restaurar', archivo: x.archivo, resumen: await restaurar(x.archivo, true) }; repintar(); } }, 'Restaurar…')))))),
     tarjeta(h('strong', null, 'Copia fuera del ordenador: '), p.copiaExterna?.carpeta ? `a ${p.copiaExterna.carpeta}, cada ${p.copiaExterna.cadaDias ?? 7} días.` : 'preparada para más adelante (apagada). Mientras, las copias son locales y manuales, más exportar e importar.'),
     h('h2', null, 'Perfil y preferencias'),
+    tarjeta(h('strong', null, 'Evaluación inicial: '), 'por áreas, cuando quieras y repetible; lo que ya consta no se pregunta. ', h('a', { href: '#/evaluaciones' }, 'Mi punto de partida')),
     prefs,
     d.erroresCatalogo.length > 0 && h('div', null, h('h2', null, 'Errores del contenido'), h('ul', null, d.erroresCatalogo.map(e => h('li', null, e)))));
 }

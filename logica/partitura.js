@@ -74,6 +74,7 @@ export function validarNotacion(p, nombre = 'notación') {
   if (p.armadura != null && !armadura(p.armadura)) err.push(`${nombre}: armadura desconocida «${p.armadura}»`);
   if (p.afinacion != null && (!Array.isArray(p.afinacion) || p.afinacion.length !== 6 || p.afinacion.some(x => midiDe(x) == null))) err.push(`${nombre}: la afinación debe dar las 6 cuerdas (p. ej., «E4»)`);
   if (p.tempo != null && !(p.tempo.bpm >= 20 && p.tempo.bpm <= 300)) err.push(`${nombre}: tempo fuera de 20-300`);
+  if (p.compasVisible != null && typeof p.compasVisible !== 'boolean') err.push(`${nombre}: «compasVisible» debe ser sí o no`); // false: una nota suelta, sin el compás escrito
   if (p.parcial != null && !(Number.isInteger(p.parcial.total) && Number.isInteger(p.parcial.transcritos) && p.parcial.transcritos <= p.parcial.total)) err.push(`${nombre}: «parcial» debe decir cuántos compases hay transcritos de cuántos`);
   if (!Array.isArray(p.compases) || !p.compases.length) return [...err, `${nombre}: sin compases`];
   const largo = /^\d+\/\d+$/.test(p.compas ?? '') ? compasEn(p.compas).negras : null;
@@ -160,7 +161,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
     salida.push({ numero: i + 1, pos: m.pos ?? null, voces });
   }
   return {
-    ok: true, errores: [], titulo: p.titulo ?? null, compas: compasEn(p.compas), armadura: arm.clave, tempo: p.tempo ?? null,
+    ok: true, errores: [], titulo: p.titulo ?? null, compas: compasEn(p.compas), compasVisible: p.compasVisible !== false, armadura: arm.clave, tempo: p.tempo ?? null,
     parcial: p.parcial ?? null, compases: salida, avisos, total,
   };
 }
