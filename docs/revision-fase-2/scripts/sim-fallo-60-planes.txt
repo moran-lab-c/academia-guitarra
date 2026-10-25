@@ -1,0 +1,60 @@
+   calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo · paso(8) lec.notas-1pos-graves · refuerzo(9) tec.media-cejilla · obra(13) sor.op60-1 · pasada(7) sor.op60-1
+2026-10-25 curso=1 actual=c1.t2.01 tramos=aapppp final=futuro · frío=2 · obra=sor.op60-1 · ref=[lec.notas-1pos-agudas(lect),tec.media-cejilla] · 10 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [lec.notas-1pos-agudas,oid.mayor-menor] · paso(14) dia.notas-1pos · paso(8) rit.figuras-basicas · refuerzo(9) tec.media-cejilla · obra(13) tarrega.lagrima#B · pasada(7) tarrega.lagrima#B
+2026-10-26 curso=1 actual=c1.t2.04 tramos=aapppp final=futuro · frío=2 · obra=tarrega.lagrima#B · ref=[tec.media-cejilla] · 8 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [rit.pulso,tec.melodia-acompanada] · area(16) tec.presion-minima · area(10) esc.mi-mayor-1pos · area(19) lec.notas-1pos-graves · area(6) oid.mayor-menor
+2026-10-27 curso=1 actual=- tramos=aapppp final=futuro · frío=2 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [tec.presion-minima,tec.sonido-clasico] · area(10) tec.media-cejilla · area(22) lec.notas-1pos-agudas · area(7) arm.i-iv-v7-i · area(12) oid.mayor-menor
+2026-10-28 curso=1 actual=- tramos=aapppp final=futuro · frío=2 · obra=- · ref=[] · 8 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [teo.escala-mayor,teo.tono-semitono] · area(11) tec.melodia-acompanada · area(8) esc.mi-mayor-1pos · area(21) lec.notas-1pos-graves · area(11) oid.mayor-menor
+2026-10-29 curso=1 actual=- tramos=aapppp final=futuro · frío=2 · obra=- · ref=[] · 9 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [teo.triada-mayor-menor,tec.media-cejilla] · area(10) tec.presion-minima · area(22) lec.notas-1pos-agudas · area(7) arm.i-iv-v7-i · area(12) oid.mayor-menor
+2026-10-30 curso=1 actual=- tramos=aapppp final=futuro · frío=2 · obra=- · ref=[] · 6 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [tarrega.lagrima#A] · area(9) tec.melodia-acompanada · area(22) lec.notas-1pos-graves · area(8) arm.tono-homonimo · area(12) oid.mayor-menor
+2026-10-31 curso=1 actual=- tramos=aapppp final=futuro · frío=1 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [sor.op60-1] · area(8) tec.media-cejilla · area(9) esc.arpegio-pima · area(22) lec.notas-1pos-graves · area(12) oid.mayor-menor
+2026-11-01 curso=1 actual=- tramos=happpp final=futuro · frío=1 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [dia.notas-1pos,rit.figuras-basicas] · area(9) tec.media-cejilla · area(22) lec.notas-1pos-graves · area(8) arm.tono-homonimo · area(12) oid.mayor-menor
+2026-11-02 curso=1 actual=- tramos=happpp final=futuro · frío=2 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [tarrega.lagrima#B] · area(10) tec.media-cejilla · area(9) esc.arpegio-pima · area(24) lec.notas-1pos-graves · area(8) arm.tono-homonimo
+2026-11-03 curso=1 actual=- tramos=happpp final=futuro · frío=1 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · area(10) tec.melodia-acompanada · area(24) lec.notas-1pos-agudas · area(8) dia.notas-1pos · area(9) arm.tono-homonimo
+2026-11-04 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=- · ref=[] · 9 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [rit.pulso,tec.melodia-acompanada] · area(10) tec.media-cejilla · area(24) lec.notas-1pos-graves · area(8) dia.notas-1pos · area(9) arm.tono-homonimo
+2026-11-05 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=- · ref=[] · 8 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [tec.presion-minima,tec.sonido-clasico] · area(14) tec.media-cejilla · area(12) dia.notas-1pos · area(12) teo.escala-mayor · area(13) arm.tono-homonimo
+2026-11-06 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [teo.tono-semitono,tec.media-cejilla] · area(10) esc.arpegio-pima · area(14) dia.notas-1pos · area(13) teo.triada-mayor-menor · area(14) arm.tono-homonimo
+2026-11-07 curso=1 actual=- tramos=hhpppp final=futuro · frío=2 · obra=- · ref=[] · 5 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · comprobacion(4) [tarrega.lagrima#A] · area(6) tec.cejilla-completa · area(5) esc.arpegio-pima · area(6) dia.notas-1pos · obra(22) tarrega.lagrima · pasada(12) tarrega.lagrima
+2026-11-08 curso=1 actual=- tramos=hhpppp final=futuro · frío=1 · obra=tarrega.lagrima · ref=[] · 4 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(17) tec.tremolo-lento · area(11) esc.arpegio-pima · area(12) rit.figuras-basicas · area(15) dia.notas-1pos
+2026-11-09 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 5 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-10 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 4 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-11 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 6 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-12 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-13 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-14 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-15 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-16 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-17 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-18 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 7 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-19 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 8 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-20 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 8 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-21 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 11 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-22 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 14 repasos esperan a otro día: hoy no son urgentes.
+   calentamiento(5)  · area(26) tec.tremolo-lento · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+2026-11-23 curso=2 actual=- tramos= final=undefined · frío=0 · obra=- · ref=[] · 17 repasos esperan a otro día: hoy no son urgentes.

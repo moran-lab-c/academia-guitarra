@@ -1,0 +1,131 @@
+
+### H1 · El paso 18 (aplicación en Lágrima B) sale «hecho» sin tocar la parte B: basta con la media cejilla del paso 13
+  paso 13: hecho · paso 18: hecho · dominio de Lágrima#B: pendiente
+  paso 9 (aplicación de la A) sin haber tocado nunca la A: hecho · Lágrima#A: pendiente
+
+### H1b · Con el fallo en frío, el 18 sale «repaso» sin haberse tocado, y el refuerzo cae entre el 18 y el 19
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:repaso 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado 18:repaso R:recomendado[tec.media-cejilla] 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+  Lágrima#B en el dominio: pendiente
+
+### H2 · El mismo refuerzo, dos veces en la ruta (falla la melodía acompañada; la media cejilla está sin hacer)
+  refuerzos del tramo 2:
+    refuerzo:paso:c1.t2.06:comp:lec.notas-1pos-agudas (antes del 17)
+    refuerzo:paso:c1.t2.07:comp:tec.melodia-acompanada (antes del 18)
+    refuerzo:paso:c1.t2.08:comp:tec.melodia-acompanada (antes del 19)
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:repaso 8:hecho 9:repaso 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:recomendado 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado R:recomendado[tec.melodia-acompanada] 18:proximo R:recomendado[tec.melodia-acompanada] 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+
+### H3 · La obra del tramo 2 en la sesión es Sor (obra de lectura), no Lágrima B (la obra eje)
+  obraEje del tramo 2: obra:tarrega.lagrima#B
+  20′: (sin obra) · ¿Lágrima B? false
+  30′: obra obra:sor.op60-1 «Es la obra de tu tramo.» · ¿Lágrima B? false
+  45′: obra obra:sor.op60-1 «Es la obra de tu tramo.» + pasada obra:sor.op60-1 «Acabar tocando música: una pasada entera, aunque haya fallos.» · ¿Lágrima B? false
+  60′: obra obra:sor.op60-1 «Es la obra de tu tramo.» + pasada obra:sor.op60-1 «Acabar tocando música: una pasada entera, aunque haya fallos.» · ¿Lágrima B? false
+  90′: obra obra:sor.op60-1 «Es la obra de tu tramo.» + pasada obra:sor.op60-1 «Acabar tocando música: una pasada entera, aunque haya fallos.» · ¿Lágrima B? false
+  120′: obra obra:sor.op60-1 «Es la obra de tu tramo.» + pasada obra:sor.op60-1 «Acabar tocando música: una pasada entera, aunque haya fallos.» · ¿Lágrima B? false
+  60′ lectura: paso(8) + obra(13) + pasada(7) = 28 min
+  90′ lectura: paso(10) + obra(16) + pasada(9) = 35 min
+
+### H3b · Tramo 1 hecho sin fallos (S2): Sor + refuerzo de lectura + pasada de Sor
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo ←c1.t2.01 · paso(8) tec.media-cejilla ←c1.t2.02 · refuerzo(9) lec.notas-1pos-agudas · obra(13) sor.op60-1 ←c1.t2.06 · pasada(7) sor.op60-1 ←c1.t2.06
+  lectura: refuerzo(9) + obra(13) + pasada(7) = 29 de 51 min útiles
+
+### H4 · «Los dos»: dos bloques de lectura (uno por programa) y lectura de pentagrama dentro del flamenco
+  ambas 60′ lectura: clasica:comp:lec.notas-1pos-agudas(5), flamenca:comp:lec.notas-1pos-graves(5)
+  ambas 90′ lectura: clasica:comp:lec.notas-1pos-agudas(5), flamenca:comp:lec.notas-1pos-graves(5)
+  flamenca 20′: calentamiento(3)  · paso(11) fl.compas-12 ←f1.t1.01 · paso(6) fl.rasgueo-cuatro ←f1.t1.02
+  flamenca 30′: calentamiento(3)  · paso(13) fl.compas-12 ←f1.t1.01 · paso(8) fl.rasgueo-cuatro ←f1.t1.02 · area(6) lec.notas-1pos-agudas
+  flamenca 60′: calentamiento(5)  · paso(19) fl.compas-12 ←f1.t1.01 · paso(11) fl.rasgueo-cuatro ←f1.t1.02 · paso(8) fl.picado ←f1.t1.03 · paso(8) fla.cadencia-andaluza ←f1.t1.04 · area(9) lec.notas-1pos-agudas
+  flamenca 90′: calentamiento(5)  · paso(22) fl.compas-12 ←f1.t1.01 · paso(14) fl.rasgueo-cuatro ←f1.t1.02 · paso(10) fl.picado ←f1.t1.03 · pausa(5)  · paso(10) fla.cadencia-andaluza ←f1.t1.04 · area(14) fl.alzapua · area(10) lec.notas-1pos-agudas
+
+### H5 · Obra conocida: una pasada en frío que falla no genera ningún refuerzo; el bloque pasa a «Obra» normal
+  paso 10: actual · conocida: false · refuerzos en la ruta: ninguno
+  Lágrima#A: en-progreso · estadoObra: empezada
+  necesidades de la A: comp:tec.sonido-clasico=por-consolidar, comp:tec.melodia-acompanada=por-consolidar
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · area(6) tec.melodia-acompanada · area(5) esc.arpegio-pima · area(10) lec.notas-1pos-agudas · obra(19) tarrega.lagrima#A ←c1.t1.10 · pasada(11) tarrega.lagrima#A ←c1.t1.10
+
+### H6 · Obra conocida: la «pasada de comprobación» de la parte A ocupa 9-15 min, y a 20′ la sesión es solo comprobar
+  20′: pasada de comprobación 13 min · resto: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos]
+  30′: pasada de comprobación 9 min · resto: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · area(14) lec.notas-1pos-agudas
+  60′: pasada de comprobación 12 min · resto: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · area(13) tec.melodia-acompanada · area(8) esc.arpegio-pima · area(18) lec.notas-1pos-agudas
+  90′: pasada de comprobación 15 min · resto: calentamiento(5)  · comprobacion(6) [arm.i-iv-v7-i,esc.mi-mayor-1pos,lec.notas-1pos-agudas] · area(16) tec.melodia-acompanada · area(11) esc.arpegio-pima · area(24) lec.notas-1pos-graves · pausa(5)  · area(8) oid.mayor-menor
+
+### H7 · Alumno nuevo: la obra (Lágrima A, paso 10) se recomienda desde el primer día
+  paso 7: proximo · paso 9: proximo · paso 10: recomendado · requiere del 10: []
+  paso 19 (Lágrima B) con el tramo 1 hecho y la media cejilla sin empezar: recomendado
+  20′: calentamiento(3)  · paso(7) tec.sonido-clasico ←c1.t1.01 · obra(10) tarrega.lagrima#A ←c1.t1.10
+  30′: calentamiento(3)  · paso(9) tec.sonido-clasico ←c1.t1.01 · paso(5) tec.presion-minima ←c1.t1.02 · obra(13) tarrega.lagrima#A ←c1.t1.10
+
+### H8 · Comprobaciones del cierre del tramo 1: 12 vencidas, 2 al día con 20-60′ (3 con 90′)
+  20′: comp:arm.i-iv-v7-i, comp:esc.mi-mayor-1pos · 10 repasos esperan a otro día: hoy no son urgentes.
+  60′: comp:arm.i-iv-v7-i, comp:esc.mi-mayor-1pos · 10 repasos esperan a otro día: hoy no son urgentes.
+  90′: comp:arm.i-iv-v7-i, comp:esc.mi-mayor-1pos, comp:lec.notas-1pos-agudas · 9 repasos esperan a otro día: hoy no son urgentes.
+
+### H9 · Lo vencido fuera de la ruta no se comprueba nunca, ni con 120′ y nada más que hacer
+  2026-10-25: estado=completado urgencia=7.1 · ¿en comprobaciones? false · avisos: 1 repaso espera a otro día: hoy no son urgentes.
+  2026-12-25: estado=completado urgencia=15.9 · ¿en comprobaciones? false · avisos: 1 repaso espera a otro día: hoy no son urgentes.
+  2027-06-01: estado=completado urgencia=38.4 · ¿en comprobaciones? false · avisos: 1 repaso espera a otro día: hoy no son urgentes.
+  sonido clásico (de la ruta) urgencia=0.86 dominado · ¿en comprobaciones? false
+
+### H10 · Tras el «alumno perfecto» de 30 días: salta al curso 2 (borrador, sin tramos) y se acaban las comprobaciones
+  curso actual: curso:c2 · borrador: true · tramos del curso 2: 0
+  niveles: técnica 1 · repertorio 1 · curso 1 terminado: false · obra final del curso 1: hecho
+  vencidas: 8 (comp:oid.mayor-menor, obra:sor.op60-1, comp:rit.figuras-basicas, obra:tarrega.lagrima#B, comp:esc.arpegio-pima, comp:tec.cejilla-completa…)
+  20′: calentamiento(3)  · area(10) tec.cejilla-completa · area(7) esc.arpegio-pima
+  60′: calentamiento(5)  · area(26) tec.cejilla-completa · area(19) esc.arpegio-pima · area(10) rit.figuras-basicas
+  120′: calentamiento(5)  · area(50) tec.cejilla-completa · pausa(5)  · area(35) esc.arpegio-pima · pausa(5)  · area(20) rit.figuras-basicas
+
+### H11 · La obra final cuenta como hecha con una pasada leyendo (sin memoria ni grabación)
+  Lágrima: completado · final.estado: hecho · requisitos: memoria, grabacion · progreso: {"hechos":1,"total":22}
+
+### H12 · El refuerzo desaparece en cuanto la obra se completa en caliente, aunque la media cejilla siga fallada en frío
+  antes: refuerzos=comp:lec.notas-1pos-agudas, comp:tec.media-cejilla · media cejilla=completado (último frío: no) · paso 13=repaso
+     60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo ←c1.t2.01 · paso(8) lec.notas-1pos-graves ←c1.t2.03 · refuerzo(9) tec.media-cejilla · obra(13) sor.op60-1 ←c1.t2.06 · pasada(7) sor.op60-1 ←c1.t2.06
+  tras tocar la B una vez, leyendo: refuerzos=comp:lec.notas-1pos-agudas · media cejilla=completado (último frío: no) · paso 13=repaso
+     60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo ←c1.t2.01 · paso(8) lec.notas-1pos-graves ←c1.t2.03 · refuerzo(9) lec.notas-1pos-agudas · obra(13) sor.op60-1 ←c1.t2.06 · pasada(7) sor.op60-1 ←c1.t2.06
+  tras frío OK el 27: refuerzos=comp:lec.notas-1pos-agudas · paso 13=hecho · paso 18=hecho · paso 19=recomendado
+     60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo ←c1.t2.01 · paso(8) lec.notas-1pos-graves ←c1.t2.03 · refuerzo(9) lec.notas-1pos-agudas · obra(13) sor.op60-1 ←c1.t2.06 · pasada(7) sor.op60-1 ←c1.t2.06
+  frío OK al día siguiente del fallo: solidez=1 · refuerzo de media cejilla=false
+  27/10 (le toca): comprobaciones de hoy = comp:arm.i-iv-v7-i, comp:esc.mi-mayor-1pos; urgencia media cejilla=1
+
+### H13 · Paso 13 en «repaso»: el planificador no lo propone como paso; solo sale el refuerzo (y solo si cabe)
+  20′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(13) arm.tono-homonimo ←c1.t2.01
+  30′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(9) arm.tono-homonimo ←c1.t2.01 · obra(14) sor.op60-1 ←c1.t2.06
+
+### H14 · La obra para leer (Sor, paso 17) sí frena el tramo 2, aunque los pasos de lectura «no frenan»
+  paso 17: area = undefined · papel = lectura
+  sin Sor  → T2 completo: false · estado del 17: actual · cierre 20: proximo
+  con Sor  → T2 completo: true · cierre 20: recomendado
+  sin el 14 (lectura con área) → T2 completo: true
+
+### H15 · Empezar algo del tramo 2 (p. ej., un encargo de media cejilla) abre todo el tramo 2 y le cambia el «Ahora»
+  T1: abierto · T2: abierto · actual: paso:c1.t1.02 · paso 2 (presión, requisito del 13): actual
+  60′: calentamiento(5)  · comprobacion(2) [tec.sonido-clasico] · paso(15) tec.presion-minima ←c1.t1.02 · paso(9) lec.notas-1pos-agudas ←c1.t1.03 · paso(7) teo.tono-semitono ←c1.t1.04 · obra(14) tarrega.lagrima#A ←c1.t1.10 · pasada(8) tarrega.lagrima#A ←c1.t1.10
+
+### H16 · Tramo elegido a mano (focos.tramo) y el de cierre no se puede elegir
+  elegido T2 → T2: abierto · actual: paso:c1.t1.01
+  elegido cierre → cierre: por-llegar
+
+### H17 · Determinismo con contextos distintos y barrido de minutos 10-150 en todos los escenarios
+  S6 los dos programas (S3) 10′: total 7 ≠ 10
+  S6b los dos programas, alumno nuevo 10′: total 7 ≠ 10
+  232 planes, 2 con problemas de cuadre o determinismo
+
+### H15b
+T1: abierto · T2: abierto · actual: paso:c1.t2.01
+60′: calentamiento(5)  · comprobacion(2) [tec.sonido-clasico] · paso(15) arm.tono-homonimo ←c1.t2.01 · paso(8) tec.presion-minima ←c1.t1.02 · refuerzo(10) lec.notas-1pos-agudas · obra(13) tarrega.lagrima#A ←c1.t1.10 · pasada(7) tarrega.lagrima#A ←c1.t1.10
+
+### H18-H19
+H18 paso 21: hecho · Lágrima entera: pendiente
+H19 estadoObra: conocida · final.conocida: true · paso 10 conocida: true · paso 19 conocida: false

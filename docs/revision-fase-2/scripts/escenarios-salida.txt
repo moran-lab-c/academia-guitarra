@@ -1,0 +1,139 @@
+
+## S1 alumno nuevo
+  T1 abierto: 1:actual 2:recomendado 3:recomendado 4:recomendado 5:recomendado 6:recomendado 7:proximo 8:recomendado 9:proximo 10:recomendado 11:proximo
+  T2 por-llegar: 12:proximo 13:proximo 14:proximo 15:proximo 16:proximo 17:proximo 18:proximo 19:proximo 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t1.01 final=futuro
+  20′: calentamiento(3)  · paso(7) tec.sonido-clasico ←c1.t1.01 · obra(10) tarrega.lagrima#A ←c1.t1.10
+  30′: calentamiento(3)  · paso(9) tec.sonido-clasico ←c1.t1.01 · paso(5) tec.presion-minima ←c1.t1.02 · obra(13) tarrega.lagrima#A ←c1.t1.10
+  60′: calentamiento(5)  · paso(14) tec.sonido-clasico ←c1.t1.01 · paso(9) tec.presion-minima ←c1.t1.02 · paso(6) teo.tono-semitono ←c1.t1.04 · area(6) lec.notas-1pos-agudas · obra(13) tarrega.lagrima#A ←c1.t1.10 · pasada(7) tarrega.lagrima#A ←c1.t1.10
+  90′: calentamiento(5)  · paso(19) tec.sonido-clasico ←c1.t1.01 · paso(11) tec.presion-minima ←c1.t1.02 · paso(8) teo.tono-semitono ←c1.t1.04 · paso(8) esc.mi-mayor-1pos ←c1.t1.05 · pausa(5)  · area(8) lec.notas-1pos-agudas · obra(17) tarrega.lagrima#A ←c1.t1.10 · pasada(9) tarrega.lagrima#A ←c1.t1.10
+
+## S2 tramo 1 hecho (14/10), comprobaciones vencidas
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:recomendado 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado 18:proximo 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+  20′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(13) arm.tono-homonimo ←c1.t2.01
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  30′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(9) arm.tono-homonimo ←c1.t2.01 · obra(14) sor.op60-1 ←c1.t2.06
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo ←c1.t2.01 · paso(8) tec.media-cejilla ←c1.t2.02 · refuerzo(9) lec.notas-1pos-agudas · obra(13) sor.op60-1 ←c1.t2.06 · pasada(7) sor.op60-1 ←c1.t2.06
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  90′: calentamiento(5)  · comprobacion(6) [arm.i-iv-v7-i,esc.mi-mayor-1pos,lec.notas-1pos-agudas] · paso(19) arm.tono-homonimo ←c1.t2.01 · paso(12) tec.media-cejilla ←c1.t2.02 · paso(8) dia.notas-1pos ←c1.t2.04 · pausa(5)  · area(8) lec.notas-1pos-graves · obra(18) sor.op60-1 ←c1.t2.06 · pasada(9) sor.op60-1 ←c1.t2.06
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+
+## S3 fallo en frío de media cejilla (24/10)
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:repaso 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado 18:repaso R:recomendado[tec.media-cejilla] 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+  20′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(13) arm.tono-homonimo ←c1.t2.01
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  30′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(9) arm.tono-homonimo ←c1.t2.01 · obra(14) sor.op60-1 ←c1.t2.06
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(14) arm.tono-homonimo ←c1.t2.01 · paso(8) lec.notas-1pos-graves ←c1.t2.03 · refuerzo(9) tec.media-cejilla · obra(13) sor.op60-1 ←c1.t2.06 · pasada(7) sor.op60-1 ←c1.t2.06
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  90′: calentamiento(5)  · comprobacion(6) [arm.i-iv-v7-i,esc.mi-mayor-1pos,lec.notas-1pos-agudas] · paso(18) arm.tono-homonimo ←c1.t2.01 · paso(10) lec.notas-1pos-graves ←c1.t2.03 · paso(8) dia.notas-1pos ←c1.t2.04 · pausa(5)  · refuerzo(13) tec.media-cejilla · obra(16) sor.op60-1 ←c1.t2.06 · pasada(9) sor.op60-1 ←c1.t2.06
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+
+## S3b datos-revision-avanzado (S3 + encargo 15)
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:repaso 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado 18:repaso R:recomendado[tec.media-cejilla] 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+  20′: calentamiento(3)  · encargo(17) tarrega.lagrima
+       ⚠ sin paso ni obra de la ruta
+       avisos: 12 repasos esperan a otro día: hoy no son urgentes.
+  30′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · encargo(15) tarrega.lagrima · paso(8) arm.tono-homonimo ←c1.t2.01
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · encargo(15) tarrega.lagrima · paso(11) arm.tono-homonimo ←c1.t2.01 · refuerzo(8) tec.media-cejilla · obra(11) sor.op60-1 ←c1.t2.06 · pasada(6) sor.op60-1 ←c1.t2.06
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  90′: calentamiento(5)  · comprobacion(6) [arm.i-iv-v7-i,esc.mi-mayor-1pos,lec.notas-1pos-agudas] · encargo(15) tarrega.lagrima · paso(16) arm.tono-homonimo ←c1.t2.01 · paso(9) lec.notas-1pos-graves ←c1.t2.03 · pausa(5)  · refuerzo(11) tec.media-cejilla · obra(15) sor.op60-1 ←c1.t2.06 · pasada(8) sor.op60-1 ←c1.t2.06
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+
+## S4 encargo largo (40 min de Sor) sobre S3
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:repaso 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado 18:repaso R:recomendado[tec.media-cejilla] 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+  20′: calentamiento(3)  · encargo(17) sor.op60-1
+       ⚠ sin paso ni obra de la ruta
+       avisos: 12 repasos esperan a otro día: hoy no son urgentes.
+  30′: calentamiento(3)  · encargo(27) sor.op60-1
+       ⚠ sin paso ni obra de la ruta
+       avisos: 12 repasos esperan a otro día: hoy no son urgentes.
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · encargo(40) sor.op60-1 · paso(5) arm.tono-homonimo ←c1.t2.01 · obra(6) tarrega.lagrima#B ←c1.t2.08
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes.
+  90′: calentamiento(5)  · comprobacion(6) [arm.i-iv-v7-i,esc.mi-mayor-1pos,lec.notas-1pos-agudas] · encargo(40) sor.op60-1 · pausa(5)  · paso(10) arm.tono-homonimo ←c1.t2.01 · paso(5) lec.notas-1pos-graves ←c1.t2.03 · refuerzo(6) tec.media-cejilla · obra(13) tarrega.lagrima#B ←c1.t2.08
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+
+## S5 obra conocida (Lágrima entera), tramo 1 sin la A
+  T1 abierto: 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:actual 11:proximo
+  T2 por-llegar: 12:proximo 13:proximo 14:proximo 15:proximo 16:proximo 17:proximo 18:proximo 19:proximo 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t1.10 final=futuro
+  20′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · obra/comprobacion(13) tarrega.lagrima#A ←c1.t1.10
+       ⚠ repasos 17/17 min
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+  30′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · area(14) lec.notas-1pos-agudas · obra/comprobacion(9) tarrega.lagrima#A ←c1.t1.10
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · area(13) tec.melodia-acompanada · area(8) esc.arpegio-pima · area(18) lec.notas-1pos-agudas · obra/comprobacion(12) tarrega.lagrima#A ←c1.t1.10
+       avisos: 9 repasos esperan a otro día: hoy no son urgentes.
+  90′: calentamiento(5)  · comprobacion(6) [arm.i-iv-v7-i,esc.mi-mayor-1pos,lec.notas-1pos-agudas] · area(16) tec.melodia-acompanada · area(11) esc.arpegio-pima · area(24) lec.notas-1pos-graves · pausa(5)  · area(8) oid.mayor-menor · obra/comprobacion(15) tarrega.lagrima#A ←c1.t1.10
+       avisos: 8 repasos esperan a otro día: hoy no son urgentes.
+
+## S6 los dos programas (S3)
+  T1 abierto (completo): 1:hecho 2:hecho 3:hecho 4:hecho 5:hecho 6:hecho 7:hecho 8:hecho 9:hecho 10:hecho 11:recomendado
+  T2 abierto: 12:actual 13:repaso 14:recomendado 15:recomendado 16:recomendado R:recomendado[lec.notas-1pos-agudas,lectura] 17:recomendado 18:repaso R:recomendado[tec.media-cejilla] 19:recomendado 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t2.01 final=futuro
+  20′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(6) arm.tono-homonimo ←c1.t2.01 · paso(7) fl.compas-12 ←f1.t1.01
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes. / 7 repasos esperan a otro día: hoy no son urgentes. / Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+  30′: calentamiento(3)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(13) arm.tono-homonimo ←c1.t2.01 · paso(5) fl.compas-12 ←f1.t1.01 · paso(5) fl.rasgueo-cuatro ←f1.t1.02
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes. / 7 repasos esperan a otro día: hoy no son urgentes. / Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+  60′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(10) arm.tono-homonimo ←c1.t2.01 · refuerzo(6) tec.media-cejilla · obra(14) sor.op60-1 ←c1.t2.06 · paso(6) fl.compas-12 ←f1.t1.01 · paso(5) fl.rasgueo-cuatro ←f1.t1.02 · paso(5) fl.picado ←f1.t1.03 · area(5) lec.notas-1pos-graves
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes. / 7 repasos esperan a otro día: hoy no son urgentes. / Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+  90′: calentamiento(5)  · comprobacion(4) [arm.i-iv-v7-i,esc.mi-mayor-1pos] · paso(13) arm.tono-homonimo ←c1.t2.01 · paso(7) lec.notas-1pos-graves ←c1.t2.03 · refuerzo(8) tec.media-cejilla · obra(11) sor.op60-1 ←c1.t2.06 · pausa(5)  · pasada(6) sor.op60-1 ←c1.t2.06 · paso(10) fl.compas-12 ←f1.t1.01 · paso(6) fl.rasgueo-cuatro ←f1.t1.02 · paso(5) fl.picado ←f1.t1.03 · paso(5) fla.cadencia-andaluza ←f1.t1.04 · area(5) lec.notas-1pos-agudas
+       ⚠ 2 bloques de lectura
+       avisos: 10 repasos esperan a otro día: hoy no son urgentes. / 7 repasos esperan a otro día: hoy no son urgentes. / Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+
+## S6b los dos programas, alumno nuevo
+  T1 abierto: 1:actual 2:recomendado 3:recomendado 4:recomendado 5:recomendado 6:recomendado 7:proximo 8:recomendado 9:proximo 10:recomendado 11:proximo
+  T2 por-llegar: 12:proximo 13:proximo 14:proximo 15:proximo 16:proximo 17:proximo 18:proximo 19:proximo 20:proximo
+  T3 por-llegar: 
+  T4 por-llegar: 
+  T5 por-llegar: 
+  T6 por-llegar: 21:futuro
+  actual=paso:c1.t1.01 final=futuro
+  20′: calentamiento(3)  · paso(5) tec.sonido-clasico ←c1.t1.01 · obra(5) tarrega.lagrima#A ←c1.t1.10 · paso(7) fl.compas-12 ←f1.t1.01
+       avisos: Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+  30′: calentamiento(3)  · paso(7) tec.sonido-clasico ←c1.t1.01 · obra(10) tarrega.lagrima#A ←c1.t1.10 · paso(5) fl.compas-12 ←f1.t1.01 · paso(5) fl.rasgueo-cuatro ←f1.t1.02
+       avisos: Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+  60′: calentamiento(5)  · paso(10) tec.sonido-clasico ←c1.t1.01 · paso(5) tec.presion-minima ←c1.t1.02 · area(5) lec.notas-1pos-agudas · obra(14) tarrega.lagrima#A ←c1.t1.10 · paso(6) fl.compas-12 ←f1.t1.01 · paso(5) fl.rasgueo-cuatro ←f1.t1.02 · paso(5) fl.picado ←f1.t1.03 · area(5) lec.notas-1pos-graves
+       ⚠ 2 bloques de lectura
+       avisos: Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
+  90′: calentamiento(5)  · paso(13) tec.sonido-clasico ←c1.t1.01 · paso(8) tec.presion-minima ←c1.t1.02 · paso(5) teo.tono-semitono ←c1.t1.04 · area(5) lec.notas-1pos-agudas · obra(12) tarrega.lagrima#A ←c1.t1.10 · pausa(5)  · pasada(6) tarrega.lagrima#A ←c1.t1.10 · paso(10) fl.compas-12 ←f1.t1.01 · paso(6) fl.rasgueo-cuatro ←f1.t1.02 · paso(5) fl.picado ←f1.t1.03 · paso(5) fla.cadencia-andaluza ←f1.t1.04 · area(5) lec.notas-1pos-graves
+       ⚠ 2 bloques de lectura
+       avisos: Todavía sin contenido: Acompañamiento. Su tiempo se reparte entre las demás.
