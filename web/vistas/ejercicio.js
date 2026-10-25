@@ -11,6 +11,8 @@ import { nombreDe } from '../../logica/catalogo.js';
 import { selectorFormato } from '../componentes/notacion.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { chipEstado, colorArea, NOMBRE_AREA } from '../componentes/marcas.js';
+import { barraMetronomo } from '../componentes/metronomo.js';
+import { tempoDe } from '../../logica/metronomo.js';
 
 const NOMBRE_ESTADO = { pendiente: 'sin empezar', 'en-progreso': 'en curso', completado: 'hecho', dominado: 'dominado', 'necesita-repaso': 'toca reforzarlo' };
 let modo = { id: null, frio: false };
@@ -44,6 +46,7 @@ export default function ejercicio({ id }) {
           h('span', { class: 'dato' }, String(i + 1).padStart(2, '0')), h('span', { class: 'suave' }, t)))),
         e.tempo?.regla && h('p', { class: 'pequeno suave' }, `Tempo: ${e.tempo.regla} El tempo se apunta para ver cómo sube; no es el criterio.`)),
       h('aside', { class: 'pila' },
+        barraMetronomo({ clave: comp?.id ?? e.id, tempo: tempoDe(c, comp?.id ?? e.id, { contenido: e }), compas: e.compas ?? null }),
         comp && h('div', { class: 'tarjeta pila-s' },
           h('div', { class: 'fila-entre' }, h('span', { class: 'rotulo' }, 'CÓMO HA SALIDO'),
             h('div', { class: 'segmentado', role: 'group', 'aria-label': 'Tipo de intento' },

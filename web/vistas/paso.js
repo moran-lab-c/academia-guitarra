@@ -14,6 +14,8 @@ import { selectorFormato } from '../componentes/notacion.js';
 import { formatoPara } from '../../logica/recomendador.js';
 import { PROPOSITO } from '../../logica/planificador.js';
 import { seccionDe } from '../../logica/catalogo.js';
+import { barraMetronomo } from '../componentes/metronomo.js';
+import { tempoDe } from '../../logica/metronomo.js';
 
 const NOMBRE_ESTADO = { dominado: 'Dominado', hecho: 'Hecho', repaso: 'Toca reforzarlo', actual: 'Ahora', recomendado: 'Recomendado', proximo: 'Próximo', futuro: 'Más adelante' };
 const SITUACION = { 'la-tienes': ['Ya la tienes', 'neutro'], 'por-consolidar': ['Por consolidar', 'neutro'], refuerzo: ['Necesita refuerzo', 'refuerzo'], falta: ['Te falta', 'repaso'], estimada: ['Por confirmar', 'neutro'] };
@@ -64,6 +66,7 @@ export default function paso({ id }) {
         p.clase === 'evaluacion' ? evaluacion(c, tramo) : rel.comps.length > 0 && cuandoEstaBien(c, rel),
         rel.comps.length > 0 && deHechoADominado(rel)),
       h('aside', { class: 'pila' },
+        metronomoDelPaso(c, rel, ejercicio, obraClave),
         paraQueSirve(c, rel),
         (rel.requisitos.length > 0 || rel.pasosAntes.length > 0) && seApoyaEn(c, rel),
         rel.comps.length > 0 && comoVas(c, rel))));
@@ -102,6 +105,16 @@ function loQueVasAHacer(c, rel, p) {
     h('ol', { class: 'lista-limpia pila-s' }, filas),
     !rel.contenido.some(x => x.item?.tipo === 'ejercicio' || x.item?.tipo === 'leccion') && p.clase === 'habilidad'
       && h('p', { class: 'pequeno suave' }, 'Las lecciones y ejercicios propios de este paso llegan con el contenido (Fase 3); mientras, practica la competencia con su criterio.'));
+}
+
+// El metrónomo del paso: el tempo de lo que se registra (la obra o sección si el paso es de obra; si no, su competencia)
+// y, como contenido, su ejercicio.
+function metronomoDelPaso(c, rel, ejercicio, obraClave) {
+  const deObra = rel.paso.clase === 'obra' && obraClave;
+  const clave = deObra ? (obraClave.seccion ? `${obraClave.item.id}#${obraClave.seccion}` : obraClave.item.id) : rel.comps[0]?.comp ?? ejercicio?.id;
+  if (!clave) return null;
+  const obra = obraClave?.item;
+  return barraMetronomo({ clave, tempo: tempoDe(c, clave, { contenido: deObra ? null : ejercicio }), compas: (deObra ? seccionDe(obra, obraClave.seccion)?.compas ?? obra?.compas : ejercicio?.compas) ?? null });
 }
 
 // El material del paso, sobre el atril: la notación del primer contenido que la tenga (un ejercicio, o la sección o el

@@ -24,7 +24,7 @@ export default function profesor() {
     if (!v.item && !v.texto.trim()) return;
     cambiar(e => e.tareasProfesor.push({
       id: `tp_${Date.now().toString(36)}`, clase: c.hoy, item: v.item || null, texto: v.texto.trim() || null, detalle: v.detalle || null,
-      minutos: v.minutos || 15, hasta: v.hasta || null, programa: v.item ? undefined : v.programa, formato: v.formato || null, estado: 'activa',
+      minutos: v.minutos || 15, hasta: v.hasta || null, programa: v.item ? undefined : v.programa, formato: v.formato || null, tempo: v.tempo || null, estado: 'activa',
     }));
   } },
     h('div', { class: 'fila' },
@@ -33,7 +33,8 @@ export default function profesor() {
       h('label', null, 'Minutos al día', h('input', { type: 'number', name: 'minutos', value: 15, min: 5, style: 'width:6em' })),
       h('label', null, 'Hasta', h('input', { type: 'date', name: 'hasta', value: proximaClase(c.hoy) })),
       h('label', null, 'Programa (si lo escribes)', h('select', { name: 'programa' }, h('option', { value: 'clasica' }, 'Clásico'), h('option', { value: 'flamenca' }, 'Flamenco'))),
-      h('label', null, 'Con qué te ha dicho que la mires', h('select', { name: 'formato' }, h('option', { value: '' }, 'No lo ha dicho'), h('option', { value: 'partitura' }, 'Partitura'), h('option', { value: 'tablatura' }, 'Tablatura')))),
+      h('label', null, 'Con qué te ha dicho que la mires', h('select', { name: 'formato' }, h('option', { value: '' }, 'No lo ha dicho'), h('option', { value: 'partitura' }, 'Partitura'), h('option', { value: 'tablatura' }, 'Tablatura'))),
+      h('label', null, 'Tempo que te ha pedido (opcional)', h('input', { type: 'number', name: 'tempo', min: 30, max: 240, placeholder: '♩=', style: 'width:6em' }))),
     h('label', { style: 'display:flex' }, 'Cómo (compases, tempo, digitación que te ha dado…)', h('textarea', { name: 'detalle' })),
     h('button', { class: 'principal', type: 'submit' }, 'Añadir encargo'));
 
@@ -43,7 +44,7 @@ export default function profesor() {
     form,
     h('h2', null, 'Activos'),
     activas.length ? activas.map(t => tarjeta(
-      h('strong', null, t.texto || enlaceItem(c.cat.porId.get(t.item))), h('span', { class: 'suave' }, ` · ${t.minutos} min al día · hasta el ${fecha(t.hasta)}${t.formato ? ` · en ${t.formato}` : ''}`),
+      h('strong', null, t.texto || enlaceItem(c.cat.porId.get(t.item))), h('span', { class: 'suave' }, ` · ${t.minutos} min al día · hasta el ${fecha(t.hasta)}${t.formato ? ` · en ${t.formato}` : ''}${t.tempo ? ` · a ♩=${t.tempo}` : ''}`),
       t.detalle && h('p', null, t.detalle),
       h('div', { class: 'fila' }, h('button', { onclick: () => marcar(t.id, 'hecha') }, 'Hecho'), h('button', { onclick: () => marcar(t.id, 'cancelada') }, 'Quitar')))) : h('p', { class: 'suave' }, 'Ninguno.'),
     tareas.length > activas.length && h('details', null, h('summary', null, 'Anteriores'),

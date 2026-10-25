@@ -14,6 +14,8 @@ import { selectorFormato } from '../componentes/notacion.js';
 import { bloqueCriterio } from '../componentes/criterio.js';
 import { chipEstado, colorArea } from '../componentes/marcas.js';
 import { fecha, NOMBRE_MARCA, NOMBRE_NATURALEZA } from '../componentes/comunes.js';
+import { barraMetronomo } from '../componentes/metronomo.js';
+import { tempoDe } from '../../logica/metronomo.js';
 
 const vista = { id: null, seccion: null, abierto: null };
 const NOMBRE_CONOCIDA = { '': 'No la conocía', parcial: 'Una parte', entera: 'Entera', dominada: 'Entera y bien dominada' };
@@ -63,6 +65,7 @@ export default function obra({ id }) {
         practicarHoy(c, o, sec, est),
         h('div', { class: 'rejilla-2' }, enLaRuta(c, enRutas), progreso(c, o))),
       h('aside', { class: 'pila' },
+        barraMetronomo({ clave, tempo: tempoDe(c, clave), compas: sec?.compas ?? o.compas ?? null }),
         loQueTrabaja(c, n, final),
         loQueNecesitas(n, sec),
         conocidaDeAntes(c, o, est),

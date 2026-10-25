@@ -6,11 +6,19 @@ import { repintar } from '../nucleo/rutas.js';
 import { criterioDe, textoCriterio } from '../../logica/dominio.js';
 import { areaDe } from '../../logica/catalogo.js';
 import { DIMENSIONES } from '../../logica/esquema.js';
+import { tempoUsado } from './metronomo.js';
 
 // item: competencia, obra o ejercicio del catálogo (o null en un encargo de texto libre).
 // extra: { modo: 'trabajo'|'comprobacion', area, minutos, encargo, sesion, idLibre, seccion, paso }. Con «paso», la
 // práctica queda anotada para ese paso de la ruta (es la evidencia de que una aplicación se ha trabajado).
 // Si la obra es obra final de un curso, se puede marcar si ha salido de memoria y si se ha grabado (sus requisitos).
+function campoTempo(clave) {
+  const valor = clave ? tempoUsado(clave) : null;
+  const input = h('input', { type: 'number', name: 'tempo', value: valor ?? '', min: 0, max: 400, style: 'width:6em', 'data-tempo-de': clave ?? '', 'data-auto': '1' });
+  input.addEventListener('input', () => { input.dataset.auto = ''; }); // lo ha escrito él: el metrónomo ya no lo toca
+  return input;
+}
+
 export function formularioRegistro(item, extra = {}, alGuardar = () => {}) {
   const c = ctx();
   const crit = item ? criterioDe(item, c.estado.ajustes?.[item.id]) : { tipo: 'ejecucion', dimensiones: ['precision', 'ritmo'], pasadas: 1 };
@@ -30,7 +38,9 @@ export function formularioRegistro(item, extra = {}, alGuardar = () => {}) {
     ? [campo('Aciertos', num('aciertos', null)), campo('Preguntas', num('preguntas', crit.preguntas, 1)), campo('Segundos por respuesta (media, opcional)', num('segundos', null))]
     : [
       campo(item?.tipo === 'obra' ? 'Pasadas completas (si solo has tocado una parte, elige la sección)' : 'Pasadas seguidas bien', num('pasadas', null)),
-      campo(`Tempo (${crit.tempo?.unidad ?? '♩'}=, opcional)`, num('tempo', null)),
+      // Si practica con el metrónomo, su tempo se propone aquí (y se actualiza mientras no lo toque él): es un dato de
+      // progreso, se puede cambiar o borrar.
+      campo(`Tempo (${crit.tempo?.unidad ?? '♩'}=, opcional)`, campoTempo(item ? (extra.seccion ? `${item.id}#${extra.seccion}` : item.id) : null)),
       campo('Ayuda', elegir('ayuda', [['ninguna', 'Ninguna (sin mirar)'], ['notacion', 'Leyendo partitura o tablatura'], ['referencia', 'Con audio, vídeo o profesor']], item?.tipo === 'obra' ? 'notacion' : 'ninguna')),
       item?.notacion && campo('Leído en', elegir('formato', [['', '—'], ['partitura', 'Partitura'], ['tablatura', 'Tablatura'], ['memoria', 'De memoria']], c.estado.formatos?.[item.id] ?? '')),
       item?.tipo === 'obra' && campo('Qué parte', elegir('seccion', [['', 'Toda la obra'], ...secciones.map(s => [s.id, s.titulo ?? `Sección ${s.id}`]), ...(item.fragmentos || []).map(f => [f.id, `Fragmento: ${f.titulo}`])], extra.seccion ?? '')),

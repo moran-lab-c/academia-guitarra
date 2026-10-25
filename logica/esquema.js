@@ -60,6 +60,7 @@ export function validarEstado(e) {
     if (!esObjeto(t) || typeof t.id !== 'string') err.push(`tareasProfesor[${i}] sin id`);
     else if (!t.item && !t.texto) err.push(`tareasProfesor[${i}] sin obra ni texto`);
     else if (t.formato != null && !FORMATOS.includes(t.formato)) err.push(`tareasProfesor[${i}]: formato desconocido`);
+    else if (t.tempo != null && !(Number.isFinite(t.tempo) && t.tempo >= 20 && t.tempo <= 300)) err.push(`tareasProfesor[${i}]: tempo fuera de 20-300`);
   });
   return err;
 }

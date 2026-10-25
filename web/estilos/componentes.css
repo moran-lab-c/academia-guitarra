@@ -282,3 +282,17 @@ form.tarjeta button[type="submit"] {
 .partitura__estado--error details { margin-top: 6px; font: 12.5px/1.4 var(--f-ui); font-style: normal; }
 .partitura__aviso { margin: 8px 0 0; font: italic 13px/1.4 var(--f-obra); color: var(--tinta-2); }
 .pildora--fragmento { box-shadow: inset 0 0 0 1px var(--texto-3); border-style: dashed; }
+
+/* ============================================================ Metrónomo: barra compacta de la práctica */
+.metronomo { display: flex; flex-direction: column; gap: 10px; position: sticky; top: 12px; z-index: 2; }
+.metronomo select { width: auto; padding: 4px 8px; font-size: 13px; }
+.metronomo__fila { display: flex; align-items: center; gap: 6px; }
+.metronomo__fila > button { min-width: 38px; padding: 6px 8px; }
+.metronomo__bpm { display: flex; align-items: baseline; gap: 6px; margin: 0 auto; }
+.metronomo__cifra { font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; min-width: 2.2ch; text-align: right; }
+.metronomo__pulsos { display: flex; gap: 8px; justify-content: center; padding: 4px 0; }
+.metronomo__pulso { width: 12px; height: 12px; border-radius: 50%; background: var(--sup-3); transition: background .06s, transform .06s; }
+.metronomo__pulso--acento { box-shadow: inset 0 0 0 2px var(--texto-3); }
+.metronomo__pulso.activo { background: var(--texto); transform: scale(1.15); }
+.metronomo__pulso.activo.fuerte { background: var(--papel); transform: scale(1.35); }
+.metronomo[data-estado="sonando"] .metronomo__cifra { color: var(--papel); }
