@@ -1,7 +1,5 @@
 # Informe de la Fase 3: infraestructura musical real y evaluación inicial
 
-> **Borrador.** Falta incorporar la revisión independiente de la interfaz (apartados O y Q).
-
 Rama `revision-fase-2`, sin fusionar en `main`. Empieza en `b919978` (Fase 2.1 cerrada). Fecha: 29/10/2026.
 
 **Lo que se ha hecho.** La Fase 3 completa (3A a 3F):
@@ -9,7 +7,7 @@ Rama `revision-fase-2`, sin fusionar en `main`. Empieza en `b919978` (Fase 2.1 c
 - metrónomo integrado en la práctica;
 - evaluación inicial modular con perfil por áreas;
 - primer paquete de contenido controlado: los tramos 3 a 5 del curso 1 clásico;
-- tres revisiones independientes (interfaz, QA y pedagogía) y la corrección de todos sus fallos claros.
+- dos revisiones independientes terminadas (QA y pedagogía) y la corrección de todos sus fallos claros. La de interfaz no llegó a terminarse (ver O).
 
 **Lo que no se ha hecho.**
 - No he empezado ninguna fase posterior.
@@ -33,11 +31,11 @@ Rama `revision-fase-2`, sin fusionar en `main`. Empieza en `b919978` (Fase 2.1 c
 | Metrónomo (3C) | Hecho. Integrado con el registro, el profesor y el progreso; el tempo informa y no decide el dominio |
 | Evaluación inicial (3D) | Hecha. Modular, por áreas, adaptativa, con confianza y fecha de reevaluación; nada bloquea |
 | Contenido (3E) | Tramos 3-5 del curso 1: 20 competencias, 14 ejercicios, 15 notaciones nuevas y la *Españoleta*; lo dudoso, por verificar |
-| Integración y revisión (3F) | 157 pruebas en verde (también con la hora de Madrid); tres revisiones independientes; todos los fallos claros corregidos |
+| Integración y revisión (3F) | 157 pruebas en verde (también con la hora de Madrid); revisiones independientes de QA y pedagogía, con todos sus fallos claros corregidos; la de interfaz, sin terminar |
 
 **Por qué «con observaciones» y no «aprobada»:**
 - **Decisiones suyas pendientes** (apartado Q): las obras eje de los tramos 3 y 4, la edición de la *Españoleta* y una decena de reglas que las revisiones marcan como discutibles. Ninguna bloquea el uso de la app, pero cambian el contenido o la evaluación.
-- **Revisión de la interfaz:** ver O.
+- **La revisión independiente de la interfaz no se ha hecho.** El revisor se paró dos veces por límites de uso y no llegó a escribir su informe. Por decisión suya, el informe se cierra sin ella (ver O).
 
 ---
 
@@ -355,15 +353,26 @@ En Chromium, con servidor y datos temporales:
 
 ## O. Revisión independiente
 
-Tres revisores independientes, sin acceso a modificar el código. Sus informes completos están en `docs/revision-fase-3/`.
+Se encargaron tres revisiones independientes, sin acceso a modificar el código. Dos están terminadas y sus informes completos están en `docs/revision-fase-3/`.
 
 | Revisión | Estado | Hallazgos | Corregidos ya |
 |---|---|---|---|
 | Pedagogía y música (`pedagogia.md`) | PASS CON OBSERVACIONES | 0 críticos, 11 importantes, 12 menores | Todos los claros (a): P-1, P-2, P-3, P-4, P-5, P-6, P-8, P-9, P-10 (con confirmación), P-12, P-13, P-19, P-21, P-22 y, como matiz, P-23. Lo que es decisión suya, en J |
 | QA (`qa.md`) | PASS CON OBSERVACIONES | 0 críticos, 4 importantes, 16 menores | Todos los claros (a): Q-1, Q-2, Q-4 a Q-11, Q-13, Q-15, Q-19, el comentario de Q-17, los enarmónicos de Q-18 y la elección de competencia de Q-20. Lo que es decisión suya, en J |
-| Interfaz (`ui.md`) | *pendiente de incorporar* | | |
+| Interfaz | **No terminada** | — | — |
 
-**Lo que dicen las tres que está bien:**
+**La revisión de interfaz, sin terminar.**
+- El revisor se paró por el límite de uso semanal y, al reanudarlo, por el de 5 horas. Dejó scripts y capturas, pero ningún hallazgo escrito.
+- Por decisión suya, la fase se cierra sin ella. No la sustituyo por una mía: no sería independiente.
+- Lo que hay de la interfaz es mi propia comprobación visual (apartado N) y lo que QA probó con Playwright, citado en su informe:
+  - los 14 ejercicios de entonces se dibujan sin errores;
+  - «Ambas» se recuerda;
+  - a 390 px no hay desplazamiento horizontal;
+  - el tempo pasa al registro;
+  - el aviso de «está sonando para otro ejercicio».
+- Queda pendiente para cuando usted quiera.
+
+**Lo que dicen las dos que está bien:**
 - **Pedagogía y QA:** ningún error musical ni teórico en la notación ni en las preguntas.
   - QA comprobó 2.600 preguntas contra tablas escritas a mano, con 0 errores.
   - Pedagogía comprobó la notación nota a nota.
@@ -408,5 +417,6 @@ Tres revisores independientes, sin acceso a modificar el código. Sus informes c
 8. La fragilidad de la estimación ante un fallo en frío.
 9. Si el ajuste del profesor se guarda aparte del suyo.
 10. Los detalles de la evaluación y de pantalla.
+11. Si se hace más adelante la revisión independiente de la interfaz, que quedó sin terminar.
 
 **Lo que no he hecho:** empezar la fase siguiente ni fusionar en `main`.
