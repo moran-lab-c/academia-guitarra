@@ -14,8 +14,8 @@
       {
         "sistema": "RCM 2018",
         "nivel": "2-3",
-        "naturaleza": "dato",
-        "nota": "Según el Plan (apartado 4, etapa 1, unidad 5)."
+        "naturaleza": "estimacion",
+        "nota": "Según el Plan (apartado 4, etapa 1, unidad 5). Un rango, no el nivel de un libro concreto: por verificar con la edición."
       },
       {
         "sistema": "Profesionales (Madrid)",
@@ -47,7 +47,7 @@
     "Los adornos sin que corten el pulso",
     "Una danza antigua entera, con sus cadencias"
   ],
-  "porQue": "Es la obra de la unidad 5 del Plan (polifonía antigua): dos voces sencillas en primera posición, adornos y cadencias, en una música muy distinta de Lágrima. Cierra la etapa 1 por el lado de la polifonía, antes de las voces independientes del curso 3.",
+  "porQue": "Es la obra de la unidad 5 del Plan (polifonía antigua): en las ediciones habituales para este nivel, dos voces sencillas en primera posición, adornos y cadencias (depende de la edición), en una música muy distinta de Lágrima. Cierra la etapa 1 por el lado de la polifonía, antes de las voces independientes del curso 3.",
   "notacion": {
     "partitura": "externa",
     "tablatura": "pendiente",
@@ -58,6 +58,7 @@
     { "campo": "fuente", "motivo": "El libro de la «Instrucción» en que aparece y su año están por comprobar con el facsímil." },
     { "campo": "tonalidad y compás", "motivo": "Dependen de la edición: no se dan como dato." },
     { "campo": "duración y secciones", "motivo": "Sin la edición delante no se dividen en partes ni se dan compases." },
+    { "campo": "nivel", "motivo": "El nivel RCM «2-3» es el rango que da el Plan, no el de una edición concreta." },
     { "campo": "desarrolla", "motivo": "Los adornos (mordentes) y las cadencias concretas dependen de la edición." }
   ]
 }

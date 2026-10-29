@@ -28,8 +28,16 @@ export const AREAS_DE_OBRAS = { repertorio: 'clasica', 'fl-toque': 'flamenca' };
 // Lo que él cree antes de empezar un módulo (la hipótesis): solo decide por dónde se empieza.
 export const HIPOTESIS = [[0, 'No lo he trabajado'], [1, 'Lo básico'], [2, 'Bastante'], [3, 'Mucho']];
 
-const competenciasDe = (ctx, area) => ctx.cat.competencias.filter(c => c.area === area && c.nucleo !== false).sort((a, b) => a.nivel - b.nivel || a.id.localeCompare(b.id));
-const nivelesCon = (ctx, area) => [...new Set(competenciasDe(ctx, area).map(c => c.nivel))].sort((a, b) => a - b);
+const deArea = (ctx, area) => ctx.cat.competencias.filter(c => c.area === area && c.nucleo !== false).sort((a, b) => a.nivel - b.nivel || a.id.localeCompare(b.id));
+// Los niveles que se pueden evaluar: seguidos desde el 1, hasta el primero sin contenido (como en niveles.js: sin
+// contenido en un nivel no se puede confirmar más). Lo de niveles más altos no se pregunta ni se estima.
+function nivelesCon(ctx, area) {
+  const hay = new Set(deArea(ctx, area).map(c => c.nivel));
+  const res = [];
+  for (let n = 1; hay.has(n); n++) res.push(n);
+  return res;
+}
+const competenciasDe = (ctx, area) => { const ns = nivelesCon(ctx, area); return deArea(ctx, area).filter(c => ns.includes(c.nivel)); };
 const hecha = (ctx, id) => estaHecho(ctx.estadoDe(id));
 // Lo que su progreso ya prueba (hecho o dominado; o hecho y para repasar): no se vuelve a preguntar.
 export const observada = (ctx, id) => !['pendiente', 'en-progreso'].includes(ctx.estadoDe(id));
@@ -95,9 +103,8 @@ export function siguiente(ctx, area, respuestas = [], { hipotesis = null } = {})
     const p = porProbar(l);
     if (p.length) return { comp: p[0], nivel: l };
     if (!supera(l)) { if (l !== inicio) return { fin: true }; break; }
-    const s = niveles.find(x => x > l);
-    if (s == null) return { fin: true };
-    l = s;
+    if (!niveles.includes(l + 1)) return { fin: true };
+    l++;
   }
   for (let b = niveles.filter(x => x < inicio).at(-1); b != null; b = niveles.filter(x => x < b).at(-1)) {
     const p = porProbar(b);
@@ -119,8 +126,9 @@ export function resultadoEjecucion(comp, { calidad, pasadas, tempo }, ajuste) {
   return valorarIntento({ calidad, pasadas, tempo, enFrio: true, ayuda: 'ninguna' }, criterioDe(comp, ajuste));
 }
 
-// El nivel que sale del módulo y con qué confianza. El nivel es el más alto que supera todo lo probado (lo suyo y lo que
-// ya probaba su progreso); un nivel sin probar por debajo de uno superado se da por sabido (y queda por confirmar).
+// El nivel que sale del módulo y con qué confianza. Un nivel se supera cuando todas sus competencias están probadas y
+// bien (en esta evaluación o por su progreso); uno sin probar nada, por debajo de uno superado, se da por sabido (y queda
+// por confirmar). Un nivel probado a medias corta: lo no probado de su lado no es dudoso, es desconocido.
 // La confianza: alta si la app lo ha corregido o lo prueba su progreso y cubre el 80 % de lo que implica ese nivel;
 // media si hay ejecución autoevaluada o cubre la mitad; baja con menos.
 export function resultadoModulo(ctx, area, respuestas = [], { hipotesis = null } = {}) {
@@ -131,9 +139,10 @@ export function resultadoModulo(ctx, area, respuestas = [], { hipotesis = null }
   const bien = c => (res.has(c.id) ? res.get(c.id).resultado === 'ok' : hecha(ctx, c.id));
   let nivel = 0;
   for (const l of niveles) {
-    const deL = comps.filter(c => c.nivel === l && probada(c));
-    if (!deL.length) continue;
-    if (deL.every(bien)) nivel = l; else break;
+    const deL = comps.filter(c => c.nivel === l);
+    const probadas = deL.filter(probada);
+    if (!probadas.length) continue;
+    if (probadas.length === deL.length && deL.every(bien)) nivel = l; else break;
   }
   const hasta = Math.max(nivel, niveles[0] ?? 0);
   const implicadas = comps.filter(c => c.nivel <= hasta);
@@ -201,7 +210,7 @@ export function perfil(ctx, programa) {
   return ctx.cat.areas.filter(a => a.programa === programa || a.programa === 'comun').map(a => {
     const n = ctx.niveles[a.id] ?? { nivel: 0 };
     const deObras = a.id in AREAS_DE_OBRAS;
-    const comps = competenciasDe(ctx, a.id);
+    const comps = deArea(ctx, a.id); // todas: una obra puede dejar evidencia en cualquier nivel
     const diag = ultimoDiagnostico(ctx, a.id);
     const estimadoEn = diag?.niveles?.[a.id];
     const evid = [];
@@ -233,7 +242,7 @@ export function perfil(ctx, programa) {
       reevaluar = { fecha: ctx.hoy, vencida: true, motivo: 'Una comprobación en frío ha fallado por debajo del nivel que estimó la evaluación: conviene repetir el módulo.' };
       confianza = n.nivel > 0 ? 'alta' : null;
     } else if (n.nivel > 0 || evid.length) {
-      fuente = n.nivel > 0 || evid.some(x => x.tipo === 'progreso') ? 'progreso' : diag ? 'evaluacion' : 'progreso';
+      fuente = n.nivel > 0 || evid.some(x => x.tipo === 'progreso') ? 'progreso' : evid.every(x => x.tipo === 'repertorio') ? 'obras' : diag ? 'evaluacion' : 'progreso';
       confianza = n.nivel > 0 ? 'alta' : diag?.confianza?.[a.id] ?? (evid.length ? 'baja' : null);
       fecha = diag ? dia(diag.t) : evid.map(x => x.fecha).filter(Boolean).sort().at(-1) ?? null;
     }

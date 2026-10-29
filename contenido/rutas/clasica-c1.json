@@ -51,9 +51,9 @@
   {
     "id": "tramo:c1.t4", "programa": "clasica", "curso": "curso:c1", "orden": 4,
     "titulo": "Escalas y ligados",
-    "objetivos": ["Do y Sol mayor y la cromática, con i-m y m-a", "Ligados ascendentes y descendentes", "Intervalos con su calidad, armaduras hasta dos alteraciones y las triadas de Do mayor", "Obra eje: pendiente de decidir (Estudio en Do de Tárrega o lecciones de Aguado)"],
+    "objetivos": ["Do y Sol mayor y la cromática, con i-m y m-a", "Ligados ascendentes y descendentes", "El puntillo y las semicorcheas", "Intervalos con su calidad, armaduras hasta dos alteraciones y las triadas de Do mayor", "Obra eje: pendiente de decidir (Estudio en Do de Tárrega o lecciones de Aguado)"],
     "porVerificar": [{"campo": "obraEje", "motivo": "El Plan cita el Estudio en Do de Tárrega o las lecciones de Aguado sin identificar cuál; la decisión está pendiente (ver INFORME-FASE-3)."}],
-    "pasos": ["paso:c1.t4.01", "paso:c1.t4.02", "paso:c1.t4.03", "paso:c1.t4.04", "paso:c1.t4.05", "paso:c1.t4.06", "paso:c1.t4.07"]
+    "pasos": ["paso:c1.t4.01", "paso:c1.t4.02", "paso:c1.t4.03", "paso:c1.t4.04", "paso:c1.t4.05", "paso:c1.t4.06", "paso:c1.t4.08", "paso:c1.t4.07"]
   },
   {"id": "paso:c1.t4.01", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Alternar i-m y m-a", "objetivo": "Escalas apoyando sin repetir dedo, también con m-a.", "trabaja": ["comp:tec.alternancia-im-ma"], "contenido": ["ej:esc.do-mayor-1pos"]},
   {"id": "paso:c1.t4.02", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Do mayor y Sol mayor", "objetivo": "Do en una octava y Sol en dos, con las manos a la vez.", "trabaja": ["comp:esc.do-sol-mayor-1pos"], "contenido": ["ej:esc.do-mayor-1pos", "ej:esc.sol-mayor-1pos"]},
@@ -61,18 +61,19 @@
   {"id": "paso:c1.t4.04", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Ligados ascendentes y descendentes", "objetivo": "Que la nota ligada suene casi como la pulsada.", "trabaja": ["comp:tec.ligados-1pos"], "contenido": ["ej:tec.ligados-1pos"], "requiere": ["paso:c1.t1.02"]},
   {"id": "paso:c1.t4.05", "programa": "clasica", "clase": "habilidad", "area": "teoria", "titulo": "Intervalos y armaduras", "objetivo": "Intervalos con su calidad y las armaduras de hasta dos alteraciones.", "trabaja": ["comp:teo.intervalos", "comp:teo.armaduras-0-2"]},
   {"id": "paso:c1.t4.06", "programa": "clasica", "clase": "habilidad", "area": "armonia", "titulo": "Las triadas de Do mayor, y escala mayor o menor de oído", "objetivo": "Qué acordes salen de cada grado, y reconocer el modo de una escala.", "trabaja": ["comp:arm.triadas-do-mayor", "comp:oid.escala-mayor-menor"]},
+  {"id": "paso:c1.t4.08", "programa": "clasica", "clase": "habilidad", "area": "ritmo", "titulo": "Puntillo y semicorcheas", "objetivo": "La negra con puntillo y las semicorcheas, contando en voz alta, antes del 6/8 y del mordente.", "trabaja": ["comp:rit.puntillo-semicorcheas"], "contenido": ["ej:rit.puntillo-semicorcheas"], "requiere": ["paso:c1.t2.05"]},
   {"id": "paso:c1.t4.07", "programa": "clasica", "clase": "evaluacion", "titulo": "Cierre del tramo 4", "objetivo": "Comprobar en frío, días después, lo trabajado en el tramo."},
 
   {
     "id": "tramo:c1.t5", "programa": "clasica", "curso": "curso:c1", "orden": 5,
     "titulo": "Polifonía antigua", "obraEje": "obra:sanz.espanoleta",
-    "objetivos": ["La Españoleta de Sanz con las dos voces claras", "Apagar voces y el mordente", "Re mayor, 6/8 y la hemiolia, y las cadencias"],
+    "objetivos": ["La Españoleta de Sanz con las dos voces claras", "Apagar voces y el mordente", "Re mayor, 6/8, 3/4 y la hemiolia, y las cadencias"],
     "pasos": ["paso:c1.t5.01", "paso:c1.t5.02", "paso:c1.t5.03", "paso:c1.t5.04", "paso:c1.t5.05", "paso:c1.t5.06", "paso:c1.t5.07", "paso:c1.t5.08"]
   },
   {"id": "paso:c1.t5.01", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Dos voces: apagar la que termina", "objetivo": "El bajo dura lo escrito y se calla mientras sigue la melodía.", "trabaja": ["comp:tec.apagar-voces"], "contenido": ["ej:tec.apagar-voces"], "requiere": ["paso:c1.t1.07"]},
   {"id": "paso:c1.t5.02", "programa": "clasica", "clase": "habilidad", "area": "tecnica", "titulo": "Mordente", "objetivo": "La nota, la de abajo y vuelta, sin perder el pulso.", "trabaja": ["comp:tec.mordente"], "contenido": ["ej:tec.mordente"], "requiere": ["paso:c1.t4.04"]},
-  {"id": "paso:c1.t5.03", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Escala de Re mayor", "objetivo": "La tonalidad de la polifonía de este tramo.", "trabaja": ["comp:esc.re-mayor-1pos"], "contenido": ["ej:esc.re-mayor-1pos"]},
-  {"id": "paso:c1.t5.04", "programa": "clasica", "clase": "habilidad", "area": "ritmo", "titulo": "6/8 y la hemiolia", "objetivo": "Contar 6/8 en dos y oír la hemiolia de las danzas.", "trabaja": ["comp:rit.ternario-hemiolia"], "contenido": ["ej:rit.hemiolia"], "requiere": ["paso:c1.t2.05"]},
+  {"id": "paso:c1.t5.03", "programa": "clasica", "clase": "habilidad", "area": "escalas", "titulo": "Escala de Re mayor", "objetivo": "La escala que el Plan pone en esta unidad; la tonalidad de la Españoleta depende de la edición (por verificar).", "trabaja": ["comp:esc.re-mayor-1pos"], "contenido": ["ej:esc.re-mayor-1pos"]},
+  {"id": "paso:c1.t5.04", "programa": "clasica", "clase": "habilidad", "area": "ritmo", "titulo": "6/8 y la hemiolia", "objetivo": "Contar 6/8 en dos y 3/4 en tres, y oír la hemiolia de las danzas antiguas en los dos compases (el de la Españoleta depende de la edición).", "trabaja": ["comp:rit.ternario-hemiolia"], "contenido": ["ej:rit.hemiolia", "ej:rit.hemiolia-3-4"], "requiere": ["paso:c1.t2.05", "paso:c1.t4.08"]},
   {"id": "paso:c1.t5.05", "programa": "clasica", "clase": "habilidad", "area": "armonia", "titulo": "Cadencias, y final conclusivo o suspensivo de oído", "objetivo": "Cómo acaba una frase, explicado y escuchado.", "trabaja": ["comp:arm.cadencias", "comp:oid.cadencia-conclusiva-suspensiva"]},
   {"id": "paso:c1.t5.06", "programa": "clasica", "clase": "aplicacion", "area": "tecnica", "titulo": "Las dos voces de la Españoleta", "objetivo": "Apagar el bajo dentro de la obra, antes de tocarla entera.", "trabaja": ["comp:tec.apagar-voces"], "contenido": ["obra:sanz.espanoleta"], "requiere": ["paso:c1.t5.01"]},
   {"id": "paso:c1.t5.07", "programa": "clasica", "clase": "obra", "titulo": "Españoleta", "objetivo": "La danza entera, con las dos voces claras.", "contenido": ["obra:sanz.espanoleta"]},

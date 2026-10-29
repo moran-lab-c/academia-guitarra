@@ -71,6 +71,10 @@ export function validarEstado(e) {
   return err;
 }
 
+// El tempo apuntado en una práctica o una prueba (el campo del registro siempre ha aceptado de 0 a 400).
+export const TEMPO_APUNTADO = [0, 400];
+const tempoValido = t => t == null || (Number.isFinite(t) && t >= TEMPO_APUNTADO[0] && t <= TEMPO_APUNTADO[1]);
+
 export function validarEvento(ev) {
   const err = [];
   if (!esObjeto(ev)) return ['El evento no es un objeto'];
@@ -82,6 +86,7 @@ export function validarEvento(ev) {
   if (ev.formato != null && ![...FORMATOS, 'memoria'].includes(ev.formato)) err.push(`Evento ${ev.id}: formato desconocido «${ev.formato}»`);
   if (ev.grabacion != null && typeof ev.grabacion !== 'boolean') err.push(`Evento ${ev.id}: «grabacion» debe ser sí o no`);
   if (ev.paso != null && typeof ev.paso !== 'string') err.push(`Evento ${ev.id}: «paso» debe ser un id de paso`);
+  if (!tempoValido(ev.tempo)) err.push(`Evento ${ev.id}: el tempo es un número de ${TEMPO_APUNTADO[0]} a ${TEMPO_APUNTADO[1]}`);
   for (const [d, v] of Object.entries(ev.calidad || {})) {
     if (!(d in DIMENSIONES)) err.push(`Evento ${ev.id}: aspecto desconocido «${d}»`);
     else if (!CALIDADES.includes(v)) err.push(`Evento ${ev.id}: valor «${v}» en ${d}`);
@@ -104,12 +109,13 @@ function validarDiagnostico(ev) {
     if (!esObjeto(p) || typeof p.item !== 'string') return err.push(`${donde}: la prueba ${i + 1} no dice qué competencia`);
     if (!RESULTADOS.includes(p.resultado)) err.push(`${donde}: resultado «${p.resultado}» en la prueba ${i + 1}`);
     if (p.tipo != null && !TIPOS_PRUEBA.includes(p.tipo)) err.push(`${donde}: tipo de prueba «${p.tipo}»`);
-    if (p.aciertos != null && !(Number.isInteger(p.aciertos) && Number.isInteger(p.preguntas) && p.aciertos >= 0 && p.aciertos <= p.preguntas)) err.push(`${donde}: aciertos y preguntas de la prueba ${i + 1}`);
+    if (!tempoValido(p.tempo)) err.push(`${donde}: tempo de la prueba ${i + 1}`);
+    if ((p.aciertos != null || p.preguntas != null) && !(Number.isInteger(p.aciertos) && Number.isInteger(p.preguntas) && p.aciertos >= 0 && p.aciertos <= p.preguntas)) err.push(`${donde}: aciertos y preguntas de la prueba ${i + 1}`);
     for (const [d, v] of Object.entries(p.calidad || {})) if (!(d in DIMENSIONES) || !CALIDADES.includes(v)) err.push(`${donde}: aspecto «${d}» en la prueba ${i + 1}`);
   });
   if (ev.evidencias != null && !Array.isArray(ev.evidencias)) err.push(`${donde}: «evidencias» debe ser una lista`);
   else (ev.evidencias || []).forEach((x, i) => {
-    if (!esObjeto(x) || typeof x.item !== 'string' || typeof x.fuente !== 'string') return err.push(`${donde}: la evidencia ${i + 1} no dice de qué competencia ni de qué obra`);
+    if (!esObjeto(x) || typeof x.item !== 'string' || !x.item || typeof x.fuente !== 'string' || !x.fuente) return err.push(`${donde}: la evidencia ${i + 1} no dice de qué competencia ni de qué obra`);
     if (!EVIDENCIAS.includes(x.resultado)) err.push(`${donde}: evidencia «${x.resultado}»`);
     if ([...(x.aspectos || []), ...(x.sinObservar || [])].some(d => !(d in DIMENSIONES))) err.push(`${donde}: aspecto desconocido en la evidencia ${i + 1}`);
   });

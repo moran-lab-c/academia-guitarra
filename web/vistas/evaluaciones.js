@@ -26,7 +26,7 @@ let mod = null;
 let obraAbierta = null;
 
 const NOMBRE_CONFIANZA = { alta: 'Confianza alta', media: 'Confianza media', baja: 'Confianza baja' };
-const NOMBRE_FUENTE = { evaluacion: 'De la evaluación', progreso: 'De tu progreso', 'sin-datos': 'Sin evaluar' };
+const NOMBRE_FUENTE = { evaluacion: 'De la evaluación', progreso: 'De tu progreso', obras: 'De las obras que ya sabías', 'sin-datos': 'Sin evaluar' };
 const NOMBRE_COMO = { app: 'corrige la app', autoevaluada: 'autoevaluada con su criterio', repertorio: 'con las obras que ya tocas' };
 const NOMBRE_RESULTADO = { ok: 'superada', casi: 'cerca', no: 'todavía no' };
 const lista = items => items.map(x => x.nombre).join(', ');
@@ -226,20 +226,23 @@ function pruebaEjecucion(c, comp) {
       h('p', { class: 'pequeno suave' }, 'Tócalo ahora en frío: sin calentar ese pasaje, sin mirar y sin ayuda. Si no lo has trabajado nunca, no hace falta intentarlo.'),
       donde.length > 0 && h('p', { class: 'pequeno suave' }, 'Material: ', donde.map((d, i) => [i ? ', ' : '', h('a', { href: d.href }, d.titulo)]), ' (vuelves aquí sin perder lo respondido).'),
       form),
-    h('aside', { class: 'pila' }, barraMetronomo({ clave: comp.id, tempo: tempoDe(c, comp.id), compas: null })));
+    h('aside', { class: 'pila' }, barraMetronomo({ clave: comp.id, tempo: tempoDe(c, comp.id, { contenido: (c.cat.ejerciciosDe.get(comp.id) || [])[0] ?? null }) })));
 }
 
 function resumen(c) {
   const r = mod.hecho;
   const nombres = ids => ids.map(id => nombreDe(c.cat.porId.get(id))).join(', ');
+  // Sin respuestas porque no quedaba nada que preguntar: su progreso ya prueba lo que el área puede comprobar.
+  const yaConsta = !r.probadas && siguiente(c, mod.area, [], { hipotesis: mod.hipotesis }).fin;
   return h('div', { class: 'tarjeta pila-s', style: 'max-width:48em' },
-    h('h2', null, r.probadas ? `Nivel ${r.nivel} · ${NOMBRE_CONFIANZA[r.confianza].toLowerCase()}` : 'No se ha guardado nada'),
+    h('h2', null, r.probadas ? `Nivel ${r.nivel} · ${NOMBRE_CONFIANZA[r.confianza].toLowerCase()}` : yaConsta ? 'No queda nada que preguntar' : 'No se ha guardado nada'),
+    yaConsta && h('p', null, `Tu progreso ya prueba lo que esta área puede comprobar ahora${r.nivel ? ` (nivel ${r.nivel})` : ''}. No hacía falta preguntar nada ni se ha guardado nada nuevo.`),
     r.probadas > 0 && h('ul', { class: 'lista-limpia pila-s' }, mod.respuestas.map(x => h('li', { class: 'fila-entre' },
       h('span', null, nombreDe(c.cat.porId.get(x.item))),
       h('span', { class: 'pequeno suave' }, `${NOMBRE_RESULTADO[x.resultado]}${x.preguntas ? ` · ${x.aciertos} de ${x.preguntas}` : ''}`)))),
     r.frontera.length > 0 && h('p', null, `Por aquí sigue esta área: ${nombres(r.frontera)}.`),
     r.porConfirmar.length > 0 && h('p', { class: 'suave' }, `Se dan por sabidas y se confirmarán en frío: ${nombres(r.porConfirmar)}.`),
-    !r.probadas && h('p', { class: 'suave' }, 'Puedes volver cuando quieras: lo que no evalúes empieza desde el principio de su área.'),
+    !r.probadas && !yaConsta && h('p', { class: 'suave' }, 'Puedes volver cuando quieras: lo que no evalúes empieza desde el principio de su área.'),
     r.probadas > 0 && h('p', { class: 'pequeno suave' }, 'Lo superado cuenta como primer acierto en frío. Nada queda bloqueado.'),
     h('button', { type: 'button', class: 'principal', onclick: () => { mod = null; repintar(); } }, 'Volver al perfil'));
 }

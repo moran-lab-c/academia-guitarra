@@ -47,26 +47,36 @@ export function avanzar(m) {
 }
 export const intervaloMs = bpm => 60000 / ajustarBpm(bpm);
 
+// La unidad del tempo: la del criterio si la dice; si no, la negra, o la negra con puntillo en los compases compuestos
+// (en 6/8, 60 es ♩.=60, no ♩=60).
+export const unidadDe = (compas, unidad = null) => unidad ?? (compas && pulsosDe(compas).subdivision === 3 ? '♩.' : '♩');
+
 // El tempo de referencia de una cosa (obra, sección, fragmento, ejercicio o competencia) y de dónde sale, por este orden:
 // el encargo activo del profesor que lo diga, el ajuste de su profesor, su propio ajuste y el contenido. También el último
-// tempo apuntado. clave: «obra:x», «obra:x#B», «ej:y», «comp:z» (donde se registra). contenido: lo que se está
-// practicando si no es la clave misma (un ejercicio registra en su competencia, pero su tempo es el del ejercicio).
-export function tempoDe(ctx, clave, { contenido = null } = {}) {
+// tempo apuntado, el compás, y el tempo inicial y la subida que proponga el contenido. clave: «obra:x», «obra:x#B», «ej:y»,
+// «comp:z» (donde se registra). contenido: lo que se está practicando si no es la clave misma (un ejercicio registra en
+// su competencia, pero su tempo y su compás son los del ejercicio). compas: el de la sección, si lo dice.
+export function tempoDe(ctx, clave, { contenido = null, compas = null } = {}) {
   const [id] = separar(clave);
   const item = ctx.cat.porId.get(id);
+  const fuentes = [contenido, item].filter(Boolean);
+  const primero = f => fuentes.map(f).find(x => x != null) ?? null;
   const encargo = (ctx.estado.tareasProfesor || []).find(t => t.estado !== 'hecha' && t.estado !== 'cancelada' && t.tempo
     && (t.item === clave || t.item === id) && (!t.hasta || t.hasta >= ctx.hoy));
   const ajuste = ctx.estado.ajustes?.[clave] ?? ctx.estado.ajustes?.[id];
   const crit = item ? criterioDe(item, ajuste) : null;
-  const unidad = crit?.tempo?.unidad ?? '♩';
+  const elCompas = compas ?? primero(x => x.compas);
   const progreso = progresoTempo(ctx, clave);
-  const base = { unidad, actual: progreso.ultimo, mejor: progreso.mejorValido, obligatorio: !!crit?.tempo?.obligatorio };
+  const base = {
+    unidad: unidadDe(elCompas, crit?.tempo?.unidad), compas: elCompas, acentos: primero(x => x.acentos),
+    inicial: primero(x => x.tempo?.inicial), subida: primero(x => x.tempo?.subida),
+    actual: progreso.ultimo, mejor: progreso.mejorValido, obligatorio: !!crit?.tempo?.obligatorio,
+  };
   if (encargo) return { ...base, objetivo: encargo.tempo, fuente: 'encargo', motivo: 'Lo ha pedido tu profesor en un encargo.' };
   if (ajuste?.tempo?.referencia) {
     const delProfesor = ajuste.por === 'profesor';
     return { ...base, objetivo: ajuste.tempo.referencia, fuente: delProfesor ? 'profesor' : 'propio', motivo: delProfesor ? 'Lo ha fijado tu profesor.' : 'Lo has ajustado tú.' };
   }
-  const fuentes = [contenido, item].filter(Boolean);
   const delContenido = fuentes.map(x => x.criterio?.tempo?.referencia ?? x.tempo?.objetivo ?? null).find(Boolean) ?? null;
   if (delContenido) return { ...base, objetivo: delContenido, fuente: 'contenido', motivo: 'Tempo de referencia del contenido.' };
   return { ...base, objetivo: null, fuente: null, motivo: fuentes.map(x => x.tempo?.regla).find(Boolean) ?? 'Sin tempo de referencia: empieza donde salga limpio.' };

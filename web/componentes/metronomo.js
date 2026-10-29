@@ -3,9 +3,10 @@
 // no dependa de lo ocupado que esté el navegador. La lógica (límites, estados, compás, de dónde sale el tempo) está en
 // logica/metronomo.js; el tempo que se usa pasa al registro como dato de progreso, no como nota.
 import { h } from '../nucleo/dom.js';
-import { crearMetronomo, iniciar, pausar, detener, cambiarBpm, fijarBpm, fijarCompas, avanzar, textoTempo, PASOS, BPM_MIN, BPM_MAX } from '../../logica/metronomo.js';
+import { crearMetronomo, iniciar, pausar, detener, cambiarBpm, fijarBpm, fijarCompas, avanzar, textoTempo, unidadDe, PASOS, BPM_MIN, BPM_MAX } from '../../logica/metronomo.js';
 
 const COMPASES = ['2/4', '3/4', '4/4', '6/8'];
+const RETRASO_MAX = 0.05; // si el navegador se ha parado más que esto (una pestaña en segundo plano), se retoma desde ahora
 const motor = { m: crearMetronomo(), clave: null, usadoCon: new Map(), audio: null, siguiente: 0, temporizador: null };
 
 // El tempo con el que ha practicado una cosa en esta sesión (para proponerlo al registrar), o null.
@@ -30,6 +31,8 @@ function marcar(pulso, acento) {
 }
 
 function programar() {
+  // Tras un parón, no se recuperan los pulsos perdidos de golpe (sonarían tarde y pegados): se sigue desde ahora.
+  if (motor.siguiente < motor.audio.currentTime - RETRASO_MAX) motor.siguiente = motor.audio.currentTime + 0.02;
   while (motor.siguiente < motor.audio.currentTime + 0.12) {
     const { metronomo, pulso, acento } = avanzar(motor.m);
     motor.m = metronomo;
@@ -81,14 +84,16 @@ function proponerTempo() {
 }
 const puntos = () => Array.from({ length: motor.m.pulsos }, (_, i) => h('span', { class: `metronomo__pulso${motor.m.acentos.includes(i + 1) ? ' metronomo__pulso--acento' : ''}`, 'aria-hidden': 'true' }));
 
-// clave: donde se registrará la práctica (para el tempo apuntado). tempo: lo de logica/metronomo.js (tempoDe).
-// compas y acentos: los del contenido, si los tiene.
-export function barraMetronomo({ clave, tempo, compas = null, acentos = null }) {
-  // Si no está sonando para otra cosa, se prepara con el tempo de esta: el objetivo, o el último apuntado.
+// clave: donde se registrará la práctica (para el tempo apuntado). tempo: lo de logica/metronomo.js (tempoDe), que trae
+// también el compás, los acentos, el tempo inicial y la subida del contenido. compas y acentos: para decir otros.
+export function barraMetronomo({ clave, tempo, compas = tempo?.compas ?? null, acentos = tempo?.acentos ?? null }) {
+  // Si no está sonando para otra cosa, se prepara con el tempo de esta: el objetivo, el último apuntado o el inicial.
   if (motor.clave !== clave && motor.m.estado !== 'sonando') {
     motor.clave = clave;
-    motor.m = fijarCompas(fijarBpm(detener(motor.m), tempo?.objetivo ?? tempo?.actual ?? 60), compas ?? '4/4', acentos);
+    motor.m = fijarCompas(fijarBpm(detener(motor.m), tempo?.objetivo ?? tempo?.actual ?? tempo?.inicial ?? 60), compas ?? '4/4', acentos);
   }
+  const salto = tempo?.subida ?? PASOS[1]; // la subida que propone el contenido (sube 4…), o 5
+  const enRango = n => n >= BPM_MIN && n <= BPM_MAX;
   const otra = motor.clave !== clave;
   const accion = fn => () => { fn(); refrescar(); };
   const opciones = [...new Set([...(compas ? [compas] : []), ...COMPASES])];
@@ -98,18 +103,20 @@ export function barraMetronomo({ clave, tempo, compas = null, acentos = null }) 
       h('select', { 'aria-label': 'Compás', onchange: e => { motor.m = fijarCompas(motor.m, e.target.value, e.target.value === compas ? acentos : null); refrescar(); } },
         opciones.map(c => h('option', { value: c, selected: c === motor.m.compas }, c)))),
     h('div', { class: 'metronomo__fila' },
-      h('button', { type: 'button', class: 'metronomo__menos', 'aria-label': `Bajar ${PASOS[1]}`, onclick: accion(() => { motor.m = cambiarBpm(motor.m, -PASOS[1]); }) }, `−${PASOS[1]}`),
+      h('button', { type: 'button', class: 'metronomo__menos', 'aria-label': `Bajar ${salto}`, onclick: accion(() => { motor.m = cambiarBpm(motor.m, -salto); }) }, `−${salto}`),
       h('button', { type: 'button', 'aria-label': `Bajar ${PASOS[0]}`, onclick: accion(() => { motor.m = cambiarBpm(motor.m, -PASOS[0]); }) }, '−'),
-      h('div', { class: 'metronomo__bpm' }, h('span', { class: 'metronomo__cifra display' }, motor.m.bpm), h('span', { class: 'pequeno suave' }, 'BPM')),
+      h('div', { class: 'metronomo__bpm' }, h('span', { class: 'metronomo__cifra display' }, motor.m.bpm), h('span', { class: 'pequeno suave', title: 'Pulsos por minuto' }, `BPM (${unidadDe(motor.m.compas)})`)),
       h('button', { type: 'button', 'aria-label': `Subir ${PASOS[0]}`, onclick: accion(() => { motor.m = cambiarBpm(motor.m, PASOS[0]); }) }, '+'),
-      h('button', { type: 'button', class: 'metronomo__mas', 'aria-label': `Subir ${PASOS[1]}`, onclick: accion(() => { motor.m = cambiarBpm(motor.m, PASOS[1]); }) }, `+${PASOS[1]}`)),
+      h('button', { type: 'button', class: 'metronomo__mas', 'aria-label': `Subir ${salto}`, onclick: accion(() => { motor.m = cambiarBpm(motor.m, salto); }) }, `+${salto}`)),
     h('div', { class: 'metronomo__pulsos', title: `Pulsos del compás (${motor.m.compas})` }, puntos()),
     h('div', { class: 'fila' },
       h('button', { type: 'button', class: 'btn btn-papel metronomo__marcha', 'aria-pressed': String(motor.m.estado === 'sonando'),
         onclick: accion(() => (motor.m.estado === 'sonando' ? parar(false) : arrancar())) }, motor.m.estado === 'sonando' ? 'Pausa' : motor.m.estado === 'pausado' ? 'Seguir' : 'Empezar'),
       h('button', { type: 'button', class: 'btn btn-borde', onclick: accion(() => parar(true)) }, 'Detener'),
-      tempo?.objetivo && h('button', { type: 'button', class: 'btn-fantasma pequeno', onclick: accion(() => { motor.m = fijarBpm(motor.m, tempo.objetivo); }) }, `Al objetivo (${tempo.objetivo})`)),
+      tempo?.objetivo && enRango(tempo.objetivo) && h('button', { type: 'button', class: 'btn-fantasma pequeno', onclick: accion(() => { motor.m = fijarBpm(motor.m, tempo.objetivo); }) }, `Al objetivo (${tempo.objetivo})`)),
+    tempo?.objetivo && !enRango(tempo.objetivo) && h('p', { class: 'pequeno suave', style: 'margin:0' }, `El objetivo (${tempo.objetivo}) queda fuera de lo que marca el metrónomo.`),
     otra && h('p', { class: 'pequeno ocre', style: 'margin:0' }, 'Está sonando para otro ejercicio: detenlo para usar el tempo de este.'),
+    !compas && !otra && h('p', { class: 'pequeno suave', style: 'margin:0' }, 'El contenido no indica el compás: elige el que toque.'),
     tempo && h('p', { class: 'pequeno suave', style: 'margin:0' }, `${tempo.objetivo ? `${tempo.motivo} ` : ''}${textoTempo(tempo)}`),
     h('p', { class: 'pequeno suave', style: 'margin:0' }, `De ${BPM_MIN} a ${BPM_MAX} BPM.`));
 }

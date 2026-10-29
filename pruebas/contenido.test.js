@@ -151,3 +151,32 @@ test('Contenido · lo que no se puede comprobar desde aquí queda pendiente, no 
   // El mordente dice que su ejecución en cada estilo depende de la edición.
   assert.ok(porId.get('ej:tec.mordente').porVerificar.length);
 });
+
+test('Contenido · cada ejercicio dice el compás de su notación (el metrónomo arranca en él) y la hemiolia tiene sus dos formas', () => {
+  for (const e of ENTIDADES.filter(x => x.tipo === 'ejercicio' && x.notacion?.fuente)) {
+    const compas = JSON.parse(fs.readFileSync(path.join(NOTACION, '..', e.notacion.fuente))).compas;
+    assert.equal(e.compas ?? '4/4', compas, `${e.id}: el ejercicio dice ${e.compas ?? 'nada (4/4)'} y su notación ${compas}`);
+  }
+  // La hemiolia en 3/4: dos compases que suenan como tres blancas (la segunda, ligada sobre la barra), antes del final.
+  const h34 = leer('rit-hemiolia-3-4.json');
+  assert.equal(h34.compas, '3/4');
+  const acentos = h34.compases.slice(2, 4).flatMap(m => m.voces[0]).filter(n => n.art?.includes('acento')).length;
+  assert.equal(acentos, 3);
+  assert.ok(h34.compases[2].voces[0].at(-1).tie);
+  // El puntillo y las semicorcheas se trabajan antes de la hemiolia, que los pide.
+  const hemiolia = porId.get('comp:rit.ternario-hemiolia');
+  assert.ok(hemiolia.requiere.includes('comp:rit.puntillo-semicorcheas'));
+  assert.ok(porId.get('paso:c1.t5.04').requiere.includes('paso:c1.t4.08'));
+  assert.ok(porId.get('tramo:c1.t4').pasos.includes('paso:c1.t4.08'));
+  // Lo que depende de la edición de la Españoleta no se da como dato de la obra.
+  for (const id of ['paso:c1.t5.03', 'paso:c1.t5.04']) assert.match(porId.get(id).objetivo, /edición/, id);
+  assert.match(porId.get('comp:esc.re-mayor-1pos').proposito, /por verificar/);
+  assert.equal(porId.get('obra:sanz.espanoleta').nivel.referencias.find(r => r.sistema === 'RCM 2018').naturaleza, 'estimacion');
+});
+
+test('Contenido · en Mi–La–Si7 en arpegio suenan las dos resoluciones del Si7: Re♯ → Mi en la 4.ª y La → Sol♯ en la 3.ª', () => {
+  const m = leer('arm-mi-la-si7.json').compases;
+  const nota = (k, mano) => m[k].voces[0].find(n => n.mano === mano);
+  assert.deepEqual([nota(6, 'i').c, CUERDAS[3] + nota(6, 'i').t, CUERDAS[3] + nota(7, 'i').t], [4, 51, 52]); // Re♯3 → Mi3
+  assert.deepEqual([nota(6, 'm').c, CUERDAS[2] + nota(6, 'm').t, CUERDAS[2] + nota(7, 'm').t], [3, 57, 56]); // La3 → Sol♯3
+});

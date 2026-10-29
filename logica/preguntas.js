@@ -1,6 +1,7 @@
 // Preguntas que corrige la app (lectura, diapasón, teoría, armonía y oído), generadas a partir de la teoría musical: la
 // respuesta correcta sale del cálculo, no de una lista escrita a mano. Deterministas: con la misma semilla, las mismas
-// preguntas. Las usan la evaluación inicial y las tandas de práctica de las competencias de conocimiento.
+// preguntas. De momento las usa la evaluación inicial; en la práctica, las competencias de conocimiento siguen
+// apuntando aciertos y preguntas a mano.
 //
 // Una pregunta: { enunciado, opciones: [texto], correcta: índice, notacion?: (notación propia de una o dos notas para
 // dibujar), audio?: { secuencia: [[midi, …], …], duracion } }.
@@ -56,6 +57,12 @@ const unaNota = (c, t) => ({ compas: '4/4', compasVisible: false, armadura: 'C',
 const NATURALES = { 1: [0, 1, 3], 2: [0, 1, 3], 3: [0, 2], 4: [0, 2, 3], 5: [0, 2, 3], 6: [0, 1, 3] };
 const natural = (c, t) => { const g = grafia(AFINACION[c - 1] + t, armadura('C')); return g.acc === '' ? g : null; };
 
+const clase = n => (NATURAL[n.letra] + ({ '#': 1, b: -1, '##': 2, bb: -2 }[n.acc] ?? 0) + 12) % 12;
+// Intervalos del curso 1: [nombre, pasos entre letras, semitonos].
+const INTERVALOS = [['2.ª menor', 1, 1], ['2.ª mayor', 1, 2], ['3.ª menor', 2, 3], ['3.ª mayor', 2, 4], ['4.ª justa', 3, 5], ['4.ª aumentada', 3, 6],
+  ['5.ª disminuida', 4, 6], ['5.ª justa', 4, 7], ['6.ª menor', 5, 8], ['6.ª mayor', 5, 9], ['7.ª menor', 6, 10], ['7.ª mayor', 6, 11], ['8.ª justa', 7, 12]];
+const ORDINALES = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto', 'sexto', 'séptimo'];
+
 const GENERADORES = {
   // Lectura: una nota en el pentagrama (escrita como se escribe la guitarra) → su nombre.
   'comp:lec.notas-1pos-agudas': r => preguntaLectura(r, [1, 2, 3]),
@@ -78,7 +85,9 @@ const GENERADORES = {
     const grado = elegir(r, [2, 3, 4, 5, 6, 7]);
     const e = escala(t, 'mayor');
     const ok = nombreNota(e[grado - 1].letra, e[grado - 1].acc);
-    const otros = e.map(n => nombreNota(n.letra, n.acc)).concat(e.map(n => nombreNota(n.letra, n.acc === '#' ? '' : '#')));
+    // Sin enarmónicos de la correcta entre las opciones (Si♯ cuando es Do): en este nivel solo confunden.
+    const otros = e.concat(e.map(n => ({ letra: n.letra, acc: n.acc === '#' ? '' : '#' })))
+      .filter(n => clase(n) !== clase(e[grado - 1])).map(n => nombreNota(n.letra, n.acc));
     return { enunciado: `¿Cuál es el ${grado}.º grado de ${nombreTono(t, 'mayor')}?`, ...opciones(r, ok, otros) };
   },
   'comp:teo.triada-mayor-menor': r => {
@@ -120,15 +129,19 @@ const GENERADORES = {
     return { enunciado: 'El acorde de reposo del modo flamenco por arriba (Mi), ¿es mayor o menor?', opciones: ['Mayor', 'Menor'], correcta: 0 };
   },
   // Contenido del curso 1, tramos 3-5.
+  // El número sale de contar las notas; la calidad, de los semitonos. Entre las opciones van siempre las otras calidades
+  // del mismo número, para que contar las letras no baste.
   'comp:teo.intervalos': r => {
-    const tipos = [['2.ª mayor', 1, 2], ['3.ª menor', 2, 3], ['3.ª mayor', 2, 4], ['4.ª justa', 3, 5], ['5.ª justa', 4, 7], ['6.ª mayor', 5, 9], ['8.ª justa', 7, 12]];
-    const [nombre, pasos, semis] = elegir(r, tipos);
-    const a = elegir(r, ['c', 'd', 'e', 'f', 'g', 'a']);
+    const [nombre, pasos, semis] = elegir(r, INTERVALOS);
+    const a = elegir(r, LETRAS);
     const letraB = LETRAS[(LETRAS.indexOf(a) + pasos) % 7];
     let dif = ((NATURAL[a] + semis) - NATURAL[letraB] + 120) % 12; if (dif > 6) dif -= 12;
     const accB = dif === 1 ? '#' : dif === -1 ? 'b' : dif === 0 ? '' : null;
     if (accB == null) return GENERADORES['comp:teo.intervalos'](r);
-    return { enunciado: `¿Qué intervalo hay de ${NOMBRES[a]} a ${nombreNota(letraB, accB)} (subiendo)?`, ...opciones(r, nombre, tipos.map(x => x[0])) };
+    const mismo = INTERVALOS.filter(x => x[1] === pasos && x[0] !== nombre).map(x => x[0]);
+    const cerca = INTERVALOS.filter(x => Math.abs(x[1] - pasos) === 1).map(x => x[0]).sort(() => r() - 0.5);
+    const distractores = [...mismo, ...cerca].slice(0, 3);
+    return { enunciado: `¿Qué intervalo hay de ${NOMBRES[a]} a ${nombreNota(letraB, accB)}${pasos === 7 ? ' agudo' : ''} (subiendo)?`, ...opciones(r, nombre, distractores) };
   },
   'comp:teo.armaduras-0-2': r => {
     const tonos = [['c', 0], ['g', 1], ['d', 2], ['f', -1], ['bb', -2]];
@@ -139,13 +152,17 @@ const GENERADORES = {
       ? { enunciado: `¿Qué tonalidad mayor lleva ${texto} en la armadura?`, ...opciones(r, nombre, tonos.map(([x]) => (x === 'bb' ? 'Si♭ mayor' : nombreTono(x, 'mayor')))) }
       : { enunciado: `¿Qué armadura tiene ${nombre}?`, ...opciones(r, texto, ['ninguna alteración', '1 sostenido', '2 sostenidos', '1 bemol', '2 bemoles']) };
   },
+  // El grado, con un ordinal neutro (el numeral en minúsculas o con ° ya diría la calidad); entre las opciones, las otras
+  // calidades sobre la misma nota, para que no baste con saber la fundamental.
   'comp:arm.triadas-do-mayor': r => {
     const e = escala('c', 'mayor');
     const calidades = ['mayor', 'menor', 'menor', 'mayor', 'mayor', 'menor', 'disminuido'];
-    const grados = ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii°'];
     const i = Math.floor(r() * 7);
-    const ok = `${NOMBRES[e[i].letra]} ${calidades[i]}`;
-    return { enunciado: `En Do mayor, ¿qué acorde se forma sobre el grado ${grados[i]}?`, ...opciones(r, ok, [`${NOMBRES[e[i].letra]} ${calidades[i] === 'mayor' ? 'menor' : 'mayor'}`, ...e.map((n, k) => `${NOMBRES[n.letra]} ${calidades[k]}`)]) };
+    const raiz = NOMBRES[e[i].letra];
+    const ok = `${raiz} ${calidades[i]}`;
+    const misma = ['mayor', 'menor', 'disminuido'].filter(q => q !== calidades[i]).map(q => `${raiz} ${q}`);
+    const otra = e.map((n, k) => `${NOMBRES[n.letra]} ${calidades[k]}`).filter((_, k) => k !== i).sort(() => r() - 0.5)[0];
+    return { enunciado: `En Do mayor, ¿qué acorde se forma sobre el ${ORDINALES[i]} grado?`, ...opciones(r, ok, [...misma, otra]) };
   },
   'comp:teo.inversiones': r => {
     const t = elegir(r, ['c', 'g', 'a', 'e', 'd']);
@@ -162,7 +179,7 @@ const GENERADORES = {
   },
   'comp:oid.intervalos-3-5-8': r => {
     const base = 52 + Math.floor(r() * 10);
-    const [nombre, semis] = elegir(r, [['3.ª', 4], ['5.ª', 7], ['8.ª', 12]]);
+    const [nombre, semis] = elegir(r, [['3.ª', 3], ['3.ª', 4], ['5.ª', 7], ['8.ª', 12]]); // la 3.ª, menor o mayor: se reconoce por el tamaño, no por el color
     return { enunciado: 'Escucha las dos notas: ¿qué intervalo forman?', audio: { secuencia: [[base], [base + semis]], duracion: 0.8 }, opciones: ['3.ª', '5.ª', '8.ª'], correcta: ['3.ª', '5.ª', '8.ª'].indexOf(nombre) };
   },
   'comp:oid.escala-mayor-menor': r => {

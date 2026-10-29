@@ -40,25 +40,35 @@ export function armadura(clave = 'C') {
   const alter = Object.fromEntries(LETRAS.map(l => [l, '']));
   if (n > 0) ORDEN_SOSTENIDOS.slice(0, n).forEach(l => { alter[l] = '#'; });
   if (n < 0) ORDEN_BEMOLES.slice(0, -n).forEach(l => { alter[l] = 'b'; });
-  return { clave, alteraciones: n, alter };
+  return { clave, alteraciones: n, alter, menor: clave in MENORES, tonica: clave[0].toLowerCase() };
 }
+const ALTERA = { '': 0, '#': 1, b: -1, '##': 2, bb: -2 };
 
 // Nombre escrito de una altura (MIDI) según la armadura: las notas de la tonalidad con su grafía (Re# en Mi mayor,
-// Mib en Si bemol), y lo cromático con sostenidos en las tonalidades de sostenidos y con bemoles en las de bemoles.
+// Mib en Si bemol); en las menores, el 6.º y el 7.º grados elevados (las formas armónica y melódica) sobre su letra (Do#
+// en Re menor, Si becuadro en Do menor); y lo demás cromático, con sostenidos en las tonalidades de sostenidos y con
+// bemoles en las de bemoles.
 export function grafia(midi, arm) {
   const pc = ((midi % 12) + 12) % 12;
   let letra = null, acc = '';
   for (const l of LETRAS) {
     const a = arm.alter[l];
-    const v = (NATURAL[l] + (a === '#' ? 1 : a === 'b' ? -1 : 0) + 12) % 12;
+    const v = (NATURAL[l] + ALTERA[a] + 12) % 12;
     if (v === pc) { letra = l; acc = a; break; }
+  }
+  if (!letra && arm.menor) {
+    for (const k of [1, 2]) { // el 7.º y el 6.º grados, medio tono por encima de lo que da la armadura
+      const l = LETRAS[(LETRAS.indexOf(arm.tonica) - k + 7) % 7];
+      const a = arm.alter[l];
+      if ((NATURAL[l] + ALTERA[a] + 1 + 12) % 12 === pc) { letra = l; acc = a === 'b' ? '' : a === '' ? '#' : '##'; break; }
+    }
   }
   if (!letra) {
     const nombre = (arm.alteraciones < 0 ? BEMOLES : SOSTENIDOS)[pc];
     letra = nombre[0]; acc = nombre.slice(1);
   }
   // La octava es la de la letra: Si# es un Do (la octava de abajo); Dob es un Si (la de arriba).
-  const base = NATURAL[letra] + (acc === '#' ? 1 : acc === 'b' ? -1 : 0);
+  const base = NATURAL[letra] + ALTERA[acc];
   const octava = Math.round((midi - base) / 12) - 1;
   return { letra, acc, octava };
 }
@@ -77,32 +87,49 @@ export function validarNotacion(p, nombre = 'notación') {
   if (p.compasVisible != null && typeof p.compasVisible !== 'boolean') err.push(`${nombre}: «compasVisible» debe ser sí o no`); // false: una nota suelta, sin el compás escrito
   if (p.parcial != null && !(Number.isInteger(p.parcial.total) && Number.isInteger(p.parcial.transcritos) && p.parcial.transcritos <= p.parcial.total)) err.push(`${nombre}: «parcial» debe decir cuántos compases hay transcritos de cuántos`);
   if (!Array.isArray(p.compases) || !p.compases.length) return [...err, `${nombre}: sin compases`];
+  if (p.parcial && Number.isInteger(p.parcial.transcritos) && p.parcial.transcritos !== p.compases.length) err.push(`${nombre}: «parcial» dice ${p.parcial.transcritos} compases transcritos y hay ${p.compases.length}`);
   const largo = /^\d+\/\d+$/.test(p.compas ?? '') ? compasEn(p.compas).negras : null;
   const posicion = (x, donde) => {
     if (!(Number.isInteger(x?.c) && x.c >= 1 && x.c <= 6)) err.push(`${donde}: cuerda fuera de 1-6`);
     if (!(Number.isInteger(x?.t) && x.t >= 0 && x.t <= 24)) err.push(`${donde}: traste fuera de 0-24`);
   };
+  const altura = x => (x && Number.isInteger(x.c) && Number.isInteger(x.t) ? midiDe((Array.isArray(p.afinacion) ? p.afinacion : AFINACION)[x.c - 1]) + x.t : null); // para comparar notas
+  const alturas = n => (Array.isArray(n?.acorde) ? n.acorde : [n]).map(altura).sort((a, b) => a - b).join(',');
+  // La nota siguiente de la misma voz (en este compás o al principio del siguiente), para ligados y ligaduras.
+  const siguienteDe = (i, v, k) => p.compases[i].voces[v][k + 1] ?? p.compases[i + 1]?.voces?.[v]?.[0] ?? null;
   p.compases.forEach((m, i) => {
-    if (!Array.isArray(m.voces) || !m.voces.length) return err.push(`${nombre}: el compás ${i + 1} no tiene voces`);
+    if (!m || typeof m !== 'object' || !Array.isArray(m.voces) || !m.voces.length) return err.push(`${nombre}: el compás ${i + 1} no tiene voces`);
     if (m.voces.length > 2) err.push(`${nombre}, compás ${i + 1}: como mucho dos voces (melodía y bajo)`);
     m.voces.forEach((voz, v) => {
       if (!Array.isArray(voz) || !voz.length) return err.push(`${nombre}, compás ${i + 1}, voz ${v + 1}: vacía`);
       voz.forEach((n, k) => {
         const donde = `${nombre}, compás ${i + 1}, voz ${v + 1}, nota ${k + 1}`;
+        if (!n || typeof n !== 'object') return err.push(`${donde}: no es una nota`);
         if (!DURACIONES.includes(String(n.d))) err.push(`${donde}: duración «${n.d}» (vale ${DURACIONES.join(', ')})`);
         if (n.dedo != null && !(Number.isInteger(n.dedo) && n.dedo >= 0 && n.dedo <= 4)) err.push(`${donde}: dedo fuera de 0-4`);
         if (n.mano != null && !MANO.includes(n.mano)) err.push(`${donde}: mano derecha «${n.mano}» (vale ${MANO.join(', ')})`);
         if (n.lig != null && !['h', 'p'].includes(n.lig)) err.push(`${donde}: ligado «${n.lig}» (h ascendente, p descendente)`);
         if ((n.lig || n.tie) && !voz[k + 1] && !p.compases[i + 1]) err.push(`${donde}: un ligado o una ligadura necesita una nota después`);
+        const sig = (n.lig || n.tie) && !n.s ? siguienteDe(i, v, k) : null;
+        if (sig && typeof sig === 'object' && !sig.s) {
+          // Un ligado va en la misma cuerda, hacia arriba (h) o hacia abajo (p); una ligadura une la misma altura.
+          if (n.lig && !Array.isArray(n.acorde) && !Array.isArray(sig.acorde) && Number.isInteger(n.t) && Number.isInteger(sig.t)) {
+            if (sig.c !== n.c) err.push(`${donde}: un ligado va en la misma cuerda`);
+            else if (n.lig === 'h' ? sig.t <= n.t : sig.t >= n.t) err.push(`${donde}: un ligado «${n.lig}» va ${n.lig === 'h' ? 'hacia un traste más agudo' : 'hacia un traste más grave'}`);
+          }
+          if (n.tie && alturas(n) !== alturas(sig)) err.push(`${donde}: una ligadura une dos notas iguales`);
+        }
         if (n.art != null && (!Array.isArray(n.art) || n.art.some(a => !ARTICULACIONES.includes(a)))) err.push(`${donde}: articulación desconocida`);
         if (n.din != null && !DINAMICAS.includes(n.din)) err.push(`${donde}: dinámica desconocida «${n.din}»`);
         if (n.s) return; // silencio
-        if (Array.isArray(n.acorde)) n.acorde.forEach(x => posicion(x, donde)); else posicion(n, donde);
+        if (Array.isArray(n.acorde)) { if (!n.acorde.length) err.push(`${donde}: acorde vacío`); n.acorde.forEach(x => posicion(x, donde)); } else posicion(n, donde);
       });
       // Cada voz llena su compás (la primera puede ser anacrusa si el archivo lo dice).
-      const suma = voz.reduce((s, n) => s + (DURACIONES.includes(String(n.d)) ? ticks(n) : 0), 0);
-      const duracionesBien = voz.every(n => DURACIONES.includes(String(n.d))); // si no, ya se ha dicho arriba
-      if (largo != null && duracionesBien && Math.abs(suma - largo) > 1e-9 && !(i === 0 && p.anacrusa)) err.push(`${nombre}, compás ${i + 1}, voz ${v + 1}: dura ${suma} negras y el compás pide ${largo}`);
+      const suma = voz.reduce((s, n) => s + (DURACIONES.includes(String(n?.d)) ? ticks(n) : 0), 0);
+      const duracionesBien = voz.every(n => DURACIONES.includes(String(n?.d))); // si no, ya se ha dicho arriba
+      const anacrusa = i === 0 && p.anacrusa;
+      if (largo != null && duracionesBien && !anacrusa && Math.abs(suma - largo) > 1e-9) err.push(`${nombre}, compás ${i + 1}, voz ${v + 1}: dura ${suma} negras y el compás pide ${largo}`);
+      if (largo != null && duracionesBien && anacrusa && suma > largo + 1e-9) err.push(`${nombre}: la anacrusa dura ${suma} negras, más que el compás (${largo})`);
     });
   });
   return err;
@@ -126,12 +153,14 @@ export function prepararNotacion(p, { compases = null } = {}) {
   const salida = [];
   for (let i = desde - 1; i < hasta; i++) {
     const m = p.compases[i];
-    const voces = m.voces.map(voz => {
+    const voces = m.voces.map((voz, v) => {
       let inicio = 0;
-      return voz.map(n => {
+      return voz.map((n, k) => {
+        const antes = k > 0 ? voz[k - 1] : i > desde - 1 ? p.compases[i - 1].voces[v]?.at(-1) : null;
         const nota = {
           duracion: String(n.d), puntillo: !!n.p, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
           dedo: n.dedo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
+          ligadaDesdeAntes: !n.s && !!antes?.tie,
         };
         inicio += ticks(n);
         if (n.s) return nota;
@@ -150,6 +179,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
     const porTiempo = voces.flatMap((voz, v) => voz.map(n => ({ n, v }))).filter(x => !x.n.silencio)
       .sort((a, b) => a.n.inicio - b.n.inicio || a.v - b.v);
     for (const { n } of porTiempo) {
+      if (n.ligadaDesdeAntes) { delete n._g; continue; } // la ligadura prolonga la nota anterior: ni se repite su alteración ni cuenta como dicha
       n._g.forEach((g, k) => {
         const id = `${g.letra}${g.octava}`;
         const esperada = id in vigente ? vigente[id] : arm.alter[g.letra];

@@ -40,7 +40,7 @@ export function formularioRegistro(item, extra = {}, alGuardar = () => {}) {
       campo(item?.tipo === 'obra' ? 'Pasadas completas (si solo has tocado una parte, elige la sección)' : 'Pasadas seguidas bien', num('pasadas', null)),
       // Si practica con el metrónomo, su tempo se propone aquí (y se actualiza mientras no lo toque él): es un dato de
       // progreso, se puede cambiar o borrar.
-      campo(`Tempo (${crit.tempo?.unidad ?? '♩'}=, opcional)`, campoTempo(item ? (extra.seccion ? `${item.id}#${extra.seccion}` : item.id) : null)),
+      campo(`Tempo (${crit.tempo?.unidad ?? extra.unidad ?? '♩'}=, opcional)`, campoTempo(item ? (extra.seccion ? `${item.id}#${extra.seccion}` : item.id) : null)),
       campo('Ayuda', elegir('ayuda', [['ninguna', 'Ninguna (sin mirar)'], ['notacion', 'Leyendo partitura o tablatura'], ['referencia', 'Con audio, vídeo o profesor']], item?.tipo === 'obra' ? 'notacion' : 'ninguna')),
       item?.notacion && campo('Leído en', elegir('formato', [['', '—'], ['partitura', 'Partitura'], ['tablatura', 'Tablatura'], ['memoria', 'De memoria']], c.estado.formatos?.[item.id] ?? '')),
       item?.tipo === 'obra' && campo('Qué parte', elegir('seccion', [['', 'Toda la obra'], ...secciones.map(s => [s.id, s.titulo ?? `Sección ${s.id}`]), ...(item.fragmentos || []).map(f => [f.id, `Fragmento: ${f.titulo}`])], extra.seccion ?? '')),

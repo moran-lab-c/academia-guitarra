@@ -1,0 +1,12 @@
+{
+  "titulo": "Puntillo y semicorcheas",
+  "compas": "4/4",
+  "armadura": "C",
+  "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
+  "compases": [
+    {"voces":[[{"d":"4","c":1,"t":0,"p":true,"mano":"i"},{"d":"8","c":1,"t":0,"mano":"m"},{"d":"4","c":1,"t":0,"mano":"i"},{"d":"4","c":1,"t":0,"mano":"m"}]]},
+    {"voces":[[{"d":"16","c":1,"t":0,"mano":"i"},{"d":"16","c":1,"t":0,"mano":"m"},{"d":"16","c":1,"t":0,"mano":"i"},{"d":"16","c":1,"t":0,"mano":"m"},{"d":"4","c":1,"t":0},{"d":"8","c":1,"t":0},{"d":"8","c":1,"t":0},{"d":"4","c":1,"t":0}]]},
+    {"voces":[[{"d":"4","c":1,"t":0,"p":true},{"d":"8","c":1,"t":0},{"d":"16","c":1,"t":0},{"d":"16","c":1,"t":0},{"d":"8","c":1,"t":0},{"d":"4","c":1,"t":0}]]},
+    {"voces":[[{"d":"2","c":1,"t":0},{"d":"2","c":1,"t":0}]]}
+  ]
+}

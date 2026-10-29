@@ -9,9 +9,11 @@ import { validarCatalogo } from '../logica/validarCatalogo.js';
 import { seccionDe, pideDe, esFragmento } from '../logica/catalogo.js';
 import { validarEstado, estadoInicial } from '../logica/esquema.js';
 import { entidadesReales } from './ayuda.js';
+import { fuenteDe } from '../web/componentes/partitura.js';
 
 const nota = (c, t, d = '8', extra = {}) => ({ d, c, t, ...extra });
 const unCompas = (voces, extra = {}) => ({ compas: '4/4', compases: [{ voces }], ...extra });
+const ENTIDAD_OBRA = () => entidadesReales().find(e => e.id === 'obra:tarrega.lagrima');
 
 test('Notación · la escala de Mi mayor sale escrita una octava por encima y con la grafía de su armadura (Re#, no Mib)', () => {
   const p = prepararNotacion(JSON.parse(fs.readFileSync(new URL('../contenido/notacion/esc-mi-mayor-1pos.json', import.meta.url))));
@@ -146,10 +148,65 @@ test('Notación · el reparto en líneas nunca pasa del ancho, empieza cada lín
     assert.ok(lineas.every(l => l.ancho <= ancho), `${ancho}: ${lineas.map(l => l.ancho)}`);
     assert.ok(lineas.every(l => l.compases[0].primero && l.compases[0].cabecera > 0 && l.compases.slice(1).every(c => !c.primero)), `${ancho}`);
   }
+  // Y corta de verdad: en estrecho, varias líneas (no todo comprimido en una), y en ancho, menos.
+  assert.ok(sistemas(escala, 300, 'ambas').length > 1);
+  assert.ok(sistemas(escala, 1200, 'ambas').length < sistemas(escala, 300, 'ambas').length);
   // Una sola línea corta en una pantalla ancha: se estira como mucho 1,5 veces, no hasta el borde.
   const corto = prepararNotacion({ compas: '4/4', compases: [{ voces: [[nota(1, 0, '1')]] }] });
   const [l] = sistemas(corto, 1200);
   assert.ok(l.ancho < 1200 * 0.5, `${l.ancho}`);
   // Sin notación válida, no hay líneas.
   assert.deepEqual(sistemas(prepararNotacion({ compas: '4/4', compases: [] }), 900), []);
+});
+
+test('Notación · en las menores, el 6.º y el 7.º elevados van sobre su letra (Do♯ en Re menor, Si becuadro en Do menor)', () => {
+  const claves = (arm, c, t) => prepararNotacion({ compas: '4/4', armadura: arm, compases: [{ voces: [[nota(c, t, '1')]] }] }).compases[0].voces[0][0];
+  assert.deepEqual(claves('Dm', 2, 2).claves, ['c#/5']); // Do♯ en Re menor, no Re♭
+  assert.deepEqual(claves('Dm', 2, 2).alteraciones, [{ indice: 0, tipo: '#' }]);
+  assert.deepEqual(claves('Gm', 1, 2).claves, ['f#/5']); // Fa♯ en Sol menor
+  assert.deepEqual(claves('Gm', 1, 0).claves, ['e/5']);  // el 6.º elevado de Sol menor (melódica): Mi becuadro
+  const si = claves('Cm', 3, 4); // Si en Do menor: becuadro sobre el Si♭ de la armadura
+  assert.deepEqual([si.claves, si.alteraciones], [['b/4'], [{ indice: 0, tipo: 'n' }]]);
+  assert.deepEqual(claves('Am', 3, 1).claves, ['g#/4']); // las de sostenidos siguen igual
+  assert.deepEqual(claves('F', 2, 2).claves, ['db/5']); // en mayor, lo cromático sigue la regla de la armadura
+  assert.equal(grafia(61, armadura('Dm')).letra, 'c');
+});
+
+test('Notación · el validador avisa (sin romperse) de acordes vacíos, notas nulas, ligados y ligaduras incoherentes, «parcial» y anacrusa', () => {
+  const errores = p => validarNotacion(p);
+  assert.ok(errores(unCompas([[{ d: '1', acorde: [] }]])).some(e => /acorde vacío/.test(e)));
+  assert.equal(prepararNotacion(unCompas([[{ d: '1', acorde: [] }]])).ok, false); // no lanza: da la lista de errores
+  assert.doesNotThrow(() => errores({ compas: '4/4', compases: [null] }));
+  assert.ok(errores({ compas: '4/4', compases: [null] }).some(e => /no tiene voces/.test(e)));
+  assert.ok(errores(unCompas([[null, nota(1, 0, '2'), nota(1, 0, '4')]])).some(e => /no es una nota/.test(e)));
+  // Ligados: en la misma cuerda y en su dirección; ligaduras: la misma altura.
+  assert.ok(errores(unCompas([[nota(1, 3, '2', { lig: 'h' }), nota(1, 1, '2')]])).some(e => /más agudo/.test(e)));
+  assert.ok(errores(unCompas([[nota(1, 3, '2', { lig: 'p' }), nota(1, 5, '2')]])).some(e => /más grave/.test(e)));
+  assert.ok(errores(unCompas([[nota(1, 0, '2', { lig: 'h' }), nota(2, 1, '2')]])).some(e => /misma cuerda/.test(e)));
+  assert.deepEqual(errores(unCompas([[nota(1, 0, '2', { lig: 'h' }), nota(1, 1, '2')]])), []);
+  assert.ok(errores(unCompas([[nota(1, 0, '2', { tie: true }), nota(1, 1, '2')]])).some(e => /dos notas iguales/.test(e)));
+  assert.deepEqual(errores(unCompas([[nota(1, 5, '2', { tie: true }), nota(2, 10, '2')]])), []); // misma altura en otra cuerda: vale
+  // «parcial» cuadra con lo escrito y la anacrusa no pasa del compás.
+  assert.ok(errores(unCompas([[nota(1, 0, '1')]], { parcial: { transcritos: 8, total: 16 } })).some(e => /8 compases transcritos y hay 1/.test(e)));
+  assert.ok(errores({ compas: '3/4', anacrusa: true, compases: [{ voces: [[nota(1, 0, '1')]] }] }).some(e => /anacrusa/.test(e)));
+  assert.deepEqual(errores({ compas: '3/4', anacrusa: true, compases: [{ voces: [[nota(1, 0, '4')]] }, { voces: [[nota(1, 0, '2', { p: true })]] }] }), []);
+});
+
+test('Notación · una ligadura sobre la barra no repite la alteración, y la nota igual que viene después sí la lleva', () => {
+  const p = prepararNotacion({ compas: '2/4', armadura: 'C', compases: [
+    { voces: [[nota(1, 0, '4'), nota(1, 4, '4', { tie: true })]] }, // Sol♯ ligado
+    { voces: [[nota(1, 4, '4'), nota(1, 4, '4')]] },                  // el Sol♯ ligado y otro Sol♯
+  ] });
+  const [ligada, otra] = p.compases[1].voces[0];
+  assert.deepEqual([ligada.claves, ligada.alteraciones], [['g#/5'], []]);
+  assert.deepEqual([otra.claves, otra.alteraciones], [['g#/5'], [{ indice: 0, tipo: '#' }]]);
+});
+
+test('Notación · un fragmento no empieza antes del compás 1, y con su propia notación no hereda el recorte de la obra', () => {
+  const obra = ENTIDAD_OBRA();
+  const errores = validarCatalogo([...entidadesReales().filter(e => e.id !== obra.id), { ...obra, fragmentos: [{ id: 'f1', titulo: 'F', proposito: 'p', compases: [-3, 4] }] }]);
+  assert.ok(errores.some(e => /desde el 1/.test(e)), errores.join('\n'));
+  const recortada = { notacion: { fuente: 'notacion/obra.json', compases: [1, 8] } };
+  assert.deepEqual(fuenteDe(recortada, { notacion: { fuente: 'notacion/b.json' } }), { fuente: 'notacion/b.json', compases: null });
+  assert.deepEqual(fuenteDe(recortada, { compases: [3, 4] }), { fuente: 'notacion/obra.json', compases: [3, 4] }); // sin fuente propia, recorta la de la obra
 });

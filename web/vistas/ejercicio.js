@@ -15,16 +15,19 @@ import { barraMetronomo } from '../componentes/metronomo.js';
 import { tempoDe } from '../../logica/metronomo.js';
 
 const NOMBRE_ESTADO = { pendiente: 'sin empezar', 'en-progreso': 'en curso', completado: 'hecho', dominado: 'dominado', 'necesita-repaso': 'toca reforzarlo' };
-let modo = { id: null, frio: false };
+let modo = { id: null, frio: false, comp: null }; // comp: en cuál se registra, si trabaja varias
 
 export default function ejercicio({ id }) {
   const c = ctx();
   const e = c.cat.porId.get(id);
   if (!e || e.tipo !== 'ejercicio') return h('p', { class: 'suave' }, 'Este ejercicio no existe.');
-  if (modo.id !== id) modo = { id, frio: false };
+  if (modo.id !== id) modo = { id, frio: false, comp: null };
   const pasos = (c.cat.pasosCon.get(id) || []).map(p => relacionesPaso(c, p.id)).filter(Boolean);
   const comps = (e.trabaja || []).map(k => c.cat.porId.get(k)).filter(Boolean);
-  const comp = comps.find(x => c.estadoDe(x.id) !== 'dominado') ?? comps[0];
+  // Se registra en la que él elija; si no, en la del paso de la ruta que lo usa y, si no, en la primera sin dominar.
+  const delPaso = pasos.flatMap(r => r.comps.map(k => k.comp)).find(k => comps.some(x => x.id === k));
+  const comp = comps.find(x => x.id === modo.comp) ?? comps.find(x => x.id === delPaso) ?? comps.find(x => c.estadoDe(x.id) !== 'dominado') ?? comps[0];
+  const tempo = tempoDe(c, comp?.id ?? e.id, { contenido: e }); // con el compás del ejercicio (y su unidad: ♩. en 6/8)
   const obra = pasos.flatMap(r => r.prepara).find(x => !x.contiene);
   const donde = pasos[0];
 
@@ -44,18 +47,19 @@ export default function ejercicio({ id }) {
         e.notacion ? selectorFormato(e, formatoPara(e, c, { proposito: PROPOSITO[e.area] }), e.id) : h('p', { class: 'suave' }, 'Este ejercicio no lleva notación: es de sensación y de escucha.'),
         (e.instrucciones || []).length > 0 && h('ol', { class: 'rejilla-3 lista-limpia' }, e.instrucciones.map((t, i) => h('li', { class: 'tarjeta-s pila-s' },
           h('span', { class: 'dato' }, String(i + 1).padStart(2, '0')), h('span', { class: 'suave' }, t)))),
-        e.tempo?.regla && h('p', { class: 'pequeno suave' }, `Tempo: ${e.tempo.regla} El tempo se apunta para ver cómo sube; no es el criterio.`),
+        e.tempo?.regla && h('p', { class: 'pequeno suave' }, `Tempo: ${e.tempo.regla}${/se apunta/.test(e.tempo.regla) ? '' : ' El tempo se apunta para ver cómo sube; no es el criterio.'}`),
         e.nota && h('p', { class: 'pequeno suave' }, e.nota),
         (e.porVerificar || []).length > 0 && h('p', { class: 'pequeno ocre' }, `Por verificar: ${e.porVerificar.map(x => x.motivo).join(' ')}`)),
       h('aside', { class: 'pila' },
-        barraMetronomo({ clave: comp?.id ?? e.id, tempo: tempoDe(c, comp?.id ?? e.id, { contenido: e }), compas: e.compas ?? null }),
+        barraMetronomo({ clave: comp?.id ?? e.id, tempo }),
         comp && h('div', { class: 'tarjeta pila-s' },
           h('div', { class: 'fila-entre' }, h('span', { class: 'rotulo' }, 'CÓMO HA SALIDO'),
             h('div', { class: 'segmentado', role: 'group', 'aria-label': 'Tipo de intento' },
               h('button', { type: 'button', 'aria-pressed': String(!modo.frio), onclick: () => { modo.frio = false; repintar(); } }, 'Práctica'),
               h('button', { type: 'button', 'aria-pressed': String(modo.frio), onclick: () => { modo.frio = true; repintar(); } }, 'En frío'))),
-          comps.length > 1 && h('p', { class: 'pequeno suave' }, `Se registra en: ${nombreDe(comp)}`),
-          formularioRegistro(comp, { modo: modo.frio ? 'comprobacion' : 'trabajo', area: e.area }, () => repintar())),
+          comps.length > 1 && h('label', { class: 'pequeno' }, 'Se registra en ',
+            h('select', { onchange: ev => { modo.comp = ev.target.value; repintar(); } }, comps.map(x => h('option', { value: x.id, selected: x.id === comp.id }, nombreDe(x))))),
+          formularioRegistro(comp, { modo: modo.frio ? 'comprobacion' : 'trabajo', area: e.area, unidad: tempo.unidad }, () => repintar())),
         h('div', { class: 'tarjeta pila-s' },
           h('div', { class: 'rotulo' }, 'LO QUE TRABAJA'),
           comps.map(x => h('div', { class: 'pila-s' },

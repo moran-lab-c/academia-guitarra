@@ -180,7 +180,7 @@
     ],
     "instrucciones": [
       "La menor y Mi mayor de primera posición, p-i-m-a en corcheas.",
-      "La a, más fuerte (apoyando, si puedes); p, i y m, piano y regulares.",
+      "La a, más fuerte, tirando con más peso (si la apoyas, cae sobre la 2.ª y la apaga); p, i y m, piano y regulares.",
       "Primero solo la a, luego el arpegio entero.",
       "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas."
     ],
@@ -475,7 +475,7 @@
       "Deja los dos dedos puestos cuando la nota de abajo está pisada."
     ],
     "tempo": {
-      "regla": "Despacio hasta que las tres notas del mordente salgan iguales; el tempo se apunta para ver cómo sube.",
+      "regla": "Despacio hasta que las tres notas del mordente salgan iguales.",
       "naturaleza": "consenso"
     },
     "erroresComunes": [

@@ -36,8 +36,9 @@ const cargarJSON = fuente => {
 export function fuenteDe(item, parte = null) {
   const n = { ...(item?.notacion || {}), ...(parte?.notacion || {}) };
   if (!n.fuente) return null;
-  // Un fragmento sin notación propia recorta la de su obra por sus compases.
-  const compases = parte?.notacion?.compases ?? (parte?.notacion?.fuente ? null : parte?.compases ?? null) ?? item?.notacion?.compases ?? null;
+  // Un fragmento sin notación propia recorta la de su obra por sus compases; con su propia fuente, no hereda el recorte.
+  if (parte?.notacion?.fuente) return { fuente: n.fuente, compases: parte.notacion.compases ?? null };
+  const compases = parte?.notacion?.compases ?? parte?.compases ?? item?.notacion?.compases ?? null;
   return { fuente: n.fuente, compases };
 }
 

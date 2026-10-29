@@ -22,6 +22,9 @@ export function bloqueCriterio(item, clave = item.id) {
       if (v.pasadasEnFrio != null) nuevo.pasadasEnFrio = v.pasadasEnFrio;
       if (item.tipo === 'obra') nuevo.memoria = !!v.memoria;
     }
+    // El profesor manda: un ajuste suyo no se sustituye por uno propio sin decirlo.
+    if (ajuste?.por === 'profesor' && nuevo.por !== 'profesor'
+      && !confirm('Este criterio lo ha ajustado tu profesor. Si guardas el tuyo, sustituye al suyo. ¿Guardarlo igualmente?')) return;
     cambiar(est => { est.ajustes = { ...(est.ajustes || {}), [clave]: nuevo }; });
   } },
     crit.tipo === 'conocimiento'
@@ -34,7 +37,10 @@ export function bloqueCriterio(item, clave = item.id) {
     campo('Lo ajusta', h('select', { name: 'por' }, h('option', { value: 'yo', selected: ajuste?.por !== 'profesor' }, 'Yo'), h('option', { value: 'profesor', selected: ajuste?.por === 'profesor' }, 'Mi profesor'))),
     campo('Por qué', h('input', { name: 'motivo', value: ajuste?.motivo ?? '' })),
     h('div', { class: 'fila' }, h('button', { type: 'submit' }, 'Guardar ajuste'),
-      ajuste && h('button', { type: 'button', onclick: () => cambiar(est => { delete est.ajustes[clave]; }) }, 'Volver al criterio del contenido')));
+      ajuste && h('button', { type: 'button', onclick: () => {
+        if (ajuste.por === 'profesor' && !confirm('Este criterio lo ha ajustado tu profesor. ¿Volver al del contenido igualmente?')) return;
+        cambiar(est => { delete est.ajustes[clave]; });
+      } }, 'Volver al criterio del contenido')));
 
   return h('div', null,
     h('p', null, h('strong', null, 'Criterio: '), textoCriterio(item, ajuste)),

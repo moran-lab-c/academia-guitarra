@@ -163,7 +163,7 @@
     "id": "comp:esc.re-mayor-1pos", "programa": "clasica", "area": "escalas", "nivel": 1,
     "nombre": "Escala de Re mayor en primera posición",
     "descripcion": "Una octava, de Re3 (4.ª al aire) a Re4 (2.ª, traste 3), con Fa♯ (4.ª, traste 4) y Do♯ (2.ª, traste 2).",
-    "proposito": "La tonalidad de la polifonía de la unidad 5 del Plan.",
+    "proposito": "La escala que el Plan pone en la unidad 5 (polifonía antigua). La tonalidad de la Españoleta depende de la edición: está por verificar.",
     "requiere": ["comp:esc.do-sol-mayor-1pos"],
     "erroresComunes": ["Fa natural en la 4.ª cuerda", "Do natural en la 2.ª"],
     "criterio": { "tipo": "ejecucion", "dimensiones": ["precision", "ritmo", "limpieza", "control"], "pasadas": 3, "detalle": "apoyando i-m, subiendo y bajando; el tempo se apunta para ver cómo sube", "naturaleza": "decision" }

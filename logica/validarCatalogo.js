@@ -151,7 +151,7 @@ export function validarCatalogo(entidades) {
           if ((e.secciones || []).some(s => s.id === f.id) || (e.fragmentos || []).filter(x => x.id === f.id).length > 1) err.push(`${fid}: id repetido (secciones y fragmentos comparten nombres)`);
           if (!f.titulo || !f.proposito) err.push(`${fid}: un fragmento dice su título y para qué es`);
           if (f.seccion != null && !(e.secciones || []).some(s => s.id === f.seccion)) err.push(`${fid}: su sección ${f.seccion} no existe`);
-          if (f.compases != null && !(Array.isArray(f.compases) && f.compases.length === 2 && f.compases.every(Number.isInteger) && f.compases[0] <= f.compases[1])) err.push(`${fid}: «compases» debe ser [desde, hasta]`);
+          if (f.compases != null && !(Array.isArray(f.compases) && f.compases.length === 2 && f.compases.every(Number.isInteger) && f.compases[0] >= 1 && f.compases[0] <= f.compases[1])) err.push(`${fid}: «compases» debe ser [desde, hasta], desde el 1`);
           notacion(e, f.notacion, ` (fragmento ${f.id})`);
           refs({ ...e, id: fid }, f.pide, 'competencia');
         }

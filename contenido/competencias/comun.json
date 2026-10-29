@@ -74,6 +74,33 @@
     }
   },
   {
+    "id": "comp:rit.puntillo-semicorcheas",
+    "programa": "comun",
+    "area": "ritmo",
+    "nivel": 1,
+    "nombre": "Puntillo y semicorcheas",
+    "descripcion": "El puntillo alarga la nota la mitad de lo que vale (una negra con puntillo dura una negra y una corchea); cuatro semicorcheas caben en una negra. Contando en voz alta «1 y 2 y», o «1 e y a» para las semicorcheas.",
+    "proposito": "Lo piden las figuras con puntillo de las escalas y de la hemiolia, y las semicorcheas del mordente (Plan, apartado 3.5: ritmo, etapa 1).",
+    "requiere": [
+      "comp:rit.figuras-basicas"
+    ],
+    "erroresComunes": [
+      "Acortar la nota con puntillo y adelantar la corchea",
+      "Correr en las semicorcheas"
+    ],
+    "criterio": {
+      "tipo": "ejecucion",
+      "dimensiones": [
+        "precision",
+        "ritmo",
+        "continuidad"
+      ],
+      "pasadas": 2,
+      "detalle": "el ejercicio de cuatro compases palmeado y luego tocado, contando en voz alta y con el metrónomo en negras",
+      "naturaleza": "decision"
+    }
+  },
+  {
     "id": "comp:teo.tono-semitono",
     "programa": "comun",
     "area": "teoria",
@@ -223,7 +250,7 @@
     "area": "teoria",
     "nivel": 1,
     "nombre": "Intervalos con su calidad",
-    "descripcion": "El número (de Do a Mi, una 3.ª) y la calidad, que sale de los semitonos: 3.ª mayor (4) o menor (3); 4.ª y 5.ª justas (5 y 7); 2.ª y 6.ª mayores (2 y 9); 8.ª justa (12).",
+    "descripcion": "El número (de Do a Mi, una 3.ª) y la calidad, que sale de los semitonos: 2.ª menor (1) o mayor (2); 3.ª menor (3) o mayor (4); 4.ª justa (5) o aumentada (6); 5.ª disminuida (6) o justa (7); 6.ª menor (8) o mayor (9); 7.ª menor (10) o mayor (11); 8.ª justa (12). La 4.ª aumentada y la 5.ª disminuida son el tritono (tres tonos), el que tiene el acorde de séptima de dominante.",
     "proposito": "Nombrar lo que se toca y lo que se oye; es la base de los acordes y de las escalas (Plan, unidad 4).",
     "requiere": [
       "comp:teo.tono-semitono"
@@ -300,7 +327,7 @@
     "area": "oido",
     "nivel": 1,
     "nombre": "3.ª, 5.ª y 8.ª de oído",
-    "descripcion": "Reconocer, entre dos notas seguidas, si forman una tercera, una quinta o una octava.",
+    "descripcion": "Reconocer, entre dos notas seguidas, si forman una tercera (menor o mayor), una quinta o una octava.",
     "proposito": "Las notas de los acordes, de oído (Plan, unidad 3); ayuda a afinar y a encontrar el bajo.",
     "requiere": [
       "comp:oid.mayor-menor"
@@ -357,10 +384,11 @@
     "area": "ritmo",
     "nivel": 1,
     "nombre": "3/4, 6/8 y la hemiolia",
-    "descripcion": "6/8 se cuenta en dos (dos negras con puntillo) y 3/4 en tres; la hemiolia es meter tres negras donde había dos negras con puntillo, muy típica de las danzas barrocas.",
+    "descripcion": "6/8 se cuenta en dos (dos negras con puntillo) y 3/4 en tres. La hemiolia cambia la agrupación sin cambiar el pulso de fondo: en 6/8, tres negras donde había dos negras con puntillo; en 3/4, dos compases que suenan como uno de 3/2 (tres blancas), casi siempre justo antes de la cadencia de las danzas barrocas.",
     "proposito": "El ritmo de las danzas de la polifonía antigua (Plan, unidad 5).",
     "requiere": [
-      "comp:rit.figuras-basicas"
+      "comp:rit.figuras-basicas",
+      "comp:rit.puntillo-semicorcheas"
     ],
     "erroresComunes": [
       "Contar 6/8 en seis sin agrupar de tres en tres",
@@ -374,7 +402,7 @@
         "continuidad"
       ],
       "pasadas": 2,
-      "detalle": "el ejercicio de la hemiolia contando en voz alta y palmeando, y luego tocándolo, con el metrónomo en dos por compás",
+      "detalle": "los dos ejercicios de la hemiolia (en 6/8, con el metrónomo en dos por compás, y en 3/4, en tres), contando en voz alta y palmeando, y luego tocándolos",
       "naturaleza": "decision",
       "justificacion": "El Plan lo pone en la unidad 5 (etapa 1) por las danzas antiguas, aunque los compases compuestos en general son de la etapa 2: aquí solo se pide contar 6/8 en dos y reconocer la hemiolia."
     }

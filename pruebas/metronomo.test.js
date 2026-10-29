@@ -2,7 +2,9 @@
 // señal de progreso que no decide el dominio.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { crearMetronomo, iniciar, pausar, detener, cambiarBpm, fijarBpm, fijarCompas, avanzar, ajustarBpm, pulsosDe, intervaloMs, tempoDe, progresoTempo, textoTempo, BPM_MIN, BPM_MAX } from '../logica/metronomo.js';
+import { crearMetronomo, iniciar, pausar, detener, cambiarBpm, fijarBpm, fijarCompas, avanzar, ajustarBpm, pulsosDe, intervaloMs, tempoDe, progresoTempo, textoTempo, unidadDe, BPM_MIN, BPM_MAX } from '../logica/metronomo.js';
+import { valorarIntento, criterioDe } from '../logica/dominio.js';
+import { validarEvento } from '../logica/esquema.js';
 import { estadoInicial, validarEstado } from '../logica/esquema.js';
 import { indexar, conPropio } from '../logica/catalogo.js';
 import { contexto } from '../logica/progreso.js';
@@ -103,4 +105,31 @@ test('Metrónomo · el tempo es progreso, no criterio: 65 de 80 sale bien si el 
   assert.notEqual(exigente.estadoDe(ESCALA), 'completado');
   assert.match(textoTempo(tempoDe(exigente, ESCALA)), /cuenta para dominarlo/);
   assert.equal(ctxCon({ estado, eventos: [intento(80, '2026-11-01')] }).estadoDe(ESCALA), 'completado');
+});
+
+test('Metrónomo · el compás, el tempo inicial y la subida salen del contenido; en 6/8 el tempo va en negras con puntillo', () => {
+  const c = ctxCon({ entidades: entidadesReales() });
+  const hemiolia = c.cat.porId.get('ej:rit.hemiolia');
+  const t68 = tempoDe(c, 'comp:rit.ternario-hemiolia', { contenido: hemiolia });
+  assert.deepEqual([t68.compas, t68.unidad], ['6/8', '♩.']); // 60 en 6/8 es ♩.=60, no ♩=60
+  assert.equal(pulsosDe(t68.compas).pulsos, 2);
+  const t34 = tempoDe(c, 'comp:rit.ternario-hemiolia', { contenido: c.cat.porId.get('ej:rit.hemiolia-3-4') });
+  assert.deepEqual([t34.compas, t34.unidad], ['3/4', '♩']);
+  assert.deepEqual([unidadDe('12/8'), unidadDe('4/4'), unidadDe(null), unidadDe('6/8', '♪')], ['♩.', '♩', '♩', '♪']);
+  // El tempo inicial del ejercicio (Mi–La–Si7 a ♩=60) y la subida de sus reglas («sube 4»).
+  assert.equal(tempoDe(c, 'comp:arm.i-iv-v7-i', { contenido: c.cat.porId.get('ej:arm.mi-la-si7') }).inicial, 60);
+  assert.equal(tempoDe(c, 'comp:esc.do-sol-mayor-1pos', { contenido: c.cat.porId.get('ej:esc.sol-mayor-1pos') }).subida, 4);
+  // Una obra con su compás, y una sección que dice otro manda sobre el de la obra.
+  assert.equal(tempoDe(c, 'obra:tarrega.lagrima').compas, '3/4');
+  assert.equal(tempoDe(c, 'obra:tarrega.lagrima', { compas: '6/8' }).compas, '6/8');
+  assert.equal(tempoDe(c, 'obra:sanz.espanoleta').compas, null); // por verificar: no se inventa
+});
+
+test('Metrónomo · un tempo apuntado que no es un número no se guarda ni supera un tempo obligatorio', () => {
+  const base = { id: 'e1', t: enDia('2026-11-01'), tipo: 'practica', item: ESCALA };
+  for (const tempo of ['rápido', '200', -50, 100000, NaN]) assert.ok(validarEvento({ ...base, tempo }).some(e => /tempo/.test(e)), String(tempo));
+  for (const tempo of [undefined, null, 0, 72, 400]) assert.deepEqual(validarEvento({ ...base, tempo }), [], String(tempo));
+  const crit = criterioDe(conTempo(true).find(e => e.id === ESCALA));
+  for (const tempo of ['rápido', '200']) assert.equal(valorarIntento({ calidad: BIEN, pasadas: 3, tempo }, crit), 'no', tempo);
+  assert.equal(valorarIntento({ calidad: BIEN, pasadas: 3, tempo: 80 }, crit), 'ok');
 });

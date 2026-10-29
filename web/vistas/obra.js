@@ -65,7 +65,7 @@ export default function obra({ id }) {
         practicarHoy(c, o, sec, est),
         h('div', { class: 'rejilla-2' }, enLaRuta(c, enRutas), progreso(c, o))),
       h('aside', { class: 'pila' },
-        barraMetronomo({ clave, tempo: tempoDe(c, clave), compas: sec?.compas ?? o.compas ?? null }),
+        barraMetronomo({ clave, tempo: tempoDe(c, clave, { compas: sec?.compas ?? null }) }),
         loQueTrabaja(c, n, final),
         loQueNecesitas(n, sec),
         conocidaDeAntes(c, o, est),

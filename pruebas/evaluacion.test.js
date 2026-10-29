@@ -76,11 +76,20 @@ test('Evaluación · las preguntas que corrige la app son correctas por construc
 });
 
 test('Evaluación · las preguntas del contenido nuevo (intervalos, armaduras, inversiones, triadas, cadencias y oído) también salen de la teoría', () => {
-  const SEMIS = { '2.ª mayor': 2, '3.ª menor': 3, '3.ª mayor': 4, '4.ª justa': 5, '5.ª justa': 7, '6.ª mayor': 9, '8.ª justa': 12 };
-  for (const q of preguntas('comp:teo.intervalos', 60, 'i')) {
-    const [, a, b] = /de (\S+) a (\S+) \(subiendo\)/.exec(q.enunciado);
-    assert.equal(((pc(b) - pc(a) + 12) % 12) || 12, SEMIS[respuesta(q)], q.enunciado);
+  const SEMIS = { '2.ª menor': 1, '2.ª mayor': 2, '3.ª menor': 3, '3.ª mayor': 4, '4.ª justa': 5, '4.ª aumentada': 6, '5.ª disminuida': 6, '5.ª justa': 7,
+    '6.ª menor': 8, '6.ª mayor': 9, '7.ª menor': 10, '7.ª mayor': 11, '8.ª justa': 12 };
+  const LETRA = { Do: 0, Re: 1, Mi: 2, Fa: 3, Sol: 4, La: 5, Si: 6 };
+  const vistos = new Set();
+  for (const q of preguntas('comp:teo.intervalos', 300, 'i')) {
+    const [, a, b] = /de (\S+) a (\S+)(?: agudo)? \(subiendo\)/.exec(q.enunciado);
+    const r = respuesta(q);
+    vistos.add(r);
+    assert.equal(((pc(b) - pc(a) + 12) % 12) || 12, SEMIS[r], q.enunciado);
+    assert.equal(((LETRA[b.replace(/[♯♭]/, '')] - LETRA[a] + 7) % 7 || 7) + 1, Number(r[0]), q.enunciado); // el número, de contar las notas
+    // Con otra calidad del mismo número entre las opciones (salvo la octava, que solo tiene una): contar no basta.
+    if (r[0] !== '8') assert.ok(q.opciones.some(o => o !== r && o[0] === r[0]), q.enunciado);
   }
+  assert.equal(vistos.size, Object.keys(SEMIS).length); // salen todas, también la 2.ª menor, la 6.ª menor, las séptimas y el tritono
   // Armaduras: las alteraciones de la escala mayor (su fórmula) son las de la armadura.
   const alteraciones = t => { const e = escala(t[0] === 's' ? 'bb' : t, 'mayor'); const s = e.filter(n => n.acc === '#').length, b = e.filter(n => n.acc === 'b').length; return s ? `${s} sostenido${s > 1 ? 's' : ''}` : b ? `${b} bemol${b > 1 ? 'es' : ''}` : 'ninguna alteración'; };
   const TONO = { 'Do mayor': 'c', 'Sol mayor': 'g', 'Re mayor': 'd', 'Fa mayor': 'f', 'Si♭ mayor': 'sb' };
@@ -96,15 +105,38 @@ test('Evaluación · las preguntas del contenido nuevo (intervalos, armaduras, i
   }
   // Triadas de Do mayor: la calidad sale de los semitonos de cada triada construida sobre la escala.
   const DO = [0, 2, 4, 5, 7, 9, 11]; // Do mayor: Do, Re, Mi, Fa, Sol, La, Si
-  const GRADOS = ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii°'];
+  const GRADOS = ['primer', 'segundo', 'tercer', 'cuarto', 'quinto', 'sexto', 'séptimo'];
   for (const q of preguntas('comp:arm.triadas-do-mayor', 30, 't')) {
-    const i = GRADOS.indexOf(/grado (\S+)\?/.exec(q.enunciado)[1]);
+    const i = GRADOS.indexOf(/sobre el (\S+) grado\?/.exec(q.enunciado)[1]);
     const [r, t, q5] = [DO[i], DO[(i + 2) % 7], DO[(i + 4) % 7]].map((x, k, a) => (x - a[0] + 12) % 12);
     assert.equal(respuesta(q).split(' ')[1], t === 4 ? 'mayor' : q5 === 6 ? 'disminuido' : 'menor', q.enunciado);
     assert.equal(r, 0);
+    assert.ok(!/\b[iv]+°?\b|\b[IV]+\b/.test(q.enunciado), q.enunciado); // el enunciado no dice la calidad
+    const raiz = respuesta(q).split(' ')[0];
+    assert.equal(q.opciones.filter(o => o.startsWith(`${raiz} `)).length, 3, q.enunciado); // las tres calidades sobre su nota
   }
+  // Armonía: el IV y el V7 de la tonalidad, el homónimo (misma tónica, otro modo) y la cadencia andaluza.
+  for (const q of preguntas('comp:arm.i-iv-v7-i', 40, 'f')) {
+    const [, tonica, cual] = /En (\S+) mayor, ¿cuál es el acorde de .*\((IV|V7)\)\?/.exec(q.enunciado);
+    assert.equal((pc(respuesta(q).replace('7', '')) - pc(tonica) + 12) % 12, cual === 'IV' ? 5 : 7, q.enunciado);
+    assert.equal(respuesta(q).endsWith('7'), cual === 'V7');
+  }
+  for (const q of preguntas('comp:arm.tono-homonimo', 30, 'h')) assert.equal(respuesta(q), `${/de (\S+) mayor\?/.exec(q.enunciado)[1]} menor`, q.enunciado);
+  const ANDALUZA = { orden: 'La menor – Sol – Fa – Mi', reposa: 'Mi', antes: 'Fa', mayor: 'Mayor' };
+  for (const q of preguntas('comp:fla.cadencia-andaluza', 30, 'n')) {
+    const tipo = /en orden/.test(q.enunciado) ? 'orden' : /reposa/.test(q.enunciado) ? 'reposa' : /antes/.test(q.enunciado) ? 'antes' : 'mayor';
+    assert.equal(respuesta(q), ANDALUZA[tipo], q.enunciado);
+  }
+  // Grados de la escala mayor: sin el enarmónico de la correcta entre las opciones (Si♯ cuando es Do).
+  for (const q of preguntas('comp:teo.escala-mayor', 200, 'g')) assert.equal(q.opciones.filter(o => pc(o) === pc(respuesta(q))).length, 1, q.enunciado);
   // Oído: lo que suena es lo que dice la respuesta.
-  for (const q of preguntas('comp:oid.intervalos-3-5-8', 30, 'o')) assert.equal({ 4: '3.ª', 7: '5.ª', 12: '8.ª' }[q.audio.secuencia[1][0] - q.audio.secuencia[0][0]], respuesta(q));
+  const terceras = new Set();
+  for (const q of preguntas('comp:oid.intervalos-3-5-8', 60, 'o')) {
+    const semis = q.audio.secuencia[1][0] - q.audio.secuencia[0][0];
+    assert.equal({ 3: '3.ª', 4: '3.ª', 7: '5.ª', 12: '8.ª' }[semis], respuesta(q));
+    if (semis < 5) terceras.add(semis);
+  }
+  assert.deepEqual([...terceras].sort(), [3, 4]); // la 3.ª, menor y mayor
   for (const q of preguntas('comp:oid.escala-mayor-menor', 30, 'e')) assert.equal(q.audio.secuencia[2][0] - q.audio.secuencia[0][0] === 4 ? 'Mayor' : 'Menor', respuesta(q));
   for (const q of preguntas('comp:oid.cadencia-conclusiva-suspensiva', 30, 'c')) {
     const [primero, , , ultimo] = q.audio.secuencia;
@@ -114,22 +146,24 @@ test('Evaluación · las preguntas del contenido nuevo (intervalos, armaduras, i
 
 test('Evaluación · adaptativa: empieza en su hipótesis, sube si supera, baja si falla y no vuelve a pedir lo que ya consta', () => {
   const ctx = ctxDe();
-  // Técnica tiene competencias de nivel 1, 2 y 6. Con «bastante», empieza en el 2.
+  // Técnica tiene competencias de nivel 1, 2 y 6. Con «bastante», empieza en el 2; con «mucho», también: el 3 no tiene
+  // contenido y lo de más arriba no se puede evaluar todavía.
   assert.equal(nivelInicial(ctx, 'tecnica', 2), 2);
+  assert.equal(nivelInicial(ctx, 'tecnica', 3), 2);
   assert.equal(nivelInicial(ctx, 'tecnica', null), 1);
   let r = [];
   let s = siguiente(ctx, 'tecnica', r, { hipotesis: 2 });
   assert.deepEqual([s.comp.id, s.nivel], ['comp:tec.cejilla-completa', 2]);
   r = [hecho(ctx, 'comp:tec.cejilla-completa'), hecho(ctx, 'comp:tec.tremolo-lento')];
-  s = siguiente(ctx, 'tecnica', r, { hipotesis: 2 });
-  assert.deepEqual([s.comp.id, s.nivel], ['comp:tec.tremolo-a-tempo', 6]); // supera el 2: sube al siguiente con contenido
-  r.push(falla('comp:tec.tremolo-a-tempo'));
-  assert.equal(siguiente(ctx, 'tecnica', r, { hipotesis: 2 }).fin, true); // falla al subir: termina
+  // Supera el 2 y el 3 no tiene contenido: termina ahí, sin saltar al 6 (los niveles cuentan seguidos, como en niveles.js).
+  assert.equal(siguiente(ctx, 'tecnica', r, { hipotesis: 2 }).fin, true);
   const res = resultadoModulo(ctx, 'tecnica', r, { hipotesis: 2 });
   assert.equal(res.nivel, 2);
-  assert.deepEqual(res.frontera, ['comp:tec.tremolo-a-tempo']);
+  assert.deepEqual(res.frontera, []);
   assert.deepEqual(res.porConfirmar.sort(), tecnicaDe(ctx, 1).sort()); // el nivel 1 no se ha probado: se da por sabido y queda por confirmar
-  assert.equal(res.confianza, 'baja'); // dos de seis, autoevaluadas
+  assert.equal(res.confianza, 'baja'); // dos de las del nivel 1 y 2, autoevaluadas
+  // Aunque una respuesta antigua del 6 saliera bien, no sube por encima del último nivel seguido con contenido.
+  assert.equal(resultadoModulo(ctx, 'tecnica', [...r, hecho(ctx, 'comp:tec.tremolo-a-tempo')], { hipotesis: 2 }).nivel, 2);
   // Si falla el nivel de partida, baja al anterior.
   const mal = [falla('comp:tec.cejilla-completa'), hecho(ctx, 'comp:tec.tremolo-lento')];
   s = siguiente(ctx, 'tecnica', mal, { hipotesis: 2 });
@@ -141,6 +175,22 @@ test('Evaluación · adaptativa: empieza en su hipótesis, sube si supera, baja 
   assert.ok(!vistas.includes('comp:tec.sonido-clasico'));
   assert.deepEqual(vistas.filter(id => tecnicaDe(conProgreso, 1).includes(id)).sort(), tecnicaDe(conProgreso, 1).filter(id => id !== 'comp:tec.sonido-clasico').sort());
   assert.equal(modulos(conProgreso, 'clasica').find(m => m.area === 'tecnica').yaConsta, 1);
+});
+
+test('Evaluación · un nivel solo se supera probado entero: terminar pronto no da por sabido lo de su lado', () => {
+  const ctx = ctxDe();
+  const nivel1 = tecnicaDe(ctx, 1);
+  // Una sola competencia del nivel 1, bien, y «Terminar aquí»: nivel 0, y las demás del nivel no quedan por confirmar.
+  const una = resultadoModulo(ctx, 'tecnica', [hecho(ctx, nivel1[0])], { hipotesis: 0 });
+  assert.deepEqual([una.nivel, una.porConfirmar], [0, []]);
+  // Todas las del nivel 1 bien: nivel 1.
+  assert.equal(resultadoModulo(ctx, 'tecnica', nivel1.map(id => hecho(ctx, id))).nivel, 1);
+  // El nivel 2 entero bien y el 1 sin probar: el 1 se da por sabido (está por debajo de uno superado).
+  const dos = resultadoModulo(ctx, 'tecnica', ['comp:tec.cejilla-completa', 'comp:tec.tremolo-lento'].map(id => hecho(ctx, id)));
+  assert.equal(dos.nivel, 2);
+  // El nivel 1 a medias y el 2 entero: corta en el 1, que está probado a medias.
+  const medias = resultadoModulo(ctx, 'tecnica', [hecho(ctx, nivel1[0]), hecho(ctx, 'comp:tec.cejilla-completa'), hecho(ctx, 'comp:tec.tremolo-lento')]);
+  assert.equal(medias.nivel, 0);
 });
 
 test('Evaluación · el resultado: nivel, confianza y evidencia; lo superado se convalida y lo fallado no queda «en curso»', () => {
@@ -258,4 +308,21 @@ test('Evaluación · el evento se valida: los diagnósticos antiguos siguen vali
     { evidencias: [{ item: 'comp:x', fuente: 'obra:y', resultado: 'convalidada' }] }, { evidencias: [{ item: 'comp:x', fuente: 'obra:y', resultado: 'favorable', aspectos: ['vibrato'] }] },
   ];
   for (const m of malos) assert.ok(validarEvento(diagnostico('2026-11-01', m)).length > 0, JSON.stringify(m));
+});
+
+test('Evaluación · lo que quedaba sin probar: la confianza de un diagnóstico antiguo, el orden de las evidencias y el tipo de fuente', () => {
+  // Un diagnóstico antiguo, sin confianza: la más prudente (baja), y se reevalúa a los 21 días.
+  const antiguo = { id: 'v1', t: enDia('2026-10-01'), tipo: 'diagnostico', niveles: { lectura: 1 }, pruebas: [] };
+  const f = perfil(ctxDe({ eventos: [antiguo], hoy: '2026-10-05' }), 'clasica').find(x => x.area === 'lectura');
+  assert.deepEqual([f.fuente, f.confianza, f.reevaluar.fecha], ['evaluacion', 'baja', '2026-10-22']);
+  // Evidencias de obras: manda la última (hasta que se decida otra regla; ver el informe).
+  const ev = (t, resultado) => ({ id: `x${t}`, t: enDia(t), tipo: 'diagnostico', modulo: 'repertorio', pruebas: [], evidencias: [{ item: 'comp:tec.apagar-voces', fuente: 'obra:tarrega.adelita', resultado, aspectos: ['sonido'], sinObservar: [] }] });
+  const c = ctxDe({ eventos: [ev('2026-10-22', 'en-contra'), ev('2026-10-20', 'favorable')] });
+  assert.equal(c.evidencias.get('comp:tec.apagar-voces').resultado, 'en-contra');
+  // Un área cuya única evidencia viene de obras que ya sabía no dice «de tu progreso».
+  const t = perfil(c, 'clasica').find(x => x.area === 'tecnica');
+  assert.equal(t.fuente, 'obras');
+  // La evidencia dice de qué obra sale; y aciertos y preguntas van juntos.
+  assert.ok(validarEvento({ ...ev('2026-10-23', 'favorable'), evidencias: [{ item: 'comp:tec.apagar-voces', fuente: '', resultado: 'favorable' }] }).length > 0);
+  assert.ok(validarEvento({ id: 'p', t: enDia('2026-10-23'), tipo: 'diagnostico', pruebas: [{ item: 'comp:lec.notas-1pos-agudas', resultado: 'ok', preguntas: -3 }] }).length > 0);
 });

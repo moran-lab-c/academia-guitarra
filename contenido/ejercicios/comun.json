@@ -13,7 +13,7 @@
       "Un acorde por compás a ♩=60, primero con el pulgar y luego en arpegio p-i-m-a.",
       "Ocho compases sin cortar el pulso en los cambios.",
       "Después, canta la fundamental de cada acorde (Mi, La, Si, Mi) mientras tocas.",
-      "Fíjate en Si7: el Re♯ sube a Mi y el La baja a Sol♯."
+      "Fíjate en Si7: el Re♯ sube a Mi y el La baja a Sol♯. En el arpegio, cada uno en su cuerda: el Re♯ en la 4.ª con la i y el La en la 3.ª con la m."
     ],
     "tempo": {
       "inicial": 60,
@@ -40,6 +40,7 @@
     "area": "ritmo",
     "titulo": "6/8 en dos y la hemiolia",
     "objetivo": "Contar 6/8 en dos y oír cómo la hemiolia mete tres negras en el mismo espacio.",
+    "compas": "6/8",
     "duracionMin": [
       4,
       6
@@ -68,6 +69,90 @@
       ],
       "principal": "partitura",
       "motivo": "Es leer ritmo: partitura. La tablatura solo dice que todo va en la 5.ª al aire."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:rit.hemiolia-3-4",
+    "programa": "comun",
+    "area": "ritmo",
+    "titulo": "La hemiolia en 3/4",
+    "objetivo": "Oír cómo dos compases de 3/4 se convierten en uno de 3/2 justo antes del final, como en las cadencias de las danzas barrocas.",
+    "compas": "3/4",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "Metrónomo en tres por compás (una negra por golpe).",
+      "Cuenta en voz alta «1 2 3» y palmea los dos primeros compases, con el acento en el 1.",
+      "En los compases 3 y 4, tres blancas acentuadas (la segunda, ligada sobre la barra): el pulso de negra no cambia, cambia dónde caen los acentos.",
+      "Luego tócalo en la 5.ª al aire y termina en la blanca con puntillo del compás 5."
+    ],
+    "tempo": {
+      "regla": "Lento al principio: que las blancas de la hemiolia no corran.",
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Acortar la blanca ligada",
+      "Volver a acentuar el 1 del compás 4"
+    ],
+    "trabaja": [
+      "comp:rit.ternario-hemiolia"
+    ],
+    "notacion": {
+      "fuente": "notacion/rit-hemiolia-3-4.json",
+      "vistas": [
+        "partitura",
+        "tablatura"
+      ],
+      "principal": "partitura",
+      "motivo": "Es leer ritmo: partitura. La tablatura solo dice que todo va en la 5.ª al aire."
+    },
+    "lecturaNecesaria": {
+      "nivel": 1,
+      "naturaleza": "estimacion"
+    }
+  },
+  {
+    "id": "ej:rit.puntillo-semicorcheas",
+    "programa": "comun",
+    "area": "ritmo",
+    "titulo": "Puntillo y semicorcheas",
+    "objetivo": "Leer y tocar la negra con puntillo y las semicorcheas sin perder el pulso.",
+    "compas": "4/4",
+    "duracionMin": [
+      4,
+      6
+    ],
+    "instrucciones": [
+      "Metrónomo en negras.",
+      "Palmea cada compás contando en voz alta: «1 y 2 y» para el puntillo y «1 e y a» para las semicorcheas.",
+      "Luego tócalo en la 1.ª al aire, apoyando con i-m alternados."
+    ],
+    "tempo": {
+      "regla": "Empieza en el tempo más alto al que salga limpio y sube 4 cuando salga bien tres veces seguidas.",
+      "subida": 4,
+      "naturaleza": "consenso"
+    },
+    "erroresComunes": [
+      "Adelantar la corchea que sigue al puntillo",
+      "Correr en las semicorcheas"
+    ],
+    "trabaja": [
+      "comp:rit.puntillo-semicorcheas"
+    ],
+    "notacion": {
+      "fuente": "notacion/rit-puntillo-semicorcheas.json",
+      "vistas": [
+        "partitura",
+        "tablatura"
+      ],
+      "principal": "partitura",
+      "motivo": "Es leer ritmo: partitura. La tablatura solo dice que todo va en la 1.ª al aire."
     },
     "lecturaNecesaria": {
       "nivel": 1,

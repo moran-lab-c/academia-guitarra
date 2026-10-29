@@ -54,7 +54,7 @@ export function valorarIntento(ev, c) {
   if (notas.includes('mal')) return 'no';
   let fallos = notas.filter(n => n === 'fallos').length;
   if (c.tempo?.obligatorio && c.tempo.referencia) { // el tempo solo pesa si el criterio (o su ajuste) lo hace obligatorio
-    const t = ev.tempo ?? 0;
+    const t = Number.isFinite(ev.tempo) ? ev.tempo : 0; // lo que no es un número no llega a ningún tempo
     if (t < c.tempo.referencia * 0.9) return 'no';
     if (t < c.tempo.referencia) fallos++;
   }

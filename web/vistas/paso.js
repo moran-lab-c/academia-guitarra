@@ -22,6 +22,9 @@ const SITUACION = { 'la-tienes': ['Ya la tienes', 'neutro'], 'por-consolidar': [
 // Nombre corto de cada aspecto para «Cómo vas» («Continuidad bien», no «Sin bien»).
 const CORTO = { precision: 'Notas', ritmo: 'Ritmo', continuidad: 'Continuidad', limpieza: 'Limpieza', control: 'Control', sonido: 'Sonido', dinamica: 'Dinámica', articulacion: 'Articulación', fraseo: 'Fraseo', memoria: 'Memoria' };
 let abierto = null; // { comp, modo }
+let elegida = { paso: null, comp: null }; // en un paso con varias competencias, en cuál se registra (y su metrónomo)
+// La competencia en la que se registra la práctica del paso: la elegida o, si no, la primera.
+const compDelRegistro = rel => (elegida.paso === rel.paso.id && rel.comps.find(k => k.comp === elegida.comp)) || rel.comps[0];
 
 export default function paso({ id }) {
   const c = ctx();
@@ -69,7 +72,7 @@ export default function paso({ id }) {
         metronomoDelPaso(c, rel, ejercicio, obraClave),
         paraQueSirve(c, rel),
         (rel.requisitos.length > 0 || rel.pasosAntes.length > 0) && seApoyaEn(c, rel),
-        rel.comps.length > 0 && comoVas(c, rel))));
+        rel.comps.length > 0 && comoVas(c, rel, ejercicio))));
 }
 
 function vecinos(r, p) {
@@ -111,10 +114,10 @@ function loQueVasAHacer(c, rel, p) {
 // y, como contenido, su ejercicio.
 function metronomoDelPaso(c, rel, ejercicio, obraClave) {
   const deObra = rel.paso.clase === 'obra' && obraClave;
-  const clave = deObra ? (obraClave.seccion ? `${obraClave.item.id}#${obraClave.seccion}` : obraClave.item.id) : rel.comps[0]?.comp ?? ejercicio?.id;
+  const clave = deObra ? (obraClave.seccion ? `${obraClave.item.id}#${obraClave.seccion}` : obraClave.item.id) : compDelRegistro(rel)?.comp ?? ejercicio?.id;
   if (!clave) return null;
   const obra = obraClave?.item;
-  return barraMetronomo({ clave, tempo: tempoDe(c, clave, { contenido: deObra ? null : ejercicio }), compas: (deObra ? seccionDe(obra, obraClave.seccion)?.compas ?? obra?.compas : ejercicio?.compas) ?? null });
+  return barraMetronomo({ clave, tempo: tempoDe(c, clave, deObra ? { compas: seccionDe(obra, obraClave.seccion)?.compas ?? null } : { contenido: ejercicio }) });
 }
 
 // El material del paso, sobre el atril: la notación del primer contenido que la tenga (un ejercicio, o la sección o el
@@ -203,7 +206,7 @@ function seApoyaEn(c, rel) {
         glifoEstado(x.estado === 'dominado' ? 'dominado' : ['completado', 'necesita-repaso'].includes(x.estado) ? 'hecho' : 'disponible', { tam: 12 }), x.nombre))]);
 }
 
-function comoVas(c, rel) {
+function comoVas(c, rel, ejercicio) {
   const eventos = c.eventos.filter(e => rel.comps.some(k => k.comp === e.item) && e.tipo === 'practica').slice(-3).reverse();
   return h('div', { class: 'tarjeta pila-s', style: 'flex:1' },
     h('div', { class: 'rotulo' }, 'CÓMO VAS'),
@@ -212,8 +215,11 @@ function comoVas(c, rel) {
     eventos.length > 0 && h('ul', { class: 'lista-limpia pila-s pequeno' }, eventos.map(e => h('li', { class: 'fila-entre' },
       h('span', { class: 'suave' }, fecha(e.t), e.modo === 'comprobacion' ? ' · en frío' : ''),
       h('span', null, Object.entries(e.calidad || {}).map(([d, v]) => `${CORTO[d] ?? DIMENSIONES[d] ?? d} ${v === 'bien' ? 'bien' : v === 'fallos' ? 'con fallos' : 'mal'}`).join(' · ') || (e.tanda ? `${e.tanda[0]}/${e.tanda[1]}` : ''))))),
+    rel.comps.length > 1 && h('label', { class: 'pequeno' }, 'Se registra en ',
+      h('select', { onchange: ev => { elegida = { paso: rel.paso.id, comp: ev.target.value }; if (abierto) abierto = { ...abierto, comp: ev.target.value }; repintar(); } },
+        rel.comps.map(k => h('option', { value: k.comp, selected: k.comp === compDelRegistro(rel).comp }, nombreDe(k.item))))),
     h('div', { class: 'fila' },
-      h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: rel.comps[0].comp, modo: 'trabajo' }; repintar(); } }, 'Registrar práctica'),
-      h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: rel.comps[0].comp, modo: 'comprobacion' }; repintar(); } }, 'Comprobación en frío')),
-    abierto && rel.comps.some(k => k.comp === abierto.comp) && formularioRegistro(c.cat.porId.get(abierto.comp), { modo: abierto.modo, paso: rel.paso.id }, () => { abierto = null; repintar(); }));
+      h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: compDelRegistro(rel).comp, modo: 'trabajo' }; repintar(); } }, 'Registrar práctica'),
+      h('button', { class: 'btn btn-borde', onclick: () => { abierto = { comp: compDelRegistro(rel).comp, modo: 'comprobacion' }; repintar(); } }, 'Comprobación en frío')),
+    abierto && rel.comps.some(k => k.comp === abierto.comp) && formularioRegistro(c.cat.porId.get(abierto.comp), { modo: abierto.modo, paso: rel.paso.id, unidad: tempoDe(c, abierto.comp, { contenido: ejercicio }).unidad }, () => { abierto = null; repintar(); }));
 }
