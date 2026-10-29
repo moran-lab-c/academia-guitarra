@@ -7,7 +7,7 @@ import { crearMetronomo, iniciar, pausar, detener, cambiarBpm, fijarBpm, fijarCo
 
 const COMPASES = ['2/4', '3/4', '4/4', '6/8'];
 const RETRASO_MAX = 0.05; // si el navegador se ha parado más que esto (una pestaña en segundo plano), se retoma desde ahora
-const motor = { m: crearMetronomo(), clave: null, usadoCon: new Map(), audio: null, siguiente: 0, temporizador: null };
+const motor = { m: crearMetronomo(), clave: null, origen: null, usadoCon: new Map(), audio: null, siguiente: 0, temporizador: null };
 
 // El tempo con el que ha practicado una cosa en esta sesión (para proponerlo al registrar), o null.
 export const tempoUsado = clave => motor.usadoCon.get(clave) ?? null;
@@ -88,8 +88,11 @@ const puntos = () => Array.from({ length: motor.m.pulsos }, (_, i) => h('span', 
 // también el compás, los acentos, el tempo inicial y la subida del contenido. compas y acentos: para decir otros.
 export function barraMetronomo({ clave, tempo, compas = tempo?.compas ?? null, acentos = tempo?.acentos ?? null }) {
   // Si no está sonando para otra cosa, se prepara con el tempo de esta: el objetivo, el último apuntado o el inicial.
-  if (motor.clave !== clave && motor.m.estado !== 'sonando') {
+  // (Dos ejercicios pueden registrar en la misma competencia con compases distintos: cuenta también el compás.)
+  const origen = `${clave}|${compas ?? ''}`;
+  if (motor.origen !== origen && motor.m.estado !== 'sonando') {
     motor.clave = clave;
+    motor.origen = origen;
     motor.m = fijarCompas(fijarBpm(detener(motor.m), tempo?.objetivo ?? tempo?.actual ?? tempo?.inicial ?? 60), compas ?? '4/4', acentos);
   }
   const salto = tempo?.subida ?? PASOS[1]; // la subida que propone el contenido (sube 4…), o 5

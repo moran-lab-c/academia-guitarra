@@ -65,7 +65,8 @@ export function tempoDe(ctx, clave, { contenido = null, compas = null } = {}) {
     && (t.item === clave || t.item === id) && (!t.hasta || t.hasta >= ctx.hoy));
   const ajuste = ctx.estado.ajustes?.[clave] ?? ctx.estado.ajustes?.[id];
   const crit = item ? criterioDe(item, ajuste) : null;
-  const elCompas = compas ?? primero(x => x.compas);
+  // Sin compás dicho, una notación propia está en 4/4 (es lo que comprueba el contenido); sin notación, no se sabe.
+  const elCompas = compas ?? primero(x => x.compas) ?? (fuentes.some(x => x.notacion?.fuente) ? '4/4' : null);
   const progreso = progresoTempo(ctx, clave);
   const base = {
     unidad: unidadDe(elCompas, crit?.tempo?.unidad), compas: elCompas, acentos: primero(x => x.acentos),
