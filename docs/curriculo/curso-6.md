@@ -4,158 +4,206 @@ project: personal
 type: plan
 created: 2026-10-29
 ---
-# Curso 6 · Trémolo y gran forma
+# Curso 6 · Nivel 6
 
-Anexo del [[CURRICULO-MAESTRO]]. **Borrador para su revisión.** La leyenda es la de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 2). **Borrador para su revisión.** Formato y leyenda: los de [[curso-1]].
 
-## Objetivo
-El trémolo a tempo de obra, la textura de tres y cuatro voces, la resistencia y las formas largas (variaciones, diferencias, obras de 6-8 minutos). Al terminar el curso:
-- *Recuerdos de la Alhambra* de memoria;
-- un programa de 20-25 minutos.
+## Ficha del nivel
+- **Equivale a:** RCM 9 · ARSM · 5.º de Profesionales **[Estimación]**.
+- **Calibración:** el repertorio de 5.º de Profesionales en La Rioja: *Capricho árabe*, Villa-Lobos *Estudio n.º 1*, BWV 997, Giuliani op. 107, Falla *Homenaje* y Barrios **[Dato]**.
+- **Objetivo:** obras mayores con una interpretación propia y razonada. Al terminar el nivel:
+  - el análisis propio de una obra;
+  - las primeras digitaciones propias;
+  - los lenguajes del siglo XX;
+  - un programa de 20-25 minutos.
 
-## Nivel
-RCM 9 · 4.º-5.º de Profesionales **[Dato]**:
-- *Recuerdos*: 4.º de Profesionales en La Rioja y EPM 5-6;
-- Villa-Lobos, *Preludio n.º 1*: La Rioja 4.º;
-- las *Folías* de Sor: La Rioja 4.º.
-- No he podido consultar la lista del nivel 9 del RCM, porque Da Capo publica hasta el 8: la calibración de este curso es la española.
-
-## Competencias al terminar
-| Área | Competencias |
+## Las áreas del nivel 6
+| Área | Qué se aprende en este nivel |
 |---|---|
-| Técnica | Trémolo p-a-m-i a tempo de obra, regular y sin acentos · cejillas en posiciones altas sin cortar el trémolo · cuatro voces · armónicos artificiales · vibrato expresivo |
-| Escalas | Las de sus obras, digitadas por él |
-| Lectura | Fluida en obras del curso 5 |
-| Ritmo | Flexible en obras largas sin perder la estructura |
-| Teoría | Armonía del siglo XIX tardío y del XX · variación y forma larga |
+| Mano derecha | El arpegio extendido de Villa-Lobos · resistencia · la mano derecha de obras mayores |
+| Mano izquierda | Cuatro voces · cejillas sostenidas · scordatura (la 6.ª en Re) · primeras digitaciones propias |
+| Escalas y arpegios | Las de sus obras, digitadas por él · mantenimiento |
+| Trémolo | Mantenimiento con *Recuerdos* (repertorio vivo) |
+| Armónicos y color | Combinados en el repertorio |
+| Lectura | Una obra del nivel 5 aprendida solo con la partitura |
+| Primera vista | 16-20 compases; 12/8; cromatismos; dos voces sencillas (grado 8 del ABRSM) |
+| Solfeo | Ritmo libre y recitativo · agógica |
+| Teoría | Pentatónica, tonos enteros, modalismo, acordes por cuartas, paralelismos · análisis estructural |
+| Armonía | La de Barrios y Villa-Lobos · impresionismo |
 | Oído | Transcribir fragmentos cortos |
-| Musicalidad | Interpretación propia razonada · el arco de una obra de 6-8 minutos |
-| Interpretación | Obras largas de memoria · programa de 20-25 minutos |
+| Diapasón | Elegir posición por el color |
+| Musicalidad | Interpretación propia razonada |
+| Memoria e interpretación | Programa de 20-25 minutos |
+| Creatividad y estudio | Componer una variación · un plan propio de estudio |
+| Historia | Segovia y el siglo XX · Falla · Turina · Villa-Lobos · Bach y Giuliani |
 
-## Mapa del curso
-| Tramo | Tema | Por qué existe | Música |
-|---|---|---|---|
-| 1 | Partida | — | Repertorio vivo |
-| 2 | El trémolo a tempo | El último escalón del trémolo | Ejercicios |
-| 3 | *Recuerdos de la Alhambra* | La obra de trémolo; el cambio de modo, final de la cadena | *Recuerdos* |
-| 4 | La melodía en el bajo | El pulgar que canta | Villa-Lobos, *Preludio n.º 1* |
-| 5 | Variaciones | Forma larga: un tema y sus transformaciones | Sor, *Folías de España* |
-| 6 | Las diferencias de Narváez | La variación renacentista larga | *Conde Claros* |
-| 7 | Cuatro voces y el laúd barroco tardío | Textura densa | Weiss, *Fantasía* |
-| 8 | Armónicos artificiales | Color nuevo | Aplicación |
-| 9 | El romántico virtuoso | Velocidad y carácter | Mertz, *Tarantela* |
-| 10 | La guitarra española del siglo XX | Otro color de lo español | Torroba, *Madroños* |
-| 11 | Brouwer | Ritmo y efectos del siglo XX | *Danza característica* |
-| 12 | Resistencia y gran forma | Sostener 6-8 minutos | Método |
-| 13 | Cierre | — | Programa de 20-25 minutos |
+## Repertorio del nivel
+- Tárrega, *Capricho árabe* (principal).
+- Villa-Lobos, *Estudio n.º 1*.
+- Bach, *Preludio* BWV 997.
+- Giuliani, *Variaciones sobre un tema de Händel* op. 107.
+- Weiss, *Suite L'infidèle* (tres movimientos).
+- Barrios, *Estudio del ligado* y *Preludio en do menor*.
+- Falla, *Homenaje*.
+- Turina, *Homenaje a Tárrega*.
+- **Alternativas:** Sor, *Sonata* op. 15b; Torroba, *Alcañiz*; Barrios, *Choro da saudade*; Dyens, *Tango en skaï* (con derechos); M. D. Pujol, *Sonatina* (con derechos).
 
----
-
-## Tramo 1 · Partida
-1. Comprobaciones ◇ · Trémolo medio; armónicos octavados; cejillas con cambio rápido.
-2. Repaso · *Julia Florida*.
-3. Repaso · *Marieta*.
-
-## Tramo 2 · El trémolo a tempo
-**L2.1** · Explicación · El trémolo rápido sale de la relajación y de la igualdad: el tempo llega solo cuando suena igual. ↩ necesita E-C4-06.
-**L2.2** · Ejercicio · **E-C6-01 Trémolo con ráfagas** · T · ⏱.
-**L2.3** · Ejercicio · **E-C6-02 Trémolo con cejilla** · T · ⏱.
-**L2.4** · Consejo (guía, `error-frecuente`) · Acento en la *a*; el pulgar que tapa el trémolo.
-
-## Tramo 3 · *Recuerdos de la Alhambra*
-**L3.1 · Contexto**
-1. Contexto · Tárrega y la Alhambra de Granada; el trémolo como imagen del agua.
-2. Escucha · Tres versiones · ♪ enlaces.
-
-**L3.2 · Análisis**
-1. Análisis · La menor y La mayor: el homónimo de *Lágrima*, del *Romance* y de *Adelita*, ahora en una obra grande. ↩ necesita la cadena del cambio de modo.
-
-**L3.3 · La obra**
-1. Obra · **O-C6-01 *Recuerdos*, parte en La menor** · 𝄞 + T · ⏱.
-2. Aplicación · Las cejillas altas sin cortar el trémolo · T.
-3. Obra · Parte en La mayor · ⏱.
-4. Obra · La obra entera; pasa al atril hasta tenerla de memoria.
-5. Comprobación del tramo · *Recuerdos* entera, con el trémolo regular.
-
-## Tramo 4 · La melodía en el bajo
-1. Contexto · Heitor Villa-Lobos y sus *Cinco preludios*.
-2. Cómo se hace · El pulgar que canta como un chelo: apoyando con *p*.
-3. Obra · **O-C6-02 *Preludio n.º 1*** · edición publicada (con derechos) · ⏱.
-4. Comprobación del tramo · El preludio entero.
-
-## Tramo 5 · Variaciones
-1. Contexto · La folía, un bajo y una armonía que se repiten, conocidos en toda Europa. Pariente de la *Españoleta* del curso 1.
-2. Análisis · El tema y qué técnica pide cada variación · 𝄞.
-3. Obra · **O-C6-03 Sor, *Folías de España* op. 15a** · 𝄞 + T · ⏱.
-4. Musicalidad · El orden de las variaciones como un recorrido.
-
-## Tramo 6 · Las diferencias de Narváez
-1. Obra · **O-C6-04 Narváez, *Diferencias sobre Conde Claros*** · T + 𝄞 · ⏱. ↩ necesita las diferencias del curso 4.
-2. Ejercicio · Resistencia: tocarlas todas seguidas.
-
-## Tramo 7 · Cuatro voces y el laúd barroco tardío
-1. Contexto · Silvius Leopold Weiss, el gran laudista contemporáneo de Bach.
-2. Ejercicio · **E-C6-03 Cuatro voces** · 𝄞 + T.
-3. Obra · **O-C6-05 Weiss, *Fantasía*** (o el *Tombeau sur la mort de M. Comte de Logy*) · 𝄞 + T · ⏱.
-
-## Tramo 8 · Armónicos artificiales
-1. Cómo se hace · Armónicos artificiales: la izquierda pisa y la derecha toca el armónico. Variante del armónico octavado del curso 5.
-2. Ejercicio · Arpegio con armónicos artificiales · T.
-3. Aplicación · Un pasaje del repertorio del curso que los use · **[Por verificar]**.
-
-## Tramo 9 · El romántico virtuoso
-1. Obra · **O-C6-06 Mertz, *Tarantela*** · 𝄞 + T · ⏱.
-2. Explicación · La tarantela, danza rápida del sur de Italia en 6/8.
-
-## Tramo 10 · La guitarra española del siglo XX
-1. Contexto · Federico Moreno Torroba, Segovia y el repertorio que se escribió para él.
-2. Obra · **O-C6-07 Torroba, *Madroños*** · edición publicada (con derechos) · ⏱.
-
-## Tramo 11 · Brouwer
-1. Obra · **O-C6-08 Brouwer, *Danza característica*** · edición publicada (con derechos) · ⏱.
-2. Cómo se hace · Los efectos del siglo XX que pide la obra · **[Por verificar]** cuáles.
-
-## Tramo 12 · Resistencia y gran forma
-1. Explicación · Distribuir el esfuerzo en una obra larga; dónde descansa la mano; cómo se planifica el estudio de una obra de 8 minutos.
-2. Ejercicio · Una pasada completa de *Recuerdos* y de las *Folías* seguidas.
-
-## Tramo 13 · Cierre del curso 6
-**L13.1 · Programa de 20-25 minutos**
-1. Obra · *Recuerdos*, de memoria.
-2. Obra · Las *Folías* o *Conde Claros*.
-3. Obra · Villa-Lobos o Brouwer.
-4. Obra · Weiss o Mertz.
-5. Grabarse · El programa, grabado.
-
-**L13.2 · Prueba corta**
-1. Técnica · Trémolo a tempo; cuatro voces; armónicos artificiales · T · ⏱.
-2. Oído · Transcribir un fragmento corto · ✎.
-3. Teoría · Análisis de la forma de una obra del programa · ✎.
+## Mapa de tramos
+| Tramo | Música | Lo nuevo |
+|---|---|---|
+| 1 | *Capricho árabe* (I) | Scordatura; el recitativo; ritmo libre |
+| 2 | *Capricho árabe* (II) | La danza; Re menor y Re mayor; primera digitación propia |
+| 3 | Bach, *Preludio* BWV 997 | Análisis propio; leer una obra solo con la partitura |
+| 4 | Giuliani, op. 107 | Variación de concierto; componer una variación |
+| 5 | Villa-Lobos, *Estudio n.º 1* | El arpegio extendido; paralelismos |
+| 6 | Weiss, *Suite L'infidèle* | La suite tardía; cuatro voces |
+| 7 | Barrios, *Estudio del ligado* y *Preludio en do menor* | Ligados de concierto; la armonía de Barrios |
+| 8 | Falla, *Homenaje* | Impresionismo; la habanera; tonos enteros |
+| 9 | Turina, *Homenaje a Tárrega* | La guitarra española del siglo XX; transcribir de oído |
+| 10 | El programa | Plan propio de estudio; programa de 20-25 minutos |
+| 11 | Cierre del nivel 6 | Programa y prueba corta |
 
 ---
 
-## Fichas de los ejercicios
-**E-C6-01 · Trémolo con ráfagas**
-- **Instrucciones:** dos compases de trémolo rápido y uno lento; encadenar hasta cuatro.
-- **Está bien cuando** el trémolo rápido es tan regular como el lento.
+## Tramo 1 · Tárrega, *Capricho árabe* (I)
+**L1.1 · Lo que traes** {Repertorio, Trémolo}
+1. Repaso · *Recuerdos* (repertorio vivo).
+2. Explicación (guía) · Lo que trae este nivel.
 
-**E-C6-02 · Trémolo con cejilla**
-- **Instrucciones:** el trémolo sobre acordes con cejilla en el V y el VII, cambiando cada compás.
-- **Está bien cuando** el cambio de cejilla no corta el trémolo.
+**L1.2 · Scordatura** {MI, Diapasón}
+1. Cómo se hace · La 6.ª en Re: lo que cambia en el mástil · T.
+2. Diapasón · Las notas de la 6.ª en Re · ✎.
 
-**E-C6-03 · Cuatro voces**
-- **Instrucciones:** un coral sencillo a cuatro voces, tocando cada voz con su duración; después, destacar una voz cada vez.
-- **Está bien cuando** se puede destacar cualquier voz a voluntad.
+**L1.3 · El recitativo** {Solfeo, Musicalidad, Historia}
+1. Contexto · Tárrega y el orientalismo del siglo XIX.
+2. Explicación · El recitativo: un ritmo libre que imita la voz.
+3. Obra · La introducción · 𝄞 + T.
 
-## Fichas de las obras
-| Ficha | Obra | Nivel **[Dato]** | Papel | Técnicas | Teoría | Derechos | Después |
-|---|---|---|---|---|---|---|---|
-| O-C6-01 | Tárrega, *Recuerdos de la Alhambra* | La Rioja EP 4 · EPM 5-6 | Principal (de memoria) | Trémolo, cejillas altas | Homónimo | DP | *El último trémolo* (curso 7) |
-| O-C6-02 | Villa-Lobos, *Preludio n.º 1* | La Rioja EP 4 | Siglo XX | Melodía en el bajo | — | **Con derechos** | *Estudio n.º 1* (curso 7) |
-| O-C6-03 | Sor, *Folías de España* op. 15a | La Rioja EP 4 | Clasicismo | Variación | Variación | DP | Giuliani op. 107 (curso 7) |
-| O-C6-04 | Narváez, *Conde Claros* | La Rioja EP 4 · EPM 5 | Renacimiento | Resistencia | Diferencias | DP | — |
-| O-C6-05 | Weiss, *Fantasía* | La Rioja EP 4 | Barroco | Cuatro voces | — | DP | Weiss, *Suite* (curso 7) |
-| O-C6-06 | Mertz, *Tarantela* | La Rioja EP 3 · EPM 5 | Romanticismo | Velocidad | 6/8 | DP | — |
-| O-C6-07 | Torroba, *Madroños* | La Rioja EP 4 | Siglo XX español | — | — | **Con derechos** | — |
-| O-C6-08 | Brouwer, *Danza característica* | La Rioja EP 4 · EPM 5 | Siglo XX | Ritmo, efectos | — | **Con derechos** | — |
-| Alternativas | Mertz, *Romance*; Tárrega, *Gran vals* y *María*; Bach, *Sarabanda* BWV 996; Sainz de la Maza, *Habanera*; Tansman, *Danza pomposa*; M. D. Pujol, *Candombe en mi*; Rodrigo, *En los trigales* (con derechos) | EPM 5 · La Rioja EP 4 | — | — | — | — | — |
+## Tramo 2 · Tárrega, *Capricho árabe* (II)
+**L2.1 · La danza** {Repertorio, Teoría}
+1. Análisis · Re menor y Re mayor: el cambio de modo, una vez más.
+2. Obra · La danza; la obra entera · 𝄞 + T · ⏱.
+
+**L2.2 · La primera digitación propia** {MI, Estudio}
+1. Explicación · Cinco criterios para digitar:
+   - economía de movimiento;
+   - el legato de la melodía;
+   - el color de cada cuerda;
+   - que cada voz dure lo que debe;
+   - preparar la nota siguiente.
+2. Ejercicio · Digitar un pasaje del *Capricho* y comparar con la edición.
+
+**L2.3 · Anotar la digitación** {Tablatura, Diapasón}
+1. Tablatura · Escribir en tablatura su digitación del pasaje: la tablatura como herramienta para decidir en qué cuerda va cada nota.
+
+## Tramo 3 · Bach, *Preludio* BWV 997
+**L3.1 · Análisis propio** {Teoría, Armonía}
+1. Ejercicio · Forma, armonía y frases del preludio, hechas por él · 𝄞.
+
+**L3.2 · Solo con la partitura** {Lectura, Repertorio}
+1. Obra · **Bach, *Preludio* BWV 997**, sin tablatura · 𝄞 · ⏱.
+2. Primera vista · Dieciséis compases en 12/8 · 𝄞.
+
+**L3.3 · Las escalas de la obra** {Escalas}
+1. Ejercicio · Escalas digitadas por él para la obra · T.
+
+## Tramo 4 · Giuliani, op. 107
+**L4.1 · Händel otra vez** {Historia}
+1. Contexto · El tema es el *Aria* de la Suite HWV 430 de Händel, de la misma colección de 1720 que su *Passacaglia* (HWV 432) **[Dato]**.
+
+**L4.2 · Las variaciones** {Repertorio, MD}
+1. Obra · **Giuliani, op. 107** · 𝄞 + T · ⏱.
+
+**L4.3 · Una variación propia** {Creatividad, Teoría}
+1. Ejercicio · Una variación propia sobre el tema de Händel.
+
+**L4.4 · Transcribir de oído** {Oído}
+1. Oído · Transcribir el bajo de una variación · ✎.
+
+## Tramo 5 · Villa-Lobos, *Estudio n.º 1*
+**L5.1 · Villa-Lobos y Segovia** {Historia}
+1. Contexto · Los *Doce estudios*, dedicados a Segovia.
+
+**L5.2 · El arpegio** {MD, Arpegios}
+1. Ejercicio · El arpegio sobre un solo acorde, lento y con ráfagas · T · ⏱.
+
+**L5.3 · Paralelismos** {Teoría, Armonía}
+1. Explicación · Una forma de acorde que se mueve entera por el mástil: la armonía de Villa-Lobos.
+2. Análisis · Los paralelismos del estudio · 𝄞.
+
+**L5.4 · La obra** {Repertorio}
+1. Obra · **Villa-Lobos, *Estudio n.º 1*** · edición publicada (con derechos) · ⏱.
+
+## Tramo 6 · Weiss, *Suite L'infidèle*
+**L6.1 · La suite tardía** {Historia, Musicalidad}
+1. Contexto · La suite del Barroco tardío y su estilo.
+
+**L6.2 · Cuatro voces sostenidas** {MI, Posiciones}
+1. Ejercicio · **E-N6-01 Cuatro voces sostenidas** · 𝄞 + T.
+
+**L6.3 · La obra** {Repertorio, Lectura}
+1. Obra · **Weiss, *Suite L'infidèle***, tres movimientos · 𝄞 + T · ⏱.
+
+## Tramo 7 · Barrios, *Estudio del ligado* y *Preludio en do menor*
+**L7.1 · Ligados de concierto** {MI, Ligados}
+1. Obra · **Barrios, *Estudio del ligado*** · 𝄞 + T · ⏱.
+
+**L7.2 · La armonía de Barrios** {Armonía, Diapasón}
+1. Análisis · *Preludio en do menor* · 𝄞.
+2. Diapasón · Elegir la posición por el color de cada cuerda.
+3. Obra · **Barrios, *Preludio en do menor*** · ⏱.
+
+## Tramo 8 · Falla, *Homenaje*
+**L8.1 · El homenaje** {Historia}
+1. Contexto · *Homenaje* (*Le tombeau de Claude Debussy*, 1920), la única obra de Falla para guitarra; la habanera.
+
+**L8.2 · Impresionismo** {Teoría, Oído}
+1. Explicación · Escala de tonos enteros, pentatónica y modalismo.
+2. Oído · Escala de tonos enteros o pentatónica · ✎ · ♪.
+
+**L8.3 · La obra** {Repertorio, Color, Musicalidad}
+1. Obra · **Falla, *Homenaje*** · edición publicada (con derechos en España hasta 2027) · ⏱.
+2. Fíjate en… · El color y la resonancia.
+
+## Tramo 9 · Turina, *Homenaje a Tárrega*
+**L9.1 · La obra** {Repertorio, Historia}
+1. Contexto · Joaquín Turina; dos danzas, garrotín y soleares, escritas para la guitarra clásica. Es repertorio clásico, no del programa flamenco.
+2. Obra · **Turina, *Homenaje a Tárrega*** · edición publicada (con derechos) · ⏱.
+
+**L9.2 · El ritmo de las danzas** {Solfeo}
+1. Ritmo · La agógica de las danzas: dónde se estira y dónde no · ⏱.
+
+**L9.3 · Transcribir de oído** {Oído, MD}
+1. Oído · Transcribir un pasaje corto de una grabación · ♪.
+
+## Tramo 10 · El programa
+**L10.1 · Un plan propio de estudio** {Estudio}
+1. Explicación · Cómo repartir una semana entre las obras del programa.
+2. Ejercicio · Escribirlo.
+
+**L10.2 · Repertorio vivo** {Memoria, Repertorio}
+1. Repaso · Dos obras de niveles anteriores, sin calentar.
+
+**L10.3 · Un dúo** {Conjunto, Lectura}
+1. Ejercicio · Sor, *L'Encouragement* op. 34, para dos guitarras: grabarse una voz y tocar la otra encima · 𝄞 · ♪ · **[Por verificar]** la edición.
+2. Fíjate en… · En un dúo, a veces se acompaña y a veces se lleva la melodía.
+
+**L10.4 · La interpretación razonada** {Musicalidad}
+1. Ejercicio · Explicar en dos frases la interpretación de cada obra del programa.
+
+## Tramo 11 · Cierre del nivel 6
+**L11.1 · El programa de 20-25 minutos** {Repertorio, Memoria}
+1. Obra · Weiss o Bach.
+2. Obra · Giuliani op. 107.
+3. Obra · *Capricho árabe*.
+4. Obra · Villa-Lobos, Falla o Turina.
+5. Grabado.
+
+**L11.2 · La prueba corta** {Lectura, Oído, Teoría, MI}
+1. Primera vista · Veinte compases con dos voces · 𝄞.
+2. Oído · Transcribir un fragmento · ✎.
+3. Teoría · Análisis de una obra del programa · ✎.
+4. Técnica · Una digitación propia, justificada.
+
+**L11.3 · Lo que viene** {Repertorio}
+1. Explicación (guía) · El nivel 7: la autonomía.

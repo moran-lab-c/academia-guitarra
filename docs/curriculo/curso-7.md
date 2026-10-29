@@ -4,166 +4,215 @@ project: personal
 type: plan
 created: 2026-10-29
 ---
-# Curso 7 · Autonomía
+# Curso 7 · Nivel 7
 
-Anexo del [[CURRICULO-MAESTRO]]. **Borrador para su revisión.** La leyenda es la de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 2). **Borrador para su revisión.** Formato y leyenda: los de [[curso-1]].
 
-## Objetivo
-Ser un guitarrista que aprende, digita e interpreta una obra nueva sin guía. Al terminar el curso:
-- obras mayores de todas las épocas;
-- análisis completo y criterio de estilo;
-- un recital personal de 25-30 minutos, grabado, con digitaciones propias en al menos una obra.
+## Ficha del nivel
+- **Equivale a:** RCM 10 · DipABRSM · 6.º de Profesionales **[Estimación]**.
+- **Calibración:** el repertorio de 6.º de Profesionales en La Rioja: *Asturias*, *El último trémolo*, BWV 998, Villa-Lobos *Estudios* 2, 8, 11 y 12, Sor op. 9, Aguado op. 16 y Turina, *Fandanguillo* **[Dato]**.
+- **Objetivo:** aprender, digitar e interpretar solo. Al terminar el nivel:
+  - análisis completo y estilo histórico;
+  - un recital personal de 25-30 minutos, grabado, con digitaciones propias.
 
-Es el punto del «muy buen guitarrista aficionado».
-
-## Nivel
-RCM 10 · 5.º-6.º de Profesionales **[Dato]**:
-- *Capricho árabe*: La Rioja 5.º y EPM 6;
-- Villa-Lobos, *Estudio n.º 1*: La Rioja 5.º;
-- *Preludio* BWV 997: La Rioja 5.º;
-- *Asturias* y *El último trémolo*: La Rioja 6.º.
-
-## Competencias al terminar
-| Área | Competencias |
+## Las áreas del nivel 7
+| Área | Qué se aprende en este nivel |
 |---|---|
-| Técnica | Resolver la técnica de una obra nueva · arpegios al nivel de Villa-Lobos · trémolo de concierto · scordatura (la 6.ª en Re) |
-| Digitación | Digitar con criterio (economía, legato, color, voces) · comparar ediciones y justificar la elección |
-| Lectura | Aprender cualquier obra del curso 6 desde la partitura |
-| Teoría y análisis | Análisis completo (forma, armonía, frase) · estilo histórico |
-| Armonía | Rearmonizar una progresión sencilla |
-| Oído | Reconocer formas y modulaciones al escuchar |
-| Musicalidad | Voz propia, razonada |
-| Interpretación | Recital de 25-30 minutos · programar un recital |
+| Técnica de las dos manos | Resolver la técnica de una obra nueva · trémolo de concierto largo · arpegios al nivel de Villa-Lobos · picado y pulgar en *Asturias* |
+| Digitación | Autónoma, comparando ediciones |
+| Escalas y arpegios | Mantenimiento y velocidad de concierto |
+| Lectura | Aprender cualquier obra del nivel 6 desde la partitura |
+| Primera vista | Lectura rápida de una obra nueva (como la prueba de cinco minutos del DipABRSM) |
+| Solfeo | Agógica propia · leer una reducción de piano para transcribir |
+| Teoría | Análisis completo · estilo histórico · interpretación históricamente informada |
+| Armonía | Rearmonizar · la armonía al servicio de la interpretación |
+| Oído | Reconocer formas y modulaciones al escuchar una obra entera |
+| Musicalidad | Voz propia |
+| Memoria e interpretación | Recital personal de 25-30 minutos |
+| Creatividad y estudio | Rearmonizar · preparar una obra nueva solo |
+| Historia | Albéniz y la transcripción · Barrios · Sor · Aguado · Dowland · Turina |
 
-## Mapa del curso
-| Tramo | Tema | Por qué existe | Música |
-|---|---|---|---|
-| 1 | Partida | — | Repertorio vivo |
-| 2 | Digitar solo | La capacidad central del curso | Un fragmento de Bach, comparado con ediciones |
-| 3 | *Capricho árabe* | Scordatura, recitativo, el cambio de modo en Re | Tárrega |
-| 4 | El estudio de arpegio del siglo XX | El final de la cadena del arpegio | Villa-Lobos, *Estudio n.º 1* |
-| 5 | Bach grande | Preludio de concierto | *Preludio* BWV 997 |
-| 6 | Tema con variaciones de concierto | El Clasicismo grande; Händel otra vez | Giuliani, op. 107 |
-| 7 | *La Catedral* | La obra de Barrios entera | *La Catedral* |
-| 8 | El último trémolo | El final de la cadena del trémolo | Barrios, *Una limosna por el amor de Dios* |
-| 9 | El homenaje | El impresionismo y lo español | Falla, *Homenaje a Debussy* |
-| 10 | El piano en la guitarra | Una transcripción emblemática | Albéniz, *Asturias* |
-| 11 | Análisis y estilo | Criterio propio sobre cualquier obra | Su recital |
-| 12 | Programar un recital | Elegir, ordenar y presentar | Su recital |
-| 13 | Cierre | — | Recital personal |
+## Repertorio del nivel
+- Bach, *Preludio* BWV 998.
+- Barrios, *La Catedral* (entera).
+- Sor, *Variaciones sobre La flauta mágica* op. 9.
+- Barrios, *Una limosna por el amor de Dios*.
+- Villa-Lobos, *Estudio n.º 11*.
+- Albéniz, *Asturias*.
+- Dowland, *Fantasía n.º 7*.
+- Aguado, *Fandango variado* op. 16.
+- Turina, *Fandanguillo*.
+- **Alternativas:** Bach, *Preludio* BWV 995 y *Fuga* BWV 997; Giuliani, *Folías* op. 45; Villa-Lobos, *Estudios* 2, 8 y 12; Brouwer, *Elogio de la danza* (con derechos).
+
+## Mapa de tramos
+| Tramo | Música | Lo nuevo |
+|---|---|---|
+| 1 | Bach, *Preludio* BWV 998 | Digitar solo, comparando ediciones |
+| 2 | Barrios, *La Catedral* | Una obra en tres movimientos; análisis completo |
+| 3 | Sor, op. 9 | El tema con variaciones de concierto del Clasicismo |
+| 4 | Barrios, *Una limosna por el amor de Dios* | El trémolo de concierto largo |
+| 5 | Villa-Lobos, *Estudio n.º 11* | Preparar solo una obra nueva |
+| 6 | Albéniz, *Asturias* | La transcripción del piano; leer una reducción |
+| 7 | Dowland, *Fantasía n.º 7* | Polifonía renacentista de concierto; estilo históricamente informado |
+| 8 | Aguado, *Fandango variado* | El virtuosismo clásico español |
+| 9 | Turina, *Fandanguillo* | El siglo XX español de concierto |
+| 10 | Rearmonizar, acompañar y escuchar | Rearmonizar; acompañar; reconocer formas al oído |
+| 11 | Programar un recital | Elegir, ordenar y presentar |
+| 12 | Cierre del nivel 7 | El recital personal |
 
 ---
 
-## Tramo 1 · Partida
-1. Comprobaciones ◇ · Trémolo a tempo; cuatro voces; armónicos artificiales.
-2. Repaso · *Recuerdos*.
-3. Repaso · Las *Folías*.
+## Tramo 1 · Bach, *Preludio* BWV 998
+**L1.1 · Lo que traes** {Repertorio, Memoria}
+1. Repaso · *Capricho árabe* y *Recuerdos*, sin calentar.
+2. Explicación (guía) · En este nivel la academia guía menos: cada vez decides tú más.
 
-## Tramo 2 · Digitar solo
-**L2.1 · Los criterios**
-1. Explicación · Digitar es elegir. Cinco criterios:
-   - economía de movimiento;
-   - el legato de la melodía;
-   - el color de cada cuerda;
-   - que las voces duren lo que deben;
-   - preparar la nota siguiente (dedos guía, dedos fijos).
-2. Explicación · Por qué una digitación puede ser mejor que otra.
-3. Ejemplo · Dos digitaciones del mismo pasaje.
+**L1.2 · Digitar solo** {MI, MD, Estudio, Diapasón}
+1. Repaso · Los cinco criterios de digitación del nivel 6.
+2. Ejercicio · **E-N7-01 Digitar un fragmento** del preludio, con las dos manos · 𝄞.
+3. Diapasón · Para cada pasaje, dos posiciones posibles y el color de cada una.
+4. Ejercicio · Compararlo con dos ediciones y justificar las diferencias.
+5. Consejo del profesor · Una digitación también es una interpretación.
 
-**L2.2 · Hacerlo**
-1. Ejercicio · **E-C7-01 Digitar un fragmento**: un fragmento de Bach sin digitar · 𝄞.
-2. Ejercicio · Compararlo con dos ediciones publicadas y justificar las diferencias.
-3. Consejo (guía) · Una digitación también es una interpretación.
+**L1.3 · Arpegio y voces del preludio** {Arpegios, Posiciones, Armonía}
+1. Análisis · La armonía que dibuja el arpegio · 𝄞.
+2. Aplicación · Las posiciones y cejillas que pide, elegidas por él · T.
 
-## Tramo 3 · *Capricho árabe*
-**L3.1 · Contexto**
-1. Contexto · Tárrega, el orientalismo del XIX.
-2. Explicación · La introducción en forma de recitativo.
-3. Cómo se hace · Afinar la 6.ª en Re (scordatura): lo que cambia en el mástil · T.
+**L1.4 · La obra** {Repertorio, Lectura}
+1. Obra · **Bach, *Preludio* BWV 998**, con su digitación · 𝄞 · ⏱.
 
-**L3.2 · Análisis**
-1. Análisis · Re menor y Re mayor: la última obra de la cadena del cambio de modo.
+## Tramo 2 · Barrios, *La Catedral*
+**L2.1 · Análisis completo** {Teoría, Armonía, Historia}
+1. Contexto · Tres movimientos: *Preludio saudade* (del nivel 5), *Andante religioso* y *Allegro solemne*.
+2. Ejercicio · Análisis completo: forma, armonía, frases y puntos de apoyo de la memoria · 𝄞.
 
-**L3.3 · La obra**
-1. Obra · **O-C7-01 *Capricho árabe***, por secciones · 𝄞 + T · ⏱.
-2. Musicalidad · El recitativo libre y la danza medida.
-3. Comprobación del tramo · La obra entera.
+**L2.2 · El arpegio del *Allegro solemne*** {MD, Arpegios}
+1. Ejercicio · La figura de arpegio del movimiento, aislada, con ráfagas · T · ⏱.
 
-## Tramo 4 · El estudio de arpegio del siglo XX
-1. Contexto · Los *Doce estudios* de Villa-Lobos, dedicados a Segovia.
-2. Ejercicio · El arpegio del *Estudio n.º 1* sobre un solo acorde, primero lento · T · ⏱.
-3. Obra · **O-C7-02 Villa-Lobos, *Estudio n.º 1*** · edición publicada (con derechos) · ⏱.
+**L2.3 · La obra** {Repertorio, Musicalidad, Memoria}
+1. Obra · El *Andante religioso* y el *Allegro solemne*; la obra entera · 𝄞 + T · ⏱.
+2. Fíjate en… · Los tres movimientos como un recorrido.
 
-## Tramo 5 · Bach grande
-1. Análisis · El *Preludio* BWV 997: forma y armonía, hechos por él · 𝄞.
-2. Obra · **O-C7-03 *Preludio* BWV 997**, digitado por él, comparando con una edición · 𝄞.
+## Tramo 3 · Sor, *Variaciones sobre La flauta mágica* op. 9
+**L3.1 · El tema de Mozart** {Historia, Oído}
+1. Contexto · Sor y el tema de *La flauta mágica*.
+2. Oído · Reconocer al oído cómo se transforma el tema en cada variación · ♪.
 
-## Tramo 6 · Tema con variaciones de concierto
-1. Contexto · Giuliani escribió las variaciones op. 107 sobre un tema de Händel: el *Aria* de la Suite HWV 430, de la misma colección de 1720 que su *Passacaglia* (HWV 432) **[Dato]**.
-2. Obra · **O-C7-04 Giuliani, *Variaciones sobre un tema de Händel* op. 107** · 𝄞 + T · ⏱.
-3. Análisis · Cómo se construye cada variación.
+**L3.2 · Escalas de concierto** {Escalas, MD}
+1. Ejercicio · Las escalas de la obra a velocidad de concierto, con su digitación propia · T · ⏱.
 
-## Tramo 7 · *La Catedral*
-1. Obra · **O-C7-05 Barrios, *La Catedral*** completa: el *Preludio saudade* (del curso 5), el *Andante religioso* y el *Allegro solemne* · 𝄞 + T · ⏱.
-2. Musicalidad · Los tres movimientos como un recorrido.
+**L3.3 · Estilo clásico** {Teoría, Musicalidad, Solfeo}
+1. Explicación · Articulación y ornamento de la época.
+2. Ritmo · La agógica clásica: poca, y siempre con el pulso.
 
-## Tramo 8 · El último trémolo
-1. Contexto · Barrios, *Una limosna por el amor de Dios*, también llamada *El último trémolo*.
-2. Obra · **O-C7-06** · 𝄞 + T · ⏱. ↩ necesita *Recuerdos*.
+**L3.4 · La obra** {Repertorio}
+1. Obra · **Sor, op. 9** · 𝄞 + T · ⏱.
 
-## Tramo 9 · El homenaje
-1. Contexto · Falla escribió su única obra para guitarra, *Homenaje* (*Le tombeau de Claude Debussy*, 1920) **[Dato]**; la habanera y el impresionismo.
-2. Obra · **O-C7-07 Falla, *Homenaje*** · edición publicada (con derechos en España hasta 2027, a los 80 años de su muerte) · ⏱.
+## Tramo 4 · Barrios, *Una limosna por el amor de Dios*
+**L4.1 · La obra** {Repertorio, Trémolo, MD, Historia}
+1. Contexto · También llamada *El último trémolo*: a menudo se dice que fue la última que compuso Barrios.
+2. Obra · **Barrios, *Una limosna por el amor de Dios*** · 𝄞 + T · ⏱. ↩ necesita *Recuerdos*.
 
-## Tramo 10 · El piano en la guitarra
-1. Contexto · Albéniz escribió *Asturias* (*Leyenda*) para piano; la guitarra la hizo suya.
-2. Para saber · Su picado y su pulgar del flamenco le ayudan aquí. Es una transferencia, no una mezcla de programas.
-3. Obra · **O-C7-08 Albéniz, *Asturias*** · transcripción publicada (con derechos) o propia · ⏱.
+**L4.2 · Resistencia y ligados** {MI, Ligados}
+1. Ejercicio · Los ligados del bajo dentro del trémolo · T.
+2. Ejercicio · La obra entera dos veces seguidas, sin tensión.
 
-## Tramo 11 · Análisis y estilo
-1. Ejercicio · Análisis completo de una obra de su recital (forma, armonía, frases y puntos de apoyo de la memoria) · 𝄞.
-2. Escucha · Comparar tres versiones de la misma obra y decir qué hace cada intérprete · ♪ enlaces.
-3. Ejercicio · Rearmonizar una progresión sencilla · ⌗.
+**L4.3 · La armonía** {Armonía, Teoría}
+1. Análisis · El cromatismo de la obra · 𝄞.
 
-## Tramo 12 · Programar un recital
+## Tramo 5 · Villa-Lobos, *Estudio n.º 11*
+**L5.1 · Preparar solo una obra nueva** {Estudio, MI, Lectura}
+1. Explicación · El método propio: mapa, lo difícil primero, digitación, memoria.
+2. Ejercicio · Prepararlo sin pasos guiados: la academia solo pregunta cómo va.
+
+**L5.2 · Lo que pide** {Posiciones, Arpegios, Color}
+1. Análisis · Las posiciones, los arpegios y los colores del estudio, descritos por él antes de tocarlo · 𝄞.
+
+**L5.3 · La obra** {Repertorio, Musicalidad}
+1. Obra · **Villa-Lobos, *Estudio n.º 11*** · edición publicada (con derechos).
+
+## Tramo 6 · Albéniz, *Asturias*
+**L6.1 · Del piano a la guitarra** {Historia, Solfeo, Lectura}
+1. Contexto · *Asturias* (*Leyenda*), escrita para piano; la guitarra la hizo suya.
+2. Lectura · La reducción de piano: qué se queda y qué se va en la guitarra · 𝄞.
+
+**L6.2 · La técnica** {MD, MI, Posiciones}
+1. ¿Sabías que…? · Su picado y su pulgar flamencos le ayudan aquí. Es una transferencia, no una mezcla de programas.
+2. Aplicación · Los pasajes de pulgar y de picado, y los cambios de posición de la sección central.
+
+**L6.3 · La obra** {Repertorio, Musicalidad}
+1. Obra · **Albéniz, *Asturias*** · transcripción publicada (con derechos) o propia · ⏱.
+
+## Tramo 7 · Dowland, *Fantasía n.º 7*
+**L7.1 · Estilo históricamente informado** {Teoría, Historia}
+1. Explicación · Qué sabemos de cómo se tocaba: fuentes, instrumentos y ornamentos.
+
+**L7.2 · El original en tablatura** {Tablatura, Lectura}
+1. Tablatura · El original de Dowland en tablatura francesa de laúd (con letras): leer unos compases y compararlos con la transcripción.
+
+**L7.3 · La obra** {Repertorio, MI, Ligados}
+1. Obra · **Dowland, *Fantasía n.º 7*** · 𝄞 + T · ⏱.
+2. Aplicación · Los ornamentos de la época.
+
+**L7.4 · Leer sin preparar** {Lectura}
+1. Primera vista · Cinco minutos para preparar una pieza nueva y tocarla · 𝄞.
+
+## Tramo 8 · Aguado, *Fandango variado* op. 16
+**L8.1 · La obra** {Repertorio, Historia}
+1. Contexto · Aguado y el fandango del siglo XIX.
+2. Obra · **Aguado, *Fandango variado*** · 𝄞 + T · ⏱.
+
+**L8.2 · Forma al oído** {Oído, Teoría}
+1. Oído · Reconocer al oído la forma de una obra de variaciones · ♪.
+
+**L8.3 · Escalas y arpegios de la obra** {Escalas, Arpegios}
+1. Ejercicio · Los pasajes de velocidad, aislados, con ráfagas · T · ⏱.
+
+## Tramo 9 · Turina, *Fandanguillo*
+**L9.1 · La obra** {Repertorio, Color, Musicalidad, Historia}
+1. Contexto · Turina y la guitarra española de concierto.
+2. Obra · **Turina, *Fandanguillo*** · edición publicada (con derechos) · ⏱.
+3. Fíjate en… · El color y los efectos que pide.
+
+**L9.2 · El ritmo** {Solfeo}
+1. Ritmo · Los cambios de compás de la obra · ⏱.
+
+## Tramo 10 · Rearmonizar, acompañar y escuchar
+**L10.1 · Rearmonizar** {Armonía, Creatividad}
+1. Ejercicio · Rearmonizar una progresión sencilla · ⌗.
+2. Ejercicio · Rearmonizar una melodía conocida · ⌗.
+
+**L10.2 · Acompañar** {Conjunto, Armonía}
+1. Ejercicio · Acompañar una canción grabada con su propia armonía.
+
+**L10.3 · Escuchar una obra entera** {Oído, Musicalidad}
+1. Oído · Formas y modulaciones en una obra entera · ♪.
+2. Escucha · Tres versiones de la misma obra: qué hace cada intérprete · ♪.
+
+## Tramo 11 · Programar un recital
+**L11.1 · El programa** {Memoria, Repertorio, Estudio}
 1. Explicación · Elegir obras de varias épocas, ordenarlas (contraste, tonalidades, energía) y presentarlas en dos frases cada una.
-2. Ejercicio · Escribir su programa y su orden.
+2. Ejercicio · Su programa y su orden.
 
-## Tramo 13 · Cierre del curso 7
-1. Obra · Recital personal de 25-30 minutos, grabado, con digitaciones propias en al menos una obra.
-2. Explicación (guía) · Lo que ha recorrido y el Horizonte.
+**L11.2 · El plan hasta el recital** {Estudio, Escalas}
+1. Ejercicio · El plan de las semanas que quedan, con la técnica de mantenimiento.
 
----
-
-## Fichas
-**E-C7-01 · Digitar un fragmento**
-- **Objetivo:** autonomía en la digitación.
-- **Instrucciones:** ocho compases de Bach sin digitar. Escribir la digitación de las dos manos, tocarla, compararla con dos ediciones y quedarse con la mejor, diciendo por qué.
-- **Está bien cuando** cada elección tiene una razón de las cinco del tramo 2.
-
-| Ficha | Obra | Nivel **[Dato]** | Papel | Técnicas | Derechos |
-|---|---|---|---|---|---|
-| O-C7-01 | Tárrega, *Capricho árabe* | La Rioja EP 5 · EPM 6 | Principal | Scordatura, recitativo | DP |
-| O-C7-02 | Villa-Lobos, *Estudio n.º 1* | La Rioja EP 5 · EPM 6 | Siglo XX | Arpegio extendido | **Con derechos** |
-| O-C7-03 | Bach, *Preludio* BWV 997 | La Rioja EP 5 · EPM 6 | Barroco | Digitación propia | DP (el original) |
-| O-C7-04 | Giuliani, op. 107 | La Rioja EP 5 · EPM 6 | Clasicismo | Variación de concierto | DP |
-| O-C7-05 | Barrios, *La Catedral* | EPM 6 | Siglo XX | Arpegio, color, forma larga | DP en España **[Por verificar]** |
-| O-C7-06 | Barrios, *Una limosna por el amor de Dios* | La Rioja EP 6 | Trémolo | Trémolo de concierto | DP en España **[Por verificar]** |
-| O-C7-07 | Falla, *Homenaje* | La Rioja EP 5 · EPM 6 | Siglo XX | Color | **Con derechos** (hasta 2027) |
-| O-C7-08 | Albéniz, *Asturias* | La Rioja EP 6 | Transcripción | Picado, pulgar | El original, DP; las transcripciones, con derechos |
-| Alternativas | Bach, *Preludio* BWV 998 y *Fuga* BWV 1000; Sor, *Variaciones sobre La flauta mágica* op. 9 y *Sonata* op. 15b; Aguado, *Fandango variado* op. 16; Dowland, *Fantasía n.º 7*; Weiss, *Suite*; Turina, *Homenaje a Tárrega* y *Fandanguillo*; Villa-Lobos, *Estudios* 2, 8 y 11; Rodrigo, *En los trigales*; Mompou, *Canción*; Brouwer, *Elogio de la danza* (con derechos) | La Rioja EP 5-6 · EPM 6 | — | — | — |
+## Tramo 12 · Cierre del nivel 7
+**L12.1 · El recital personal** {Repertorio, Memoria, Musicalidad}
+1. Obra · El recital personal de 25-30 minutos, grabado, con digitaciones propias en al menos una obra.
+2. Explicación (guía) · Lo recorrido y el Horizonte.
 
 ---
 
 ## Horizonte
-Lo que queda más allá del curso 7. Se ve desde el principio, con lo que falta para cada obra; no tiene ruta.
+Más allá del nivel 7. Se ve desde el principio, con lo que falta; no tiene ruta.
 
-| Obra | Lo que pide además del curso 7 |
+| Obra | Lo que pide además |
 |---|---|
-| Bach, *Chacona* BWV 1004 | Resistencia de 13-15 minutos; polifonía de cuatro voces sostenida |
+| Bach, *Chacona* BWV 1004 | Resistencia de 13-15 minutos; cuatro voces sostenidas |
 | Barrios, *Un sueño en la floresta* | Trémolo de concierto muy largo |
-| Britten, *Nocturnal* | Lenguaje del siglo XX y forma de variaciones invertida |
+| Britten, *Nocturnal* | El lenguaje del siglo XX; variaciones al revés |
 | Tárrega, *Gran jota* | Efectos y virtuosismo |
 | Albéniz, *Sevilla* y *Granada*; Granados, *Danza española n.º 5* | Transcripciones de piano exigentes |
-| Turina, *Sevillana*; Rodrigo, *Invocación y danza* | Repertorio español de concierto |
-| Villa-Lobos, *Estudios* 7 y 12; Brouwer, *El decamerón negro* | Virtuosismo del siglo XX (el *Decamerón* figura en 6.º de Profesionales en La Rioja **[Dato]**) |
+| Rodrigo, *Invocación y danza* | Repertorio español de concierto |
+| Villa-Lobos, *Estudios* 7 y 12; Brouwer, *El decamerón negro* (6.º de Profesionales en La Rioja) | Virtuosismo del siglo XX |

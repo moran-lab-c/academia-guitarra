@@ -4,276 +4,261 @@ project: personal
 type: plan
 created: 2026-10-29
 ---
-# Curso 3 · Polifonía y mástil completo
+# Curso 3 · Nivel 3
 
-Anexo del [[CURRICULO-MAESTRO]]. **Borrador para su revisión.** La leyenda es la de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 2). **Borrador para su revisión.** Formato y leyenda: los de [[curso-1]].
 
-## Objetivo
-La capacidad propia de la guitarra clásica: tocar varias voces a la vez, cada una con su sonido y su duración, por todo el mástil. Al terminar el curso:
-- el mástil hasta el XII;
-- los armónicos naturales;
-- los ornamentos (mordente, trino y apoyatura);
-- el portamento;
-- la modulación y las dominantes secundarias;
-- las formas binaria, ternaria y rondó;
-- un recital con Bach y Tárrega, grabado.
+## Ficha del nivel
+- **Equivale a:** RCM 6 · ABRSM 6 · 2.º de Profesionales **[Estimación]**.
+- **Objetivo:** que dos o tres voces suenen independientes por el mástil hasta el IX. Al terminar el nivel:
+  - ornamentos;
+  - armónicos naturales y los primeros octavados;
+  - modulación y dominantes secundarias;
+  - la cifra de la vihuela;
+  - un recital grabado de tres o cuatro obras.
 
-## Nivel
-RCM 6 · 1.º-2.º de Profesionales **[Dato]**:
-- *Adelita*: RCM 6 y 2.º de Profesionales en La Rioja;
-- *Bourrée* BWV 996: RCM 6 y 1.º-3.º en Madrid;
-- Sor op. 35 n.º 22: RCM 6.
-
-## Competencias al terminar
-| Área | Competencias |
+## Las áreas del nivel 3
+| Área | Qué se aprende en este nivel |
 |---|---|
-| Técnica | Dos y tres voces con duración exacta · sostener una voz mientras otra se mueve · armónicos naturales en V, VII, XII y XIX · trino y mordente con ligados · portamento y glissando · pizzicato · color por voz |
-| Escalas | Dos octavas en posiciones altas · Si menor y Fa♯ menor · escalas en terceras, iniciación |
-| Lectura | Posición VII · tres voces · ornamentos escritos · armaduras de hasta 3 alteraciones |
-| Ritmo | Ritmos distintos en el bajo y en la melodía · puntillo de corchea · ritmo de mazurca |
-| Teoría | Notas de adorno · modulación a tonos vecinos · formas binaria, ternaria y rondó · la cifra de la vihuela |
-| Armonía | Dominantes secundarias · modulación a la dominante y al relativo |
-| Oído | Intervalos armónicos · I-IV-V-vi · dictado breve a dos voces |
-| Diapasón | Mástil hasta el XII · octavas · dónde suena cada armónico |
-| Musicalidad | Peso distinto en cada voz · articulación barroca · rubato de la mazurca |
-| Interpretación | Repertorio vivo de 3-4 obras · grabación |
+| Mano derecha | Fórmulas de arpegio de Carlevaro 1-15 (las de 1.º de Profesionales en La Rioja) · arpegios en posiciones altas · tres planos sonoros · tambora y golpe |
+| Mano izquierda | Posiciones hasta la IX · cejillas parciales dentro de la polifonía · trino · ligados de tres notas · voces independientes · portamento expresivo |
+| Escalas | Tres octavas: Mi y Mi♭ mayor, Do y Do♯ menor · terceras y décimas |
+| Arpegios | Tres octavas · séptimas de dos octavas |
+| Trémolo | Regular sobre una progresión, a tempo moderado |
+| Armónicos y color | Naturales en IV y IX · octavados (introducción) · color por voces |
+| Lectura | Posición VII · tres voces · ornamentos escritos |
+| Primera vista | 8-12 compases; Fa♯ menor y Mi mayor; 2.ª posición; silencios (grado 5 del ABRSM) |
+| Tablatura | La cifra de la vihuela |
+| Solfeo | Puntillo de corchea · 9/8 y 12/8 · la hemiolia del vals venezolano · cantar melodías cortas · dictado melódico |
+| Teoría | Notas de adorno · tonalidades vecinas · binaria, ternaria y rondó · antecedente y consecuente |
+| Armonía | Dominantes secundarias · modulación a la dominante y al relativo · bajo cifrado (¿Sabías que…?) |
+| Oído | Intervalos armónicos · I-IV-V-vi · cadencias por su nombre · dictado melódico |
+| Diapasón | Hasta el XII · octavas · dónde suena cada armónico |
+| Musicalidad | Peso en cada voz · articulación barroca · rubato de mazurca |
+| Memoria e interpretación | Repertorio vivo de 3-4 obras · grabación |
+| Creatividad, estudio y conjunto | Ornamentar una repetición · estudiar por voces · un bajo continuo sencillo |
+| Historia | Bach y el laúd · la vihuela · Tárrega · Mertz · Lauro |
 
-## Mapa del curso
-| Tramo | Tema | Por qué existe | Música |
-|---|---|---|---|
-| 1 | Partida | — | Repertorio vivo |
-| 2 | El mástil hasta el XII | Las obras del curso suben al XII | Ejercicios de octavas |
-| 3 | Armónicos naturales | Técnica y física; afinar con armónicos | Su *Estudio en Mi menor* (c. 67-69) |
-| 4 | Voces independientes | La base de la polifonía | Ejercicios |
-| 5 | *Adelita* | Mazurca: portamento, rubato, el cambio de modo otra vez | *Adelita* |
-| 6 | Bach | El contrapunto a dos voces | *Bourrée* BWV 996 |
-| 7 | Ornamentos | Trino, mordente y apoyatura en estilo | Aplicación en Bach y en la vihuela |
-| 8 | Sor en Si menor | Arpegio con melodía en una tonalidad nueva | Sor op. 35 n.º 22 |
-| 9 | La vihuela | El Renacimiento español y su tablatura | Milán, *Pavana III* |
-| 10 | Modulación y dominantes secundarias | La armonía de las obras del curso | Análisis |
-| 11 | El nocturno romántico | Tres planos sonoros | Mertz, *Nocturno* op. 4 n.º 1 |
-| 12 | El color | Timbre al servicio de cada voz | Aplicación |
-| 13 | El vals venezolano | La hemiolia, viva en el siglo XX | Lauro, *Vals venezolano n.º 2* |
-| 14 | Formas | Binaria, ternaria y rondó en las obras del curso | Análisis |
-| 15 | Cierre | — | Recital grabado |
+## Repertorio del nivel
+- Sor op. 35 n.º 22.
+- *Adelita* (principal).
+- *Bourrée* BWV 996 (principal).
+- Milán, *Pavana III*.
+- Mertz, *Nocturno* op. 4 n.º 1.
+- Narváez, *Canción del Emperador*.
+- Lauro, *Vals venezolano n.º 2*.
+- Giuliani op. 100 n.º 12.
+- Petzold, *Minueto* BWV Anh. 114 (lectura).
+- **Alternativas:** Tárrega, *Estudio en Mi mayor*; Coste op. 38 n.º 1 (si no se hizo en el nivel 2); Weiss, *Courante*; Sor op. 6 n.º 1; Carcassi op. 60 n.º 2 y 9.
+
+## Mapa de tramos
+| Tramo | Música | Lo nuevo |
+|---|---|---|
+| 1 | Sor, op. 35 n.º 22 | Si menor; arpegio con melodía en posición; Carlevaro; antecedente y consecuente |
+| 2 | *Adelita* | Mazurca; portamento; rubato; intervalos armónicos; posición IX |
+| 3 | Bach, *Bourrée* (I) | Contrapunto; voces independientes; articulación barroca |
+| 4 | Bach, *Bourrée* (II) | Modulación; dominantes secundarias; trino; ornamentar la repetición |
+| 5 | Milán, *Pavana III* | La vihuela y su cifra; el pulso grande; modos |
+| 6 | Mertz, *Nocturno* op. 4 n.º 1 | Tres planos; armónicos de IV y IX; octavados; escalas de tres octavas |
+| 7 | Narváez, *Canción del Emperador* | Polifonía a tres voces; cejillas parciales; tonalidades vecinas |
+| 8 | Lauro, *Vals venezolano n.º 2* | La hemiolia viva; ritmos distintos en bajo y melodía; un bajo continuo |
+| 9 | Giuliani, op. 100 n.º 12 | Ligados de tres; terceras; el trémolo sobre una progresión |
+| 10 | Lectura y formas | Petzold leído; binaria, ternaria y rondó; I-IV-V-vi |
+| 11 | Cierre del nivel 3 | Recital grabado y prueba corta |
 
 ---
 
-## Tramo 1 · Partida
-**L1.1 · Lo que ya sabes** — Comprobaciones ◇:
-1. Cejilla en tres trastes · ⌗.
-2. Escala con cambio de posición · T · ⏱.
-3. Lectura en la V posición · 𝄞.
-4. Trémolo lento · T.
+## Tramo 1 · Sor, op. 35 n.º 22
+**L1.1 · Lo que traes** {Repertorio, Memoria}
+1. Repaso · El *Romance*.
+2. Explicación (guía) · Lo que trae este nivel.
 
-**L1.2 · Repertorio vivo**
-1. Repaso · *Romance*.
-2. Repaso · *Lágrima*.
+**L1.2 · Si menor** {Escalas, Teoría}
+1. Ejercicio · Si menor, dos octavas, las dos formas · T + 𝄞 · ⏱.
+2. Lectura · Dos sostenidos en menor · 𝄞.
 
-**L1.3 · Lo que trae este curso**
-1. Explicación (guía, `introduce`).
-2. Escucha · *Adelita* y la *Bourrée* · ♪.
+**L1.3 · Carlevaro** {MD, Arpegios}
+1. Explicación · Abel Carlevaro y sus fórmulas de arpegio: pocas notas y mucha conciencia del movimiento.
+2. Ejercicio · **E-N3-01 Fórmulas de Carlevaro 1-5** · T · ⏱ · **[Por verificar]** la numeración con el cuaderno.
 
-## Tramo 2 · El mástil hasta el XII
-**L2.1 · El mapa**
-1. Explicación · El traste XII es la octava de la cuerda al aire: el mástil se repite.
-2. Diapasón · Notas hasta el XII · ✎.
+**L1.4 · La obra** {Repertorio, Posiciones}
+1. Contexto · Uno de los estudios de Sor que Segovia eligió para su selección de veinte **[Consenso]**.
+2. Obra · **Sor, op. 35 n.º 22** · 𝄞 + T · ⏱.
+3. Aplicación · La melodía arriba del arpegio en la cejilla II · T. ↩ necesita el *Romance*.
 
-**L2.2 · Octavas**
-1. Ejercicio · **E-C3-01 Formas de octava** · T.
-2. Diapasón · La misma nota en cuatro sitios · ✎.
+**L1.5 · La frase** {Teoría, Musicalidad}
+1. Explicación · Antecedente y consecuente: una frase que pregunta y otra que responde.
+2. Análisis · Las frases del estudio · 𝄞.
+3. Comprobación del tramo.
 
-**L2.3 · Leer arriba**
-1. Lectura · Posición VII · 𝄞 · ⏱.
-2. Comprobación del tramo · Diez notas en el mástil; cuatro compases leídos en la VII.
+## Tramo 2 · *Adelita*
+**L2.1 · La mazurca** {Historia, Solfeo}
+1. Contexto · Tárrega y la mazurca, danza de salón en 3/4 con acentos desplazados.
+2. Ritmo · El acento de la mazurca · ⏱.
 
-## Tramo 3 · Armónicos naturales
-**L3.1 · Por qué suenan**
-1. Explicación · La cuerda vibra en partes: en el XII, en dos mitades; en el VII, en tercios; en el V, en cuartos. Tocar el punto exacto deja sonar solo esa parte.
-2. Para saber · Por eso el armónico del VII suena una quinta por encima del XII.
+**L2.2 · Portamento** {MI, Musicalidad}
+1. Cómo se hace · Unir dos notas deslizando, como canta una voz.
+2. Ejercicio · **E-N3-02 Portamento expresivo** · T.
+3. Aplicación · Los portamentos de *Adelita* · **[Por verificar]**.
 
-**L3.2 · Cómo se hacen**
-1. Cómo se hace · Rozar la cuerda justo encima del traste, sin pisar, y soltar al pulsar.
-2. Ejercicio · **E-C3-02 Armónicos en XII, VII, V y XIX** · T.
+**L2.3 · La obra** {Repertorio, Posiciones, Teoría}
+1. Análisis · Mi menor y Mi mayor: el homónimo de *Lágrima* y del *Romance*.
+2. Obra · **Tárrega, *Adelita***, las dos partes · 𝄞 + T · ⏱.
+3. Diapasón · Las notas hasta el IX que pide la obra · ✎.
 
-**L3.3 · Aplicación**
-1. Aplicación · Los armónicos de los compases 67 y 69 de su *Estudio en Mi menor*, ya conocidos · T.
-2. Cómo se hace · Afinar con armónicos (lo que el curso 1 dejó en «Para saber»).
-3. Oído · ¿Qué nota suena en este armónico? · ✎ · ♪.
+**L2.4 · Rubato** {Musicalidad}
+1. Explicación · Estirar y devolver sin perder el pulso.
+2. Escucha · Dos versiones con rubatos distintos · ♪.
 
-## Tramo 4 · Voces independientes
-**L4.1 · Lo que no se ve en la tablatura**
-1. Explicación · La tablatura dice qué traste, pero no cuánto dura cada nota; la partitura, sí. Por eso la polifonía se aprende mirando la partitura.
+**L2.5 · Intervalos a la vez** {Oído}
+1. Oído · Intervalos armónicos · ✎.
+2. Comprobación del tramo · *Adelita* entera.
 
-**L4.2 · Sostener y mover**
-1. Ejercicio · **E-C3-03 Voz larga, voz que se mueve** · 𝄞 + T · ⏱.
-2. Ejercicio · Apagar el bajo justo a tiempo · T. ↩ necesita C1, apagar voces.
-3. Oído · Intervalos armónicos (las dos notas a la vez) · ✎ · ♪.
+## Tramo 3 · Bach, *Bourrée* BWV 996 (I)
+**L3.1 · Bach y el laúd** {Historia}
+1. Contexto · La suite BWV 996, para laúd o clave-laúd; la bourrée, binaria y rápida.
+2. Escucha · En laúd y en guitarra · ♪.
 
-## Tramo 5 · *Adelita*
-**L5.1 · La mazurca**
-1. Contexto · Tárrega y la mazurca, danza polaca de salón en 3/4 con acentos desplazados.
-2. Escucha · *Adelita* · ♪.
-3. Análisis · Mi menor y Mi mayor: el homónimo una vez más. ↩ necesita *Lágrima* y el *Romance*.
+**L3.2 · Lo que no se ve en la tablatura** {Lectura, Tablatura}
+1. Explicación · La duración de cada voz solo la dice la partitura.
+2. Lectura · Tres voces en el pentagrama · 𝄞.
 
-**L5.2 · Portamento y glissando**
-1. Cómo se hace · Deslizar el dedo entre dos notas para unirlas como canta una voz; cuándo se oye y cuándo no.
-2. Ejercicio · **E-C3-04 Portamento expresivo** · T.
-3. Aplicación · Los portamentos de *Adelita* · 𝄞 + T · **[Por verificar]**: compases, con la edición.
+**L3.3 · Voces independientes** {MI, MD, Estudio}
+1. Ejercicio · **E-N3-03 Voz larga, voz que se mueve** · 𝄞 + T · ⏱.
+2. Ejercicio · Estudiar por voces: cada voz sola y después juntas.
 
-**L5.3 · La obra**
-1. Obra · Parte en Mi menor · T + 𝄞 · ⏱.
-2. Obra · Parte en Mi mayor · ⏱.
-3. Obra · La obra entera; pasa al atril.
-4. Musicalidad · El rubato de la mazurca: estirar y devolver sin perder el pulso.
-5. Comprobación del tramo · *Adelita* entera.
+**L3.4 · La primera mitad** {Repertorio, Musicalidad}
+1. Obra · La primera mitad · 𝄞 principal · ⏱.
+2. Fíjate en… · La articulación barroca: separadas y ligadas por grupos.
 
-## Tramo 6 · Bach
-**L6.1 · Contexto**
-1. Contexto · Bach y la suite BWV 996, escrita para laúd o clave-laúd **[Dato con matices]**. La bourrée, una danza binaria rápida.
-2. Escucha · En laúd y en guitarra · ♪ enlaces.
+## Tramo 4 · Bach, *Bourrée* BWV 996 (II)
+**L4.1 · Modular** {Armonía, Teoría}
+1. Explicación · Cambiar de tónica: a la dominante y al relativo.
+2. Análisis · Adónde va la primera mitad de la *Bourrée* · **[Por verificar]**.
+3. Explicación · Dominantes secundarias.
+4. Progresión · Do–Do7–Fa–La7–Re m–Sol7–Do · ⌗ · ♪.
 
-**L6.2 · Dos voces que conversan**
-1. Explicación · El contrapunto: dos melodías igual de importantes.
-2. Análisis · La forma binaria con repeticiones y la modulación de la primera mitad · 𝄞 con marcas · **[Por verificar]** la tonalidad a la que modula.
-3. Ejercicio · Tocar solo la voz de arriba, solo la de abajo y después juntas.
+**L4.2 · El trino y la apoyatura** {MI, Ligados, Teoría}
+1. Cómo se hace · El trino con ligados, desde la nota superior en el Barroco **[Consenso, con matices]**.
+2. Ejercicio · **E-N3-04 Trino medido** · T · ⏱.
+3. Teoría · Notas reales y notas de adorno · ✎.
 
-**L6.3 · La obra**
-1. Obra · **O-C3-02 *Bourrée* BWV 996**, primera mitad · 𝄞 principal, T a un toque · ⏱.
-2. Obra · Segunda mitad · ⏱.
-3. Musicalidad · Articulación barroca: notas separadas y ligadas por grupos.
-4. Comprobación del tramo · La *Bourrée* entera, con las dos voces claras.
+**L4.3 · La segunda mitad y la repetición** {Repertorio, Creatividad}
+1. Obra · La segunda mitad; la obra entera.
+2. Ejercicio · Ornamentar la repetición en el estilo · 𝄞.
+3. Comprobación del tramo · La *Bourrée* entera, con las voces claras.
 
-## Tramo 7 · Ornamentos
-**L7.1 · El trino**
-1. Cómo se hace · El trino con ligados, empezando por la nota superior en el estilo barroco **[Consenso, con matices según la época]**.
-2. Ejercicio · **E-C3-05 Trino medido** · T · ⏱. ↩ necesita E-C1-14.
+## Tramo 5 · Milán, *Pavana III*
+**L5.1 · La vihuela** {Historia, Tablatura}
+1. Contexto · Luis de Milán, *El Maestro* (Valencia, 1536).
+2. Tablatura · La cifra de la vihuela: números en líneas, como su tablatura.
+3. ¿Sabías que…? · Las transcripciones afinan a menudo la 3.ª en Fa♯ **[Por verificar]**.
 
-**L7.2 · La apoyatura**
-1. Explicación · La apoyatura y la nota de paso: notas de adorno.
-2. Teoría con preguntas · Notas reales y notas de adorno · ✎.
+**L5.2 · Los modos, un vistazo** {Teoría, Oído}
+1. Explicación · Antes de las tonalidades, los modos. Se estudian en el nivel 4.
+2. Escucha · La pavana: ¿suena mayor, menor u otra cosa? · ♪.
 
-**L7.3 · Aplicación**
-1. Aplicación · Dónde se puede ornamentar la repetición de la *Bourrée* · 𝄞.
-2. Para saber · En el Barroco, la repetición se adornaba de manera distinta cada vez.
+**L5.3 · La obra** {Repertorio, Musicalidad, Solfeo}
+1. Ritmo · El pulso grande de la pavana (la blanca) · ⏱.
+2. Obra · **Milán, *Pavana III*** · T + 𝄞 · ⏱.
+3. Comprobación del tramo.
 
-## Tramo 8 · Sor en Si menor
-**L8.1 · Si menor**
-1. Ejercicio · Si menor, escala dos octavas · T + 𝄞 · ⏱.
-2. Lectura · La armadura de dos sostenidos en menor · 𝄞.
+## Tramo 6 · Mertz, *Nocturno* op. 4 n.º 1
+**L6.1 · El nocturno** {Historia}
+1. Contexto · Johann Kaspar Mertz y el nocturno romántico.
 
-**L8.2 · La obra**
-1. Contexto · Sor op. 35 n.º 22, uno de los estudios de Sor que Segovia incluyó en su selección de veinte **[Consenso]**.
-2. Obra · **O-C3-03 Sor, op. 35 n.º 22** · 𝄞 + T · ⏱.
-3. Aplicación · Arpegio con melodía y cejilla en Si menor · T. ↩ necesita el *Romance*.
-4. Comprobación del tramo · El estudio entero, con la melodía por encima.
+**L6.2 · Tres planos** {MD, Musicalidad}
+1. Ejercicio · Melodía, acompañamiento y bajo, cada uno con su volumen.
+2. Obra · **Mertz, *Nocturno* op. 4 n.º 1** · 𝄞 + T · ⏱.
 
-## Tramo 9 · La vihuela
-**L9.1 · Contexto**
-1. Contexto · La vihuela y Luis de Milán, *El Maestro* (Valencia, 1536) **[Dato]**.
-2. Para saber · Los vihuelistas escribían en cifra, una tablatura con números. Él lee tablatura: lee como Milán.
-3. Para saber · Las transcripciones afinan a menudo la 3.ª en Fa♯ **[Por verificar en la edición]**.
+**L6.3 · Armónicos de IV y IX; octavados** {Color, Diapasón}
+1. Ejercicio · Naturales en IV y IX: qué nota suena · ✎.
+2. Cómo se hace · El octavado: *i* roza doce trastes por encima de la nota pisada y *a* pulsa. La Rioja lo pone en 1.º de Profesionales **[Dato]**.
+3. Ejercicio · **E-N3-05 Armónicos octavados**, una escala de una octava · T.
 
-**L9.2 · La obra**
-1. Obra · **O-C3-04 Milán, *Pavana III*** · T + 𝄞 · ⏱.
-2. Musicalidad · La pavana, danza lenta y solemne: el pulso grande.
-3. Comprobación del tramo · La pavana entera.
+**L6.4 · Tres octavas** {Escalas, Arpegios}
+1. Ejercicio · Mi y Mi♭ mayor, tres octavas (como el grado 6 del ABRSM) · T + 𝄞 · ⏱.
+2. Ejercicio · Arpegio de Mi mayor, tres octavas · T.
+3. Comprobación del tramo.
 
-## Tramo 10 · Modulación y dominantes secundarias
-**L10.1 · Ir a otra tonalidad**
-1. Explicación · Modular es cambiar de tónica. Los tonos vecinos: dominante y relativo.
-2. Análisis · Dónde modula la *Bourrée* y dónde *Adelita* · 𝄞.
+## Tramo 7 · Narváez, *Canción del Emperador*
+**L7.1 · Narváez** {Historia}
+1. Contexto · Narváez, *Los seys libros del Delphín* (1538); la canción, sobre *Mille regretz* de Josquin.
 
-**L10.2 · Dominantes de paso**
-1. Explicación · Dominantes secundarias: un V7 de cualquier grado (V/IV, V/ii…).
-2. Progresión · Do–Do7–Fa–La7–Re m–Sol7–Do · ⌗ · ♪ · ⏱.
-3. Oído · I-IV-V-vi · ✎ · ♪.
-4. Oído · Dictado a dos voces, breve · ✎.
+**L7.2 · Tres voces y cejillas parciales** {MI, Posiciones}
+1. Cómo se hace · Una cejilla solo donde hace falta, para que sigan sonando las otras voces.
+2. Aplicación · Las cejillas parciales de la obra · T + 𝄞.
 
-## Tramo 11 · El nocturno romántico
-**L11.1 · Contexto**
-1. Contexto · Johann Kaspar Mertz y el nocturno, una pieza lírica de carácter nocturno.
+**L7.3 · Tonalidades vecinas** {Teoría, Oído}
+1. Explicación · Las tonalidades que comparten casi todas las notas.
+2. Oído · Las cadencias por su nombre · ✎.
 
-**L11.2 · La obra**
-1. Obra · **O-C3-05 Mertz, *Nocturno* op. 4 n.º 1** · 𝄞 + T · ⏱.
-2. Musicalidad · Tres planos: melodía, acompañamiento y bajo, cada uno con su volumen.
-3. Comprobación del tramo · El nocturno entero.
+**L7.4 · La obra** {Repertorio, Lectura}
+1. Obra · **Narváez, *Canción del Emperador*** · T + 𝄞 · ⏱.
+2. Lectura · Posición VII · 𝄞.
+3. Comprobación del tramo.
 
-## Tramo 12 · El color
-**L12.1 · Color con intención**
-1. Explicación · Tasto, ponticello y el ángulo de la uña al servicio de cada voz y de cada frase. ↩ necesita E-C1-03.
-2. Aplicación · Un cambio de color en *Adelita* o en el nocturno, y por qué.
-3. Cómo se hace · Pizzicato: la palma junto al puente.
-4. Para saber · La tambora: golpear las cuerdas junto al puente. Llega más adelante.
+## Tramo 8 · Lauro, *Vals venezolano n.º 2*
+**L8.1 · La hemiolia viva** {Solfeo}
+1. Explicación · El vals venezolano alterna 3/4 y 6/8.
+2. Ritmo · La hemiolia del vals; bajo y melodía en ritmos distintos · 𝄞 · ⏱.
+3. Ritmo · Puntillo de corchea; 9/8 y 12/8 · ⏱.
 
-## Tramo 13 · El vals venezolano
-**L13.1 · Contexto**
-1. Contexto · Antonio Lauro y el vals venezolano, que alterna 3/4 y 6/8.
+**L8.2 · La obra** {Repertorio, Historia}
+1. Contexto · Antonio Lauro (Venezuela).
+2. Obra · **Lauro, *Vals venezolano n.º 2*** · edición publicada (con derechos) · ⏱.
 
-**L13.2 · Ritmo**
-1. Ritmo · La hemiolia del vals venezolano. ↩ necesita C1, tramo 11.
-2. Ritmo · Bajo y melodía en ritmos distintos · 𝄞 · ⏱.
+**L8.3 · Un bajo continuo** {Conjunto, Armonía, Creatividad}
+1. ¿Sabías que…? · El bajo cifrado: en el Barroco se escribían el bajo y unos números, y el músico improvisaba los acordes.
+2. Ejercicio · Tocar los acordes de un bajo cifrado sencillo mientras suena una melodía grabada · ⌗ · ♪.
 
-**L13.3 · La obra**
-1. Obra · **O-C3-06 Lauro, *Vals venezolano n.º 2*** · edición publicada (con derechos) · ⏱.
+**L8.4 · Tambora y golpe** {MD, Color}
+1. Cómo se hace · La tambora: golpear las cuerdas junto al puente; el golpe en la tapa.
 2. Comprobación del tramo · El vals entero.
 
-## Tramo 14 · Formas
-**L14.1 · Tres formas**
-1. Explicación · Binaria, ternaria y rondó.
-2. Análisis · La forma de cada obra del curso: ¿binaria, ternaria o rondó? · ✎.
-3. Para saber · La forma ayuda a memorizar: una obra que se entiende se recuerda.
+## Tramo 9 · Giuliani, op. 100 n.º 12
+**L9.1 · Ligados de tres** {MI, Ligados}
+1. Ejercicio · Ligados de tres notas · T · ⏱.
 
-## Tramo 15 · Cierre del curso 3
-**L15.1 · Recital** (3-4 obras, grabado)
-1. Obra · *Bourrée* BWV 996 (Barroco).
+**L9.2 · Terceras** {Escalas}
+1. Ejercicio · Do mayor en terceras, una octava (grado 6 del ABRSM) · T.
+2. Ejercicio · Do y Do♯ menor, armónica y melódica · T + 𝄞.
+
+**L9.3 · El trémolo sobre una progresión** {MD, Trémolo}
+1. Ejercicio · **E-N3-06 Trémolo sobre I-IV-V-I** · T · ⏱. ↩ necesita E-N2-05.
+
+**L9.4 · El estudio** {Repertorio}
+1. Obra · **Giuliani, op. 100 n.º 12** · 𝄞 + T · ⏱ · **[Por verificar]** lo que trabaja.
+2. Comprobación del tramo.
+
+## Tramo 10 · Lectura y formas
+**L10.1 · Leer un minueto** {Lectura, Repertorio}
+1. Obra · **Petzold, *Minueto* BWV Anh. 114**, desde la partitura · 𝄞.
+2. Primera vista · Doce compases en Fa♯ menor · 𝄞.
+
+**L10.2 · Tres formas** {Teoría, Memoria}
+1. Explicación · Binaria, ternaria y rondó.
+2. Teoría · La forma de cada obra del nivel · ✎.
+3. Esto te sirve para… · Una obra que se entiende se recuerda.
+
+**L10.3 · El oído de la armonía** {Oído, Solfeo}
+1. Oído · I-IV-V-vi · ✎.
+2. Oído · Dictado melódico corto · ✎.
+3. Ejercicio · Cantar una melodía corta del nivel antes de tocarla.
+
+## Tramo 11 · Cierre del nivel 3
+**L11.1 · El recital, grabado** {Repertorio, Memoria, Musicalidad}
+1. Obra · *Bourrée* (Barroco).
 2. Obra · Sor op. 35 n.º 22 (Clasicismo).
 3. Obra · *Adelita* (Romanticismo).
-4. Obra · Lauro o Milán.
-5. Memoria · Dos de memoria.
-6. Grabarse · El recital, grabado.
+4. Obra · Milán, Narváez o Lauro.
+5. Dos de memoria.
 
-**L15.2 · Prueba corta**
-1. Técnica · Si menor dos octavas; armónicos; trino; dos voces · T · ⏱.
-2. Lectura · Ocho compases a primera vista en la VII · 𝄞.
-3. Oído · Intervalos armónicos; dictado a dos voces · ✎.
+**L11.2 · La prueba corta** {Escalas, MI, Color, Lectura, Oído, Teoría}
+1. Técnica · Mi mayor, tres octavas; terceras; trino; armónicos octavados · T · ⏱.
+2. Primera vista · Doce compases en la VII · 𝄞.
+3. Oído · Intervalos armónicos; dictado · ✎.
 4. Teoría · Modulación y formas · ✎.
 
----
-
-## Fichas de los ejercicios
-**E-C3-01 · Formas de octava**
-- **Objetivo:** encontrar cualquier nota en el mástil por octavas.
-- **Instrucciones:** de la 6.ª a la 4.ª cuerda, dos trastes arriba; de la 5.ª a la 3.ª, dos trastes arriba; de la 3.ª a la 1.ª, tres. Recorrer las doce notas.
-- **Prepara:** la lectura en posiciones altas.
-- **Está bien cuando** encuentra la octava de una nota sin contar trastes.
-
-**E-C3-02 · Armónicos en XII, VII, V y XIX**
-- **Instrucciones:** en las seis cuerdas, con *i* y con *p*; después, una melodía con armónicos.
-- **Errores frecuentes:** pisar en vez de rozar; soltar tarde.
-- **Está bien cuando** suenan claros y se sostienen.
-
-**E-C3-03 · Voz larga, voz que se mueve**
-- **Objetivo:** que una nota larga dure lo que dice la partitura mientras la otra voz se mueve.
-- **Instrucciones:** bajo en blancas, melodía en corcheas; después, al revés; en Do y en Mi m.
-- **Está bien cuando** ninguna nota larga se corta antes de tiempo.
-
-**E-C3-04 · Portamento expresivo**
-- **Instrucciones:** una melodía de dos notas a distancia de 3.ª y de 5.ª en una cuerda; deslizar con el dedo de llegada o con el de salida; despacio y sin que se oiga la nota de llegada repetida.
-- **Está bien cuando** suena como una voz que liga y no como un ruido.
-
-**E-C3-05 · Trino medido**
-- **Instrucciones:** trino en semicorcheas y después en fusas, medido con el metrónomo, sobre cada par de dedos.
-- **Por qué existe:** un trino sin medir se acelera y se ensucia.
-- **Está bien cuando** las notas del trino son regulares a ♩=60 en fusas.
-
-## Fichas de las obras
-| Ficha | Obra | Nivel **[Dato]** | Papel | Por qué aparece | Técnicas | Teoría | Derechos | Después |
-|---|---|---|---|---|---|---|---|---|
-| O-C3-01 | Tárrega, *Adelita* (mazurca) | RCM 6 · La Rioja EP 2 · EPM 1-3 | Principal | Portamento, rubato, homónimo | Portamento, cejillas | Modulación | DP | *Marieta* (curso 5) |
-| O-C3-02 | Bach, *Bourrée* de la Suite BWV 996 | RCM 6 · EPM 1-3 | Principal (Barroco) | Contrapunto a dos voces | Voces, articulación | Binaria, modulación | DP; ediciones con derechos | BWV 999 (curso 4) |
-| O-C3-03 | Sor, op. 35 n.º 22 | RCM 6 | Estudio y recital | Arpegio con melodía en Si menor | Arpegio, cejilla | Si menor | DP | BWV 999 |
-| O-C3-04 | Milán, *Pavana III* (o Narváez, *Fantasía XIV*) | RCM 6 | Renacimiento | La vihuela y su cifra | Polifonía | Modos (para saber) | DP; transcripciones con derechos | Narváez (curso 4) |
-| O-C3-05 | Mertz, *Nocturno* op. 4 n.º 1 | RCM 6 · La Rioja EP 2 | Romanticismo | Tres planos sonoros | Voces, color | — | DP | Mertz (curso 5) |
-| O-C3-06 | Lauro, *Vals venezolano n.º 2* | La Rioja EP 2 · EPM 2 | Siglo XX | La hemiolia en una danza viva | Ritmo | Hemiolia | **Con derechos** | Lauro, *Angostura* (curso 5, alternativa) |
-| Alternativas | Tárrega, *Estudio en Mi mayor*; Giuliani op. 100 n.º 12-13; Coste op. 38 n.º 1; Weiss, *Courante*; Sor op. 6 n.º 1 | RCM 6 | — | — | — | — | DP | — |
+**L11.3 · Lo que viene** {Repertorio}
+1. Explicación (guía) · El nivel 4: velocidad, estilos y el Preludio BWV 999.

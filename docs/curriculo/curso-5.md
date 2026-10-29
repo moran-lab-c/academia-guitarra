@@ -4,187 +4,244 @@ project: personal
 type: plan
 created: 2026-10-29
 ---
-# Curso 5 · Obras de concierto
+# Curso 5 · Nivel 5
 
-Anexo del [[CURRICULO-MAESTRO]]. **Borrador para su revisión.** La leyenda es la de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 2). **Borrador para su revisión.** Formato y leyenda: los de [[curso-1]].
 
-## Objetivo
-Sostener obras de 4-6 minutos que mezclan todas las técnicas anteriores, con un plan interpretativo de la obra entera. Al terminar el curso:
-- armónicos octavados y cejillas con cambios rápidos;
-- armonía cromática y formas grandes (sonata, variaciones);
-- un programa de 15-20 minutos ante otros (o grabado).
+## Ficha del nivel
+- **Equivale a:** RCM 8 · ABRSM 8 · 4.º de Profesionales **[Estimación]**.
+- **Calibración:** es el repertorio de 4.º de Profesionales en La Rioja: *Recuerdos*, *Julia Florida*, Villa-Lobos *Preludio n.º 1*, las *Folías* y *Conde Claros* **[Dato]**.
+- **Objetivo:** sostener obras de concierto de 4 a 8 minutos. Al terminar el nivel:
+  - el trémolo a tempo de concierto;
+  - la armonía cromática y las formas grandes;
+  - un programa de 15-20 minutos ante otros.
 
-## Nivel
-RCM 8 · 3.º-4.º de Profesionales **[Dato]**:
-- *Julia Florida*: RCM 8, EPM 4 y 4.º en La Rioja;
-- Scarlatti K. 208: RCM 8, EPM 4 y 3.º en La Rioja;
-- *Marieta*: RCM 8, EPM 4 y 2.º en La Rioja.
-
-## Competencias al terminar
-| Área | Competencias |
+## Las áreas del nivel 5
+| Área | Qué se aprende en este nivel |
 |---|---|
-| Técnica | Armónicos octavados · cejillas con cambios rápidos · vibrato · arpegios extendidos · resistencia en 5-6 minutos |
-| Escalas | Todas las tonalidades, en las digitaciones de sus obras · octavas |
-| Lectura | Todas las posiciones hasta la XII · polifonía a tres voces |
-| Ritmo | Dos contra tres · rubato sobre el pulso |
-| Teoría | Armonía cromática · forma sonata · tema con variaciones |
-| Armonía | Napolitana y sexta aumentada en contexto · modulación lejana |
-| Oído | Progresiones cromáticas · sacar una melodía de oído |
-| Musicalidad | El arco de toda una obra · plan de dinámica y de color · rubato con criterio |
-| Interpretación | Programa de 15-20 minutos · tocar ante otros · recuperarse de un error · memoria estructural |
+| Mano derecha | Arpegios extendidos · plan de sonido de una obra · trémolo de concierto |
+| Mano izquierda | Por encima del XII · cejillas con cambios rápidos y con extensión · vibrato según el estilo |
+| Escalas y arpegios | Todas las tonalidades · cromática en octavas · las escalas de las obras |
+| Trémolo | A tempo, en *Recuerdos* |
+| Armónicos y color | Artificiales en acordes y arpegios · paleta de color de una obra |
+| Lectura | Todas las posiciones · un preludio de chelo leído |
+| Primera vista | 12-16 compases; 7/8 y 7/4; semicorcheas; ligaduras (grado 7 del ABRSM) |
+| Tablatura | Para anotar digitaciones propias |
+| Solfeo | Dos contra tres · rubato sobre el pulso · leer un sistema de piano |
+| Teoría | Forma sonata entera · tema con variaciones · rondó-sonata |
+| Armonía | Sexta aumentada · modulación lejana · cromatismo |
+| Oído | Progresiones cromáticas · sacar una melodía de oído · describir una obra escuchada |
+| Diapasón | Transportar · digitaciones alternativas |
+| Musicalidad | El arco de la obra · plan de dinámica y de color · rubato con criterio |
+| Memoria e interpretación | Memoria estructural · programa de 15-20 minutos · tocar ante otros |
+| Creatividad y estudio | Preludiar antes de una obra · el mapa de una obra larga |
+| Historia | Barrios · Tárrega y la Alhambra · Villa-Lobos · Sor · Weiss · el siglo XX español |
 
-## Mapa del curso
-| Tramo | Tema | Por qué existe | Música |
-|---|---|---|---|
-| 1 | Partida | — | Repertorio vivo |
-| 2 | Cómo se monta una obra larga | Método: mapa, secciones, plan y memoria estructural | — |
-| 3 | La barcarola de Barrios | Arpegio extendido, cambios de posición y canto | *Julia Florida* |
-| 4 | Scarlatti | Una sonata de clave en la guitarra: dos voces rápidas | K. 208 |
-| 5 | El preludio de chelo | Polifonía implícita en una sola línea | *Preludio* BWV 1007 |
-| 6 | La mazurca de concierto | Rubato y carácter | Tárrega, *Marieta* |
-| 7 | Armónicos octavados | Una técnica nueva de color | Aplicación en una melodía |
-| 8 | El estudio de concierto | Sor al nivel de concierto | Sor op. 6 n.º 11 |
-| 9 | La gallarda | Renacimiento de concierto y divisiones | Dowland, *Frog Galliard* |
-| 10 | Armonía cromática | Lo que suena «más allá» de la tonalidad | Análisis |
-| 11 | El lied en la guitarra | Cantar una melodía de Schubert | Mertz, *Das Fischermädchen* |
-| 12 | *La Catedral*, primer movimiento | Barrios, preparación de la obra del curso 7 | *Preludio saudade* |
-| 13 | Tocar ante otros | Escenario, nervios, recuperación | Su programa |
-| 14 | Cierre | — | Programa de 15-20 minutos |
+## Repertorio del nivel
+- Barrios, *Julia Florida* (principal).
+- Tárrega, *Recuerdos de la Alhambra* (principal).
+- Bach, *Preludio* BWV 1007.
+- Villa-Lobos, *Preludio n.º 1*.
+- Sor, *Folías de España* op. 15a.
+- Narváez, *Diferencias sobre Conde Claros*.
+- Weiss, *Fantasía*.
+- Mertz, *Das Fischermädchen*.
+- Sor op. 6 n.º 9.
+- Torroba, *Madroños*.
+- Brouwer, *Danza característica*.
+- Barrios, *Preludio saudade*.
+- **Alternativas:** Scarlatti K. 322; Bach, *Allemande* BWV 996; Rodrigo, *En los trigales* (con derechos); Dowland, *Frog Galliard*; Coste op. 38 n.º 13; Legnani, *Capricho* op. 20 n.º 2.
+
+## Mapa de tramos
+| Tramo | Música | Lo nuevo |
+|---|---|---|
+| 1 | Barrios, *Julia Florida* | El mapa de una obra larga; arpegio extendido; dos contra tres |
+| 2 | *Recuerdos* (I) | Trémolo a tempo; cejillas altas; el cambio de modo en una obra grande |
+| 3 | *Recuerdos* (II) | Resistencia; memoria estructural; plan de color |
+| 4 | Bach, *Preludio* BWV 1007 | Polifonía implícita; leer un preludio de chelo |
+| 5 | Villa-Lobos, *Preludio n.º 1* | La melodía en el bajo; transportar |
+| 6 | Sor, *Folías de España* | Tema con variaciones; sexta aumentada |
+| 7 | Narváez, *Conde Claros* | Variación larga; resistencia; preludiar |
+| 8 | Weiss, *Fantasía* | Cuatro voces; armonía del Barroco tardío |
+| 9 | Mertz, *Das Fischermädchen* | El lied; sacar una melodía de oído; leer un sistema de piano |
+| 10 | Sor, op. 6 n.º 9 | Forma sonata entera; modulación lejana |
+| 11 | Torroba y Brouwer | El siglo XX; armónicos artificiales; efectos |
+| 12 | Barrios, *Preludio saudade* | Color; el programa ante otros |
+| 13 | Cierre del nivel 5 | Programa de 15-20 minutos y prueba corta |
 
 ---
 
-## Tramo 1 · Partida
-1. Comprobaciones ◇ · Una escala de tres octavas; arpegio continuo; ligados largos; trémolo medio.
-2. Repaso · BWV 999.
-3. Repaso · Narváez.
-4. Explicación (guía) · Este curso es el de las obras de concierto.
+## Tramo 1 · Barrios, *Julia Florida*
+**L1.1 · El mapa de una obra larga** {Estudio, Memoria}
+1. Explicación · Dividir en secciones; marcar lo difícil; estudiar primero lo difícil.
+2. Ejercicio · El mapa de *Julia Florida* · 𝄞.
 
-## Tramo 2 · Cómo se monta una obra larga
-**L2.1 · El mapa**
-1. Explicación · Dividir la obra en secciones y frases; marcar lo difícil; ordenar el estudio por dificultad, no por orden de compases.
-2. Ejercicio · Hacer el mapa de una obra del curso (secciones, tonalidades, lo difícil) · 𝄞 con marcas.
+**L1.2 · La barcarola** {Historia, Musicalidad}
+1. Contexto · Barrios y la barcarola, canción de góndola en 6/8.
+2. Escucha · Dos versiones · ♪.
 
-**L2.2 · Memoria estructural**
-1. Explicación · Memorizar por la forma y la armonía y tener «puntos de apoyo» para volver a entrar si algo se pierde **[Consenso]**.
+**L1.3 · El arpegio extendido** {MD, MI, Arpegios, Posiciones}
+1. Aplicación · El arpegio y los cambios de la obra, con su digitación y por qué · T + 𝄞.
+2. Ejercicio · **E-N5-01 Cambio de posición cantando** · T.
+
+**L1.4 · Dos contra tres** {Solfeo}
+1. Ritmo · Dos contra tres: palmear una mano y tocar la otra · ⏱.
+
+**L1.5 · La obra** {Repertorio}
+1. Obra · **Barrios, *Julia Florida***, por secciones · 𝄞 + T · ⏱.
+2. Comprobación del tramo.
+
+## Tramo 2 · *Recuerdos de la Alhambra* (I)
+**L2.1 · La obra y su historia** {Historia, Teoría}
+1. Contexto · Tárrega y la Alhambra; el trémolo como imagen del agua.
+2. Análisis · La menor y La mayor: el final de la cadena del cambio de modo que empezó con *Lágrima*.
+
+**L2.2 · El trémolo a tempo** {MD, Trémolo}
+1. Ejercicio · **E-N5-02 Trémolo con ráfagas** · T · ⏱. ↩ necesita E-N4-05.
+2. Ejercicio · **E-N5-03 Trémolo con cejilla** · T · ⏱.
+
+**L2.3 · La parte en La menor** {Repertorio, Posiciones}
+1. Obra · La parte en La menor · 𝄞 + T · ⏱.
+2. Aplicación · Las cejillas altas sin cortar el trémolo.
+
+## Tramo 3 · *Recuerdos de la Alhambra* (II)
+**L3.1 · La parte en La mayor** {Repertorio}
+1. Obra · La parte en La mayor; la obra entera.
+
+**L3.2 · Resistencia** {MD, Estudio}
+1. Explicación · Dónde descansa la mano dentro de una obra de trémolo.
+2. Ejercicio · La obra entera dos veces seguidas, sin tensión.
+
+**L3.3 · Memoria estructural** {Memoria}
+1. Explicación · Puntos de apoyo para volver a entrar.
 2. Ejercicio · Empezar desde cualquier punto de apoyo.
 
-## Tramo 3 · La barcarola de Barrios
-**L3.1 · Contexto**
-1. Contexto · *Julia Florida*, barcarola.
-2. Explicación · La barcarola, canción de góndola en 6/8 que se mece.
-3. Escucha · Dos intérpretes · ♪ enlaces.
+**L3.4 · El color de la obra** {Musicalidad, Color}
+1. Fíjate en… · Un plan de dinámica y de color para toda la obra.
+2. Comprobación del tramo · *Recuerdos* entera, con el trémolo regular.
 
-**L3.2 · Técnica**
-1. Aplicación · El arpegio extendido y los cambios de posición de la obra, con su digitación y por qué · T + 𝄞. ↩ necesita el arpegio de los cursos 2-4.
-2. Ejercicio · **E-C5-01 Cambio de posición cantando** · T.
+## Tramo 4 · Bach, *Preludio* BWV 1007
+**L4.1 · Polifonía implícita** {Teoría, Armonía}
+1. Explicación · Una sola línea que sugiere varias voces, como en el chelo.
+2. Análisis · Las voces escondidas y la armonía · 𝄞.
 
-**L3.3 · La obra**
-1. Obra · **O-C5-01 Barrios, *Julia Florida***, por secciones · 𝄞 + T · ⏱.
-2. Musicalidad · El mecerse del 6/8; rubato con pulso.
-3. Comprobación del tramo · La obra entera.
+**L4.2 · Leerlo** {Lectura, Repertorio}
+1. Obra · **Bach, *Preludio* BWV 1007**, desde la partitura · 𝄞 · ⏱.
 
-## Tramo 4 · Scarlatti
-**L4.1 · Contexto**
-1. Contexto · Domenico Scarlatti en Madrid y sus 555 sonatas para clave **[Dato]**, muchas con aire español.
+**L4.3 · Las escalas de la obra** {Escalas}
+1. Ejercicio · La escala de su tonalidad en la digitación de la obra · T.
 
-**L4.2 · Del clave a la guitarra**
-1. Para saber · Lo que cambia al pasar del clave a la guitarra: la tesitura, las voces y las notas que se omiten.
-2. Explicación · Transcribirla desde el original (dominio público) o tocar una edición publicada **[Decisión pendiente]**.
+## Tramo 5 · Villa-Lobos, *Preludio n.º 1*
+**L5.1 · Villa-Lobos** {Historia}
+1. Contexto · Heitor Villa-Lobos y sus *Cinco preludios*.
 
-**L4.3 · La obra**
-1. Obra · **O-C5-02 Scarlatti, Sonata K. 208** · 𝄞 + T · ⏱.
-2. Musicalidad · El *cantabile* de la K. 208.
-3. Comprobación del tramo · La sonata entera.
+**L5.2 · El pulgar que canta** {MD, Musicalidad}
+1. Cómo se hace · Melodía en el bajo, *p* apoyando, como un chelo.
+2. Obra · **Villa-Lobos, *Preludio n.º 1*** · edición publicada (con derechos) · ⏱.
 
-## Tramo 5 · El preludio de chelo
-**L5.1 · Polifonía implícita**
-1. Explicación · Una sola línea que sugiere varias voces, como hace el chelo.
-2. Análisis · Las voces escondidas del preludio · 𝄞.
+**L5.3 · Transportar** {Diapasón, Lectura}
+1. Ejercicio · Tocar una frase de la obra en otra posición y otra tonalidad.
+2. Primera vista · Doce compases en 7/8 · 𝄞.
 
-**L5.2 · La obra**
-1. Obra · **O-C5-03 Bach, *Preludio* BWV 1007** · 𝄞 + T · ⏱.
-2. Comprobación del tramo · El preludio entero.
+## Tramo 6 · Sor, *Folías de España* op. 15a
+**L6.1 · La folía** {Historia, Teoría}
+1. Contexto · La folía, un bajo y una armonía conocidos en toda Europa; pariente de la *Españoleta*.
+2. Explicación · Tema con variaciones: qué se mantiene y qué cambia.
 
-## Tramo 6 · La mazurca de concierto
-1. Obra · **O-C5-04 Tárrega, *Marieta*** · 𝄞 + T · ⏱. ↩ necesita *Adelita*.
-2. Musicalidad · El rubato: cuánto y dónde.
-3. Comprobación del tramo · *Marieta* entera.
-
-## Tramo 7 · Armónicos octavados
-**L7.1 · Cómo se hace**
-1. Cómo se hace · El índice derecho roza doce trastes por encima de la nota pisada y el anular (o el pulgar) pulsa. Lo recoge 1.º de Profesionales en La Rioja **[Dato]**.
-2. Ejercicio · **E-C5-02 Escala en armónicos octavados** · T.
-
-**L7.2 · Aplicación**
-1. Aplicación · Una melodía del curso (la A del *Romance*) con armónicos octavados.
-
-## Tramo 8 · El estudio de concierto
-1. Obra · **O-C5-05 Sor, *Estudio* op. 6 n.º 11** · 𝄞 + T · ⏱ · **[Por verificar]** tonalidad y lo que trabaja.
-2. Explicación · La forma sonata entera: exposición, desarrollo y reexposición.
-3. Análisis · La forma del estudio.
-
-## Tramo 9 · La gallarda
-1. Contexto · La gallarda y las «divisiones», repeticiones adornadas.
-2. Obra · **O-C5-06 Dowland, *The Frog Galliard*** (o *Melancholy Galliard*) · 𝄞 + T · ⏱.
-3. Ejercicio · Adornar una repetición en el estilo · 𝄞.
-
-## Tramo 10 · Armonía cromática
-1. Explicación · La napolitana y la sexta aumentada: para qué sirven y cómo suenan.
+**L6.2 · La sexta aumentada** {Armonía, Oído}
+1. Explicación · La sexta aumentada: dos voces que se abren hacia la dominante.
 2. Oído · Progresiones cromáticas · ✎ · ♪.
-3. Análisis · Dónde aparecen en las obras del curso · 𝄞.
 
-## Tramo 11 · El lied en la guitarra
-1. Contexto · Schubert, *Das Fischermädchen*, transcrita por Mertz.
+**L6.3 · La obra** {Repertorio, Musicalidad}
+1. Obra · **Sor, *Folías de España* op. 15a** · 𝄞 + T · ⏱.
+2. Fíjate en… · El orden de las variaciones como un recorrido.
+
+## Tramo 7 · Narváez, *Diferencias sobre Conde Claros*
+**L7.1 · La obra** {Repertorio, MI, Ligados}
+1. Obra · **Narváez, *Conde Claros*** · T + 𝄞 · ⏱. ↩ necesita *Guárdame las vacas*.
+2. Ejercicio · Todas las diferencias seguidas.
+
+**L7.2 · Preludiar** {Creatividad, Musicalidad}
+1. Explicación · Antes de tocar, los músicos antiguos preludiaban: unos acordes y pasajes para afinar el oído y la mano.
+2. Ejercicio · Un preludio propio en el tono de la obra.
+
+## Tramo 8 · Weiss, *Fantasía*
+**L8.1 · Weiss** {Historia}
+1. Contexto · Silvius Leopold Weiss, el gran laudista de la época de Bach.
+
+**L8.2 · Cuatro voces** {MI, MD, Lectura}
+1. Ejercicio · **E-N5-04 Cuatro voces** · 𝄞 + T.
+2. Lectura · Cuatro voces en el pentagrama · 𝄞.
+
+**L8.3 · La obra** {Repertorio, Armonía}
+1. Obra · **Weiss, *Fantasía*** · 𝄞 + T · ⏱.
+2. Análisis · La armonía del Barroco tardío · 𝄞.
+
+## Tramo 9 · Mertz, *Das Fischermädchen*
+**L9.1 · El lied** {Historia, Oído}
+1. Contexto · Schubert y su lied, en la versión para guitarra de Mertz.
 2. Escucha · El lied cantado · ♪.
-3. Obra · **O-C5-07 Mertz, *Das Fischermädchen*** · 𝄞 + T · ⏱.
-4. Oído · Sacar de oído la melodía del lied · ♪.
+3. Oído · Sacar de oído la melodía del lied.
 
-## Tramo 12 · *La Catedral*, primer movimiento
-1. Contexto · *La Catedral* de Barrios, en tres movimientos.
-2. Obra · **O-C5-08 *Preludio saudade*** · 𝄞 + T · ⏱.
-3. Para saber · Los otros dos movimientos llegan en el curso 7.
+**L9.2 · Leer un sistema de piano** {Solfeo, Lectura}
+1. Explicación · Dos pentagramas a la vez: el de clave de sol y el de clave de fa.
+2. Lectura · El acompañamiento de piano del lied, para ver qué conservó Mertz · 𝄞.
 
-## Tramo 13 · Tocar ante otros
-1. Explicación · Los nervios son normales; qué hacer con ellos (respirar y empezar despacio) y por qué ayuda haberse grabado.
-2. Ejercicio · Una pasada ante alguien o en directo grabado; seguir tras cualquier error.
-3. Ejercicio · Escucharse después: dos cosas buenas y una que mejorar.
+**L9.3 · La obra** {Repertorio, Musicalidad}
+1. Obra · **Mertz, *Das Fischermädchen*** · 𝄞 + T · ⏱.
 
-## Tramo 14 · Cierre del curso 5
-**L14.1 · Programa de 15-20 minutos**
-1. Obra · Dowland (Renacimiento).
-2. Obra · Scarlatti o Bach (Barroco).
-3. Obra · Sor (Clasicismo).
-4. Obra · *Julia Florida* o *Marieta* (Romanticismo).
-5. Memoria · Dos obras de memoria.
-6. Grabarse · El programa, grabado.
+**L9.4 · Acompañar el lied** {Conjunto, Armonía}
+1. Ejercicio · Tocar el acompañamiento del lied (los acordes de la parte de piano, reducidos) con una grabación de la voz · ♪ · ⌗.
+2. Fíjate en… · Quien acompaña respira con quien canta.
 
-**L14.2 · Prueba corta**
-1. Técnica · Armónicos octavados; arpegios extendidos; escala en la tonalidad de una obra · T · ⏱.
-2. Lectura · A primera vista hasta la XII · 𝄞.
-3. Oído · Progresiones cromáticas; una melodía de oído · ✎.
-4. Teoría · Formas; armonía cromática · ✎.
+## Tramo 10 · Sor, op. 6 n.º 9
+**L10.1 · La forma sonata, entera** {Teoría}
+1. Explicación · Exposición, desarrollo y reexposición, y el tema con variaciones y el rondó-sonata.
+2. Análisis · La forma del estudio · 𝄞.
 
----
+**L10.2 · Modulación lejana** {Armonía}
+1. Explicación · Ir a una tonalidad que no es vecina.
 
-## Fichas de los ejercicios
-**E-C5-01 · Cambio de posición cantando**
-- **Objetivo:** que un cambio largo no corte la melodía.
-- **Instrucciones:** una frase con un salto de cinco trastes; el dedo de salida sostiene hasta el último momento; la llegada, a tiempo y sin acento.
-- **Está bien cuando** la melodía suena ligada aunque la mano salte.
+**L10.3 · El estudio** {Repertorio, Escalas, Lectura}
+1. Obra · **Sor, op. 6 n.º 9** · 𝄞 + T · ⏱.
+2. Ejercicio · Escala cromática en octavas · T.
+3. Primera vista · Dieciséis compases con semicorcheas · 𝄞.
 
-**E-C5-02 · Escala en armónicos octavados**
-- **Instrucciones:** Do mayor en una octava; *i* roza en el traste +12 y *a* pulsa; ♩=50.
-- **Está bien cuando** cada armónico suena claro y a tiempo.
+## Tramo 11 · Torroba y Brouwer
+**L11.1 · El siglo XX español** {Historia, Repertorio}
+1. Contexto · Torroba y la guitarra que escribió para Segovia.
+2. Obra · **Torroba, *Madroños*** · edición publicada (con derechos) · ⏱.
 
-## Fichas de las obras
-| Ficha | Obra | Nivel **[Dato]** | Papel | Técnicas | Teoría | Derechos | Después |
-|---|---|---|---|---|---|---|---|
-| O-C5-01 | Barrios, *Julia Florida* | RCM 8 · EPM 4 · La Rioja EP 4 | Principal | Arpegio extendido, cambios | 6/8, rubato | DP en España desde 2025 **[Por verificar]** | *La Catedral* (curso 7) |
-| O-C5-02 | Scarlatti, Sonata K. 208 | RCM 8 · EPM 4 · La Rioja EP 3 | Barroco | Dos voces | Forma binaria de sonata | El original, DP; transcripciones con derechos | K. 322 (alternativa) |
-| O-C5-03 | Bach, *Preludio* BWV 1007 | RCM 8 | Barroco | Polifonía implícita | Armonía | DP (el original) | BWV 998 (curso 7) |
-| O-C5-04 | Tárrega, *Marieta* | RCM 8 · EPM 4 · La Rioja EP 2 | Romanticismo | Rubato, portamento | — | DP | *Capricho árabe* (curso 7) |
-| O-C5-05 | Sor, op. 6 n.º 11 | RCM 8 | Clasicismo | **[Por verificar]** | Forma sonata | DP | *Folías* (curso 6) |
-| O-C5-06 | Dowland, *The Frog Galliard* / *Melancholy Galliard* | RCM 8 · La Rioja EP 2 | Renacimiento | Divisiones | Gallarda | DP | Dowland, *Fantasía n.º 7* (curso 7) |
-| O-C5-07 | Schubert-Mertz, *Das Fischermädchen* | RCM 8 | Romanticismo (lied) | Canto | — | DP | — |
-| O-C5-08 | Barrios, *Preludio saudade* (*La Catedral*) | RCM 8 | Siglo XX | Arpegio, color | — | DP en España **[Por verificar]** | *La Catedral* entera (curso 7) |
-| Alternativas | Bach, *Allemande* BWV 996 y *Giga* BWV 1009; Scarlatti K. 322; Sor op. 35 n.º 16 y *Les Adieux*; Carcassi op. 60 n.º 23; Coste op. 38 n.º 13; Legnani, *Capricho* op. 20 n.º 2; Torroba, *Sonatina* (2.º mov.); Villa-Lobos, *Preludio n.º 4* (con derechos) | RCM 8 · EPM 4 | — | — | — | — | — |
+**L11.2 · Armónicos artificiales** {Color, MD}
+1. Cómo se hace · La izquierda pisa y la derecha toca el armónico.
+2. Ejercicio · Un arpegio con armónicos artificiales · T.
+
+**L11.3 · Brouwer** {Repertorio, MD, Tablatura}
+1. Obra · **Brouwer, *Danza característica*** · edición publicada (con derechos) · ⏱.
+2. Tablatura · Anotar en tablatura la digitación propia de un pasaje.
+
+## Tramo 12 · Barrios, *Preludio saudade*
+**L12.1 · La obra** {Repertorio, Color}
+1. Contexto · El primer movimiento de *La Catedral*; los otros dos, en el nivel 7.
+2. Obra · **Barrios, *Preludio saudade*** · 𝄞 + T · ⏱.
+
+**L12.2 · Tocar ante otros** {Memoria, Musicalidad}
+1. Explicación · Los nervios, respirar, empezar despacio.
+2. Ejercicio · Una pasada ante alguien, o en directo grabada; escucharse después: dos cosas buenas y una que mejorar.
+
+## Tramo 13 · Cierre del nivel 5
+**L13.1 · El programa de 15-20 minutos** {Repertorio, Memoria}
+1. Obra · Narváez o Weiss.
+2. Obra · Bach BWV 1007 o las *Folías*.
+3. Obra · *Recuerdos*, de memoria.
+4. Obra · *Julia Florida* o Villa-Lobos.
+5. Ante otros o grabado.
+
+**L13.2 · La prueba corta** {Escalas, Trémolo, Lectura, Oído, Teoría}
+1. Técnica · Cromática en octavas; trémolo; armónicos artificiales · T · ⏱.
+2. Primera vista · Dieciséis compases · 𝄞.
+3. Oído · Describir una obra escuchada: textura, estructura, carácter y estilo · ♪.
+4. Teoría · Forma sonata y variaciones · ✎.
+
+**L13.3 · Lo que viene** {Repertorio}
+1. Explicación (guía) · El nivel 6: obras mayores y las primeras digitaciones propias.
