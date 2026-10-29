@@ -6,7 +6,7 @@ created: 2026-10-29
 ---
 # Mapa de progresión y matriz de cobertura
 
-Anexo del [[CURRICULO-MAESTRO]]. Cómo evoluciona cada área del nivel 1 al 7.
+Anexo del [[CURRICULO-MAESTRO (v2)]]. Cómo evoluciona cada área del nivel 1 al 7.
 
 Ninguna técnica pertenece a un solo curso: cada una tiene un escalón en cada nivel donde tiene sentido. Las referencias del ABRSM son del temario de 2019 **[Dato]**. Las del conservatorio son de La Rioja (2025-26) **[Dato]**.
 

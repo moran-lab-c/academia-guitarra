@@ -2,11 +2,11 @@
 status: active
 project: personal
 type: reference
-created: 2026-10-29
+created: 2026-10-30
 ---
 # Fichas de los ejercicios
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 2).
+Anexo del [[CURRICULO-MAESTRO]] (versión 3).
 
 **Qué lleva cada ficha:**
 - objetivo y técnica o concepto;
@@ -18,46 +18,49 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 
 «(app)» quiere decir que el ejercicio ya existe en la academia, con su notación comprobada nota a nota. Las fuentes de los ejercicios adaptados van en su ficha.
 
+## Lo que cambia respecto a la versión 2
+| Versión 2 | Versión 3 | Por qué |
+|---|---|---|
+| E-N3-01 Carlevaro 1-5 | **E-N2-09** Carlevaro, fórmulas 1-15 | La Rioja las reparte en los tres trimestres de 1.º de Profesionales (nivel 2) **[Dato]** |
+| E-N4-02 Escala en campanela | **E-N3-08** | Baja con los *Canarios*, que La Rioja pone en 2.º de Profesionales |
+| E-N5-03 Trémolo con cejilla | **E-N4-07** | Baja con la parte en La menor de *Recuerdos*, que ahora empieza en el nivel 4 |
+| — | **E-N1-22** Acompañar una melodía | La Rioja pide acompañar canciones con acordes desde 3.º de Elementales **[Dato]** |
+| — | **E-N1-23** La cejilla del V | La cejilla empieza en 3.º de Elementales en La Rioja **[Dato]**; en la versión 2 llegaba tarde |
+| — | **E-N3-07** Ráfagas cortas | La velocidad no puede aparecer de golpe en el nivel 4 |
+
+Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-03) no se reutilizan, para que ningún código cambie de significado.
+
 ## Nivel 1
 **E-N1-01 · Notas largas apoyando**
-- **Técnica:** apoyando.
-- **Dificultad:** 1.
+- **Técnica:** apoyando. **Dificultad:** 1.
 - **Instrucciones:** 1.ª, 2.ª y 3.ª al aire; negras a ♩=60; i-m alternos.
-- **Por qué existe:** el apoyando de la melodía.
-- **Prepara:** E-N1-04 y *Lágrima*.
+- **Por qué existe:** el apoyando de la melodía. **Prepara:** E-N1-04 y *Lágrima*.
 - **Errores frecuentes:** sonido metálico; *m* más fuerte que *i*.
 - **Está bien cuando** con los ojos cerrados no se sabe qué dedo pulsa.
 
 **E-N1-02 · Preparar y soltar**
-- **Técnica:** preparación.
-- **Dificultad:** 1.
+- **Técnica:** preparación. **Dificultad:** 1.
 - **Instrucciones:** p-i-m-a al aire. Primero se preparan los cuatro dedos y se pulsa uno a uno; después, se prepara cada uno justo antes del suyo.
-- **Prepara:** el arpegio clásico.
-- **Errores frecuentes:** el clic de la uña.
+- **Prepara:** el arpegio clásico. **Errores frecuentes:** el clic de la uña.
 - **Está bien cuando** solo se oyen las notas.
 
 **E-N1-03 · Tres colores**
-- **Técnica:** tasto, normal y ponticello.
-- **Dificultad:** 1.
+- **Técnica:** tasto, normal y ponticello. **Dificultad:** 1.
 - **Instrucciones:** una frase de la escala de Do, en cada color, al mismo volumen.
-- **Prepara:** la musicalidad y el color de los niveles 2-3.
+- **Prepara:** el color de todos los niveles.
 - **Está bien cuando** las tres versiones suenan claramente distintas.
 
 **E-N1-04 · Melodía y bajo a la vez**
-- **Técnica:** *m* apoyando y *p* tirando.
-- **Dificultad:** 2.
+- **Técnica:** *m* apoyando y *p* tirando. **Dificultad:** 2.
 - **Instrucciones:** cuerdas al aire; después Mi–Fa♯–Sol♯ sobre el bajo Mi; ♩=60.
-- **Prepara:** Sor y *Lágrima*.
-- **Errores frecuentes:** el pulgar tapa la melodía.
+- **Prepara:** Sor y *Lágrima*. **Errores frecuentes:** el pulgar tapa la melodía.
 - **Está bien cuando** la melodía está por encima sin que el bajo desaparezca.
 
 **E-N1-05 · El dedo guía en una cuerda**
-- **Técnica:** traslado con dedo guía.
-- **Dificultad:** 2.
+- **Técnica:** traslado con dedo guía. **Dificultad:** 2.
 - **Instrucciones:** el dedo 1 en la 2.ª cuerda, trastes 2 → 4 → 7 y vuelta; después con los dedos 2 y 3; ♩=50.
 - **Fuente:** los dedos guía de Duncan, recogidos por Niedt.
-- **Prepara:** *Lágrima* A, el *Romance* y *Adelita*.
-- **Errores frecuentes:** chirrido; llegar tarde.
+- **Prepara:** *Lágrima* A, el *Romance* y *Adelita*. **Errores frecuentes:** chirrido; llegar tarde.
 - **Está bien cuando** el cambio no se oye.
 
 **E-N1-06 · Mi mayor en dos octavas** (app)
@@ -69,14 +72,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 
 **E-N1-08 · Selección de los 120 de Giuliani (op. 1)**
 - **Instrucciones:** las fórmulas p-i-m, p-i-m-a, p-a-m-i y p-i-m-a-m-i sobre Do y Sol7, una nueva por semana.
-- **Fuente:** La Rioja usa el op. 1 en 2.º-4.º de Elementales **[Dato]**.
+- **Fuente:** La Rioja usa el op. 1 en Elementales **[Dato]**.
 - **Está bien cuando** los cuatro dedos suenan igual a ♩=72 en corcheas.
 - **[Por verificar]:** los números exactos.
 
 **E-N1-09 · Nota destacada** (app)
 - **Cambio:** donde la 2.ª cuerda tiene que seguir sonando, la *a* destaca tirando (P-23).
 
-**E-N1-10 · Mi menor en tres formas** (nueva)
+**E-N1-10 · Mi menor en tres formas**
 - **Instrucciones:** natural, armónica y melódica, dos octavas; decir qué notas cambian.
 - **Está bien cuando** sale sin pararse en el Re♯ ni en el Do♯.
 
@@ -90,7 +93,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 
 **E-N1-13 · La escalera de cruces**
 - **Instrucciones:** dos notas por cuerda, de la 6.ª a la 1.ª y vuelta; con i-m y con m-a; empezar por cada dedo.
-- **Prepara:** la velocidad del nivel 4.
+- **Prepara:** las ráfagas del nivel 3.
 - **Está bien cuando** suena igual empiece por el dedo que empiece.
 
 **E-N1-14 · Ligados con dedo fijo**
@@ -98,23 +101,37 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 - **Prepara:** el mordente y el trino.
 - **Está bien cuando** las dos notas suenan igual y el dedo fijo no se mueve.
 
-**E-N1-15 · Trémolo: primer contacto** (nueva)
+**E-N1-15 · Trémolo: primer contacto**
 - **Instrucciones:** *p* en la 5.ª al aire, a-m-i en la 1.ª al aire, semicorcheas a ♩=40.
 - **Por qué existe:** él ya hace el trémolo flamenco; empezar el clásico pronto aprovecha esa base sin mezclar las técnicas.
 - **Está bien cuando** las tres notas suenan iguales, aunque sea lento.
 
-**E-N1-16 · Escala en sextas** (nueva)
+**E-N1-16 · Escala en sextas**
 - **Instrucciones:** Fa mayor en sextas, una octava, juntas y separadas.
 - **Fuente:** el grado 3 del ABRSM **[Dato]**.
 - **Está bien cuando** las dos notas de cada sexta suenan a la vez y limpias.
 
-**E-N1-17 · Improvisar sobre I-IV-V** (nueva)
+**E-N1-17 · Improvisar sobre I-IV-V**
 - **Instrucciones:** sobre una pista de Mi–La–Si7–Mi, una melodía con las notas de la escala de Mi; terminar las frases en Mi o en Si y escuchar la diferencia.
 - **Por qué existe:** oír la función de cada acorde desde dentro.
 - **Está bien cuando** sus frases suenan a pregunta y a respuesta donde él quiere.
 
 **E-N1-18 · Apagar voces** (app) · **E-N1-19 · Mordente** (app) · **E-N1-20 · Hemiolia en 6/8 y en 3/4** (app; la de 3/4 se añadió tras P-4) · **E-N1-21 · Puntillo y semicorcheas** (app)
 - Con sus fichas actuales.
+
+**E-N1-22 · Acompañar una melodía** (nueva)
+- **Técnica:** acordes I, IV y V; rasgueado sencillo. **Dificultad:** 2.
+- **Instrucciones:** la app toca una canción popular de dominio público; él elige y toca el acorde de cada compás, primero en negras y después rasgueando.
+- **Fuente:** La Rioja pide en 3.º de Elementales tocar canciones acompañándose de acordes mayores y menores **[Dato]**.
+- **Por qué existe:** la armonía se oye desde dentro y se aprende a tocar con otro.
+- **Está bien cuando** elige el acorde a tiempo y no pierde la melodía.
+
+**E-N1-23 · La cejilla del V** (nueva)
+- **Técnica:** cejilla completa. **Dificultad:** 2.
+- **Instrucciones:** La mayor con la forma de Mi en el V; dos tiempos y soltar; después, La–Re–Mi7–La.
+- **Fuente:** La Rioja empieza la cejilla en 3.º de Elementales **[Dato]**; se empieza en el V porque allí las cuerdas ceden **[Consenso]**.
+- **Prepara:** E-N2-01. **Errores frecuentes:** apretar con el pulgar; el dedo doblado.
+- **Está bien cuando** suenan las seis cuerdas dos veces seguidas sin dolor.
 
 ## Nivel 2
 **E-N2-01 · Cejilla que respira**
@@ -129,9 +146,9 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 - **Instrucciones:** a-m-i sobre Mi m y Si7 con *p*; la *a* f y el resto p; ♩=50.
 - **Está bien cuando** la melodía se canta sola.
 
-**E-N2-04 · Tres traslados** (nueva)
+**E-N2-04 · Tres traslados**
 - **Instrucciones:** el mismo cambio de posición hecho de tres maneras: con un dedo que sustituye a otro en la misma nota, con un dedo guía que desliza y con un salto, soltando antes de moverse.
-- **Fuente:** las tres maneras de trasladarse de la izquierda que trabaja el cuaderno 3 de Carlevaro **[Dato con matices]**.
+- **Fuente:** las tres maneras de trasladarse de la izquierda del cuaderno 3 de Carlevaro **[Dato con matices]**.
 - **Está bien cuando** sabe elegir la manera que deja la frase más ligada.
 
 **E-N2-05 · Trémolo con bajo que cambia**
@@ -142,21 +159,22 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 - **Instrucciones:** 1-2-1, 1-3-1, ascendente y descendente seguidos; también con extensión.
 - **Está bien cuando** las tres notas suenan igual.
 
-**E-N2-07 · Variar una melodía** (nueva)
+**E-N2-07 · Variar una melodía**
 - **Instrucciones:** cuatro compases de una melodía conocida, variados de tres maneras: con otro ritmo, con adornos y en otra octava.
 - **Prepara:** las diferencias del nivel 4.
 - **Está bien cuando** la melodía se reconoce en las tres versiones.
 
 **E-N2-08 · Armónicos naturales**
-- **Instrucciones:** en V, VII, XII y XIX, en las seis cuerdas; después, una melodía.
+- **Instrucciones:** en IV, V, VII, IX, XII y XIX, en las seis cuerdas; después, una melodía.
 - **Está bien cuando** suenan claros y se sostienen.
 
-## Nivel 3
-**E-N3-01 · Fórmulas de Carlevaro 1-5**
-- **Fuente:** La Rioja las usa en 1.º de Profesionales **[Dato]**.
+**E-N2-09 · Carlevaro, fórmulas 1-15** (antes E-N3-01)
+- **Fuente:** La Rioja las reparte así en 1.º de Profesionales: 1-5, 6-10 y 11-15, una tanda por trimestre **[Dato]**.
 - **Instrucciones:** según el cuaderno 2; lento, con conciencia de cada movimiento.
-- **[Por verificar]:** la numeración en el cuaderno.
+- **[Por verificar]:** que la numeración coincida con la edición del cuaderno.
+- **Está bien cuando** cada fórmula suena igual en todas sus notas a ♩=60.
 
+## Nivel 3
 **E-N3-02 · Portamento expresivo**
 - **Instrucciones:** dos notas a distancia de 3.ª y de 5.ª en una cuerda, con el dedo de llegada y con el de salida.
 - **Está bien cuando** suena como una voz que liga.
@@ -173,23 +191,29 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 - **Instrucciones:** Do mayor en una octava; *i* roza en el traste +12 y *a* pulsa; ♩=50.
 - **Está bien cuando** cada armónico suena claro y a tiempo.
 
-**E-N3-06 · Trémolo sobre I-IV-V-I** (nueva)
-- **Instrucciones:** trémolo con la melodía en la 1.ª y los bajos de la progresión; cambiar de acorde sin cortar.
+**E-N3-06 · Trémolo sobre I-IV-V-I**
+- **Instrucciones:** trémolo con la melodía en la 1.ª y los bajos de la progresión; primero solo I-V, después la progresión entera; cambiar de acorde sin cortar.
 - **Está bien cuando** los cambios de acorde no se notan en el trémolo.
+
+**E-N3-07 · Ráfagas cortas** (nueva)
+- **Técnica:** velocidad. **Dificultad:** 2.
+- **Instrucciones:** grupos de cuatro notas rápidos y parar; en escalas con i-m y en arpegios; después grupos de ocho.
+- **Fuente:** la técnica de ráfagas de los métodos de técnica, como *Pumping Nylon* de Tennant **[Consenso]**.
+- **Prepara:** E-N4-03.
+- **Está bien cuando** la ráfaga sale limpia y la mano sigue suelta al parar.
+
+**E-N3-08 · Escala en campanela** (antes E-N4-02)
+- **Instrucciones:** Re mayor con cada nota en una cuerda distinta.
+- **Está bien cuando** las notas se solapan como un arpa.
 
 ## Nivel 4
 **E-N4-01 · Cambiar de acorde sin cortar**
 - **Instrucciones:** la figura del BWV 999 sobre dos acordes, anticipando los dedos.
 - **Está bien cuando** no hay hueco entre compases.
 
-**E-N4-02 · Escala en campanela**
-- **Instrucciones:** Re mayor con cada nota en una cuerda distinta.
-- **Está bien cuando** las notas se solapan como un arpa.
-
 **E-N4-03 · Ráfagas**
-- **Instrucciones:** grupos de 4 u 8 notas rápidos y parar; después encadenar dos.
-- **Fuente:** la técnica de ráfagas de los métodos de técnica, como *Pumping Nylon* de Tennant **[Consenso]**.
-- **Está bien cuando** la ráfaga sale limpia y la mano sigue suelta.
+- **Instrucciones:** grupos largos (de ocho a dieciséis notas) y encadenar dos o tres. ↩ necesita E-N3-07.
+- **Está bien cuando** la ráfaga encadenada sale tan limpia como la corta.
 
 **E-N4-04 · Escalas con ritmos**
 - **Instrucciones:** la misma escala con puntillos largo-corto, corto-largo y en grupos de tres.
@@ -202,6 +226,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 - **Instrucciones:** 1-2-4, 4-2-1 y 1-2-3-4.
 - **Está bien cuando** todas las notas tienen el mismo volumen.
 
+**E-N4-07 · Trémolo con cejilla** (antes E-N5-03)
+- **Instrucciones:** sobre acordes con cejilla en el V y el VII, cambiando cada compás; lento en el nivel 4, a tempo en el 5.
+- **Está bien cuando** el cambio de cejilla no corta el trémolo.
+
 ## Nivel 5
 **E-N5-01 · Cambio de posición cantando**
 - **Instrucciones:** un salto de cinco trastes; el dedo de salida sostiene hasta el final.
@@ -210,10 +238,6 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 2).
 **E-N5-02 · Trémolo con ráfagas**
 - **Instrucciones:** dos compases rápidos y uno lento; encadenar hasta cuatro.
 - **Está bien cuando** el rápido es tan regular como el lento.
-
-**E-N5-03 · Trémolo con cejilla**
-- **Instrucciones:** sobre acordes con cejilla en el V y el VII, cambiando cada compás.
-- **Está bien cuando** el cambio de cejilla no corta el trémolo.
 
 **E-N5-04 · Cuatro voces**
 - **Instrucciones:** un coral sencillo a cuatro voces; destacar una voz cada vez.
