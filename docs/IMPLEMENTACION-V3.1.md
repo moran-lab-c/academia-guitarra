@@ -48,4 +48,4 @@ Qué se ha construido sobre las Fases 1-3 y qué falta. La fuente de verdad del 
 | **Audio** | Los pasos de escucha no traen audio ni enlace todavía |
 | **Preguntas** | 40 pasos las tienen; en los demás con ✎ se ve el texto y él se comprueba solo. No se inventan |
 | **Por verificar** | Todo sigue marcado hasta comprobarlo con la partitura |
-| **Copia de la vault** | `08 - Guitarra/Academia/app` sigue en la Fase 2: se actualiza con su permiso |
+| **Copia de la vault** | Actualizada el 30/10/2026: `08 - Guitarra/Academia/app` sigue la rama `revision-fase-2`; se pone al día con `git pull` |
