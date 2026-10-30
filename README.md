@@ -4,6 +4,26 @@ App local y personal para aprender guitarra clásica: Curso → Tramo → Lecci�
 
 **Rama de trabajo:** `revision-fase-2`. Los datos personales de práctica no están en este repositorio.
 
+## Cómo se ve
+Capturas reales de la app, con datos de prueba y un progreso de ejemplo. Cada enlace abre la imagen sin iniciar sesión.
+
+- [Entrada al nivel](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/01-entrada-nivel.png)
+- [Nivel con «Continuar», tramos y lecciones](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/02-nivel-continuar.png)
+- [Progreso](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/03-progreso.png)
+- [Biblioteca de obras](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/04-obras.png)
+- [Página de una obra: *Lágrima*](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/05-obra.png)
+- [Paso con acordes y tablatura](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/06-paso-acordes-y-tablatura.png)
+- [Paso de ejercicio sin notación todavía](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/07-paso-ejercicio.png)
+- [Paso con partitura y tablatura](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/08-paso-partitura-y-tablatura.png)
+- [Paso de oído con preguntas](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/09-paso-oido.png)
+- [Paso con consejo del profesor](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/10-paso-consejo-del-profesor.png)
+- [Repaso](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/11-repaso.png)
+- [Otro nivel: Nivel 5](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/12-nivel-5.png)
+
+![Nivel con «Continuar»](docs/capturas/02-nivel-continuar.png)
+![Paso con acordes y tablatura](docs/capturas/06-paso-acordes-y-tablatura.png)
+![Paso con partitura y tablatura](docs/capturas/08-paso-partitura-y-tablatura.png)
+
 ## Para leerlo sin descargar nada
 Todos estos enlaces son texto plano y se abren sin iniciar sesión.
 
