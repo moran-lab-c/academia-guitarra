@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Fichas de los ejercicios
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3).
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1).
 
 **Qué lleva cada ficha:**
 - objetivo y técnica o concepto;
@@ -18,17 +18,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3).
 
 «(app)» quiere decir que el ejercicio ya existe en la academia, con su notación comprobada nota a nota. Las fuentes de los ejercicios adaptados van en su ficha.
 
-## Lo que cambia respecto a la versión 2
-| Versión 2 | Versión 3 | Por qué |
-|---|---|---|
-| E-N3-01 Carlevaro 1-5 | **E-N2-09** Carlevaro, fórmulas 1-15 | La Rioja las reparte en los tres trimestres de 1.º de Profesionales (nivel 2) **[Dato]** |
-| E-N4-02 Escala en campanela | **E-N3-08** | Baja con los *Canarios*, que La Rioja pone en 2.º de Profesionales |
-| E-N5-03 Trémolo con cejilla | **E-N4-07** | Baja con la parte en La menor de *Recuerdos*, que ahora empieza en el nivel 4 |
-| — | **E-N1-22** Acompañar una melodía | La Rioja pide acompañar canciones con acordes desde 3.º de Elementales **[Dato]** |
-| — | **E-N1-23** La cejilla del V | La cejilla empieza en 3.º de Elementales en La Rioja **[Dato]**; en la versión 2 llegaba tarde |
-| — | **E-N3-07** Ráfagas cortas | La velocidad no puede aparecer de golpe en el nivel 4 |
-
-Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-03) no se reutilizan, para que ningún código cambie de significado.
+**Los tempos de las fichas son orientativos: los he puesto yo [Decisión].** Ninguno procede de una fuente, y el tempo es un dato, no un requisito. Los números que no se usan (E-N3-01, E-N4-02 y E-N5-03) no se reutilizan.
 
 ## Nivel 1
 **E-N1-01 · Notas largas apoyando**
@@ -165,14 +155,21 @@ Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-
 - **Está bien cuando** la melodía se reconoce en las tres versiones.
 
 **E-N2-08 · Armónicos naturales**
-- **Instrucciones:** en IV, V, VII, IX, XII y XIX, en las seis cuerdas; después, una melodía.
+- **Instrucciones:** los nuevos, en IV, IX y XIX, junto a los de V, VII y XII, en las seis cuerdas; después, una melodía.
 - **Está bien cuando** suenan claros y se sostienen.
 
-**E-N2-09 · Carlevaro, fórmulas 1-15** (antes E-N3-01)
+**E-N2-09 · Carlevaro, fórmulas 1-15**
 - **Fuente:** La Rioja las reparte así en 1.º de Profesionales: 1-5, 6-10 y 11-15, una tanda por trimestre **[Dato]**.
 - **Instrucciones:** según el cuaderno 2; lento, con conciencia de cada movimiento.
 - **[Por verificar]:** que la numeración coincida con la edición del cuaderno.
 - **Está bien cuando** cada fórmula suena igual en todas sus notas a ♩=60.
+
+**E-N2-10 · Una melodía en trémolo**
+- **Técnica:** trémolo con melodía. **Dificultad:** 3.
+- **Instrucciones:** una melodía de ocho compases escrita para el ejercicio, en la 1.ª y la 2.ª cuerda, con el bajo de cada acorde; lenta.
+- **Por qué existe:** paso entre el trémolo sobre cuerdas al aire y *Recuerdos*.
+- **Prepara:** E-N3-06.
+- **Está bien cuando** se oye una melodía, no tres notas rápidas.
 
 ## Nivel 3
 **E-N3-02 · Portamento expresivo**
@@ -185,7 +182,7 @@ Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-
 
 **E-N3-04 · Trino medido**
 - **Instrucciones:** en semicorcheas y en fusas, con el metrónomo, con cada par de dedos.
-- **Está bien cuando** el trino es regular a ♩=60 en fusas.
+- **Está bien cuando** el trino es regular, primero a ♩=50 en semicorcheas y subiendo.
 
 **E-N3-05 · Armónicos octavados**
 - **Instrucciones:** Do mayor en una octava; *i* roza en el traste +12 y *a* pulsa; ♩=50.
@@ -202,7 +199,7 @@ Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-
 - **Prepara:** E-N4-03.
 - **Está bien cuando** la ráfaga sale limpia y la mano sigue suelta al parar.
 
-**E-N3-08 · Escala en campanela** (antes E-N4-02)
+**E-N3-08 · Escala en campanela**
 - **Instrucciones:** Re mayor con cada nota en una cuerda distinta.
 - **Está bien cuando** las notas se solapan como un arpa.
 
@@ -222,11 +219,11 @@ Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-
 **E-N4-05 · Trémolo con bajo que se mueve, con ráfagas**
 - **Está bien cuando** sigue regular al subir el tempo.
 
-**E-N4-06 · Ligados de tres y cuatro notas**
-- **Instrucciones:** 1-2-4, 4-2-1 y 1-2-3-4.
-- **Está bien cuando** todas las notas tienen el mismo volumen.
+**E-N4-06 · Ligados largos y rápidos**
+- **Instrucciones:** 1-2-4, 4-2-1 y 1-2-3-4, ya conocidos del nivel 3, ahora con ráfagas y encadenados por las cuerdas.
+- **Está bien cuando** todas las notas tienen el mismo volumen también deprisa.
 
-**E-N4-07 · Trémolo con cejilla** (antes E-N5-03)
+**E-N4-07 · Trémolo con cejilla**
 - **Instrucciones:** sobre acordes con cejilla en el V y el VII, cambiando cada compás; lento en el nivel 4, a tempo en el 5.
 - **Está bien cuando** el cambio de cejilla no corta el trémolo.
 
@@ -235,9 +232,9 @@ Los demás conservan su número. Los huecos que quedan (E-N3-01, E-N4-02 y E-N5-
 - **Instrucciones:** un salto de cinco trastes; el dedo de salida sostiene hasta el final.
 - **Está bien cuando** la melodía suena ligada aunque la mano salte.
 
-**E-N5-02 · Trémolo con ráfagas**
-- **Instrucciones:** dos compases rápidos y uno lento; encadenar hasta cuatro.
-- **Está bien cuando** el rápido es tan regular como el lento.
+**E-N5-02 · Trémolo sostenido**
+- **Instrucciones:** a tempo de obra, sin ráfagas, un minuto seguido y después dos, con la mano suelta. ↩ necesita E-N4-05.
+- **Está bien cuando** el último compás es tan regular como el primero.
 
 **E-N5-04 · Cuatro voces**
 - **Instrucciones:** un coral sencillo a cuatro voces; destacar una voz cada vez.

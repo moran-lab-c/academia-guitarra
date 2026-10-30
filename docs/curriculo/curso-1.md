@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Nivel 1
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La leyenda de los pasos está en el maestro, apartado 5.
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** La leyenda de los pasos está en el maestro, apartado 5.
 
 **Cómo se lee:**
 - Cada lección lleva entre llaves las áreas que trabaja. Con ellas se genera la matriz de [[cobertura]]; el alumno no las ve.
@@ -14,7 +14,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 - Los ejercicios con código (E-N1-nn) tienen ficha en [[ejercicios]], y las obras, en [[repertorio]].
 
 ## Ficha del nivel
-- **Equivale a:** RCM 4 · ABRSM 4 · 4.º de Elementales **[Estimación]**.
+- **Se parece a:** RCM 4 · 4.º de Elementales **[Estimación]**. Es una referencia para calibrar; esta academia no prepara para ningún examen.
 - **Objetivo general:** que toque, lea, entienda y escuche lo mismo que toca. Al terminar, toca con sonido clásico y la melodía por encima. Se mueve por la 1.ª posición y sube con dedo guía. Lee en 1.ª posición. Sabe qué acordes y qué escala hay debajo de cada obra y los reconoce al oído. Toca un recital corto de varias épocas, con una obra de memoria.
 - **Entrada:** su nivel real, que es desigual.
   - Técnica y repertorio: entre RCM 3 y 4 (arpegio, ligados, apoyando y acordes abiertos, por tablatura).
@@ -22,15 +22,19 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
   - Teoría y oído: a medias.
   - No se empieza desde cero: lo que ya sabe se comprueba con pasos ◇ y no se repite.
 - **Salida:** la de la última columna de la matriz.
+- **Para qué es este nivel:** equilibrar. Su técnica va por delante de la lectura, la teoría y el oído. Las manos avanzan con las obras, a menudo por tablatura, y a la vez entra en cada tramo una dosis pequeña de lectura, de teoría y de oído, sobre esa misma música. Lo que ya sabe se comprueba y no se repite; pero si el nivel pide una versión mejor (el arpegio clásico, el apoyando con sonido igual, el trémolo p-a-m-i), esa versión se enseña.
+
+## *Lágrima* y las obras equivalentes
+*Lágrima* es una obra nueva para él y la principal del nivel, por lo que enseña: melodía acompañada, dedo guía, media cejilla, Mi mayor y Mi menor, A-B-A y memoria. **No es un examen.** Si ya demuestra esas competencias con otra obra de su nivel (de este nivel o de su profesor), el recital la admite en su lugar, y *Lágrima* queda como repertorio para cuando quiera **[Decisión]**. Lo que se reconoce es la competencia, no el título de la obra.
 
 ## Matriz del nivel 1
 | Área | Qué sabe al entrar | Qué desarrolla | Qué domina al salir |
 |---|---|---|---|
-| Postura y ergonomía | Postura de guitarra flamenca | Postura clásica con soporte o banqueta; cuatro apoyos; uñas; presión justa | Toca 20 minutos sin tensión en hombros ni pulgar |
+| Postura y ergonomía | Postura de guitarra flamenca | Postura clásica con soporte o banqueta; cuatro apoyos; uñas; presión justa | Toca un recital corto sin tensión en hombros ni pulgar |
 | Sonido | Sonido de tablatura, sin intención | Apoyando y tirando con el mismo sonido; preparación; tasto, normal y ponticello | Una nota larga con sonido redondo; elige el color de una frase |
 | Mano derecha | Arpegio, apoyando, pulgar | Alternancia i-m y m-a con cruces; fórmulas de Giuliani; nota destacada; acordes plaqué; rasgueado simple; primer trémolo | Arpegio con la melodía destacada a ♩=72 en corcheas |
 | Mano izquierda | Ligados y acordes abiertos | Dedo fijo, dedo guía y dedo común; preparar los dedos; apagar voces | Cambia de acorde y de posición sin cortar el sonido |
-| Escalas | Alguna escala por tablatura | Do, Sol, Re, La, Mi y Fa mayor; La, Mi y Re menor en tres formas; cromática; sextas | Las escalas mayores del nivel en dos octavas a una velocidad propia anotada |
+| Escalas | Alguna escala por tablatura | Do, Sol, Re, La, Mi y Fa mayor; La, Mi y Re menor en tres formas; cromática; sextas | Mi, Fa y Sol mayor en dos octavas en 1.ª posición; Do, Re y La con un cambio; estables, a un tempo cómodo |
 | Arpegios | Fórmulas sueltas | Triadas de una y dos octavas; acordes partidos | Triadas de Mi, Sol y La, dos octavas |
 | Ligados y ornamentos | Ligados de dos notas | Ligados con dedo fijo; mordente; ligado y ligadura | Ligados iguales de volumen; el mordente de la *Españoleta* a tempo |
 | Acordes y cejilla | Acordes abiertos | Mayores, menores y séptima de dominante; media cejilla; la primera cejilla completa en el V | Media cejilla limpia; una cejilla completa breve en el V |
@@ -39,16 +43,16 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 | Armónicos y otros recursos | — | Armónicos naturales en XII, VII y V; color | Los armónicos de su *Estudio en Mi menor* claros |
 | Polifonía | — | Melodía y bajo; dos voces escritas | Dos planos con volúmenes distintos |
 | Lectura y primera vista | Notas sueltas | 1.ª posición en las seis cuerdas; sostenidos y un bemol; una y dos voces; la primera obra leída | Lee a primera vista 8 compases fáciles en 1.ª posición |
-| Tablatura | La lee sin ritmo | Tablatura con ritmo; sus símbolos; la cifra de Sanz | Pasa una frase de tablatura a partitura |
-| Ritmo | Pulso intuitivo | Figuras hasta la semicorchea; puntillo; 2/4, 3/4, 4/4 y 6/8; síncopa; hemiolia | Cuenta en voz alta mientras toca |
+| Tablatura | La lee sin ritmo | Tablatura con ritmo; sus símbolos; la cifra de Sanz | Lee tablatura con ritmo y reconoce sus símbolos |
+| Ritmo | Pulso intuitivo | Figuras hasta la semicorchea; puntillo; 2/4, 3/4, 4/4 y 6/8; hemiolia | Cuenta en voz alta mientras toca |
 | Solfeo | — | Cantar 1-3-5; ecos de dos compases; cantar una melodía antes de tocarla | Canta la melodía de *Lágrima* afinada |
 | Teoría | A medias | Tono y semitono; intervalos con su calidad; escala mayor; las tres menores; triadas; grados; armaduras hasta cuatro sostenidos y un bemol; relativo y homónimo | Construye una escala y su triada en cualquier tonalidad del nivel |
 | Armonía | Acordes sin función | Tónica, subdominante y dominante; I-IV-V7-I en cinco tonalidades; cadencias; el V7 común a mayor y menor | Dice qué función tiene cada acorde de sus obras |
-| Análisis | — | Frases; forma ABA y binaria; las cadencias dentro de la obra | Hace el mapa de una obra corta |
+| Análisis | — | Frases; forma ABA y binaria; las cadencias dentro de la obra | Señala las frases y la forma de una obra corta |
 | Oído | Distingue mayor y menor a veces | Pulso en 2, 3 o 4; mayor o menor; 3.ª m y M, 4.ª, 5.ª y 8.ª melódicas; calidad de la triada; ¿qué ha cambiado?; repetir una melodía corta en la guitarra | Reconoce mayor o menor, los intervalos del nivel y la calidad de una triada; repite de oído una melodía corta |
 | Musicalidad | Toca las notas | Frase con principio y final; p, f, crescendo y diminuendo; legato; el carácter de mayor y menor | Una frase que sube y se resuelve |
-| Interpretación y memoria | Toca de memoria por tablatura | Memoria de cuatro tipos; seguir si algo sale mal | Recital corto con *Lágrima* de memoria |
-| Repertorio | Su *Estudio en Mi menor* | Once obras cortas de cinco épocas | Once obras cortas de cinco épocas, tocadas enteras |
+| Interpretación y memoria | Toca de memoria por tablatura | Memoria de cuatro tipos; seguir si algo sale mal | Recital corto con una obra de memoria (*Lágrima* u otra equivalente) |
+| Repertorio | Su *Estudio en Mi menor* | Once obras cortas de cinco épocas | Las tres obras del recital, y las demás tocadas enteras o en lo que pidan |
 | Digitación | Sigue la tablatura | Por qué de cada digitación: dedo guía, dedo común, cuerda al aire para cambiar | Explica la digitación de un cambio de *Lágrima* |
 | Cómo estudiar | Repite hasta que sale | Lento y limpio; por frases; comprobar otro día | Estudia una frase nueva sin ayuda |
 | Creatividad | — | Improvisar una melodía sobre I-IV-V; acompañar una canción | Improvisa frases que suenan a pregunta y respuesta |
@@ -64,17 +68,17 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 ## Repertorio del nivel
 | Obra | Papel | Tramo |
 |---|---|---|
-| Sor, op. 60 n.º 1 | Primera lectura | 2 |
-| Sor, *Andante* op. 31 n.º 1 | Melodía y bajo | 3 |
-| Tárrega, *Lágrima* | Principal, por partes y de memoria | 5, 7, 8 |
-| Giuliani, op. 1, parte 4, n.º 3 | El arpegio en una pieza | 6 |
+| Sor, op. 60 n.º 1 | Lectura | 2 |
+| Sor, *Andante* op. 31 n.º 1 | Aplicación: melodía y bajo | 3 |
+| Tárrega, *Lágrima* | Troncal: por partes y de memoria | 5, 7, 8 |
+| Giuliani, op. 1, parte 4, n.º 3 | Aplicación: el arpegio en una pieza | 6 |
 | Su *Estudio en Mi menor* | Conocida: análisis, armónicos y memoria | 1, 6 |
-| Tárrega, *Estudio en Do* | Alternancia y cruces | 9 |
-| Sor, *Andante* op. 44 n.º 1 | La primera obra leída desde la partitura | 10 |
-| Brouwer, *Estudio sencillo* VI | Siglo XX | 11 |
-| Anónimo, *Romanesca* | Renacimiento | 12 |
-| Sanz, *Españoleta* | Barroco | 12 |
-| Sor, *Andante* op. 31 n.º 4 | Clasicismo | 13 |
+| Tárrega, *Estudio en Do* | Aplicación: alternancia y cruces | 9 |
+| Sor, *Andante* op. 44 n.º 1 | Lectura: la primera obra leída entera | 10 |
+| Brouwer, *Estudio sencillo* VI | Aplicación: siglo XX | 11 |
+| Anónimo, *Romanesca* | Aplicación: Renacimiento | 12 |
+| Sanz, *Españoleta* | Troncal: Barroco | 12 |
+| Sor, *Andante* op. 31 n.º 4 | Troncal: Clasicismo | 13 |
 | **Alternativas** | Dowland, *Mrs. Winter's Jump*; Giuliani op. 50 n.º 17 (pasan a lectura en el nivel 3) | |
 
 ## Mapa de tramos
@@ -138,7 +142,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 
 **L2.2 · Las notas de la 1.ª y la 2.ª cuerda** {Lectura, Ritmo, Diapasón}
 1. Lectura · Mi, Fa, Sol y Si, Do, Re · 𝄞 + T.
-2. Ritmo · Redonda, blanca y negra; 4/4 y 3/4; contar en voz alta · ⏱.
+2. Ritmo · Redonda, blanca y negra; 2/4, 3/4 y 4/4; contar en voz alta · ⏱.
 3. Lectura · Líneas cortas en esas cuerdas · 𝄞.
 
 **L2.3 · Tirando y preparación** {MD, Sonido}
@@ -147,13 +151,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 
 **L2.4 · La obra** {Historia, Repertorio, Lectura}
 1. Contexto · Fernando Sor (Barcelona, 1778 - París, 1839) escribió sus lecciones op. 60 para aprender leyendo.
-2. Obra · **Sor, op. 60 n.º 1**, con la melodía apoyando · 𝄞 principal y T a un toque · ⏱.
+2. Obra · **Sor, op. 60 n.º 1**, con la melodía apoyando · 𝄞 principal y T a un toque · ⏱ · **[Por verificar]** que no pida notas aún no vistas; si las pide, se dan por tablatura.
 
-**L2.5 · Color y pulso** {Recursos, Musicalidad, Oído}
+**L2.5 · Color y pulso** {Recursos, Musicalidad, Oído, Solfeo}
 1. Explicación · Tasto, normal y ponticello; p, mf, f, crescendo y diminuendo, y sus signos.
 2. Ejercicio · **E-N1-03 Tres colores** · T.
 3. Oído · Dar palmas con el pulso de una pieza y decir si va en dos, en tres o en cuatro · ♪ · ✎.
-4. Comprobación del tramo · Una nota larga con buen sonido; cuatro compases leídos; dos preguntas de notas · ✎.
+4. Solfeo · Ecos: la app canta dos compases en Do, de la tónica a la dominante, y él los repite · ♪.
+5. Comprobación del tramo · Una nota larga con buen sonido; cuatro compases leídos; dos preguntas de notas · ✎.
 
 ## Tramo 3 · Sor, *Andante* op. 31 n.º 1
 **L3.1 · Dos planos** {MD, Polifonía, Musicalidad}
@@ -189,21 +194,23 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 3. Ejercicio · **E-N1-06 Mi mayor en dos octavas**, apoyando i-m · T + 𝄞 · ⏱.
 4. Lectura · Cuatro sostenidos en la armadura · 𝄞.
 
-**L4.2 · La triada y las funciones** {Teoría, Armonía, Acordes, Oído}
+**L4.2 · La triada y las funciones** {Teoría, Armonía, Acordes, Oído, Solfeo}
 1. Explicación · La triada: fundamental, 3.ª mayor y 5.ª justa. Mi = Mi, Sol♯, Si.
 2. Acordes · Mi, La y Si7 · ⌗.
 3. Explicación · I, IV y V: reposo, alejamiento y tensión. En el Si7, el Re♯ y el La forman un tritono que pide resolver: el Re♯ sube a Mi y el La baja a Sol♯.
 4. Progresión · **E-N1-07 Mi–La–Si7–Mi**, con el arpegio por las cuerdas 5-4-3-2 para que se oiga el Re♯ (P-12) · ⌗ · ♪ · ⏱.
-5. Oído · Una triada: ¿mayor o menor? Una nota: ¿es la fundamental, la 3.ª o la 5.ª? · ✎ · ♪.
+5. Solfeo · Cantar 1-3-5 de Mi mayor sobre el acorde · ♪.
+6. Oído · Una triada: ¿mayor o menor? Una nota: ¿es la fundamental, la 3.ª o la 5.ª? · ✎ · ♪.
 
 **L4.3 · El arpegio clásico** {MD, Arpegios}
 1. Explicación · Del arpegio que ya hace al clásico: preparación, cada dedo en su cuerda, volumen igual.
 2. Ejercicio · **E-N1-08 Selección de los 120 de Giuliani** · T · ⏱.
-3. Esto te sirve para… · El arpegio de *Lágrima* y de su *Estudio en Mi menor*.
+3. Ejercicio · Arpegio de Mi mayor, dos octavas, sin que las notas se solapen · T + 𝄞.
+4. Esto te sirve para… · El arpegio de *Lágrima* y de su *Estudio en Mi menor*.
 
 **L4.4 · Cambiar de acorde sin levantar todo** {MI, Acordes, Digitación}
-1. Digitación · El dedo común: entre Mi y La menor no se mueve nada más que lo que cambia; entre La y Si7, el dedo 2 viaja por la 5.ª cuerda. Por qué: menos movimiento, menos silencio.
-2. Ejercicio · Mi–La–Si7–Mi con el dedo que se queda marcado · ⌗ · ⏱.
+1. Digitación · El dedo común: entre Si7 y Mi, el dedo 2 no se levanta, porque las dos formas pisan el Si de la 5.ª cuerda en el traste 2. Por qué: menos movimiento, menos silencio. Entre Mi y La no hay dedo común: ahí se prepara el acorde siguiente durante la última nota.
+2. Ejercicio · Mi–La–Si7–Mi con el dedo que se queda marcado en el diagrama · ⌗ · ⏱.
 
 **L4.5 · El I-IV-V en otras tonalidades** {Armonía, Acordes, Oído}
 1. Progresión · Do–Fa–Sol7–Do (Fa mayor 7.ª abierto) y Sol–Do–Re7–Sol · ⌗ · ⏱.
@@ -255,14 +262,15 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 2. Teoría · ✎.
 3. Análisis · Su *Estudio en Mi menor*: los acordes y la cadencia Mi–Re♯–Do♯–Re♯–Mi de cada bloque de ocho compases · T.
 
-**L6.3 · Las obras** {Repertorio, Ritmo}
+**L6.3 · Las obras** {Repertorio, Ritmo, Lectura}
 1. Ritmo · Corcheas en 3/4: «1 y 2 y 3 y» · ⏱.
 2. Obra · **Giuliani op. 1, parte 4, n.º 3** · 𝄞 + T · ⏱.
 3. Obra conocida · Su *Estudio en Mi menor*, con la nota destacada.
+4. Lectura · Los cuatro primeros compases del estudio de Giuliani, desde la partitura, despacio · 𝄞.
 
 **L6.4 · Los armónicos naturales** {Recursos, Diapasón}
 1. Cómo se hace · Rozar la cuerda encima del traste y soltar al pulsar: XII, VII y V.
-2. Diapasón · Qué nota suena en cada traste: la octava en el XII, la 5.ª en el VII, dos octavas en el V · ✎.
+2. Diapasón · Qué nota suena en cada traste: la octava en el XII; la 5.ª, una octava más arriba, en el VII; dos octavas en el V · ✎.
 3. Aplicación · Los armónicos de los compases 67 y 69 de su estudio.
 
 **L6.5 · Las funciones en menor** {Oído, Armonía}
@@ -308,9 +316,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 1. Explicación · Cuatro memorias: lo que se oye, lo que se ve, lo que hacen las manos y lo que se entiende (la armonía).
 2. Ejercicio · Memorizar por frases; empezar desde cualquier frase.
 
-**L8.3 · Cantar y contar la B** {Solfeo, Ritmo}
+**L8.3 · Cantar y contar la B** {Solfeo, Ritmo, Lectura}
 1. Solfeo · Cantar la voz principal de la B.
 2. Ritmo · Contar la B en voz alta mientras se toca.
+3. Lectura · Seguir la B en la partitura mientras suena; después, leer dos compases · 𝄞.
 
 **L8.4 · Escuchar el vibrato** {Oído, Recursos}
 1. Escucha · Dos grabaciones de *Lágrima*: dónde vibra la nota larga y dónde no · ♪.
@@ -319,13 +328,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 
 ## Tramo 9 · Tárrega, *Estudio en Do*
 **L9.1 · Alternar bien** {MD, Escalas}
-1. Cómo se hace · i-m y m-a; el cruce de cuerda.
+1. Cómo se hace · i-m y m-a; el cruce de cuerda. ◇ Su picado se comprueba aquí; lo que se añade es el sonido clásico, igual en los dos dedos.
 2. Ejercicio · **E-N1-13 La escalera de cruces** · T · ⏱.
 3. Ejercicio · Cromática en 1.ª posición (`ej` de la app) · T · ⏱.
 
-**L9.2 · Do y Sol mayor** {Escalas, Lectura, Teoría}
-1. Ejercicio · Do mayor y Sol mayor en dos octavas (`ej` de la app) · T + 𝄞 · ⏱.
-2. Teoría · Armaduras de 0 a 2 sostenidos · ✎.
+**L9.2 · Do y Sol mayor** {Escalas, Lectura, Teoría, Arpegios}
+1. Ejercicio · Do mayor y Sol mayor en dos octavas (`ej` de la app); Do con un cambio de posición · T + 𝄞 · ⏱.
+2. Ejercicio · Arpegios de Sol y La mayor y de Mi menor, dos octavas, y un acorde partido de Sol · T + 𝄞.
+3. Teoría · Armaduras de 0 a 2 sostenidos · ✎.
 
 **L9.3 · Intervalos** {Teoría, Oído, Diapasón}
 1. Explicación · De la 2.ª a la 8.ª, mayores, menores y justos, con el tritono.
@@ -380,9 +390,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 1. Cómo se hace · Rasgueado sencillo con *p* hacia abajo y con *i* arriba y abajo, al pulso.
 2. Ejercicio · I-IV-V7-I de Re mayor rasgueado en 4/4 y en 3/4 · ⌗ · ⏱.
 
-**L11.4 · Acompañar una canción** {Conjunto, Armonía, Creatividad}
-1. Ejercicio · **E-N1-22 Acompañar una melodía**: la app toca una canción popular (de dominio público) y él la acompaña con I, IV y V, eligiendo el acorde de cada compás · ⌗ · ♪.
-2. Consejo del profesor · Si suena mal, la melodía está pidiendo otro acorde: probar el de al lado.
+**L11.4 · Acompañar una canción** {Conjunto, Armonía, Creatividad, Lectura}
+1. Lectura · La melodía de la canción, leída antes de acompañarla · 𝄞.
+2. Ejercicio · **E-N1-22 Acompañar una melodía**: la app toca una canción popular (de dominio público) y él la acompaña con I, IV y V, eligiendo el acorde de cada compás · ⌗ · ♪.
+3. Consejo del profesor · Si suena mal, la melodía está pidiendo otro acorde: probar el de al lado.
 
 **L11.5 · ¿Qué ha cambiado?** {Oído}
 1. Oído · La app toca una frase dos veces y cambia una nota o un ritmo: ¿qué ha cambiado y dónde? · ✎ · ♪.
@@ -391,7 +402,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 ## Tramo 12 · La *Romanesca* y la *Españoleta*
 **L12.1 · Música de vihuela y de guitarra barroca** {Historia, Tablatura}
 1. Contexto · La *Romanesca*: una melodía del siglo XVI sobre un bajo que se repite. Gaspar Sanz, *Instrucción de música sobre la guitarra española* (Zaragoza, 1674), y la guitarra de cinco órdenes.
-2. Tablatura · La cifra de Sanz: una tablatura de hace 350 años. Se lee igual que la suya.
+2. Tablatura · La cifra de Sanz: una tablatura de hace 350 años, con números sobre líneas y para cinco órdenes. Se parece a la suya; en algunas cifras antiguas la cuerda aguda va abajo **[Por verificar]** en la de Sanz.
 3. Escucha · La *Españoleta* en guitarra barroca · ♪.
 
 **L12.2 · El bajo que se repite** {Armonía, Análisis, Oído}
@@ -404,7 +415,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 2. Ejercicio · **E-N1-18 Apagar voces**: dónde termina cada nota del bajo · T + 𝄞.
 
 **L12.4 · Re mayor y el compás de la danza** {Escalas, Armonía, Ritmo}
-1. Ejercicio · Re mayor (`ej` de la app) · T + 𝄞 · ⏱.
+1. Ejercicio · Re mayor, dos octavas con un cambio de posición (`ej` de la app) · T + 𝄞 · ⏱.
 2. Progresión · Re–Sol–La7–Re · ⌗.
 3. Explicación · 6/8: dos pulsos de negra con puntillo.
 4. Ritmo · **E-N1-21 Puntillo y semicorcheas** · 𝄞 · ⏱.
@@ -453,13 +464,13 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 1. Explicación · El orden, el tempo de cada obra y seguir si algo sale mal.
 2. Ejercicio · Las tres obras seguidas.
 
-**L14.2 · El recital** {Repertorio, Interpretación, Musicalidad}
-1. Obra · *Lágrima*, de memoria.
+**L14.2 · El recital** {!Repertorio, !Interpretación, !Musicalidad, !Memoria, !Sonido, !Postura, !MD, !Polifonía}
+1. Obra · *Lágrima*, de memoria (o la obra equivalente que él elija).
 2. Obra · La *Españoleta* o la *Romanesca* (o Dowland, *Mrs. Winter's Jump*).
 3. Obra · Sor op. 31 n.º 4, o Brouwer (o Giuliani op. 50 n.º 17).
 4. Grabarse, opcional.
 
-**L14.3 · La prueba corta** {Escalas, Arpegios, Cejilla, Lectura, Oído, Teoría, Armonía}
+**L14.3 · La prueba corta** {!Escalas, !Arpegios, !Cejilla, !Lectura, !Oído, !Teoría, !Armonía, !Acordes}
 1. Técnica · Mi, Sol y Fa mayor; Mi menor armónica; arpegio con nota destacada; media cejilla y cejilla del V · T · ⏱.
 2. Progresión · I-IV-V7-I en Do, Re y Mi · ⌗.
 3. Primera vista · Ocho compases en 1.ª posición · 𝄞.
@@ -468,7 +479,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** La
 
 **L14.4 · Lo que viene** {Repertorio}
 1. Explicación (guía) · Lo que ha conseguido, en cada área.
-2. Explicación (guía) · El nivel 2 sigue todas las líneas: la cejilla en todos los trastes y las posiciones hasta la VII, el vibrato, el trémolo en una obra, la lectura en la V, el círculo de quintas, nuevos intervalos al oído y obras de cinco épocas, con el *Romance* en el centro.
+2. Explicación (guía) · El nivel 2 sigue todas las líneas: la cejilla en todos los trastes y las posiciones hasta la VII, el vibrato, una melodía en trémolo, la lectura en la V, el círculo de quintas, nuevos intervalos al oído y obras de cinco épocas, con el *Romance* en el centro.
 
 ## Ejercicios importantes del nivel
-E-N1-01 a 23. Los nuevos de la versión 3: **E-N1-22** (acompañar una melodía) y **E-N1-23** (la cejilla del V).
+E-N1-01 a 23, con sus fichas en [[ejercicios]].

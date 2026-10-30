@@ -6,10 +6,10 @@ created: 2026-10-30
 ---
 # Nivel 3
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Formato y leyenda: los de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** Formato y leyenda: los de [[curso-1]].
 
 ## Ficha del nivel
-- **Equivale a:** RCM 6 · ABRSM 6 · 2.º de Profesionales **[Estimación]**.
+- **Se parece a:** RCM 6 · 2.º de Profesionales **[Estimación]**. Es una referencia para calibrar; esta academia no prepara para ningún examen.
 - **Objetivo general:** que todo lo anterior funcione a la vez en música más rica. Al terminar, se mueve hasta la IX posición y sostiene tres voces. Toca el trino, los primeros armónicos octavados y el trémolo sobre una progresión, y empieza a ganar velocidad. Lee en la VII posición y la cifra de la vihuela. Entiende las dominantes secundarias y la modulación a las tonalidades vecinas. Oye las segundas, la séptima disminuida y la cadencia que termina o queda abierta, y canta la voz de arriba de dos voces. Toca un recital grabado de tres o cuatro épocas.
 - **Entrada:** el cierre del nivel 2.
 - **Salida:** la última columna de la matriz.
@@ -21,15 +21,15 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 | Sonido | Melodía por encima del arpegio | Tres planos sonoros; un color para cada voz | Tres voces con tres volúmenes |
 | Mano derecha | a-m-i; Carlevaro 1-15 | Arpegios en posiciones altas; *p* con voz propia; ráfagas cortas; rasgueado barroco; tambora y golpe | Ráfagas de cuatro notas limpias; el rasgueado de los *Canarios* |
 | Mano izquierda | Traslados; extensiones pequeñas | Dedos que sostienen voces; portamento; cambios hasta la IX | Sostiene una voz mientras las otras se mueven |
-| Escalas | Dos octavas con cambio | Tres octavas: Mi y Mi♭ mayor; Do y Do♯ menor; terceras y décimas | Mi mayor en tres octavas a una velocidad anotada |
-| Arpegios | Séptimas de una y dos octavas | Arpegios de tres octavas; séptimas de dos octavas | Arpegio de Mi mayor en tres octavas |
+| Escalas | Dos octavas con cambio | Mi mayor, tres octavas; Mi♭ mayor, Do y Do♯ menor, dos octavas; terceras | Mi mayor en tres octavas, limpia y estable |
+| Arpegios | Séptimas de una y dos octavas | Mi mayor, tres octavas; séptimas de dominante y disminuida, dos octavas | Arpegio de Mi mayor en tres octavas |
 | Ligados y ornamentos | Ligados de tres; mordente | Trino medido; ligados de tres y cuatro notas; notas de adorno; ornamentar una repetición | Trino regular a ♩=60 en fusas |
 | Acordes y cejilla | Cejilla en I-VII; formas móviles | Cejillas parciales dentro de la polifonía; la cejilla que entra y sale; cejilla bajo el trémolo, lenta | Una cejilla parcial que no corta ninguna voz |
 | Posiciones y diapasón | Hasta la VII | Hasta la IX; leer en la VII; dónde suena cada armónico | Encuentra cualquier nota hasta el traste XII |
-| Trémolo | *Sueño* | Sobre una progresión; con cambio de cejilla, lento | Trémolo regular sobre I-IV-V-I |
-| Armónicos y otros recursos | Naturales en V, VII, IX, XII y XIX; vibrato | Octavados (introducción); portamento; tambora y golpe; campanela | Una escala de una octava en octavados |
+| Trémolo | Una melodía corta en trémolo | Sobre una progresión; con cambio de cejilla, lento | Trémolo regular sobre I-IV-V-I |
+| Armónicos y otros recursos | Naturales en V, VII, IV, IX, XII y XIX; vibrato | Octavados (introducción); portamento; tambora y golpe; campanela | Una escala de una octava en octavados |
 | Polifonía | Dos voces independientes | Contrapunto a dos voces (Bach); tres voces (Narváez) | Tres voces en las que se distingue cada una |
-| Lectura y primera vista | Posiciones II y V | Posición VII; tres voces; ornamentos escritos; obras leídas | Primera vista de 8-12 compases, como el grado 5 del ABRSM |
+| Lectura y primera vista | Posiciones II y V | Posición VII; tres voces; ornamentos escritos; obras leídas | Primera vista de 8-12 compases en 1.ª y 2.ª posición, como el grado 5 del ABRSM **[Estimación]** |
 | Tablatura | Traducir entre sistemas | La cifra de la vihuela; la cifra de Sanz con rasgueos | Lee unos compases de Milán en su cifra original |
 | Ritmo | Tresillo; síncopa; 2/2 | Puntillo de corchea; 9/8 y 12/8; la hemiolia del vals venezolano; bajo y melodía con ritmos distintos | La hemiolia de Lauro a tempo |
 | Solfeo | Cantar seis notas leídas | Cantar una melodía leída con acompañamiento; cantar la voz superior de dos voces | Canta una melodía de ocho compases leída |
@@ -39,7 +39,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 | Oído | 6.ª; V7; I-IV o I-V | Añade las 2.ª; séptima disminuida; i-iv-i e i-V-i; cadencia perfecta o imperfecta; textura | Reconoce las 2.ª, la séptima disminuida y si una cadencia termina o queda abierta; toca de oído la voz de arriba de dos |
 | Musicalidad | Legato, staccato, rubato básico | Articulación barroca; rubato de mazurca; el peso de cada voz | Una danza barroca y una mazurca con su carácter |
 | Interpretación y memoria | Dos de memoria | Repertorio vivo de tres o cuatro obras; grabar un recital | Recital grabado de tres épocas |
-| Repertorio | Doce obras | Once obras, con dos de lectura | Once obras, de la vihuela a Lauro |
+| Repertorio | Doce obras | Once obras: tres troncales, seis de aplicación y dos de lectura | Las obras del recital grabado, dos de memoria |
 | Digitación | Cuerda al aire o pisada; elegir traslado | La continuidad de las voces; una cuerda para cada color; el portamento | Explica por qué una voz va en una cuerda y no en otra |
 | Cómo estudiar | Tres pasadas limpias | Estudiar por voces; estudiar sin la guitarra (leer y cantar) | Monta una obra a tres voces voz a voz |
 | Creatividad | Variar una melodía | Ornamentar una repetición; variar sobre el bajo de los *Canarios* | Ornamenta una repetición en estilo |
@@ -55,18 +55,18 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 ## Repertorio del nivel
 | Obra | Papel | Tramo |
 |---|---|---|
-| Sor, op. 35 n.º 22 | Estudio y recital (Clasicismo) | 1 |
-| Tárrega, *Adelita* | Principal (Romanticismo) | 2 |
-| Bach, *Bourrée* BWV 996 | Principal (Barroco) | 3 |
-| Sanz, *Canarios* | Barroco español | 4 |
-| Milán, *Pavana III* | Renacimiento | 5 |
-| Dowland, *Mrs. Winter's Jump* | Obra leída | 5 |
-| Mertz, *Nocturno* op. 4 n.º 1 | Romanticismo | 6 |
-| Narváez, *Canción del Emperador* | Renacimiento a tres voces | 7 |
-| Lauro, *Vals venezolano n.º 2* | Siglo XX | 8 |
-| Giuliani, op. 100 n.º 12 | Estudio | 9 |
-| Giuliani, op. 50 n.º 17 | Obra leída | 9 |
-| **Alternativas** | Tárrega, *Estudio en Mi mayor*; Weiss, *Courante*; Carcassi op. 60 n.º 2 y 9 (La Rioja, 2.º de Profesionales); Tárrega, *María* (gavota); Villa-Lobos, *Preludio n.º 3* (con derechos) | |
+| Sor, op. 35 n.º 22 | Aplicación: Clasicismo, arpegio con melodía | 1 |
+| Tárrega, *Adelita* | Troncal: Romanticismo | 2 |
+| Bach, *Bourrée* BWV 996 | Troncal: Barroco | 3 |
+| Sanz, *Canarios* | Aplicación: Barroco español | 4 |
+| Milán, *Pavana III* | Aplicación: Renacimiento | 5 |
+| Dowland, *Mrs. Winter's Jump* | Lectura | 5 |
+| Mertz, *Nocturno* op. 4 n.º 1 | Aplicación: Romanticismo | 6 |
+| Narváez, *Canción del Emperador* | Troncal: Renacimiento a tres voces | 7 |
+| Lauro, *Vals venezolano n.º 2* | Aplicación: siglo XX | 8 |
+| Giuliani, op. 100 n.º 12 | Aplicación: estudio | 9 |
+| Giuliani, op. 50 n.º 17 | Lectura | 9 |
+| **Alternativas** | Tárrega, *Estudio en Mi mayor*; Weiss, *Courante*; Carcassi op. 60 n.º 2 y 9 (La Rioja, 2.º de Profesionales); Tárrega, *María* (gavota); Villa-Lobos, *Preludio n.º 3* (con derechos); Tárrega, *Sueño* (el estudio de trémolo) **[Por verificar]** su nivel | |
 
 ## Mapa de tramos
 | Tramo | Música | Qué se trabaja |
@@ -155,7 +155,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 2. Ejercicio · Estudiar por voces: cada voz sola y después juntas.
 3. Digitación · El dedo que sostiene la voz larga se elige primero; los demás se adaptan.
 
-**L3.4 · Cantar una voz y oír la otra** {Solfeo, Oído, Conjunto}
+**L3.4 · Cantar una voz y oír la otra** {Solfeo, Oído, ~Conjunto}
 1. Solfeo · La app toca la voz de abajo; él canta la de arriba (grado 6 del ABRSM).
 2. Oído · Tocar de memoria la voz de arriba de una frase a dos voces que la app toca dos veces · ♪.
 
@@ -195,11 +195,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 2. Obra · **Sanz, *Canarios*** · T + 𝄞 · ⏱.
 3. Aplicación · Los adornos de Sanz, el trino y el mordente, con ligados · **[Por verificar]** dónde los pide la edición.
 
-**L4.5 · El bajo de la danza** {Armonía, Creatividad, Acordes, Cejilla}
+**L4.5 · El bajo de la danza** {Armonía, Creatividad, Acordes}
 1. Análisis · Los *Canarios* repiten una progresión corta: cuál es · ⌗ · **[Por verificar]** con la edición.
-2. Acordes · La misma progresión con formas de cejilla en otra tonalidad · ⌗.
-3. Ejercicio · Una variación propia de cuatro compases sobre esa progresión.
-4. Comprobación del tramo · La obra a tempo; la escala en campanela.
+2. Ejercicio · Una variación propia de cuatro compases sobre esa progresión.
+3. Comprobación del tramo · La obra a tempo; la escala en campanela.
 
 ## Tramo 5 · Milán, *Pavana III*, y Dowland, *Mrs. Winter's Jump*
 **L5.1 · La vihuela** {Historia, Tablatura}
@@ -211,7 +210,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 1. Explicación · Antes de las tonalidades, los modos. Se estudian en el nivel 4.
 2. Oído · La pavana: ¿suena mayor, menor u otra cosa? · ♪.
 
-**L5.3 · La pavana** {Repertorio, Ritmo, Polifonía, Musicalidad, Sonido}
+**L5.3 · La pavana** {Repertorio, Ritmo, Polifonía, Musicalidad}
 1. Ritmo · El pulso grande de la pavana (la blanca) · ⏱.
 2. Obra · **Milán, *Pavana III*** · T + 𝄞 · ⏱.
 3. Fíjate en… · Una danza lenta y noble: el peso de cada voz.
@@ -222,19 +221,19 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 
 ## Tramo 6 · Mertz, *Nocturno* op. 4 n.º 1
 **L6.1 · El nocturno** {Historia, Musicalidad}
-1. Contexto · Johann Kaspar Mertz y el nocturno romántico. La Rioja pone los *Nocturnos* op. 4 en 2.º de Profesionales **[Dato]**.
+1. Contexto · Johann Kaspar Mertz y el nocturno romántico: una melodía que canta como una voz sobre un acompañamiento tranquilo. La Rioja pone los *Nocturnos* op. 4 en 2.º de Profesionales **[Dato]**.
 
 **L6.2 · Tres planos** {MD, Sonido, Polifonía, Interpretación}
-1. Ejercicio · Melodía, acompañamiento y bajo, cada uno con su volumen.
+1. Ejercicio · Melodía apoyando, acompañamiento y bajo tirando, cada uno con su volumen.
 2. Obra · **Mertz, *Nocturno* op. 4 n.º 1** · 𝄞 + T · ⏱.
 
-**L6.3 · Armónicos de IV y IX; los octavados** {Recursos, Diapasón, MD}
-1. Ejercicio · Naturales en IV y IX: qué nota suena · ✎.
+**L6.3 · Los octavados** {Recursos, Diapasón, MD}
+1. Repaso · Dónde suena cada armónico natural, de memoria · ✎.
 2. Cómo se hace · El octavado: *i* roza doce trastes por encima de la nota pisada y *a* pulsa.
 3. Ejercicio · **E-N3-05 Armónicos octavados**, una escala de una octava · T.
 
 **L6.4 · Tres octavas** {Escalas, Arpegios, Posiciones, MI, Digitación}
-1. Ejercicio · Mi y Mi♭ mayor, tres octavas (como el grado 6 del ABRSM) · T + 𝄞 · ⏱.
+1. Ejercicio · Mi mayor, tres octavas, y Mi♭ mayor, dos (como el grado 6 del ABRSM) · T + 𝄞 · ⏱.
 2. Ejercicio · Arpegio de Mi mayor, tres octavas · T.
 3. Digitación · Por qué los cambios de posición de la escala caen en un semitono: el dedo recorre menos y el cambio no se oye.
 
@@ -273,8 +272,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 2. Ritmo · La hemiolia del vals; bajo y melodía en ritmos distintos · 𝄞 · ⏱.
 3. Ritmo · Puntillo de corchea; 9/8 y 12/8 · ⏱.
 
-**L8.2 · La obra** {Repertorio, Historia, Musicalidad, Interpretación}
-1. Contexto · Antonio Lauro (Venezuela).
+**L8.2 · La obra** {Repertorio, Historia, Musicalidad}
+1. Contexto · Antonio Lauro (Venezuela, 1917-1986) llevó el vals de su país a la guitarra de concierto: danza popular, escrita con el rigor de un clásico.
 2. Obra · **Lauro, *Vals venezolano n.º 2*** · edición publicada (con derechos) · ⏱.
 
 **L8.3 · Tambora y golpe** {MD, Recursos}
@@ -310,25 +309,26 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 
 **L9.5 · Leer a Giuliani** {Lectura, Repertorio}
 1. Obra · **Giuliani, op. 50 n.º 17**, desde la partitura · 𝄞.
-2. Primera vista · Doce compases en Fa♯ menor · 𝄞.
+2. Primera vista · Doce compases en Fa♯ menor, en 1.ª y 2.ª posición · 𝄞.
 3. Comprobación del tramo · El estudio; el trémolo sobre la progresión.
 
 ## Tramo 10 · Cierre del nivel 3
-**L10.1 · El recital, grabado** {Repertorio, Interpretación, Memoria, Musicalidad}
+**L10.1 · El recital, grabado** {!Repertorio, !Interpretación, !Memoria, !Musicalidad, !Polifonía, !Sonido}
 1. Obra · La *Bourrée* o los *Canarios* (Barroco).
 2. Obra · Sor op. 35 n.º 22 (Clasicismo).
 3. Obra · *Adelita* o Mertz (Romanticismo).
 4. Obra · Milán, Narváez o Lauro.
 5. Dos de memoria; grabarse entero, sin cortes.
 
-**L10.2 · La prueba corta** {Escalas, Ligados, Recursos, Lectura, Oído, Teoría, Armonía}
+**L10.2 · La prueba corta** {!Escalas, !Ligados, !Recursos, !Lectura, !Oído, !Teoría, !Armonía}
 1. Técnica · Mi mayor, tres octavas; terceras; trino; armónicos octavados · T · ⏱.
-2. Primera vista · Doce compases en la VII · 𝄞.
-3. Oído · Intervalos con las 2.ª; séptima disminuida; cadencia perfecta o imperfecta; tocar la voz de arriba de dos voces · ✎ · ♪.
-4. Teoría · Modulación, dominantes secundarias y formas · ✎.
+2. Primera vista · Doce compases en 2.ª posición · 𝄞.
+3. Lectura · Ocho compases preparados en la VII · 𝄞.
+4. Oído · Intervalos con las 2.ª; séptima disminuida; cadencia perfecta o imperfecta; tocar la voz de arriba de dos voces · ✎ · ♪.
+5. Teoría · Modulación, dominantes secundarias y formas · ✎.
 
 **L10.3 · Lo que viene** {Repertorio}
 1. Explicación (guía) · El nivel 4 sigue todas las líneas: posiciones hasta la XII, la velocidad con control, el trémolo de *Recuerdos* a tempo medio, los octavados en una melodía, la lectura en la IX y un preludio leído, los modos y la secuencia por quintas, las 7.ª y la cadencia rota al oído, y obras de Narváez a Barrios.
 
 ## Ejercicios importantes del nivel
-E-N3-02 a 08. **E-N3-08** (la escala en campanela) era el E-N4-02 de la versión 2: baja con los *Canarios*. **E-N3-07** (ráfagas cortas) es nuevo: la velocidad empieza aquí y no en el nivel 4.
+E-N3-02 a 08, con sus fichas en [[ejercicios]]. La velocidad empieza aquí, con **E-N3-07**.

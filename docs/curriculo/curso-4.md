@@ -6,11 +6,11 @@ created: 2026-10-30
 ---
 # Nivel 4
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Formato y leyenda: los de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** Formato y leyenda: los de [[curso-1]].
 
 ## Ficha del nivel
-- **Equivale a:** RCM 7 · ABRSM 7 · 3.º de Profesionales **[Estimación]**.
-- **Objetivo general:** el guitarrista que sostiene obras de varias páginas. Al terminar, se mueve por todo el mástil hasta el XII con cambios rápidos. Tiene una velocidad controlada en escalas, arpegios y ligados, y toca la primera parte de *Recuerdos* con el trémolo a tempo medio. Lee en la IX y aprende un preludio barroco desde la partitura. Entiende los modos, la suite, la forma sonata y la secuencia por quintas. Oye las séptimas, la cadencia rota y adónde modula una obra, y canta la voz de abajo de dos voces. Toca un programa de diez minutos de tres épocas.
+- **Se parece a:** RCM 7 · 3.º de Profesionales **[Estimación]**. Es una referencia para calibrar; esta academia no prepara para ningún examen.
+- **Objetivo general:** un salto en todo a la vez: más mástil, más agilidad, más estilos y más comprensión de la forma. Al terminar, se mueve por todo el mástil hasta el XII con cambios rápidos. Tiene una velocidad controlada en escalas, arpegios y ligados, y toca la primera parte de *Recuerdos* con el trémolo a tempo medio. Lee en la IX y aprende un preludio barroco desde la partitura. Entiende los modos, la suite, la forma sonata y la secuencia por quintas. Oye las séptimas, la cadencia rota y adónde modula una obra, y canta la voz de abajo de dos voces. Toca un programa de diez minutos de tres épocas.
 - **Entrada:** el cierre del nivel 3.
 - **Salida:** la última columna de la matriz.
 
@@ -19,9 +19,9 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 |---|---|---|---|
 | Postura y ergonomía | Muñeca recta en la IX | Relajación a velocidad; movimientos cortos; la mano izquierda por encima del XII | Diez minutos de programa sin tensión acumulada |
 | Sonido | Tres planos | El sonido que no se pierde al acelerar; proyectar | Una escala rápida con el mismo sonido que lenta |
-| Mano derecha | Ráfagas cortas; rasgueado barroco | Ráfagas largas; escalas con a-m-i; arpegio continuo; *p* rápido | Una escala de tres octavas a la velocidad de referencia del grado 7 |
+| Mano derecha | Ráfagas cortas; rasgueado barroco | Ráfagas largas; escalas con a-m-i; arpegio continuo; *p* rápido | Una escala de tres octavas limpia y estable, bastante más ágil que en el nivel 3 |
 | Mano izquierda | Voces que se sostienen; posición IX | Cambios rápidos (el dedo que llega se prepara antes); extensiones mayores; escalas ligadas | Un cambio rápido que no corta la frase |
-| Escalas | Tres octavas en Mi y Mi♭ | Tres octavas en La♭, Si y Fa mayor; Fa, Re y Sol♯ menor; cromática de tres octavas; octavas y décimas de dos octavas | Las escalas del nivel con su velocidad anotada |
+| Escalas | Tres octavas en Mi y Mi♭ | Dos octavas: La♭ y Si mayor, Re menor; tres octavas: Fa mayor y menor; cromática de tres octavas | Las escalas del nivel limpias y estables |
 | Arpegios | Tres octavas; séptimas de dos | Séptima de dominante de tres octavas; arpegio continuo con cambio de acorde | El arpegio del BWV 999 sin huecos |
 | Ligados y ornamentos | Trino; tres y cuatro notas | Ligados largos y rápidos; glosas renacentistas; ornamentación barroca | Ligados de cuatro notas iguales a tempo |
 | Acordes y cejilla | Cejillas parciales | Cejillas encadenadas; cejilla con extensión; cejilla bajo el trémolo a tempo medio | Tres cejillas seguidas sin hueco |
@@ -29,17 +29,17 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 | Trémolo | Sobre una progresión | Con ráfagas; la parte en La menor de *Recuerdos* | Esa parte a tempo medio, regular |
 | Armónicos y otros recursos | Octavados en escala | Octavados en una melodía; campanela como color; portamento romántico | La melodía en octavados de Llobet |
 | Polifonía | Tres voces | Imitación; contrapunto en danzas; polifonía dentro del arpegio | Distingue y hace oír la imitación |
-| Lectura y primera vista | Posición VII | Posición IX; tres y cuatro alteraciones; un preludio barroco leído; clave de fa | Primera vista como el grado 6 del ABRSM (9/8, 5/8 y 5/4) |
-| Tablatura | Cifra de vihuela y de Sanz | La cifra de Narváez; tablaturas italianas de la guitarra barroca (¿Sabías que…?) | Compara una cifra original con la transcripción |
+| Lectura y primera vista | Posición VII | Posición IX; tres y cuatro alteraciones; un preludio barroco leído; clave de fa | Primera vista como el grado 6 del ABRSM **[Estimación]**: 9/8, 5/8 y hasta la V posición |
+| Tablatura | Cifra de vihuela y de Sanz | La cifra de Narváez; las cifras de la guitarra barroca (¿Sabías que…?) | Compara una cifra original con la transcripción |
 | Ritmo | 9/8, 12/8, hemiolia | Grupos irregulares; cambios de compás; 5/8 y 7/8 | Un grupo de cinco o siete sin acelerar |
-| Solfeo | Voz superior de dos | Cantar la voz inferior de dos; cantar el bajo de una progresión; la clave de fa | Canta el bajo de una progresión |
+| Solfeo | Voz superior de dos | Cantar la voz de arriba leída con la de abajo sonando; cantar el bajo de una progresión; la clave de fa | Canta el bajo de una progresión |
 | Teoría | Formas, vecinas, adornos | Modos; la suite y sus danzas; la imitación; la forma sonata | Explica la forma de una sonata clásica |
 | Armonía | Dominantes secundarias; modulación | Secuencia por quintas; napolitana; pedal; armonía modal; cadencia rota | Encuentra una napolitana y una secuencia en una obra |
 | Análisis | Mapa armónico y formal | Sonata; suite; diferencias; el ritmo armónico | El análisis de un primer movimiento clásico |
 | Oído | 2.ª, 6.ª, disminuida | Añade las 7.ª; triada aumentada; I-IV-V; cadencia perfecta, imperfecta o rota; los acordes de la cadencia; ¿modula a V, IV o vi? | Reconoce las 7.ª, la cadencia rota y adónde modula una frase; toca de oído la voz de abajo de dos |
 | Musicalidad | Barroco y mazurca | El estilo de cada época; ornamentar la repetición; rubato con criterio | Toca una obra de cada época con su estilo |
 | Interpretación y memoria | Recital grabado | Programa de diez minutos; seguir tras un error | Diez minutos sin parar pase lo que pase |
-| Repertorio | Once obras | Doce obras de seis estilos, con dos leídas | Doce obras, con una sonata y la primera parte de *Recuerdos* |
+| Repertorio | Once obras | Cuatro troncales, cuatro de aplicación (una a elegir), dos fragmentos y una leída | El programa de diez minutos |
 | Digitación | Voces y color | Economía a velocidad; escala por posición o en campanela; la mano derecha de los pasajes rápidos | Elige la digitación más rápida y dice por qué |
 | Cómo estudiar | Por voces | Ráfagas y ritmos; tempos variables; lento-rápido-lento | Sube un pasaje de tempo sin perder limpieza |
 | Creatividad | Ornamentar | Diferencias sobre un bajo renacentista; una variación sobre la *Passacaglia* | Cuatro diferencias propias sobre la romanesca |
@@ -55,19 +55,21 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 ## Repertorio del nivel
 | Obra | Papel | Tramo |
 |---|---|---|
-| Bach, *Preludio* BWV 999 | Principal; obra leída | 1 |
-| Narváez, *Guárdame las vacas* | Renacimiento; diferencias | 2 |
-| Carcassi, op. 60 n.º 19 | Estudio de velocidad | 3 |
-| Santiago de Murcia, *Preludio y allegro* | Barroco español | 4 |
-| Händel, *Passacaglia* (la suya) | Opcional | 4 |
-| Diabelli, una de sus sonatas, primer movimiento | La forma sonata | 5 |
+| Bach, *Preludio* BWV 999 | Troncal, y también obra leída | 1 |
+| Narváez, *Guárdame las vacas* | Troncal: Renacimiento, diferencias | 2 |
+| Carcassi, op. 60 n.º 19 | Aplicación (o Sor op. 31 n.º 20, a elegir): estudio | 3 |
+| Santiago de Murcia, *Preludio y allegro* | Aplicación: Barroco español | 4 |
+| Händel, *Passacaglia* (la suya) | Alternativa, opcional | 4 |
+| Diabelli, una de sus sonatas, primer movimiento | Fragmento: se toca la exposición y se analiza entero | 5 |
 | Tárrega, *Recuerdos de la Alhambra*, la parte en La menor | Fragmento: el trémolo a tempo medio | 6 |
-| Llobet, *El testament d'Amèlia* | Canción; octavados | 7 |
-| Tárrega, *Marieta* | Romanticismo | 8 |
-| Barrios, *Estudio inconcluso* | Siglo XX | 9 |
-| Sor, op. 31 n.º 20 | Estudio | 10 |
-| Matiegka, *Minueto* op. 15 | Obra leída | 10 |
+| Llobet, *El testament d'Amèlia* | Troncal: canción, octavados | 7 |
+| Tárrega, *Marieta* | Troncal: Romanticismo | 8 |
+| Barrios, *Estudio inconcluso* | Aplicación: siglo XX | 9 |
+| Sor, op. 31 n.º 20 | Alternativa de Carcassi: estudio | 10 |
+| Matiegka, *Minueto* op. 15 | Lectura | 10 |
 | **Alternativas** | Giuliani op. 100 n.º 11; Tárrega, *Vals en Re* y *Pavana*; Sor, *Les Adieux* (La Rioja, 3.º de Profesionales); Dowland, *Melancholy Galliard*; Coste, *Berceuse*; Villa-Lobos, *Preludio n.º 3* (con derechos); Weiss, *Pasacalle en re* | |
+
+**Cuánto hay que aprender [Decisión]:** las troncales, enteras. De las de aplicación, dos o tres, a su elección; de las demás basta con el fragmento que trabaja la competencia del tramo. Lo demás, en [[repertorio]].
 
 ## Mapa de tramos
 | Tramo | Música | Qué se trabaja |
@@ -97,17 +99,22 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 3. Lectura · El preludio desde la partitura: es la obra leída principal del nivel · 𝄞.
 
 **L1.3 · El arpegio continuo y las cejillas encadenadas** {MD, Arpegios, MI, Cejilla, Acordes, Digitación}
-1. Ejercicio · **E-N4-01 Cambiar de acorde sin cortar** · T · ⏱.
-2. Digitación · Qué dedos se quedan de un acorde al siguiente: el que se queda ahorra el hueco **[Por verificar]** compás a compás en la edición.
+1. Cómo se hace · A velocidad, cada dedo se prepara justo antes de su nota, no todos a la vez.
+2. Ejercicio · **E-N4-01 Cambiar de acorde sin cortar** · T · ⏱.
+3. Digitación · Qué dedos se quedan de un acorde al siguiente: el que se queda ahorra el hueco **[Por verificar]** compás a compás en la edición.
 
 **L1.4 · Las séptimas al oído** {Oído}
 1. Oído · 7.ª menor y mayor, seguidas y a la vez (nivel 7 del RCM) · ✎ · ♪.
 
-**L1.5 · La obra** {Repertorio, Musicalidad, Postura, Polifonía, Interpretación, Estudio}
-1. Obra · **Bach, *Preludio* BWV 999** · 𝄞 + T · ⏱.
-2. Fíjate en… · Dentro del arpegio hay un bajo y una voz de arriba que se mueven: dónde está la tensión y dónde se resuelve.
-3. Consejo del profesor · Una obra con la misma figura cansa la mano derecha: aflojar en cada pedal.
-4. Comprobación del tramo · El preludio sin huecos entre compases.
+**L1.5 · Montar el preludio** {Repertorio, Estudio, Memoria}
+1. Obra · **Bach, *Preludio* BWV 999**: hasta la primera llegada, por grupos de cuatro compases · 𝄞 + T · ⏱.
+2. Obra · El resto, hasta el pedal final · 𝄞 + T · ⏱.
+3. Ejercicio · Unirlo y decir en voz alta el acorde de cada compás: es su memoria.
+
+**L1.6 · La obra entera** {Repertorio, Musicalidad, Postura, Polifonía}
+1. Fíjate en… · Dentro del arpegio hay un bajo y una voz de arriba que se mueven: dónde está la tensión y dónde se resuelve.
+2. Consejo del profesor · Una obra con la misma figura cansa la mano derecha: aflojar en cada pedal.
+3. Comprobación del tramo · El preludio sin huecos entre compases.
 
 ## Tramo 2 · Narváez, *Guárdame las vacas*
 **L2.1 · Las diferencias** {Historia, Análisis, Armonía}
@@ -123,10 +130,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 1. Explicación · Las glosas: notas de paso rápidas que adornan una melodía; muchas se tocan ligadas.
 2. Aplicación · Las diferencias de glosas de la obra · T.
 
-**L2.4 · La obra** {Repertorio, Tablatura, Polifonía, Recursos}
+**L2.4 · La obra** {Repertorio, Tablatura, Polifonía}
 1. Tablatura · Unos compases en la cifra original de Narváez: compararlos con la transcripción.
-2. Obra · **Narváez, *Guárdame las vacas*** · T + 𝄞 · ⏱.
-3. Fíjate en… · Cada diferencia puede tener su color: tasto, normal o ponticello, elegidos por él.
+2. Obra · **Narváez, *Guárdame las vacas***: el tema y la primera diferencia · T + 𝄞 · ⏱.
+3. Obra · Las diferencias siguientes, una a una; después, seguidas.
 
 **L2.5 · La cadencia rota y las diferencias propias** {Oído, Creatividad, Lectura, Ritmo}
 1. Oído · ¿Perfecta, imperfecta o rota? (grado 7 del ABRSM) · ✎ · ♪.
@@ -136,15 +143,16 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 
 ## Tramo 3 · Carcassi, op. 60 n.º 19
 **L3.1 · Cómo se gana velocidad** {Estudio, MD, Postura}
-1. Explicación · Relajación y movimientos cortos; el metrónomo mide, no empuja. Lento-rápido-lento.
+1. Explicación · Relajación y movimientos cortos. Lento-rápido-lento: subir un poco, volver, y subir otra vez.
 2. Ejercicio · **E-N4-03 Ráfagas** (grupos largos, encadenados) · T · ⏱. ↩ necesita E-N3-07.
 3. Ejercicio · **E-N4-04 Escalas con ritmos** · T · ⏱.
 
 **L3.2 · Tres octavas** {Escalas, Diapasón, MD, Sonido}
-1. Ejercicio · La♭ y Si mayor, tres octavas; Fa menor · T + 𝄞 · ⏱.
+1. Ejercicio · La♭ y Si mayor, dos octavas; Fa menor, tres; cromática de tres octavas · T + 𝄞 · ⏱.
 2. Ejercicio · Escalas con a-m-i · T.
-3. Diapasón · Escalas por posiciones: el mismo dibujo en otro traste.
-4. Fíjate en… · El sonido rápido tiene que ser el mismo que el lento.
+3. Digitación · Apoyando o tirando a velocidad: cuál le da más ligereza a él y dónde cambia de uno a otro. Su picado le sirve de base; aquí se le pide el sonido clásico.
+4. Diapasón · Escalas por posiciones: el mismo dibujo en otro traste.
+5. Fíjate en… · El sonido rápido tiene que ser el mismo que el lento.
 
 **L3.3 · Cambios rápidos** {MI, Posiciones, Digitación}
 1. Ejercicio · Cambios de posición rápidos con los tres traslados del nivel 2 · T · ⏱. ↩ necesita E-N2-04.
@@ -160,12 +168,12 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 
 **L3.6 · El estudio** {Repertorio}
 1. Obra · **Carcassi, op. 60 n.º 19** · 𝄞 + T · ⏱ · **[Por verificar]** lo que trabaja.
-2. Comprobación del tramo · Una escala de tres octavas, igual, a un tempo propio anotado.
+2. Comprobación del tramo · Una escala de tres octavas, igual y a un tempo estable.
 
 ## Tramo 4 · Santiago de Murcia, *Preludio y allegro*
 **L4.1 · La suite** {Teoría, Historia, Oído, Ritmo, Tablatura}
 1. Explicación · Allemande, courante, sarabande, gigue, minueto y bourrée: carácter y compás.
-2. Contexto · Santiago de Murcia, guitarrista barroco español. ¿Sabías que…? La guitarra barroca se escribía en tablatura italiana, con números como la suya.
+2. Contexto · Santiago de Murcia, guitarrista barroco español. ¿Sabías que…? La guitarra barroca se escribía en cifra de números, como su tablatura, a menudo con la cuerda aguda abajo **[Por verificar]** en esta fuente.
 3. Teoría · ¿Qué danza es? · ✎ · ♪.
 
 **L4.2 · Ornamentar y la campanela** {Musicalidad, Ligados, Recursos}
@@ -178,7 +186,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 2. Progresión · Re m–Sol m–Do–Fa–Si♭–Sol m–La–Re m, la de su *Passacaglia* · ⌗ · ♪ · ⏱.
 
 **L4.4 · La obra** {Repertorio}
-1. Obra · **Santiago de Murcia, *Preludio y allegro*** · 𝄞 + T · ⏱.
+1. Obra · **Santiago de Murcia, *Preludio***  · 𝄞 + T · ⏱.
+2. Obra · El *Allegro*; las dos seguidas.
 
 **L4.5 · La *Passacaglia* (opcional)** {Repertorio, Creatividad}
 1. Obra · Su versión (la de Lameei, si la compra) o su transcripción del original.
@@ -187,7 +196,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 **L4.6 · Un dúo barroco y el bajo al oído** {Conjunto, Oído, Solfeo}
 1. Ejercicio · La melodía de una danza contra un bajo grabado, y al revés · ♪.
 2. Oído · Dictado del bajo de la secuencia · ✎.
-3. Comprobación del tramo · El *Preludio y allegro*; el dúo.
+3. Solfeo · Cantar ese bajo mientras suena la secuencia.
+4. Comprobación del tramo · El *Preludio y allegro*; el dúo.
 
 ## Tramo 5 · Diabelli, una sonata (primer movimiento)
 **L5.1 · La sonata vienesa** {Historia, Teoría, Análisis}
@@ -199,14 +209,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 1. Oído · Un pasaje que empieza en mayor: ¿modula a la dominante, a la subdominante o al relativo? (grado 7 del ABRSM) · ✎ · ♪.
 
 **L5.3 · Fa mayor en tres octavas** {Escalas, Posiciones, Arpegios, Diapasón}
-1. Ejercicio · Fa mayor y Re menor, tres octavas · T + 𝄞 · ⏱.
+1. Ejercicio · Fa mayor, tres octavas; Re menor, dos · T + 𝄞 · ⏱.
 2. Ejercicio · Arpegio de Fa mayor, tres octavas · T.
 3. Diapasón · Dónde está cada Fa del mástil: el mapa de la escala.
 
 **L5.4 · La obra** {Repertorio, Musicalidad, MD, Interpretación}
-1. Obra · El movimiento · 𝄞 + T · ⏱.
+1. Obra · La exposición · 𝄞 + T · ⏱. El resto del movimiento se analiza; tocarlo entero es opcional.
 2. Fíjate en… · El estilo clásico: igualdad, claridad y poco rubato; el staccato del acompañamiento.
-3. Comprobación del tramo · El movimiento; una pregunta de forma · ✎.
+3. Comprobación del tramo · La exposición; una pregunta de forma · ✎.
 
 ## Tramo 6 · *Recuerdos de la Alhambra*, la parte en La menor
 **L6.1 · La obra y su historia** {Historia, Análisis}
@@ -241,9 +251,11 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 1. Lectura · Posición IX y más arriba · 𝄞.
 2. Cómo se hace · Por encima del IX: el pulgar izquierdo baja por el mástil y el codo se acerca al cuerpo.
 
-**L7.4 · La obra** {Repertorio, Musicalidad, Recursos, Sonido}
-1. Obra · **Llobet, *El testament d'Amèlia*** · 𝄞 + T · ⏱.
-2. Fíjate en… · La melodía como una voz que canta: vibrato solo en las notas largas.
+**L7.4 · La obra** {Repertorio, Musicalidad, Recursos, Sonido, Memoria}
+1. Obra · **Llobet, *El testament d'Amèlia***: la primera vez que suena la melodía · 𝄞 + T · ⏱.
+2. Obra · Las secciones con octavados; después, entera.
+3. Fíjate en… · La melodía como una voz que canta: vibrato solo en las notas largas.
+4. Ejercicio · De memoria, cantando la melodía por dentro.
 
 **L7.5 · Acompañar la canción** {Conjunto, Acordes, Armonía}
 1. Ejercicio · La app canta la melodía y él la acompaña con los acordes de la obra, reducidos · ⌗ · ♪.
@@ -251,25 +263,27 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 
 ## Tramo 8 · Tárrega, *Marieta*
 **L8.1 · La napolitana** {Armonía, Acordes, Oído}
-1. Explicación · El acorde napolitano: un color oscuro antes de la cadencia.
+1. Explicación · El acorde napolitano: un color oscuro antes de la cadencia. **[Por verificar]** si está en *Marieta*; si no, se muestra en La menor y se señala cuando aparezca en una obra.
 2. Progresión · En La menor · ⌗ · ♪.
 3. Oído · Los dos acordes de la cadencia: I, IV, V, V7 o vi (grado 7 del ABRSM) · ✎ · ♪.
 
 **L8.2 · Grupos irregulares** {Ritmo}
 1. Ritmo · Dosillo, cuatrillo y seisillo · 𝄞 · ⏱.
 
-**L8.3 · La obra** {Repertorio, Musicalidad, Recursos, Digitación, Interpretación}
-1. Obra · **Tárrega, *Marieta*** · 𝄞 + T · ⏱. ↩ necesita *Adelita*.
+**L8.3 · La obra** {Repertorio, Musicalidad, Recursos, Digitación, Interpretación, Memoria}
+1. Obra · **Tárrega, *Marieta***, la primera parte · 𝄞 + T · ⏱. ↩ necesita *Adelita*.
 2. Digitación · Los portamentos y la cuerda elegida para la melodía: Tárrega busca el color de una sola cuerda **[Por verificar]** en la edición.
-3. Fíjate en… · Cuánto rubato y dónde.
-4. Comprobación del tramo · La obra entera.
+3. Obra · La segunda parte; después, entera y de memoria.
+4. Fíjate en… · Cuánto rubato y dónde.
+5. Comprobación del tramo · La obra entera.
 
 ## Tramo 9 · Barrios, *Estudio inconcluso*
 **L9.1 · Barrios** {Historia}
-1. Contexto · Agustín Barrios Mangoré (Paraguay, 1885-1944).
+1. Contexto · Agustín Barrios Mangoré (Paraguay, 1885-1944): guitarrista y compositor, volverá en casi todos los niveles siguientes.
+2. Escucha · Una grabación del propio Barrios, si se encuentra · ♪.
 
 **L9.2 · Ligados largos y extensiones** {MI, Ligados, Cejilla}
-1. Ejercicio · **E-N4-06 Ligados de tres y cuatro notas** · T · ⏱.
+1. Ejercicio · **E-N4-06 Ligados largos y rápidos** · T · ⏱.
 2. Ejercicio · Extensiones, también con cejilla · T.
 
 **L9.3 · El arpegio rápido** {MD, Arpegios, Posiciones, Digitación}
@@ -291,30 +305,30 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 1. Oído · Tocar de memoria la voz de abajo de una frase a dos voces (grado 7 del ABRSM) · ♪.
 2. Solfeo · Cantar la voz de arriba leída mientras la app toca la de abajo · 𝄞 · ♪.
 
-**L10.3 · Escalas ligadas** {Escalas, Ligados, MI}
+**L10.3 · Escalas ligadas** {Escalas, Ligados, MI, Posiciones}
 1. Ejercicio · La escala de Sol mayor en dos octavas, ligada de tres en tres · T · ⏱.
 
 **L10.4 · El estudio** {Repertorio, Estudio}
-1. Obra · **Sor, op. 31 n.º 20** · 𝄞 + T · ⏱ · **[Por verificar]** lo que trabaja.
+1. Obra · **Sor, op. 31 n.º 20**, si lo eligió en lugar de Carcassi · 𝄞 + T · ⏱ · **[Por verificar]** lo que trabaja.
 
 **L10.5 · Leer un minueto clásico** {Lectura, Repertorio}
 1. Obra · **Matiegka, *Minueto* op. 15**, desde la partitura: La Rioja lo pone en 1.º de Profesionales **[Dato]** · 𝄞.
 
 **L10.6 · El trémolo, de memoria** {Trémolo, Memoria}
 1. Repaso · La parte en La menor de *Recuerdos*, de memoria y sin calentar.
-2. Comprobación del tramo · El estudio; el minueto leído; el bajo cantado.
+2. Comprobación del tramo · El minueto leído; la voz de abajo de oído.
 
 ## Tramo 11 · Cierre del nivel 4
-**L11.1 · El programa de diez minutos** {Repertorio, Interpretación, Memoria, Musicalidad}
+**L11.1 · El programa de diez minutos** {!Repertorio, !Interpretación, !Memoria, !Musicalidad, !Polifonía, !Postura}
 1. Obra · Narváez (Renacimiento).
 2. Obra · BWV 999 o Santiago de Murcia (Barroco).
 3. Obra · Diabelli (Clasicismo).
 4. Obra · Llobet, Barrios o *Marieta*.
 5. Ejercicio · Tocarlo sin parar pase lo que pase; grabarse.
 
-**L11.2 · La prueba corta** {Escalas, MD, Trémolo, Lectura, Oído, Teoría, Armonía}
+**L11.2 · La prueba corta** {!Escalas, !MD, !Trémolo, !Lectura, !Oído, !Teoría, !Armonía, !Ligados}
 1. Técnica · Escala de tres octavas; trémolo; ligados largos · T · ⏱.
-2. Primera vista · En 5/8 · 𝄞.
+2. Primera vista · Ocho compases en 5/8, hasta la V posición · 𝄞.
 3. Oído · Intervalos con las 7.ª; triada aumentada; cadencia rota; ¿adónde modula?; la voz de abajo · ✎ · ♪.
 4. Teoría · Modos, danzas, forma sonata y secuencias · ✎.
 
@@ -322,4 +336,4 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3). **Borrador para su revisión.** Fo
 1. Explicación (guía) · El nivel 5 sigue todas las líneas: todo el mástil, el arpegio extendido, *Recuerdos* entera a tempo, los armónicos artificiales, cuatro voces, un preludio de chelo leído, la sexta aumentada y la modulación lejana, el tritono y las progresiones de cuatro acordes al oído, y un programa de quince minutos.
 
 ## Ejercicios importantes del nivel
-E-N4-01 y 03 a 07. **E-N4-07** (el trémolo con cejilla) era el E-N5-03 de la versión 2: baja un nivel con la parte en La menor de *Recuerdos*. La escala en campanela, que era E-N4-02, está ahora en el nivel 3 (E-N3-08).
+E-N4-01 y 03 a 07, con sus fichas en [[ejercicios]].
