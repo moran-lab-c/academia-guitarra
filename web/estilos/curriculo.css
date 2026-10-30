@@ -1,0 +1,72 @@
+/* El recorrido del currículo: nivel, paso, obras y diagramas. Todo color y medida sale de tokens.css. */
+.niveles { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+
+.nivel-cabecera { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 18px; }
+.nivel-ahora { margin: 6px 0 0; font-size: 17px; max-width: 62ch; }
+.nivel-accion { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.btn-continuar { letter-spacing: .04em; min-width: 220px; justify-content: center; text-align: center; }
+.nivel-barra { margin-bottom: 6px; }
+
+.tramos { margin-top: 26px; display: flex; flex-direction: column; gap: 2px; }
+.tramo { border-radius: var(--r-2); }
+.tramo[open] { background: var(--sup-1); }
+.tramo--ahora { box-shadow: inset 0 0 0 1px var(--borde); }
+.tramo__cabecera { display: grid; grid-template-columns: 14px 26px minmax(0, 1fr) auto 72px; gap: 12px; align-items: center; padding: 12px 14px; cursor: pointer; border-radius: var(--r-2); list-style: none; }
+.tramo__cabecera::-webkit-details-marker { display: none; }
+.tramo__cabecera:hover { background: var(--sup-1); }
+.tramo__estado { text-align: right; }
+.puntos { display: flex; gap: 5px; }
+.punto-leccion { display: inline-block; flex: none; width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--texto-apagado); }
+.punto-leccion--hecho { background: var(--texto-2); box-shadow: none; }
+.punto-leccion--practica { background: var(--ocre); box-shadow: none; }
+.punto-leccion--empezada { box-shadow: inset 0 0 0 1.5px var(--verde); }
+.lecciones { padding: 0 14px 12px 60px; display: flex; flex-direction: column; }
+.leccion-fila { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: var(--r-1); color: var(--texto); text-decoration: none; }
+.leccion-fila:hover { background: var(--sup-2); }
+.leccion-fila[aria-current="step"] { color: var(--verde); }
+
+.pantalla-paso { max-width: 920px; margin: 0 auto; }
+.paso-cabecera { margin: 18px 0 18px; }
+.paso-cabecera p { margin: 0 0 4px; }
+.pasos-puntos { display: flex; gap: 7px; margin: 12px 0 0 !important; }
+.paso-punto { display: block; width: 26px; height: 5px; border-radius: 3px; background: var(--sup-3); }
+.paso-punto--hecho { background: var(--texto-3); }
+.paso-punto--ahora { background: var(--verde); }
+.paso-cuerpo { min-height: 240px; }
+.paso-texto { font-size: 18px; line-height: 1.55; max-width: 66ch; margin: 0; }
+.guia { background: var(--sup-1); border-left: 3px solid var(--ocre); border-radius: var(--r-2); padding: 14px 18px; }
+.guia__tipo { color: var(--ocre); margin-bottom: 6px; }
+.paso-pie { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--borde-suave); }
+.obra-enlace { align-self: flex-start; }
+.ficha p { margin: 0; }
+
+.preguntas__opcion.es-correcta, .preguntas__opcion.es-correcta:disabled { background: var(--verde); color: var(--tinta); opacity: 1; }
+.preguntas__opcion.es-fallo, .preguntas__opcion.es-fallo:disabled { background: var(--ocre-fondo); box-shadow: inset 0 0 0 1px var(--ocre); opacity: 1; }
+.atril--pequeno { max-width: 280px; }
+
+.acordes { display: flex; flex-wrap: wrap; gap: 14px; }
+.acorde { margin: 0; background: var(--papel); color: var(--tinta); border-radius: var(--r-2); padding: 10px 12px 6px; box-shadow: var(--sombra-papel); }
+.acorde__nombre { font-weight: 700; text-align: center; margin-bottom: 2px; }
+.acorde__svg { width: 124px; display: block; }
+.acorde__traste { stroke: var(--tinta-2); stroke-width: 1; }
+.acorde__ceja { stroke: var(--tinta); stroke-width: 3; }
+.acorde__cuerda { stroke: var(--tinta-2); stroke-width: 1; }
+.acorde__marca, .acorde__desde { font: 700 11px var(--f-ui); fill: var(--tinta); }
+.acorde__num { font: 700 10px var(--f-ui); fill: #fff; }
+.acorde__dedo--0 { fill: var(--tinta); }
+.acorde__dedo--1, .acorde__cejilla { fill: var(--dedo-1); }
+.acorde__dedo--2 { fill: var(--dedo-2); }
+.acorde__dedo--3 { fill: var(--dedo-3); }
+.acorde__dedo--4 { fill: var(--dedo-4); }
+:root { --dedo-1: #B8442F; --dedo-2: #2C6FA8; --dedo-3: #2F8A57; --dedo-4: #7A4BA3; }
+
+.obra-fila { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) 64px 110px 100px; gap: 12px; align-items: center; padding: 10px 12px; border-radius: var(--r-1); color: var(--texto); text-decoration: none; }
+.obra-fila:hover { background: var(--sup-1); }
+.obra-fila__avance .barra { display: block; }
+.obra-avance { width: 200px; }
+.nivel-fila { display: grid; grid-template-columns: 90px minmax(0, 1fr) 50px 220px; gap: 12px; align-items: center; padding: 10px 12px; border-radius: var(--r-1); color: var(--texto); text-decoration: none; }
+.nivel-fila:hover { background: var(--sup-1); }
+.nivel-fila .barra { display: block; }
+.nivel-fila__parecido { text-align: right; }
+.preguntas .btn { align-self: flex-start; }
+.preguntas > * + * { margin-top: 6px; }

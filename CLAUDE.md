@@ -9,7 +9,7 @@ Claude Code lee este archivo al empezar cada sesión, en este equipo o en la nub
 - **Veredicto propuesto de la Fase 3:** APROBADA CON OBSERVACIONES.
 - **Las decisiones que le tocan a él** están en `INFORME-FASE-3.md`, apartados J y Q.
 - **La revisión independiente de la interfaz de la Fase 3 quedó sin terminar.** Él decide si se hace.
-- **No se empieza ninguna fase nueva hasta que él lo pida.**
+- **Implementación del currículo V3.1:** empezada el 30/10/2026 con su aprobación. Estado y pendientes en `docs/IMPLEMENTACION-V3.1.md`.
 
 ## Qué leer antes de tocar nada
 
@@ -33,6 +33,14 @@ Claude Code lee este archivo al empezar cada sesión, en este equipo o en la nub
   - el validador del catálogo, sin errores;
   - lo visible, comprobado en el navegador.
 - **Si algo pide una decisión arquitectónica importante,** se para y se documenta, sin improvisar.
+
+## El currículo V3.1 (aprobado y congelado el 30/10/2026)
+
+- `docs/curriculo/` es la **fuente de verdad**. No hay más auditorías ni rediseños; solo se corrigen errores objetivos que impidan implementar.
+- `contenido/curriculo/` se genera con `node herramientas/generar-curriculo.mjs`. No se edita a mano: una prueba exige que coincida con los documentos.
+- La experiencia principal es Curso → Tramo → Lección → Paso → «Continuar». Hoy, Diario, Profesor, dominio y comprobaciones en frío **no se ven**; su lógica sigue por dentro.
+- Lo marcado *por verificar* no se da por verificado sin comprobar la fuente. No se inventa contenido.
+- Las reglas de abajo siguen vigentes salvo lo que cambia el apartado 14 del maestro.
 
 ## Reglas cerradas (no se cambian sin que él lo diga)
 

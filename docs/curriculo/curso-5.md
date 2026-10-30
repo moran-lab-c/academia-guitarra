@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Nivel 5
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** Formato y leyenda: los de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.** Formato y leyenda: los de [[curso-1]].
 
 ## Ficha del nivel
 - **Se parece a:** RCM 8 · 4.º de Profesionales **[Estimación]**. Es una referencia para calibrar; esta academia no prepara para ningún examen. Es el repertorio de 4.º de Profesionales de La Rioja: *Recuerdos*, *Julia Florida*, Villa-Lobos *Preludio n.º 1*, las *Folías*, *Conde Claros* y Weiss **[Dato]**.

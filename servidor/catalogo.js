@@ -10,6 +10,7 @@ export function cargarContenido(dir) {
   for (const archivo of listar(dir)) {
     const rel = path.relative(dir, archivo).replaceAll('\\', '/');
     if (rel.startsWith('notacion/')) continue; // la notación se carga aparte, al abrir cada obra o ejercicio
+    if (rel.startsWith('curriculo/')) continue; // el currículo V3.1 va por /api/curriculo
     let datos;
     try { datos = JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch (e) { errores.push(`${rel}: no es JSON válido (${e.message})`); continue; }
     const tipo = rel === 'areas.json' ? () => 'area' : e => tipoDe(e.id);
@@ -33,3 +34,6 @@ function listar(dir) {
     return e.isDirectory() ? listar(p) : e.name.endsWith('.json') ? [p] : [];
   }).sort();
 }
+
+// El currículo aprobado, ya convertido a datos (herramientas/generar-curriculo.mjs).
+export const cargarCurriculo = dir => JSON.parse(fs.readFileSync(path.join(dir, 'curriculo', 'clasica.json'), 'utf8'));

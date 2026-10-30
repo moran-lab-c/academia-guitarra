@@ -2,18 +2,20 @@
 // aquí solo hay una copia de trabajo y, si el servidor no responde, lo pendiente de guardar.
 import { indexar, conPropio } from '../../logica/catalogo.js';
 import { contexto } from '../../logica/progreso.js';
+import { indexarCurriculo } from '../../logica/curriculo.js';
 
 const CAB = { 'Content-Type': 'application/json', 'x-academia': '1' };
 const EVENTOS_PENDIENTES = 'academia.eventosPendientes';
 const ESTADO_PENDIENTE = 'academia.estadoPendiente';
 
-const d = { entidades: [], erroresCatalogo: [], cat: null, estado: null, rev: 0, eventos: [], conectado: true, aviso: null };
+const d = { indice: null, entidades: [], erroresCatalogo: [], cat: null, estado: null, rev: 0, eventos: [], conectado: true, aviso: null };
 const oyentes = new Set();
 let ctxCache = null, pendientes = [], guardando = false, alCambiarConexion = () => {};
 
 export const datos = () => d;
 export const suscribir = fn => oyentes.add(fn);
 export const vigilarConexion = fn => { alCambiarConexion = fn; };
+export const curriculo = () => d.indice;
 export const ctx = () => (ctxCache ??= contexto(d.cat, d.estado, d.eventos));
 function avisar() { ctxCache = null; for (const fn of oyentes) fn(); }
 
@@ -25,7 +27,8 @@ async function api(ruta, op = {}) {
 }
 
 export async function cargar() {
-  const [cat, est, ev] = await Promise.all([api('/catalogo'), api('/estado'), api('/eventos')]);
+  const [cat, est, ev, cur] = await Promise.all([api('/catalogo'), api('/estado'), api('/eventos'), api('/curriculo')]);
+  d.indice = indexarCurriculo(cur);
   Object.assign(d, { entidades: cat.entidades, erroresCatalogo: cat.errores, estado: est.estado, rev: est.rev, eventos: ev.eventos });
   rehacerCatalogo();
   recuperarPendientes();

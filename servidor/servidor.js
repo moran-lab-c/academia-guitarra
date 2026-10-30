@@ -8,7 +8,7 @@ import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { crearAlmacen, ErrorUsuario, ErrorBloqueado } from './almacen.js';
-import { cargarContenido } from './catalogo.js';
+import { cargarContenido, cargarCurriculo } from './catalogo.js';
 import { ESQUEMA } from '../logica/esquema.js';
 import { dia } from '../logica/fechas.js';
 
@@ -54,6 +54,7 @@ async function api(req, res, url, almacen) {
   switch (clave) {
     case 'GET /api/salud': return json(res, 200, { ok: true, esquema: ESQUEMA, datos: almacen.dir });
     case 'GET /api/catalogo': return json(res, 200, cargarContenido(path.join(APP, 'contenido')));
+    case 'GET /api/curriculo': return json(res, 200, cargarCurriculo(path.join(APP, 'contenido')));
     case 'GET /api/estado': return json(res, 200, almacen.leerEstado());
     case 'PUT /api/estado': {
       const { rev, estado } = await cuerpoJSON(req);

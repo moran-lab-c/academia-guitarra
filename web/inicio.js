@@ -16,6 +16,10 @@ import profesor from './vistas/profesor.js';
 import diario from './vistas/diario.js';
 import ajustes from './vistas/ajustes.js';
 import evaluaciones from './vistas/evaluaciones.js';
+import nivel from './vistas/nivel.js';
+import aprender, { repasar } from './vistas/aprender.js';
+import obras, { obra as obraCurriculo } from './vistas/obras.js';
+import miProgreso from './vistas/miProgreso.js';
 
 // Iconos de trazo (20×20, currentColor). Cada entrada: [destino, texto, trazo, direcciones que lo dejan marcado].
 const ICONOS = {
@@ -28,14 +32,11 @@ const ICONOS = {
   profesor: '<circle cx="10" cy="7" r="3"/><path d="M4 17c0-3.3 2.7-5 6-5s6 1.7 6 5"/>',
   ajustes: '<path d="M4 6h12M4 14h12"/><circle cx="8" cy="6" r="2" fill="var(--carril)"/><circle cx="13" cy="14" r="2" fill="var(--carril)"/>',
 };
+// Lo que el alumno ve: Curso, Obras, Progreso y Ajustes. El resto de pantallas siguen existiendo por dentro, sin enlace aquí.
 const CARRIL = [
-  ['/', 'Hoy', 'hoy', ['/', '/hoy']],
-  ['/curso', 'Curso', 'curso', ['/curso', '/paso', '/ejercicio', '/competencia', '/ruta']],
-  ['/repertorio', 'Obras', 'obras', ['/repertorio', '/obra']],
-  ['/biblioteca', 'Biblioteca', 'biblioteca', ['/biblioteca', '/area']],
+  ['/curso', 'Curso', 'curso', ['/', '/curso', '/aprender', '/repaso', '/paso', '/ejercicio', '/competencia', '/ruta']],
+  ['/obras', 'Obras', 'obras', ['/obras', '/obra', '/repertorio', '/biblioteca', '/area']],
   ['/progreso', 'Progreso', 'progreso', ['/progreso']],
-  ['/diario', 'Diario', 'diario', ['/diario']],
-  ['/profesor', 'Profesor', 'profesor', ['/profesor']],
   ['/ajustes', 'Ajustes', 'ajustes', ['/ajustes', '/evaluaciones']],
 ];
 const PROGRAMAS = [['clasica', 'Clásico', 'Programa clásico'], ['flamenca', 'Flamenco', 'Programa flamenco']];
@@ -53,11 +54,15 @@ const programaActual = () => {
   return p.programaPrincipal ?? p.rutaPrincipal ?? 'clasica';
 };
 
-ruta('/', hoy);
+ruta('/', nivel);
+ruta('/aprender/:id', aprender);
+ruta('/repaso/:id', repasar);
+ruta('/obras', obras);
+ruta('/obras/:id', obraCurriculo);
 ruta('/hoy', hoy);
 ruta('/hoy/:min', hoy);
-ruta('/curso', curso);
-ruta('/curso/:id', curso);
+ruta('/curso', nivel);
+ruta('/curso/:id', params => (params.id.startsWith('nivel:') ? nivel(params) : curso(params)));
 ruta('/paso/:id', paso);
 ruta('/obra/:id', obra);
 ruta('/ejercicio/:id', ejercicio);
@@ -65,7 +70,8 @@ ruta('/competencia/:id', competencia);
 ruta('/area/:area', area);
 ruta('/biblioteca', biblioteca);
 ruta('/repertorio', repertorio);
-ruta('/progreso', progreso);
+ruta('/progreso', miProgreso);
+ruta('/progreso-detalle', progreso);
 ruta('/diario', diario);
 ruta('/profesor', profesor);
 ruta('/ajustes', ajustes);
@@ -91,7 +97,7 @@ const botonesPrograma = PROGRAMAS.map(([valor, texto, nombre]) => ({
 }));
 const grupoPrograma = h('div', { class: 'rail-programa', role: 'group', 'aria-label': 'Programa' }, botonesPrograma.map(b => b.el));
 menu.replaceChildren(
-  h('a', { class: 'rail-logo', href: '#/', 'aria-label': 'Academia de guitarra, ir a Hoy' }, 'A'),
+  h('a', { class: 'rail-logo', href: '#/', 'aria-label': 'Academia de guitarra, ir al curso' }, 'A'),
   grupoPrograma,
   ...enlacesCarril.map(e => e.el));
 document.getElementById('salto')?.addEventListener('click', e => { e.preventDefault(); vista.focus(); });

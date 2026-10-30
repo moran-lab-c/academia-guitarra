@@ -8,6 +8,8 @@ created: 2026-10-24
 
 Cómo está hecha la app de la academia de guitarra: tecnología, carpetas, módulos, datos, planificador y lo que funciona ya. La parte pedagógica (programas, cursos, ruta, dominio, lectura, «¿Qué hago hoy?») está en [[Plan de la academia]]. Índice: [[Academia]].
 
+**Estado (30/10/2026):** sobre esto se ha construido la experiencia del currículo V3.1 (Curso → Tramo → Lección → Paso → Continuar): `docs/IMPLEMENTACION-V3.1.md`. La navegación descrita abajo (Hoy, Diario, Profesor) sigue existiendo por dentro, sin enlace en el carril.
+
 **Estado (29/10/2026, Fase 3, tras las revisiones independientes):** notación real con VexFlow (partitura, tablatura y las dos unidas, con su selector), metrónomo integrado en la práctica, evaluación inicial por áreas con «Mi punto de partida» y el contenido de los tramos 3-5 del curso 1. Detalle y veredicto en `INFORME-FASE-3.md`; plan técnico en `docs/PLAN-FASE-3.md`.
 
 **Estado anterior (25/10/2026, madrugada):** Fase 2 empezada de forma controlada tras su aprobación (B+, programas, Curso → Ruta → Paso, obras conectadas a la ruta, obra final, repasos con prioridad controlada, pasos visibles aunque no recomendados, partitura y tablatura permanentes). Hecha la parte que pidió: componentes B+, navegación, Curso → Ruta → Paso, Obra → necesidades → ejercicios, estados visuales y la base de «¿Qué hago hoy?». **64 pruebas automáticas en verde** y todas las pantallas probadas en el navegador. Técnicamente válido; lo artístico lo aprueba él. Lo que falta, en «Pendiente».

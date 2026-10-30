@@ -4,9 +4,9 @@ project: personal
 type: plan
 created: 2026-10-30
 ---
-# Academia de guitarra: currículo maestro, versión 3.1 (candidata a aprobación)
+# Academia de guitarra: currículo maestro, versión 3.1 (aprobada)
 
-**Estado: candidata a aprobación. No se ha tocado el código, la interfaz, los datos ni el JSON de producción.** Sale de la auditoría del 30/10/2026 sobre la versión 3: [[AUDITORIA-V3]]. Las versiones anteriores y lo que cambió, en `v2/` y `v1/`.
+**Estado: aprobada y congelada el 30/10/2026. Es la fuente de verdad de la implementación.** Solo se corrigen errores objetivos que impidan implementar. Sale de la auditoría del 30/10/2026 sobre la versión 3: [[AUDITORIA-V3]]. Las versiones anteriores y lo que cambió, en `v2/` y `v1/`.
 
 | Documento | Qué contiene |
 |---|---|
@@ -536,28 +536,24 @@ El escaneo de IMSLP lo tiene que descargar usted, porque pide una verificación 
 
 ---
 
-## 14. Decisiones que necesita tomar usted
-1. **Siete niveles**, con la justificación del apartado 5.1, ahora basada en el RCM y el conservatorio.
-2. **Los nombres «Nivel 1 … Nivel 7»**, sin subtítulo, y la equivalencia solo en Progreso (5.2).
-3. **El tramo como unidad de formación con su música** y la regla de que cada técnica recorra todo el nivel (6 y [[cobertura]]).
-4. **La progresión técnica** del apartado 8, en especial:
-   - la cejilla completa, desde el final del nivel 1;
-   - la velocidad, desde el 3;
-   - la parte en La menor de *Recuerdos* en el 4 y *Una limosna* empezada en el 6.
-5. **La clasificación de obras y la regla de carga** ([[repertorio]], apartados 1 y 2).
-6. **El oído calibrado con el RCM** (apartado 9.6).
-7. **Los estados visibles «Hecho · En práctica · Para repasar»** (10.5). Cambian una regla cerrada: los estados de la app siguen existiendo, pero el alumno ya no los ve.
-8. **Las demás reglas cerradas que cambia el rediseño**, las mismas que en las versiones 1 y 2 ([[CURRICULO-MAESTRO (v1)]], apartado 0.3):
-   - las prioridades del planificador;
-   - la pantalla Profesor;
-   - el dominio y la comprobación en frío visibles;
-   - *Lágrima* como obra final única (ahora es la principal del nivel 1 y entra en su recital).
-9. **Las obras con derechos** (Brouwer, Villa-Lobos, Lauro, Torroba, Falla, Turina): sin edición, la app no puede dar tablatura. ¿Las compra y se transcriben para su uso, o se quedan con la edición en papel?
-10. **Lo marcado [Por verificar]**: se resuelve con la partitura delante, al implementar cada obra. Si una obra no trabaja lo que se le atribuye, entra su alternativa.
+## 14. Decisiones cerradas para la implementación
+David aprobó el currículo completo el 30/10/2026. Lo que estaba abierto queda así:
 
-**Donde no estoy de acuerdo del todo, o veo un riesgo:**
-- **El trémolo desde el nivel 1** no es lo que hace un conservatorio: La Rioja lo pone en Profesionales. Lo mantengo porque él ya hace el trémolo flamenco y sería desaprovecharlo, pero es una decisión, no un dato.
-- **Cantar.** El solfeo cantado es lo que más resistencia suele dar a un adulto. Lo dejo en pasos cortos y siempre ligado a la obra, porque el ABRSM, el RCM y el conservatorio lo trabajan y es lo que hace que la lectura se oiga por dentro.
+| Asunto | Decisión |
+|---|---|
+| Niveles | Siete, llamados «Nivel 1 … Nivel 7», sin subtítulo. La equivalencia solo se ve en Progreso |
+| Estructura | Nivel → Tramo → Lección → Paso, con los tramos con su música |
+| Progresiones y oído | Las de esta versión, tal como están |
+| Obras | La clasificación y la regla de carga de [[repertorio]] |
+| Estados visibles | «Hecho», «En práctica» y «Para repasar». Los demás estados siguen por dentro |
+| Reglas anteriores que cambian | Fuera de la experiencia principal: el planificador, Hoy, Diario, la pantalla Profesor, y el dominio y la comprobación en frío visibles. *Lágrima* deja de ser obra final única. La lógica interna y sus pantallas se conservan sin enlazar |
+| Encargo del profesor | **[Decisión conservadora]** Si hay un encargo activo, una tarjeta encima de «Continuar», que no cambia. Sin pantalla en el carril |
+| Obras con derechos | **[Decisión conservadora]** La app no transcribe esas obras. Muestra la lección y dice que hace falta la edición publicada. Si él aporta la edición, se pueden añadir como contenido propio |
+| Lo marcado [Por verificar] | Sigue así, y se ve como tal, hasta comprobarlo en la fuente. Si una obra no trabaja lo que se le atribuye, entra su alternativa |
+
+**Riesgos que siguen avisados:**
+- **El trémolo desde el nivel 1** no es lo que hace un conservatorio: La Rioja lo pone en Profesionales. Se mantiene porque él ya hace el trémolo flamenco, pero es una decisión, no un dato.
+- **Cantar.** El solfeo cantado va en pasos cortos y siempre ligado a la obra.
 
 ---
 

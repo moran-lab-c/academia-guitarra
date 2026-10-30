@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Nivel 2
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** Formato y leyenda: los de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.** Formato y leyenda: los de [[curso-1]].
 
 ## Ficha del nivel
 - **Se parece a:** RCM 5 · 1.º de Profesionales **[Estimación]**. Es una referencia para calibrar; esta academia no prepara para ningún examen.

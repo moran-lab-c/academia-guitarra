@@ -1,5 +1,7 @@
 // Formato de los datos del usuario (datos/estado.json y datos/historial/*.jsonl).
 // Si cambia, se sube ESQUEMA y se añade su paso en migraciones.js.
+import { validarCurriculo } from './curriculo.js';
+
 export const ESQUEMA = 2; // 2: «ruta» (clásica/flamenca) pasa a llamarse «programa»; la ruta es el camino de cada curso
 export const FORMATO_EXPORTACION = 'academia-guitarra';
 
@@ -55,6 +57,7 @@ export function validarEstado(e) {
   if (!Number.isInteger(e.esquema) || e.esquema < 1) err.push('Falta la versión del formato (esquema)');
   for (const k of ['perfil', 'preferencias', 'obras', 'focos', 'contenidoPropio']) if (!esObjeto(e[k])) err.push(`«${k}» debe ser un objeto`);
   if (e.ajustes != null && !esObjeto(e.ajustes)) err.push('«ajustes» debe ser un objeto');
+  if (e.curriculo != null) err.push(...validarCurriculo(e.curriculo)); // el progreso por el currículo V3.1; opcional, sin cambio de esquema
   if (e.formatos != null && (!esObjeto(e.formatos) || Object.values(e.formatos).some(f => !VISTAS.includes(f)))) err.push('«formatos» solo admite partitura, tablatura o ambas');
   for (const k of ['tareasProfesor', 'objetivos']) if (!Array.isArray(e[k])) err.push(`«${k}» debe ser una lista`);
   if (esObjeto(e.obras)) for (const [id, o] of Object.entries(e.obras)) {

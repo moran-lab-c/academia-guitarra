@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Nivel 1
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** La leyenda de los pasos está en el maestro, apartado 5.
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.** La leyenda de los pasos está en el maestro, apartado 5.
 
 **Cómo se lee:**
 - Cada lección lleva entre llaves las áreas que trabaja. Con ellas se genera la matriz de [[cobertura]]; el alumno no las ve.

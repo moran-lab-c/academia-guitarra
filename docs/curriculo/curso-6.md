@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Nivel 6
 
-Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Candidata a aprobación. para su revisión.** Formato y leyenda: los de [[curso-1]].
+Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.** Formato y leyenda: los de [[curso-1]].
 
 ## Ficha del nivel
 - **Se parece a:** RCM 9 · 5.º de Profesionales **[Estimación]**. Es una referencia para calibrar; esta academia no prepara para ningún examen. Es el repertorio de 5.º de Profesionales de La Rioja: *Capricho árabe*, Villa-Lobos *Estudio n.º 1*, BWV 997, Giuliani op. 107, la *Sonata* op. 15b de Sor, Weiss *L'infidèle*, Falla y Turina **[Dato]**.
