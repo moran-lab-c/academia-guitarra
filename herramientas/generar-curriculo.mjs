@@ -200,7 +200,7 @@ function obras() {
   const anadir = (o, n) => {
     const nombre = nombreObra(o.nombre);
     if (o.nombre.startsWith('*Recuerdos*')) { nombre.compositor = 'Tárrega'; nombre.titulo = 'Recuerdos de la Alhambra, parte en La menor'; }
-    if (o.nombre.startsWith('Su ')) { nombre.compositor = 'Suya'; nombre.titulo = o.nombre.replace('Su ', '').replaceAll('*', ''); }
+    if (o.nombre.startsWith('Su ')) { nombre.compositor = null; nombre.titulo = o.nombre.replace('Su ', '').replaceAll('*', ''); }
     if (/^Händel/.test(o.nombre)) nombre.titulo = 'Passacaglia';
     const clave = `${n}|${NORMAL(`${nombre.compositor} ${nombre.titulo}`)}`;
     if (visto.has(clave)) return;

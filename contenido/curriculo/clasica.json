@@ -1269,7 +1269,7 @@
          "id": "n1.t6.l3.p3",
          "tipo": "Obra conocida",
          "texto": "Tu *Estudio en Mi menor*, con la nota destacada.",
-         "obra": "o1-suya-estudio-en-mi-menor"
+         "obra": "o1-estudio-en-mi-menor"
         },
         {
          "id": "n1.t6.l3.p4",
@@ -13374,9 +13374,9 @@
    ]
   },
   {
-   "id": "o1-suya-estudio-en-mi-menor",
+   "id": "o1-estudio-en-mi-menor",
    "nivel": 1,
-   "compositor": "Suya",
+   "compositor": null,
    "titulo": "Estudio en Mi menor",
    "tipo": "conocida",
    "tipoTexto": "Conocida",
