@@ -33,10 +33,11 @@ const muestra = midi => {
 const preparar = midis => Promise.all([...new Set(midis)].map(muestra));
 
 // Suena durante «duracion» segundos y se apaga en poco tiempo, como una cuerda que se apaga con el dedo.
-function nota(buffers, midi, cuando, duracion, volumen = 0.85) {
+function nota(buffers, midi, cuando, duracion, volumen = 0.85, cents = 0) {
   const n = Math.min(NOTA_MAX, Math.max(NOTA_MIN, midi));
   const src = audio.createBufferSource(), vol = audio.createGain();
   src.buffer = buffers.get(n);
+  if (cents) src.detune.value = cents;
   const fin = cuando + Math.max(0.08, Math.min(duracion, src.buffer.duration - 0.2));
   vol.gain.setValueAtTime(volumen, cuando);
   vol.gain.setValueAtTime(volumen, fin);
@@ -53,7 +54,8 @@ const mapaDe = async midis => {
 };
 
 // secuencia: [[midi, …], …], cada elemento suena a la vez (un acorde) o, con arpegiado, nota a nota de grave a agudo.
-export function tocar(secuencia, { duracion = 0.8, arpegiado = false, destacar = null } = {}) {
+// desafinar: cuántos cents se desvía la última nota de cada grupo (para oír los batidos).
+export function tocar(secuencia, { duracion = 0.8, arpegiado = false, destacar = null, desafinar = 0 } = {}) {
   contexto();
   return mapaDe(secuencia.flat()).then(buffers => {
     let t = audio.currentTime + 0.03;
@@ -61,7 +63,7 @@ export function tocar(secuencia, { duracion = 0.8, arpegiado = false, destacar =
       const paso = arpegiado ? 0.14 : RASGUEO;
       // destacar: los grupos que suenan más fuertes que los demás.
       const volumen = !destacar ? undefined : destacar.includes(g) ? 1 : 0.32;
-      grupo.forEach((midi, i) => nota(buffers, midi, t + i * paso, duracion + (grupo.length - 1 - i) * paso + (grupo.length > 1 ? 0.5 : 0), volumen));
+      grupo.forEach((midi, i) => nota(buffers, midi, t + i * paso, duracion + (grupo.length - 1 - i) * paso + (grupo.length > 1 ? 0.5 : 0), volumen, i === grupo.length - 1 ? desafinar : 0));
       t += duracion + (arpegiado ? 0.14 * (grupo.length - 1) : 0);
     });
   }).catch(e => console.error('No se ha podido cargar el sonido:', e.message));

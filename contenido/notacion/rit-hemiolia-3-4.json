@@ -1,13 +1,124 @@
 {
-  "titulo": "La hemiolia en 3/4 (dos compases que suenan como uno de 3/2, antes del final)",
-  "compas": "3/4",
-  "armadura": "C",
-  "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
-  "compases": [
-    {"voces":[[{"d":"4","c":5,"t":0,"art":["acento"]},{"d":"4","c":5,"t":0},{"d":"4","c":5,"t":0}]]},
-    {"voces":[[{"d":"4","c":5,"t":0,"art":["acento"]},{"d":"4","c":5,"t":0},{"d":"4","c":5,"t":0}]]},
-    {"voces":[[{"d":"2","c":5,"t":0,"art":["acento"]},{"d":"4","c":5,"t":0,"art":["acento"],"tie":true}]]},
-    {"voces":[[{"d":"4","c":5,"t":0},{"d":"2","c":5,"t":0,"art":["acento"]}]]},
-    {"voces":[[{"d":"2","c":5,"t":0,"p":true,"art":["acento"]}]]}
-  ]
+ "titulo": "La hemiolia en 3/4 (dos compases que suenan como uno de 3/2, antes del final)",
+ "compas": "3/4",
+ "armadura": "C",
+ "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "art": [
+       "acento"
+      ],
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "art": [
+       "acento"
+      ],
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "art": [
+       "acento"
+      ],
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "art": [
+       "acento"
+      ],
+      "tie": true,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "art": [
+       "acento"
+      ],
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "p": true,
+      "art": [
+       "acento"
+      ],
+      "mano": "p"
+     }
+    ]
+   ]
+  }
+ ]
 }

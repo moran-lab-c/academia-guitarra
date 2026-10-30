@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs><marker id="f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#3DFF6E"/></marker></defs>
+  <!-- Las cuerdas vistas de frente, como si se cortaran: el dedo baja, atraviesa y sigue. -->
+  <g>
+    <text x="150" y="24" fill="#E6E3DC" font-size="16" font-weight="700" text-anchor="middle">Apoyando</text>
+    <path d="M30 150 H 280" stroke="#3A3A36" stroke-width="2"/>
+    <circle cx="90" cy="130" r="9" fill="#D9A54A"/><circle cx="170" cy="130" r="9" fill="#8F8E89"/>
+    <text x="90" y="170" fill="#D9A54A" font-size="13" text-anchor="middle">La que tocas</text><text x="170" y="170" fill="#B4B1A8" font-size="13" text-anchor="middle">La vecina grave</text>
+    <path d="M60 70 C 66 100 88 112 108 112 C 130 112 148 112 160 116" fill="none" stroke="#3DFF6E" stroke-width="3" marker-end="url(#f)"/>
+    <text x="150" y="196" fill="#B4B1A8" font-size="13" text-anchor="middle">El dedo atraviesa la cuerda</text>
+    <text x="150" y="214" fill="#B4B1A8" font-size="13" text-anchor="middle">y se queda sobre la vecina</text>
+  </g>
+  <g transform="translate(330 0)">
+    <text x="150" y="24" fill="#E6E3DC" font-size="16" font-weight="700" text-anchor="middle">Tirando</text>
+    <path d="M30 150 H 280" stroke="#3A3A36" stroke-width="2"/>
+    <circle cx="90" cy="130" r="9" fill="#D9A54A"/><circle cx="170" cy="130" r="9" fill="#8F8E89"/>
+    <text x="90" y="170" fill="#D9A54A" font-size="13" text-anchor="middle">La que tocas</text><text x="170" y="170" fill="#B4B1A8" font-size="13" text-anchor="middle">La vecina grave</text>
+    <path d="M60 70 C 66 100 86 112 106 106 C 138 96 166 70 196 54" fill="none" stroke="#3DFF6E" stroke-width="3" marker-end="url(#f)"/>
+    <text x="150" y="196" fill="#B4B1A8" font-size="13" text-anchor="middle">El dedo pasa por encima de la vecina</text>
+    <text x="150" y="214" fill="#B4B1A8" font-size="13" text-anchor="middle">y sigue hacia la palma</text>
+  </g>
+</svg>

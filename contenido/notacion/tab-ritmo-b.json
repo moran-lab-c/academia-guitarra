@@ -1,0 +1,53 @@
+{
+ "titulo": "Los mismos números: segunda versión",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 1,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 3,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 1,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  }
+ ]
+}

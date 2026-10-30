@@ -1,0 +1,54 @@
+{
+ "titulo": "Una frase de la escala de Do",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 3,
+      "dedo": 3,
+      "mano": "m"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 1,
+      "t": 3,
+      "dedo": 3,
+      "mano": "i"
+     }
+    ]
+   ]
+  }
+ ]
+}

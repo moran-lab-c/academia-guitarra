@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <!-- El dedo visto de lado: la yema toca primero y la uña sobresale 1-2 mm. -->
+  <path d="M30 70 H 300 C 360 70 396 104 396 136 C 396 160 372 176 340 176 H 30 Z" fill="#6E5A4B"/>
+  <path d="M250 70 H 330 C 378 74 420 104 428 150 L 396 146 C 390 118 356 92 320 90 L 250 90 Z" fill="#E6E3DC"/>
+  <circle cx="404" cy="196" r="9" fill="#D9A54A"/>
+  <text x="418" y="201" fill="#D9A54A" font-size="14">Cuerda</text>
+  <path d="M412 164 L 408 184" stroke="#3DFF6E" stroke-width="2.5"/>
+  <path d="M470 120 H 436" stroke="#B4B1A8" stroke-width="1.5"/>
+  <text x="474" y="116" fill="#E6E3DC" font-size="14">1-2 mm</text>
+  <text x="474" y="134" fill="#B4B1A8" font-size="12">por encima</text>
+  <text x="474" y="150" fill="#B4B1A8" font-size="12">de la yema</text>
+  <text x="120" y="130" fill="#E6E3DC" font-size="15">Yema: amortigua y da cuerpo</text>
+  <text x="256" y="58" fill="#E6E3DC" font-size="15">Uña: da claridad y dirige la cuerda</text>
+</svg>

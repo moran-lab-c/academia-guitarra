@@ -25,7 +25,7 @@ Capturas reales de la app, con datos de prueba y un progreso de ejemplo. Cada en
 ![Paso con partitura y tablatura](docs/capturas/08-paso-partitura-y-tablatura.png)
 
 ## El Tramo 4 del Nivel 1: el tramo de referencia
-Reescrito el 30/10/2026 y pendiente de aprobación como estándar para el resto del curso. Las capturas son con datos de prueba; en las de página entera, la barra lateral aparece desplazada por cómo se hace la captura, no en la app.
+Aprobado el 30/10/2026 como estándar del curso. [Informe del Curso 1 enriquecido](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/INFORME-CURSO-1.md). Las capturas son con datos de prueba; en las de página entera, la barra lateral aparece desplazada por cómo se hace la captura, no en la app.
 
 - [Contenido del tramo, paso a paso](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/contenido/curriculo/enriquecido/n1-t4.json)
 - [Auditoría de la versión anterior](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/AUDITORIA-TRAMO-4.md)

@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Enriquecimiento del contenido
 
-Cómo se convierte un paso del currículo V3.1 en material de estudio completo, sin tocar el currículo congelado. El **Tramo 4 del Nivel 1** es el tramo de referencia. Su primera versión no se aprobó (`docs/AUDITORIA-TRAMO-4.md`) y se reescribió entera; la segunda está pendiente de su revisión. **No se enriquece ningún otro tramo hasta que él lo apruebe.**
+Cómo se convierte un paso del currículo V3.1 en material de estudio completo, sin tocar el currículo congelado. El **Tramo 4 del Nivel 1** es el tramo de referencia, aprobado el 30/10/2026 tras reescribirlo (`docs/AUDITORIA-TRAMO-4.md`): un estándar, no una plantilla. El Curso 1 se enriquece tramo a tramo; `docs/CONCEPTOS-CURSO-1.md` dice dónde se enseña cada concepto por primera vez, y `docs/INFORME-CURSO-1.md`, cómo va.
 
 ## El estándar
 Primero enseñar, después mostrar, hacer, escuchar, comprobar y aplicar. No se presupone nada porque el currículo lo nombre, ni se pregunta lo que no se ha explicado. Cada concepto responde: qué es, cómo se construye, por qué, para qué, dónde está en la guitarra, cómo se toca, cómo se oye, cómo saber si va bien y dónde vuelve. Esa lista es una comprobación interna, no una plantilla en pantalla. Las pruebas no bastan: el criterio es si lo entiende alguien sin conocimientos previos.
@@ -14,7 +14,7 @@ Primero enseñar, después mostrar, hacer, escuchar, comprobar y aplicar. No se 
 ## Cómo está montado
 - **Contenido:** `contenido/curriculo/enriquecido/*.json`, un archivo por tramo. Cada paso es una lista de bloques o, si necesita ir por partes, de pantallas: se avanza con «Siguiente» y el botón del paso sale al final, sin cambiar los 22 pasos del currículo. Sin plantilla. `docs/curriculo/` y `clasica.json` no cambian; el servidor los junta al servir `/api/curriculo`.
 - **Un paso sin enriquecer** sigue mostrando su texto de siempre. **Un repaso** muestra la versión corta.
-- **Bloques** (`logica/bloques.js` los valida; `web/componentes/bloques.js` los dibuja). Para enseñar: texto, concepto, pasos, lista, tabla, grados, dedos, anatomia, errores, bien, reaparece, guia, ejercicio, obra. Para ver y oír: mastil, acordes, pentagrama, notacion, escuchar, progresion, pista, metronomo. Para comprobar (`web/componentes/actividades.js`): elige (también de oído o en partitura), ordenar, completar, localizar, preguntas.
+- **Bloques** (`logica/bloques.js` los valida; `web/componentes/bloques.js` los dibuja). Para enseñar: texto, concepto, pasos, lista, tabla, grados, dedos, anatomia, errores, bien, reaparece, guia, ejercicio, obra. Para ver y oír: mastil, acordes, pentagrama, notacion, escuchar, progresion, pista, metronomo, figura (un esquema de `web/figuras/`). Para comprobar (`web/componentes/actividades.js`): elige (también de oído o en partitura), ordenar, completar, localizar, preguntas.
 - **Datos musicales:** `logica/guitarra.js` calcula notas, intervalos, funciones, duplicadas y dedos comunes. La tabla de un acorde no se escribe a mano. Lo que afirma el texto sobre un acorde se comprueba en `pruebas/enriquecido.test.js`.
 
 ## El mástil y el diagrama animados
@@ -44,4 +44,5 @@ Las notas de `web/sonidos/guitarra/40.mp3` a `88.mp3` salen de **FluidSynth con 
 - El contenido decide los bloques; la extensión no es un objetivo.
 - Lo que dependa de una partitura o edición sigue *por verificar*.
 - Una animación solo donde enseñe algo.
+- Una obra sin notación en la app enlaza su edición, enseña a trabajarla y usa ejercicios propios, que lo dicen. Ningún compás, nota o digitación suya se da sin comprobar.
 - El guía es hoy un recuadro (`guia`); el personaje queda para una fase posterior y no cambiará el contenido.

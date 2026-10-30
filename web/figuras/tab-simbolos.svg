@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 210" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect width="620" height="210" rx="8" fill="#FBFAF7"/>
+  <g stroke="#4A4A47" stroke-width="1"><path d="M24 40 H 596 M24 56 H 596 M24 72 H 596 M24 88 H 596 M24 104 H 596 M24 120 H 596"/></g>
+  <path d="M24 40 V 120 M596 40 V 120" stroke="#1D1D1B" stroke-width="1.5"/>
+  <g font-size="15" font-weight="700" fill="#1D1D1B" text-anchor="middle">
+    <!-- ligado ascendente -->
+    <rect x="80" y="62" width="16" height="18" fill="#FBFAF7"/><text x="88" y="77">0</text>
+    <rect x="130" y="62" width="16" height="18" fill="#FBFAF7"/><text x="138" y="77">2</text>
+    <!-- ligado descendente -->
+    <rect x="240" y="62" width="16" height="18" fill="#FBFAF7"/><text x="248" y="77">2</text>
+    <rect x="290" y="62" width="16" height="18" fill="#FBFAF7"/><text x="298" y="77">0</text>
+    <!-- arrastre -->
+    <rect x="390" y="46" width="16" height="18" fill="#FBFAF7"/><text x="398" y="61">3</text>
+    <rect x="436" y="46" width="16" height="18" fill="#FBFAF7"/><text x="444" y="61">5</text>
+    <!-- armónico -->
+    <rect x="514" y="30" width="44" height="18" fill="#FBFAF7"/><text x="536" y="45">&lt;12&gt;</text>
+  </g>
+  <path d="M90 58 Q 113 40 136 58" fill="none" stroke="#1D1D1B" stroke-width="1.6"/>
+  <path d="M250 58 Q 273 40 296 58" fill="none" stroke="#1D1D1B" stroke-width="1.6"/>
+  <path d="M408 58 L 434 50" stroke="#1D1D1B" stroke-width="1.8"/>
+  <g font-size="13" fill="#1D1D1B" text-anchor="middle" font-weight="700">
+    <text x="113" y="150">Ligado que sube</text><text x="273" y="150">Ligado que baja</text><text x="420" y="150">Arrastre</text><text x="536" y="150">Armónico</text>
+  </g>
+  <g font-size="12" fill="#4A4A47" text-anchor="middle">
+    <text x="113" y="170">Arco, de grave a agudo:</text><text x="113" y="186">el dedo cae sobre la cuerda</text>
+    <text x="273" y="170">Arco, de agudo a grave:</text><text x="273" y="186">el dedo tira de la cuerda</text>
+    <text x="420" y="170">Raya inclinada: el dedo</text><text x="420" y="186">resbala sin soltar</text>
+    <text x="536" y="170">Número entre &lt; &gt;:</text><text x="536" y="186">se roza, no se pisa</text>
+  </g>
+</svg>

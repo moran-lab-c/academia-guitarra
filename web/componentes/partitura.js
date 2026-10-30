@@ -167,7 +167,8 @@ export function dibujar(VF, plan, vista, ancho) {
             const tn = n.silencio ? new GhostNote({ duration: n.duracion, dots: n.puntillo ? 1 : 0 })
               : new TabNote({ positions: n.tab.map(x => ({ str: x.cuerda, fret: x.traste })), duration: n.duracion, dots: n.puntillo ? 1 : 0 }, !conPartitura);
             if (!conPartitura && !n.silencio) tn.setStemDirection(-1); // en la tablatura sola, el ritmo va debajo
-            if (!n.silencio && n.mano) tn.addModifier(new Annotation(n.mano).setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(Annotation.VerticalJustify.BOTTOM), 0);
+            // Con dos voces, la mano derecha va en filas fijas (abajo), para que no se pisen.
+            if (!n.silencio && n.mano && !dosVoces) tn.addModifier(new Annotation(n.mano).setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(Annotation.VerticalJustify.BOTTOM), 0);
             if (!n.silencio && !conPartitura && k === 0 && v === 0 && m.pos) tn.addModifier(new Annotation(m.pos).setFont('Academico', 12, 'bold').setVerticalJustification(Annotation.VerticalJustify.TOP), 0);
             listaT.push(tn);
           }
@@ -194,13 +195,16 @@ export function dibujar(VF, plan, vista, ancho) {
       vigas.forEach(b => b.setContext(ctx).draw());
       // Encima de la tablatura, una línea con el dedo de la mano izquierda, en su color; encima de todo, el acorde; debajo, el pulso.
       // Van en una fila fija, sin mezclarse con los números de los trastes.
-      for (const x of notasLinea.filter(y => y.compas === c.indice)) {
+      const delCompas = notasLinea.filter(y => y.compas === c.indice);
+      const dosFilas = delCompas.some(y => y.v === 1);
+      for (const x of delCompas) {
         const ancla = x.tn ?? x.sn;
         if (!ancla || x.n.silencio) continue;
         const xn = ancla.getAbsoluteX();
         ctx.save();
-        if (tab && x.n.dedo) { ctx.setFont('Archivo, sans-serif', 12, 'bold'); ctx.setFillStyle(COLOR_DEDO[x.n.dedo] ?? '#1D1D1B'); ctx.fillText(String(x.n.dedo), xn, tab.getYForLine(0) - 7); }
-        if (x.n.rotulo) { ctx.setFont('Archivo, sans-serif', 13, 'bold'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.rotulo, xn, (stave ?? tab).getYForLine(0) - (stave ? 30 : 22)); }
+        if (tab && x.n.dedo) { ctx.setFont('Archivo, sans-serif', 12, 'bold'); ctx.setFillStyle(COLOR_DEDO[x.n.dedo] ?? '#1D1D1B'); ctx.fillText(String(x.n.dedo), xn, tab.getYForLine(0) - (dosFilas && x.v === 0 ? 20 : 7)); }
+        if (tab && dosFilas && x.n.mano) { ctx.setFont('Academico, serif', 11, 'normal', 'italic'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.mano, xn, tab.getYForLine(5) + (conPartitura ? 12 : 50) + x.v * 12); }
+        if (x.n.rotulo) { ctx.setFont('Archivo, sans-serif', 13, 'bold'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.rotulo, xn, (stave ?? tab).getYForLine(0) - (stave ? 30 : dosFilas ? 34 : 22)); }
         if (plan.conteo && x.v === 0 && tab) {
           const pulso = x.n.inicio, entero = Number.isInteger(pulso);
           if (entero || Number.isInteger(pulso * 2)) { ctx.setFont('Courier Prime, monospace', 11, 'normal'); ctx.setFillStyle('#4A4A47'); ctx.fillText(entero ? String(pulso + 1) : 'y', xn, tab.getYForLine(5) + (conPartitura ? 42 : 76)); }

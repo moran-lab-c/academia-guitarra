@@ -185,3 +185,7 @@ label.bien__item { display: flex; flex-direction: row; gap: 10px; align-items: f
 
 .pentagrama { margin: 0; }
 .atril--pequeno { max-width: 360px; }
+
+.figura { max-width: 560px; }
+.figura img { display: block; width: 100%; height: auto; }
+.figura figcaption { margin-top: 6px; }

@@ -1,0 +1,66 @@
+{"tramo":"n1.t8","nota":"Primera aparición de forma A-B-A, las cuatro memorias y el vibrato (solo de oído). Nada nuevo de teoría: se junta lo que ya hay. La obra sigue fuera de la app.","pasos":{
+"n1.t8.l1.p1":{"bloques":[
+  {"tipo":"obra","id":"o1-tarrega-lagrima","md":"Ya tienes las dos partes. Ahora toca convertirlas en una sola obra."},
+  {"tipo":"concepto","titulo":"La forma A-B-A","md":"La **forma** es cómo está organizada una obra. Aquí, una parte (A), otra que contrasta (B) y la vuelta de la primera (A). Volver a oír lo mismo después de un contraste no es repetirse: al regresar, lo conocido suena distinto, porque ya has pasado por otro sitio."},
+  {"tipo":"tabla","cabecera":["Parte","Tonalidad","Voz principal"],"filas":[["A","Mi mayor","Arriba, notas largas"],["B","Mi menor","Dentro de las corcheas"],["A","Mi mayor","Arriba, notas largas"]]},
+  {"tipo":"pasos","titulo":"Cómo unirlas","items":["Practica solo el enlace de la A a la B: los dos últimos compases y los dos primeros.","Después, el de la B a la A.","Toca la obra entera al tempo de la parte más difícil, no al de la más fácil.","Respeta las repeticiones que indique tu edición."]},
+  {"tipo":"ejercicio","que":"*Lágrima* entera, A-B-A.","porque":"Tocar una obra entera es otra habilidad: mantener la concentración, enlazar y no perder el tempo al cambiar de parte.","atencion":"Solemos correr en la parte fácil y frenar en la difícil. Mantén un solo pulso.","empieza":"Elige el tempo al que te salga la parte más difícil.","sube":"La obra sale entera tres días distintos."},
+  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":54},
+  {"tipo":"bien","items":["Tocas la obra entera sin parar.","El pulso es el mismo en las dos partes.","Los enlaces no se notan."]}]},
+"n1.t8.l1.p2":{"bloques":[
+  {"tipo":"texto","md":"Con el mismo pulso y una armonía muy parecida, las dos partes tienen que sonar a cosas distintas. Eso no sale solo con las notas: hay que decidirlo."},
+  {"tipo":"escuchar","items":[{"etiqueta":"El color de la A: Mi","acorde":"Mi","arpegiado":true},{"etiqueta":"El color de la B: Mi m","acorde":"Mi m","arpegiado":true},{"etiqueta":"Si7 a Mi","acordes":["Si7","Mi"],"duracion":1.5},{"etiqueta":"Si7 a Mi m","acordes":["Si7","Mi m"],"duracion":1.5}]},
+  {"tipo":"tabla","cabecera":["Herramienta","La A podría","La B podría"],"filas":[["Color","Normal, luminoso","Hacia el tasto, más cerrado"],["Dinámica","Melodía cantada, *mf*","Más íntima, algo más *p*"],["Plano","Melodía arriba y acompañamiento atrás","La línea de las corcheas delante"]]},
+  {"tipo":"guia","tipoGuia":"Son ideas, no reglas","md":"Lo único obligatorio es que haya contraste. Cómo lo consigas es tu decisión musical, o la de tu profesor."},
+  {"tipo":"elige","enunciado":"¿Qué es lo que no debería cambiar entre las dos partes?","opciones":["El color","El pulso","La dinámica"],"correcta":1,"porque":"El mismo pulso y otro color: así es el contraste de esta obra.","pista":"¿Qué mantiene unida la obra?"},
+  {"tipo":"bien","items":["Alguien que te oiga notaría el cambio aunque no sepa de música.","Sabes decir qué has cambiado tú."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l5.p1","texto":"el color y la dinámica."},{"paso":"n1.t7.l1.p4","texto":"el homónimo."}]}]},
+"n1.t8.l1.p3":{"bloques":[
+  {"tipo":"texto","md":"Las obras tienen su historia, y no siempre es sencilla. De *Lágrima* existe una edición de 1911 con una tercera sección que casi nadie toca hoy."},
+  {"tipo":"concepto","titulo":"Por qué te cuento esto","md":"Una partitura no siempre es «la» obra: es una versión que alguien publicó. Por eso, a veces, encontrarás diferencias entre ediciones: notas, digitaciones o partes enteras. Cuando eso pase, no es un error de tu vista: pregunta a tu profesor cuál se está usando."},
+  {"tipo":"tabla","cabecera":["Si tus partituras no coinciden","Qué hacer"],"filas":[["Cambia una digitación","Prueba las dos: elige la que te deje la melodía más ligada"],["Cambia una nota","Pregunta: puede ser una errata"],["Sobra una sección","Sigue la versión de tu profesor"]]}]},
+"n1.t8.l2.p1":{"bloques":[
+  {"tipo":"texto","md":"Si siempre tocas de memoria por tablatura, ya sabes qué es la memoria de las manos: y también que falla. Una distracción y no sabes volver. Por eso conviene tener varias memorias a la vez: si una falla, otra te sostiene."},
+  {"tipo":"tabla","cabecera":["Memoria","Qué recuerda","Cómo se entrena"],"filas":[["**Oído**","Cómo suena","Cantar la obra sin guitarra"],["**Vista**","La partitura, y dónde están las manos en el mástil","Escribir o imaginar el compás; tocar mirando el mástil a propósito"],["**Manos**","Lo que hacen los dedos","Repetir, muy despacio, sin mirar"],["**Entendimiento**","La armonía y la forma","Decir el acorde de cada compás sin tocar"]]},
+  {"tipo":"concepto","titulo":"Cuál es la más débil","md":"La de las manos es la que más se usa y la primera que falla por los nervios: es rápida, pero no sabe de dónde viene ni a dónde va. La del entendimiento es la más lenta de construir, y la que te permite volver a entrar cuando algo sale mal."},
+  {"tipo":"elige","enunciado":"En un recital, te pierdes en la mitad de la B. ¿Qué memoria te permite seguir?","opciones":["La de las manos: repetir desde el principio","La del entendimiento: saber qué acorde viene ahora y entrar ahí"],"correcta":1,"porque":"Sabiendo qué viene, puedes reincorporarte sin empezar de nuevo.","pista":"Las manos solo saben seguir desde donde estaban."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t14.l1.p1","texto":"seguir si algo sale mal."}]}]},
+"n1.t8.l2.p2":{"bloques":[
+  {"tipo":"ejercicio","que":"Memorizar *Lágrima* por frases y poder empezar desde cualquiera.","porque":"Si solo la sabes desde el principio, un fallo te obliga a volver atrás.","atencion":"Cierra la partitura solo cuando hayas hecho los otros tres trabajos de memoria.","empieza":"La primera frase de la A, aparte de todo lo demás.","sube":"Te sale empezar desde cualquier frase, a la primera."},
+  {"tipo":"pasos","titulo":"Con cada frase","items":["Cántala sin guitarra (oído).","Di sus acordes sin tocar (entendimiento).","Tócala mirando el mástil y fíjate adónde va cada dedo (vista).","Tócala con los ojos cerrados (manos).","Mañana, sin partitura y sin calentar: ¿sigue ahí?"]},
+  {"tipo":"tabla","cabecera":["Prueba","Qué comprueba"],"filas":[["Empezar en el compás 5","La segunda frase, sin venir de la primera"],["Empezar en la B","Que no dependes del enlace"],["Tocar solo la melodía","Que la conoces aparte de las manos"],["Decir los acordes en voz alta","Que entiendes lo que tocas"]]},
+  {"tipo":"bien","items":["Empiezas desde cualquier frase.","Puedes cantarla entera.","Puedes decir sus acordes sin tocar."]}]},
+"n1.t8.l3.p1":{"bloques":[
+  {"tipo":"texto","md":"La voz principal de la B va dentro de las corcheas, y por eso se pierde con facilidad. Cantarla es la forma más rápida de que tus manos sepan dónde está."},
+  {"tipo":"pasos","titulo":"Cómo hacerlo","items":["Toca la B despacio y escucha la línea que señalaste.","Cántala sola, con la partitura.","Cántala sobre una [grabación](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra).","Tócala cantando a la vez, muy lento."]},
+  {"tipo":"escuchar","items":[{"etiqueta":"La nota de casa: Mi","notas":[[1,0]],"duracion":2},{"etiqueta":"Mi m","acorde":"Mi m"}]},
+  {"tipo":"bien","items":["Cantas la voz principal sin ayuda.","Al tocar, esa línea se oye delante."]}]},
+"n1.t8.l3.p2":{"bloques":[
+  {"tipo":"texto","md":"Contar en voz alta mientras tocas una obra es incómodo y muy útil: descubre los sitios donde te saltas o estiras algo sin darte cuenta."},
+  {"tipo":"tabla","cabecera":["Compás de 3/4 en corcheas","1","y","2","y","3","y"],"filas":[["Se dice","**1**","y","**2**","y","**3**","y"]]},
+  {"tipo":"ejercicio","que":"Tocar la B contando en voz alta.","porque":"Es una forma de comprobar el ritmo sin metrónomo.","atencion":"Si la voz se para o se acelera, ahí hay un problema: esos son los compases que hay que estudiar.","empieza":"♩ = 40.","sube":"Cuentas toda la B sin parar."},
+  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":40},
+  {"tipo":"bien","items":["No hay ningún compás donde se te pare la voz.","Las corcheas son iguales en todos los compases."]}]},
+"n1.t8.l3.p3":{"bloques":[
+  {"tipo":"texto","md":"Si has aprendido la obra sobre todo de memoria, es muy posible que ya no estés leyendo. Aquí se trata de volver a mirar la partitura con otros ojos: leerla mientras suena."},
+  {"tipo":"pasos","titulo":"Dos fases","items":["**Seguir:** pon una grabación y sigue la B en la partitura con el dedo, sin perderte.","**Leer:** escoge dos compases, tapa lo demás y tócalos mirando solo el pentagrama, diciendo las notas."]},
+  {"tipo":"pentagrama","pie":"Recuerda la armadura de Mi menor: un sostenido, Fa♯. Sol, Do y Re se leen sin sostenido salvo que lo lleven delante.","notacion":{"compas":"3/4","armadura":"Em","compasVisible":false,"compases":[{"voces":[[{"d":"2","p":true,"c":3,"t":0}]]}]}},
+  {"tipo":"elige","enunciado":"En Mi menor, escrito con un sostenido en la armadura, ves un Re con ♯ delante. ¿Qué es esa nota?","opciones":["La sensible: 7.ª subida","La 3.ª del acorde","Una errata"],"correcta":0,"porque":"En Mi menor, el Re♯ es la sensible, y por eso no está en la armadura.","pista":"Recuerda Mi menor armónica."},
+  {"tipo":"bien","items":["Sigues la partitura sin perderte.","Lees dos compases sin mirar la mano."]}]},
+"n1.t8.l4.p1":{"bloques":[
+  {"tipo":"concepto","titulo":"El vibrato","md":"El **vibrato** es una pequeña oscilación de la altura de una nota larga: la mano izquierda se mueve y la nota parece respirar. Sirve para que una nota no se apague de golpe y para darle más intensidad. No se hace en todas partes: es una decisión."},
+  {"tipo":"escuchar","items":[{"etiqueta":"Una nota larga, sin vibrato","notas":[[2,5]],"duracion":3}]},
+  {"tipo":"texto","md":"La app no puede tocar un vibrato real: nuestras muestras son estáticas. Se oye mucho mejor en una grabación."},
+  {"tipo":"pasos","titulo":"Compara dos versiones","items":["Elige dos [grabaciones de *Lágrima*](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra+cl%C3%A1sica).","Escucha una nota larga de la melodía, en la A.","¿La nota se mantiene quieta, o se mueve un poco?","¿Vibra enseguida, o al final de la nota? ¿Es rápido o lento?"]},
+  {"tipo":"bien","items":["Reconoces cuándo una nota vibra y cuándo no.","Sabes decir en qué nota lo hace cada intérprete."]}]},
+"n1.t8.l4.p2":{"bloques":[
+  {"tipo":"texto","md":"El vibrato se aprende en el nivel 2. Antes de tocarlo, conviene saber cómo suena. Así, cuando lo empieces, tu oído ya sabrá adónde quiere ir."},
+  {"tipo":"concepto","titulo":"Por qué no se toca ahora","md":"El vibrato exige una mano izquierda suelta, y aún estás consolidando los cambios de posición y la media cejilla. Si lo intentas ya, lo normal es que aprietes. Mientras, lo que puedes hacer es elegir tus notas largas: márcalas a lápiz en la partitura."},
+  {"tipo":"elige","enunciado":"¿Qué mano hace el vibrato?","opciones":["La derecha","La izquierda"],"correcta":1,"porque":"La izquierda mueve ligeramente la nota pisada.","pista":"¿Qué mano puede cambiar la altura?"}]},
+"n1.t8.l4.p3":{"bloques":[
+  {"tipo":"texto","md":"La obra central del nivel. Si sale de memoria, mejor. Si no, no pasa nada: lo importante es tocarla bien."},
+  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["*Lágrima* entera, A-B-A, sin parar.","Se oye el contraste entre las dos partes.","La melodía queda delante en la A y la voz principal, en la B.","De memoria, si puedes."]},
+  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":54},
+  {"tipo":"guia","tipoGuia":"Si ya demuestras esto con otra obra","md":"*Lágrima* no es un examen. Lo que cuenta es lo que sabes hacer: si demuestras estas competencias con otra obra de tu nivel, también vale en el recital."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t8.l1.p1","texto":"si fallan los enlaces."},{"paso":"n1.t8.l2.p2","texto":"si falla la memoria."},{"paso":"n1.t14.l2.p1","texto":"el recital."}]}]}
+}}

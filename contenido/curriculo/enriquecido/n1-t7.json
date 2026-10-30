@@ -1,0 +1,1641 @@
+{
+ "tramo": "n1.t7",
+ "nota": "Primera aparición de escala menor en sus tres formas, sensible, relativo, homónimo, media cejilla, becuadro y primera vista. La parte B de Lágrima sigue fuera de la app: sus compases y digitación están por verificar.",
+ "pasos": {
+  "n1.t7.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "De mayor a menor",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ya sabes construir una escala mayor con T-T-S-T-T-T-S. Oíste en *Lágrima* que la B cambia de color. Ese cambio es el **modo menor**: otro patrón, con la misma nota de partida."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+       ],
+       "filas": [
+        [
+         "**Mi mayor**",
+         "Mi",
+         "Fa♯",
+         "**Sol♯**",
+         "La",
+         "Si",
+         "**Do♯**",
+         "**Re♯**",
+         "Mi"
+        ],
+        [
+         "**Mi menor natural**",
+         "Mi",
+         "Fa♯",
+         "**Sol**",
+         "La",
+         "Si",
+         "**Do**",
+         "**Re**",
+         "Mi"
+        ]
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Mi mayor",
+         "notas": [
+          [
+           6,
+           0
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           6,
+           4
+          ],
+          [
+           5,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           5,
+           4
+          ],
+          [
+           4,
+           1
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.5
+        },
+        {
+         "etiqueta": "Mi menor natural",
+         "notas": [
+          [
+           6,
+           0
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           6,
+           3
+          ],
+          [
+           5,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           5,
+           3
+          ],
+          [
+           4,
+           0
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.5
+        }
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "La menor natural",
+       "md": "Su patrón es **T-S-T-T-S-T-T**. Lo que más se oye es la **3.ª**: en mayor está a dos tonos de la tónica, en menor a un tono y medio. Es la misma diferencia que ya viste entre una triada mayor y una menor."
+      }
+     ]
+    },
+    {
+     "titulo": "El problema de la nota 7",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Recuerda lo que hacía tan estable a la escala mayor: la nota 7 queda a un semitono de la 8 y el oído pide llegar. Se llama **sensible**. En Mi menor natural, esa nota es Re, y está a un tono de Mi: no tira con la misma fuerza."
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Re–Mi: sin sensible",
+         "notas": [
+          [
+           4,
+           0
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.9
+        },
+        {
+         "etiqueta": "Re♯–Mi: con sensible",
+         "notas": [
+          [
+           4,
+           1
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.9
+        }
+       ]
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Forma",
+        "Qué cambia",
+        "Notas de Mi menor",
+        "Para qué"
+       ],
+       "filas": [
+        [
+         "**Natural**",
+         "Nada",
+         "Mi Fa♯ Sol La Si Do Re Mi",
+         "La base"
+        ],
+        [
+         "**Armónica**",
+         "Sube la 7.ª",
+         "Mi Fa♯ Sol La Si Do **Re♯** Mi",
+         "Tener sensible y, con ella, el acorde de Si7"
+        ],
+        [
+         "**Melódica**",
+         "Sube la 6.ª y la 7.ª al subir; al bajar, natural",
+         "Mi Fa♯ Sol La Si **Do♯ Re♯** Mi",
+         "Evitar el salto extraño de Do a Re♯ en una melodía"
+        ]
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Natural",
+         "notas": [
+          [
+           6,
+           0
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           6,
+           3
+          ],
+          [
+           5,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           5,
+           3
+          ],
+          [
+           4,
+           0
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.5
+        },
+        {
+         "etiqueta": "Armónica",
+         "notas": [
+          [
+           6,
+           0
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           6,
+           3
+          ],
+          [
+           5,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           5,
+           3
+          ],
+          [
+           4,
+           1
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.5
+        },
+        {
+         "etiqueta": "Melódica",
+         "notas": [
+          [
+           6,
+           0
+          ],
+          [
+           6,
+           2
+          ],
+          [
+           6,
+           3
+          ],
+          [
+           5,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           5,
+           4
+          ],
+          [
+           4,
+           1
+          ],
+          [
+           4,
+           2
+          ]
+         ],
+         "duracion": 0.5
+        }
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Una sola tonalidad",
+       "md": "No son tres tonalidades distintas: son tres versiones de la misma. En una obra en Mi menor, los compositores usan una u otra según lo que necesiten en cada momento."
+      },
+      {
+       "tipo": "completar",
+       "enunciado": "Completa Mi menor armónica:",
+       "partes": [
+        "Mi – Fa♯ – ",
+        {
+         "correcta": "Sol",
+         "opciones": [
+          "Sol",
+          "Sol♯"
+         ]
+        },
+        " – La – Si – ",
+        {
+         "correcta": "Do",
+         "opciones": [
+          "Do",
+          "Do♯"
+         ]
+        },
+        " – ",
+        {
+         "correcta": "Re♯",
+         "opciones": [
+          "Re",
+          "Re♯"
+         ]
+        },
+        " – Mi"
+       ],
+       "pista": "Es la natural con una sola nota subida: la 7.ª.",
+       "final": "Solo cambia la 7.ª."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t7.l2.p4",
+         "texto": "por qué el Si7 sirve también en menor."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Mi menor en sus tres formas, dos octavas, diciendo qué notas cambian.",
+     "porque": "Tus dedos aprenden la diferencia; y es la escala de la B de *Lágrima* y de tu *Estudio*.",
+     "atencion": "La mano se mueve poco: un dedo por traste. Se suele tropezar en el Re♯ y en el Do♯. Di en voz alta qué forma estás tocando.",
+     "empieza": "♩ = 50 en corcheas, solo las dos primeras formas.",
+     "sube": "Sale sin pararte en Re♯ ni en Do♯."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-mi-menor-3-formas.json",
+     "titulo": "Mi menor: natural, armónica y melódica",
+     "principal": "ambas",
+     "motivo": "Para ver los sostenidos en la partitura.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Natural: {c:1-4}. Armónica: {c:5-8}. Melódica: {c:9-12}.",
+      "Fíjate en la partitura: Re♯ y Do♯ llevan su sostenido delante, porque no están en la armadura."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Al bajar la melódica sigues tocando Do♯ y Re♯.",
+       "arreglo": "Al bajar es natural: Re y Do. Di «baja natural» antes de empezar."
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes decir qué nota cambia en cada forma.",
+      "Sale sin pararte en Re♯ ni en Do♯.",
+      "Suena igual en las dos octavas."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l1.p3",
+       "texto": "lo mismo en La menor."
+      },
+      {
+       "paso": "n1.t14.l3.p1",
+       "texto": "Mi menor armónica en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El mismo patrón, desde otra nota. Si entiendes de dónde sale, no necesitas memorizar una escala nueva: aplicas las reglas."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Forma",
+      "La menor"
+     ],
+     "filas": [
+      [
+       "Natural",
+       "La Si Do Re Mi Fa Sol La"
+      ],
+      [
+       "Armónica: sube la 7.ª",
+       "La Si Do Re Mi Fa **Sol♯** La"
+      ],
+      [
+       "Melódica: suben la 6.ª y la 7.ª",
+       "La Si Do Re Mi **Fa♯ Sol♯** La"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-la-menor-3-formas.json",
+     "titulo": "La menor, una octava, en sus tres formas",
+     "principal": "ambas",
+     "motivo": "Para ver los sostenidos en la partitura.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Natural: {c:1-2}. Armónica: {c:3-4}. Melódica: {c:5-6}.",
+      "Sol♯ está en el traste 1 de la 3.ª; Fa♯, en el traste 4 de la 4.ª."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En La menor armónica, ¿cuál es la sensible?",
+     "opciones": [
+      "Sol",
+      "Sol♯",
+      "Fa♯"
+     ],
+     "correcta": 1,
+     "porque": "Es la 7.ª subida: a un semitono de La.",
+     "pista": "Es la nota que queda a un semitono de la tónica."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tocas las tres formas sin mirar.",
+      "Te sale igual que Mi menor: mismo razonamiento, distintas notas."
+     ]
+    }
+   ]
+  },
+  "n1.t7.l1.p4": {
+   "pantallas": [
+    {
+     "titulo": "Relativo y homónimo",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Cada tonalidad mayor tiene dos familiares menores, y conviene no confundirlos."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "",
+        "Qué comparten",
+        "Ejemplo",
+        "Cómo se encuentra"
+       ],
+       "filas": [
+        [
+         "**Relativo**",
+         "La misma armadura, las mismas notas",
+         "Sol mayor y Mi menor: un sostenido",
+         "Desde la nota 6 de la mayor, o tres semitonos abajo"
+        ],
+        [
+         "**Homónimo**",
+         "La misma tónica, el mismo nombre",
+         "Mi mayor y Mi menor",
+         "Empieza en la misma nota y cambia las demás"
+        ]
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Sol mayor",
+         "notas": [
+          [
+           3,
+           0
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           1
+          ],
+          [
+           2,
+           3
+          ],
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           2
+          ],
+          [
+           1,
+           3
+          ]
+         ],
+         "duracion": 0.45
+        },
+        {
+         "etiqueta": "Mi menor natural (su relativo)",
+         "notas": [
+          [
+           4,
+           2
+          ],
+          [
+           4,
+           4
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           1
+          ],
+          [
+           2,
+           3
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         "duracion": 0.45
+        },
+        {
+         "etiqueta": "Mi mayor (su homónimo)",
+         "notas": [
+          [
+           4,
+           2
+          ],
+          [
+           4,
+           4
+          ],
+          [
+           3,
+           1
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           2
+          ],
+          [
+           2,
+           4
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         "duracion": 0.45
+        }
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Por qué te interesa",
+       "md": "*Lágrima* pasa de Mi mayor a Mi menor: del homónimo. Por eso, aunque cambien varias notas, se siente como el mismo sitio con otra luz. Si pasara al relativo, se sentiría como otro sitio con la misma luz."
+      }
+     ]
+    },
+    {
+     "titulo": "Compruébalo",
+     "bloques": [
+      {
+       "tipo": "elige",
+       "enunciado": "¿Cuál es el relativo menor de Do mayor?",
+       "opciones": [
+        "Do menor",
+        "La menor",
+        "Mi menor"
+       ],
+       "correcta": 1,
+       "porque": "Comparten las siete notas naturales, sin alteraciones. La nota 6 de Do mayor es La.",
+       "pista": "Cuenta hasta la nota 6 de la escala: Do, Re, Mi, Fa, Sol…"
+      },
+      {
+       "tipo": "preguntas",
+       "n": 4
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t7.l4.p1",
+         "texto": "el paso de mayor a menor en *Lágrima*."
+        },
+        {
+         "paso": "n1.t14.l3.p5",
+         "texto": "en la prueba corta."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Hasta ahora has reconocido si una **triada** es mayor o menor. Ahora el oído toca una escala o una frase. La pista es la misma: la **3.ª**. Si suena clara y estable es mayor; si es más sombría, menor."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mi mayor: la triada",
+       "acorde": "Mi"
+      },
+      {
+       "etiqueta": "Mi menor: la triada",
+       "acorde": "Mi m"
+      },
+      {
+       "etiqueta": "Frase en mayor",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         5
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.5
+      },
+      {
+       "etiqueta": "Frase en menor",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         5
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.5
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se escucha",
+     "items": [
+      "No pienses en alegre o triste: es una ayuda, pero engaña.",
+      "Busca la 3.ª nota desde la tónica. Tarárea 1-2-3.",
+      "¿Suena alta y abierta? Mayor. ¿Baja y cerrada? Menor."
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 5
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l1.p2",
+       "texto": "el contraste de las dos partes de *Lágrima*."
+      },
+      {
+       "paso": "n1.t14.l3.p4",
+       "texto": "en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "Mi m: un solo dedo",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ya conoces Mi mayor. Para que sea menor, solo hay que bajar la 3.ª un semitono: de Sol♯ a Sol. En la guitarra es lo más simple posible: **levantar el dedo 1**."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "cambio",
+        "titulo": "De Mi a Mi m",
+        "de": "Mi",
+        "a": "Mi m",
+        "clave": "Em",
+        "textos": {
+         "inicio": "Mi mayor: el Sol♯ está en la 3.ª cuerda, traste 1.",
+         "medio": "Solo el dedo 1 va a moverse. Los demás se quedan.",
+         "fin": "Mi menor: la 3.ª cuerda suena al aire. Sol♯ se ha convertido en Sol."
+        }
+       }
+      },
+      {
+       "tipo": "anatomia",
+       "acorde": "Mi m",
+       "clave": "Em"
+      }
+     ]
+    },
+    {
+     "titulo": "La m",
+     "bloques": [
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "acorde",
+        "titulo": "La m, paso a paso",
+        "acorde": "La m",
+        "clave": "Am"
+       }
+      },
+      {
+       "tipo": "anatomia",
+       "acorde": "La m",
+       "clave": "Am"
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Acorde",
+        "Notas",
+        "Es"
+       ],
+       "filas": [
+        [
+         "La",
+         "La, Do♯, Mi",
+         "Mayor"
+        ],
+        [
+         "La m",
+         "La, **Do**, Mi",
+         "Menor: 3.ª un semitono más baja"
+        ]
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "Si Si7 se te ha olvidado, aquí lo tienes: es el mismo de siempre."
+      },
+      {
+       "tipo": "acordes",
+       "nombres": [
+        "Mi m",
+        "La m",
+        "Si7"
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Mi m",
+         "acorde": "Mi m"
+        },
+        {
+         "etiqueta": "La m",
+         "acorde": "La m"
+        },
+        {
+         "etiqueta": "Si7",
+         "acorde": "Si7"
+        }
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Pones cada uno sin mirar.",
+        "Todas las notas suenan, una a una."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Es la misma historia de Mi–La–Si7–Mi, con Mi y La en menor. **El Si7 no cambia.**"
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Mi m",
+       "g": "i",
+       "papel": "reposo"
+      },
+      {
+       "n": "La m",
+       "g": "iv",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "Si7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Mi m",
+       "g": "i",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La progresión en arpegio, ocho compases, sin cortar el pulso.",
+     "porque": "Es la base de la parte B y conecta con lo que ya tocas en mayor.",
+     "atencion": "En el {c:3}, oye el Re♯ de la 4.ª y el La de la 3.ª. En el {c:4}, el Re♯ sube a Mi y el La baja a Sol.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Ocho compases sin cortar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-mi-m-la-m-si7.json",
+     "titulo": "Mi m–La m–Si7–Mi m",
+     "principal": "tablatura",
+     "motivo": "Es técnica de acordes: tablatura.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El cambio no corta el pulso.",
+      "Se oye la resolución del Re♯ al Mi.",
+      "Suena diferente de la versión en mayor."
+     ]
+    }
+   ]
+  },
+  "n1.t7.l2.p4": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El mismo dominante",
+     "md": "El Si7 tiene las notas **Si, Re♯, Fa♯, La**. El **Re♯** es la sensible de Mi. Y Mi es la tónica tanto de Mi mayor como de Mi menor. Por eso **el mismo acorde lleva a los dos**: uno resuelve el La a Sol♯ y el otro, a Sol."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Antes de seguir, una pregunta. La sensible de Mi es Re♯. ¿Hace falta lo mismo en Mi mayor y en Mi menor?",
+     "opciones": [
+      "Sí: en los dos la 7.ª queda a un semitono de Mi",
+      "No: en menor nunca hay Re♯"
+     ],
+     "correcta": 0,
+     "porque": "Lo acabas de ver: en menor se sube para tener sensible. Es la forma armónica.",
+     "pista": "Vuelve a Mi menor armónica."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Después de Si7",
+      "Re♯ va a",
+      "La va a",
+      "Resultado"
+     ],
+     "filas": [
+      [
+       "Mi",
+       "Mi",
+       "Sol♯",
+       "Mi mayor"
+      ],
+      [
+       "Mi m",
+       "Mi",
+       "Sol",
+       "Mi menor"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Si7 a Mi",
+       "acordes": [
+        "Si7",
+        "Mi"
+       ],
+       "duracion": 1.6
+      },
+      {
+       "etiqueta": "Si7 a Mi m",
+       "acordes": [
+        "Si7",
+        "Mi m"
+       ],
+       "duracion": 1.6
+      }
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué te importa",
+     "md": "Por eso *Lágrima* puede pasar de una parte a otra sin cambiar de dominante: el Si7 sirve de puerta entre las dos. Escúchalo en una grabación cuando pase de la A a la B y al volver."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l2.p3",
+       "texto": "el tritono del Si7."
+      },
+      {
+       "paso": "n1.t8.l1.p2",
+       "texto": "el contraste entre la A y la B."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Qué es la media cejilla",
+     "md": "Una **cejilla** es un dedo, casi siempre el 1, que pisa varias cuerdas a la vez, como si fuera una cejuela móvil. La **media cejilla** pisa solo unas pocas: en este nivel, las dos o tres más agudas. Hace falta cuando un acorde necesita dos cuerdas en el mismo traste y no tienes dedos suficientes."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Coloca el dedo 1 recto, de lado, muy cerca del traste.",
+      "Usa la parte lateral del dedo: la zona más dura, sin pliegues.",
+      "Deja caer **el peso del brazo**, como si te colgaras del dedo.",
+      "El pulgar acompaña por detrás, sin hacer pinza.",
+      "Pulsa cuerda a cuerda y ajusta."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Duele la base del pulgar.",
+       "arreglo": "Estás haciendo pinza. Suelta el pulgar y deja que el brazo haga el trabajo."
+      },
+      {
+       "error": "Una cuerda no suena.",
+       "arreglo": "Está cayendo en un pliegue del dedo. Mueve el dedo un poco, hacia arriba o hacia abajo."
+      },
+      {
+       "error": "Te cansas enseguida.",
+       "arreglo": "Es lo normal al principio. Sesiones cortas y mucho descanso entre ellas: si duele, para."
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t1.l2.p3",
+       "texto": "el pulgar que no aprieta."
+      },
+      {
+       "paso": "n1.t13.l3.p1",
+       "texto": "la cejilla completa."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Hacer sonar las tres cuerdas agudas con un solo dedo, en los trastes 1 y 2.",
+     "porque": "Lo necesitarás para la B de *Lágrima*, y es el primer paso hacia la cejilla completa.",
+     "atencion": "Cada nota por separado te dice qué falla. No aprietes más: mueve el dedo.",
+     "empieza": "Sin tempo. Una por una, hasta que suenen las tres.",
+     "sube": "Sale tres veces seguidas. Pasa al traste 1, que es más duro."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-media-cejilla.json",
+     "titulo": "Media cejilla que suena",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "El {c:1} va en el traste 2; el {c:2}, en el traste 1. El dedo 1 no se levanta dentro de cada compás."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las tres cuerdas suenan limpias, tres veces seguidas.",
+      "No te duele el pulgar.",
+      "Puedes aflojar y volver a pisar sin que la mano se tense."
+     ]
+    }
+   ]
+  },
+  "n1.t7.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El **Fa** con media cejilla es el acorde que usa todo lo aprendido. El dedo 1 cubre la 1.ª y la 2.ª en el traste 1. Y por eso no hay notas al aire en las agudas."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "acorde",
+      "titulo": "Fa, paso a paso",
+      "acorde": "Fa",
+      "clave": "C"
+     }
+    },
+    {
+     "tipo": "anatomia",
+     "acorde": "Fa",
+     "clave": "C"
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Fa",
+       "acorde": "Fa"
+      },
+      {
+       "etiqueta": "Fa, cuerda a cuerda",
+       "acorde": "Fa",
+       "arpegiado": true
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo lo practicas",
+     "items": [
+      "Pon solo la media cejilla y comprueba que suenan la 1.ª y la 2.ª.",
+      "Añade el dedo 2 y el dedo 3, sin mover el 1.",
+      "Pulsa cuerda a cuerda.",
+      "Quita la mano y vuelve a ponerlo entero, varias veces."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las cuatro cuerdas suenan limpias.",
+      "Te sale sin apretar el pulgar."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l3.p1",
+       "texto": "Fa mayor."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-tarrega-lagrima",
+     "md": "Ya tienes las herramientas de la **parte B**: Mi menor, la progresión, la media cejilla."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Qué cambia respecto a la A",
+     "md": "**Mi menor**, el homónimo. Y otra cosa: **la voz principal pasa a las corcheas**, en lugar de estar en notas largas arriba. El interés se mueve y, si sigues tocando igual, la B no se entenderá."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Mira tu partitura",
+     "items": [
+      "Busca dónde empieza la B: cambia la armadura, o aparecen becuadros.",
+      "Recorre las corcheas con el dedo. ¿Qué notas forman una línea que podrías cantar?",
+      "Escucha la B en una [grabación](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra) siguiendo la partitura.",
+      "Cántala con *la-la*."
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El becuadro",
+     "md": "Si tu edición no cambia la armadura, verás **becuadros (♮)** en notas que antes llevaban sostenido. El becuadro **anula** la alteración: Sol♯ pasa a ser Sol natural."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Sin la edición comprobada, la academia no puede indicarte compás a compás cuáles son las notas de la voz principal. Coméntalo con tu profesor."
+    }
+   ]
+  },
+  "n1.t7.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En la B aparece la media cejilla. Como cualquier cambio, **se prepara antes**, no cuando ya la necesitas."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo prepararla",
+     "items": [
+      "Localízala en tu edición: suele indicarse con C o ½C, y un número romano para el traste.",
+      "Mira qué acorde pide y cómo es la nota anterior.",
+      "Practica solo el paso: lo de antes y la cejilla, repetido y muy despacio.",
+      "Sal antes de tiempo: el dedo tiene que llegar plano al traste."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Dónde se usa exactamente la media cejilla está por comprobar con la edición de Alier. No te damos un compás sin haberlo visto."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes en qué compás está la cejilla y qué dedo llega antes.",
+      "La cejilla llega a tiempo y suena limpia."
+     ]
+    }
+   ]
+  },
+  "n1.t7.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo divides los compases 9-12",
+     "items": [
+      "**Las notas de la línea principal**, solas, cantadas y tocadas.",
+      "**El bajo y el resto**, en corcheas seguidas.",
+      "**Compás 9**, las dos cosas despacio. Luego, el 10.",
+      "**Une** 9-10, 11-12 y, por último, 9-12."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Montar la primera frase de la B.",
+     "porque": "Aquí la melodía no es la nota más aguda. Hay que saber cuál es para sacarla.",
+     "atencion": "La voz principal va dentro de las corcheas. Usa la nota destacada del Tramo 6.",
+     "empieza": "♩ = 44, o lo que te permita no parar.",
+     "sube": "Tres veces seguidas, con la línea delante."
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-tarrega-lagrima",
+     "bpm": 44
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "La tablatura de la B aún no está en la app. Si quieres, escribe cuerda y traste a lápiz en tu partitura."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Los compases 9-12, sin parar.",
+      "Se distingue la línea principal."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t6.l1.p1",
+       "texto": "la nota destacada."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Mismo método. Fíjate en cómo termina: al final de la B, la música tiene que llevarte de vuelta a la A, y ahí suele estar la dominante, el Si7."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Si7 te lleva a Mi: la vuelta",
+       "acordes": [
+        "Si7",
+        "Mi"
+       ],
+       "duracion": 1.6
+      }
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Montar los compases 13-16 y unir toda la B.",
+     "porque": "Con esto ya tienes las dos partes de *Lágrima*.",
+     "atencion": "La frase final tiene que sonar a pregunta, no a final definitivo.",
+     "empieza": "Al mismo tempo que 9-12.",
+     "sube": "La B entera sale tres días distintos. Pasa al atril."
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-tarrega-lagrima",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La B entera, sin parar.",
+      "Te lleva de vuelta a la A sin cortarse."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l1.p1",
+       "texto": "todo junto."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "Sostenidos en el pentagrama",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Dos maneras de escribir un sostenido",
+       "md": "En la **armadura**, vale para todas las notas de ese nombre en toda la obra. **Delante de una nota** (una **alteración accidental**), vale para esa nota y las siguientes iguales de ese compás. Con la barra de compás, desaparece."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Nota",
+        "Dónde está en 1.ª posición"
+       ],
+       "filas": [
+        [
+         "Fa♯",
+         "6.ª traste 2 · 4.ª traste 4 · 1.ª traste 2"
+        ],
+        [
+         "Do♯",
+         "5.ª traste 4 · 2.ª traste 2"
+        ],
+        [
+         "Sol♯",
+         "6.ª traste 4 · 3.ª traste 1 · 1.ª traste 4"
+        ],
+        [
+         "Re♯",
+         "4.ª traste 1 · 2.ª traste 4"
+        ]
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/lec-sostenidos.json",
+       "titulo": "Fa♯, Do♯, Sol♯ y Re♯",
+       "principal": "ambas",
+       "motivo": "Es lectura: partitura y tablatura juntas, para comprobar.",
+       "bpms": [
+        50
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Compruébalo",
+     "bloques": [
+      {
+       "tipo": "localizar",
+       "enunciado": "Encuentra todos los **Sol♯** y **Re♯** de la 1.ª posición.",
+       "conjunto": [
+        "Sol♯",
+        "Re♯"
+       ],
+       "clave": "E",
+       "hastaTraste": 4,
+       "final": "Cinco sitios. Si los encuentras sin pensar, ya los lees."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Dónde se toca esta nota?",
+       "notacion": {
+        "compas": "4/4",
+        "armadura": "C",
+        "compasVisible": false,
+        "compases": [
+         {
+          "voces": [
+           [
+            {
+             "d": "1",
+             "c": 1,
+             "t": 2
+            }
+           ]
+          ]
+         }
+        ]
+       },
+       "opciones": [
+        "1.ª, traste 1",
+        "1.ª, traste 2",
+        "2.ª, traste 2"
+       ],
+       "correcta": 1,
+       "porque": "Fa♯: un traste más que el Fa natural.",
+       "pista": "El sostenido sube un traste. ¿Dónde estaba el Fa?",
+       "audio": {
+        "notas": [
+         [
+          1,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "Compás en Do: hay un Do♯ en el tiempo 1 y otro Do, sin nada, en el tiempo 3. ¿Cómo es el segundo?",
+       "opciones": [
+        "Natural",
+        "Sostenido",
+        "Depende de la obra"
+       ],
+       "correcta": 1,
+       "porque": "La alteración vale hasta el final del compás.",
+       "pista": "¿Cuánto dura una alteración accidental?"
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y el Do del compás siguiente, sin nada delante?",
+       "opciones": [
+        "Natural",
+        "Sostenido"
+       ],
+       "correcta": 0,
+       "porque": "La barra de compás termina la alteración.",
+       "pista": "Hay una barra en medio."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Primera vista",
+     "md": "**Leer a primera vista** es tocar algo que no has visto nunca, sin parar y sin ensayar antes. No se trata de hacerlo perfecto: se trata de seguir adelante. Es una habilidad distinta de estudiar, y se entrena poco y a menudo."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Antes de tocar, 20 segundos",
+     "items": [
+      "¿Compás? Cuéntalo.",
+      "¿Armadura? Di qué notas llevan sostenido.",
+      "¿Alguna figura o alteración rara? Búscala con la vista.",
+      "Elige un tempo lento: la nota más difícil decide.",
+      "Ahora toca, sin parar pase lo que pase, y mirando siempre adelante."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-primera-vista-em.json",
+     "titulo": "Cuatro compases en Mi menor",
+     "principal": "partitura",
+     "motivo": "El objetivo es leer: partitura.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "No pulses el audio hasta haberla tocado una vez."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Has llegado al final sin parar.",
+      "Te has equivocado en pocas notas, y no te has quedado en ellas."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l4.p3",
+       "texto": "seis compases en Sol mayor."
+      },
+      {
+       "paso": "n1.t14.l3.p3",
+       "texto": "ocho compases en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t7.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Tres pruebas. Lo que no salga no te bloquea."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "1. Mi menor armónica",
+     "items": [
+      "Dos octavas, sin pararte en el Re♯."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/esc-mi-menor-3-formas.json",
+     "compases": [
+      5,
+      8
+     ],
+     "titulo": "Ver la escala",
+     "principal": "tablatura",
+     "motivo": "Para comprobar.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "2. La media cejilla",
+     "items": [
+      "Fa, con las cuatro cuerdas limpias."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Fa",
+       "acorde": "Fa",
+       "arpegiado": true
+      }
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "3. La B",
+     "items": [
+      "Entera, sin parar, con la voz principal delante."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que ya te sale",
+     "items": [
+      "Mi menor armónica, dos octavas.",
+      "La media cejilla, limpia y sin dolor.",
+      "La B, sin parar."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l1.p2",
+       "texto": "si falla la escala."
+      },
+      {
+       "paso": "n1.t7.l3.p2",
+       "texto": "si falla la cejilla."
+      },
+      {
+       "paso": "n1.t7.l4.p3",
+       "texto": "si falla la B."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

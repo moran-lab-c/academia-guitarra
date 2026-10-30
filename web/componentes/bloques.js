@@ -75,12 +75,12 @@ function notacion(b, pasoId, raiz) {
     const abierto = plegados.has(item.id);
     const d = h('details', { class: 'bloque-notacion bloque-plegado', open: abierto || null, ontoggle: () => {
       if (d.open) { plegados.add(item.id); if (!d.querySelector('.notacion')) d.append(...cuerpo().filter(Boolean)); } else plegados.delete(item.id);
-    } }, h('summary', null, b.titulo));
+    } }, h('summary', null, textoRico(b.titulo)));
     if (abierto) d.append(...cuerpo().filter(Boolean));
     return d;
   }
   return h('div', { class: 'bloque-notacion pila-s' },
-    b.titulo && h('strong', null, b.titulo),
+    b.titulo && h('strong', null, textoRico(b.titulo)),
     cuerpo());
 }
 
@@ -106,7 +106,7 @@ function escuchar(b) {
       ? [ACORDES[x.acorde].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)]))]
       : x.acordes ? x.acordes.map(n => ACORDES[n].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)])))
         : x.notas.map(n => (Array.isArray(n[0]) ? n.map(y => midiEn(y[0], y[1])) : [midiEn(n[0], n[1])]));
-    tocar(sec, { duracion: x.duracion ?? (x.acorde ? 1.6 : 0.9), arpegiado: !!x.arpegiado, destacar: x.destacar });
+    tocar(sec, { duracion: x.duracion ?? (x.acorde ? 1.6 : 0.9), arpegiado: !!x.arpegiado, destacar: x.destacar, desafinar: x.desafinar });
   } }, `♪ ${x.etiqueta}`)));
 }
 
@@ -196,6 +196,7 @@ const RENDER = {
   anatomia,
   tabla: b => h('table', { class: 'anatomia__tabla' }, h('thead', null, h('tr', null, b.cabecera.map(c => h('th', { scope: 'col' }, c)))), h('tbody', null, b.filas.map(f => h('tr', null, f.map(c => h('td', null, textoRico(String(c)))))))),
   pentagrama: b => h('figure', { class: 'pentagrama' }, h('div', { class: 'atril atril--pequeno' }, notacionSuelta(b.notacion, 'partitura', b.pie ?? 'Pentagrama', b.ancho ?? 300)), b.pie && h('figcaption', { class: 'pequeno suave' }, b.pie)),
+  figura: b => h('figure', { class: 'figura' }, h('img', { src: `/web/figuras/${b.src}.svg`, alt: b.alt, loading: 'lazy' }), b.pie && h('figcaption', { class: 'pequeno suave' }, textoRico(b.pie))),
   localizar: (b, x, i) => localizar(b, `${x.pasoId}#${x.parte}#${i}`),
   elige: (b, x, i) => elige(b, `${x.pasoId}#${x.parte}#${i}`),
   ordenar: (b, x, i) => ordenar(b, `${x.pasoId}#${x.parte}#${i}`),

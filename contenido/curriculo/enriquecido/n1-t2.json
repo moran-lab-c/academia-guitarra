@@ -1,0 +1,141 @@
+{"tramo":"n1.t2","nota":"Primera aparición de tirando, preparación, notas pisadas, figuras, compás, pulso, metrónomo, color y dinámica. La partitura de Sor sigue fuera de la app: no se dan compases ni notas sin comprobar.","pasos":{
+"n1.t2.l1.p1":{"pantallas":[
+ {"titulo":"Qué es y para qué sirve","bloques":[
+  {"tipo":"texto","md":"Ya has probado el apoyando. Ahora se trata de hacerlo bien, porque es la forma de tocar una melodía con un sonido lleno. En *Lágrima*, la melodía de arriba irá así."},
+  {"tipo":"figura","src":"pulsacion","alt":"Dos esquemas de dos cuerdas vistas de frente. A la izquierda, en el apoyando, el dedo atraviesa la cuerda y termina sobre la cuerda vecina más grave. A la derecha, en el tirando, pasa por encima de la vecina y sigue hacia la palma.","pie":"La diferencia está en lo que hace el dedo después de la cuerda. El tirando lo verás en la lección siguiente."},
+  {"tipo":"concepto","titulo":"Por qué suena distinto","md":"Al apoyar, el dedo empuja la cuerda **hacia la tapa**, hacia dentro de la guitarra. La tapa se mueve más y la nota sale más redonda y con más presencia."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t3.l1.p2","texto":"melodía apoyando sobre un bajo tirando."},{"paso":"n1.t5.l4.p1","texto":"la melodía de *Lágrima*."}]}]},
+ {"titulo":"Cómo se hace","bloques":[
+  {"tipo":"pasos","titulo":"Dedo a dedo","items":["La mano cuelga suelta, con la muñeca algo arqueada.","Coloca el dedo sobre la cuerda: primero la yema y, enseguida, la uña.","Empuja hacia la cuerda vecina más grave, moviendo el dedo **desde el nudillo grande**.","El dedo atraviesa la cuerda y se queda apoyado en la de al lado.","Al pulsar con el otro dedo, el primero se suelta. Se turnan, como dos piernas al andar."]},
+  {"tipo":"errores","items":[{"error":"Suena metálico.","arreglo":"La uña entra antes que la yema, o el filo está áspero. Vuelve a lo que oíste con yema y uña."},{"error":"Tiras hacia arriba y el dedo no llega a apoyarse.","arreglo":"Dirige el empuje hacia la cuerda de al lado, no hacia ti."},{"error":"La mano entera rebota.","arreglo":"Solo se mueve el dedo. Toca más flojo hasta que la mano se quede quieta."},{"error":"El dedo m suena más fuerte que el i.","arreglo":"Es lo normal al principio, porque es más largo. Escúchalo y compensa."}]},
+  {"tipo":"elige","enunciado":"Tocas la 1.ª cuerda en apoyando. ¿Dónde termina el dedo?","opciones":["En el aire, hacia la palma","Sobre la 2.ª cuerda","Sobre la tapa"],"correcta":1,"porque":"La vecina más grave de la 1.ª es la 2.ª: ahí se queda el dedo.","pista":"Mira el esquema de la pantalla anterior."}]}]},
+"n1.t2.l1.p2":{"bloques":[
+  {"tipo":"ejercicio","que":"Notas largas en cuerdas al aire, alternando i y m.","porque":"Sin mano izquierda ni notas que recordar, toda la atención se va al sonido.","atencion":"Escucha el principio de cada nota: ni chasquido ni golpe. Y compara i con m.","empieza":"♩ = 60, en negras.","sube":"No hace falta subir: lo que se busca aquí es el sonido."},
+  {"tipo":"notacion","fuente":"notacion/tec-apoyando-im.json","titulo":"Notas largas apoyando","principal":"tablatura","motivo":"Es técnica de mano derecha: tablatura.","bpms":[60],"notas":["El {c:1} va en la 1.ª cuerda; el {c:2}, en la 2.ª, y el {c:3}, en la 3.ª. El {c:4} deja sonar la última."]},
+  {"tipo":"metronomo","bpm":60},
+  {"tipo":"texto","md":"Un **metrónomo** es un aparato que da golpes regulares. ♩ = 60 significa 60 negras por minuto: una por segundo. Toca justo con cada golpe. Si te molesta, primero quítalo y atiende al sonido."},
+  {"tipo":"bien","items":["Con los ojos cerrados no sabrías qué dedo está pulsando.","Ninguna nota lleva chasquido.","El dedo que acaba de tocar queda apoyado en la cuerda vecina."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t3.l1.p3","texto":"lo mismo, con el bajo a la vez."}]}]},
+"n1.t2.l2.p1":{"pantallas":[
+ {"titulo":"Seis notas nuevas","bloques":[
+  {"tipo":"texto","md":"Ya lees las cuerdas al aire. Ahora vienen las notas pisadas de las dos cuerdas más agudas. Son solo seis notas, incluidas las dos al aire. Y hay una regla sencilla: **en la 1.ª posición, cada dedo va a su traste**, el dedo 1 al traste 1 y el dedo 3 al traste 3."},
+  {"tipo":"mastil","escena":{"tipo":"recorrido","titulo":"Si, Do, Re, Mi, Fa, Sol","clave":"C","trastes":[0,4],"ms":1500,"notas":[{"c":2,"t":0},{"c":2,"t":1,"dedo":1},{"c":2,"t":3,"dedo":3},{"c":1,"t":0},{"c":1,"t":1,"dedo":1},{"c":1,"t":3,"dedo":3}],"final":"Seis notas seguidas, de grave a agudo."}},
+  {"tipo":"tabla","cabecera":["Nota","Cuerda","Traste y dedo","En el pentagrama"],"filas":[["Si","2.ª","Al aire","3.ª línea"],["Do","2.ª","Traste 1, dedo 1","3.er espacio"],["Re","2.ª","Traste 3, dedo 3","4.ª línea"],["Mi","1.ª","Al aire","4.º espacio"],["Fa","1.ª","Traste 1, dedo 1","5.ª línea"],["Sol","1.ª","Traste 3, dedo 3","Encima de la 5.ª línea"]]},
+  {"tipo":"concepto","titulo":"Se suben de una en una","md":"Fíjate en el pentagrama: una línea, un espacio, una línea, un espacio. **Cada nota siguiente es el sitio de al lado.** No hay que aprender seis dibujos sueltos: basta con saber una y contar."}]},
+ {"titulo":"Tócalas y encuéntralas","bloques":[
+  {"tipo":"notacion","fuente":"notacion/lec-notas-1-2.json","titulo":"Sube y baja, diciendo el nombre","principal":"ambas","motivo":"Es lectura: partitura y tablatura juntas, para comprobar.","bpms":[60]},
+  {"tipo":"localizar","enunciado":"Encuentra en el diapasón todas las **Do, Re, Fa y Sol** de estas dos cuerdas. Pulsa y escucha.","conjunto":["Do","Re","Fa","Sol"],"clave":"C","cuerdas":[1,2],"hastaTraste":4,"final":"Están siempre en los trastes 1 y 3."},
+  {"tipo":"elige","enunciado":"¿Qué nota es?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":1,"t":1}]]}]},"opciones":["Mi","Fa","Sol"],"correcta":1,"porque":"La 5.ª línea es el Fa: 1.ª cuerda, traste 1.","pista":"Es la línea de más arriba.","audio":{"notas":[[1,1]]}},
+  {"tipo":"elige","enunciado":"¿Y esta? ¿Dónde se toca?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":2,"t":3}]]}]},"opciones":["Re: 2.ª cuerda, traste 3","Do: 2.ª cuerda, traste 1","Si: 2.ª cuerda, al aire"],"correcta":0,"porque":"La 4.ª línea es el Re: 2.ª cuerda, traste 3, dedo 3.","pista":"Está en la 4.ª línea, por encima de la del medio.","audio":{"notas":[[2,3]]}},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l2.p3","texto":"líneas cortas con estas notas."},{"paso":"n1.t3.l2.p1","texto":"la 3.ª cuerda y los bajos."}]}]}]},
+"n1.t2.l2.p2":{"pantallas":[
+ {"titulo":"El pulso y las figuras","bloques":[
+  {"tipo":"concepto","titulo":"El pulso","md":"Si das golpes con el pie al oír una canción, estás marcando el **pulso**: un latido regular que no se para. Las notas se miden con ese latido. Cada golpe es un **tiempo**."},
+  {"tipo":"tabla","cabecera":["Figura","Cómo es","Dura","Se cuenta"],"filas":[["**Redonda**","Blanca, sin plica","4 tiempos","1 2 3 4"],["**Blanca**","Blanca, con plica","2 tiempos","1 2"],["**Negra**","Negra, con plica","1 tiempo","1"]]},
+  {"tipo":"notacion","fuente":"notacion/rit-figuras.json","titulo":"Las tres figuras, en una misma cuerda","principal":"partitura","motivo":"Aquí importa la figura: partitura.","bpms":[60],"notas":["En el {c:1} hay una redonda; en el {c:2}, dos blancas, y en el {c:3}, cuatro negras. Debajo de la tablatura ves el mismo ritmo."]},
+  {"tipo":"texto","md":"Cuenta en voz alta «1, 2, 3, 4» mientras suena. Oirás que el pulso es siempre igual: lo único que cambia es cuántos golpes dura cada nota."}]},
+ {"titulo":"El compás","bloques":[
+  {"tipo":"concepto","titulo":"Agrupar los tiempos","md":"El oído agrupa los golpes en paquetes, con el primero algo más fuerte. Ese paquete es el **compás**. En la partitura va separado por barras verticales y al principio lleva dos números: el de arriba dice **cuántos tiempos** tiene. En este nivel, el de abajo será un 4: cada tiempo es una negra."},
+  {"tipo":"tabla","cabecera":["Compás","Se cuenta","Se siente como"],"filas":[["**2/4**","**1** 2","Una marcha"],["**3/4**","**1** 2 3","Un vals"],["**4/4**","**1** 2 3 4","Lo más habitual"]]},
+  {"tipo":"notacion","fuente":"notacion/rit-compas-2-4.json","titulo":"2/4","principal":"tablatura","motivo":"Aquí importa contar: tablatura con el pulso.","bpms":[72],"notas":["El pulgar marca el primer tiempo de cada compás."]},
+  {"tipo":"notacion","fuente":"notacion/rit-compas-3-4.json","titulo":"3/4","principal":"tablatura","motivo":"Aquí importa contar: tablatura con el pulso.","bpms":[72]},
+  {"tipo":"notacion","fuente":"notacion/rit-compas-4-4.json","titulo":"4/4","principal":"tablatura","motivo":"Aquí importa contar: tablatura con el pulso.","bpms":[72]},
+  {"tipo":"ejercicio","que":"Tocar estos tres compases contando en voz alta.","porque":"Contar en voz alta es el modo más sencillo de que el ritmo deje de ser intuitivo.","atencion":"La voz no se para aunque la mano falle. El «1» suena un poco más fuerte.","empieza":"♩ = 60.","sube":"Puedes contar y tocar sin que se te escape un golpe. Entonces ♩ = 72."},
+  {"tipo":"metronomo","bpm":60},
+  {"tipo":"elige","enunciado":"En 3/4, ¿cuántas blancas caben en un compás, sin que sobre nada?","opciones":["Una, y queda un tiempo libre","Dos justas","Tres justas"],"correcta":0,"porque":"Una blanca dura 2 tiempos y el compás tiene 3: queda 1 tiempo, para una negra.","pista":"Blanca = 2 tiempos. ¿Cuántos tiene un 3/4?"},
+  {"tipo":"bien","items":["Cuentas en voz alta sin parar mientras tocas.","Las blancas y las redondas duran entero lo que dicen.","Notas el primer tiempo de cada compás."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t3.l4.p2","texto":"el puntillo."},{"paso":"n1.t6.l3.p1","texto":"las corcheas en 3/4."}]}]}]},
+"n1.t2.l2.p3":{"bloques":[
+  {"tipo":"texto","md":"Ahora junta las dos cosas: las notas y el ritmo. Vas a leer de verdad, con la partitura. Si necesitas comprobar, pulsa Tab o Ambas: no es trampa."},
+  {"tipo":"pasos","titulo":"Cómo leer una línea nueva","items":["Sin guitarra, di el nombre de las notas.","Marca el pulso con el pie y di las notas con su ritmo.","Tócala muy despacio, sin mirarte la mano.","Si te equivocas, sigue hasta el final y luego vuelve al sitio."]},
+  {"tipo":"notacion","fuente":"notacion/lec-lineas-4-4.json","titulo":"Línea 1, en 4/4","principal":"partitura","motivo":"El objetivo es leer: partitura.","bpms":[50,66]},
+  {"tipo":"notacion","fuente":"notacion/lec-lineas-3-4.json","titulo":"Línea 2, en 3/4","principal":"partitura","motivo":"El objetivo es leer: partitura.","bpms":[50,66]},
+  {"tipo":"bien","items":["Tocas la línea entera sin parar y sin mirar la tablatura.","Las notas largas duran lo que dicen."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l4.p2","texto":"la primera obra para leer."}]}]},
+"n1.t2.l3.p1":{"pantallas":[
+ {"titulo":"Tirando","bloques":[
+  {"tipo":"concepto","titulo":"El otro toque","md":"En el **tirando**, el dedo pasa por encima de la cuerda vecina y sigue hacia la palma. Hace falta cuando esa cuerda tiene que seguir sonando, como en un arpegio: si apoyaras, la callarías."},
+  {"tipo":"figura","src":"pulsacion","alt":"Dos esquemas de dos cuerdas vistas de frente, con la trayectoria del dedo en el apoyando y en el tirando.","pie":"Compara las dos trayectorias."},
+  {"tipo":"tabla","cabecera":["","Apoyando","Tirando"],"filas":[["Después de la cuerda","Se queda en la vecina","Sigue hacia la palma"],["La cuerda vecina","Se calla","Sigue sonando"],["Se usa en","Melodías y escalas","Arpegios y acordes"]]},
+  {"tipo":"guia","tipoGuia":"El objetivo clásico","md":"Se busca que los dos toques suenen **igual de redondos**. Un tirando no es más flojo: es otro camino. Por eso se trabaja de la misma manera, con yema y uña."}]},
+ {"titulo":"Preparar","bloques":[
+  {"tipo":"concepto","titulo":"Tocar la cuerda antes de pulsar","md":"**Preparar** es poner el dedo en contacto con la cuerda justo antes de que suene. Primero se apoya la yema, después se pulsa. Tienes dos ventajas: la nota no lleva un golpe al principio y el dedo sabe exactamente dónde está."},
+  {"tipo":"pasos","titulo":"Cómo se hace","items":["La yema toca la cuerda. Aún no suena nada.","Empuja un poco hasta notar la uña.","Suelta: el dedo sale hacia la palma, sin levantarse hacia afuera.","El dedo se relaja y vuelve a su sitio."]},
+  {"tipo":"errores","items":[{"error":"Se oye un clic antes de la nota.","arreglo":"La uña ha llegado primero. Coloca antes la yema."},{"error":"El dedo tira hacia arriba y la cuerda golpea los trastes.","arreglo":"El movimiento va hacia la palma, no hacia fuera de la guitarra."},{"error":"La nota anterior se corta.","arreglo":"Si preparas en la misma cuerda que suena, la paras. Prepara justo antes de tu turno."}]},
+  {"tipo":"elige","enunciado":"Estás tocando un arpegio y la cuerda vecina debe seguir sonando. ¿Qué toque usas?","opciones":["Apoyando","Tirando"],"correcta":1,"porque":"El tirando pasa por encima de la vecina y la deja sonar.","pista":"¿Cuál de los dos se queda sobre la vecina?"},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l3.p2","texto":"el ejercicio."},{"paso":"n1.t4.l3.p1","texto":"el arpegio clásico se apoya en esto."}]}]}]},
+"n1.t2.l3.p2":{"bloques":[
+  {"tipo":"ejercicio","que":"Preparar y soltar con p, i, m y a en cuerdas al aire.","porque":"Es la base del arpegio clásico: cada dedo sabe dónde está antes de sonar.","atencion":"Solo se deben oír las notas. Si aparece un clic, vas demasiado rápido.","empieza":"♩ = 50. Mira las dos fases.","sube":"Sin un solo clic, sube un poco el tempo."},
+  {"tipo":"tabla","cabecera":["Fase","Qué haces"],"filas":[["**1. Todos a la vez**","Los cuatro dedos se colocan en sus cuerdas y después se pulsa uno a uno: el resto sigue tocando su cuerda"],["**2. Cada uno a su tiempo**","Cada dedo se prepara justo antes de que le toque"]]},
+  {"tipo":"notacion","fuente":"notacion/tec-preparar.json","titulo":"p-i-m-a en cuerdas al aire","principal":"tablatura","motivo":"Es técnica de mano derecha: tablatura.","bpms":[50,66]},
+  {"tipo":"metronomo","bpm":50},
+  {"tipo":"bien","items":["Solo se oyen las notas, sin clic de uña.","Los cuatro dedos suenan igual.","Tienes la mano quieta: se mueven solo los dedos."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t4.l3.p2","texto":"las fórmulas de Giuliani."}]}]},
+"n1.t2.l4.p1":{"bloques":[
+  {"tipo":"texto","md":"**Fernando Sor** nació en Barcelona en 1778 y murió en París en 1839. Fue uno de los grandes guitarristas de su tiempo, y además de obras de concierto escribió mucha música para enseñar."},
+  {"tipo":"concepto","titulo":"Música para aprender a leer","md":"Sus lecciones del **op. 60**, publicadas como *Introduction à l'étude de la guitare*, se ordenan de fácil a difícil. La primera está pensada para tocar y leer a la vez sin dificultades técnicas. **Op.** significa *opus*, obra: es el número con el que se cataloga."},
+  {"tipo":"texto","md":"Por eso es tu primera obra: no porque sea impresionante, sino porque te permite leer **música de verdad** desde el principio, en lugar de ejercicios. Lo que aprendas con ella (leer las figuras y cuidar la melodía) se usará en todas las demás."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t3.l5.p1","texto":"otro andante de Sor, ya con melodía y bajo."},{"paso":"n1.t10.l1.p1","texto":"cómo leer una obra entera por tu cuenta."},{"paso":"n1.t13.l1.p1","texto":"Sor en su época."}]}]},
+"n1.t2.l4.p2":{"pantallas":[
+ {"titulo":"Antes de tocar","bloques":[
+  {"tipo":"obra","id":"o1-sor-op-60-n-1","md":"Tu primera obra leída: **qué aprendes** es a seguir una partitura real de principio a fin y a tocar la melodía apoyando."},
+  {"tipo":"concepto","titulo":"Dónde está la partitura","md":"Esta obra todavía no está transcrita dentro de la app, ni en tablatura. La tienes en [IMSLP, en el op. 60 de Sor](https://imslp.org/wiki/Introduction_%C3%A0_l'%C3%A9tude_de_la_guitare,_Op.60_%28Sor,_Fernando%29), una biblioteca libre. Busca la lección n.º 1."},
+  {"tipo":"guia","tipoGuia":"Por verificar","md":"No hemos comprobado aún nota a nota si esta lección pide alguna nota que no hayas visto. Si te encuentras con una, búscala en la tabla de abajo. Por eso aquí no te indicamos compases concretos."},
+  {"tipo":"tabla","cabecera":["Cuerda","Al aire","Traste 1","Traste 2","Traste 3"],"filas":[["1.ª","Mi","Fa","","Sol"],["2.ª","Si","Do","","Re"],["3.ª","Sol","","La",""],["4.ª","Re","","Mi","Fa"],["5.ª","La","","Si","Do"],["6.ª","Mi","Fa","","Sol"]]},
+  {"tipo":"pasos","titulo":"Mira la partitura sin tocar","items":["¿Qué compás tiene? Mira los dos números del principio y cuenta un compás en voz alta.","¿Hay signos de repetición? Son dos puntos junto a una barra.","Pasa la vista por las notas y di el nombre de las que reconozcas.","Marca con lápiz las que no conozcas y búscalas en la tabla."]}]},
+ {"titulo":"Trabajarla","bloques":[
+  {"tipo":"ejercicio","que":"Tocar la lección leyendo, con la melodía apoyando.","porque":"Reúne lo de este tramo: leer notas, contar las figuras y cuidar el sonido.","atencion":"Mira la partitura, no la mano. Si la mano lo necesita, mírala solo en los cambios de cuerda.","empieza":"Muy lento, ♩ = 50 o menos, y en trozos de dos compases.","sube":"Te sale un trozo tres veces seguidas: une el siguiente. Súbelo al final, y solo con la obra entera."},
+  {"tipo":"metronomo","clave":"o1-sor-op-60-n-1","bpm":50},
+  {"tipo":"errores","items":[{"error":"Te detienes cada vez que dudas en una nota.","arreglo":"Baja el tempo: el tempo correcto es el que te deja llegar a tiempo a la nota siguiente."},{"error":"Memorizas y dejas de mirar.","arreglo":"Es natural. Cuando te pase, tapa una parte o empieza desde otro compás para seguir leyendo."}]},
+  {"tipo":"bien","items":["La tocas entera sin parar, mirando la partitura.","Sabes qué nota estás tocando en cada momento.","Las notas largas duran lo que dicen y el sonido es igual en i y en m."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l5.p5","texto":"la comprobación del tramo."},{"paso":"n1.t10.l2.p1","texto":"la primera obra que leerás tú solo."}]}]}]},
+"n1.t2.l5.p1":{"pantallas":[
+ {"titulo":"El color","bloques":[
+  {"tipo":"concepto","titulo":"Dónde pulsas","md":"La misma nota cambia de carácter según **dónde** pulsas la cuerda. Es lo primero que cambia un guitarrista cuando quiere contar otra cosa con la misma música. A esto se le llama **color**."},
+  {"tipo":"tabla","cabecera":["Nombre","Dónde pulsas","Cómo suena"],"filas":[["**Tasto**","Hacia el mástil, por encima del final del diapasón","Dulce, redondo, lejano"],["**Normal**","Cerca de la boca, algo hacia el puente","Equilibrado: el de casi siempre"],["**Ponticello**","Muy cerca del puente","Metálico, fino, con tensión"]]},
+  {"tipo":"texto","md":"Pruébalo con una cuerda al aire, llevando la mano desde el mástil hasta el puente mientras tocas. Este cambio solo lo podrás oír en tu propia guitarra: la app usa siempre el mismo sonido grabado."}]},
+ {"titulo":"Fuerte y flojo","bloques":[
+  {"tipo":"concepto","titulo":"La dinámica","md":"La **dinámica** es lo fuerte o lo flojo que tocas. Se escribe con iniciales de palabras italianas, debajo del pentagrama."},
+  {"tipo":"tabla","cabecera":["Signo","Se lee","Qué pide"],"filas":[["**p**","piano","Suave"],["**mf**","mezzoforte","Medio fuerte"],["**f**","forte","Fuerte"],["**cresc.** o una cuña que se abre","crescendo","Ir subiendo poco a poco"],["**dim.** o una cuña que se cierra","diminuendo","Ir bajando poco a poco"]]},
+  {"tipo":"pentagrama","pie":"Dos notas con su dinámica debajo: p y f.","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"2","c":1,"t":0,"din":"p"},{"d":"2","c":1,"t":0,"din":"f"}]]}]}},
+  {"tipo":"concepto","titulo":"Cómo se toca más fuerte","md":"Con **más velocidad** de dedo, sin apretar la mano. Y más suave con menos velocidad y con la mano igual de suelta. Si para tocar fuerte aprietas el brazo, entra la tensión y el sonido se vuelve duro."},
+  {"tipo":"elige","enunciado":"Quieres que una frase suene dulce y lejana. ¿Dónde pulsas?","opciones":["Cerca del puente","Hacia el mástil","Da igual: cambia solo la fuerza"],"correcta":1,"porque":"Es el tasto, el color más dulce.","pista":"Mira la tabla: ¿qué zona suena redonda y lejana?"},
+  {"tipo":"reaparece","items":[{"paso":"n1.t13.l4.p3","texto":"usarás el color en una repetición de Sor."}]}]}]},
+"n1.t2.l5.p2":{"bloques":[
+  {"tipo":"ejercicio","que":"Una misma frase en los tres colores, con el mismo volumen.","porque":"Para que el cambio sea de color, no de fuerza. Lo que quieres oír es la diferencia de carácter.","atencion":"Mueve solo la mano hacia el mástil o el puente: el resto sigue igual, y el volumen también.","empieza":"♩ = 60, una versión de cada color.","sube":"Las diferencias se oyen, y el volumen no ha cambiado."},
+  {"tipo":"notacion","fuente":"notacion/tec-colores.json","titulo":"Una frase de la escala de Do","principal":"tablatura","motivo":"Es técnica de mano derecha: tablatura.","bpms":[60]},
+  {"tipo":"bien","items":["Las tres versiones suenan claramente distintas.","Ninguna suena más fuerte que las otras."]}]},
+"n1.t2.l5.p3":{"pantallas":[
+ {"titulo":"Qué estás entrenando","bloques":[
+  {"tipo":"texto","md":"Hasta ahora has contado lo que tocas. Ahora se trata de lo contrario: oír una música y notar **en cuántos se agrupa su pulso**. Es una capacidad útil para todo: sin ella no se siente una danza ni se entra a tiempo con otro músico."},
+  {"tipo":"pasos","titulo":"Cómo hacerlo","items":["Escucha y da palmas con el pulso, sin pensar en nada.","Busca qué golpe suena más fuerte o más grave: suele ser el primero.","Cuenta desde ahí: si vuelve cada 2, va en dos; si vuelve cada 3, en tres; si vuelve cada 4, en cuatro."]},
+  {"tipo":"tabla","cabecera":["Va en","Se cuenta","Ejemplo"],"filas":[["Dos","**1** 2 **1** 2","Marcha"],["Tres","**1** 2 3 **1** 2 3","Vals"],["Cuatro","**1** 2 3 4","Casi todo lo demás"]]},
+  {"tipo":"escuchar","items":[{"etiqueta":"Ejemplo en dos","notas":[[6,0],[3,0],[6,0],[3,0],[6,0],[3,0]],"duracion":0.6},{"etiqueta":"Ejemplo en tres","notas":[[6,0],[3,0],[2,0],[6,0],[3,0],[2,0]],"duracion":0.6},{"etiqueta":"Ejemplo en cuatro","notas":[[6,0],[3,0],[2,0],[3,0],[6,0],[3,0],[2,0],[3,0]],"duracion":0.5}]}]},
+ {"titulo":"Ahora tú","bloques":[
+  {"tipo":"texto","md":"El bajo grave señala el principio de cada grupo. Da palmas y cuenta."},
+  {"tipo":"elige","enunciado":"¿En cuántos va?","audio":{"notas":[[5,0],[3,0],[1,0],[5,0],[3,0],[1,0],[5,0],[3,0],[1,0]],"duracion":0.55},"opciones":["En dos","En tres","En cuatro"],"correcta":1,"porque":"El bajo vuelve cada tres golpes.","pista":"Cuenta los golpes que hay de un bajo al siguiente."},
+  {"tipo":"elige","enunciado":"¿Y este?","audio":{"notas":[[6,0],[2,0],[6,0],[2,0],[6,0],[2,0],[6,0],[2,0]],"duracion":0.55},"opciones":["En dos","En tres","En cuatro"],"correcta":0,"porque":"Bajo, nota, bajo, nota: cada dos.","pista":"Cuenta desde cada bajo."},
+  {"tipo":"elige","enunciado":"¿Y este?","audio":{"notas":[[5,0],[2,0],[3,0],[2,0],[5,0],[2,0],[3,0],[2,0]],"duracion":0.5},"opciones":["En dos","En tres","En cuatro"],"correcta":2,"porque":"El bajo vuelve cada cuatro golpes.","pista":"Cuenta desde cada bajo."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t12.l6.p5","texto":"el pulso de una danza."}]}]}]},
+"n1.t2.l5.p4":{"bloques":[
+  {"tipo":"texto","md":"El **solfeo** es cantar las notas. Parece algo aparte de la guitarra, pero es lo contrario: lo que eres capaz de cantar, lo oyes por dentro antes de tocarlo. Vas a empezar con ecos: la app toca y tú repites con la voz."},
+  {"tipo":"pasos","titulo":"Cómo se hace","items":["Escucha el eco entero, sin cantar.","Cántalo con *la-la*, en la altura que te resulte cómoda: da igual si queda una octava más alta o más baja.","Vuelve a escucharlo y compara.","Si ha salido, canta los nombres de las notas."]},
+  {"tipo":"grados","clave":"C","largo":5,"titulo":"Las cinco notas de los ecos: de la tónica (Do) a la dominante (Sol)"},
+  {"tipo":"escuchar","items":[{"etiqueta":"Eco 1","notas":[[2,1],[2,3],[1,0],[2,3],[2,1]],"duracion":0.65},{"etiqueta":"Eco 2","notas":[[2,1],[1,0],[1,3],[1,0],[2,1]],"duracion":0.65},{"etiqueta":"Eco 3","notas":[[2,1],[2,3],[1,0],[1,1],[1,3]],"duracion":0.65},{"etiqueta":"Eco 4","notas":[[1,3],[1,1],[1,0],[2,3],[2,1]],"duracion":0.65},{"etiqueta":"Eco 5","notas":[[2,1],[1,3],[1,0],[2,3],[2,1]],"duracion":0.65}]},
+  {"tipo":"guia","tipoGuia":"Si no te sale afinado","md":"Es muy habitual al empezar, y se entrena. Canta más despacio, con menos notas, y deja que la app te dé la primera nota otra vez. No hace falta tener buena voz: lo que importa es oír si subes o bajas."},
+  {"tipo":"bien","items":["Repites cada eco sin volver a oírlo.","Sabes cuándo la melodía sube y cuándo baja.","Terminas en la misma nota que la app."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t4.l2.p5","texto":"cantar 1-3-5 sobre un acorde."},{"paso":"n1.t5.l3.p2","texto":"cantar la melodía de *Lágrima*."}]}]},
+"n1.t2.l5.p5":{"pantallas":[
+ {"titulo":"Tocar","bloques":[
+  {"tipo":"texto","md":"Tres pruebas. Si alguna no sale, nada se bloquea: te indicamos dónde se trabaja y sigues cuando quieras."},
+  {"tipo":"lista","titulo":"1. Una nota larga con buen sonido","items":["Una redonda en apoyando, en la 1.ª cuerda al aire: empieza sin golpe y suena hasta el final."]},
+  {"tipo":"escuchar","items":[{"etiqueta":"La nota","notas":[[1,0]],"duracion":3.5}]},
+  {"tipo":"lista","titulo":"2. Cuatro compases leídos","items":["La línea de abajo, desde la partitura, sin parar."]},
+  {"tipo":"notacion","fuente":"notacion/lec-lineas-4-4.json","titulo":"La línea","principal":"partitura","motivo":"Para comprobar la lectura.","bpms":[60]},
+  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["La nota larga, sin golpe y sin chasquido.","Los cuatro compases, sin parar y contando."]}]},
+ {"titulo":"3. Dos notas, de cabeza","bloques":[
+  {"tipo":"texto","md":"Di la nota y, si puedes, dónde se toca."},
+  {"tipo":"elige","enunciado":"¿Qué nota es?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":1,"t":3}]]}]},"opciones":["Fa","Sol","La"],"correcta":1,"porque":"Encima de la 5.ª línea: Sol, 1.ª cuerda, traste 3.","pista":"Está justo encima de la última línea.","audio":{"notas":[[1,3]]}},
+  {"tipo":"elige","enunciado":"¿Y esta?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":2,"t":1}]]}]},"opciones":["Si","Do","Re"],"correcta":1,"porque":"El 3.er espacio: Do, 2.ª cuerda, traste 1.","pista":"Está en el espacio que hay justo encima de la línea del medio.","audio":{"notas":[[2,1]]}},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l1.p2","texto":"si falla el sonido."},{"paso":"n1.t2.l2.p3","texto":"si falla la lectura."},{"paso":"n1.t2.l2.p1","texto":"si fallan las notas."}]}]}]}
+}}

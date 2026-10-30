@@ -1,0 +1,83 @@
+{"tramo":"n1.t11","nota":"Primera aparición de ostinato, rasgueado y acompañar. Brouwer tiene derechos: no se transcribe, hace falta su edición. La canción es Estrellita (Ah! vous dirai-je, maman), popular y de dominio público.","pasos":{
+"n1.t11.l1.p1":{"bloques":[
+  {"tipo":"texto","md":"**Leo Brouwer** nació en La Habana en 1939. Es guitarrista, compositor y director, una de las figuras más importantes de la guitarra del siglo XX. Con él llegas a la música de un autor que sigue en activo."},
+  {"tipo":"concepto","titulo":"Los *Estudios sencillos*","md":"Los escribió para enseñar. Son piezas muy cortas que trabajan una sola idea técnica, pero son música de verdad, con un lenguaje muy distinto de Sor o Tárrega. Lo que te enseñan es que **escribir para enseñar no quiere decir escribir sin interés**."},
+  {"tipo":"tabla","cabecera":["","Sor (hacia 1830)","Brouwer (siglo XX)"],"filas":[["Armonía","Tónica y dominante muy claras","Más libre, con otros colores"],["Ritmo","Regular, muy equilibrado","Con repeticiones que crean tensión"],["Forma","Frases que preguntan y responden","A menudo, a partir de un dibujo que se repite"]]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t11.l1.p2","texto":"el dibujo que se repite."}]}]},
+"n1.t11.l1.p2":{"bloques":[
+  {"tipo":"concepto","titulo":"El ostinato","md":"Un **ostinato** es un dibujo musical que se repite, una y otra vez, mientras otra cosa cambia encima o debajo. La palabra viene del italiano y significa «obstinado». Es muy antiguo y está en todas partes: en una chacona barroca y en una canción de hoy."},
+  {"tipo":"notacion","fuente":"notacion/tec-ostinato.json","titulo":"Ejemplo escrito para la academia: no es de Brouwer","principal":"ambas","motivo":"Para ver qué se repite.","bpms":[66,88],"notas":["Las notas de arriba son iguales en todos los compases: eso es el ostinato. Lo que cambia es el bajo: {c:1} Mi, {c:2} La, {c:3} Re y {c:4} Mi."]},
+  {"tipo":"elige","enunciado":"Escucha. ¿Qué se repite y qué cambia?","audio":{"notas":[[6,0],[3,0],[2,0],[1,0],[5,0],[3,0],[2,0],[1,0],[4,0],[3,0],[2,0],[1,0]],"duracion":0.4},"opciones":["Se repiten las notas agudas; cambia el bajo","Se repite el bajo; cambian las agudas"],"correcta":0,"porque":"El dibujo Sol-Si-Mi no cambia. El bajo pasa de Mi a La y a Re.","pista":"Atiende a la primera nota de cada grupo."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t12.l2.p1","texto":"un bajo que se repite: la romanesca."}]}]},
+"n1.t11.l2.p1":{"pantallas":[
+ {"titulo":"Qué necesitas","bloques":[
+  {"tipo":"obra","id":"o1-brouwer-estudio-sencillo-vi","md":"**Qué aprendes:** una fórmula de mano derecha sostenida durante toda una pieza, y el lenguaje del siglo XX."},
+  {"tipo":"guia","tipoGuia":"Con derechos","md":"Esta obra tiene derechos de autor y no se puede reproducir aquí. Necesitas la edición publicada: consíguela o pídela a tu profesor. Por eso, la academia no incluye sus notas ni su tablatura."},
+  {"tipo":"guia","tipoGuia":"Por verificar","md":"Qué fórmula de mano derecha trabaja exactamente este estudio está por comprobar con la edición. Compruébalo tú en los primeros compases."},
+  {"tipo":"pasos","titulo":"Antes de tocar","items":["Mira qué dedos pide la mano derecha en el primer compás.","Busca si esa fórmula se mantiene.","Pon en tu mano izquierda los acordes de cada compás, sin arpegiar.","Practica la fórmula de la derecha sola, en cuerdas al aire."]}]},
+ {"titulo":"Cómo se trabaja","bloques":[
+  {"tipo":"ejercicio","que":"El estudio entero, con el mismo dibujo igualado.","porque":"En una pieza así no te puedes esconder: si la fórmula cojea, se oye en cada compás.","atencion":"Mantén el pulso sin acelerar. Si un cambio de mano izquierda te hace perder el ritmo, ahí es donde hay que estudiar.","empieza":"♩ = 50, o el que permita no parar.","sube":"Tres veces sin perder el pulso."},
+  {"tipo":"metronomo","clave":"o1-brouwer-estudio-sencillo-vi","bpm":50},
+  {"tipo":"bien","items":["El dibujo es regular de principio a fin.","Los cambios de mano izquierda no interrumpen el pulso."]}]}]},
+"n1.t11.l2.p2":{"bloques":[
+  {"tipo":"texto","md":"En una pieza hecha con un dibujo repetido, entenderla es saber **qué cambia y qué se queda**. Si no, parece siempre lo mismo."},
+  {"tipo":"concepto","titulo":"Dónde escucharlo","md":"[Buscar el *Estudio sencillo* n.º 6 de Brouwer en YouTube](https://www.youtube.com/results?search_query=Brouwer+Estudio+Sencillo+6+guitarra)."},
+  {"tipo":"tabla","cabecera":["Pregúntate","Mira en"],"filas":[["¿Qué dibujo no cambia?","Las notas repetidas"],["¿Qué sí cambia?","Los bajos, los acordes o la altura"],["¿Dónde hay una sección nueva?","Cuando cambia lo que parecía fijo"],["¿Cómo acaba?","¿Se para el dibujo? ¿Se apaga?"]]},
+  {"tipo":"bien","items":["Puedes dividir la pieza en secciones.","Sabes decir qué cambia en cada una."]}]},
+"n1.t11.l3.p1":{"bloques":[
+  {"tipo":"texto","md":"Si vienes del flamenco, los rasgueados te resultan familiares. Aquí lo que se busca es otra cosa: **un acompañamiento sencillo al pulso**, con el que seguir a alguien que canta o toca."},
+  {"tipo":"tabla","cabecera":["Movimiento","Cómo se hace","Suena"],"filas":[["***p* hacia abajo**","El lado del pulgar recorre las cuerdas de grave a agudo","Suave y redondo"],["***i* hacia abajo**","La uña del índice, de grave a agudo","Más brillante"],["***i* hacia arriba**","La yema del índice, de agudo a grave","Más ligero; solo las cuerdas agudas"]]},
+  {"tipo":"pasos","titulo":"Cómo se hace","items":["La muñeca suelta, sin brazo rígido: el movimiento nace ahí.","Empieza por la cuerda más grave que tenga el acorde.","Recorre las cuerdas de una sola vez, sin golpearlas.","Vuelve a tiempo para el siguiente golpe."]},
+  {"tipo":"errores","items":[{"error":"Suena a golpe seco.","arreglo":"Relaja la muñeca y da menos velocidad al primer golpe."},{"error":"Tocas cuerdas que no pertenecen al acorde.","arreglo":"Mira las × del diagrama. El Re empieza en la 4.ª; el La, en la 5.ª."}]},
+  {"tipo":"escuchar","items":[{"etiqueta":"Re","acorde":"Re","duracion":1.5},{"etiqueta":"Sol","acorde":"Sol","duracion":1.5},{"etiqueta":"La7","acorde":"La7","duracion":1.5}]}]},
+"n1.t11.l3.p2":{"bloques":[
+  {"tipo":"texto","md":"Aplica lo de siempre, I-IV-V7-I, en **Re mayor**. Con tres acordes podrás acompañar la canción de la lección siguiente."},
+  {"tipo":"acordes","nombres":["Re","Sol","La7"]},
+  {"tipo":"mastil","escena":{"tipo":"cambio","titulo":"De Re a La7","de":"Re","a":"La7","clave":"D","textos":{"medio":"Aquí no hay dedo que se quede: prepara el acorde durante el último golpe."}}},
+  {"tipo":"progresion","acordes":[{"n":"Re","g":"I","papel":"reposo"},{"n":"Sol","g":"IV","papel":"alejamiento"},{"n":"La7","g":"V7","papel":"tensión"},{"n":"Re","g":"I","papel":"reposo"}],"bpms":[60,80]},
+  {"tipo":"ejercicio","que":"La progresión rasgueada, en 4/4 y en 3/4.","porque":"Es lo que necesitas para acompañar. El pulso manda: si tardas en cambiar, sigue el golpe.","atencion":"El primer tiempo de cada compás, con *p*, más marcado. Los demás, más ligeros, con *i*.","empieza":"♩ = 60.","sube":"Los cambios llegan justo al primer tiempo."},
+  {"tipo":"notacion","fuente":"notacion/rasg-re-4-4.json","titulo":"En 4/4","principal":"tablatura","motivo":"Es técnica de acordes: tablatura.","bpms":[60,80],"leyenda":false},
+  {"tipo":"notacion","fuente":"notacion/rasg-re-3-4.json","titulo":"En 3/4","principal":"tablatura","motivo":"Es técnica de acordes: tablatura.","bpms":[60,80],"leyenda":false},
+  {"tipo":"metronomo","bpm":60},
+  {"tipo":"bien","items":["No pierdes el pulso al cambiar.","Solo suenan las cuerdas del acorde.","Se nota el primer tiempo de cada compás."]}]},
+"n1.t11.l4.p1":{"bloques":[
+  {"tipo":"texto","md":"Es una canción muy conocida: *Estrellita*, la francesa *Ah! vous dirai-je, maman*, de dominio público. Antes de acompañarla, léela: así la tendrás en la cabeza."},
+  {"tipo":"notacion","fuente":"notacion/lec-estrellita.json","titulo":"*Estrellita*, en Re mayor","principal":"partitura","motivo":"El objetivo es leer: partitura.","bpms":[66,88],"notas":["Dos sostenidos: Fa♯ y Do♯. La frase del {c:1-4} vuelve en {c:9-12}."]},
+  {"tipo":"bien","items":["La lees entera sin parar.","Puedes cantarla mientras la tocas."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t9.l2.p3","texto":"la armadura de Re mayor."}]}]},
+"n1.t11.l4.p2":{"pantallas":[
+ {"titulo":"Elegir el acorde","bloques":[
+  {"tipo":"concepto","titulo":"Cómo saberlo","md":"El acorde que encaja suele ser el que **contiene las notas de la melodía**. En Re mayor tienes tres: Re (Re, Fa♯, La), Sol (Sol, Si, Re) y La7 (La, Do♯, Mi, Sol). Mira las notas largas o las del primer tiempo."},
+  {"tipo":"tabla","cabecera":["Notas de la melodía","Acorde que encaja","Por qué"],"filas":[["Re, La","Re","Las dos son del acorde de Re"],["Si","Sol","Solo Sol contiene el Si"],["Mi","La7","Solo La7 contiene el Mi"]]},
+  {"tipo":"completar","enunciado":"Elige el acorde de los primeros compases:","partes":["Compás 1 (Re Re La La): ",{"correcta":"Re","opciones":["Re","Sol","La7"]},". Compás 2, primera mitad (Si Si): ",{"correcta":"Sol","opciones":["Re","Sol","La7"]},". Compás 4, primera mitad (Mi Mi): ",{"correcta":"La7","opciones":["Re","Sol","La7"]},"."],"pista":"Busca el acorde que contiene esas notas.","final":"Ya sabes cómo se elige."},
+  {"tipo":"tabla","cabecera":["Compás","1","2","3","4"],"filas":[["Acordes","Re","Sol, Re","Sol, Re","La7, Re"]]}]},
+ {"titulo":"Sobre la pista","bloques":[
+  {"tipo":"ejercicio","que":"Acompañar la canción: primero un acorde por compás, en negras, y luego rasgueando.","porque":"Así se oye la armonía desde dentro y se aprende a tocar con alguien.","atencion":"Escucha a la melodía, no a tu mano. Si te pierdes, espera al compás siguiente y vuelve a entrar.","empieza":"♩ = 60.","sube":"Eliges el acorde a tiempo y no pierdes la melodía."},
+  {"tipo":"pista","fuente":"notacion/lec-estrellita.json","bpm":60,"etiquetas":["Re","Sol–Re","Sol–Re","La7–Re","Re–Sol","Re–La7","Re–Sol","Re–La7","Re","Sol–Re","Sol–Re","La7–Re"]},
+  {"tipo":"acordes","nombres":["Re","Sol","La7"]},
+  {"tipo":"bien","items":["Cambias de acorde cuando la melodía lo pide.","No pierdes el pulso aunque te equivoques.","Llegas al final con la canción."]}]}]},
+"n1.t11.l4.p3":{"bloques":[
+  {"tipo":"guia","md":"Si suena mal, la melodía está pidiendo otro acorde: prueba el de al lado."},
+  {"tipo":"concepto","titulo":"Tu oído ya lo sabe","md":"Oír que algo choca es una señal, no un error: te dice exactamente dónde mirar. Con solo tres acordes, probar es muy rápido. Antes de buscar la respuesta en la teoría, prueba con el oído."},
+  {"tipo":"escuchar","items":[{"etiqueta":"Melodía Si con Sol: encaja","notas":[[[3,0],[2,0],[1,3]],[2,0]],"duracion":1.1},{"etiqueta":"Melodía Si con Re: choca","notas":[[[4,0],[3,2],[2,3]],[2,0]],"duracion":1.1}]},
+  {"tipo":"elige","enunciado":"Tocas La7 y la melodía se mantiene en Re, y choca. ¿Qué pruebas?","opciones":["Sol o Re, que contienen el Re","Tocar más fuerte","Seguir igual"],"correcta":0,"porque":"Re no está en La7. Sol y Re sí lo tienen.","pista":"¿Qué acordes contienen esa nota?"},
+  {"tipo":"reaparece","items":[{"paso":"n1.t4.l6.p1","texto":"elegir notas sobre los acordes: lo mismo, al revés."}]}]},
+"n1.t11.l5.p1":{"pantallas":[
+ {"titulo":"Qué estás entrenando","bloques":[
+  {"tipo":"texto","md":"Es lo que hace todo músico cuando corrige: compara lo que oye con lo que debería oír. Aquí la app toca una frase dos veces, y en la segunda cambia algo. Tu trabajo: decir **qué** y **dónde**."},
+  {"tipo":"pasos","titulo":"Cómo se hace","items":["Primera escucha: cántala por dentro para memorizarla.","Segunda escucha: compara nota a nota.","Decide primero si ha cambiado una altura o un ritmo.","Luego, en qué parte: al principio, en el medio o al final."]},
+  {"tipo":"escuchar","items":[{"etiqueta":"Frase de ejemplo","notas":[[2,3],[1,0],[1,2],[1,0],[2,3]],"duracion":0.55},{"etiqueta":"Cambia la 3.ª nota","notas":[[2,3],[1,0],[1,3],[1,0],[2,3]],"duracion":0.55}]}]},
+ {"titulo":"Ahora, tú","bloques":[
+  {"tipo":"elige","enunciado":"Suena la frase, una pausa y otra vez. ¿Qué ha cambiado?","audio":{"notas":[[2,3],[1,0],[1,2],[1,0],[2,3],[],[2,3],[1,2],[1,2],[1,0],[2,3]],"duracion":0.5},"opciones":["La 2.ª nota","La 4.ª nota","La última nota"],"correcta":0,"porque":"En la repetición, la 2.ª nota sube de Mi a Fa♯.","pista":"Compara nota a nota."},
+  {"tipo":"elige","enunciado":"¿Y aquí?","audio":{"notas":[[3,0],[3,2],[2,0],[3,2],[3,0],[],[3,0],[3,2],[2,0],[3,2],[3,2]],"duracion":0.5},"opciones":["La 1.ª nota","La 3.ª nota","La última nota"],"correcta":2,"porque":"Terminaba en Sol; en la repetición se queda en La, sin llegar a casa.","pista":"Fíjate en cómo termina."},
+  {"tipo":"elige","enunciado":"Una más: ¿ha cambiado algo?","audio":{"notas":[[2,0],[2,1],[2,3],[2,1],[],[2,0],[2,1],[2,3],[2,1]],"duracion":0.5},"opciones":["Nada: son iguales","Ha cambiado una nota"],"correcta":0,"porque":"Las dos veces: Si, Do, Re, Do. También hay que saber oír que nada cambia.","pista":"Compáralas sin esperar un cambio."},
+  {"tipo":"bien","items":["Sabes decir qué nota ha cambiado.","Reconoces si no ha cambiado nada."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t13.l5.p1","texto":"repetir una melodía de oído."}]}]}]},
+"n1.t11.l5.p2":{"bloques":[
+  {"tipo":"texto","md":"Dos pruebas. Nada se bloquea."},
+  {"tipo":"lista","titulo":"1. El estudio de Brouwer","items":["Entero, con la fórmula igualada."]},
+  {"tipo":"lista","titulo":"2. La canción acompañada","items":["*Estrellita* entera, sin parar, con los acordes a tiempo."]},
+  {"tipo":"pista","fuente":"notacion/lec-estrellita.json","bpm":72,"etiquetas":["Re","Sol–Re","Sol–Re","La7–Re","Re–Sol","Re–La7","Re–Sol","Re–La7","Re","Sol–Re","Sol–Re","La7–Re"]},
+  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["El estudio de Brouwer, sin perder el pulso.","La canción acompañada de principio a fin."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t11.l3.p2","texto":"si fallan los cambios."},{"paso":"n1.t11.l4.p2","texto":"si fallan los acordes."}]}]}
+}}

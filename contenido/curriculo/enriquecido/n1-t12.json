@@ -1,0 +1,1518 @@
+{
+ "tramo": "n1.t12",
+ "nota": "Primera aparición de vihuela, guitarra barroca, cifra, bajo que se repite, 6/8, hemiolia, apagar voces, mordente y tipos de cadencia. Romanesca y Españoleta siguen fuera de la app; edición, compases y detalles de la cifra de Sanz, por verificar.",
+ "pasos": {
+  "n1.t12.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Este tramo te lleva unos siglos atrás. La guitarra que tocas es relativamente moderna: antes hubo otros instrumentos de cuerda pulsada, con otra música y otra forma de escribirla."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Instrumento",
+      "Cuándo",
+      "Cómo era"
+     ],
+     "filas": [
+      [
+       "**Vihuela**",
+       "Sobre todo, siglo XVI en España",
+       "Parecida a una guitarra, con seis órdenes (cuerdas dobles)"
+      ],
+      [
+       "**Guitarra barroca**",
+       "Siglos XVII y XVIII",
+       "Más pequeña y con cinco órdenes"
+      ],
+      [
+       "**Guitarra moderna**",
+       "Desde el siglo XIX",
+       "Seis cuerdas simples, más grande"
+      ]
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Dos piezas de dos épocas",
+     "md": "La *Romanesca* es una melodía del **siglo XVI** sobre un bajo que se repite. **Gaspar Sanz** publicó en Zaragoza, en 1674, su *Instrucción de música sobre la guitarra española*, un método para la guitarra barroca de cinco órdenes. De ahí sale la *Españoleta*."
+    },
+    {
+     "tipo": "texto",
+     "md": "Lo que tocas son versiones adaptadas a tu guitarra de seis cuerdas. Y aunque suene antiguo, verás algo muy familiar: los mismos acordes, cadencias y repeticiones de siempre."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l1.p2",
+       "texto": "cómo se escribía esa música."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya llevas tiempo leyendo tablatura, y quizá la creas un invento moderno. No lo es: tiene varios siglos. Sanz escribía así, con **números sobre líneas**."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "Tu tablatura",
+      "La cifra de Sanz"
+     ],
+     "filas": [
+      [
+       "Líneas",
+       "6, una por cuerda",
+       "5, una por orden"
+      ],
+      [
+       "Números",
+       "El traste",
+       "El traste"
+      ],
+      [
+       "El ritmo",
+       "Plicas, debajo",
+       "Figuras, encima"
+      ],
+      [
+       "La cuerda aguda",
+       "Arriba",
+       "Por verificar: en algunas cifras antiguas va abajo"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Si la cuerda aguda va arriba o abajo en la cifra de Sanz está por comprobar con el facsímil. Si encuentras una copia, mira las primeras páginas: Sanz explica cómo leerla."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En una cifra de 5 líneas ves un 0. ¿Qué significa?",
+     "opciones": [
+      "Silencio",
+      "Una cuerda al aire",
+      "El primer dedo"
+     ],
+     "correcta": 1,
+     "porque": "Igual que en tu tablatura: el número es el traste y 0 es al aire.",
+     "pista": "¿Qué significa un 0 en la tablatura que ya conoces?"
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t1.l5.p4",
+       "texto": "tu tablatura y sus símbolos."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Suena más ligera y brillante que tu guitarra: eso son los cinco órdenes. Es música para bailar."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Dónde escucharla",
+     "md": "[Buscar *Españoleta* de Sanz en guitarra barroca, en YouTube](https://www.youtube.com/results?search_query=Sanz+Espa%C3%B1oleta+guitarra+barroca). Busca una versión con instrumento barroco y, después, otra en guitarra moderna."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Compara",
+     "items": [
+      "¿Cómo cambia el sonido de un instrumento al otro?",
+      "¿Se oye el pulso de la danza? Marca con el pie.",
+      "Busca los adornos muy rápidos: son los mordentes que vas a aprender."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l5.p1",
+       "texto": "el mordente."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Un bajo para improvisar",
+     "md": "La **romanesca** no es exactamente una pieza, sino una fórmula: **un bajo y unos acordes conocidos en toda Europa**. Los músicos del siglo XVI la usaban como base para improvisar: el bajo se repite igual y arriba se inventan variaciones. Es como una base de acordes moderna."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Acorde",
+      "Sol",
+      "Re",
+      "Mi m",
+      "Si"
+     ],
+     "filas": [
+      [
+       "Bajo",
+       "Sol",
+       "Re",
+       "Mi",
+       "Si"
+      ],
+      [
+       "Grado en Mi menor",
+       "III",
+       "VII",
+       "i",
+       "V"
+      ]
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Sol",
+       "g": "III"
+      },
+      {
+       "n": "Re",
+       "g": "VII"
+      },
+      {
+       "n": "Mi m",
+       "g": "i"
+      },
+      {
+       "n": "Si7",
+       "g": "V"
+      },
+      {
+       "n": "Sol",
+       "g": "III"
+      },
+      {
+       "n": "Re",
+       "g": "VII"
+      },
+      {
+       "n": "Mi m",
+       "g": "i"
+      }
+     ],
+     "bpms": [
+      60,
+      84
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Solo el bajo",
+       "notas": [
+        [
+         6,
+         3
+        ],
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         5,
+         2
+        ],
+        [
+         6,
+         3
+        ],
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         2
+        ]
+       ],
+       "duracion": 0.8
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "El esquema",
+     "md": "Esta es la forma habitual del esquema, puesta en Mi menor. Cada edición puede usar otra tonalidad y otro detalle. La progresión la tocas con Si7 porque es el acorde que ya conoces."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t11.l1.p2",
+       "texto": "el ostinato: la misma idea."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Lo que estás entrenando es seguir el bajo **debajo** de todo lo demás. No es natural: el oído se va a lo agudo. Pero es lo que te permitirá reconocer la armonía de cualquier obra."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se escucha",
+     "items": [
+      "Canta el bajo solo: Sol, Re, Mi, Si.",
+      "Oye la progresión, cantando el bajo a la vez.",
+      "Oye ahora sin cantar: ¿sigue ahí, debajo?"
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Es el bajo de la romanesca?",
+     "audio": {
+      "notas": [
+       [
+        6,
+        3
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        5,
+        2
+       ]
+      ],
+      "duracion": 0.8
+     },
+     "opciones": [
+      "Sí",
+      "No"
+     ],
+     "correcta": 0,
+     "porque": "Sol, Re, Mi, Si.",
+     "pista": "Cántalo al lado del ejemplo."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Y este?",
+     "audio": {
+      "notas": [
+       [
+        6,
+        0
+       ],
+       [
+        5,
+        0
+       ],
+       [
+        5,
+        2
+       ],
+       [
+        6,
+        0
+       ]
+      ],
+      "duracion": 0.8
+     },
+     "opciones": [
+      "Sí",
+      "No"
+     ],
+     "correcta": 1,
+     "porque": "Mi, La, Si, Mi: es I-IV-V-I.",
+     "pista": "Compara con Sol, Re, Mi, Si."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Suena el bajo con algo encima. ¿Lo reconoces?",
+     "audio": {
+      "notas": [
+       [
+        [
+         6,
+         3
+        ],
+        [
+         1,
+         3
+        ]
+       ],
+       [
+        [
+         4,
+         0
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       [
+        [
+         4,
+         2
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       [
+        [
+         5,
+         2
+        ],
+        [
+         2,
+         0
+        ]
+       ]
+      ],
+      "duracion": 0.9
+     },
+     "opciones": [
+      "Sí, es el de la romanesca",
+      "No, es otro"
+     ],
+     "correcta": 0,
+     "porque": "La línea de arriba distrae, pero debajo sigue: Sol, Re, Mi, Si.",
+     "pista": "Atiende solo a las notas graves."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes cantar el bajo de memoria.",
+      "Lo reconoces con otra cosa encima."
+     ]
+    }
+   ]
+  },
+  "n1.t12.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "No es solo una curiosidad antigua: este bajo volverá. En el nivel 4 tocarás *Guárdame las vacas*, de Narváez, que está hecha sobre él."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué te sirve",
+     "md": "Cuando entiendes que una obra está construida sobre una fórmula, la aprendes mejor. Ya no recuerdas notas sueltas: recuerdas un camino sobre el que pasan cosas. Lo mismo sirve para la progresión I-IV-V y para cualquier estilo posterior."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "El bajo",
+       "notas": [
+        [
+         6,
+         3
+        ],
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         5,
+         2
+        ]
+       ],
+       "duracion": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué aprendes con ella",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-anonimo-romanesca",
+       "md": "**Qué aprendes:** dos voces independientes, un bajo que se repite, y el sonido de una música muy antigua."
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "Hay muchas versiones. IMSLP recoge [una aquí](https://imslp.org/wiki/La_Romanesca_%28Sor,_Fernando%29), pero no hemos comprobado que sea la que usa este nivel: pregunta a tu profesor cuál usar. Por eso, ningún compás se da como dato."
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Antes de tocar",
+       "items": [
+        "Busca el bajo en la partitura: ¿lo reconoces? Puede estar en otra tonalidad.",
+        "Marca a lápiz dónde se repite.",
+        "Mira las plicas: arriba, la melodía; abajo, el bajo."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se trabaja",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por capas",
+       "items": [
+        "**Solo el bajo**, cantado y tocado.",
+        "**Solo la melodía**, cantada y tocada.",
+        "**Las dos**, cuatro compases cada vez.",
+        "**Las duraciones**: cada nota dura lo que dice, como verás en el paso siguiente."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "La obra entera, con las dos voces claras.",
+       "porque": "Es tu primera música del Renacimiento y aplica los dos planos a una voz que no es un simple acompañamiento.",
+       "atencion": "Aquí el bajo también es una línea: no es una sombra, sino una segunda voz.",
+       "empieza": "♩ = 50.",
+       "sube": "Tres veces sin parar."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-anonimo-romanesca",
+       "bpm": 50
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Tocas la obra sin parar.",
+        "Se distinguen las dos voces.",
+        "Sabes dónde vuelve el bajo."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Una nota también termina",
+     "md": "Si no haces nada, una cuerda sigue sonando. En el Renacimiento eso importa: una **voz** tiene que **acabar cuando dice la partitura**, o se mezcla con la siguiente. **Apagar** una voz es decidir exactamente cuándo termina una nota."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Si es una cuerda",
+      "Se apaga con"
+     ],
+     "filas": [
+      [
+       "Al aire",
+       "Apoyando un dedo de la mano derecha (normalmente *p*) o de la izquierda sobre ella"
+      ],
+      [
+       "Pisada",
+       "Aflojando el dedo que la pisa, sin levantarlo"
+      ]
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Dos voces, en las que el bajo se apaga donde termina su figura.",
+     "porque": "Es lo que hace que dos voces suenen como dos personas, y no como un acorde que se va acumulando.",
+     "atencion": "Mira el silencio del bajo: en ese tiempo no debe oírse nada abajo.",
+     "empieza": "♩ = 50.",
+     "sube": "El bajo termina justo donde lo dice la partitura."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-apagar-voces.json",
+     "titulo": "Dos voces: el bajo se apaga",
+     "principal": "ambas",
+     "motivo": "Para ver los silencios del bajo.",
+     "bpms": [
+      50
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes oír el silencio del bajo.",
+      "La melodía no se corta cuando apagas el bajo."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l2.p2",
+       "texto": "las dos voces."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "**Re mayor** lleva dos sostenidos, Fa♯ y Do♯, y es la tonalidad natural de muchas piezas barrocas para guitarra. Ya has leído *Estrellita* en ella."
+    },
+    {
+     "tipo": "grados",
+     "clave": "D",
+     "patron": true,
+     "titulo": "Re mayor, con sus distancias"
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Re mayor, dos octavas, con un cambio de posición.",
+     "porque": "Es la segunda escala con cambio. La mano sube de la zona de la 1.ª posición a la VII.",
+     "atencion": "El cambio llega en la 1.ª cuerda: de La a Si, el dedo 1 sale antes y salta. No esperes a la última nota.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "El cambio no se oye."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-re-mayor-2oct.json",
+     "titulo": "Re mayor, dos octavas",
+     "principal": "ambas",
+     "motivo": "Para ver la digitación y la partitura.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "El cambio llega en el {c:2}. Bajando, en el {c:3}."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El cambio no se oye en ninguno de los dos sentidos.",
+      "Tocas Fa♯ y Do♯ todas las veces."
+     ]
+    }
+   ]
+  },
+  "n1.t12.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Es I-IV-V7-I otra vez: ya la rasgueaste con *Estrellita*. Ahora en arpegio y escuchando la resolución."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-re-sol-la7.json",
+     "titulo": "Re–Sol–La7–Re",
+     "principal": "tablatura",
+     "motivo": "Es técnica de acordes: tablatura.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Acorde",
+      "Papel",
+      "Notas"
+     ],
+     "filas": [
+      [
+       "Re",
+       "I · reposo",
+       "Re, Fa♯, La"
+      ],
+      [
+       "Sol",
+       "IV · alejamiento",
+       "Sol, Si, Re"
+      ],
+      [
+       "La7",
+       "V7 · tensión",
+       "La, Do♯, Mi, Sol"
+      ],
+      [
+       "Re",
+       "I · reposo",
+       "Re, Fa♯, La"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En La7, ¿qué nota es la sensible de Re mayor?",
+     "opciones": [
+      "La",
+      "Do♯",
+      "Sol"
+     ],
+     "correcta": 1,
+     "porque": "Está a un semitono de Re y quiere subir.",
+     "pista": "Es la nota que está justo un semitono por debajo de la tónica."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t14.l3.p2",
+       "texto": "en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El compás de 6/8",
+     "md": "El 6/8 tiene **6 corcheas por compás**, pero **se siente en dos**: dos grupos de tres. El pulso es la **negra con puntillo**, que dura tres corcheas. Se cuenta **1-2-3 4-5-6**, cargando el 1 y el 4, o «uno y-a, dos y-a»."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "3/4",
+      "6/8"
+     ],
+     "filas": [
+      [
+       "Corcheas",
+       "6",
+       "6"
+      ],
+      [
+       "Se agrupan",
+       "2 + 2 + 2",
+       "3 + 3"
+      ],
+      [
+       "Se siente",
+       "Tres pulsos",
+       "Dos pulsos"
+      ],
+      [
+       "Es",
+       "Un vals",
+       "Una danza saltada"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-6-8.json",
+     "titulo": "6/8: dos pulsos",
+     "principal": "ambas",
+     "motivo": "Importa ver cómo se agrupan.",
+     "bpms": [
+      80
+     ],
+     "notas": [
+      "El {c:1} tiene dos negras con puntillo: los pulsos. El {c:2}, las seis corcheas."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Escucha. ¿Se siente en dos o en tres?",
+     "audio": {
+      "notas": [
+       [
+        5,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        5,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        5,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        5,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "duracion": 0.3
+     },
+     "opciones": [
+      "Dos grupos de tres, como 6/8",
+      "Tres grupos de dos, como 3/4"
+     ],
+     "correcta": 0,
+     "porque": "Grave y dos agudas: cada grupo tiene tres.",
+     "pista": "Cuenta las notas de un bajo al siguiente."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l4.p5",
+       "texto": "la hemiolia: un juego entre los dos."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya conoces el puntillo y la semicorchea del trémolo. Aquí se juntan en ritmos más variados, muy comunes en la música antigua. Primero se cuentan y después se tocan."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Grupo",
+      "Dura"
+     ],
+     "filas": [
+      [
+       "Negra con puntillo y corchea",
+       "1 tiempo y medio + medio = 2 tiempos"
+      ],
+      [
+       "Cuatro semicorcheas",
+       "1 tiempo"
+      ],
+      [
+       "Dos semicorcheas y una corchea",
+       "¼ + ¼ + ½ = 1 tiempo"
+      ]
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Cada ritmo, primero dicho y luego tocado.",
+     "porque": "Es fácil igualar lo que no es igual, y el carácter se pierde.",
+     "atencion": "En el {c:1}, la corchea llega justo después del segundo tiempo. Las semicorcheas no se aceleran.",
+     "empieza": "♩ = 50.",
+     "sube": "Coincides con el audio."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-puntillo-semicorcheas.json",
+     "titulo": "Puntillo y semicorcheas",
+     "principal": "partitura",
+     "motivo": "Aquí importa la figura: partitura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "{c:1}: negra con puntillo y corchea. {c:2}: empieza con cuatro semicorcheas. {c:3}: negra con puntillo y corchea, y después dos semicorcheas y una corchea."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Se oye la diferencia con un ritmo igualado.",
+      "Las semicorcheas son regulares."
+     ]
+    }
+   ]
+  },
+  "n1.t12.l4.p5": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La hemiolia",
+     "md": "Una **hemiolia** es un juego rítmico: durante un momento, se cambia el agrupamiento sin cambiar la velocidad de las corcheas. En 6/8, en vez de dos grupos de tres, oyes **tres grupos de dos**. Es muy típica justo antes de una cadencia, como un paso cambiado antes de terminar el baile."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "filas": [
+      [
+       "6/8 normal",
+       "**X**",
+       "",
+       "",
+       "**X**",
+       "",
+       ""
+      ],
+      [
+       "Hemiolia",
+       "**X**",
+       "",
+       "**X**",
+       "",
+       "**X**",
+       ""
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-hemiolia.json",
+     "titulo": "En 6/8",
+     "principal": "ambas",
+     "motivo": "Importa ver el cambio de agrupamiento.",
+     "bpms": [
+      80
+     ],
+     "notas": [
+      "Los acentos marcan los grupos. En el {c:2}, dos grupos de tres; en el {c:3}, la hemiolia: tres grupos de dos."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-hemiolia-3-4.json",
+     "titulo": "En 3/4",
+     "principal": "ambas",
+     "motivo": "La misma idea en otro compás.",
+     "bpms": [
+      80
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Dar palmas siguiendo los acentos y después tocarlo.",
+     "porque": "Sin sentirlo en el cuerpo, la hemiolia parece un error de ritmo.",
+     "atencion": "Las corcheas no cambian de velocidad: solo cambia dónde cargas.",
+     "empieza": "Lento, el tempo en que los acentos salgan claros.",
+     "sube": "Pasas de un agrupamiento a otro sin frenar."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Oyes tres grupos en la hemiolia.",
+      "La velocidad de las corcheas no ha cambiado."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l6.p3",
+       "texto": "la hemiolia dentro de la *Españoleta*."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Un adorno rápido",
+     "md": "Un **mordente** es un adorno de tres notas muy rápidas: la nota, la de al lado y otra vez la nota. Se hace con **ligados**: solo se pulsa la primera. Da vida a una nota, en especial en música barroca. Tu profesor puede llamarlo «mordente inferior» o «barroco»: en este curso es lo mismo."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "Re, Do♯, Re en la 2.ª cuerda",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "D",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "k": "a",
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "k": "b",
+          "c": 2,
+          "t": 3,
+          "dedo": 3
+         }
+        ],
+        "suena": [
+         62
+        ],
+        "texto": "Dedo 2 ya preparado en el traste 2. Pulsa el Re con el dedo 3.",
+        "ms": 2800
+       },
+       {
+        "marcas": [
+         {
+          "k": "a",
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         }
+        ],
+        "suena": [
+         61
+        ],
+        "texto": "Descendente: el dedo 3 tira hacia la palma. Suena Do♯.",
+        "ms": 2800
+       },
+       {
+        "marcas": [
+         {
+          "k": "a",
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "k": "b",
+          "c": 2,
+          "t": 3,
+          "dedo": 3
+         }
+        ],
+        "suena": [
+         62
+        ],
+        "texto": "Ascendente: el dedo 3 cae otra vez. Suena Re.",
+        "ms": 2800
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Lento",
+       "notas": [
+        [
+         2,
+         3
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 0.5
+      },
+      {
+       "etiqueta": "A tempo",
+       "notas": [
+        [
+         2,
+         3
+        ],
+        [
+         2,
+         2
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 0.13
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Primero prepara el dedo de abajo.",
+      "Pulsa una vez.",
+      "Tira con el dedo de arriba y déjalo caer: dos ligados, seguidos.",
+      "No muevas nada más."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l4.p3",
+       "texto": "ligados con dedo fijo: es lo que acabas de usar."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "El mordente, primero como ritmo normal y luego rápido.",
+     "porque": "La *Españoleta* lo pide a tempo. Si intentas la velocidad de golpe, los ligados saldrán sucios.",
+     "atencion": "El adorno pertenece a la nota, no a un tiempo aparte: no debe retrasar el pulso.",
+     "empieza": "♩ = 50.",
+     "sube": "Las tres notas salen limpias. El objetivo es hacerlo dentro de la *Españoleta*."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-mordente.json",
+     "titulo": "Mordente con ligados",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "En el {c:1}, el mordente va en las tres primeras notas."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las tres notas se oyen claras.",
+      "El pulso no se retrasa."
+     ]
+    }
+   ]
+  },
+  "n1.t12.l6.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué aprendes con ella",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-sanz-espanoleta",
+       "md": "**Qué aprendes:** una danza barroca, con su hemiolia, su mordente y sus cadencias. Es una de las tres piezas posibles de tu recital."
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "Hay versiones de distinta dificultad, y la que uses la decide tu profesor. Sin ella, ni la tonalidad, ni el compás, ni el número de compases se dan como dato."
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Antes de tocar",
+       "items": [
+        "¿Compás y armadura? Si es ternario, cuenta cómo se agrupa.",
+        "¿Dónde hay adornos? Márcalos.",
+        "¿Dónde hay cadencias? Busca las notas largas y los finales de frase."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Primero la mitad; después, entera",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por capas",
+       "items": [
+        "Toca la primera mitad **sin adornos**.",
+        "Cuando salga con el pulso firme, añade los mordentes, uno a uno.",
+        "Haz lo mismo con la segunda mitad.",
+        "Únelas y deja que pase al atril."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "La obra entera, con el pulso de una danza.",
+       "porque": "Es tu obra troncal del Barroco. Reúne todo lo de este tramo.",
+       "atencion": "Primero el pulso, después el adorno. Si un mordente te hace frenar, quítalo y vuelve a ponerlo más tarde.",
+       "empieza": "♩ = 50, o más lento.",
+       "sube": "Se podría bailar."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-sanz-espanoleta",
+       "bpm": 50
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "La primera mitad y la obra entera, sin parar.",
+        "Los mordentes no frenan el pulso.",
+        "Las voces duran lo que dicen."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l6.p2": {
+   "pantallas": [
+    {
+     "titulo": "Tres maneras de terminar una frase",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ya sabes que una cadencia es la forma en que termina una frase. No todas terminan igual: hay finales definitivos y otros que dejan algo pendiente, como un punto y una coma."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Cadencia",
+        "Acordes",
+        "Efecto",
+        "Como en una frase"
+       ],
+       "filas": [
+        [
+         "**Perfecta**",
+         "V → I",
+         "Final, firme",
+         "Punto final"
+        ],
+        [
+         "**Plagal**",
+         "IV → I",
+         "Final, suave",
+         "Punto, con calma"
+        ],
+        [
+         "**Semicadencia**",
+         "Cualquiera → V",
+         "Se queda abierta",
+         "Coma, o una pregunta"
+        ]
+       ]
+      },
+      {
+       "tipo": "progresion",
+       "acordes": [
+        {
+         "n": "La7",
+         "g": "V7"
+        },
+        {
+         "n": "Re",
+         "g": "I"
+        }
+       ],
+       "bpms": [
+        66
+       ]
+      },
+      {
+       "tipo": "progresion",
+       "acordes": [
+        {
+         "n": "Sol",
+         "g": "IV"
+        },
+        {
+         "n": "Re",
+         "g": "I"
+        }
+       ],
+       "bpms": [
+        66
+       ]
+      },
+      {
+       "tipo": "progresion",
+       "acordes": [
+        {
+         "n": "Re",
+         "g": "I"
+        },
+        {
+         "n": "La7",
+         "g": "V7"
+        }
+       ],
+       "bpms": [
+        66
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Conclusiva y suspensiva",
+       "md": "La perfecta y la plagal son **conclusivas**: la música descansa. La semicadencia es **suspensiva**: se queda en el aire y hay que seguir."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "Una frase termina en el acorde de La7, en Re mayor. ¿Qué tipo de final es?",
+       "opciones": [
+        "Perfecta",
+        "Plagal",
+        "Semicadencia"
+       ],
+       "correcta": 2,
+       "porque": "Termina en el V: queda abierta.",
+       "pista": "¿En qué acorde termina?"
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t6.l2.p3",
+         "texto": "la cadencia de tu *Estudio*."
+        },
+        {
+         "paso": "n1.t13.l4.p3",
+         "texto": "frases que preguntan y responden."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l6.p3": {
+   "bloques": [
+    {
+     "tipo": "pasos",
+     "titulo": "Búscalo en tu partitura",
+     "items": [
+      "Marca el final de cada frase.",
+      "Pon nombre al último acorde: ¿I o V?",
+      "En cada cadencia, mira si antes de llegar cambia el agrupamiento: ¿tres grupos de dos? Es la hemiolia.",
+      "Da palmas en ese compás con sus acentos reales y después tócalo."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Sin la edición comprobada, la academia no te indica en qué compases aparecen. Cuanto hayas marcado a lápiz, revísalo con tu profesor."
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/rit-hemiolia.json",
+     "titulo": "Recuerda la hemiolia",
+     "principal": "ambas",
+     "motivo": "Importa ver el cambio de agrupamiento.",
+     "bpms": [
+      80
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes dónde está cada cadencia y de qué tipo es.",
+      "La hemiolia suena a paso cambiado, no a error."
+     ]
+    }
+   ]
+  },
+  "n1.t12.l6.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Oyes cómo termina una frase y decides: ¿se ha acabado o se queda abierta? Es lo que hace un buen intérprete para saber cómo tocarla."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Conclusiva: La7 → Re",
+       "acordes": [
+        "La7",
+        "Re"
+       ],
+       "duracion": 1.4
+      },
+      {
+       "etiqueta": "Suspensiva: Re → La7",
+       "acordes": [
+        "Re",
+        "La7"
+       ],
+       "duracion": 1.4
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 5
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t14.l3.p4",
+       "texto": "en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l6.p5": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Una danza se baila",
+     "md": "La *Españoleta* es una danza. Aunque nadie la baile hoy, tiene que sonar a que **se podría bailar**: un pulso firme, los apoyos claros y ligereza en lo demás. Las notas de un tiempo fuerte pesan; las demás flotan."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Se pierde el carácter si",
+      "Solución"
+     ],
+     "filas": [
+      [
+       "Todo suena con el mismo peso",
+       "Marca solo el primer tiempo de cada compás"
+      ],
+      [
+       "Te frenas en los adornos",
+       "Tócalos más tarde o más sencillos"
+      ],
+      [
+       "Las notas largas se quedan pegadas",
+       "Aprovecha para apagar y respirar"
+      ]
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Compruébalo",
+     "items": [
+      "Oye de nuevo una [versión barroca](https://www.youtube.com/results?search_query=Sanz+Espa%C3%B1oleta+guitarra+barroca).",
+      "Marca el pulso con el pie.",
+      "Tócala a la vez, moviendo el pie.",
+      "Si el pie se para, has perdido la danza."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes marcar el pulso con el pie mientras tocas.",
+      "Hay tiempos que pesan y otros que flotan."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t2.l5.p3",
+       "texto": "el pulso."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t12.l6.p6": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una sola prueba, y es una obra entera."
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que ya te sale",
+     "items": [
+      "La *Españoleta* entera, sin parar.",
+      "El pulso se mantiene en mordentes y cadencias.",
+      "Se oye la hemiolia antes de la cadencia.",
+      "Suena a danza."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-sanz-espanoleta",
+     "bpm": 54
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l5.p2",
+       "texto": "si fallan los mordentes."
+      },
+      {
+       "paso": "n1.t12.l4.p5",
+       "texto": "si falla la hemiolia."
+      },
+      {
+       "paso": "n1.t14.l2.p2",
+       "texto": "el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

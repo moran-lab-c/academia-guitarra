@@ -12,7 +12,8 @@ const estadoDe = (clave, inicial) => { if (!memoria.has(clave)) memoria.set(clav
 // replaceChildren convierte en texto lo que no es un nodo: aquí se quitan los false de las condiciones.
 const poner = (raiz, ...hijos) => raiz.replaceChildren(...hijos.flat(Infinity).filter(x => x != null && x !== false));
 
-const sonar = a => tocar(a.notas.map(n => (Array.isArray(n[0]) ? n.map(x => midiEn(x[0], x[1])) : [midiEn(n[0], n[1])])), { duracion: a.duracion ?? 1, arpegiado: !!a.arpegiado });
+// Un grupo vacío es un silencio.
+const sonar = a => tocar(a.notas.map(n => (!n.length ? [] : Array.isArray(n[0]) ? n.map(x => midiEn(x[0], x[1])) : [midiEn(n[0], n[1])])), { duracion: a.duracion ?? 1, arpegiado: !!a.arpegiado });
 
 export function elige(b, clave) {
   const st = estadoDe(clave, () => ({ eleccion: null }));

@@ -63,6 +63,8 @@ export function recomendarFormato(item, cx = {}) {
   // Las dos disponibles: de más a menos fuerte.
   if (cx.encargo?.formato && disp.includes(cx.encargo.formato)) return resultado(cx.encargo.formato, 'Lo ha pedido tu profesor.');
   const diseno = sec?.notacion?.principal ?? item.notacion?.principal;
+  // «ambas»: para comparar partitura y tablatura, juntas de entrada; lo que él elija sigue mandando.
+  if (diseno === 'ambas' && disp.length === 2) { const r = resultado('partitura', sec?.notacion?.motivo ?? item.notacion?.motivo ?? 'Para comparar las dos.'); return r.elegidoPorTi ? r : { ...r, mostrar: 'ambas' }; }
   if (diseno && disp.includes(diseno)) return resultado(diseno, sec?.notacion?.motivo ?? item.notacion?.motivo ?? 'Es el formato para el que está pensado.');
   if (cx.proposito === 'lectura') return resultado('partitura', 'Este bloque es para leer: partitura, con la tablatura para comprobar.');
   if (cx.proposito === 'tecnica') return resultado('tablatura', 'Aquí importa la técnica, no leer: tablatura (la partitura, si quieres ver las notas).');

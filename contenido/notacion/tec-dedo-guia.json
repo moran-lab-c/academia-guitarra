@@ -1,0 +1,61 @@
+{
+ "titulo": "El dedo guía en una cuerda",
+ "compas": "4/4",
+ "armadura": "E",
+ "conteo": true,
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 2,
+      "t": 2,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "2",
+      "c": 2,
+      "t": 4,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 2,
+      "t": 7,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "2",
+      "c": 2,
+      "t": 4,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 2,
+      "t": 2,
+      "dedo": 1,
+      "mano": "m"
+     }
+    ]
+   ]
+  }
+ ]
+}

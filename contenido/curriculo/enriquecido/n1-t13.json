@@ -1,0 +1,108 @@
+{"tramo":"n1.t13","nota":"Primera aparición de Clasicismo, forma binaria y ternaria, cejilla completa y repetir de oído. Sor op. 31 n.º 4 sigue fuera de la app: tonalidad, compases y forma, por verificar.","pasos":{
+"n1.t13.l1.p1":{"bloques":[
+  {"tipo":"texto","md":"Has tocado a Sor al principio del curso para aprender a leer. Ahora vuelves a él para aprender su **estilo**, ya con todo lo que sabes de escalas y armonía."},
+  {"tipo":"concepto","titulo":"La guitarra de principios del XIX","md":"En las primeras décadas del siglo XIX, la guitarra vivió un gran momento en las capitales europeas. **Fernando Sor** trabajó en París y en otras ciudades. **Mauro Giuliani** triunfó en Viena hasta 1819. Los dos tocaban y escribían música para concierto y para aficionados."},
+  {"tipo":"tabla","cabecera":["Rasgo del estilo clásico","Dónde lo notas"],"filas":[["Frases equilibradas, de igual tamaño","Preguntan y responden"],["Armonía muy clara","Tónica y dominante mandan"],["Textura transparente","Melodía y bajo se oyen por separado"],["Elegancia","Sin exagerar el tempo ni el volumen"]]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l4.p1","texto":"la primera vez que viste a Sor."},{"paso":"n1.t4.l3.p2","texto":"las fórmulas de Giuliani."}]}]},
+"n1.t13.l1.p2":{"bloques":[
+  {"tipo":"texto","md":"Ya viste A-B-A en *Lágrima*. Aquí tienes los nombres de las dos formas más comunes en este nivel."},
+  {"tipo":"tabla","cabecera":["Forma","Esquema","Cómo se siente","Ejemplo"],"filas":[["**Binaria**","A-B, a menudo ‖: A :‖: B :‖","Dos partes que se complementan; la segunda no vuelve a la primera","Muchas danzas y andantes"],["**Ternaria**","A-B-A","Salir de casa y volver","*Lágrima*"]]},
+  {"tipo":"concepto","titulo":"Cómo se reconoce","md":"Mira si la última parte es **la misma** que la primera. Si vuelve entera, es ternaria. Si la segunda parte continúa con otra música y termina ahí, aunque se parezca, es binaria. Las barras de repetición y las cadencias son las pistas."},
+  {"tipo":"ordenar","enunciado":"Ordena la forma de *Lágrima*:","items":["A: Mi mayor","B: Mi menor","A: Mi mayor"],"barajadas":[1,0,2],"pista":"Empieza y termina igual.","final":"Forma ternaria: A-B-A."},
+  {"tipo":"elige","enunciado":"Una pieza tiene dos partes, cada una con su repetición. La segunda no regresa a la primera. ¿Qué forma es?","opciones":["Binaria","Ternaria"],"correcta":0,"porque":"Dos partes, sin vuelta.","pista":"¿Vuelve la primera parte al final?"},
+  {"tipo":"reaparece","items":[{"paso":"n1.t13.l4.p2","texto":"la forma de tu obra."}]}]},
+"n1.t13.l2.p1":{"bloques":[
+  {"tipo":"texto","md":"**La mayor** lleva tres sostenidos: Fa♯, Do♯ y Sol♯. El patrón sigue siendo el mismo: ya lo puedes construir tú."},
+  {"tipo":"grados","clave":"A","patron":true,"titulo":"La mayor, con sus distancias"},
+  {"tipo":"completar","enunciado":"Termina la escala:","partes":["La – Si – ",{"correcta":"Do♯","opciones":["Do","Do♯","Re"]}," – Re – Mi – ",{"correcta":"Fa♯","opciones":["Fa","Fa♯","Sol"]}," – ",{"correcta":"Sol♯","opciones":["Sol","Sol♯","La"]}," – La"],"pista":"Aplica T-T-S-T-T-T-S desde La.","final":"Tres sostenidos."},
+  {"tipo":"ejercicio","que":"La mayor, dos octavas, i-m apoyando.","porque":"Es la tonalidad de la primera vista de este tramo y, con Mi y Sol, de las más cómodas de la guitarra.","atencion":"La última nota se sale un poco de la 1.ª posición: la mano se mueve en la 1.ª cuerda.","empieza":"♩ = 50 en corcheas.","sube":"Suena igual al subir y al bajar."},
+  {"tipo":"notacion","fuente":"notacion/esc-la-mayor-2oct.json","titulo":"La mayor, dos octavas","principal":"ambas","motivo":"Para ver la armadura y la digitación.","bpms":[50,72]},
+  {"tipo":"metronomo","bpm":50},
+  {"tipo":"bien","items":["Tocas Do♯, Fa♯ y Sol♯ todas las veces.","Suena igual en los dos sentidos."]}]},
+"n1.t13.l2.p2":{"bloques":[
+  {"tipo":"texto","md":"Este es tu mapa completo de la 1.ª posición. Antes de empezar, encuentra las notas de La mayor en el mástil. Después, las preguntas son sobre cualquier nota natural: cuerda y traste → nombre."},
+  {"tipo":"localizar","enunciado":"Encuentra todos los **Do♯, Fa♯ y Sol♯** de la 1.ª posición.","conjunto":["Do♯","Fa♯","Sol♯"],"clave":"A","hastaTraste":4,"final":"Son las notas que cambian en La mayor."},
+  {"tipo":"preguntas","n":5},
+  {"tipo":"reaparece","items":[{"paso":"n1.t3.l2.p1","texto":"si te fallan las notas graves."}]}]},
+"n1.t13.l3.p1":{"pantallas":[
+ {"titulo":"Qué es y por qué en el V","bloques":[
+  {"tipo":"texto","md":"Ya tienes la media cejilla. La **cejilla completa** pisa las seis cuerdas con el dedo 1. Sin ella, no se puede tocar en todos los trastes los acordes que ya conoces."},
+  {"tipo":"concepto","titulo":"Tu acorde de Mi, en otro sitio","md":"Si colocas la forma de Mi un poco más arriba y pisas las seis cuerdas con el dedo 1, suena otro acorde mayor. En el traste 5, es **La mayor**: el dedo 1 hace de cejuela y tus dedos 2, 3 y 4 hacen la forma de Mi."},
+  {"tipo":"mastil","escena":{"tipo":"acorde","titulo":"La con cejilla en el V","acorde":"La (cejilla V)","clave":"A"}},
+  {"tipo":"anatomia","acorde":"La (cejilla V)","clave":"A"},
+  {"tipo":"concepto","titulo":"Por qué se empieza aquí","md":"Las cuerdas están más cerca del diapasón y **ceden con menos fuerza** en el traste 5 que en el 1. Por eso, aquí aprendes el gesto sin necesidad de apretar. En el nivel 2 bajarás a los trastes difíciles."}]},
+ {"titulo":"Cómo se hace","bloques":[
+  {"tipo":"pasos","titulo":"Paso a paso","items":["El dedo 1 recto, de lado, muy cerca del traste.","Deja caer el peso del brazo. No hagas pinza.","El pulgar solo acompaña: colócalo donde esté más suelto.","Pulsa cuerda a cuerda, de la 6.ª a la 1.ª.","Coloca el resto de dedos, uno a uno, y vuelve a pulsar."]},
+  {"tipo":"errores","items":[{"error":"La 2.ª o la 3.ª no suenan.","arreglo":"Caen en un pliegue del dedo. Gira el dedo un poco hacia el lado duro."},{"error":"Duele la base del pulgar.","arreglo":"Sobra fuerza. Suelta y deja que pese el brazo."},{"error":"El dedo 1 se dobla.","arreglo":"Colócalo recto antes de poner los demás."}]},
+  {"tipo":"elige","enunciado":"¿Qué sostiene la presión de la cejilla?","opciones":["La pinza entre el pulgar y el dedo 1","El peso del brazo"],"correcta":1,"porque":"Si haces pinza, te cansas enseguida y te duele.","pista":"Es lo mismo que en la media cejilla."},
+  {"tipo":"reaparece","items":[{"paso":"n1.t7.l3.p1","texto":"la media cejilla."}]}]}]},
+"n1.t13.l3.p2":{"bloques":[
+  {"tipo":"ejercicio","que":"El acorde dos tiempos, y soltar dos tiempos.","porque":"Lo que cansa es mantenerlo. Soltar a tiempo enseña a apretar solo cuando hace falta.","atencion":"Suelta del todo durante el silencio: la mano descansa, aunque sea un instante.","empieza":"♩ = 60. Menos de cinco veces al principio.","sube":"Las seis cuerdas suenan dos veces seguidas, sin dolor."},
+  {"tipo":"notacion","fuente":"notacion/tec-cejilla-v.json","titulo":"La cejilla del V","principal":"tablatura","motivo":"Es técnica de mano izquierda: tablatura.","bpms":[60],"leyenda":false},
+  {"tipo":"metronomo","bpm":60},
+  {"tipo":"bien","items":["Suenan las seis cuerdas.","Sin dolor.","Sueltas de verdad en el silencio."]},
+  {"tipo":"guia","tipoGuia":"Si duele","md":"Para. Es más útil hacer poco y a menudo que aguantar. Lo que se busca aquí es el gesto, no la resistencia."}]},
+"n1.t13.l3.p3":{"bloques":[
+  {"tipo":"texto","md":"I-IV-V7-I en La mayor. La gracia es que el acorde del I es tu cejilla nueva, y debes salir de ella y volver."},
+  {"tipo":"acordes","nombres":["La (cejilla V)","Re","Mi7"]},
+  {"tipo":"progresion","acordes":[{"n":"La (cejilla V)","g":"I","papel":"reposo"},{"n":"Re","g":"IV","papel":"alejamiento"},{"n":"Mi7","g":"V7","papel":"tensión"},{"n":"La (cejilla V)","g":"I","papel":"reposo"}],"bpms":[50,72]},
+  {"tipo":"ejercicio","que":"La progresión entera, sin cortar el pulso.","porque":"Combina tres destrezas: cejilla, salto de posición y un acorde abierto.","atencion":"El salto del V a la 1.ª posición se prepara: sal antes de tiempo, durante el último golpe. Y lo mismo al volver.","empieza":"♩ = 50.","sube":"Los cambios llegan al primer tiempo."},
+  {"tipo":"notacion","fuente":"notacion/arm-la-re-mi7.json","titulo":"La–Re–Mi7–La","principal":"tablatura","motivo":"Es técnica de acordes: tablatura.","bpms":[50,72],"leyenda":false},
+  {"tipo":"metronomo","bpm":50},
+  {"tipo":"bien","items":["No se corta el pulso en los saltos.","La cejilla suena limpia al llegar."]}]},
+"n1.t13.l3.p4":{"bloques":[
+  {"tipo":"guia","md":"Si duele la base del pulgar, sobra fuerza. En el nivel 2, esta cejilla baja a los trastes difíciles; no hace falta forzarla hoy."},
+  {"tipo":"concepto","titulo":"Cuánta fuerza hace falta en realidad","md":"Menos de lo que parece, y se comprueba. Es el mismo ejercicio de presión decreciente: pon la cejilla, toca, afloja poco a poco hasta que empiece a trastear y sube apenas lo justo."},
+  {"tipo":"escuchar","items":[{"etiqueta":"Cómo debe sonar, cuerda a cuerda","acorde":"La (cejilla V)","arpegiado":true}]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t10.l4.p4","texto":"la presión justa."}]}]},
+"n1.t13.l4.p1":{"pantallas":[
+ {"titulo":"Qué aprendes con ella","bloques":[
+  {"tipo":"obra","id":"o1-sor-andante-op-31-n-4","md":"**Qué aprendes:** el estilo clásico, con frases que preguntan y responden. Es una de las obras posibles de tu recital."},
+  {"tipo":"concepto","titulo":"Dónde está la partitura","md":"En [IMSLP, en el op. 31 de Sor](https://imslp.org/wiki/24_Le%C3%A7ons_progressives,_Op.31_%28Sor,_Fernando%29): busca el n.º 4."},
+  {"tipo":"guia","tipoGuia":"Por verificar","md":"La tonalidad de esta obra está por comprobar en la edición que uses, y no está transcrita en la app. Ningún compás ni digitación se da como dato."},
+  {"tipo":"pasos","titulo":"Antes de tocar","items":["Compás, armadura, repeticiones y posición: lo que aprendiste en el Tramo 10.","Busca las voces: ¿una melodía y un bajo, o más?","Busca las cadencias: ¿dónde termina cada frase?"]}]},
+ {"titulo":"Cómo se trabaja","bloques":[
+  {"tipo":"pasos","titulo":"Por capas","items":["Melodía y bajo por separado.","Las dos juntas, frase a frase.","La frase, ya con su dirección y su respiración.","La obra entera, con repeticiones."]},
+  {"tipo":"ejercicio","que":"La obra entera.","porque":"Es tu tercera obra troncal: reúne lectura, dos planos, armonía y estilo.","atencion":"Elegancia: sin exagerar el tempo, sin grandes crescendos.","empieza":"♩ = 50.","sube":"Tres días seguidos sin parar."},
+  {"tipo":"metronomo","clave":"o1-sor-andante-op-31-n-4","bpm":50},
+  {"tipo":"bien","items":["La obra entera, sin parar.","Las dos voces se distinguen.","Se oye cuándo termina cada frase."]}]}]},
+"n1.t13.l4.p2":{"bloques":[
+  {"tipo":"texto","md":"Con lo que ya sabes, puedes analizarla tú. Hazlo a lápiz."},
+  {"tipo":"pasos","titulo":"Cómo se analiza","items":["**Tonalidad:** armadura y nota final.","**Secciones:** barras de repetición y cadencias.","**Forma:** ¿vuelve la primera parte? ¿Binaria o ternaria?","**Armonía:** en cada frase, ¿dónde está la tónica y dónde la dominante? Mira los bajos."]},
+  {"tipo":"tabla","cabecera":["Si el bajo…","Probablemente…"],"filas":[["Toca la nota que da nombre a la tonalidad","Tónica (I)"],["Toca una 5.ª por encima, o una 4.ª por debajo","Dominante (V)"]]},
+  {"tipo":"guia","tipoGuia":"Por verificar","md":"Comprueba tu análisis con tu profesor. Sin la edición comprobada, la academia no da aquí una solución."},
+  {"tipo":"bien","items":["Sabes la forma de la obra.","Puedes decir dónde están la tónica y la dominante en cada frase."]}]},
+"n1.t13.l4.p3":{"bloques":[
+  {"tipo":"concepto","titulo":"Frases que preguntan y responden","md":"La música clásica se parece a una conversación: una frase termina abierta, en una semicadencia; y la siguiente responde, y termina cerrada. Si tocas las dos igual, se pierde la conversación."},
+  {"tipo":"escuchar","items":[{"etiqueta":"Pregunta: termina en V","notas":[[3,2],[2,0],[2,2],[2,3],[2,0]],"duracion":0.6},{"etiqueta":"Respuesta: termina en I","notas":[[3,2],[2,0],[2,2],[2,0],[3,2]],"duracion":0.6}]},
+  {"tipo":"tabla","cabecera":["Lo que se hace","Cómo"],"filas":[["Separar las frases","Un mínimo de aire entre pregunta y respuesta"],["Diferenciar los finales","La pregunta queda en el aire; la respuesta descansa"],["Cambiar el color en la repetición","Tocarla más cerca de la boca, en tasto"]]},
+  {"tipo":"concepto","titulo":"El color de la repetición","md":"En una obra con repeticiones, tocar lo mismo dos veces igual puede resultar plano. Prueba a pulsar la segunda vez **hacia el tasto**, con otro color. Ya lo practicaste con los tres colores."},
+  {"tipo":"bien","items":["Se oye qué frase pregunta y cuál responde.","La repetición suena distinta."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t2.l5.p1","texto":"los colores."},{"paso":"n1.t12.l6.p2","texto":"las cadencias."}]}]},
+"n1.t13.l4.p4":{"bloques":[
+  {"tipo":"texto","md":"Ocho compases, tres sostenidos. Mira la armadura: Fa♯, Do♯ y Sol♯. Veinte segundos para mirar y, luego, sin parar."},
+  {"tipo":"notacion","fuente":"notacion/lec-primera-vista-la.json","titulo":"Ocho compases en La mayor","principal":"partitura","motivo":"El objetivo es leer: partitura.","bpms":[50],"notas":["No pulses el audio hasta haberla tocado una vez."]},
+  {"tipo":"bien","items":["Has llegado al final sin parar.","Has tocado Do♯, Fa♯ y Sol♯ cuando tocaba."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t14.l3.p3","texto":"la prueba corta."}]}]},
+"n1.t13.l5.p1":{"bloques":[
+  {"tipo":"texto","md":"Es la capacidad que une todo lo de oído: oír una melodía corta, retenerla, cantarla y encontrarla en la guitarra, sin partitura. Tú ya sabes si sube o baja, conoces los intervalos, y has hecho ecos."},
+  {"tipo":"pasos","titulo":"Cómo se hace","items":["Oye la melodía dos veces, sin tocar.","Cántala.","Encuentra la primera nota en la guitarra: prueba hasta que coincida.","Sigue nota a nota: ¿sube o baja? ¿Un paso o un salto?","Si te pierdes, canta otra vez."]},
+  {"tipo":"escuchar","items":[{"etiqueta":"La primera nota: La","notas":[[3,2]],"duracion":1.5},{"etiqueta":"Melodía 1","notas":[[3,2],[2,0],[2,2],[2,0],[3,2]],"duracion":0.7},{"etiqueta":"Melodía 2","notas":[[3,2],[2,2],[1,0],[2,2],[2,0],[3,2]],"duracion":0.65},{"etiqueta":"Melodía 3","notas":[[1,0],[2,3],[2,2],[2,0],[2,2],[3,2]],"duracion":0.65}]},
+  {"tipo":"notacion","plegado":true,"fuente":"notacion/oido-melodias-la.json","titulo":"La solución: no la mires antes de intentarlo","principal":"ambas","motivo":"Para comprobar.","bpms":[66]},
+  {"tipo":"bien","items":["Repites las melodías sin mirar.","Encuentras la primera nota sin ayuda.","Sabes corregirte al oído cuando una nota no encaja."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t3.l4.p3","texto":"¿sube o baja?"},{"paso":"n1.t14.l3.p4","texto":"en la prueba corta."}]}]},
+"n1.t13.l5.p2":{"bloques":[
+  {"tipo":"texto","md":"Ya tienes el p-a-m-i al aire. Ahora, el pulgar deja de ser fijo y alterna entre la 5.ª y la 6.ª, igual que un bajo real. Esto obliga a mantener la igualdad con el pulgar en movimiento."},
+  {"tipo":"ejercicio","que":"Trémolo con el bajo alternando, un poco más deprisa.","porque":"Un trémolo real siempre tiene un bajo que se mueve, y el pulgar no debe arrastrar a los otros dedos.","atencion":"a-m-i siguen siendo iguales. Si al mover el pulgar se altera el grupo, baja el tempo.","empieza":"♩ = 44 en semicorcheas.","sube":"Las tres notas siguen iguales con el bajo en movimiento."},
+  {"tipo":"notacion","fuente":"notacion/tec-tremolo-bajo.json","titulo":"Trémolo con bajo alternando","principal":"tablatura","motivo":"Es técnica de mano derecha: tablatura.","bpms":[44,52]},
+  {"tipo":"metronomo","bpm":44},
+  {"tipo":"bien","items":["El bajo alterna sin alterar las tres notas.","Sin tensión en la mano."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t9.l5.p2","texto":"el primer contacto."}]}]},
+"n1.t13.l5.p3":{"bloques":[
+  {"tipo":"texto","md":"Dos pruebas. Nada se bloquea."},
+  {"tipo":"lista","titulo":"1. La obra","items":["El *Andante* entero, con las frases claras."]},
+  {"tipo":"lista","titulo":"2. La cejilla del V","items":["Las seis cuerdas limpias, sin dolor."]},
+  {"tipo":"escuchar","items":[{"etiqueta":"La con cejilla, cuerda a cuerda","acorde":"La (cejilla V)","arpegiado":true}]},
+  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["El *Andante*, entero y sin parar.","La cejilla del V limpia."]},
+  {"tipo":"reaparece","items":[{"paso":"n1.t13.l4.p1","texto":"si falla la obra."},{"paso":"n1.t13.l3.p2","texto":"si falla la cejilla."}]}]}
+}}

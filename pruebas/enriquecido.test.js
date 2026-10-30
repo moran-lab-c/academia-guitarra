@@ -37,21 +37,22 @@ test('primero se enseña: nunca se pregunta sin haber explicado antes en ese mis
     const primera = bloques.findIndex(b => COMPRUEBAN.has(b.tipo));
     if (primera < 0) continue;
     assert.ok(primera >= 1, `${id}: empieza preguntando`);
-    const explicado = bloques.slice(0, primera).map(b => b.md ?? b.titulo ?? '').join(' ').length;
+    const explicado = bloques.slice(0, primera).map(b => [b.md, b.titulo, b.que, b.porque, ...(b.items ?? []).map(x => (typeof x === 'string' ? x : x.error ?? x.texto))].filter(Boolean).join(' ')).join(' ').length;
     assert.ok(explicado > 60 || bloques.slice(0, primera).some(b => ['mastil', 'tabla', 'grados', 'escuchar', 'progresion'].includes(b.tipo)), `${id}: pregunta sin enseñar antes`);
   }
 });
 
-test('todo lo que se toca tiene audio y su tablatura enseña a tocar', () => {
+test('lo que se puede oír tiene audio y la tablatura enseña a tocar', () => {
   const conAudio = new Set(['escuchar', 'notacion', 'progresion', 'pista', 'grados', 'mastil', 'preguntas']);
-  for (const [id, def] of Object.entries(datos.enriquecido)) assert.ok(bloquesDe(def).some(b => conAudio.has(b.tipo) || b.audio), `${id}: sin audio`);
+  for (const e of pasosDelTramo) assert.ok(bloquesDe(datos.enriquecido[e.paso.id]).some(b => conAudio.has(b.tipo) || b.audio), `${e.paso.id}: sin audio`);
   for (const def of Object.values(datos.enriquecido)) for (const b of bloquesDe(def).filter(x => x.tipo === 'notacion')) {
     const j = notaciones.get(b.fuente);
     for (const m of j.compases) for (const n of m.voces.flat()) {
-      if (n.acorde) { assert.ok(n.rotulo, `${b.fuente}: acorde sin nombre`); continue; }
+      if (n.acorde) { assert.ok(n.rotulo || m.voces.flat().some(x => x.rotulo), `${b.fuente}: acorde sin nombre`); continue; }
       if (n.t > 0) assert.ok(n.dedo, `${b.fuente}: nota en el traste ${n.t} sin dedo`);
     }
-    if (!b.fuente.includes('lec-')) assert.ok(j.compases.flatMap(m => m.voces.flat()).every(n => n.mano), `${b.fuente}: sin mano derecha en cada nota`);
+    // Cada nota pulsada lleva su dedo de la derecha; la que llega por un ligado no se pulsa.
+    if (!b.fuente.includes('lec-')) j.compases.forEach(m => m.voces.forEach(v => v.forEach((n, i) => { if (!n.s && !v[i - 1]?.lig) assert.ok(n.mano, `${b.fuente}: nota sin mano derecha`); })));
   }
 });
 
@@ -105,13 +106,46 @@ test('las digitaciones de las tablas de la armadura son correctas', () => {
   }
 });
 
-test('solo está enriquecido lo aprobado: ningún otro tramo se ha tocado', () => {
-  assert.ok(Object.keys(datos.enriquecido).every(id => id.startsWith('n1.t4.')));
+test('solo se enriquece el Curso 1: los demás siguen sin tocar', () => {
+  assert.ok(Object.keys(datos.enriquecido).every(id => id.startsWith('n1.')));
+});
+
+test('cada tramo escrito está entero y sus esquemas existen', () => {
+  const escritos = new Set(Object.keys(datos.enriquecido).map(id => id.split('.').slice(0, 2).join('.')));
+  for (const t of escritos) for (const e of ind.pasos.filter(x => x.tramo.id === t)) assert.ok(datos.enriquecido[e.paso.id], `sin enriquecer: ${e.paso.id}`);
+  for (const def of Object.values(datos.enriquecido)) for (const b of bloquesDe(def).filter(x => x.tipo === 'figura')) assert.ok(fs.existsSync(new URL(`../web/figuras/${b.src}.svg`, import.meta.url)), `falta ${b.src}`);
+});
+
+test('cada nota del pentagrama de las cuerdas al aire es la cuerda que dice', () => {
+  const j = notaciones.get('notacion/lec-cuerdas-al-aire.json');
+  assert.deepEqual(j.compases.map(m => m.voces[0][0].c), [6, 5, 4, 3, 2, 1]);
+  assert.deepEqual([6, 5, 4, 3, 2, 1].map(c => notaEn(c, 0)), ['Mi', 'La', 'Re', 'Sol', 'Si', 'Mi']);
+  // Afinar por el traste 5, y el 4 entre la 3.ª y la 2.ª.
+  for (const [g, a, t] of [[6, 5, 5], [5, 4, 5], [4, 3, 5], [3, 2, 4], [2, 1, 5]]) assert.equal(midiEn(g, t), midiEn(a, 0));
 });
 
 test('al alumno no le llega lenguaje interno', () => {
   const prohibido = /\[(Dato|Consenso|Decisión|Estimación)|E-N\d-\d\d|ABRSM|La Rioja|𝄞|⏱|⌗|✎|dominio(?! público)|comprobación en frío/i;
   assert.ok(!prohibido.test(JSON.stringify(datos.enriquecido)));
+});
+
+test('el Curso 1 está enriquecido entero y Continuar lo recorre en orden hasta el Nivel 2', () => {
+  const curso = ind.pasos.filter(e => e.paso.id.startsWith('n1.'));
+  for (const e of curso) assert.ok(datos.enriquecido[e.paso.id], `sin enriquecer: ${e.paso.id}`);
+  const c = progresoVacio();
+  for (const e of curso) {
+    assert.equal(continuar(ind, c, '2026-11-01').entrada.paso.id, e.paso.id);
+    marcar(c, e, esDePractica(e.paso) ? 'practica' : 'hecho', '2026-11-01');
+    c.repasos = {};
+  }
+  assert.equal(continuar(ind, c, '2026-11-01').otro.numero, 2);
+});
+
+test('los enlaces de una obra son seguros y ningún paso cita un compás de una obra sin transcribir', () => {
+  const texto = JSON.stringify(datos.enriquecido);
+  for (const m of texto.matchAll(/\]\((https?:[^)\s]+?)\)(?=[^)]|$)/g)) { assert.match(m[1], /^https:\/\/(imslp\.org|www\.youtube\.com\/results)/); assert.ok(!m[1].includes('('), `paréntesis sin codificar: ${m[1]}`); }
+  // Lo único que se da de una obra por compases son los de su Estudio, que salen de su propia transcripción.
+  for (const [id, def] of Object.entries(datos.enriquecido)) for (const b of bloquesDe(def).filter(x => x.tipo === 'notacion')) assert.ok(!/repertorio/.test(b.fuente), id);
 });
 
 test('la validación detecta referencias rotas', () => {

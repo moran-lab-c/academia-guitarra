@@ -1,0 +1,1001 @@
+{
+ "tramo": "n1.t14",
+ "nota": "Cierre del nivel: nada nuevo. Se reúne lo aprendido y cada prueba enlaza con el paso que la trabaja. Nada bloquea.",
+ "pasos": {
+  "n1.t14.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "El programa",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Un recital corto no es tocar tres obras una detrás de otra. Es un trabajo aparte, que incluye el orden, el tempo y qué hacer cuando algo sale mal."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Obra",
+        "Opciones",
+        "Época"
+       ],
+       "filas": [
+        [
+         "1",
+         "*Lágrima*, de memoria, o la obra equivalente que elijas",
+         "Romanticismo"
+        ],
+        [
+         "2",
+         "*Españoleta*, *Romanesca* o Dowland, *Mrs. Winter's Jump*",
+         "Barroco o Renacimiento"
+        ],
+        [
+         "3",
+         "Sor op. 31 n.º 4, Brouwer o Giuliani op. 50 n.º 17",
+         "Clasicismo o siglo XX"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "El orden",
+       "md": "Piensa en quien escucha. Conviene empezar con lo que te dé seguridad, dejar en medio lo más delicado y acabar con algo que cierre bien. Dos obras lentas seguidas o tres en Mi cansan. No hay un orden único: prueba."
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "El tempo",
+       "md": "Elige el tempo al que todo sale bien **en un día normal**, no en el mejor. Con los nervios, se tiende a correr. Es mejor tocar un poco por debajo de tu máximo."
+      }
+     ]
+    },
+    {
+     "titulo": "Seguir si algo sale mal",
+     "bloques": [
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Pasa esto",
+        "Haz esto"
+       ],
+       "filas": [
+        [
+         "Una nota falla",
+         "Sigue, no gesticules: casi nadie lo nota"
+        ],
+        [
+         "Pierdes un compás",
+         "Sigue el pulso. Entra en el acorde siguiente"
+        ],
+        [
+         "Te pierdes del todo",
+         "Salta a la siguiente frase que sepas. Por eso has memorizado por frases"
+        ],
+        [
+         "Se te queda en blanco",
+         "Respira, y empieza desde la frase anterior"
+        ]
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "En el recital, fallas una nota al principio de *Lágrima*. ¿Qué haces?",
+       "opciones": [
+        "Vuelvo a empezar",
+        "Sigo sin parar",
+        "Paro y pido perdón"
+       ],
+       "correcta": 1,
+       "porque": "Parar llama la atención mucho más que el fallo.",
+       "pista": "¿Qué nota más el público, una nota o una parada?"
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t8.l2.p2",
+         "texto": "empezar desde cualquier frase."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t14.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Las tres obras seguidas, sin parar entre ellas más de lo necesario.",
+     "porque": "Tocar tres obras cansa de otra manera que tocar una: las manos y la concentración se resienten.",
+     "atencion": "No corrijas sobre la marcha. Apunta lo que falle y trabájalo luego, aparte.",
+     "empieza": "Un ensayo, dos o tres días por semana.",
+     "sube": "Lo haces delante de alguien o grabándote."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Un ensayo de verdad",
+     "items": [
+      "Sin calentar más de lo que calentarías el día del recital.",
+      "Siéntate, respira y empieza.",
+      "Las tres, en orden.",
+      "Después, apunta tres cosas buenas y una por mejorar."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tocas las tres sin parar.",
+      "Mantienes la concentración hasta el final.",
+      "Te has oído y sabes qué mejorar."
+     ]
+    }
+   ]
+  },
+  "n1.t14.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-tarrega-lagrima",
+     "md": "Tu primera obra del recital, de memoria. Si lo que sabes hacer lo demuestras con otra obra de tu nivel, también vale: lo que se reconoce es la competencia, no el título."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Qué se debe oír",
+      "Dónde lo aprendiste"
+     ],
+     "filas": [
+      [
+       "La melodía delante del acompañamiento",
+       "Tramos 3 y 5"
+      ],
+      [
+       "Los cambios de posición sin corte",
+       "Dedo guía, Tramo 5"
+      ],
+      [
+       "El contraste A-B",
+       "Tramo 8"
+      ],
+      [
+       "Una frase que va a algún sitio",
+       "Tramo 5"
+      ]
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que te ha salido",
+     "items": [
+      "De memoria y sin parar.",
+      "Sin tensión en hombros ni en el pulgar.",
+      "Se oye el contraste entre las dos partes."
+     ]
+    }
+   ]
+  },
+  "n1.t14.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-sanz-espanoleta",
+     "md": "Tu segunda obra: la *Españoleta*, o la *Romanesca*, o Dowland, *Mrs. Winter's Jump*."
+    },
+    {
+     "tipo": "obra",
+     "id": "o1-anonimo-romanesca"
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Qué se debe oír",
+      "Dónde lo aprendiste"
+     ],
+     "filas": [
+      [
+       "El pulso de la danza, o las dos voces de la *Romanesca*",
+       "Tramo 12"
+      ],
+      [
+       "Cada voz, durando lo que dice",
+       "Apagar voces, Tramo 12"
+      ],
+      [
+       "Los adornos sin frenar",
+       "Mordente, Tramo 12"
+      ]
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que te ha salido",
+     "items": [
+      "Entera y sin parar.",
+      "Con el carácter de su época."
+     ]
+    }
+   ]
+  },
+  "n1.t14.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-sor-andante-op-31-n-4",
+     "md": "Tu tercera obra: el *Andante* de Sor, o Brouwer, o Giuliani op. 50 n.º 17."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Qué se debe oír",
+      "Dónde lo aprendiste"
+     ],
+     "filas": [
+      [
+       "Frases que preguntan y responden",
+       "Tramo 13"
+      ],
+      [
+       "Dos planos transparentes",
+       "Tramo 3"
+      ],
+      [
+       "Un buen sonido",
+       "Tramos 1 y 2"
+      ]
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que te ha salido",
+     "items": [
+      "Entera y sin parar.",
+      "Se oyen las frases."
+     ]
+    }
+   ]
+  },
+  "n1.t14.l2.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Es opcional, pero muy revelador: grabarse. Tú puedes oír cosas que, mientras tocas, no oyes."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo hacerlo",
+     "items": [
+      "Con el móvil, a unos dos metros de la guitarra.",
+      "Toca como si fuera un recital: sin repetir.",
+      "Al día siguiente, escúchalo con una hoja delante.",
+      "¿Se oye la melodía? ¿El pulso es estable? ¿Te gusta el sonido?"
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Para ti",
+     "md": "La grabación es tuya: la academia no la escucha ni guarda nada. Si quieres, enséñasela a tu profesor."
+    }
+   ]
+  },
+  "n1.t14.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "Escalas",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Esta prueba es para ti: te dice qué tienes seguro y qué conviene repasar. Nada se bloquea."
+      },
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/esc-mi-mayor-digitada.json",
+       "titulo": "Mi mayor, dos octavas",
+       "principal": "tablatura",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        60,
+        80
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/esc-sol-mayor-1pos.json",
+       "titulo": "Sol mayor, dos octavas",
+       "principal": "tablatura",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        60,
+        80
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/esc-fa-mayor-2oct.json",
+       "titulo": "Fa mayor, dos octavas",
+       "principal": "tablatura",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        60,
+        80
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/esc-mi-menor-3-formas.json",
+       "compases": [
+        5,
+        8
+       ],
+       "titulo": "Mi menor armónica, dos octavas",
+       "principal": "tablatura",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        60,
+        80
+       ]
+      },
+      {
+       "tipo": "bien",
+       "titulo": "Marca lo que ya te sale",
+       "items": [
+        "Mi mayor, estable.",
+        "Sol mayor, estable.",
+        "Fa mayor, estable.",
+        "Mi menor armónica, sin pararte en el Re♯."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Arpegio y cejillas",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/arp-nota-destacada.json",
+       "titulo": "Arpegio con la nota destacada, hasta ♩ = 72",
+       "principal": "tablatura",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        60,
+        72
+       ]
+      },
+      {
+       "tipo": "acordes",
+       "nombres": [
+        "Fa",
+        "La (cejilla V)"
+       ]
+      },
+      {
+       "tipo": "bien",
+       "titulo": "Marca lo que ya te sale",
+       "items": [
+        "El arpegio con la melodía destacada, a ♩ = 72 en corcheas.",
+        "Fa con media cejilla, limpio.",
+        "La con cejilla en el V, limpio y sin dolor."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t4.l1.p3",
+         "texto": "Mi mayor."
+        },
+        {
+         "paso": "n1.t9.l2.p1",
+         "texto": "Sol mayor."
+        },
+        {
+         "paso": "n1.t10.l3.p2",
+         "texto": "Fa mayor."
+        },
+        {
+         "paso": "n1.t7.l1.p2",
+         "texto": "Mi menor."
+        },
+        {
+         "paso": "n1.t6.l1.p2",
+         "texto": "la nota destacada."
+        },
+        {
+         "paso": "n1.t7.l3.p2",
+         "texto": "la media cejilla."
+        },
+        {
+         "paso": "n1.t13.l3.p2",
+         "texto": "la cejilla del V."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t14.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "I-IV-V7-I en tres tonalidades. Te sale ya como la misma historia con otras notas."
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/arm-do-fa-sol7.json",
+     "titulo": "En Do: Do–Fa△7–Sol7–Do",
+     "principal": "tablatura",
+     "motivo": "Para comprobar.",
+     "bpms": [
+      60,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/arm-re-sol-la7.json",
+     "titulo": "En Re: Re–Sol–La7–Re",
+     "principal": "tablatura",
+     "motivo": "Para comprobar.",
+     "bpms": [
+      60,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/arm-mi-la-si7-digitada.json",
+     "titulo": "En Mi: Mi–La–Si7–Mi",
+     "principal": "tablatura",
+     "motivo": "Para comprobar.",
+     "bpms": [
+      60,
+      72
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que ya te sale",
+     "items": [
+      "Las tres sin cortar el pulso.",
+      "Sabes decir qué función tiene cada acorde."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l5.p1",
+       "texto": "si necesitas repasar."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t14.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ocho compases en 1.ª posición. Veinte segundos para mirar: compás, armadura, lo raro. Después, sin parar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-primera-vista-final.json",
+     "titulo": "Ocho compases",
+     "principal": "partitura",
+     "motivo": "El objetivo es leer: partitura.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "No pulses el audio hasta haberla tocado una vez."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que te ha salido",
+     "items": [
+      "Has llegado al final sin parar.",
+      "Casi todas las notas eran correctas."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l5.p2",
+       "texto": "primera vista."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t14.l3.p4": {
+   "pantallas": [
+    {
+     "titulo": "Mayor, menor y calidad",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Sin mirar nada. Recuerda la pista: la 3.ª desde la tónica. Si suena alta y abierta, es mayor; si suena baja y cerrada, es menor. Si dudas, escucha otra vez: no hay prisa."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Mayor o menor?",
+       "audio": {
+        "notas": [
+         [
+          3,
+          0
+         ],
+         [
+          3,
+          2
+         ],
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          3
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ]
+        ],
+        "duracion": 0.45
+       },
+       "opciones": [
+        "Mayor",
+        "Menor"
+       ],
+       "correcta": 0,
+       "porque": "Es la escala de Sol mayor.",
+       "pista": "Fíjate en la 3.ª nota: ¿alta y abierta, o baja y cerrada?"
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y esta frase?",
+       "audio": {
+        "notas": [
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          5
+         ],
+         [
+          1,
+          3
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          0
+         ]
+        ],
+        "duracion": 0.5
+       },
+       "opciones": [
+        "Mayor",
+        "Menor"
+       ],
+       "correcta": 1,
+       "porque": "Mi, Fa♯, Sol: una 3.ª menor.",
+       "pista": "Fíjate en la 3.ª nota."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Cómo es este acorde?",
+       "audio": {
+        "notas": [
+         [
+          [
+           5,
+           0
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           1
+          ],
+          [
+           1,
+           0
+          ]
+         ]
+        ],
+        "duracion": 1.6
+       },
+       "opciones": [
+        "Mayor",
+        "Menor"
+       ],
+       "correcta": 1,
+       "porque": "La m: La, Do, Mi.",
+       "pista": "Compara con Mi y con Mi m."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y este?",
+       "audio": {
+        "notas": [
+         [
+          [
+           4,
+           0
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           3
+          ],
+          [
+           1,
+           2
+          ]
+         ]
+        ],
+        "duracion": 1.6
+       },
+       "opciones": [
+        "Mayor",
+        "Menor"
+       ],
+       "correcta": 0,
+       "porque": "Re: Re, Fa♯, La.",
+       "pista": "Compara con Mi y con Mi m."
+      }
+     ]
+    },
+    {
+     "titulo": "Intervalos",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "3.ª menor o mayor, 4.ª, 5.ª u 8.ª."
+      },
+      {
+       "tipo": "preguntas",
+       "n": 5
+      }
+     ]
+    },
+    {
+     "titulo": "Repetir una melodía",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Oye dos veces, cántala y encuéntrala en la guitarra."
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "La melodía",
+         "notas": [
+          [
+           2,
+           1
+          ],
+          [
+           2,
+           3
+          ],
+          [
+           1,
+           0
+          ],
+          [
+           2,
+           3
+          ],
+          [
+           2,
+           1
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           1
+          ]
+         ],
+         "duracion": 0.6
+        },
+        {
+         "etiqueta": "La primera nota: Do",
+         "notas": [
+          [
+           2,
+           1
+          ]
+         ],
+         "duracion": 1.5
+        }
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/oido-melodia-final.json",
+       "titulo": "La solución",
+       "principal": "ambas",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        66
+       ]
+      },
+      {
+       "tipo": "bien",
+       "titulo": "Marca lo que te ha salido",
+       "items": [
+        "La has repetido sin mirar."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t7.l2.p1",
+         "texto": "mayor o menor."
+        },
+        {
+         "paso": "n1.t9.l3.p3",
+         "texto": "intervalos."
+        },
+        {
+         "paso": "n1.t13.l5.p1",
+         "texto": "repetir."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t14.l3.p5": {
+   "pantallas": [
+    {
+     "titulo": "La escala",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Recuerda cómo se construye una escala mayor: el patrón T-T-S-T-T-T-S, sin saltarte ninguna letra. Cuenta desde la tónica hasta el grado que te piden."
+      },
+      {
+       "tipo": "preguntas",
+       "n": 3
+      }
+     ]
+    },
+    {
+     "titulo": "Triada, armadura y relativo",
+     "bloques": [
+      {
+       "tipo": "elige",
+       "enunciado": "¿Cuáles son las notas de la triada de Sol mayor?",
+       "opciones": [
+        "Sol, Si, Re",
+        "Sol, Si♭, Re",
+        "Sol, La, Si"
+       ],
+       "correcta": 0,
+       "porque": "La 1.ª, la 3.ª y la 5.ª de la escala de Sol mayor.",
+       "pista": "Una sí, una no."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Cuántos sostenidos tiene la armadura de Mi mayor?",
+       "opciones": [
+        "1",
+        "2",
+        "4"
+       ],
+       "correcta": 2,
+       "porque": "Fa♯, Do♯, Sol♯ y Re♯.",
+       "pista": "Construyes la escala y los cuentas."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Cuál es el relativo menor de Sol mayor?",
+       "opciones": [
+        "Sol menor",
+        "Mi menor",
+        "Si menor"
+       ],
+       "correcta": 1,
+       "porque": "Comparten armadura: un sostenido.",
+       "pista": "La nota 6 de la escala."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y su homónimo?",
+       "opciones": [
+        "Sol menor",
+        "Mi menor"
+       ],
+       "correcta": 0,
+       "porque": "La misma tónica.",
+       "pista": "Mismo nombre."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t4.l1.p1",
+         "texto": "la escala."
+        },
+        {
+         "paso": "n1.t4.l2.p1",
+         "texto": "la triada."
+        },
+        {
+         "paso": "n1.t9.l2.p3",
+         "texto": "las armaduras."
+        },
+        {
+         "paso": "n1.t7.l1.p4",
+         "texto": "relativo y homónimo."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t14.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "guia",
+     "tipoGuia": "Lo que has conseguido",
+     "md": "Empezaste tocando sobre todo por tablatura y sin saber qué había debajo. Ahora tocas, lees, entiendes y escuchas lo mismo."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Área",
+      "Al empezar",
+      "Ahora"
+     ],
+     "filas": [
+      [
+       "**Sonido**",
+       "Sin intención",
+       "Apoyando y tirando con el mismo sonido; color"
+      ],
+      [
+       "**Manos**",
+       "Arpegio, ligados, acordes abiertos",
+       "Melodía destacada, dedo guía, dedo común, cejilla"
+      ],
+      [
+       "**Lectura**",
+       "Notas sueltas",
+       "1.ª posición, dos voces; 8 compases a primera vista"
+      ],
+      [
+       "**Teoría**",
+       "A medias",
+       "Construyes escalas y triadas; sabes la función de cada acorde"
+      ],
+      [
+       "**Oído**",
+       "Mayor o menor, a veces",
+       "Intervalos, calidad de la triada, repetir una melodía"
+      ],
+      [
+       "**Repertorio**",
+       "Tu *Estudio en Mi menor*",
+       "Obras de cinco épocas, con una de memoria"
+      ]
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Y sigue siendo tu música: lo que pasó con tu *Estudio en Mi menor* (saber sus acordes, destacar su línea) puedes hacerlo con cualquier otra obra."
+    }
+   ]
+  },
+  "n1.t14.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "guia",
+     "tipoGuia": "Lo que viene",
+     "md": "El nivel 2 sigue todas las líneas: no empieza nada de cero."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Lo que traes",
+      "En el nivel 2"
+     ],
+     "filas": [
+      [
+       "Cejilla en el V",
+       "Cejilla en todos los trastes"
+      ],
+      [
+       "Posición V en escalas",
+       "Posiciones hasta la VII; lectura en la V"
+      ],
+      [
+       "Oír el vibrato",
+       "Tocar el vibrato"
+      ],
+      [
+       "Primer trémolo",
+       "Una melodía en trémolo"
+      ],
+      [
+       "Armaduras",
+       "El círculo de quintas"
+      ],
+      [
+       "Intervalos del nivel",
+       "Nuevos intervalos, al oído"
+      ],
+      [
+       "Obras de cinco épocas",
+       "Obras de cinco épocas, con el *Romance* en el centro"
+      ]
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Antes de pasar",
+     "items": [
+      "Lo que no salga, se comprueba en los repasos.",
+      "Nada te impide empezar el nivel 2: el orden es una recomendación."
+     ]
+    }
+   ]
+  }
+ }
+}
