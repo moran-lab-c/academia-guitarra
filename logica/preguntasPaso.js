@@ -35,6 +35,19 @@ const GEN = {
     const nombre = elegir(r, lista), base = 52 + Math.floor(r() * 8);
     return pregunta(r, 'Escucha los acordes: ¿qué progresión es?', nombre, lista, { secuencia: nombre.split('-').map(g => GRADO[g].map(x => base + x)), duracion: 1 });
   },
+  // Suena el acorde y después una de sus notas: ¿qué papel tiene?
+  notaDelAcorde: r => {
+    const base = 48 + Math.floor(r() * 10), nombres = ['La fundamental', 'La 3.ª', 'La 5.ª'], salto = [0, 4, 7];
+    const k = Math.floor(r() * 3);
+    return pregunta(r, 'Escucha el acorde y luego una nota: ¿cuál es?', nombres[k], nombres, { secuencia: [salto.map(x => base + x), [base + salto[k]]], duracion: 1.2 });
+  },
+  // Primero la tónica, que da el sitio; después un acorde: ¿reposo, alejamiento o tensión?
+  grados: r => {
+    const nombre = elegir(r, ['I', 'IV', 'V']), base = 48 + Math.floor(r() * 10);
+    return pregunta(r, 'Primero suena el I, que te da la tonalidad. Después, otro acorde: ¿es el I, el IV o el V?', nombre, ['I', 'IV', 'V'], { secuencia: [GRADO.I.map(x => base + x), GRADO[nombre].map(x => base + x)], duracion: 1.2 });
+  },
+  // Varias clases de pregunta en un mismo paso, turnándose.
+  mezcla: (r, { partes }, i = 0) => { const p = partes[i % partes.length]; return GEN[p.gen](r, p); },
 };
 
 const N1 = ['3.ª menor', '3.ª mayor', '4.ª justa', '5.ª justa', '8.ª'];
@@ -52,7 +65,7 @@ const comp = id => ({ comp: id });
 // Paso → sus preguntas. Las listas son las de cada nivel en el apartado 9.6 del maestro.
 export const PREGUNTAS = {
   'n1.t1.l5.p3': comp('comp:lec.notas-1pos-agudas'), 'n1.t3.l3.p2': comp('comp:teo.tono-semitono'), 'n1.t4.l1.p2': comp('comp:teo.escala-mayor'),
-  'n1.t4.l2.p6': ac(['mayor', 'menor']), 'n1.t4.l6.p4': comp('comp:teo.triada-mayor-menor'), 'n1.t6.l2.p2': comp('comp:teo.inversiones'),
+  'n1.t4.l2.p6': { gen: 'mezcla', partes: [ac(['mayor', 'menor']), { gen: 'notaDelAcorde' }] }, 'n1.t4.l5.p2': { gen: 'grados' }, 'n1.t4.l6.p4': comp('comp:teo.triada-mayor-menor'), 'n1.t6.l2.p2': comp('comp:teo.inversiones'),
   'n1.t7.l1.p4': comp('comp:arm.tono-homonimo'), 'n1.t7.l2.p1': comp('comp:oid.mayor-menor'), 'n1.t9.l2.p3': comp('comp:teo.armaduras-0-2'),
   'n1.t9.l3.p2': comp('comp:teo.intervalos'), 'n1.t9.l3.p3': iv(N1), 'n1.t12.l6.p4': comp('comp:oid.cadencia-conclusiva-suspensiva'),
   'n1.t13.l2.p2': comp('comp:dia.notas-1pos'), 'n1.t14.l3.p4': iv(N1), 'n1.t14.l3.p5': comp('comp:teo.escala-mayor'),
@@ -72,5 +85,5 @@ export function preguntasDelPaso(id, n = 5, semilla = id) {
   if (!def) return null;
   if (def.comp) return preguntas(def.comp, n, semilla);
   const r = azar(semilla);
-  return Array.from({ length: n }, () => GEN[def.gen](r, def));
+  return Array.from({ length: n }, (_, i) => GEN[def.gen](r, def, i));
 }

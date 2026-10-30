@@ -45,7 +45,7 @@ Qué se ha construido sobre las Fases 1-3 y qué falta. La fuente de verdad del 
 |---|---|
 | **Partituras de las obras** | Ninguna obra tiene aún notación propia en la app. *Lágrima* necesita la edición de Alier (IMSLP pide verificación de persona: la descarga David) |
 | **Notación de los ejercicios nuevos** | Solo los 18 de la Fase 3 la tienen. Los demás muestran su ficha |
-| **Audio** | Los pasos de escucha no traen audio ni enlace todavía |
+| **Audio** | La app ya suena con guitarra de nailon (`web/sonidos/guitarra`, ver `docs/ENRIQUECIMIENTO.md`). Faltan las grabaciones de las obras en los pasos de escucha |
 | **Preguntas** | 40 pasos las tienen; en los demás con ✎ se ve el texto y él se comprueba solo. No se inventan |
 | **Por verificar** | Todo sigue marcado hasta comprobarlo con la partitura |
 | **Copia de la vault** | Actualizada el 30/10/2026: `08 - Guitarra/Academia/app` sigue la rama `revision-fase-2`; se pone al día con `git pull` |

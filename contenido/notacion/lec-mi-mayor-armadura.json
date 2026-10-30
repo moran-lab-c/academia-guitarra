@@ -1,0 +1,102 @@
+{
+ "titulo": "Lectura en Mi mayor",
+ "compas": "4/4",
+ "armadura": "E",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 0
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 4
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 2
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 2,
+      "t": 2
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 4
+     },
+     {
+      "d": "2",
+      "c": 1,
+      "t": 0
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 1
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 3,
+      "t": 1
+     },
+     {
+      "d": "4",
+      "c": 4,
+      "t": 4
+     },
+     {
+      "d": "2",
+      "c": 4,
+      "t": 2
+     }
+    ]
+   ]
+  }
+ ],
+ "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura."
+}

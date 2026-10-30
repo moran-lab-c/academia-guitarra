@@ -1,0 +1,113 @@
+/* Los pasos enriquecidos: bloques de contenido y mástil animado. Todo color y medida sale de tokens.css. */
+.bloques { gap: 22px; }
+.bloques h2 { margin: 0; }
+.bloque-titulo { font-size: 16px; font-weight: 700; color: var(--texto); }
+.bloques p { margin: 0; }
+.bloques ul, .bloques ol { margin: 0; padding-left: 22px; }
+.bloques li + li { margin-top: 6px; }
+.bloque-pasos, .bloque-lista, .bloque-notas { max-width: 68ch; line-height: 1.5; }
+.bloque-notas { font-size: 15px; color: var(--texto-2); }
+
+.concepto { background: var(--sup-1); border-radius: var(--r-2); padding: 16px 20px; max-width: 72ch; }
+.concepto__titulo { font-size: 15px; font-weight: 700; margin-bottom: 6px !important; }
+.concepto p { line-height: 1.55; }
+
+.errores { display: flex; flex-direction: column; gap: 10px; margin: 0; max-width: 72ch; }
+.errores dt { font-weight: 600; }
+.errores dd { margin: 2px 0 0; color: var(--texto-2); line-height: 1.5; }
+
+.bien { border-left: 3px solid var(--verde-borde); padding: 2px 0 2px 16px; max-width: 72ch; }
+.bien__titulo { font-size: 15px; font-weight: 700; margin-bottom: 6px !important; }
+.reaparece { border-top: 1px solid var(--borde-suave); padding-top: 14px; max-width: 72ch; font-size: 15px; }
+.reaparece .rotulo { margin-bottom: 8px; }
+.resumen { font-size: 16px; color: var(--texto-2); max-width: 72ch; line-height: 1.5; }
+
+.compas-enlace { display: inline; background: var(--ocre-fondo); color: var(--ocre); border: 0; border-radius: 4px; padding: 0 6px; min-height: 0; font: inherit; font-weight: 600; cursor: pointer; }
+.compas-enlace:hover { box-shadow: inset 0 0 0 1px var(--ocre); }
+.partitura { position: relative; }
+.partitura svg { overflow: visible; }
+.partitura__resalte { position: absolute; background: rgba(217, 165, 74, 0.2); box-shadow: inset 0 0 0 1.5px var(--ocre); border-radius: 4px; pointer-events: none; animation: resalte-entra var(--t-corta) var(--curva); }
+@keyframes resalte-entra { from { opacity: 0; } }
+
+/* ── Mástil ── */
+.mastil { margin: 0; background: var(--papel); color: var(--tinta); border-radius: var(--r-2); padding: 14px 18px 12px; box-shadow: var(--sombra-papel); }
+.mastil__titulo { color: var(--tinta-2); margin-bottom: 4px; }
+.mastil__svg { display: block; width: 100%; height: auto; }
+.mastil__diapason { fill: #E9E3D5; }
+.mastil__punto { fill: #CFC7B4; }
+.mastil__numero, .mastil__nombre { font: 400 11px var(--f-dato); fill: var(--tinta-2); }
+.mastil__traste { stroke: #A79F8C; stroke-width: 1.5; }
+.mastil__ceja { stroke: var(--tinta); stroke-width: 4; }
+.mastil__cuerda { stroke: #6E6A5F; stroke-width: 1; transition: stroke var(--t-corta) var(--curva), stroke-width var(--t-corta) var(--curva); }
+.mastil__cuerda--4 { stroke-width: 1.4; } .mastil__cuerda--5 { stroke-width: 1.7; } .mastil__cuerda--6 { stroke-width: 2; }
+.mastil__cuerda--pulso { stroke: var(--tinta); stroke-width: 3; }
+.mastil__trazos line { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset var(--t-larga) var(--curva-trazo), stroke var(--t-corta); }
+.mastil__trazos text { transition: opacity var(--t-media) var(--curva); }
+.mastil--sin-trazos .mastil__trazos line { stroke-dashoffset: 1; }
+.mastil--sin-trazos .mastil__trazos text { opacity: 0; }
+.mastil__marca { transition: transform var(--t-media) var(--curva), opacity var(--t-corta) var(--curva); }
+.mastil__marca > * { animation: marca-entra var(--t-media) var(--curva-subida); transform-box: fill-box; transform-origin: center; }
+.mastil__marca--sale { opacity: 0; }
+@keyframes marca-entra { from { opacity: 0; transform: scale(.4); } }
+.mastil__dedo { stroke: rgba(0, 0, 0, .15); }
+.mastil__neutra { fill: var(--tinta); }
+.mastil__aire { fill: var(--papel); stroke: var(--tinta); stroke-width: 1.5; }
+.mastil__num { font: 700 12px var(--f-ui); fill: #fff; pointer-events: none; }
+.mastil__num--tinta { fill: var(--tinta); }
+.mastil__nota { font: 700 11px var(--f-ui); fill: var(--tinta); pointer-events: none; paint-order: stroke; stroke: var(--papel); stroke-width: 3px; }
+.mastil__mudo { font: 700 16px var(--f-ui); fill: var(--tinta-2); }
+.mastil__marca--ahora .mastil__dedo, .mastil__marca--ahora .mastil__neutra { stroke: var(--tinta); stroke-width: 3; }
+.mastil__marca--ahora .mastil__aire { stroke-width: 3.5; }
+.mastil__marca--queda .mastil__dedo { stroke: var(--verde-borde); stroke-width: 4; }
+.mastil__marca--tension .mastil__dedo { stroke: #B8442F; stroke-width: 3.5; }
+.mastil__marca--apagada { opacity: .32; }
+.mastil__cejilla { opacity: .85; }
+.mastil__arco { stroke: var(--tinta); stroke-width: 1.5; animation: resalte-entra var(--t-media) var(--curva); }
+.mastil__arco-texto { font: 700 11px var(--f-ui); fill: var(--tinta); paint-order: stroke; stroke: var(--papel); stroke-width: 3px; animation: resalte-entra var(--t-media) var(--curva); }
+.mastil__flecha { stroke: #B8442F; stroke-width: 2.5; animation: resalte-entra var(--t-media) var(--curva); }
+.mastil__punta { fill: #B8442F; }
+.mastil__mano { fill: var(--papel); stroke: var(--tinta); stroke-width: 1.5; transition: fill var(--t-corta); }
+.mastil__mano--pulso { fill: var(--tinta); }
+.mastil__mano-letra { font: italic 700 14px var(--f-obra); fill: var(--tinta); pointer-events: none; }
+.mastil__mano--pulso + .mastil__mano-letra { fill: var(--papel); }
+.mastil__texto { min-height: 48px; font-size: 16px; line-height: 1.45; margin: 4px 0 8px !important; color: var(--tinta); }
+.mastil__controles { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.mastil__controles .btn { color: var(--tinta); }
+.mastil__controles .btn-borde { box-shadow: inset 0 0 0 1px var(--tinta-2); min-width: 118px; justify-content: center; }
+.mastil__controles .btn:hover:not(:disabled) { background: #E9E3D5; color: var(--tinta); }
+.mastil__puntos { display: flex; gap: 3px; flex-wrap: wrap; margin-left: 10px; flex: 1; }
+.mastil__p { width: 14px; height: 14px; min-height: 0; padding: 0; background: transparent; border: 0; cursor: pointer; position: relative; }
+.mastil__p::after { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: #CFC7B4; }
+.mastil__p.es-pasado::after { background: var(--tinta-2); }
+.mastil__p.es-actual::after { background: var(--tinta); inset: 2px; }
+@media (prefers-reduced-motion: reduce) { .mastil__marca, .mastil__marca > *, .mastil__trazos line, .mastil__arco, .mastil__flecha { transition: none; animation: none; } }
+
+/* ── Anatomía del acorde ── */
+.anatomia { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
+.anatomia__notas { display: flex; gap: 10px; flex-wrap: wrap; }
+.anatomia__nota { display: flex; flex-direction: column; background: var(--sup-1); border-radius: var(--r-1); padding: 8px 14px; font-size: 17px; }
+.anatomia__tabla { border-collapse: collapse; width: 100%; font-size: 15px; max-width: 640px; }
+.anatomia__tabla th { text-align: left; font: 400 12px var(--f-dato); letter-spacing: .08em; text-transform: uppercase; color: var(--texto-3); padding: 4px 10px 6px 0; border-bottom: 1px solid var(--borde); }
+.anatomia__tabla td { padding: 6px 10px 6px 0; border-bottom: 1px solid var(--borde-suave); }
+.anatomia__muda td { color: var(--texto-apagado); }
+.anatomia__dedo { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; align-items: center; justify-content: center; color: #fff; font: 700 12px var(--f-ui); }
+.anatomia__dedo.acorde__dedo--1 { background: var(--dedo-1); } .anatomia__dedo.acorde__dedo--2 { background: var(--dedo-2); }
+.anatomia__dedo.acorde__dedo--3 { background: var(--dedo-3); } .anatomia__dedo.acorde__dedo--4 { background: var(--dedo-4); }
+
+/* ── Actividad en el mástil ── */
+.actividad { background: var(--sup-1); border-radius: var(--r-2); padding: 16px 20px; }
+.actividad__enunciado { font-size: 16px; line-height: 1.5; }
+.casillas { display: flex; gap: 3px; flex-wrap: wrap; margin: 6px 0; }
+.casilla { flex: 1 1 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; background: var(--sup-2); color: var(--texto-2); border: 0; border-radius: 4px; cursor: pointer; font: 600 13px var(--f-ui); }
+.casilla:hover { background: var(--sup-3); color: var(--texto); }
+.casilla.es-correcta { background: var(--verde); color: var(--tinta); }
+.casilla.es-fallo { background: var(--ocre-fondo); box-shadow: inset 0 0 0 1px var(--ocre); color: var(--ocre); }
+.actividad__otra { align-self: flex-start; }
+
+/* ── Pista ── */
+.pista { background: var(--sup-1); }
+.pista__acordes { display: flex; gap: 6px; flex-wrap: wrap; }
+.pista__acorde { flex: 1 1 80px; text-align: center; padding: 14px 8px; border-radius: var(--r-1); background: var(--sup-2); font-weight: 700; font-size: 18px; transition: background var(--t-corta), color var(--t-corta); }
+.pista__acorde.es-actual { background: var(--papel); color: var(--tinta); }
+.pista__bpm { font: 400 14px var(--f-dato); min-width: 60px; text-align: center; }
+.escuchar .btn { flex: none; }

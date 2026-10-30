@@ -13,6 +13,7 @@ import { selectorFormato } from '../componentes/notacion.js';
 import { barraMetronomo, estadoMetronomo } from '../componentes/metronomo.js';
 import { diagramas } from '../componentes/acorde.js';
 import { bloquePreguntas } from '../componentes/preguntasPaso.js';
+import { bloquesDelPaso } from '../componentes/bloques.js';
 import { textoRico } from '../componentes/texto.js';
 import { irAContinuar } from './nivel.js';
 
@@ -44,7 +45,7 @@ export default function aprender({ id }, { repaso = false } = {}) {
         leccion.pasos.map((p, i) => h('a', { role: 'listitem', href: enlace('/aprender', p.id), class: `paso-punto${i === enLeccion ? ' paso-punto--ahora' : ''}${cur.pasos?.[p.id] ? ' paso-punto--hecho' : ''}`, 'aria-label': `Paso ${i + 1}`, 'aria-current': i === enLeccion ? 'step' : null })))),
     h('article', { class: 'paso-cuerpo pila' },
       repaso && h('p', { class: 'rotulo rotulo-verde' }, 'UN REPASO · SIN CALENTAR'),
-      contenido(e, ind),
+      contenido(e, ind, repaso),
       paso.porVerificar && h('p', { class: 'pequeno ocre' }, `Por verificar: ${paso.porVerificar}.`),
       paso.edicion && h('p', { class: 'pequeno suave' }, 'Esta obra se toca con una edición publicada: aquí está la lección, no la partitura.'),
       paso.apoyo && h('p', { class: 'pequeno suave' }, `Te ayudará tener antes: ${paso.apoyo.replace(/^necesita /, '')}.`)),
@@ -53,8 +54,14 @@ export default function aprender({ id }, { repaso = false } = {}) {
       h('div', { class: 'fila' }, acciones)));
 }
 
-function contenido(e, ind) {
+function contenido(e, ind, repaso) {
   const { paso } = e;
+  // Un paso enriquecido enseña sus bloques; en un repaso, sin calentar, basta su versión corta.
+  const def = !repaso && ind.enriquecido?.[paso.id];
+  if (def) {
+    const etiqueta = def.etiqueta ?? ETIQUETA[paso.tipo] ?? paso.tipo;
+    return [etiqueta && h('div', { class: 'rotulo' }, etiqueta), bloquesDelPaso(def, paso.id, ind)];
+  }
   const c = ctx();
   const obra = paso.obra ? ind.obraPorId.get(paso.obra) : null;
   const ficha = obra?.ficha ? c.cat.porId.get(obra.ficha) : null;

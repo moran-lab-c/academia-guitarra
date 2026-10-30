@@ -36,4 +36,12 @@ function listar(dir) {
 }
 
 // El currículo aprobado, ya convertido a datos (herramientas/generar-curriculo.mjs).
-export const cargarCurriculo = dir => JSON.parse(fs.readFileSync(path.join(dir, 'curriculo', 'clasica.json'), 'utf8'));
+// A su lado, el contenido enriquecido de cada paso (contenido/curriculo/enriquecido/*.json): se escribe aparte para que el
+// currículo congelado no cambie. Un paso sin enriquecer sigue mostrando su texto.
+export function cargarCurriculo(dir) {
+  const datos = JSON.parse(fs.readFileSync(path.join(dir, 'curriculo', 'clasica.json'), 'utf8'));
+  const carpeta = path.join(dir, 'curriculo', 'enriquecido');
+  const enriquecido = {};
+  for (const f of fs.existsSync(carpeta) ? fs.readdirSync(carpeta).filter(x => x.endsWith('.json')) : []) Object.assign(enriquecido, JSON.parse(fs.readFileSync(path.join(carpeta, f), 'utf8')).pasos);
+  return { ...datos, enriquecido };
+}

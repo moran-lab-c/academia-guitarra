@@ -31,6 +31,7 @@ Todos estos enlaces son texto plano y se abren sin iniciar sesión.
 - [Contexto y reglas del proyecto](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/CLAUDE.md)
 - [Estado de la implementación y lo que falta](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/IMPLEMENTACION-V3.1.md)
 - [Arquitectura del código](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/Arquitectura%20de%20la%20academia.md)
+- [Enriquecimiento del contenido: el tramo de referencia y su sistema](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/ENRIQUECIMIENTO.md)
 
 **El currículo aprobado (V3.1), la fuente de verdad**
 - [Currículo maestro](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/curriculo/CURRICULO-MAESTRO.md)

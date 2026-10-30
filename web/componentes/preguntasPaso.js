@@ -8,9 +8,9 @@ import { tocar } from './sonido.js';
 // Lo que lleva contestado, solo mientras está en esta pantalla.
 let sesion = { id: null, ronda: 0, respuestas: [] };
 
-export function bloquePreguntas(pasoId) {
+export function bloquePreguntas(pasoId, n = 5) {
   if (sesion.id !== pasoId) sesion = { id: pasoId, ronda: 0, respuestas: [] };
-  const lista = preguntasDelPaso(pasoId, 5, `${pasoId}#${sesion.ronda}`);
+  const lista = preguntasDelPaso(pasoId, n, `${pasoId}#${sesion.ronda}`);
   if (!lista?.length) return null;
   const i = sesion.respuestas.length;
   if (i >= lista.length) {

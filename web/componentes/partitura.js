@@ -88,6 +88,18 @@ function mostrar(contenedor, r) {
   const svg = document.createElement('div');
   svg.innerHTML = r.html;
   contenedor.replaceChildren(...svg.childNodes, ...r.avisos.map(a => h('p', { class: 'partitura__aviso' }, a)));
+  contenedor.medidas = r.medidas;
+  contenedor.dispatchEvent(new CustomEvent('dibujada'));
+}
+
+// Señala unos compases en una notación ya dibujada (o los quita, sin «desde»).
+export function senalarCompases(contenedor, desde, hasta = desde) {
+  contenedor.querySelectorAll('.partitura__resalte').forEach(x => x.remove());
+  if (desde == null) return;
+  for (const m of contenedor.medidas ?? []) {
+    if (m.numero < desde || m.numero > hasta) continue;
+    contenedor.append(h('div', { class: 'partitura__resalte', style: `left:${m.x}px;top:${m.y}px;width:${m.ancho}px;height:${m.alto}px` }));
+  }
 }
 
 // Plan de dibujo → SVG con VexFlow. Devuelve el SVG como texto, para guardarlo.
@@ -109,6 +121,7 @@ export function dibujar(VF, plan, vista, ancho) {
   renderer.resize(ancho, lineas.length * altoLinea + 90 + margenArriba);
   const ctx = renderer.getContext();
   const enlaces = []; // ligados y ligaduras: se dibujan cuando ya están todas las notas de la línea
+  const medidas = []; // dónde cae cada compás, para que la explicación pueda señalarlo
   lineas.forEach((linea, l) => {
     const y = 40 + margenArriba + l * altoLinea;
     const notasLinea = [];
@@ -116,6 +129,8 @@ export function dibujar(VF, plan, vista, ancho) {
       const m = plan.compases[c.indice];
       const stave = conPartitura ? new Stave(c.x, y, c.ancho) : null;
       const tab = conTab ? new TabStave(c.x, conPartitura ? y + 95 : y, c.ancho) : null;
+      (stave ?? tab).setMeasure(c.numero);
+      medidas.push({ numero: c.numero, x: c.x, ancho: c.ancho, y: y + (conPartitura ? 18 : 22), alto: conPartitura && conTab ? 212 : conPartitura ? 110 : 96 });
       if (c.primero) {
         stave?.addClef('treble', 'default', '8vb').addKeySignature(plan.armadura);
         tab?.addClef('tab');
@@ -215,5 +230,5 @@ export function dibujar(VF, plan, vista, ancho) {
   svg.removeAttribute('style'); // VexFlow deja el tamaño del lienzo en «style», que mandaría sobre el alto justo
   const html = div.innerHTML;
   div.remove();
-  return { html, alto, avisos: plan.avisos };
+  return { html, alto, avisos: plan.avisos, medidas: medidas.map(m => ({ ...m, y: m.y - arriba })) };
 }

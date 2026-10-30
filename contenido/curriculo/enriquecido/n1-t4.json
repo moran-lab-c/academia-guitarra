@@ -1,0 +1,433 @@
+{
+  "tramo": "n1.t4",
+  "nota": "Tramo de referencia del enriquecimiento. Las notas, funciones y dedos de los acordes los calcula logica/guitarra.js; lo que se escribe aquí es la explicación.",
+  "pasos": {
+    "n1.t4.l1.p1": {
+      "bloques": [
+        { "tipo": "texto", "md": "Una escala mayor no es una lista de notas para memorizar. Es un **patrón de distancias**: tono, tono, semitono, tono, tono, tono, semitono. Con ese patrón la construyes desde cualquier nota." },
+        { "tipo": "concepto", "titulo": "La cuerda como regla", "md": "En la guitarra cada traste es un semitono, y dos trastes, un tono. Por eso una sola cuerda enseña la escala mejor que ningún dibujo: las distancias se ven." },
+        { "tipo": "mastil", "escena": { "tipo": "distancias", "titulo": "Do mayor en la 2.ª cuerda", "cuerda": 2, "desde": 1, "trastes": [1, 13], "clave": "C", "pasos": [
+          { "a": 3, "arco": "T", "texto": "Do a Re: dos trastes, un tono.", "ms": 1700 },
+          { "a": 5, "arco": "T", "texto": "Re a Mi: otro tono.", "ms": 1700 },
+          { "a": 6, "arco": "S", "texto": "Mi a Fa: un solo traste. El primer semitono, entre los grados 3 y 4.", "ms": 2600 },
+          { "a": 8, "arco": "T", "texto": "Fa a Sol: tono.", "ms": 1500 },
+          { "a": 10, "arco": "T", "texto": "Sol a La: tono.", "ms": 1500 },
+          { "a": 12, "arco": "T", "texto": "La a Si: tono.", "ms": 1500 },
+          { "a": 13, "arco": "S", "texto": "Si a Do: el segundo semitono, entre los grados 7 y 8. Es el que empuja hacia la nota final.", "ms": 3000 }
+        ], "final": "T-T-S-T-T-T-S. Las notas naturales, de Do a Do, ya traen este patrón hecho." } },
+        { "tipo": "concepto", "titulo": "Por qué el patrón manda", "md": "Si empiezas en otra nota, las distancias naturales ya no caen donde deben. Empezando en Mi, de Mi a Fa hay un semitono y el patrón pide un tono: hay que subir el Fa. Ese es el origen de los sostenidos: no están puestos porque sí, los pide el patrón." },
+        { "tipo": "mastil", "escena": { "tipo": "distancias", "titulo": "El mismo patrón desde Mi, en la 1.ª cuerda", "cuerda": 1, "desde": 0, "trastes": [0, 12], "clave": "E", "pasos": [
+          { "a": 2, "arco": "T", "texto": "Tono: traste 2, Fa♯. Fa natural estaría a un semitono y no vale.", "ms": 2400 },
+          { "a": 4, "arco": "T", "texto": "Tono: traste 4, Sol♯.", "ms": 1600 },
+          { "a": 5, "arco": "S", "texto": "Semitono: traste 5, La.", "ms": 1600 },
+          { "a": 7, "arco": "T", "texto": "Tono: traste 7, Si.", "ms": 1500 },
+          { "a": 9, "arco": "T", "texto": "Tono: traste 9, Do♯.", "ms": 1500 },
+          { "a": 11, "arco": "T", "texto": "Tono: traste 11, Re♯.", "ms": 1500 },
+          { "a": 12, "arco": "S", "texto": "Semitono: traste 12, Mi, una octava más arriba.", "ms": 2400 }
+        ], "final": "Mi mayor: Mi, Fa♯, Sol♯, La, Si, Do♯, Re♯ y Mi. Cuatro sostenidos que salen del patrón." } },
+        { "tipo": "errores", "items": [
+          { "error": "Pensar que entre dos notas seguidas siempre hay un tono.", "arreglo": "Entre Mi y Fa y entre Si y Do hay un semitono. En la cuerda se ve: son trastes vecinos." },
+          { "error": "Aprender la escala de Mi como un dibujo de dedos.", "arreglo": "El dibujo sirve para tocarla; el patrón, para entenderla. Con el patrón, la escala de Sol mayor ya no es nueva." }
+        ] },
+        { "tipo": "reaparece", "items": [
+          { "paso": "n1.t9.l2.p3", "texto": "las armaduras de Do y Sol mayor salen de este mismo patrón." },
+          { "paso": "n1.t13.l2.p2", "texto": "La mayor: el patrón, en otra tonalidad." }
+        ] }
+      ]
+    },
+    "n1.t4.l1.p2": {
+      "bloques": [
+        { "tipo": "texto", "md": "Ahora hazlo tú. Primero en el mástil, para que el patrón pase por los dedos; después, de cabeza." },
+        { "tipo": "actividadMastil", "cuerda": 1, "clave": "E", "trastes": [0, 2, 4, 5, 7, 9, 11, 12], "enunciado": "En la **1.ª cuerda**, encuentra las ocho notas de **Mi mayor** con el patrón T-T-S-T-T-T-S. Cada casilla es un traste, y suena al pulsarla.", "final": "Eso es: Mi, Fa♯, Sol♯, La, Si, Do♯, Re♯ y Mi. Los semitonos han caído en los trastes 4-5 y 11-12." },
+        { "tipo": "actividadMastil", "cuerda": 2, "clave": "B", "trastes": [0, 2, 4, 5, 7, 9, 11, 12], "enunciado": "Ahora **la misma idea en la 2.ª cuerda**, desde Si al aire: sale **Si mayor**. No hace falta conocerla: basta con el patrón.", "final": "Mismos trastes, otra tonalidad. El patrón no cambia: solo cambia dónde empieza." },
+        { "tipo": "tabla", "cabecera": ["Grado", "1", "2", "3", "4", "5", "6", "7", "8"], "filas": [
+          ["Do mayor", "Do", "Re", "Mi", "Fa", "Sol", "La", "Si", "Do"],
+          ["Mi mayor", "Mi", "Fa♯", "Sol♯", "La", "Si", "Do♯", "Re♯", "Mi"]
+        ] },
+        { "tipo": "texto", "md": "Los **grados** son el número de cada nota dentro de su escala. Hablar en grados es lo que permite decir lo mismo en cualquier tonalidad: el 3.º de Do es Mi, y el 3.º de Mi es Sol♯." },
+        { "tipo": "preguntas", "n": 5 }
+      ]
+    },
+    "n1.t4.l1.p3": {
+      "bloques": [
+        { "tipo": "texto", "md": "Dos octavas de Mi mayor, de la 6.ª cuerda al aire a la 1.ª al aire. Es el mismo patrón de antes repartido entre cuerdas, y además un ejercicio de sonido: **apoyando**, alternando i y m." },
+        { "tipo": "concepto", "titulo": "Qué desarrolla", "md": "El cambio de cuerda sin hueco, la igualdad entre i y m y un dedo por traste en la mano izquierda. Por eso es la misma escala y no otra: aquí la dificultad no está en las notas, está en que suene igual de principio a fin." },
+        { "tipo": "mastil", "escena": { "tipo": "recorrido", "titulo": "Mi mayor en primera posición", "clave": "E", "trastes": [0, 4], "ms": 800, "final": "Dos octavas enteras. El dedo 3 no se usa en esta digitación: un dedo por traste, y aquí no hay nada en el traste 3.", "notas": [
+          { "c": 6, "t": 0, "grado": 1 }, { "c": 6, "t": 2, "grado": 2, "dedo": 2 }, { "c": 6, "t": 4, "grado": 3, "dedo": 4 },
+          { "c": 5, "t": 0, "grado": 4 }, { "c": 5, "t": 2, "grado": 5, "dedo": 2 }, { "c": 5, "t": 4, "grado": 6, "dedo": 4 },
+          { "c": 4, "t": 1, "grado": 7, "dedo": 1 }, { "c": 4, "t": 2, "grado": 1, "dedo": 2 }, { "c": 4, "t": 4, "grado": 2, "dedo": 4 },
+          { "c": 3, "t": 1, "grado": 3, "dedo": 1 }, { "c": 3, "t": 2, "grado": 4, "dedo": 2 },
+          { "c": 2, "t": 0, "grado": 5 }, { "c": 2, "t": 2, "grado": 6, "dedo": 2 }, { "c": 2, "t": 4, "grado": 7, "dedo": 4 },
+          { "c": 1, "t": 0, "grado": 1 }
+        ] } },
+        { "tipo": "notacion", "fuente": "notacion/esc-mi-mayor-1pos.json", "principal": "tablatura", "motivo": "Aquí importa el sonido, no leer: tablatura. La partitura, para ver los sostenidos.", "bpm": 72, "notas": [
+          "En el {c:1} hay dos semitonos que no se parecen: Sol♯–La cambia de cuerda (6.ª traste 4, 5.ª al aire) y Re♯–Mi va en la misma cuerda (4.ª, trastes 1 y 2). Tienen que sonar igual de cerca.",
+          "En el {c:2} está el techo: Mi al aire, en la 1.ª. Una cuerda al aire suena más abierta; iguálala con las pisadas de al lado.",
+          "En los {c:3-4} se baja por el mismo camino. Si bajando corre más que subiendo, vuelve a tocarla más despacio."
+        ] },
+        { "tipo": "pasos", "titulo": "Cómo hacerlo", "items": [
+          "Empieza en el tempo más alto al que te salga limpia, aunque sea muy lento.",
+          "Mano derecha: i y m alternando, apoyando cada nota en la cuerda de al lado.",
+          "Mano izquierda: un dedo por traste y los dedos cerca de la cuerda, también los que no pisan.",
+          "Cuando te salga bien tres veces seguidas, sube 4 en el metrónomo."
+        ] },
+        { "tipo": "metronomo", "clave": "ej:esc.mi-mayor-1pos" },
+        { "tipo": "errores", "items": [
+          { "error": "Oyes un hueco al cambiar de cuerda.", "arreglo": "La mano izquierda llega tarde. Prepara el dedo siguiente mientras suena la nota anterior." },
+          { "error": "Las notas de m suenan más que las de i.", "arreglo": "Tócala solo con i, luego solo con m, y busca que ninguna de las dos destaque." }
+        ] },
+        { "tipo": "bien", "items": ["Suena igual al subir y al bajar.", "Con los ojos cerrados no sabrías dónde cambia de cuerda."] },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t4.l6.p2", "texto": "con estas mismas notas improvisarás sobre la progresión." }] }
+      ]
+    },
+    "n1.t4.l1.p4": {
+      "bloques": [
+        { "tipo": "texto", "md": "Los cuatro sostenidos de la escala no se escriben nota a nota. Van una sola vez, al principio de cada línea: es la **armadura**, y vale para toda la pieza." },
+        { "tipo": "tabla", "cabecera": ["Orden en la armadura", "Nota", "Dónde está en primera posición"], "filas": [
+          ["1.º", "Fa♯", "1.ª traste 2 · 4.ª traste 4 · 6.ª traste 2"],
+          ["2.º", "Do♯", "2.ª traste 2 · 5.ª traste 4"],
+          ["3.º", "Sol♯", "3.ª traste 1 · 1.ª traste 4 · 6.ª traste 4"],
+          ["4.º", "Re♯", "4.ª traste 1 · 2.ª traste 4"]
+        ] },
+        { "tipo": "concepto", "titulo": "Lo que cambia al leer", "md": "Ves una nota en la línea o en el espacio de Fa, y tocas Fa♯ aunque no lleve nada delante. La armadura te lo ha dicho antes. El error típico es leer bien la altura y olvidarse de ella: por eso se lee primero sin tocar, diciendo el nombre con su sostenido." },
+        { "tipo": "notacion", "fuente": "notacion/lec-mi-mayor-armadura.json", "titulo": "Lectura en Mi mayor", "principal": "partitura", "motivo": "Este paso es para leer: partitura, con la tablatura para comprobar.", "bpm": 60, "notas": [
+          "En el {c:1} bajas por Re♯ y Do♯ sin que ninguna lleve un sostenido escrito: los pone la armadura.",
+          "En el {c:3} aparece Sol♯, en la 3.ª cuerda, traste 1: la nota que más cuesta recordar en esta tonalidad.",
+          "En el {c:4} acabas en Mi, la nota que da nombre a la tonalidad. Por eso suena a final."
+        ] },
+        { "tipo": "pasos", "titulo": "Cómo leerla", "items": [
+          "Lee los nombres en voz alta, con su sostenido, sin guitarra.",
+          "Tócala sin parar, despacio: mejor lento y seguido que rápido y a saltos.",
+          "Comprueba con la tablatura solo al terminar, no mientras lees."
+        ] },
+        { "tipo": "bien", "items": ["Has tocado Re♯, Do♯, Sol♯ y Fa♯ sin mirar la tablatura."] },
+        { "tipo": "metronomo" }
+      ]
+    },
+    "n1.t4.l2.p1": {
+      "bloques": [
+        { "tipo": "texto", "md": "Una **triada** es un acorde de tres notas distintas, y se construye apilando terceras: la **fundamental**, que le da nombre; la **3.ª**, que decide si es mayor o menor; y la **5.ª**, que le da cuerpo." },
+        { "tipo": "mastil", "escena": { "tipo": "distancias", "titulo": "La triada de Mi, en una cuerda", "cuerda": 1, "desde": 0, "trastes": [0, 8], "clave": "E", "pasos": [
+          { "a": 4, "arco": "4 semitonos · 3.ª mayor", "texto": "De Mi a Sol♯ hay cuatro semitonos: una 3.ª mayor. Por eso el acorde es mayor.", "ms": 3200 },
+          { "a": 7, "de": 4, "arco": "3 · 3.ª menor", "texto": "De Sol♯ a Si, tres semitonos: una 3.ª menor.", "ms": 2800 },
+          { "a": 7, "mover": 7, "de": 0, "arco": "7 semitonos · 5.ª justa", "texto": "De Mi a Si hay siete semitonos en total: una 5.ª justa. Una 3.ª mayor y otra menor, apiladas.", "ms": 3000 },
+          { "a": 3, "mover": 4, "de": 0, "arco": "3 · 3.ª menor", "texto": "Si bajas la 3.ª un solo traste, Sol♯ pasa a Sol, y todo cambia: ahora es Mi menor. Una sola nota cambia el carácter.", "ms": 3600 }
+        ] } },
+        { "tipo": "tabla", "cabecera": ["Triada", "Fundamental", "3.ª", "5.ª", "De la fundamental a la 3.ª", "De la 3.ª a la 5.ª"], "filas": [
+          ["Mi mayor", "Mi", "Sol♯", "Si", "4 semitonos", "3 semitonos"],
+          ["Mi menor", "Mi", "Sol", "Si", "3 semitonos", "4 semitonos"]
+        ] },
+        { "tipo": "escuchar", "items": [
+          { "etiqueta": "Mi mayor", "notas": [[4, 2], [3, 1], [2, 0]], "arpegiado": false },
+          { "etiqueta": "Mi menor", "notas": [[4, 2], [3, 0], [2, 0]], "arpegiado": false },
+          { "etiqueta": "Mi mayor, junto", "acorde": "Mi" },
+          { "etiqueta": "Mi menor, junto", "acorde": "Mi m" }
+        ] },
+        { "tipo": "resumen", "md": "Fundamental, 3.ª y 5.ª. Cuatro semitonos más tres es mayor; tres más cuatro es menor." },
+        { "tipo": "reaparece", "items": [
+          { "paso": "n1.t7.l2.p3", "texto": "Mi m–La m–Si7–Mi m: la misma idea, con la 3.ª baja." },
+          { "paso": "n1.t9.l3.p2", "texto": "los intervalos, con sus nombres completos." }
+        ] }
+      ]
+    },
+    "n1.t4.l2.p2": {
+      "bloques": [
+        { "tipo": "texto", "md": "Tres acordes: **Mi**, **La** y **Si7**. Mira cómo se forma cada uno y qué notas lleva; así no memorizas tres dibujos, sino tres acordes." },
+        { "tipo": "acordes", "nombres": ["Mi", "La", "Si7"] },
+        { "tipo": "mastil", "escena": { "tipo": "acorde", "titulo": "Mi, paso a paso", "acorde": "Mi", "clave": "E" } },
+        { "tipo": "anatomia", "acorde": "Mi", "clave": "E" },
+        { "tipo": "texto", "md": "Tiene seis cuerdas y solo tres notas distintas: las demás son **repeticiones** que le dan volumen. La nota más grave es la fundamental, Mi, y por eso suena tan firme. Tres cuerdas van al aire porque esas notas ya son del acorde." },
+        { "tipo": "mastil", "escena": { "tipo": "acorde", "titulo": "La, paso a paso", "acorde": "La", "clave": "E" } },
+        { "tipo": "anatomia", "acorde": "La", "clave": "E" },
+        { "tipo": "texto", "md": "La **6.ª no se toca**. Sería un Mi, la 5.ª del acorde, y pondría en el bajo una nota que no es la fundamental. El bajo de este acorde es la 5.ª al aire, La." },
+        { "tipo": "mastil", "escena": { "tipo": "acorde", "titulo": "Si7, paso a paso", "acorde": "Si7", "clave": "E" } },
+        { "tipo": "anatomia", "acorde": "Si7", "clave": "E" },
+        { "tipo": "texto", "md": "Aquí hay **cuatro notas distintas**. A la triada de Si (Si, Re♯, Fa♯) se le suma una 7.ª menor, La. Por eso se llama Si**7**, y esa nota de más es la que crea la tensión del paso siguiente." },
+        { "tipo": "errores", "items": [
+          { "error": "Una cuerda suena apagada.", "arreglo": "Un dedo vecino la está tocando. Pisa con la punta y con el dedo arqueado, cerca del traste." },
+          { "error": "En La, los tres dedos no caben en el traste 2.", "arreglo": "Van escalonados: el 1 un poco más atrás, el 3 pegado al traste. Es normal que el 1 no llegue a tocar el metal." },
+          { "error": "Rozas la 6.ª en La o en Si7.", "arreglo": "El pulgar de la mano derecha empieza en la 5.ª, no en la 6.ª." }
+        ] },
+        { "tipo": "bien", "items": ["Tocando cuerda a cuerda, cada nota suena clara.", "El acorde empieza en su bajo correcto: Mi en la 6.ª, La en la 5.ª, Si en la 5.ª traste 2."] },
+        { "tipo": "reaparece", "items": [
+          { "paso": "n1.t5.l1.p3", "texto": "*Lágrima* usa estos mismos acordes." },
+          { "paso": "n1.t13.l3.p3", "texto": "volverás a La con cejilla, en otra posición del mástil." }
+        ] }
+      ]
+    },
+    "n1.t4.l2.p3": {
+      "bloques": [
+        { "tipo": "texto", "md": "Los acordes de una tonalidad tienen papeles, como los personajes de una historia. En Mi mayor, sobre los grados 1, 4 y 5 de la escala, se forman Mi, La y Si. Por eso se escriben **I, IV y V**." },
+        { "tipo": "tabla", "cabecera": ["Grado", "En Mi mayor", "Cómo se siente", "Se llama"], "filas": [
+          ["I", "Mi", "Reposo: estás en casa", "Tónica"],
+          ["IV", "La", "Alejamiento: has salido", "Subdominante"],
+          ["V", "Si7", "Tensión: quiere volver", "Dominante"]
+        ] },
+        { "tipo": "escuchar", "items": [{ "etiqueta": "Mi (reposo)", "acorde": "Mi" }, { "etiqueta": "La (alejamiento)", "acorde": "La" }, { "etiqueta": "Si7 (tensión)", "acorde": "Si7" }] },
+        { "tipo": "concepto", "titulo": "De dónde sale la tensión del Si7", "md": "Dentro del Si7 hay dos notas, **Re♯** y **La**, separadas por seis semitonos: un **tritono**, la distancia más inestable de la escala. El oído pide que se resuelva, y cada nota tiene un camino natural, a un solo semitono de distancia." },
+        { "tipo": "mastil", "escena": { "tipo": "libre", "titulo": "El tritono se resuelve", "clave": "E", "trastes": [0, 4], "cuadros": [
+          { "texto": "Si7. Marcadas, las dos notas de la tensión: Re♯ en la 4.ª cuerda y La en la 3.ª.", "ms": 3200, "suena": [51, 57], "marcas": [
+            { "k": "d2", "c": 5, "t": 2, "dedo": 2, "rol": "apagada", "sinNota": true }, { "k": "d1", "c": 4, "t": 1, "dedo": 1, "rol": "tension" }, { "k": "d3", "c": 3, "t": 2, "dedo": 3, "rol": "tension" }, { "k": "d4", "c": 1, "t": 2, "dedo": 4, "rol": "apagada", "sinNota": true } ] },
+          { "texto": "El Re♯ sube un semitono, a Mi. El La baja un semitono, a Sol♯. Cada uno se queda en su cuerda.", "ms": 3600, "suena": [], "flechas": [{ "de": [4, 1], "a": [4, 2] }, { "de": [3, 2], "a": [3, 1] }], "marcas": [
+            { "k": "d2", "c": 5, "t": 2, "dedo": 2, "rol": "apagada", "sinNota": true }, { "k": "d1", "c": 4, "t": 1, "dedo": 1, "rol": "tension" }, { "k": "d3", "c": 3, "t": 2, "dedo": 3, "rol": "tension" }, { "k": "d4", "c": 1, "t": 2, "dedo": 4, "rol": "apagada", "sinNota": true } ] },
+          { "texto": "Mi: la tensión se ha resuelto. Fíjate en que los dedos 1 y 3 se cruzan: el dedo cambia de cuerda, pero la nota sigue la suya.", "ms": 4200, "suena": [52, 56], "marcas": [
+            { "k": "d2", "c": 5, "t": 2, "dedo": 2, "rol": "apagada", "sinNota": true }, { "k": "d3", "c": 4, "t": 2, "dedo": 3 }, { "k": "d1", "c": 3, "t": 1, "dedo": 1 } ] }
+        ] } },
+        { "tipo": "escuchar", "items": [
+          { "etiqueta": "Solo el tritono", "notas": [[4, 1], [3, 2]] },
+          { "etiqueta": "Su resolución", "notas": [[4, 2], [3, 1]] }
+        ] },
+        { "tipo": "resumen", "md": "El I descansa, el IV se aleja y el V empuja de vuelta. Esa vuelta se oye porque dos notas se mueven un semitono cada una." },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t12.l6.p4", "texto": "esto mismo, oído en una obra: frases conclusivas y suspensivas." }] }
+      ]
+    },
+    "n1.t4.l2.p4": {
+      "bloques": [
+        { "tipo": "texto", "md": "**Mi–La–Si7–Mi**, es decir, I–IV–V7–I. Cuatro compases de acordes y cuatro en arpegio, para que esas notas se oigan una a una." },
+        { "tipo": "notacion", "fuente": "notacion/arm-mi-la-si7.json", "principal": "tablatura", "motivo": "Es para tocar y oír la progresión: tablatura. La partitura enseña las notas de cada acorde.", "bpm": 60, "notas": [
+          "En los {c:1-4}, un acorde por compás con el pulgar. Lo importante aquí es llegar a tiempo al cambio.",
+          "En el {c:5}, el arpegio de Mi empieza en su bajo, la 6.ª, y sube por la 4.ª, la 3.ª y la 2.ª.",
+          "En el {c:7} está el Si7, por las cuerdas 5-4-3-2: la **i** toca el Re♯ en la 4.ª y la **m**, el La en la 3.ª. Por eso se arpegia en esas cuerdas y no en las de arriba: así se oyen las dos notas de la tensión.",
+          "Del {c:7} al {c:8}, escucha la 4.ª cuerda: el Re♯ sube a Mi. Y la 3.ª: el La baja a Sol♯. Es la resolución del paso anterior, ahora en tus manos."
+        ] },
+        { "tipo": "acordes", "nombres": ["Mi", "La", "Si7"] },
+        { "tipo": "pasos", "titulo": "Cómo hacerlo", "items": [
+          "A ♩=60, un acorde por compás, primero con el pulgar y después en arpegio p-i-m-a.",
+          "Ocho compases sin cortar el pulso en los cambios.",
+          "Cuando salga, canta la fundamental de cada acorde mientras tocas: Mi, La, Si, Mi."
+        ] },
+        { "tipo": "metronomo", "clave": "ej:arm.mi-la-si7" },
+        { "tipo": "errores", "items": [
+          { "error": "El pulso se para justo en el cambio.", "arreglo": "Está bien tocar la última nota peor si eso te da tiempo a llegar. El tiempo manda, y la limpieza llega después." },
+          { "error": "En el Si7 no se oye el Re♯.", "arreglo": "Es la nota que más se apaga: la pisa el dedo 1, en el traste 1. Arquea el dedo para que el 2 no la toque." }
+        ] },
+        { "tipo": "bien", "items": ["Ocho compases salen sin cortar el pulso.", "La fundamental que cantas es la buena."] },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t4.l4.p1", "texto": "aquí vas a aprender a cambiar sin levantar todos los dedos." }] }
+      ]
+    },
+    "n1.t4.l2.p5": {
+      "bloques": [
+        { "tipo": "texto", "md": "Cantar lo que tocas es la forma más directa de que el oído aprenda los acordes. Aquí, tres notas: **1, 3 y 5**, las de la triada de Mi." },
+        { "tipo": "escuchar", "items": [
+          { "etiqueta": "Acorde de Mi", "acorde": "Mi" },
+          { "etiqueta": "1 · Mi", "notas": [[4, 2]] },
+          { "etiqueta": "3 · Sol♯", "notas": [[3, 1]] },
+          { "etiqueta": "5 · Si", "notas": [[2, 0]] },
+          { "etiqueta": "1-3-5 seguidas", "notas": [[4, 2], [3, 1], [2, 0]] }
+        ] },
+        { "tipo": "pasos", "titulo": "Hazlo así", "items": [
+          "Toca el acorde de Mi y déjalo sonar.",
+          "Sin volver a tocar, canta 1, 3, 5 y otra vez 1: «uno, tres, cinco, uno», o los nombres si te resulta más cómodo.",
+          "Comprueba cada nota tocándola: 4.ª traste 2, 3.ª traste 1, 2.ª al aire.",
+          "Si te queda aguda o grave, cámbiala de octava; lo que cuenta es la nota, no el registro."
+        ] },
+        { "tipo": "concepto", "titulo": "Por qué sirve", "md": "Al cantar, el oído tiene que anticipar la nota antes de que suene, y eso no ocurre cuando solo tocas. Es lo que te dejará oír un acorde o una melodía antes de ponerla en la guitarra." },
+        { "tipo": "bien", "items": ["Aciertas las tres notas sin comprobar antes.", "Después de cantar el 3, sabes decir si era Sol♯ o Sol."] },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t5.l3.p2", "texto": "cantarás la melodía de *Lágrima* con el acompañamiento sonando." }] }
+      ]
+    },
+    "n1.t4.l2.p6": {
+      "bloques": [
+        { "tipo": "texto", "md": "Dos preguntas que se turnan. **¿Mayor o menor?** Atiende al carácter, sin buscar notas: el mayor suena más abierto. **¿Fundamental, 3.ª o 5.ª?** Canta 1-3-5 sobre el acorde y mira en cuál encaja la nota." },
+        { "tipo": "preguntas", "n": 6 }
+      ]
+    },
+    "n1.t4.l3.p1": {
+      "bloques": [
+        { "tipo": "texto", "md": "Un **arpegio** es un acorde tocado nota a nota. Seguramente ya lo haces, pero el arpegio clásico pide tres cosas muy concretas: **preparación**, **cada dedo en su cuerda** y **volumen igual**." },
+        { "tipo": "mastil", "escena": { "tipo": "manoDerecha", "titulo": "Cada dedo tiene su cuerda", "acorde": "Mi", "clave": "E", "veces": 2, "ms": 850, "cuerdas": [{ "c": 6, "mano": "p" }, { "c": 3, "mano": "i" }, { "c": 2, "mano": "m" }, { "c": 1, "mano": "a" }] } },
+        { "tipo": "tabla", "cabecera": ["Qué pide", "Qué es", "Para qué sirve"], "filas": [
+          ["Preparación", "El dedo se apoya en la cuerda justo antes de pulsarla", "Evita el ruido y la nota llega a tiempo"],
+          ["Cada dedo en su cuerda", "p en los bajos; i, m y a en la 3.ª, la 2.ª y la 1.ª", "La mano no se mueve: se mueven los dedos"],
+          ["Volumen igual", "Ninguna nota sobresale sin que tú quieras", "Es lo que después te dejará destacar una melodía a propósito"]
+        ] },
+        { "tipo": "errores", "items": [
+          { "error": "La mano entera sube y baja con el arpegio.", "arreglo": "Fija el pulgar en su bajo y mueve solo los dedos, desde el nudillo." },
+          { "error": "La a suena más débil que los demás.", "arreglo": "Es normal: es el dedo más flojo. Tócala sola, despacio, antes de juntarla." }
+        ] },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t6.l1.p1", "texto": "aprenderás a dar más peso a un dedo dentro del arpegio, y por eso antes tienen que sonar iguales." }] }
+      ]
+    },
+    "n1.t4.l3.p2": {
+      "bloques": [
+        { "tipo": "texto", "md": "Mauro Giuliani escribió en su op. 1 una colección de 120 fórmulas de arpegio para la mano derecha sobre dos acordes fijos, Do y Sol7. Es el gimnasio clásico: la mano izquierda no cambia, para que toda la atención vaya a la derecha." },
+        { "tipo": "concepto", "titulo": "Cómo se organiza aquí", "md": "Cuatro fórmulas, una nueva por semana, sin pasar a la siguiente hasta que la anterior suene igualada. Las escritas abajo siguen estos patrones sobre Do y Sol7; **no son copia de los números del libro**, que aún están por verificar." },
+        { "tipo": "acordes", "nombres": ["Do", "Sol7"] },
+        { "tipo": "notacion", "plegado": true, "fuente": "notacion/arp-pim-do-sol7.json", "titulo": "1.ª semana · p-i-m", "principal": "tablatura", "motivo": "Es técnica de mano derecha: tablatura.", "bpm": 72 },
+        { "tipo": "notacion", "plegado": true, "fuente": "notacion/arp-pima-do-sol7.json", "titulo": "2.ª semana · p-i-m-a", "principal": "tablatura", "motivo": "Es técnica de mano derecha: tablatura.", "bpm": 72 },
+        { "tipo": "notacion", "plegado": true, "fuente": "notacion/arp-pami-do-sol7.json", "titulo": "3.ª semana · p-a-m-i", "principal": "tablatura", "motivo": "Es técnica de mano derecha: tablatura.", "bpm": 72 },
+        { "tipo": "notacion", "plegado": true, "fuente": "notacion/arp-pimami-do-sol7.json", "titulo": "4.ª semana · p-i-m-a-m-i", "principal": "tablatura", "motivo": "Es técnica de mano derecha: tablatura.", "bpm": 72 },
+        { "tipo": "metronomo", "clave": "ej:giuliani.op1" },
+        { "tipo": "bien", "items": ["Los cuatro dedos suenan igual a ♩=72 en corcheas."] },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t6.l1.p2", "texto": "las mismas fórmulas, con una nota destacada." }] }
+      ]
+    },
+    "n1.t4.l3.p3": {
+      "bloques": [
+        { "tipo": "texto", "md": "El mismo acorde de Mi, ahora extendido a **dos octavas**: Mi, Sol♯, Si, Mi, Sol♯, Si, Mi. Son las notas de la triada, y solo la triada: si cantas 1-3-5 encima, todas encajan." },
+        { "tipo": "mastil", "escena": { "tipo": "recorrido", "titulo": "Arpegio de Mi mayor, dos octavas", "clave": "E", "trastes": [0, 4], "ms": 950, "final": "Es la forma de Mi más una nota: el Sol♯ del traste 4 en la 6.ª, con el dedo 4.", "notas": [
+          { "c": 6, "t": 0, "texto": "Mi, fundamental", "mano": "p" }, { "c": 6, "t": 4, "dedo": 4, "texto": "Sol♯, 3.ª", "mano": "p" }, { "c": 5, "t": 2, "dedo": 2, "texto": "Si, 5.ª", "mano": "p" },
+          { "c": 4, "t": 2, "dedo": 3, "texto": "Mi, fundamental", "mano": "p" }, { "c": 3, "t": 1, "dedo": 1, "texto": "Sol♯, 3.ª", "mano": "i" }, { "c": 2, "t": 0, "texto": "Si, 5.ª", "mano": "m" }, { "c": 1, "t": 0, "texto": "Mi, fundamental", "mano": "a" }
+        ] } },
+        { "tipo": "notacion", "fuente": "notacion/arp-mi-mayor-2oct.json", "seco": true, "principal": "tablatura", "motivo": "Lo que se trabaja es la mano derecha: tablatura. La partitura, para ver que son siempre las mismas tres notas.", "bpm": 60, "notas": [
+          "En el {c:1}, el pulgar toca las cuatro primeras notas y luego entran i, m y a. Ese relevo tiene que oírse igual que el resto.",
+          "En el {c:2} bajas por el mismo camino y acabas en la 6.ª al aire, dejándola sonar."
+        ] },
+        { "tipo": "concepto", "titulo": "Que no se solapen", "md": "Normalmente dejarías sonar el arpegio como un acorde. Aquí se pide lo contrario: cada nota entra cuando termina la anterior, como en una escala. Levanta el dedo de la mano izquierda al pasar a la nota siguiente, y apaga la cuerda al aire apoyando el dedo que acaba de pulsar. Así se oye exactamente dónde está cada nota." },
+        { "tipo": "metronomo" },
+        { "tipo": "bien", "items": ["Oyes cada nota por separado, sin que se forme un acorde.", "No se nota dónde pasa del pulgar a los dedos."] }
+      ]
+    },
+    "n1.t4.l3.p4": {
+      "etiqueta": "Esto te sirve para…",
+      "bloques": [
+        { "tipo": "guia", "tipoGuia": "Esto te sirve para…", "md": "El arpegio de *Lágrima* y el de tu *Estudio en Mi menor*. En los dos, la melodía va arriba y el arpegio acompaña debajo." },
+        { "tipo": "texto", "md": "Por eso importa tanto que las notas suenen igual: solo así podrás, más adelante, sacar una por encima de las demás sin que suene a accidente." },
+        { "tipo": "obra", "id": "o1-tarrega-lagrima" },
+        { "tipo": "obra", "id": "o1-estudio-en-mi-menor" },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t5.l1.p3", "texto": "lo verás en *Lágrima*, con la melodía encima." }] }
+      ]
+    },
+    "n1.t4.l4.p1": {
+      "bloques": [
+        { "tipo": "texto", "md": "Un cambio de acorde dura lo que tardan los dedos en llegar, y mientras tanto hay silencio. Hay una forma de acortarlo: **no levantar el dedo que ya está donde tiene que estar**." },
+        { "tipo": "mastil", "escena": { "tipo": "cambio", "titulo": "De Si7 a Mi: el dedo común", "de": "Si7", "a": "Mi", "clave": "E", "textos": {
+          "inicio": "Si7. Mira el dedo 2: 5.ª cuerda, traste 2, la nota Si.",
+          "medio": "El dedo 2 no se mueve, porque Mi pide exactamente lo mismo. Queda marcado en verde.",
+          "fin": "Mi. Han viajado los demás, y el dedo 2 no ha dejado de sonar. Menos movimiento y menos silencio."
+        } } },
+        { "tipo": "concepto", "titulo": "Y cuando no hay dedo común", "md": "Entre Mi y La no hay ninguno: la 4.ª cuerda en el traste 2 se pisa en los dos acordes, pero con dedos distintos (el 3 en Mi, el 1 en La). Ahí el truco es otro: **preparar el acorde siguiente durante la última nota**. Los dedos ya van de camino antes de que acabe el compás." },
+        { "tipo": "mastil", "escena": { "tipo": "cambio", "titulo": "De Mi a La: sin dedo común", "de": "Mi", "a": "La", "clave": "E", "textos": {
+          "inicio": "Mi.",
+          "medio": "Ningún dedo pisa lo mismo en los dos. Hay que mover los tres a la vez, como un solo gesto.",
+          "fin": "La. Practica ese gesto en el aire, sin tocar, hasta que los tres dedos lleguen juntos."
+        } } },
+        { "tipo": "mastil", "escena": { "tipo": "cambio", "titulo": "De La a Si7: el dedo 1 sigue en su cuerda", "de": "La", "a": "Si7", "clave": "E", "textos": {
+          "inicio": "La.",
+          "medio": "Aquí tampoco hay dedo común, pero el dedo 1 no cambia de cuerda: va de la 4.ª en el traste 2 a la 4.ª en el traste 1. Puede deslizar sin levantarse.",
+          "fin": "Si7. Ese dedo que no se separa de la cuerda es el que te lleva."
+        } } },
+        { "tipo": "resumen", "md": "Antes de cambiar, mira qué dedo se queda. Si ninguno, mira cuál sigue en su cuerda. Si ninguno, prepara." },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t5.l2.p4", "texto": "en *Lágrima*, el dedo que se queda en la cuerda de la melodía." }] }
+      ]
+    },
+    "n1.t4.l4.p2": {
+      "bloques": [
+        { "tipo": "texto", "md": "La misma progresión, ahora pensando en la mano izquierda. Los tres cambios tienen tres soluciones distintas." },
+        { "tipo": "tabla", "cabecera": ["Cambio", "Qué hace la mano izquierda"], "filas": [
+          ["Mi → La", "Sin dedo común: prepara los tres dedos durante la última nota"],
+          ["La → Si7", "El dedo 1 sigue en la 4.ª cuerda, del traste 2 al traste 1"],
+          ["Si7 → Mi", "El dedo 2 no se levanta de la 5.ª, traste 2"]
+        ] },
+        { "tipo": "acordes", "nombres": ["Mi", "La", "Si7"] },
+        { "tipo": "notacion", "fuente": "notacion/arm-mi-la-si7.json", "compases": [1, 4], "principal": "tablatura", "motivo": "Aquí importa el cambio de los dedos: tablatura.", "bpm": 60, "notas": [
+          "Del {c:3} al {c:4} está el único cambio con dedo común. Si el dedo 2 se levanta, vuelve a empezar."
+        ] },
+        { "tipo": "pasos", "titulo": "Cómo hacerlo", "items": [
+          "Sin mano derecha: solo cambia de acorde, despacio, mirando el dedo marcado.",
+          "Con el pulgar, un acorde por compás, a un tempo en el que no se pare nada.",
+          "Sube el metrónomo solo cuando el dedo común se quede quieto sin pensarlo."
+        ] },
+        { "tipo": "metronomo" },
+        { "tipo": "bien", "items": ["El dedo 2 no se despega en Si7–Mi.", "El bajo de cada acorde entra a tiempo."] }
+      ]
+    },
+    "n1.t4.l5.p1": {
+      "bloques": [
+        { "tipo": "texto", "md": "Si I, IV y V son papeles y no acordes concretos, la misma historia se puede contar en cualquier tonalidad. Aquí, dos más." },
+        { "tipo": "tabla", "cabecera": ["Tonalidad", "I", "IV", "V"], "filas": [
+          ["Mi mayor", "Mi", "La", "Si7"],
+          ["Do mayor", "Do", "Fa△7", "Sol7"],
+          ["Sol mayor", "Sol", "Do", "Re7"]
+        ] },
+        { "tipo": "concepto", "titulo": "Por qué Fa lleva aquí una 7.ª mayor", "md": "El Fa mayor normal pide cejilla, y todavía no toca. Sin la cejilla, y dejando la 1.ª al aire, sale **Fa△7** (Fa, La, Do, Mi): las tres notas de Fa más un Mi que pertenece a la escala de Do. Sigue haciendo de IV, y es mucho más fácil." },
+        { "tipo": "acordes", "nombres": ["Do", "Fa△7", "Sol7", "Sol", "Re7"] },
+        { "tipo": "anatomia", "acorde": "Fa△7", "clave": "C" },
+        { "tipo": "mastil", "escena": { "tipo": "cambio", "titulo": "De Do a Fa△7: el dedo 1 se queda", "de": "Do", "a": "Fa△7", "clave": "C", "textos": {
+          "inicio": "Do.",
+          "medio": "Otra vez el dedo común: el 1, en la 2.ª cuerda, traste 1.",
+          "fin": "Fa△7. Los dedos 2 y 3 bajan una cuerda cada uno, sin cambiar de traste."
+        } } },
+        { "tipo": "mastil", "escena": { "tipo": "cambio", "titulo": "De Sol7 a Do: la mano se cierra", "de": "Sol7", "a": "Do", "clave": "C", "textos": {
+          "inicio": "Sol7, el V de Do. Su tritono está entre el Si de la 5.ª cuerda y el Fa de la 1.ª.",
+          "medio": "Ningún dedo se queda, pero el gesto es uno solo: los dedos 3 y 2 bajan una cuerda y el 1 sube otra. La mano se cierra.",
+          "fin": "Do. El Si ha subido a Do en la 5.ª y el Fa ha bajado a Mi en la 1.ª: otra vez, un semitono cada uno."
+        } } },
+        { "tipo": "notacion", "fuente": "notacion/arm-do-fa-sol7.json", "titulo": "Do–Fa△7–Sol7–Do", "principal": "tablatura", "motivo": "Es para tocar la progresión: tablatura.", "bpm": 60, "notas": ["Del {c:1} al {c:2} se queda el dedo 1. Del {c:3} al {c:4}, los dedos 3 y 2 bajan una cuerda y el 1 sube otra."] },
+        { "tipo": "mastil", "escena": { "tipo": "cambio", "titulo": "De Do a Re7: otro dedo común", "de": "Do", "a": "Re7", "clave": "G", "textos": {
+          "inicio": "Do, ahora como IV de Sol mayor.",
+          "medio": "El dedo 1 sigue en la 2.ª cuerda, traste 1.",
+          "fin": "Re7. Y con él, la tensión que vuelve a Sol."
+        } } },
+        { "tipo": "notacion", "fuente": "notacion/arm-sol-do-re7.json", "titulo": "Sol–Do–Re7–Sol", "principal": "tablatura", "motivo": "Es para tocar la progresión: tablatura.", "bpm": 60, "notas": ["Del {c:2} al {c:3} no levantes el dedo 1."] },
+        { "tipo": "metronomo" },
+        { "tipo": "bien", "items": ["Puedes decir qué acorde es I, IV y V en las tres tonalidades.", "Las dos progresiones salen sin cortar el pulso."] }
+      ]
+    },
+    "n1.t4.l5.p2": {
+      "bloques": [
+        { "tipo": "texto", "md": "Primero suena el I, para que sepas dónde estás. Después, otro acorde. No intentes adivinar notas: pregúntate qué te pide. **Se queda quieto:** I. **Se ha ido a otro sitio:** IV. **Quiere volver:** V." },
+        { "tipo": "preguntas", "n": 6 }
+      ]
+    },
+    "n1.t4.l6.p1": {
+      "bloques": [
+        { "tipo": "texto", "md": "Improvisar no es inventar a ciegas: es elegir entre pocas notas que ya funcionan. Aquí, las siete de la escala de Mi mayor sobre Mi–La–Si7–Mi. **Ninguna se sale de la tonalidad**: son las mismas notas de las que salen los acordes." },
+        { "tipo": "tabla", "cabecera": ["Sobre el acorde", "Notas del acorde (donde apoyarte)"], "filas": [
+          ["Mi", "Mi, Sol♯, Si"],
+          ["La", "La, Do♯, Mi"],
+          ["Si7", "Si, Re♯, Fa♯, La"]
+        ] },
+        { "tipo": "concepto", "titulo": "Lo que hace que suene a música", "md": "Las notas del acorde suenan a apoyo, y las demás, de paso. Empieza quedándote en las del acorde, y deja las demás para ir de una a otra. Lo que más cambia una melodía no son las notas que eliges, sino **cuándo te paras**." },
+        { "tipo": "mastil", "escena": { "tipo": "recorrido", "titulo": "Una octava para empezar", "clave": "E", "trastes": [0, 4], "ms": 800, "final": "Con estas ocho notas ya tienes de sobra.", "notas": [
+          { "c": 4, "t": 2, "grado": 1, "dedo": 2 }, { "c": 4, "t": 4, "grado": 2, "dedo": 4 }, { "c": 3, "t": 1, "grado": 3, "dedo": 1 }, { "c": 3, "t": 2, "grado": 4, "dedo": 2 },
+          { "c": 2, "t": 0, "grado": 5 }, { "c": 2, "t": 2, "grado": 6, "dedo": 2 }, { "c": 2, "t": 4, "grado": 7, "dedo": 4 }, { "c": 1, "t": 0, "grado": 1 }
+        ] } }
+      ]
+    },
+    "n1.t4.l6.p2": {
+      "bloques": [
+        { "tipo": "texto", "md": "Pon la pista y toca encima con las notas de la escala de Mi. Para oír la función de cada acorde desde dentro, termina frases en **Mi** y en **Si**, y escucha la diferencia." },
+        { "tipo": "pista", "fuente": "notacion/arm-mi-la-si7.json", "compases": [5, 8], "bpm": 72, "etiquetas": ["Mi", "La", "Si7", "Mi"] },
+        { "tipo": "pasos", "titulo": "Tres rondas, de menos a más", "items": [
+          "**Solo tres notas:** Mi, Sol♯ y Si, en la 4.ª, la 3.ª y la 2.ª. Una nota por compás, cuando la pida el oído.",
+          "**La octava de antes:** ahora con frases cortas, de dos compases, y un silencio detrás.",
+          "**Pregunta y respuesta:** una frase termina en Si; la siguiente, en Mi."
+        ] },
+        { "tipo": "errores", "items": [
+          { "error": "Tocas sin parar, nota tras nota.", "arreglo": "Deja un compás entero en silencio. Es lo que convierte las notas en frases." },
+          { "error": "Te bloqueas pensando qué nota toca.", "arreglo": "Vuelve a tres notas. Con pocas se piensa menos y se escucha más." }
+        ] },
+        { "tipo": "bien", "items": ["Tus frases suenan a pregunta y a respuesta donde tú quieres."] }
+      ]
+    },
+    "n1.t4.l6.p3": {
+      "etiqueta": "",
+      "bloques": [
+        { "tipo": "guia", "md": "Terminar la frase en Mi suena a final; terminar en Si, a pregunta." },
+        { "tipo": "escuchar", "items": [
+          { "etiqueta": "Frase que acaba en Mi", "notas": [[2, 0], [3, 2], [3, 1], [4, 4], [4, 2]] },
+          { "etiqueta": "Frase que acaba en Si", "notas": [[4, 2], [4, 4], [3, 1], [3, 2], [2, 0]] }
+        ] },
+        { "tipo": "texto", "md": "Mi es la tónica, el reposo. Si es la fundamental del V, la tensión: la frase se queda en el aire, pidiendo algo más. Es la misma idea de I y V, pero en una sola línea." },
+        { "tipo": "reaparece", "items": [{ "paso": "n1.t12.l6.p4", "texto": "frases conclusivas y suspensivas, con sus nombres." }] }
+      ]
+    },
+    "n1.t4.l6.p4": {
+      "bloques": [
+        { "tipo": "texto", "md": "Tres cosas, de principio a fin. Si alguna no sale, vuelve al paso que la trabaja: nada se bloquea, y sabrás exactamente qué repasar." },
+        { "tipo": "lista", "titulo": "1. La escala de Mi", "items": ["Dos octavas, subiendo y bajando, sin parar y con el mismo sonido en todas las notas."] },
+        { "tipo": "notacion", "plegado": true, "fuente": "notacion/esc-mi-mayor-1pos.json", "titulo": "Ver la escala", "principal": "tablatura", "motivo": "Para comprobar: tablatura.", "bpm": 72 },
+        { "tipo": "lista", "titulo": "2. La progresión", "items": ["Mi–La–Si7–Mi, ocho compases sin cortar el pulso, con el Re♯ y el La bien audibles."] },
+        { "tipo": "notacion", "plegado": true, "fuente": "notacion/arm-mi-la-si7.json", "titulo": "Ver la progresión", "principal": "tablatura", "motivo": "Para comprobar: tablatura.", "bpm": 60 },
+        { "tipo": "lista", "titulo": "3. Tres preguntas de triadas", "items": ["Las notas de cada acorde, de cabeza."] },
+        { "tipo": "preguntas", "n": 3 },
+        { "tipo": "reaparece", "items": [
+          { "paso": "n1.t4.l1.p3", "texto": "si falla la escala." },
+          { "paso": "n1.t4.l2.p4", "texto": "si falla la progresión." },
+          { "paso": "n1.t4.l2.p1", "texto": "si fallan las triadas." }
+        ] }
+      ]
+    }
+  }
+}

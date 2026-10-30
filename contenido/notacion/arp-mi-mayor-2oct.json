@@ -1,0 +1,102 @@
+{
+ "titulo": "Arpegio de Mi mayor, dos octavas",
+ "compas": "4/4",
+ "armadura": "E",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 4,
+      "mano": "p",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 2,
+      "mano": "p",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 4,
+      "t": 2,
+      "mano": "p",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 3,
+      "t": 1,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 4,
+      "t": 2,
+      "mano": "p"
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 2,
+      "mano": "p"
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 4,
+      "mano": "p"
+     },
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  }
+ ],
+ "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura."
+}

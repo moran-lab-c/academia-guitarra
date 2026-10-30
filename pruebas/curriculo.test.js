@@ -181,7 +181,7 @@ test('las notas de cada acorde son las que dice su nombre', () => {
   const AIRE = [40, 45, 50, 55, 59, 64];
   const clases = n => new Set(ACORDES[n].cuerdas.map((t, i) => (t === null ? null : (AIRE[i] + t) % 12)).filter(x => x !== null));
   const esperado = { Mi: [4, 8, 11], La: [9, 1, 4], Si7: [11, 3, 6, 9], Do: [0, 4, 7], Re: [2, 6, 9], Sol: [7, 11, 2], 'La m': [9, 0, 4], 'Mi m': [4, 7, 11], 'Re m': [2, 5, 9], Fa: [5, 9, 0],
-    Sol7: [7, 11, 2, 5], Re7: [2, 6, 9, 0], La7: [9, 1, 4, 7], Mi7: [4, 8, 11, 2], Do7: [0, 4, 10], // la forma abierta habitual no lleva la 5.ª
+    Sol7: [7, 11, 2, 5], Re7: [2, 6, 9, 0], La7: [9, 1, 4, 7], Mi7: [4, 8, 11, 2], Do7: [0, 4, 10], 'Fa△7': [5, 9, 0, 4], // Do7: la forma abierta habitual no lleva la 5.ª
     'Sol m': [7, 10, 2], 'Si♭': [10, 2, 5], 'La (cejilla V)': [9, 1, 4] };
   for (const [n, notas] of Object.entries(esperado)) assert.deepEqual([...clases(n)].sort((a, b) => a - b), [...notas].sort((a, b) => a - b), n);
   assert.equal(Object.keys(esperado).length, Object.keys(ACORDES).length);
