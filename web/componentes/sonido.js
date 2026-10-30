@@ -17,6 +17,10 @@ const contexto = () => {
   return audio;
 };
 
+// El navegador solo deja sonar tras un gesto: al primer toque ya se prepara, y las escenas pueden sonar al avanzar.
+if (typeof document !== 'undefined') document.addEventListener('pointerdown', () => contexto(), { once: true });
+export const sonidoListo = () => audio?.state === 'running';
+
 const muestra = midi => {
   const n = Math.min(NOTA_MAX, Math.max(NOTA_MIN, midi));
   if (!muestras.has(n)) {
@@ -29,13 +33,13 @@ const muestra = midi => {
 const preparar = midis => Promise.all([...new Set(midis)].map(muestra));
 
 // Suena durante «duracion» segundos y se apaga en poco tiempo, como una cuerda que se apaga con el dedo.
-function nota(buffers, midi, cuando, duracion) {
+function nota(buffers, midi, cuando, duracion, volumen = 0.85) {
   const n = Math.min(NOTA_MAX, Math.max(NOTA_MIN, midi));
   const src = audio.createBufferSource(), vol = audio.createGain();
   src.buffer = buffers.get(n);
   const fin = cuando + Math.max(0.08, Math.min(duracion, src.buffer.duration - 0.2));
-  vol.gain.setValueAtTime(0.85, cuando);
-  vol.gain.setValueAtTime(0.85, fin);
+  vol.gain.setValueAtTime(volumen, cuando);
+  vol.gain.setValueAtTime(volumen, fin);
   vol.gain.exponentialRampToValueAtTime(0.0001, fin + 0.15);
   src.connect(vol).connect(salida);
   src.start(cuando);
@@ -49,15 +53,17 @@ const mapaDe = async midis => {
 };
 
 // secuencia: [[midi, …], …], cada elemento suena a la vez (un acorde) o, con arpegiado, nota a nota de grave a agudo.
-export function tocar(secuencia, { duracion = 0.8, arpegiado = false } = {}) {
+export function tocar(secuencia, { duracion = 0.8, arpegiado = false, destacar = null } = {}) {
   contexto();
   return mapaDe(secuencia.flat()).then(buffers => {
     let t = audio.currentTime + 0.03;
-    for (const grupo of secuencia) {
+    secuencia.forEach((grupo, g) => {
       const paso = arpegiado ? 0.14 : RASGUEO;
-      grupo.forEach((midi, i) => nota(buffers, midi, t + i * paso, duracion + (grupo.length - 1 - i) * paso + (grupo.length > 1 ? 0.5 : 0)));
+      // destacar: los grupos que suenan más fuertes que los demás.
+      const volumen = !destacar ? undefined : destacar.includes(g) ? 1 : 0.32;
+      grupo.forEach((midi, i) => nota(buffers, midi, t + i * paso, duracion + (grupo.length - 1 - i) * paso + (grupo.length > 1 ? 0.5 : 0), volumen));
       t += duracion + (arpegiado ? 0.14 * (grupo.length - 1) : 0);
-    }
+    });
   }).catch(e => console.error('No se ha podido cargar el sonido:', e.message));
 }
 

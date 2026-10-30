@@ -1,9 +1,11 @@
-// El mástil animado: dibuja cualquier escena de logica/guitarra.js (acorde, escala, arpegio, cambio, distancias…). No es una
-// imagen por acorde: el mismo componente recibe cuadros y, de uno a otro, cada marca viaja, aparece o se va. La 1.ª cuerda va
-// arriba, igual que en la tablatura. Respeta «reducir movimiento»: enseña el último cuadro y se avanza a mano.
+// El mástil animado, sobre el fondo oscuro: dibuja las escenas de logica/guitarra.js (cambios, escalas, arpegios, distancias, mano
+// derecha…). De un cuadro a otro, cada marca viaja, aparece o se va. La 1.ª cuerda va arriba, igual que en la tablatura.
+// La construcción de un acorde la dibuja diagramaAnimado.js.
 import { h } from '../nucleo/dom.js';
 import { escena, midiEn } from '../../logica/guitarra.js';
 import { tocar } from './sonido.js';
+import { controlCuadros } from './cuadros.js';
+import { diagramaAnimado } from './diagramaAnimado.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
 const s = (tag, attrs = {}, ...hijos) => {
@@ -14,10 +16,6 @@ const s = (tag, attrs = {}, ...hijos) => {
 };
 const ANCHO = 760, PASO_Y = 30, X0 = 86, BOCA = 150;
 const PUNTOS = new Set([3, 5, 7, 9, 12, 15]);
-const sinMovimiento = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-
-// Lo que se recuerda de cada mástil mientras se está en la pantalla: las repintadas no reinician la animación.
-const estados = new Map();
 
 function geometria(e) {
   const [a, b] = e.trastes;
@@ -74,12 +72,12 @@ function rellenarMarca(el, m) {
   const clase = m.dedo ? `acorde__dedo--${m.dedo}` : m.aire ? 'mastil__aire' : 'mastil__neutra';
   el.append(s('circle', { r: 11, class: `mastil__dedo ${clase}` }));
   const dentro = m.dedo ?? m.etiq;
-  if (dentro != null) el.append(s('text', { 'text-anchor': 'middle', y: 4.5, class: m.dedo ? 'mastil__num' : 'mastil__num mastil__num--tinta' }, String(dentro)));
+  if (dentro != null) el.append(s('text', { 'text-anchor': 'middle', y: 4.5, class: m.dedo ? 'mastil__num' : 'mastil__num mastil__num--contra' }, String(dentro)));
   // El nombre, al lado y no encima: así no choca con la cuerda de arriba. Al aire va a la izquierda, fuera del diapasón.
   if (m.nota) el.append(s('text', { 'text-anchor': m.aire ? 'end' : 'start', x: m.aire ? -15 : 15, y: 4, class: 'mastil__nota' }, m.nota));
 }
 
-function pintarCuadro(raiz, e, g, q) {
+function pintarCuadro(raiz, g, q) {
   raiz.classList.toggle('mastil--sin-trazos', !q.base);
   // Las marcas: las que siguen viajan, las nuevas entran y las demás se van.
   const capa = raiz.querySelector('.mastil__marcas');
@@ -116,85 +114,18 @@ function pintarCuadro(raiz, e, g, q) {
   }
 }
 
-function montar(raizSvg, e, g) {
-  raizSvg.append(
-    s('defs', {}, s('marker', { id: 'mastil-punta', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, s('path', { d: 'M 0 0 L 10 5 L 0 10 z', class: 'mastil__punta' }))),
-    madera(e, g), trazos(e, g),
-    s('g', { class: 'mastil__extra' }),
-    s('g', { class: 'mastil__marcas' }));
-}
-
-// clave: única por paso y bloque. spec: la descripción de la escena (contenido del paso).
+// clave: única por paso, pantalla y bloque. spec: la descripción de la escena (contenido del paso).
 export function mastil(spec, clave) {
+  if (spec.tipo === 'acorde') return diagramaAnimado(spec, clave);
   const e = escena(spec);
   if (!e) return null;
   const g = geometria(e);
-  let st = estados.get(clave);
-  if (!st) {
-    st = { i: sinMovimiento() ? e.cuadros.length - 1 : 0, sonando: false, sonido: false, timer: null, visto: sinMovimiento(), pintar: null };
-    estados.set(clave, st);
-  }
   const svg = s('svg', { viewBox: `0 0 ${ANCHO} ${g.Y0 + 5 * PASO_Y + 40}`, class: 'mastil__svg', role: 'img', 'aria-label': spec.titulo ?? 'Mástil de la guitarra' });
-  montar(svg, e, g);
-  const leyenda = h('p', { class: 'mastil__texto', 'aria-live': 'polite' });
-  const botonPlay = h('button', { type: 'button', class: 'btn btn-borde mastil__play', onclick: () => alternar() });
-  const puntos = h('div', { class: 'mastil__puntos', role: 'group', 'aria-label': 'Cuadros' }, e.cuadros.map((_, n) => h('button', { type: 'button', class: 'mastil__p', 'aria-label': `Cuadro ${n + 1}`, onclick: () => { st.sonido = true; parar(); ira(n); } })));
-  const nodo = h('figure', { class: 'mastil' }, spec.titulo && h('figcaption', { class: 'rotulo mastil__titulo' }, spec.titulo), svg, leyenda,
-    h('div', { class: 'mastil__controles' },
-      h('button', { type: 'button', class: 'btn btn-fantasma', 'aria-label': 'Cuadro anterior', onclick: () => { st.sonido = true; parar(); ira(Math.max(0, st.i - 1)); } }, '◀'),
-      botonPlay,
-      h('button', { type: 'button', class: 'btn btn-fantasma', 'aria-label': 'Cuadro siguiente', onclick: () => { st.sonido = true; parar(); ira(Math.min(e.cuadros.length - 1, st.i + 1)); } }, '▶'),
-      puntos));
-
-  const pintar = () => {
-    const q = e.cuadros[st.i];
-    pintarCuadro(svg, e, g, q);
-    leyenda.textContent = q.texto ?? '';
-    botonPlay.textContent = st.sonando ? '❚❚ Pausa' : st.i === e.cuadros.length - 1 ? '↺ Otra vez' : '▶ Seguir';
-    puntos.querySelectorAll('.mastil__p').forEach((b, n) => { b.classList.toggle('es-actual', n === st.i); b.classList.toggle('es-pasado', n < st.i); });
-  };
-  st.pintar = pintar;
-  const sonar = q => { if (st.sonido && q.suena?.length) tocar([q.suena], { duracion: q.arpegiado ? 1.2 : 0.8, arpegiado: !!q.arpegiado }); };
-  const ira = n => { st.i = n; sonar(e.cuadros[n]); st.pintar(); };
-  const parar = () => { clearTimeout(st.timer); st.sonando = false; st.pintar?.(); };
-  const siguiente = () => {
-    if (!document.contains(nodoActual.el)) { clearTimeout(st.timer); estados.delete(clave); return; }
-    const q = e.cuadros[st.i];
-    st.timer = setTimeout(() => {
-      if (!document.contains(nodoActual.el)) { estados.delete(clave); return; }
-      if (st.i >= e.cuadros.length - 1) { st.sonando = false; st.pintar(); return; }
-      st.i++;
-      sonar(e.cuadros[st.i]);
-      st.pintar();
-      siguiente();
-    }, q.ms ?? 1900);
-  };
-  const alternar = () => {
-    st.sonido = true;
-    if (st.sonando) return parar();
-    if (st.i >= e.cuadros.length - 1) st.i = 0;
-    st.sonando = true;
-    sonar(e.cuadros[st.i]);
-    st.pintar();
-    siguiente();
-  };
-  st.alternar = alternar;
-  // Las repintadas cambian el nodo, no la escena: el temporizador mira siempre el último.
-  const nodoActual = (st.nodo ??= { el: nodo });
-  nodoActual.el = nodo;
-  pintar();
-  if (!st.visto) {
-    // Arranca sola una vez, sin sonido, cuando se ve en pantalla.
-    const obs = new IntersectionObserver(([x]) => {
-      if (!x.isIntersecting) return;
-      obs.disconnect();
-      if (st.visto) return;
-      st.visto = true;
-      st.sonando = true;
-      st.pintar();
-      siguiente();
-    }, { threshold: 0.4 });
-    requestAnimationFrame(() => obs.observe(svg));
-  }
+  svg.append(
+    s('defs', {}, s('marker', { id: 'mastil-punta', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, s('path', { d: 'M 0 0 L 10 5 L 0 10 z', class: 'mastil__punta' }))),
+    madera(e, g), trazos(e, g), s('g', { class: 'mastil__extra' }), s('g', { class: 'mastil__marcas' }));
+  const ctl = controlCuadros({ cuadros: e.cuadros, clave, pintar: q => pintarCuadro(svg, g, q) });
+  const nodo = h('figure', { class: 'mastil' }, spec.titulo && h('figcaption', { class: 'rotulo mastil__titulo' }, spec.titulo), svg, ctl.leyenda, ctl.controles);
+  ctl.montar(nodo);
   return nodo;
 }

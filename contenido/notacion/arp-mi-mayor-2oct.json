@@ -2,6 +2,8 @@
  "titulo": "Arpegio de Mi mayor, dos octavas",
  "compas": "4/4",
  "armadura": "E",
+ "conteo": true,
+ "repetir": true,
  "compases": [
   {
    "voces": [
@@ -68,25 +70,29 @@
       "d": "8",
       "c": 3,
       "t": 1,
-      "mano": "i"
+      "mano": "i",
+      "dedo": 1
      },
      {
       "d": "8",
       "c": 4,
       "t": 2,
-      "mano": "p"
+      "mano": "p",
+      "dedo": 3
      },
      {
       "d": "8",
       "c": 5,
       "t": 2,
-      "mano": "p"
+      "mano": "p",
+      "dedo": 2
      },
      {
       "d": "8",
       "c": 6,
       "t": 4,
-      "mano": "p"
+      "mano": "p",
+      "dedo": 4
      },
      {
       "d": "2",

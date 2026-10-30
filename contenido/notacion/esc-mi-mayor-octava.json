@@ -1,0 +1,130 @@
+{
+ "titulo": "Mi mayor: la primera octava, subir y bajar",
+ "compas": "4/4",
+ "armadura": "E",
+ "conteo": true,
+ "repetir": true,
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 6,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 2,
+      "mano": "m",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 4,
+      "mano": "i",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 2,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 4,
+      "mano": "m",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "c": 4,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "c": 4,
+      "t": 2,
+      "mano": "m",
+      "dedo": 2
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 4,
+      "t": 2,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 4,
+      "t": 1,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 4,
+      "mano": "i",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 2,
+      "mano": "m",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 5,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 4,
+      "mano": "m",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 2,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 6,
+      "t": 0,
+      "mano": "m"
+     }
+    ]
+   ]
+  }
+ ],
+ "nota": "Cada nota se escribe por cuerda (c) y traste (t); de ahí salen la partitura (una octava más aguda de lo que suena, como se escribe la guitarra) y la tablatura."
+}

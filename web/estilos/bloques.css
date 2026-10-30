@@ -29,18 +29,48 @@
 .partitura__resalte { position: absolute; background: rgba(217, 165, 74, 0.2); box-shadow: inset 0 0 0 1.5px var(--ocre); border-radius: 4px; pointer-events: none; animation: resalte-entra var(--t-corta) var(--curva); }
 @keyframes resalte-entra { from { opacity: 0; } }
 
-/* ── Mástil ── */
-.mastil { margin: 0; background: var(--papel); color: var(--tinta); border-radius: var(--r-2); padding: 14px 18px 12px; box-shadow: var(--sombra-papel); }
-.mastil__titulo { color: var(--tinta-2); margin-bottom: 4px; }
+/* ── Reproductor de cuadros ── */
+.cuadros__texto { min-height: 50px; font-size: 16px; line-height: 1.45; margin: 4px 0 8px !important; }
+.cuadros__controles { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.cuadros__play { min-width: 118px; justify-content: center; }
+.cuadros__puntos { display: flex; gap: 3px; flex-wrap: wrap; margin-left: 10px; flex: 1; }
+.cuadros__p { width: 14px; height: 14px; min-height: 0; padding: 0; background: transparent; border: 0; cursor: pointer; position: relative; }
+.cuadros__p::after { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: var(--sup-3); }
+.cuadros__p.es-pasado::after { background: var(--texto-3); }
+.cuadros__p.es-actual::after { background: var(--texto); inset: 2px; }
+
+/* ── Diagrama que se construye, sobre el fondo oscuro ── */
+.diagrama { margin: 0; display: grid; grid-template-columns: minmax(240px, 330px) minmax(0, 1fr); gap: 28px; align-items: center; padding: 8px 0; }
+.diagrama__svg { display: block; width: 100%; height: auto; }
+.diagrama__traste, .diagrama__cuerda, .diagrama__cejuela { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset var(--t-media) var(--curva-trazo); }
+.diagrama__traste.es-visible, .diagrama__cuerda.es-visible, .diagrama__cejuela.es-visible { stroke-dashoffset: 0; }
+.diagrama__traste { stroke: var(--texto-3); stroke-width: 1.5; }
+.diagrama__cuerda { stroke: var(--texto-2); }
+.diagrama__cejuela { stroke: var(--texto); stroke-width: 5; }
+.diagrama__numero, .diagrama__nombre { font: 400 12px var(--f-dato); fill: var(--texto-3); opacity: 0; transition: opacity var(--t-media) var(--curva); }
+.diagrama__numero.es-visible, .diagrama__nombre.es-visible { opacity: 1; }
+.diagrama__marca { animation: marca-entra var(--t-media) var(--curva-subida); transform-box: fill-box; transform-origin: center; }
+.diagrama__dedo { stroke: rgba(255, 255, 255, .25); }
+.diagrama__num { font: 700 14px var(--f-ui); fill: #fff; pointer-events: none; }
+.diagrama__aire { fill: none; stroke: var(--texto); stroke-width: 2; }
+.diagrama__mudo { font: 700 20px var(--f-ui); fill: var(--ocre); }
+.diagrama__nota { font: 700 13px var(--f-ui); fill: var(--texto); animation: resalte-entra var(--t-media) var(--curva); }
+.diagrama__nota--muda { fill: var(--texto-apagado); }
+.diagrama__titulo { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.diagrama__oir { margin: 8px 0; }
+
+/* ── Mástil, sobre el fondo oscuro ── */
+.mastil { margin: 0; background: var(--sup-1); border-radius: var(--r-2); padding: 14px 18px 12px; }
+.mastil__titulo { margin-bottom: 4px; }
 .mastil__svg { display: block; width: 100%; height: auto; }
-.mastil__diapason { fill: #E9E3D5; }
-.mastil__punto { fill: #CFC7B4; }
-.mastil__numero, .mastil__nombre { font: 400 11px var(--f-dato); fill: var(--tinta-2); }
-.mastil__traste { stroke: #A79F8C; stroke-width: 1.5; }
-.mastil__ceja { stroke: var(--tinta); stroke-width: 4; }
-.mastil__cuerda { stroke: #6E6A5F; stroke-width: 1; transition: stroke var(--t-corta) var(--curva), stroke-width var(--t-corta) var(--curva); }
+.mastil__diapason { fill: var(--sup-2); }
+.mastil__punto { fill: var(--sup-3); }
+.mastil__numero, .mastil__nombre { font: 400 11px var(--f-dato); fill: var(--texto-3); }
+.mastil__traste { stroke: var(--texto-apagado); stroke-width: 1.5; }
+.mastil__ceja { stroke: var(--texto); stroke-width: 4; }
+.mastil__cuerda { stroke: var(--texto-3); stroke-width: 1; transition: stroke var(--t-corta) var(--curva), stroke-width var(--t-corta) var(--curva); }
 .mastil__cuerda--4 { stroke-width: 1.4; } .mastil__cuerda--5 { stroke-width: 1.7; } .mastil__cuerda--6 { stroke-width: 2; }
-.mastil__cuerda--pulso { stroke: var(--tinta); stroke-width: 3; }
+.mastil__cuerda--pulso { stroke: var(--verde); stroke-width: 3; }
 .mastil__trazos line { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset var(--t-larga) var(--curva-trazo), stroke var(--t-corta); }
 .mastil__trazos text { transition: opacity var(--t-media) var(--curva); }
 .mastil--sin-trazos .mastil__trazos line { stroke-dashoffset: 1; }
@@ -49,38 +79,27 @@
 .mastil__marca > * { animation: marca-entra var(--t-media) var(--curva-subida); transform-box: fill-box; transform-origin: center; }
 .mastil__marca--sale { opacity: 0; }
 @keyframes marca-entra { from { opacity: 0; transform: scale(.4); } }
-.mastil__dedo { stroke: rgba(0, 0, 0, .15); }
-.mastil__neutra { fill: var(--tinta); }
-.mastil__aire { fill: var(--papel); stroke: var(--tinta); stroke-width: 1.5; }
+.mastil__dedo { stroke: rgba(255, 255, 255, .2); }
+.mastil__neutra { fill: var(--texto); }
+.mastil__aire { fill: var(--fondo); stroke: var(--texto); stroke-width: 1.5; }
 .mastil__num { font: 700 12px var(--f-ui); fill: #fff; pointer-events: none; }
-.mastil__num--tinta { fill: var(--tinta); }
-.mastil__nota { font: 700 11px var(--f-ui); fill: var(--tinta); pointer-events: none; paint-order: stroke; stroke: var(--papel); stroke-width: 3px; }
-.mastil__mudo { font: 700 16px var(--f-ui); fill: var(--tinta-2); }
-.mastil__marca--ahora .mastil__dedo, .mastil__marca--ahora .mastil__neutra { stroke: var(--tinta); stroke-width: 3; }
-.mastil__marca--ahora .mastil__aire { stroke-width: 3.5; }
-.mastil__marca--queda .mastil__dedo { stroke: var(--verde-borde); stroke-width: 4; }
-.mastil__marca--tension .mastil__dedo { stroke: #B8442F; stroke-width: 3.5; }
+.mastil__num--contra { fill: var(--texto); }
+.mastil__nota { font: 700 11px var(--f-ui); fill: var(--texto); pointer-events: none; paint-order: stroke; stroke: var(--sup-2); stroke-width: 3px; }
+.mastil__mudo { font: 700 16px var(--f-ui); fill: var(--ocre); }
+.mastil__marca--ahora .mastil__dedo { stroke: var(--verde); stroke-width: 3; }
+.mastil__marca--queda .mastil__dedo { stroke: var(--verde); stroke-width: 4; }
+.mastil__marca--tension .mastil__dedo { stroke: var(--ocre); stroke-width: 3.5; }
 .mastil__marca--apagada { opacity: .32; }
 .mastil__cejilla { opacity: .85; }
-.mastil__arco { stroke: var(--tinta); stroke-width: 1.5; animation: resalte-entra var(--t-media) var(--curva); }
-.mastil__arco-texto { font: 700 11px var(--f-ui); fill: var(--tinta); paint-order: stroke; stroke: var(--papel); stroke-width: 3px; animation: resalte-entra var(--t-media) var(--curva); }
-.mastil__flecha { stroke: #B8442F; stroke-width: 2.5; animation: resalte-entra var(--t-media) var(--curva); }
-.mastil__punta { fill: #B8442F; }
-.mastil__mano { fill: var(--papel); stroke: var(--tinta); stroke-width: 1.5; transition: fill var(--t-corta); }
-.mastil__mano--pulso { fill: var(--tinta); }
-.mastil__mano-letra { font: italic 700 14px var(--f-obra); fill: var(--tinta); pointer-events: none; }
-.mastil__mano--pulso + .mastil__mano-letra { fill: var(--papel); }
-.mastil__texto { min-height: 48px; font-size: 16px; line-height: 1.45; margin: 4px 0 8px !important; color: var(--tinta); }
-.mastil__controles { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.mastil__controles .btn { color: var(--tinta); }
-.mastil__controles .btn-borde { box-shadow: inset 0 0 0 1px var(--tinta-2); min-width: 118px; justify-content: center; }
-.mastil__controles .btn:hover:not(:disabled) { background: #E9E3D5; color: var(--tinta); }
-.mastil__puntos { display: flex; gap: 3px; flex-wrap: wrap; margin-left: 10px; flex: 1; }
-.mastil__p { width: 14px; height: 14px; min-height: 0; padding: 0; background: transparent; border: 0; cursor: pointer; position: relative; }
-.mastil__p::after { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: #CFC7B4; }
-.mastil__p.es-pasado::after { background: var(--tinta-2); }
-.mastil__p.es-actual::after { background: var(--tinta); inset: 2px; }
-@media (prefers-reduced-motion: reduce) { .mastil__marca, .mastil__marca > *, .mastil__trazos line, .mastil__arco, .mastil__flecha { transition: none; animation: none; } }
+.mastil__arco { stroke: var(--texto-2); stroke-width: 1.5; animation: resalte-entra var(--t-media) var(--curva); }
+.mastil__arco-texto { font: 700 11px var(--f-ui); fill: var(--texto); paint-order: stroke; stroke: var(--sup-1); stroke-width: 3px; animation: resalte-entra var(--t-media) var(--curva); }
+.mastil__flecha { stroke: var(--ocre); stroke-width: 2.5; animation: resalte-entra var(--t-media) var(--curva); }
+.mastil__punta { fill: var(--ocre); }
+.mastil__mano { fill: var(--fondo); stroke: var(--texto); stroke-width: 1.5; transition: fill var(--t-corta); }
+.mastil__mano--pulso { fill: var(--verde); stroke: var(--verde); }
+.mastil__mano-letra { font: italic 700 14px var(--f-obra); fill: var(--texto); pointer-events: none; }
+.mastil__mano--pulso + .mastil__mano-letra { fill: var(--tinta); }
+@media (prefers-reduced-motion: reduce) { .mastil__marca, .mastil__marca > *, .mastil__trazos line, .mastil__arco, .mastil__flecha, .diagrama__marca, .diagrama__traste, .diagrama__cuerda, .diagrama__cejuela { transition: none; animation: none; } }
 
 /* ── Anatomía del acorde ── */
 .anatomia { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
@@ -94,15 +113,67 @@
 .anatomia__dedo.acorde__dedo--1 { background: var(--dedo-1); } .anatomia__dedo.acorde__dedo--2 { background: var(--dedo-2); }
 .anatomia__dedo.acorde__dedo--3 { background: var(--dedo-3); } .anatomia__dedo.acorde__dedo--4 { background: var(--dedo-4); }
 
-/* ── Actividad en el mástil ── */
+/* ── Actividades ── */
 .actividad { background: var(--sup-1); border-radius: var(--r-2); padding: 16px 20px; }
 .actividad__enunciado { font-size: 16px; line-height: 1.5; }
-.casillas { display: flex; gap: 3px; flex-wrap: wrap; margin: 6px 0; }
-.casilla { flex: 1 1 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; background: var(--sup-2); color: var(--texto-2); border: 0; border-radius: 4px; cursor: pointer; font: 600 13px var(--f-ui); }
-.casilla:hover { background: var(--sup-3); color: var(--texto); }
-.casilla.es-correcta { background: var(--verde); color: var(--tinta); }
-.casilla.es-fallo { background: var(--ocre-fondo); box-shadow: inset 0 0 0 1px var(--ocre); color: var(--ocre); }
+.actividad__oir { align-self: flex-start; }
+.actividad__respuesta { font-size: 15px; line-height: 1.5; color: var(--texto-2); }
+.actividad__respuesta.es-bien { color: var(--texto); }
 .actividad__otra { align-self: flex-start; }
+.ordenar__fila { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+.ordenar__hueco { min-width: 44px; height: 44px; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--r-1); box-shadow: inset 0 0 0 1px var(--borde); color: var(--texto-apagado); font: 600 14px var(--f-ui); }
+.ordenar__hueco.es-lleno { background: var(--verde); color: var(--tinta); box-shadow: none; }
+.completar { font-size: 17px; line-height: 2.1; }
+.completar__hueco { min-height: 34px; padding: 2px 8px; background: var(--sup-2); color: var(--texto); border: 0; border-radius: var(--r-1); font: 600 15px var(--f-ui); margin: 0 3px; width: auto; }
+.completar__hueco.es-correcta { background: var(--verde); color: var(--tinta); }
+.completar__hueco.es-fallo { background: var(--ocre-fondo); box-shadow: inset 0 0 0 1px var(--ocre); }
+.diapason { display: flex; flex-direction: column; gap: 2px; margin: 6px 0; overflow-x: auto; }
+.diapason__fila { display: grid; grid-template-columns: 34px repeat(auto-fit, minmax(36px, 1fr)); gap: 2px; align-items: center; }
+.diapason__cuerda, .diapason__traste { font: 400 11px var(--f-dato); color: var(--texto-3); text-align: center; }
+.diapason__celda { height: 34px; min-height: 34px; padding: 0; background: var(--sup-2); color: var(--tinta); border: 0; border-radius: 3px; cursor: pointer; font: 700 12px var(--f-ui); }
+.diapason__celda--aire { background: var(--fondo); box-shadow: inset 0 0 0 1px var(--borde); }
+.diapason__celda:hover { background: var(--sup-3); }
+.diapason__celda.es-correcta { background: var(--verde); }
+.diapason__celda.es-fallo { background: var(--ocre-fondo); box-shadow: inset 0 0 0 1px var(--ocre); }
+
+label.bien__item { display: flex; flex-direction: row; gap: 10px; align-items: flex-start; cursor: pointer; line-height: 1.45; font-size: 16px; color: var(--texto); margin: 0; }
+.bien__item input[type="checkbox"] { margin: 4px 0 0; accent-color: var(--verde); flex: none; width: 16px; height: 16px; min-height: 0; }
+
+/* ── Grados, dedos, ficha y progresión ── */
+.grados { display: flex; align-items: center; gap: 3px; flex-wrap: wrap; }
+.grado { display: flex; flex-direction: column; align-items: center; min-width: 50px; min-height: 0; padding: 6px 6px; background: var(--sup-2); color: var(--texto); border: 0; border-radius: var(--r-1); cursor: pointer; }
+.grado small { font: 400 11px var(--f-dato); color: var(--texto-3); }
+.grado strong { font-size: 15px; }
+.grado.es-marcado { background: var(--papel); color: var(--tinta); }
+.grado.es-marcado small { color: var(--tinta-2); }
+.grado__dist { font: 700 12px var(--f-dato); color: var(--texto-3); width: 16px; text-align: center; }
+.grado__dist.es-semitono { color: var(--ocre); }
+.dedos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.dedos__mano { background: var(--sup-1); border-radius: var(--r-2); padding: 14px 18px; }
+.dedos__mano .rotulo { margin-bottom: 10px; }
+.dedos__letra { display: inline-flex; width: 24px; height: 24px; border-radius: 50%; align-items: center; justify-content: center; box-shadow: inset 0 0 0 1.5px var(--texto); font: italic 700 14px var(--f-obra); flex: none; }
+.ficha-ejercicio { margin: 0; background: var(--sup-1); border-radius: var(--r-2); padding: 6px 20px; }
+.ficha-ejercicio__fila { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--borde-suave); }
+.ficha-ejercicio__fila:last-child { border-bottom: 0; }
+.ficha-ejercicio dt { font: 400 12px var(--f-dato); letter-spacing: .06em; text-transform: uppercase; color: var(--texto-3); padding-top: 3px; }
+.ficha-ejercicio dd { margin: 0; line-height: 1.5; }
+.progresion__fila { display: flex; gap: 6px; flex-wrap: wrap; }
+.progresion__acorde { flex: 1 1 110px; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 8px; border-radius: var(--r-1); background: var(--sup-1); transition: background var(--t-corta), color var(--t-corta); }
+.progresion__acorde small { font: 400 12px var(--f-dato); color: var(--texto-3); }
+.progresion__acorde strong { font-size: 19px; }
+.progresion__acorde.es-actual { background: var(--papel); color: var(--tinta); }
+.progresion__acorde.es-actual small, .progresion__acorde.es-actual .suave { color: var(--tinta-2); }
+
+/* ── Partes de un paso ── */
+.partes { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.partes__puntos { display: flex; gap: 4px; flex-wrap: wrap; }
+.partes__p { width: 22px; height: 12px; min-height: 0; padding: 0; background: transparent; border: 0; cursor: pointer; position: relative; }
+.partes__p::after { content: ''; position: absolute; left: 0; right: 0; top: 4px; height: 4px; border-radius: 2px; background: var(--sup-3); }
+.partes__p.es-pasada::after { background: var(--texto-3); }
+.partes__p.es-actual::after { background: var(--texto); }
+.parte-titulo { font-size: 22px; font-weight: 700; margin: 2px 0 0; }
+.bloque-leyenda { margin: 0 !important; }
+.bloque-plegado summary { cursor: pointer; font-weight: 600; }
 
 /* ── Pista ── */
 .pista { background: var(--sup-1); }
@@ -111,3 +182,6 @@
 .pista__acorde.es-actual { background: var(--papel); color: var(--tinta); }
 .pista__bpm { font: 400 14px var(--f-dato); min-width: 60px; text-align: center; }
 .escuchar .btn { flex: none; }
+
+.pentagrama { margin: 0; }
+.atril--pequeno { max-width: 360px; }

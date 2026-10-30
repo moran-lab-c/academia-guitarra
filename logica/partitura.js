@@ -6,10 +6,11 @@
 // Formato del archivo (todo lo marcado «opcional» puede faltar):
 //   { titulo, compas: '3/4', armadura: 'E' | 'Em' | 'C' …, afinacion: ['E4','B3','G3','D3','A2','E2'] (opcional),
 //     tempo: { bpm, figura: '4', naturaleza } (opcional), parcial: { transcritos, total, nota } (opcional),
+//     repetir: true (barras de repetición), conteo: true (el pulso debajo: 1 y 2 y…),
 //     compases: [{ pos: 'V' | 'C II' (opcional), voces: [[nota, …], …] }] }
 //   nota: { d: '1'|'2'|'4'|'8'|'16'|'32', p: true (puntillo), s: true (silencio) | c: cuerda 1-6, t: traste 0-24 |
 //           acorde: [{ c, t }],  dedo: 0-4, mano: 'p'|'i'|'m'|'a'|'c', lig: 'h'|'p' (ligado a la siguiente),
-//           tie: true (ligadura de prolongación con la siguiente), art: ['staccato'|'acento'|'tenuto'], din: 'pp'…'ff' }
+//           rotulo: 'Mi' (nombre del acorde encima), tie: true (ligadura de prolongación con la siguiente), art: ['staccato'|'acento'|'tenuto'], din: 'pp'…'ff' }
 
 export const DURACIONES = ['1', '2', '4', '8', '16', '32'];
 export const MANO = ['p', 'i', 'm', 'a', 'c'];
@@ -159,7 +160,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
         const antes = k > 0 ? voz[k - 1] : i > desde - 1 ? p.compases[i - 1].voces[v]?.at(-1) : null;
         const nota = {
           duracion: String(n.d), puntillo: !!n.p, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
-          dedo: n.dedo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
+          dedo: n.dedo ?? null, rotulo: n.rotulo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
           ligadaDesdeAntes: !n.s && !!antes?.tie,
         };
         inicio += ticks(n);
@@ -192,7 +193,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
   }
   return {
     ok: true, errores: [], titulo: p.titulo ?? null, compas: compasEn(p.compas), compasVisible: p.compasVisible !== false, armadura: arm.clave, tempo: p.tempo ?? null,
-    parcial: p.parcial ?? null, compases: salida, avisos, total,
+    parcial: p.parcial ?? null, repetir: !!p.repetir, conteo: !!p.conteo, compases: salida, avisos, total,
   };
 }
 

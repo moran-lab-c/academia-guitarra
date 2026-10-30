@@ -5,16 +5,17 @@ import { ctx } from '../nucleo/almacen.js';
 import { enlace } from '../nucleo/rutas.js';
 import { formatoPara } from '../../logica/recomendador.js';
 import { tempoDe } from '../../logica/metronomo.js';
-import { anatomiaAcorde, eventosDeNotacion, midiEn, notaEn, ordinal } from '../../logica/guitarra.js';
+import { anatomiaAcorde, escalaMayor, eventosDeAcordes, eventosDeNotacion, midiEn, ordinal } from '../../logica/guitarra.js';
 import { ACORDES } from '../../logica/acordes.js';
 import { textoRico } from './texto.js';
 import { mastil } from './mastil.js';
 import { diagramas } from './acorde.js';
 import { selectorFormato } from './notacion.js';
-import { senalarCompases } from './partitura.js';
+import { senalarCompases, notacionSuelta } from './partitura.js';
 import { barraMetronomo, estadoMetronomo } from './metronomo.js';
 import { bloquePreguntas } from './preguntasPaso.js';
 import { tocar, reproducir, pararReproduccion, sonandoAhora } from './sonido.js';
+import { elige, ordenar, completar, localizar, bien } from './actividades.js';
 
 // El texto con sus {c:7-8}: un botón que señala esos compases en la notación del paso.
 function md(texto, raiz) {
@@ -46,20 +47,27 @@ const cargar = fuente => {
 function notacion(b, pasoId, raiz) {
   const c = ctx();
   const item = { id: `${pasoId}:${b.fuente}`, titulo: b.titulo, programa: 'clasica', notacion: { fuente: b.fuente, compases: b.compases, principal: b.principal, motivo: b.motivo } };
-  const clave = `sonar:${item.id}`;
-  const boton = h('button', { type: 'button', class: 'btn btn-borde', onclick: () => {
-    if (sonandoAhora() === clave) return pararReproduccion();
-    cargar(b.fuente).then(json => {
-      const { eventos, largo } = eventosDeNotacion(json, { compases: b.compases, seco: b.seco });
-      boton.textContent = '■ Parar';
-      reproducir(clave, eventos, { bpm: b.bpm ?? 72, largo,
-        alCompas: n => { const p = document.querySelector('.bloque-notacion .partitura'); if (p) senalarCompases(p, n); },
-        alTerminar: () => { boton.textContent = '♪ Escuchar'; const p = document.querySelector('.bloque-notacion .partitura'); if (p) senalarCompases(p, null); } });
-    });
-  } }, sonandoAhora() === clave ? '■ Parar' : '♪ Escuchar');
+  const bpms = b.bpms ?? [b.bpm ?? 72];
+  const botones = bpms.map((bpm, k) => {
+    const clave = `sonar:${item.id}:${bpm}`;
+    const etiqueta = `♪ ${bpms.length > 1 ? (k === 0 ? 'Lento, ' : 'A tempo, ') : ''}♩=${bpm}`;
+    const boton = h('button', { type: 'button', class: 'btn btn-borde', onclick: () => {
+      if (sonandoAhora() === clave) return pararReproduccion();
+      cargar(b.fuente).then(json => {
+        const { eventos, largo } = eventosDeNotacion(json, { compases: b.compases, seco: b.seco });
+        const nodoAqui = boton.closest('.bloque-notacion')?.querySelector('.partitura');
+        boton.textContent = '■ Parar';
+        reproducir(clave, eventos, { bpm, largo,
+          alCompas: n => { if (nodoAqui) senalarCompases(nodoAqui, n); },
+          alTerminar: () => { boton.textContent = etiqueta; if (nodoAqui) senalarCompases(nodoAqui, null); } });
+      });
+    } }, sonandoAhora() === clave ? '■ Parar' : etiqueta);
+    return boton;
+  });
   const cuerpo = () => [
     selectorFormato(item, formatoPara(item, c, {}), item.id),
-    h('div', { class: 'fila' }, boton, h('span', { class: 'pequeno suave' }, 'A ', String(b.bpm ?? 72), ' la negra. Generado desde la notación: te orienta, no es una interpretación.')),
+    b.leyenda !== false && h('p', { class: 'pequeno suave bloque-leyenda' }, b.detalle ? `${b.detalle} · ` : '', 'Sobre la tablatura, el dedo de la mano izquierda, en su color. Debajo, p, i, m o a: la mano derecha.'),
+    h('div', { class: 'fila' }, botones),
     b.notas?.length && h('ul', { class: 'bloque-notas' }, b.notas.map(x => h('li', null, md(x, raiz)))),
   ];
   if (b.plegado) {
@@ -96,41 +104,60 @@ function escuchar(b) {
   return h('div', { class: 'escuchar fila' }, b.items.map(x => h('button', { type: 'button', class: 'btn btn-borde', onclick: () => {
     const sec = x.acorde
       ? [ACORDES[x.acorde].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)]))]
-      : x.notas.map(n => [midiEn(n[0], n[1])]);
-    tocar(sec, { duracion: x.duracion ?? (x.acorde ? 1.4 : 0.9), arpegiado: !!x.arpegiado });
+      : x.acordes ? x.acordes.map(n => ACORDES[n].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)])))
+        : x.notas.map(n => (Array.isArray(n[0]) ? n.map(y => midiEn(y[0], y[1])) : [midiEn(n[0], n[1])]));
+    tocar(sec, { duracion: x.duracion ?? (x.acorde ? 1.6 : 0.9), arpegiado: !!x.arpegiado, destacar: x.destacar });
   } }, `♪ ${x.etiqueta}`)));
 }
 
-// Encontrar notas en una cuerda: se pulsa en el mástil, suena, y se corrige en el momento.
-const actividades = new Map();
-function actividadMastil(b, clave) {
-  const st = actividades.get(clave) ?? { puestos: new Set(), fallo: null };
-  actividades.set(clave, st);
-  const hasta = b.hastaTraste ?? 12;
-  const casillas = [];
-  const hecho = () => b.trastes.every(t => st.puestos.has(t));
-  const mensaje = h('p', { class: 'pequeno', 'aria-live': 'polite' });
-  const pintar = () => {
-    casillas.forEach(({ t, el }) => {
-      el.classList.toggle('es-correcta', st.puestos.has(t));
-      el.classList.toggle('es-fallo', st.fallo === t);
-      el.textContent = st.puestos.has(t) ? notaEn(b.cuerda, t, b.clave) : String(t);
-    });
-    mensaje.textContent = hecho() ? (b.final ?? '') : st.fallo != null ? 'Esa no es de la escala: óyela y busca otra.' : `Llevas ${st.puestos.size} de ${b.trastes.length}.`;
-  };
-  for (let t = 0; t <= hasta; t++) {
-    const el = h('button', { type: 'button', class: 'casilla', 'aria-label': t === 0 ? 'Al aire' : `Traste ${t}`, onclick: () => {
-      tocar([[midiEn(b.cuerda, t)]], { duracion: 0.8 });
-      if (b.trastes.includes(t)) { st.puestos.add(t); st.fallo = null; } else st.fallo = t;
-      pintar();
-    } }, String(t));
-    casillas.push({ t, el });
-  }
-  const raiz = h('div', { class: 'actividad pila-s' }, h('p', { class: 'actividad__enunciado' }, textoRico(b.enunciado)),
-    h('div', { class: 'casillas', role: 'group', 'aria-label': `${ordinal(b.cuerda)} cuerda, del aire al traste ${hasta}` }, casillas.map(x => x.el)), mensaje,
-    h('button', { type: 'button', class: 'btn btn-fantasma actividad__otra', onclick: () => { st.puestos.clear(); st.fallo = null; pintar(); } }, 'Empezar de nuevo'));
-  pintar();
-  return raiz;
+// La escala en fila, con sus grados. marcar: posiciones 1, 2, 3… (no grados), para poder apilar terceras más allá de la octava.
+function grados(b) {
+  const lista = escalaMayor(b.clave, b.largo ?? 8);
+  const marcadas = new Set(b.marcar ?? []);
+  const sel = lista.filter(n => marcadas.has(n.posicion));
+  return h('div', { class: 'grados-bloque pila-s' }, b.titulo && h('div', { class: 'rotulo' }, b.titulo),
+    h('div', { class: 'grados' }, lista.map((n, i) => [
+      h('button', { type: 'button', class: `grado${marcadas.has(n.posicion) ? ' es-marcado' : ''}`, onclick: () => tocar([[n.midi]], { duracion: 1 }) }, h('small', null, String(n.grado)), h('strong', null, n.nota)),
+      b.patron && i < lista.length - 1 && h('span', { class: `grado__dist${n.grado === 3 || n.grado === 7 ? ' es-semitono' : ''}` }, n.grado === 3 || n.grado === 7 ? 'S' : 'T'),
+    ])),
+    h('div', { class: 'fila' },
+      h('button', { type: 'button', class: 'btn btn-borde', onclick: () => tocar(lista.map(n => [n.midi]), { duracion: 0.55 }) }, '♪ Escala'),
+      sel.length > 0 && h('button', { type: 'button', class: 'btn btn-borde', onclick: () => tocar(sel.map(n => [n.midi]), { duracion: 0.8 }) }, `♪ ${b.nombre ?? 'Las marcadas'}, una a una`),
+      sel.length > 0 && h('button', { type: 'button', class: 'btn btn-borde', onclick: () => tocar([sel.map(n => n.midi)], { duracion: 2 }) }, `♪ ${b.nombre ?? 'Las marcadas'}, juntas`)));
+}
+
+// Los dedos de cada mano y su nombre: lo que hace falta para leer cualquier digitación.
+const IZQUIERDA = [[1, 'índice'], [2, 'medio'], [3, 'anular'], [4, 'meñique']];
+const DERECHA = [['p', 'pulgar', 'los bajos: 6.ª, 5.ª y 4.ª'], ['i', 'índice', '3.ª cuerda'], ['m', 'medio', '2.ª cuerda'], ['a', 'anular', '1.ª cuerda']];
+const dedos = b => h('div', { class: 'dedos' },
+  b.mano !== 'derecha' && h('div', { class: 'dedos__mano' }, h('div', { class: 'rotulo' }, 'Mano izquierda: pisa. Se escribe con números'),
+    h('ul', { class: 'lista-limpia pila-s' }, IZQUIERDA.map(([n, nombre]) => h('li', { class: 'fila' }, h('i', { class: `anatomia__dedo acorde__dedo--${n}` }, String(n)), nombre)))),
+  b.mano !== 'izquierda' && h('div', { class: 'dedos__mano' }, h('div', { class: 'rotulo' }, 'Mano derecha: pulsa. Se escribe con letras'),
+    h('ul', { class: 'lista-limpia pila-s' }, DERECHA.map(([l, nombre, donde]) => h('li', { class: 'fila' }, h('i', { class: 'dedos__letra' }, l), h('span', null, nombre, h('span', { class: 'suave pequeno' }, ` · ${donde}`)))))));
+
+// Antes de un ejercicio: qué, por qué, cómo y hasta dónde.
+function ejercicio(b, x) {
+  const fila = (nombre, texto) => texto && h('div', { class: 'ficha-ejercicio__fila' }, h('dt', null, nombre), h('dd', null, md(texto, x.raiz)));
+  return h('dl', { class: 'ficha-ejercicio' }, fila('Qué practicas', b.que), fila('Por qué', b.porque), fila('Atención a', b.atencion), fila('Empieza a', b.empieza), fila('Sube cuando', b.sube));
+}
+
+// Una progresión que se oye mientras se encienden sus acordes.
+function progresion(b, x) {
+  const nombres = b.acordes.map(a => a.n);
+  const tarjetas = b.acordes.map(a => h('div', { class: 'progresion__acorde' }, a.g && h('small', null, a.g), h('strong', null, a.n), a.papel && h('span', { class: 'pequeno suave' }, a.papel)));
+  const encender = i => tarjetas.forEach((el, k) => el.classList.toggle('es-actual', k === i));
+  const botones = (b.bpms ?? [72]).map((bpm, k, l) => {
+    const clave = `prog:${x.pasoId}:${nombres.join()}:${bpm}`;
+    const etiqueta = `♪ ${l.length > 1 ? (k === 0 ? 'Lento' : 'A tempo') : 'Escuchar'}`;
+    const boton = h('button', { type: 'button', class: k === 0 ? 'btn btn-papel' : 'btn btn-borde', onclick: () => {
+      if (sonandoAhora() === clave) return pararReproduccion();
+      const { eventos, largo } = eventosDeAcordes(nombres, { tiempos: b.tiempos ?? 4 });
+      boton.textContent = '■ Parar';
+      reproducir(clave, eventos, { bpm, largo, alCompas: n => encender(n - 1), alTerminar: () => { boton.textContent = etiqueta; encender(-1); } });
+    } }, etiqueta);
+    return boton;
+  });
+  return h('div', { class: 'progresion pila-s' }, h('div', { class: 'progresion__fila' }, tarjetas), h('div', { class: 'fila' }, botones));
 }
 
 const pistas = new Map();
@@ -161,28 +188,35 @@ const RENDER = {
   pasos: (b, x) => h('section', { class: 'pila-s' }, b.titulo && h('h2', { class: 'bloque-titulo' }, b.titulo), h('ol', { class: 'bloque-pasos' }, b.items.map(i => h('li', null, md(i, x.raiz))))),
   lista: (b, x) => h('section', { class: 'pila-s' }, b.titulo && h('h2', { class: 'bloque-titulo' }, b.titulo), h('ul', { class: 'bloque-lista' }, b.items.map(i => h('li', null, md(i, x.raiz))))),
   errores: (b, x) => h('section', { class: 'pila-s' }, h('h2', { class: 'bloque-titulo' }, b.titulo ?? 'Lo que suele fallar'), h('dl', { class: 'errores' }, b.items.map(i => h('div', null, h('dt', null, md(i.error, x.raiz)), h('dd', null, md(i.arreglo, x.raiz)))))),
-  bien: (b, x) => h('section', { class: 'bien' }, h('h2', { class: 'bien__titulo' }, b.titulo ?? 'Está bien cuando'), h('ul', null, b.items.map(i => h('li', null, md(i, x.raiz))))),
+  bien: (b, x, i) => bien(b, `${x.pasoId}#${x.parte}#${i}`, y => md(y, x.raiz)),
   reaparece: (b, x) => h('section', { class: 'reaparece' }, h('h2', { class: 'rotulo' }, 'Volverás a verlo'), h('ul', { class: 'lista-limpia pila-s' }, b.items.map(i => h('li', null, h('a', { href: enlace('/aprender', i.paso) }, textoRico(x.tramoDe(i.paso))), ': ', md(i.texto, x.raiz))))),
-  resumen: (b, x) => h('p', { class: 'resumen' }, h('strong', null, 'En una frase. '), md(b.md, x.raiz)),
   guia: (b, x) => h('aside', { class: 'guia' }, h('div', { class: 'rotulo guia__tipo' }, b.tipoGuia ?? 'Consejo del profesor'), h('p', { class: 'paso-texto paso-texto--guia' }, md(b.md, x.raiz))),
-  mastil: (b, x, i) => mastil(b.escena, `${x.pasoId}#${i}`),
+  mastil: (b, x, i) => mastil(b.escena, `${x.pasoId}#${x.parte}#${i}`),
   acordes: b => diagramas(b.nombres),
   anatomia,
   tabla: b => h('table', { class: 'anatomia__tabla' }, h('thead', null, h('tr', null, b.cabecera.map(c => h('th', { scope: 'col' }, c)))), h('tbody', null, b.filas.map(f => h('tr', null, f.map(c => h('td', null, textoRico(String(c)))))))),
-  actividadMastil: (b, x, i) => actividadMastil(b, `${x.pasoId}#${i}`),
+  pentagrama: b => h('figure', { class: 'pentagrama' }, h('div', { class: 'atril atril--pequeno' }, notacionSuelta(b.notacion, 'partitura', b.pie ?? 'Pentagrama', b.ancho ?? 300)), b.pie && h('figcaption', { class: 'pequeno suave' }, b.pie)),
+  localizar: (b, x, i) => localizar(b, `${x.pasoId}#${x.parte}#${i}`),
+  elige: (b, x, i) => elige(b, `${x.pasoId}#${x.parte}#${i}`),
+  ordenar: (b, x, i) => ordenar(b, `${x.pasoId}#${x.parte}#${i}`),
+  completar: (b, x, i) => completar(b, `${x.pasoId}#${x.parte}#${i}`),
+  grados,
+  dedos,
+  ejercicio,
+  progresion,
   notacion: (b, x) => notacion(b, x.pasoId, x.raiz),
   escuchar,
   pista: (b, x) => pista(b, x.pasoId),
-  metronomo: (b, x) => { const c = ctx(); return h('details', { class: 'paso-metronomo', open: estadoMetronomo().estado === 'sonando' || null }, h('summary', null, 'Metrónomo'), barraMetronomo({ clave: b.clave ?? x.pasoId, tempo: tempoDe(c, b.clave ?? x.pasoId, {}) })); },
+  metronomo: (b, x) => { const c = ctx(); return h('details', { class: 'paso-metronomo', open: b.abierto || estadoMetronomo().estado === 'sonando' || null }, h('summary', null, 'Metrónomo'), barraMetronomo({ clave: b.clave ?? x.pasoId, tempo: { ...tempoDe(c, b.clave ?? x.pasoId, {}), ...(b.bpm ? { inicial: b.bpm } : {}) } })); },
   preguntas: (b, x) => bloquePreguntas(x.pasoId, b.n ?? 5),
   obra: (b, x) => { const o = x.ind.obraPorId.get(b.id); return h('div', { class: 'pila-s' }, b.md && h('p', null, md(b.md, x.raiz)), h('a', { class: 'obra-enlace', href: enlace('/obras', o.id) }, h('span', { class: 'titulo-obra' }, o.titulo), o.compositor ? ` · ${o.compositor}` : '', ' →')); },
 };
 
 // La lista de nodos del paso. raiz.el se rellena al final para que los enlaces a compases encuentren su notación.
-export function bloquesDelPaso(def, pasoId, ind) {
+export function bloquesDelPaso(bloques, pasoId, ind, parte = 0) {
   const raiz = { el: null };
-  const x = { pasoId, ind, raiz, tramoDe: id => { const e = ind.porId.get(id); return `Tramo ${e.tramo.numero}, ${e.leccion.titulo}`; } };
-  const nodo = h('div', { class: 'bloques pila' }, def.bloques.map((b, i) => RENDER[b.tipo]?.(b, x, i)));
+  const x = { pasoId, ind, raiz, parte, tramoDe: id => { const e = ind.porId.get(id); return `Tramo ${e.tramo.numero}, ${e.leccion.titulo}`; } };
+  const nodo = h('div', { class: 'bloques pila' }, bloques.map((b, i) => RENDER[b.tipo]?.(b, x, i)));
   raiz.el = nodo;
   return nodo;
 }

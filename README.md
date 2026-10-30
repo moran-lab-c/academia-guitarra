@@ -24,6 +24,26 @@ Capturas reales de la app, con datos de prueba y un progreso de ejemplo. Cada en
 ![Paso con acordes y tablatura](docs/capturas/06-paso-acordes-y-tablatura.png)
 ![Paso con partitura y tablatura](docs/capturas/08-paso-partitura-y-tablatura.png)
 
+## El Tramo 4 del Nivel 1: el tramo de referencia
+Reescrito el 30/10/2026 y pendiente de aprobación como estándar para el resto del curso. Las capturas son con datos de prueba; en las de página entera, la barra lateral aparece desplazada por cómo se hace la captura, no en la app.
+
+- [Contenido del tramo, paso a paso](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/contenido/curriculo/enriquecido/n1-t4.json)
+- [Auditoría de la versión anterior](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/AUDITORIA-TRAMO-4.md)
+- [Cómo funciona el sistema](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/ENRIQUECIMIENTO.md)
+- [El patrón de la escala mayor](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/01-patron-escala-mayor.png)
+- [Construir Mi mayor y sus sostenidos](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/02-construir-mi-mayor.png)
+- [Localizar notas en el diapasón](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/03-localizar-en-el-diapason.png)
+- [Los dedos de cada mano y p-i-m-a](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/04-dedos-de-cada-mano.png)
+- [Tablatura con digitación, mano derecha y pulso](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/05-escala-tablatura-digitada.png)
+- [La armadura y cómo cambia la lectura](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/06-armadura-y-lectura.png)
+- [Por qué una triada es mayor o menor](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/07-triada-mayor-y-menor.png)
+- [Un acorde construyéndose sobre el fondo oscuro](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/08-acorde-construyendose.png)
+- [Si7 completo, con su tabla](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/09-acorde-si7-completo.png)
+- [El tritono y su resolución](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/10-tritono-y-resolucion.png)
+- [La progresión, con un compás señalado desde el texto](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/11-progresion-compas-senalado.png)
+- [Qué significa p-i-m-a, con la mano derecha](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/12-que-significa-pima.png)
+- [El dedo común en un cambio de acorde](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/capturas/tramo-4/13-dedo-comun.png)
+
 ## Para leerlo sin descargar nada
 Todos estos enlaces son texto plano y se abren sin iniciar sesión.
 
@@ -31,7 +51,6 @@ Todos estos enlaces son texto plano y se abren sin iniciar sesión.
 - [Contexto y reglas del proyecto](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/CLAUDE.md)
 - [Estado de la implementación y lo que falta](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/IMPLEMENTACION-V3.1.md)
 - [Arquitectura del código](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/Arquitectura%20de%20la%20academia.md)
-- [Enriquecimiento del contenido: el tramo de referencia y su sistema](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/ENRIQUECIMIENTO.md)
 
 **El currículo aprobado (V3.1), la fuente de verdad**
 - [Currículo maestro](https://raw.githubusercontent.com/moran-lab-c/academia-guitarra/revision-fase-2/docs/curriculo/CURRICULO-MAESTRO.md)

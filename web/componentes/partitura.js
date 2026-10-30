@@ -8,6 +8,7 @@ import { prepararNotacion, sistemas } from '../../logica/partitura.js';
 
 const ALTO = { partitura: 125, tablatura: 125, ambas: 215 }; // alto de cada línea, con sitio para plicas y anotaciones
 const ART = { staccato: 'a.', acento: 'a>', tenuto: 'a-' };
+const COLOR_DEDO = { 1: '#B8442F', 2: '#2C6FA8', 3: '#2F8A57', 4: '#7A4BA3' }; // los mismos colores que los diagramas
 const cacheJSON = new Map();   // fuente → Promise<json>
 const cacheSVG = new Map();    // clave de dibujo → { html, alto, avisos }
 let vexflow = null;
@@ -105,14 +106,14 @@ export function senalarCompases(contenedor, desde, hasta = desde) {
 // Plan de dibujo → SVG con VexFlow. Devuelve el SVG como texto, para guardarlo.
 export function dibujar(VF, plan, vista, ancho) {
   const { Renderer, Stave, TabStave, StaveNote, TabNote, GhostNote, Voice, Formatter, Beam, Accidental, Dot, Annotation, FretHandFinger,
-    Articulation, StaveTie, TabTie, StaveConnector, Curve, Modifier } = VF;
+    Articulation, StaveTie, TabTie, StaveConnector, Curve, Modifier, Barline } = VF;
   const lineas = sistemas(plan, ancho - 2, vista);
   const conPartitura = vista !== 'tablatura', conTab = vista !== 'partitura';
   // Lo que va encima de la primera nota (posición y, con dos voces, mano derecha o dinámica): el tempo va por encima.
   const m0 = plan.compases[0];
   const textoEncima = (m0.pos ? 1 : 0) + (m0.voces.length > 1 ? ['mano', 'din'].filter(k => m0.voces[0][0]?.[k]).length : 0);
   const margenArriba = plan.tempo && conPartitura ? 30 + 16 * textoEncima : 0;
-  const altoLinea = ALTO[vista] + 40;
+  const altoLinea = ALTO[vista] + 40 + (plan.conteo ? 26 : 0);
   // Se dibuja en la página (oculto) para poder medir lo que ocupa de verdad: plicas, líneas adicionales y anotaciones.
   const div = document.createElement('div');
   div.style.cssText = 'position:absolute;left:-10000px;top:0;visibility:hidden';
@@ -137,6 +138,8 @@ export function dibujar(VF, plan, vista, ancho) {
         if (l === 0 && plan.compasVisible) (stave ?? tab).addTimeSignature(`${plan.compas.num}/${plan.compas.den}`);
         if (l === 0 && plan.tempo && stave) stave.setTempo({ duration: plan.tempo.figura ?? '4', bpm: plan.tempo.bpm }, -10 - 16 * textoEncima);
       }
+      if (plan.repetir && c.numero === plan.compases[0].numero) { stave?.setBegBarType(Barline.type.REPEAT_BEGIN); tab?.setBegBarType(Barline.type.REPEAT_BEGIN); }
+      if (plan.repetir && c.numero === plan.compases.at(-1).numero) { stave?.setEndBarType(Barline.type.REPEAT_END); tab?.setEndBarType(Barline.type.REPEAT_END); }
       stave?.setContext(ctx).draw();
       tab?.setContext(ctx).draw();
       if (c.primero && stave && tab) new StaveConnector(stave, tab).setType('singleLeft').setContext(ctx).draw();
@@ -189,6 +192,21 @@ export function dibujar(VF, plan, vista, ancho) {
       vocesP.forEach(v => v.draw(ctx, stave));
       vocesT.forEach(v => v.draw(ctx, tab));
       vigas.forEach(b => b.setContext(ctx).draw());
+      // Encima de la tablatura, una línea con el dedo de la mano izquierda, en su color; encima de todo, el acorde; debajo, el pulso.
+      // Van en una fila fija, sin mezclarse con los números de los trastes.
+      for (const x of notasLinea.filter(y => y.compas === c.indice)) {
+        const ancla = x.tn ?? x.sn;
+        if (!ancla || x.n.silencio) continue;
+        const xn = ancla.getAbsoluteX();
+        ctx.save();
+        if (tab && x.n.dedo) { ctx.setFont('Archivo, sans-serif', 12, 'bold'); ctx.setFillStyle(COLOR_DEDO[x.n.dedo] ?? '#1D1D1B'); ctx.fillText(String(x.n.dedo), xn, tab.getYForLine(0) - 7); }
+        if (x.n.rotulo) { ctx.setFont('Archivo, sans-serif', 13, 'bold'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.rotulo, xn, (stave ?? tab).getYForLine(0) - (stave ? 30 : 22)); }
+        if (plan.conteo && x.v === 0 && tab) {
+          const pulso = x.n.inicio, entero = Number.isInteger(pulso);
+          if (entero || Number.isInteger(pulso * 2)) { ctx.setFont('Courier Prime, monospace', 11, 'normal'); ctx.setFillStyle('#4A4A47'); ctx.fillText(entero ? String(pulso + 1) : 'y', xn, tab.getYForLine(5) + (conPartitura ? 42 : 76)); }
+        }
+        ctx.restore();
+      }
     }
     // Ligados (h, p) y ligaduras con la nota siguiente de la misma voz, si está en la misma línea.
     notasLinea.forEach((x, i) => {
@@ -221,9 +239,9 @@ export function dibujar(VF, plan, vista, ancho) {
   }
   if (!Number.isFinite(y0)) { y0 = 0; y1 = lineas.length * altoLinea; }
   // Encima del pentagrama puede ir el tempo, la posición y, con dos voces, la mano derecha y la dinámica de la melodía.
-  const conTextoArriba = plan.tempo || plan.compases.some(m => m.pos || (m.voces.length > 1 && m.voces[0].some(n => n.mano || n.din)));
+  const conTextoArriba = plan.tempo || plan.compases.some(m => m.pos || m.voces.some(v => v.some(n => n.rotulo || n.dedo)) || (m.voces.length > 1 && m.voces[0].some(n => n.mano || n.din)));
   const arriba = Math.max(0, Math.floor(y0 - Math.max(conTextoArriba ? 52 : 18, margenArriba + 34)));
-  const alto = Math.ceil(y1 + 22) - arriba;
+  const alto = Math.ceil(y1 + (plan.conteo ? 48 : 22)) - arriba;
   svg.setAttribute('height', alto);
   svg.setAttribute('viewBox', `0 ${arriba} ${ancho} ${alto}`);
   svg.setAttribute('width', ancho);

@@ -6,8 +6,8 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { cargarCurriculo } from '../servidor/catalogo.js';
 import { indexarCurriculo, continuar, marcar, progresoVacio, esDePractica } from '../logica/curriculo.js';
-import { validarPaso, TIPOS_BLOQUE } from '../logica/bloques.js';
-import { anatomiaAcorde, compararAcordes, escena, eventosDeNotacion, intervalo, midiEn, notaEn, validarEscena, TIPOS_ESCENA } from '../logica/guitarra.js';
+import { validarPaso, TIPOS_BLOQUE, bloquesDe, COMPRUEBAN } from '../logica/bloques.js';
+import { anatomiaAcorde, compararAcordes, escalaMayor, escena, eventosDeAcordes, eventosDeNotacion, intervalo, midiEn, notaEn, validarEscena, TIPOS_ESCENA } from '../logica/guitarra.js';
 import { prepararNotacion } from '../logica/partitura.js';
 import { ACORDES } from '../logica/acordes.js';
 import { PREGUNTAS, preguntasDelPaso } from '../logica/preguntasPaso.js';
@@ -25,10 +25,84 @@ test('el Tramo 4 está enriquecido entero y cada bloque es válido', () => {
   for (const e of pasosDelTramo) assert.ok(datos.enriquecido[e.paso.id], `sin enriquecer: ${e.paso.id}`);
   for (const [id, def] of Object.entries(datos.enriquecido)) assert.deepEqual(validarPaso(id, def, contexto), []);
   // No hay una plantilla: los pasos usan combinaciones distintas de bloques.
-  const formas = new Set(Object.values(datos.enriquecido).map(d => d.bloques.map(b => b.tipo).join('|')));
+  const formas = new Set(Object.values(datos.enriquecido).map(d => bloquesDe(d).map(b => b.tipo).join('|')));
   assert.ok(formas.size >= 20, `solo ${formas.size} formas distintas`);
-  const usados = new Set(Object.values(datos.enriquecido).flatMap(d => d.bloques.map(b => b.tipo)));
+  const usados = new Set(Object.values(datos.enriquecido).flatMap(d => bloquesDe(d).map(b => b.tipo)));
   for (const t of TIPOS_BLOQUE) assert.ok(usados.has(t), `tipo sin usar: ${t}`);
+});
+
+test('primero se enseña: nunca se pregunta sin haber explicado antes en ese mismo paso', () => {
+  for (const [id, def] of Object.entries(datos.enriquecido)) {
+    const bloques = bloquesDe(def);
+    const primera = bloques.findIndex(b => COMPRUEBAN.has(b.tipo));
+    if (primera < 0) continue;
+    assert.ok(primera >= 1, `${id}: empieza preguntando`);
+    const explicado = bloques.slice(0, primera).map(b => b.md ?? b.titulo ?? '').join(' ').length;
+    assert.ok(explicado > 60 || bloques.slice(0, primera).some(b => ['mastil', 'tabla', 'grados', 'escuchar', 'progresion'].includes(b.tipo)), `${id}: pregunta sin enseñar antes`);
+  }
+});
+
+test('todo lo que se toca tiene audio y su tablatura enseña a tocar', () => {
+  const conAudio = new Set(['escuchar', 'notacion', 'progresion', 'pista', 'grados', 'mastil', 'preguntas']);
+  for (const [id, def] of Object.entries(datos.enriquecido)) assert.ok(bloquesDe(def).some(b => conAudio.has(b.tipo) || b.audio), `${id}: sin audio`);
+  for (const def of Object.values(datos.enriquecido)) for (const b of bloquesDe(def).filter(x => x.tipo === 'notacion')) {
+    const j = notaciones.get(b.fuente);
+    for (const m of j.compases) for (const n of m.voces.flat()) {
+      if (n.acorde) { assert.ok(n.rotulo, `${b.fuente}: acorde sin nombre`); continue; }
+      if (n.t > 0) assert.ok(n.dedo, `${b.fuente}: nota en el traste ${n.t} sin dedo`);
+    }
+    if (!b.fuente.includes('lec-')) assert.ok(j.compases.flatMap(m => m.voces.flat()).every(n => n.mano), `${b.fuente}: sin mano derecha en cada nota`);
+  }
+});
+
+test('los dedos de las tablaturas son los de los diagramas', () => {
+  const forma = (nombre, c) => { const i = 6 - c; return { t: ACORDES[nombre].cuerdas[i], dedo: ACORDES[nombre].dedos[i] }; };
+  const revisar = (fuente, acordes) => notaciones.get(`notacion/${fuente}.json`).compases.forEach((m, k) => {
+    for (const n of m.voces.flat()) {
+      if (n.acorde) continue;
+      const f = forma(acordes[k], n.c);
+      assert.equal(n.t, f.t, `${fuente}, compás ${k + 1}, cuerda ${n.c}`);
+      if (n.t > 0) assert.equal(n.dedo, f.dedo, `${fuente}, compás ${k + 1}: dedo`);
+    }
+  });
+  revisar('arm-mi-la-si7-digitada', ['Mi', 'La', 'Si7', 'Mi', 'Mi', 'La', 'Si7', 'Mi']);
+  revisar('arm-do-fa-sol7', ['Do', 'Fa△7', 'Sol7', 'Do']);
+  revisar('arm-sol-do-re7', ['Sol', 'Do', 'Re7', 'Sol']);
+  revisar('arp-pima-do-sol7', ['Do', 'Sol7', 'Sol7', 'Do']);
+  revisar('arp-pami-do-sol7', ['Do', 'Sol7', 'Sol7', 'Do']);
+  revisar('arp-pim-do-sol7', ['Do', 'Sol7', 'Sol7', 'Do']);
+  revisar('arp-pimami-do-sol7', ['Do', 'Sol7', 'Sol7', 'Do']);
+  // La escala: un dedo por traste.
+  for (const f of ['esc-mi-mayor-digitada', 'esc-mi-mayor-octava']) for (const m of notaciones.get(`notacion/${f}.json`).compases) for (const n of m.voces.flat()) if (n.t > 0) assert.equal(n.dedo, n.t);
+});
+
+test('la escala mayor que se calcula es la que explica el texto', () => {
+  assert.deepEqual(escalaMayor('E').map(n => n.nota), ['Mi', 'Fa♯', 'Sol♯', 'La', 'Si', 'Do♯', 'Re♯', 'Mi']);
+  assert.deepEqual(escalaMayor('C').map(n => n.nota), ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si', 'Do']);
+  assert.deepEqual(escalaMayor('G').map(n => n.nota), ['Sol', 'La', 'Si', 'Do', 'Re', 'Mi', 'Fa♯', 'Sol']);
+  // «Una sí, una no»: los acordes de los grados 1, 4 y 5 salen de la escala.
+  const e = escalaMayor('E', 12);
+  const notas = pos => pos.map(p => e[p - 1].nota);
+  assert.deepEqual(notas([1, 3, 5]), anatomiaAcorde('Mi', 'E').notas.map(n => n.nota));
+  assert.deepEqual(notas([4, 6, 8]), anatomiaAcorde('La', 'E').notas.map(n => n.nota));
+  assert.deepEqual(notas([5, 7, 9, 11]), anatomiaAcorde('Si7', 'E').notas.map(n => n.nota));
+  // La tabla de la construcción de Mi mayor: la distancia desde la nota natural que sigue.
+  const nat = { Fa: 5, Sol: 7, Do: 0, Re: 2 };
+  assert.equal(nat.Fa - 4, 1, 'de Mi a Fa natural, un semitono');
+  assert.equal(nat.Sol - 6, 1, 'de Fa♯ a Sol natural, un semitono');
+  assert.equal(nat.Do + 12 - 11, 1, 'de Si a Do natural, un semitono');
+  assert.equal(nat.Re - 1, 1, 'de Do♯ a Re natural, un semitono');
+  // Las progresiones del tramo se oyen con sus acordes.
+  assert.equal(eventosDeAcordes(['Mi', 'La', 'Si7', 'Mi']).largo, 16);
+});
+
+test('las digitaciones de las tablas de la armadura son correctas', () => {
+  const sitios = { 'Fa♯': [[6, 2], [4, 4], [1, 2]], 'Do♯': [[5, 4], [2, 2]], 'Sol♯': [[6, 4], [3, 1], [1, 4]], 'Re♯': [[4, 1], [2, 4]] };
+  for (const [nota, lista] of Object.entries(sitios)) {
+    for (const [c, t] of lista) assert.equal(notaEn(c, t, 'E'), nota);
+    const todos = [1, 2, 3, 4, 5, 6].flatMap(c => [0, 1, 2, 3, 4].filter(t => notaEn(c, t, 'E') === nota).map(t => [c, t]));
+    assert.equal(todos.length, lista.length, `faltan sitios de ${nota}`);
+  }
 });
 
 test('solo está enriquecido lo aprobado: ningún otro tramo se ha tocado', () => {
@@ -91,9 +165,8 @@ test('cada dedo común que afirma el texto es cierto', () => {
 test('la escena de un acorde sigue el orden pedido y termina con el acorde completo', () => {
   for (const nombre of Object.keys(ACORDES)) {
     const e = escena({ tipo: 'acorde', acorde: nombre, clave: 'C' });
-    assert.equal(e.cuadros[0].base, 0, 'empieza con el mástil vacío');
-    assert.equal(e.cuadros[1].base, 1, 'luego cuerdas y trastes');
-    assert.equal(e.cuadros[1].marcas.length, 0);
+    assert.deepEqual(e.cuadros.slice(0, 4).map(q => q.base), [0, 1, 2, 3], 'espacio vacío, trastes, cuerdas y diagrama completo');
+    assert.ok(e.cuadros.slice(0, 4).every(q => q.marcas.length === 0), 'los dedos llegan después');
     const ultimo = e.cuadros.at(-1);
     const a = ACORDES[nombre];
     for (const m of ultimo.marcas.filter(x => x.dedo)) assert.equal(a.cuerdas[6 - m.c], m.t, `${nombre}: el dedo ${m.dedo} donde dice el diagrama`);
@@ -113,8 +186,9 @@ test('la escena reutilizable sirve para todos sus tipos', () => {
   assert.equal(c.cuadros[2].marcas.some(m => m.k === 'd4'), false, 'el dedo 4 se va');
 });
 
-test('la escala de Mi mayor en una cuerda cumple T-T-S-T-T-T-S', () => {
-  const b = datos.enriquecido['n1.t4.l1.p1'].bloques.filter(x => x.tipo === 'mastil').map(x => x.escena);
+test('las escalas sobre una cuerda cumplen T-T-S-T-T-T-S', () => {
+  const b = bloquesDe(datos.enriquecido['n1.t4.l1.p1']).filter(x => x.tipo === 'mastil' && x.escena.pasos?.length === 7).map(x => x.escena);
+  assert.equal(b.length, 2);
   for (const e of b) {
     const trastes = [e.desde, ...e.pasos.map(p => p.a)];
     assert.deepEqual(trastes.slice(1).map((t, i) => t - trastes[i]), [2, 2, 1, 2, 2, 2, 1]);
@@ -122,7 +196,7 @@ test('la escala de Mi mayor en una cuerda cumple T-T-S-T-T-T-S', () => {
 });
 
 test('las notaciones nuevas son válidas y lo que suena coincide con lo escrito', () => {
-  for (const f of ['lec-mi-mayor-armadura', 'arp-mi-mayor-2oct', 'arp-pim-do-sol7', 'arp-pimami-do-sol7', 'arm-do-fa-sol7', 'arm-sol-do-re7']) {
+  for (const f of ['lec-mi-mayor-armadura', 'arp-mi-mayor-2oct', 'arp-pim-do-sol7', 'arp-pimami-do-sol7', 'arm-do-fa-sol7', 'arm-sol-do-re7', 'esc-mi-mayor-digitada', 'esc-mi-mayor-octava', 'arm-mi-la-si7-digitada']) {
     const j = notaciones.get(`notacion/${f}.json`);
     assert.ok(prepararNotacion(j).ok, f);
     assert.ok(eventosDeNotacion(j).eventos.length > 0, f);

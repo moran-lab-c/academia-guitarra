@@ -32,7 +32,13 @@ export default function aprender({ id }, { repaso = false } = {}) {
 
   const anterior = enLeccion > 0 ? leccion.pasos[enLeccion - 1] : null;
   const estado = cur.pasos?.[id]?.e;
-  const acciones = repaso ? botonesRepaso(e) : botonesPaso(e, estado);
+  // Un paso enriquecido puede tener varias pantallas: se avanza por partes y el botón del paso sale al final. Nada se bloquea.
+  const partes = !repaso ? pantallasDe(ind.enriquecido?.[id]) : [];
+  const parte = partes.length ? Math.min(cur.pantalla?.id === id ? cur.pantalla.n : 0, partes.length - 1) : 0;
+  const irParte = n => () => { cambiar(est => { (est.curriculo ??= progresoVacio()).pantalla = { id, n }; }); document.querySelector('.pantalla-paso')?.scrollIntoView(); };
+  const ultima = parte >= partes.length - 1;
+  const acciones = repaso ? botonesRepaso(e) : ultima ? botonesPaso(e, estado) : [h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: irParte(parte + 1) }, 'Siguiente ▶')];
+  const def = !repaso && ind.enriquecido?.[id];
 
   return h('div', { class: 'pantalla-paso' },
     h('div', { class: 'fila-entre' },
@@ -45,23 +51,30 @@ export default function aprender({ id }, { repaso = false } = {}) {
         leccion.pasos.map((p, i) => h('a', { role: 'listitem', href: enlace('/aprender', p.id), class: `paso-punto${i === enLeccion ? ' paso-punto--ahora' : ''}${cur.pasos?.[p.id] ? ' paso-punto--hecho' : ''}`, 'aria-label': `Paso ${i + 1}`, 'aria-current': i === enLeccion ? 'step' : null })))),
     h('article', { class: 'paso-cuerpo pila' },
       repaso && h('p', { class: 'rotulo rotulo-verde' }, 'UN REPASO · SIN CALENTAR'),
-      contenido(e, ind, repaso),
+      partes.length > 1 && h('nav', { class: 'partes', 'aria-label': 'Partes de este paso' },
+        h('span', { class: 'rotulo' }, `Parte ${parte + 1} de ${partes.length}`),
+        h('div', { class: 'partes__puntos' }, partes.map((p, n) => h('button', { type: 'button', class: `partes__p${n === parte ? ' es-actual' : n < parte ? ' es-pasada' : ''}`, title: p.titulo, 'aria-label': p.titulo ?? `Parte ${n + 1}`, onclick: irParte(n) })))),
+      partes.length > 0 ? [
+        parte === 0 && etiquetaDe(def, paso) && h('div', { class: 'rotulo' }, etiquetaDe(def, paso)),
+        partes.length > 1 && partes[parte].titulo && h('h2', { class: 'parte-titulo' }, partes[parte].titulo),
+        bloquesDelPaso(partes[parte].bloques, id, ind, parte),
+      ] : contenido(e, ind),
       paso.porVerificar && h('p', { class: 'pequeno ocre' }, `Por verificar: ${paso.porVerificar}.`),
       paso.edicion && h('p', { class: 'pequeno suave' }, 'Esta obra se toca con una edición publicada: aquí está la lección, no la partitura.'),
       paso.apoyo && h('p', { class: 'pequeno suave' }, `Te ayudará tener antes: ${paso.apoyo.replace(/^necesita /, '')}.`)),
     h('footer', { class: 'paso-pie' },
-      anterior ? h('a', { class: 'btn btn-fantasma', href: enlace('/aprender', anterior.id) }, '← Atrás') : h('span'),
+      parte > 0 ? h('button', { type: 'button', class: 'btn btn-fantasma', onclick: irParte(parte - 1) }, '← Atrás')
+        : anterior ? h('a', { class: 'btn btn-fantasma', href: enlace('/aprender', anterior.id) }, '← Atrás') : h('span'),
       h('div', { class: 'fila' }, acciones)));
 }
 
-function contenido(e, ind, repaso) {
+// Las pantallas de un paso enriquecido: { pantallas: […] } o, si es corto, una sola con sus { bloques }. En un repaso, sin
+// calentar, basta su versión corta: por eso no se usan ahí.
+const pantallasDe = def => (!def ? [] : def.pantallas ?? [{ bloques: def.bloques }]);
+const etiquetaDe = (def, paso) => def.etiqueta ?? ETIQUETA[paso.tipo] ?? paso.tipo;
+
+function contenido(e, ind) {
   const { paso } = e;
-  // Un paso enriquecido enseña sus bloques; en un repaso, sin calentar, basta su versión corta.
-  const def = !repaso && ind.enriquecido?.[paso.id];
-  if (def) {
-    const etiqueta = def.etiqueta ?? ETIQUETA[paso.tipo] ?? paso.tipo;
-    return [etiqueta && h('div', { class: 'rotulo' }, etiqueta), bloquesDelPaso(def, paso.id, ind)];
-  }
   const c = ctx();
   const obra = paso.obra ? ind.obraPorId.get(paso.obra) : null;
   const ficha = obra?.ficha ? c.cat.porId.get(obra.ficha) : null;

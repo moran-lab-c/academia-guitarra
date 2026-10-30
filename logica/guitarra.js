@@ -58,6 +58,27 @@ export function compararAcordes(de, a) {
   return { de, a, dedos: lista, comunes: lista.filter(x => x.que === 'queda').map(x => x.dedo) };
 }
 
+// La escala mayor desde una tónica, calculada con el patrón T-T-S-T-T-T-S. Sirve para mostrar grados y para que suene.
+const PATRON_MAYOR = [2, 2, 1, 2, 2, 2, 1];
+export function escalaMayor(clave = 'C', largo = 8) {
+  const pc = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 }[clave[0]] + (clave[1] === '#' ? 1 : clave[1] === 'b' ? -1 : 0);
+  let midi = 48 + ((pc + 12) % 12);
+  return Array.from({ length: largo }, (_, i) => {
+    const nota = { posicion: i + 1, grado: (i % 7) + 1, midi, nota: nombreDe(midi, clave) };
+    midi += PATRON_MAYOR[i % 7];
+    return nota;
+  });
+}
+
+// Una serie de acordes como eventos, para escucharla con el mismo reproductor que una notación.
+export function eventosDeAcordes(nombres, { tiempos = 4 } = {}) {
+  const eventos = nombres.map((n, i) => {
+    const midis = ACORDES[n].cuerdas.flatMap((t, k) => (t === null ? [] : [midiEn(6 - k, t)]));
+    return { t: i * tiempos, dur: tiempos, midis, suena: midis.map(() => tiempos), compas: i + 1 };
+  });
+  return { eventos, largo: nombres.length * tiempos, negras: tiempos };
+}
+
 // De la notación a lo que suena: cada nota con su tiempo (en negras), su duración y su compás. Lo usan «Escuchar» y la pista.
 // suena: cuánto dura de verdad cada nota: como en una guitarra, hasta que se vuelve a tocar su cuerda (con seco, solo su figura).
 const RESONANCIA = 3; // en negras, lo más que se deja sonar una cuerda
@@ -110,32 +131,34 @@ const rangoDe = nombres => {
 const todas = nombre => ACORDES[nombre].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)]));
 
 const ESCENAS = {
-  // El orden que pide un acorde: mástil vacío, cuerdas y trastes, cada dedo con su color y su número, cejilla, notas y el acorde entero.
+  // La construcción de un acorde: espacio vacío, trastes, cuerdas, diagrama completo, cada dedo con su color, cuerdas al aire y
+  // las que no suenan, notas y acorde entero. La dibuja web/componentes/diagramaAnimado.js. base: 0 vacío, 1 trastes, 2 cuerdas, 3 completo.
   acorde({ acorde, clave = 'C' }) {
     const a = ACORDES[acorde];
+    const an = anatomiaAcorde(acorde, clave);
     const lista = pisadas(a).sort((x, y) => x.dedo - y.dedo);
-    const trastes = rangoDe([acorde]);
+    const papel = c => an.cuerdas.find(x => x.cuerda === c)?.funcion ?? '';
     const cuadros = [
-      { base: 0, marcas: [], texto: 'El mástil, visto como la tablatura: la 1.ª cuerda arriba y la 6.ª abajo.', ms: 1400 },
-      { base: 1, marcas: [], texto: 'Las seis cuerdas y los trastes. Todavía no pisa nadie.', ms: 1400 },
+      { base: 0, marcas: [], ms: 900, texto: 'Empezamos con el espacio vacío.' },
+      { base: 1, marcas: [], ms: 1600, texto: 'Las líneas horizontales son los trastes. Arriba, la cejuela: el principio del mástil.' },
+      { base: 2, marcas: [], ms: 1800, texto: 'Las verticales son las cuerdas: a la izquierda la 6.ª, la más grave, y a la derecha la 1.ª. Es la guitarra vista de frente.' },
+      { base: 3, marcas: [], ms: 1400, texto: 'El diagrama ya está listo. Ahora, los dedos de la mano izquierda.' },
     ];
     const puestas = [];
-    if (a.cejilla) cuadros.push({ base: 1, marcas: [], cejilla: a.cejilla, texto: `Cejilla con el dedo ${a.cejilla.dedo} en el traste ${a.cejilla.traste}.` });
+    if (a.cejilla) cuadros.push({ base: 3, marcas: [], cejilla: a.cejilla, texto: `Cejilla: el dedo ${a.cejilla.dedo} pisa varias cuerdas en el traste ${a.cejilla.traste}.` });
     for (const x of lista) {
       puestas.push(marcaAcorde(x, clave, false));
-      cuadros.push({ base: 1, marcas: [...puestas], cejilla: a.cejilla, suena: [midiEn(x.c, x.t)], texto: `Dedo ${x.dedo}: ${ordinal(x.c)} cuerda, traste ${x.t}. Es ${notaEn(x.c, x.t, clave)}.` });
+      cuadros.push({ base: 3, marcas: [...puestas], cejilla: a.cejilla, suena: [midiEn(x.c, x.t)], ms: 2600,
+        texto: `Dedo ${x.dedo}: ${ordinal(x.c)} cuerda, traste ${x.t}. Suena ${notaEn(x.c, x.t, clave)}, la ${papel(x.c)} del acorde.` });
     }
     const aire = a.cuerdas.flatMap((t, i) => (t === 0 ? [6 - i] : []));
     const mudas = a.cuerdas.flatMap((t, i) => (t === null ? [6 - i] : []));
-    if (aire.length || mudas.length) {
-      const partes = [];
-      if (aire.length) partes.push(`Al aire: ${aire.map(c => `${ordinal(c)} (${notaEn(c, 0, clave)})`).join(', ')}.`);
-      if (mudas.length) partes.push(`No se toca: ${mudas.map(ordinal).join(' ni ')}.`);
-      cuadros.push({ base: 1, marcas: marcasDe(acorde, clave, false), cejilla: a.cejilla, suena: aire.map(c => midiEn(c, 0)), texto: partes.join(' ') });
-    }
-    const an = anatomiaAcorde(acorde, clave);
-    cuadros.push({ base: 1, marcas: marcasDe(acorde, clave, true), cejilla: a.cejilla, suena: todas(acorde), arpegiado: true, ms: 3200, texto: `${acorde} completo: ${an.notas.map(n => n.nota).join(', ')}.` });
-    return { trastes, cuadros };
+    if (aire.length) cuadros.push({ base: 3, marcas: [...puestas, ...aire.map(c => marcaAire(c, clave, false))], cejilla: a.cejilla, suena: aire.map(c => midiEn(c, 0)), arpegiado: true, ms: 2800,
+      texto: `Con un círculo, las cuerdas al aire, sin pisar: ${aire.map(c => `${ordinal(c)} (${notaEn(c, 0, clave)})`).join(', ')}.` });
+    if (mudas.length) cuadros.push({ base: 3, marcas: marcasDe(acorde, clave, false), cejilla: a.cejilla, ms: 2600,
+      texto: `Con una ×, lo que no debe sonar: ${mudas.map(c => `${ordinal(c)} cuerda`).join(' y ')}.` });
+    cuadros.push({ base: 3, marcas: marcasDe(acorde, clave, true), cejilla: a.cejilla, suena: todas(acorde), arpegiado: true, ms: 3200, final: true, texto: `${acorde} completo: ${an.notas.map(n => n.nota).join(', ')}. Debajo tienes la nota de cada cuerda.` });
+    return { trastes: rangoDe([acorde]), acorde, cuadros };
   },
 
   // Un acorde que se convierte en otro: los dedos viajan, y el que no se mueve se ve quieto.
