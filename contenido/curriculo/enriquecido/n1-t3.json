@@ -1,132 +1,1739 @@
-{"tramo":"n1.t3","nota":"Primera aparición de melodía acompañada, dos voces, bajos en el pentagrama, tono y semitono, sostenido, corchea, puntillo, frase y ¿sube o baja? La obra sigue fuera de la app: los ejemplos de digitación son propios y lo dicen.","pasos":{
-"n1.t3.l1.p1":{"bloques":[
-  {"tipo":"texto","md":"Hasta ahora has tocado una línea. Ahora van a sonar dos cosas distintas a la vez, y eso cambia todo: es lo que hace que una sola guitarra suene como un pequeño conjunto."},
-  {"tipo":"concepto","titulo":"Melodía acompañada","md":"En casi toda la música para guitarra de este nivel hay una **melodía**, la parte que podrías cantar, y un **acompañamiento** que la sostiene. Se llaman **planos** porque, igual que en una foto, uno está delante y otro detrás."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Todo igual de fuerte","notas":[[6,0],[1,0],[6,0],[1,2],[6,0],[1,4],[6,0],[1,2]],"duracion":0.6},{"etiqueta":"La melodía delante","notas":[[6,0],[1,0],[6,0],[1,2],[6,0],[1,4],[6,0],[1,2]],"duracion":0.6,"destacar":[1,3,5,7]}]},
-  {"tipo":"texto","md":"Son exactamente las mismas notas. En la primera versión no sabes qué escuchar. En la segunda, el oído sigue la línea de arriba y el bajo queda sosteniéndola."},
-  {"tipo":"elige","enunciado":"¿Qué cambia entre las dos versiones?","opciones":["Las notas","El volumen de cada plano","La velocidad"],"correcta":1,"porque":"Las notas y el pulso son los mismos: lo que hace que la melodía se oiga es tocarla más presente.","pista":"Vuelve a escucharlas: ¿hay alguna nota distinta?"},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l1.p2","texto":"la parte A de *Lágrima* es exactamente esto."}]}]},
-"n1.t3.l1.p2":{"bloques":[
-  {"tipo":"texto","md":"Ya tienes las dos herramientas: el **apoyando** para la melodía, que da un sonido lleno, y el **tirando** del pulgar para el bajo, más ligero. Ahora se usan juntas."},
-  {"tipo":"pasos","titulo":"Cómo se hace","items":["Coloca *p* en la 6.ª cuerda y *m* en la 1.ª: los dos tocando su cuerda, preparados.","Pulsa a la vez. *m* atraviesa y se apoya en la 2.ª.","*p* baja hacia la 5.ª sin tocarla y sigue hacia el índice, un movimiento pequeño y ligero.","Relaja y vuelve a preparar."]},
-  {"tipo":"errores","items":[{"error":"El pulgar tapa la melodía.","arreglo":"Toca el bajo más suave de lo que crees: casi como una sombra."},{"error":"Las dos notas no salen a la vez.","arreglo":"Prepara las dos antes. Si llegan a destiempo, es que una no estaba colocada."},{"error":"Al apoyar *m* se te sube la mano.","arreglo":"La muñeca se queda quieta. Se mueve solo el dedo."}]},
-  {"tipo":"elige","enunciado":"¿Por qué *m* toca apoyando y *p* tirando?","opciones":["Para que la melodía salga llena y el bajo no la tape","Porque el pulgar no puede apoyar","Porque *m* es más fuerte"],"correcta":0,"porque":"Cada toque da el sonido que necesita su plano.","pista":"Piensa en qué plano debe quedar delante."}]},
-"n1.t3.l1.p3":{"bloques":[
-  {"tipo":"ejercicio","que":"Melodía apoyando con *m* y bajo tirando con *p*, a la vez.","porque":"Es la técnica de *Lágrima* y de todos los andantes de este nivel, sin la dificultad de leer una obra.","atencion":"Primero, mira solo el {c:1}, todo al aire. La mano izquierda entra en el {c:2}.","empieza":"♩ = 60 o menos.","sube":"La melodía queda delante sin que el bajo desaparezca. El objetivo no es la velocidad."},
-  {"tipo":"notacion","fuente":"notacion/tec-melodia-bajo.json","titulo":"Melodía y bajo a la vez","principal":"tablatura","motivo":"Es técnica de la mano derecha: tablatura.","bpms":[50,60],"notas":["En el {c:2} aparece una nota nueva: **Fa♯**, en el traste 2. Y **Sol♯**, en el traste 4. El signo ♯ se explica en la lección de tono y semitono; de momento, sigue los números."]},
-  {"tipo":"metronomo","bpm":60},
-  {"tipo":"bien","items":["La melodía se oye por encima sin que el bajo desaparezca.","Las dos notas de cada golpe salen juntas.","Mantienes la mano quieta y sin tensión."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l5.p1","texto":"lo aplicas al *Andante* de Sor."},{"paso":"n1.t6.l1.p1","texto":"destacar una nota dentro de un arpegio."}]}]},
-"n1.t3.l2.p1":{"pantallas":[
- {"titulo":"El resto de las cuerdas","bloques":[
-  {"tipo":"texto","md":"Ya conoces la 1.ª y la 2.ª. Faltan la 3.ª y los bajos. La idea es la de siempre: la nota siguiente está en el sitio de al lado. Y bajando del pentagrama se añaden las **líneas adicionales** que ya viste en las cuerdas al aire."},
-  {"tipo":"mastil","escena":{"tipo":"recorrido","titulo":"De la 6.ª a la 3.ª","clave":"C","trastes":[0,4],"ms":1200,"notas":[{"c":6,"t":0},{"c":6,"t":1,"dedo":1},{"c":6,"t":3,"dedo":3},{"c":5,"t":0},{"c":5,"t":2,"dedo":2},{"c":5,"t":3,"dedo":3},{"c":4,"t":0},{"c":4,"t":2,"dedo":2},{"c":4,"t":3,"dedo":3},{"c":3,"t":0},{"c":3,"t":2,"dedo":2}],"final":"Once notas seguidas. Enlaza con el Si de la 2.ª al aire."}},
-  {"tipo":"tabla","cabecera":["Cuerda","Nota","Traste y dedo","En el pentagrama"],"filas":[["3.ª","Sol","Al aire","2.ª línea"],["3.ª","La","Traste 2, dedo 2","2.º espacio"],["4.ª","Re","Al aire","Debajo de la 1.ª línea"],["4.ª","Mi","Traste 2, dedo 2","1.ª línea"],["4.ª","Fa","Traste 3, dedo 3","1.er espacio"],["5.ª","La","Al aire","2.ª línea adicional"],["5.ª","Si","Traste 2, dedo 2","Debajo de la 1.ª adicional"],["5.ª","Do","Traste 3, dedo 3","1.ª línea adicional"],["6.ª","Mi","Al aire","Debajo de la 3.ª adicional"],["6.ª","Fa","Traste 1, dedo 1","3.ª línea adicional"],["6.ª","Sol","Traste 3, dedo 3","Debajo de la 2.ª adicional"]]}]},
- {"titulo":"Léelas","bloques":[
-  {"tipo":"notacion","fuente":"notacion/lec-bajos.json","titulo":"De la 6.ª a la 3.ª cuerda","principal":"ambas","motivo":"Es lectura: partitura y tablatura juntas, para comprobar.","bpms":[60],"notas":["El {c:1} y el {c:2} van por los bajos: mira cuántas líneas adicionales tiene cada nota."]},
-  {"tipo":"localizar","enunciado":"Encuentra todos los **Mi** de estas cuerdas. Te servirá para orientarte siempre.","conjunto":["Mi"],"clave":"C","cuerdas":[1,2,3,4,5,6],"hastaTraste":4,"final":"Hay tres Mi en la 1.ª posición: 1.ª al aire, 4.ª en el traste 2 y 6.ª al aire."},
-  {"tipo":"elige","enunciado":"¿Qué nota es?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":5,"t":3}]]}]},"opciones":["Si: 5.ª, traste 2","Do: 5.ª, traste 3","La: 5.ª, al aire"],"correcta":1,"porque":"Sobre la 1.ª línea adicional está el Do: 5.ª cuerda, traste 3.","pista":"Una sola rayita debajo del pentagrama.","audio":{"notas":[[5,3]]}},
-  {"tipo":"elige","enunciado":"¿Y esta?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":3,"t":2}]]}]},"opciones":["Sol: 3.ª, al aire","La: 3.ª, traste 2","Si: 2.ª, al aire"],"correcta":1,"porque":"El 2.º espacio es el La.","pista":"Está justo encima del Sol de la 2.ª línea.","audio":{"notas":[[3,2]]}},
-  {"tipo":"reaparece","items":[{"paso":"n1.t13.l2.p2","texto":"todas las notas de la 1.ª posición, de cabeza."}]}]}]},
-"n1.t3.l2.p2":{"bloques":[
-  {"tipo":"texto","md":"La guitarra tiene un solo pentagrama, pero a menudo hay dos partes a la vez. Para distinguirlas, la partitura usa las **plicas**, los palitos de las notas."},
-  {"tipo":"concepto","titulo":"Dos voces en un pentagrama","md":"Las notas con **plica hacia arriba** son una voz, normalmente la melodía. Las de **plica hacia abajo** son otra, normalmente el bajo. Cada voz cuenta su propio ritmo: las dos deben llenar el compás entero."},
-  {"tipo":"notacion","fuente":"notacion/lec-dos-voces.json","titulo":"Melodía en negras y bajo en blancas","principal":"ambas","motivo":"Para ver cómo se escriben las dos voces.","bpms":[60],"notas":["En el {c:1}, la melodía tiene cuatro negras y el bajo, dos blancas. Cada voz suma cuatro tiempos."]},
-  {"tipo":"tabla","cabecera":["Tiempo","1","2","3","4"],"filas":[["Melodía (plica arriba)","Do","Mi","Do","Mi"],["Bajo (plica abajo)","La","(suena)","La","(suena)"]]},
-  {"tipo":"elige","enunciado":"En un compás de 4/4, la voz de abajo lleva una redonda. ¿Cuántas veces la tocas?","opciones":["Una, y dura todo el compás","Cuatro","Dos"],"correcta":0,"porque":"Se pulsa una vez y sigue sonando mientras la melodía se mueve.","pista":"¿Cuánto dura una redonda?"},
-  {"tipo":"reaparece","items":[{"paso":"n1.t12.l3.p2","texto":"cuándo hay que apagar una de las voces."}]}]},
-"n1.t3.l2.p3":{"bloques":[
-  {"tipo":"texto","md":"Ahora a leer las dos a la vez. El truco es no intentar leerlo todo de golpe."},
-  {"tipo":"pasos","titulo":"Cómo se estudia","items":["Toca solo la melodía, con *m*.","Toca solo el bajo, con *p*, contando los cuatro tiempos.","Junta los dos muy despacio. En cada tiempo, mira qué nota nueva entra.","Cuando salga, cuida los planos: la melodía delante."]},
-  {"tipo":"notacion","fuente":"notacion/lec-dos-voces.json","titulo":"Melodía y bajo","principal":"partitura","motivo":"El objetivo es leer: partitura.","bpms":[50,66],"notas":["Mira el {c:3}: el bajo es el Re de la 4.ª al aire. Y el {c:4} termina con una redonda en el bajo."]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"bien","items":["Lees las dos voces sin parar.","Las blancas del bajo duran hasta su siguiente nota.","La melodía sigue delante."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l5.p1","texto":"una obra entera escrita así."}]}]},
-"n1.t3.l3.p1":{"pantallas":[
- {"titulo":"Medir las distancias","bloques":[
-  {"tipo":"texto","md":"Hasta ahora has aprendido dónde están las notas. Ahora, qué distancia hay entre ellas. Esa distancia es lo que hace que una música suene de una manera u otra, y la guitarra la enseña muy bien porque se ve."},
-  {"tipo":"tabla","cabecera":["Distancia","Se escribe","En la guitarra"],"filas":[["**Semitono**: la distancia más pequeña","S","De un traste al de al lado"],["**Tono**: dos semitonos","T","Saltando un traste: dos trastes de distancia"]]},
-  {"tipo":"mastil","escena":{"tipo":"distancias","titulo":"Medir sobre una cuerda","cuerda":1,"desde":0,"trastes":[0,5],"clave":"C","pasos":[{"a":1,"arco":"S","texto":"Del aire al traste 1: un traste, un semitono. Mi y Fa.","ms":3000},{"a":3,"arco":"T","texto":"Del traste 1 al 3: dos trastes, un tono. Fa y Sol.","ms":3000}]}},
-  {"tipo":"escuchar","items":[{"etiqueta":"Un semitono","notas":[[1,0],[1,1]]},{"etiqueta":"Un tono","notas":[[1,1],[1,3]]}]},
-  {"tipo":"texto","md":"El semitono suena como un paso muy pegado; el tono, como un paso normal."}]},
- {"titulo":"Mi-Fa y Si-Do","bloques":[
-  {"tipo":"texto","md":"Las siete notas naturales (Do, Re, Mi, Fa, Sol, La, Si) no están a la misma distancia. Casi siempre hay un tono entre una y la siguiente, salvo en dos sitios."},
-  {"tipo":"tabla","cabecera":["Do–Re","Re–Mi","Mi–Fa","Fa–Sol","Sol–La","La–Si","Si–Do"],"filas":[["T","T","**S**","T","T","T","**S**"]]},
-  {"tipo":"concepto","titulo":"Los semitonos naturales","md":"**Mi-Fa** y **Si-Do** están pegados. Por eso has visto que Fa está en el traste 1 de la 1.ª cuerda (Mi al aire) y Do en el traste 1 de la 2.ª (Si al aire). Las demás parejas tienen un traste libre en medio."},
-  {"tipo":"concepto","titulo":"¿Qué hay en el traste libre?","md":"Entre Fa y Sol hay un traste: es otra nota. Se llama **Fa sostenido, Fa♯**: el Fa subido un semitono. El **sostenido (♯)** sube una nota un semitono, un traste más. También puede nombrarse desde arriba: el **bemol (♭)** baja un semitono, y Sol♭ es el mismo traste. Por eso has tocado Fa♯ en el traste 2 de la 1.ª."},
-  {"tipo":"mastil","escena":{"tipo":"distancias","titulo":"La 2.ª cuerda, de Si a Re","cuerda":2,"desde":0,"trastes":[0,4],"clave":"C","pasos":[{"a":1,"arco":"S","texto":"Si a Do: pegados, un semitono.","ms":2600},{"a":3,"arco":"T","texto":"Do a Re: un traste libre en medio, un tono.","ms":2600}]}},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l3.p2","texto":"lo compruebas."},{"paso":"n1.t4.l1.p1","texto":"con este dibujo se construye la escala mayor."}]}]}]},
-"n1.t3.l3.p2":{"bloques":[
-  {"tipo":"texto","md":"Recuerda las dos reglas: un traste es un semitono, dos trastes son un tono. Y entre las notas naturales solo Mi-Fa y Si-Do son semitonos."},
-  {"tipo":"elige","enunciado":"En una misma cuerda vas del traste 5 al traste 7. ¿Qué distancia hay?","opciones":["Un semitono","Un tono","Dos tonos"],"correcta":1,"porque":"Son dos trastes, y dos trastes son un tono.","pista":"Cuenta los trastes: cada uno es un semitono."},
-  {"tipo":"preguntas","n":4}]},
-"n1.t3.l3.p3":{"bloques":[
-  {"tipo":"texto","md":"Mi-Fa y Si-Do están por toda la guitarra. Encontrarlos en cualquier cuerda es tu primer mapa del diapasón: una vez que sabes dónde están, las demás notas se deducen."},
-  {"tipo":"localizar","enunciado":"Encuentra todas las parejas **Mi-Fa** y **Si-Do** en la 1.ª posición. Al pulsar oirás la distancia.","conjunto":["Mi","Fa","Si","Do"],"clave":"C","cuerdas":[1,2,3,4,5,6],"hastaTraste":4,"final":"Siempre juntas: un traste de distancia."},
-  {"tipo":"ejercicio","que":"En cada cuerda, tocar una pareja de notas pegadas y otra separada, diciendo cuál es cuál.","porque":"Las manos y los oídos aprenden juntos la misma distancia.","atencion":"Di S o T antes de tocarlas, no después.","empieza":"Al ritmo que quieras, sin metrónomo.","sube":"Lo haces en las seis cuerdas sin mirar la tabla."},
-  {"tipo":"bien","items":["Sabes decir en qué cuerdas y trastes están Mi-Fa y Si-Do.","Reconoces de oído si es un paso pegado o normal."]}]},
-"n1.t3.l4.p1":{"bloques":[
-  {"tipo":"texto","md":"Una **escala** son las notas seguidas, en orden, desde una nota hasta su repetición más aguda. La de **Do mayor** son las siete notas naturales, de Do a Do. Es la primera que se aprende porque no lleva sostenidos ni bemoles. El porqué de ese nombre lo verás en el tramo siguiente."},
-  {"tipo":"grados","clave":"C","titulo":"Do mayor: pulsa cada nota"},
-  {"tipo":"mastil","escena":{"tipo":"recorrido","titulo":"Dónde está","clave":"C","trastes":[0,4],"ms":1000,"notas":[{"c":5,"t":3,"dedo":3},{"c":4,"t":0},{"c":4,"t":2,"dedo":2},{"c":4,"t":3,"dedo":3},{"c":3,"t":0},{"c":3,"t":2,"dedo":2},{"c":2,"t":0},{"c":2,"t":1,"dedo":1}],"final":"Mira los dos últimos pares: Mi-Fa (4.ª) y Si-Do (2.ª) son los semitonos."}},
-  {"tipo":"ejercicio","que":"Do mayor, una octava, subiendo y bajando, con i-m apoyando.","porque":"Une lo que has aprendido: notas, dedos, apoyando y lectura.","atencion":"Un dedo por traste. Di el nombre de cada nota antes de tocarla.","empieza":"♩ = 50 en corcheas.","sube":"Sale tres veces igual, con el mismo sonido en las cuerdas al aire y en las pisadas."},
-  {"tipo":"notacion","fuente":"notacion/esc-do-mayor-1pos.json","titulo":"Do mayor, una octava","principal":"ambas","motivo":"Para ver la escala en el pentagrama y en la guitarra.","bpms":[50,72],"notas":["Las notas al aire suelen salir más fuertes que las pisadas: compensa."]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"bien","items":["Suena igual al subir y al bajar.","No hay cortes entre una cuerda y la siguiente."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l1.p1","texto":"por qué esta escala es mayor."},{"paso":"n1.t9.l2.p1","texto":"Do mayor en dos octavas."}]}]},
-"n1.t3.l4.p2":{"pantallas":[
- {"titulo":"Corcheas","bloques":[
-  {"tipo":"concepto","titulo":"Una figura más corta","md":"La **corchea** dura medio tiempo: dos corcheas caben en una negra. Se cuentan añadiendo una «y»: **1 y 2 y 3 y 4 y**. Una corchea lleva un corchete, y varias juntas se unen con una barra."},
-  {"tipo":"notacion","fuente":"notacion/rit-corcheas.json","titulo":"De negras a corcheas","principal":"tablatura","motivo":"Importa contar: tablatura con el pulso.","bpms":[60]}]},
- {"titulo":"El puntillo","bloques":[
-  {"tipo":"concepto","titulo":"Un punto que alarga","md":"El **puntillo** es un punto a la derecha de una nota. **Le añade la mitad de lo que dura.** No es algo nuevo que aprender: solo una suma."},
-  {"tipo":"tabla","cabecera":["Figura","Dura","Con puntillo","Se cuenta"],"filas":[["Blanca","2 tiempos","2 + 1 = **3 tiempos**","1 2 3"],["Negra","1 tiempo","1 + ½ = **1 tiempo y medio**","1 y 2"]]},
-  {"tipo":"notacion","fuente":"notacion/rit-puntillo.json","titulo":"Con y sin puntillo","principal":"partitura","motivo":"Aquí importa la figura: partitura.","bpms":[60],"notas":["En el {c:1} y el {c:2} hay blancas con puntillo, todo el compás de 3/4.","En el {c:3}, negra con puntillo y corchea: la corchea entra en la «y» del segundo tiempo."]},
-  {"tipo":"ejercicio","que":"Decir el ritmo en voz alta y después tocarlo.","porque":"La negra con puntillo suele salir como si fuera negra. Contar la «y» evita ese error.","atencion":"La corchea no cae en el tiempo 2: cae justo después.","empieza":"♩ = 50.","sube":"Coincides con el audio."},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"completar","enunciado":"Completa:","partes":["Una blanca con puntillo dura ",{"correcta":"3","opciones":["2","3","4"]}," tiempos. Una negra con puntillo dura ",{"correcta":"1 y medio","opciones":["1","1 y medio","2"]},"."],"pista":"Añade la mitad de lo que dura la figura.","final":"Suma la mitad, siempre."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t12.l4.p4","texto":"puntillo y semicorcheas."}]}]}]},
-"n1.t3.l4.p3":{"bloques":[
-  {"tipo":"texto","md":"Tu primer entrenamiento de oído con notas: saber si una melodía **sube o baja**. Parece fácil, pero es la base de lo demás: de repetir una melodía, de cantarla y de reconocer un intervalo. Oyes una vez, y decides."},
-  {"tipo":"pasos","titulo":"Cómo hacerlo","items":["Escucha las dos notas o la frase completa.","Tararéalas: la voz suele saber antes que la cabeza.","Decide si la última nota queda por encima o por debajo de la primera."]},
-  {"tipo":"elige","enunciado":"¿Sube o baja?","audio":{"notas":[[2,1],[1,3]]},"opciones":["Sube","Baja"],"correcta":0,"porque":"De Do a Sol: sube.","pista":"Compara la segunda nota con la primera."},
-  {"tipo":"elige","enunciado":"¿Y aquí?","audio":{"notas":[[1,0],[2,0]]},"opciones":["Sube","Baja"],"correcta":1,"porque":"De Mi a Si: baja.","pista":"Compara la segunda nota con la primera."},
-  {"tipo":"elige","enunciado":"Ahora una frase de tres notas.","audio":{"notas":[[3,0],[3,2],[2,0]],"duracion":0.7},"opciones":["Sube","Baja"],"correcta":0,"porque":"Sol, La, Si: va subiendo.","pista":"¿La última es más aguda que la primera?"},
-  {"tipo":"elige","enunciado":"Otra.","audio":{"notas":[[1,3],[1,1],[1,0]],"duracion":0.7},"opciones":["Sube","Baja"],"correcta":1,"porque":"Sol, Fa, Mi: va bajando.","pista":"¿La última es más aguda que la primera?"},
-  {"tipo":"elige","enunciado":"Y una con un pequeño giro: ¿cómo termina respecto a su principio?","audio":{"notas":[[2,1],[1,0],[2,3],[1,3]],"duracion":0.65},"opciones":["Más arriba","Más abajo"],"correcta":0,"porque":"Baja un momento, pero termina en Sol, por encima del Do del principio.","pista":"Fíjate solo en la primera y en la última."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l3.p3","texto":"reconocer intervalos."},{"paso":"n1.t13.l5.p1","texto":"repetir una melodía de oído."}]}]},
-"n1.t3.l5.p1":{"pantallas":[
- {"titulo":"Qué aprendes con ella","bloques":[
-  {"tipo":"obra","id":"o1-sor-andante-op-31-n-1","md":"Tu primera obra con **melodía y bajo a la vez**. Es lo que acabas de practicar, ahora escrito en dos voces."},
-  {"tipo":"concepto","titulo":"Dónde está la partitura","md":"Todavía no está dentro de la app. La tienes en [IMSLP, en las *24 Leçons progressives*, op. 31, de Sor](https://imslp.org/wiki/24_Le%C3%A7ons_progressives,_Op.31_%28Sor,_Fernando%29). Busca el n.º 1. La misma colección trae el n.º 4, que tocarás al final del nivel."},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Sin la edición comprobada no te indicamos notas ni compases concretos. Lo que sigue vale para cualquier versión de la obra."},
-  {"tipo":"tabla","cabecera":["Qué mirar","Qué te dice"],"filas":[["Los dos números del principio","El compás: cuéntalo en voz alta"],["Las plicas","Hacia arriba, melodía; hacia abajo, bajo"],["Los bajos","Con líneas adicionales: La, Si y Do de la 5.ª, y Mi, Fa y Sol de la 6.ª"],["Los números pequeños junto a las notas, si los hay","El dedo de la mano izquierda"]]}]},
- {"titulo":"Cómo se trabaja","bloques":[
-  {"tipo":"pasos","titulo":"Por capas","items":["**Solo la melodía**, cantada y después con *m*, diciendo el nombre de las notas.","**Solo el bajo**, con *p*, contando.","**Las dos** en trozos de dos compases, muy despacio.","**Los planos**, cuando ya no te equivoques de notas."]},
-  {"tipo":"ejercicio","que":"Montar la obra por capas.","porque":"Cada capa es más sencilla que el conjunto. Así no aprendes los errores que aparecen cuando intentas hacer todo a la vez.","atencion":"La melodía delante y el bajo como una sombra.","empieza":"Con el tempo al que no tengas que parar, como ♩ = 50.","sube":"El trozo sale tres veces seguidas."},
-  {"tipo":"metronomo","clave":"o1-sor-andante-op-31-n-1","bpm":50},
-  {"tipo":"bien","items":["Tocas la obra sin parar.","La melodía se oye por encima del bajo.","Cuentas el compás mientras tocas, al menos por dentro."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l5.p4","texto":"la comprobación."},{"paso":"n1.t5.l4.p4","texto":"el mismo problema en *Lágrima*: si el acompañamiento tapa."}]}]}]},
-"n1.t3.l5.p2":{"bloques":[
-  {"tipo":"texto","md":"Hay una idea de digitación que verás en muchas obras: **usar una cuerda al aire para ganar tiempo**. Mientras la cuerda suena sola, la mano izquierda queda libre y puede ir al sitio siguiente sin cortar nada."},
-  {"tipo":"concepto","titulo":"Por qué funciona","md":"Una nota pisada se corta si levantas el dedo. Una cuerda al aire sigue sonando aunque la mano se mueva. Por eso, lo más inteligente es hacer los cambios justo cuando suena una cuerda al aire."},
-  {"tipo":"notacion","fuente":"notacion/tec-al-aire-cambio.json","titulo":"Ejemplo escrito para la academia: no es de Sor","principal":"tablatura","motivo":"Es una digitación: tablatura.","bpms":[50,66],"notas":["En el {c:1}, mientras suena el Mi al aire, el dedo 3 tiene tiempo de pasar de la 5.ª a la 6.ª cuerda.","Compruébalo: el bajo cambia en el {c:2}, y la melodía no se ha cortado."]},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Dónde lo hace Sor exactamente, en qué compases, depende de la edición y está por comprobar. Tu tarea: busca en tu partitura un sitio donde la melodía tenga una cuerda al aire justo antes de que cambie el bajo, y mira qué hace ahí tu mano izquierda."},
-  {"tipo":"bien","items":["La melodía no se corta cuando la mano cambia de sitio.","Sabes decir qué cuerda al aire te da tiempo para el cambio."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l4.p1","texto":"cuando no hay cuerda al aire: el dedo común."},{"paso":"n1.t5.l2.p1","texto":"y el dedo guía."}]}]},
-"n1.t3.l5.p3":{"bloques":[
-  {"tipo":"concepto","titulo":"La frase","md":"La música también tiene frases. Una **frase** es un trozo que se entiende por sí mismo, como lo que dices sin tomar aire. Al terminar, la música **respira**: es lo que hace que suene natural."},
-  {"tipo":"tabla","cabecera":["Pistas de que una frase termina","Por qué"],"filas":[["Una nota más larga","Es el sitio donde descansa la melodía"],["Vuelve una nota que suena a casa","Ya llegó"],["Lo que viene después empieza como el principio","Empieza una frase nueva"]]},
-  {"tipo":"escuchar","items":[{"etiqueta":"Frase que queda abierta","notas":[[2,1],[2,3],[1,0],[1,3]],"duracion":0.7},{"etiqueta":"Frase que termina","notas":[[1,3],[1,0],[2,3],[2,1]],"duracion":0.7}]},
-  {"tipo":"elige","enunciado":"Escucha esta frase. ¿Suena a terminada?","audio":{"notas":[[1,0],[2,3],[2,1]],"duracion":0.8},"opciones":["Sí: termina en Do y descansa","No: se queda esperando algo"],"correcta":0,"porque":"Do es la nota de casa en esta escala: el oído descansa ahí.","pista":"¿Te quedas esperando algo más?"},
-  {"tipo":"pasos","titulo":"Busca las respiraciones en tu partitura","items":["Canta o tararea la melodía de la obra, sin tocar.","Coge aire donde te lo pida. Eso suele ser el final de una frase.","Marca una coma a lápiz sobre esa nota.","Al tocar, deja ahí un mínimo de aire: la nota siguiente empieza limpia, sin parar el pulso."]},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Las marcas que hagas son tuyas. Sin la edición comprobada, la academia aún no te indica dónde están en esta obra; si tu profesor lo marca de otra forma, manda el profesor."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l5.p1","texto":"el punto más alto de una frase."},{"paso":"n1.t13.l4.p3","texto":"frases que preguntan y responden."}]}]},
-"n1.t3.l5.p4":{"bloques":[
-  {"tipo":"texto","md":"Dos pruebas. Si alguna falla, nada se bloquea: tienes abajo dónde se trabaja."},
-  {"tipo":"lista","titulo":"1. Los dos planos","items":["El ejercicio de melodía y bajo, los tres compases, a ♩ = 60."]},
-  {"tipo":"notacion","plegado":true,"fuente":"notacion/tec-melodia-bajo.json","titulo":"Ver el ejercicio","principal":"tablatura","motivo":"Para comprobar: tablatura.","bpms":[60]},
-  {"tipo":"lista","titulo":"2. La obra","items":["El *Andante* de Sor entero, sin parar."]},
-  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["La melodía queda delante sin que el bajo desaparezca.","La obra, entera y sin parar.","Respiras al final de cada frase, sin perder el pulso."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l1.p3","texto":"si fallan los planos."},{"paso":"n1.t3.l2.p3","texto":"si falla la lectura de dos voces."}]}]}
-}}
+{
+ "tramo": "n1.t3",
+ "nota": "Primera aparición de melodía acompañada, dos voces, bajos en el pentagrama, tono y semitono, sostenido, corchea, puntillo, frase y ¿sube o baja? La obra sigue fuera de la app: los ejemplos de digitación son propios y lo dicen.",
+ "pasos": {
+  "n1.t3.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Hasta ahora has tocado una línea. Ahora van a sonar dos cosas distintas a la vez, y eso cambia todo: es lo que hace que una sola guitarra suene como un pequeño conjunto."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Melodía acompañada",
+     "md": "En casi toda la música para guitarra de este nivel hay una **melodía**, la parte que podrías cantar, y un **acompañamiento** que la sostiene. Se llaman **planos** porque, igual que en una foto, uno está delante y otro detrás."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Todo igual de fuerte",
+       "notas": [
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         2
+        ]
+       ],
+       "duracion": 0.6
+      },
+      {
+       "etiqueta": "La melodía delante",
+       "notas": [
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         2
+        ]
+       ],
+       "duracion": 0.6,
+       "destacar": [
+        1,
+        3,
+        5,
+        7
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Son exactamente las mismas notas. En la primera versión no sabes qué escuchar. En la segunda, el oído sigue la línea de arriba y el bajo queda sosteniéndola."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué cambia entre las dos versiones?",
+     "opciones": [
+      "Las notas",
+      "El volumen de cada plano",
+      "La velocidad"
+     ],
+     "correcta": 1,
+     "porque": "Las notas y el pulso son los mismos: lo que hace que la melodía se oiga es tocarla más presente.",
+     "pista": "Vuelve a escucharlas: ¿hay alguna nota distinta?"
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l1.p2",
+       "texto": "la parte A de *Lágrima* es exactamente esto."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya tienes las dos herramientas: el **apoyando** para la melodía, que da un sonido lleno, y el **tirando** del pulgar para el bajo, más ligero. Ahora se usan juntas."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Coloca *p* en la 6.ª cuerda y *m* en la 1.ª: los dos tocando su cuerda, preparados.",
+      "Pulsa a la vez. *m* atraviesa y se apoya en la 2.ª.",
+      "*p* baja hacia la 5.ª sin tocarla y sigue hacia el índice, un movimiento pequeño y ligero.",
+      "Relaja y vuelve a preparar."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "El pulgar tapa la melodía.",
+       "arreglo": "Toca el bajo más suave de lo que crees: casi como una sombra."
+      },
+      {
+       "error": "Las dos notas no salen a la vez.",
+       "arreglo": "Prepara las dos antes. Si llegan a destiempo, es que una no estaba colocada."
+      },
+      {
+       "error": "Al apoyar *m* se te sube la mano.",
+       "arreglo": "La muñeca se queda quieta. Se mueve solo el dedo."
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Por qué *m* toca apoyando y *p* tirando?",
+     "opciones": [
+      "Para que la melodía salga llena y el bajo no la tape",
+      "Porque el pulgar no puede apoyar",
+      "Porque *m* es más fuerte"
+     ],
+     "correcta": 0,
+     "porque": "Cada toque da el sonido que necesita su plano.",
+     "pista": "Piensa en qué plano debe quedar delante."
+    }
+   ]
+  },
+  "n1.t3.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Melodía apoyando con *m* y bajo tirando con *p*, a la vez.",
+     "porque": "Es la técnica de *Lágrima* y de todos los andantes de este nivel, sin la dificultad de leer una obra.",
+     "atencion": "Primero, mira solo el {c:1}, todo al aire. La mano izquierda entra en el {c:2}.",
+     "empieza": "♩ = 60 o menos.",
+     "sube": "La melodía queda delante sin que el bajo desaparezca. El objetivo no es la velocidad."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Melodía y bajo a la vez",
+      "clave": "E",
+      "trastes": [
+       0,
+       12
+      ],
+      "zoom": [
+       0,
+       5
+      ],
+      "ms": 1100,
+      "notas": [
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m",
+        "con": [
+         {
+          "c": 6,
+          "t": 0,
+          "mano": "p"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 4,
+        "dedo": 4,
+        "mano": "m",
+        "con": [
+         {
+          "c": 6,
+          "t": 0,
+          "mano": "p"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       }
+      ],
+      "final": "p y m pulsan juntos en el primer y en el tercer tiempo."
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-melodia-bajo.json",
+     "titulo": "Melodía y bajo a la vez",
+     "principal": "tablatura",
+     "motivo": "Es técnica de la mano derecha: tablatura.",
+     "bpms": [
+      50,
+      60
+     ],
+     "notas": [
+      "En el {c:2} aparece una nota nueva: **Fa♯**, en el traste 2. Y **Sol♯**, en el traste 4. El signo ♯ se explica en la lección de tono y semitono; de momento, sigue los números."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La melodía se oye por encima sin que el bajo desaparezca.",
+      "Las dos notas de cada golpe salen juntas.",
+      "Mantienes la mano quieta y sin tensión."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l5.p1",
+       "texto": "lo aplicas al *Andante* de Sor."
+      },
+      {
+       "paso": "n1.t6.l1.p1",
+       "texto": "destacar una nota dentro de un arpegio."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "El resto de las cuerdas",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ya conoces la 1.ª y la 2.ª. Faltan la 3.ª y los bajos. La idea es la de siempre: la nota siguiente está en el sitio de al lado. Y bajando del pentagrama se añaden las **líneas adicionales** que ya viste en las cuerdas al aire."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "recorrido",
+        "titulo": "De la 6.ª a la 3.ª",
+        "clave": "C",
+        "trastes": [
+         0,
+         4
+        ],
+        "ms": 1200,
+        "notas": [
+         {
+          "c": 6,
+          "t": 0
+         },
+         {
+          "c": 6,
+          "t": 1,
+          "dedo": 1
+         },
+         {
+          "c": 6,
+          "t": 3,
+          "dedo": 3
+         },
+         {
+          "c": 5,
+          "t": 0
+         },
+         {
+          "c": 5,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "c": 5,
+          "t": 3,
+          "dedo": 3
+         },
+         {
+          "c": 4,
+          "t": 0
+         },
+         {
+          "c": 4,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "c": 4,
+          "t": 3,
+          "dedo": 3
+         },
+         {
+          "c": 3,
+          "t": 0
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2
+         }
+        ],
+        "final": "Once notas seguidas. Enlaza con el Si de la 2.ª al aire."
+       }
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Cuerda",
+        "Nota",
+        "Traste y dedo",
+        "En el pentagrama"
+       ],
+       "filas": [
+        [
+         "3.ª",
+         "Sol",
+         "Al aire",
+         "2.ª línea"
+        ],
+        [
+         "3.ª",
+         "La",
+         "Traste 2, dedo 2",
+         "2.º espacio"
+        ],
+        [
+         "4.ª",
+         "Re",
+         "Al aire",
+         "Debajo de la 1.ª línea"
+        ],
+        [
+         "4.ª",
+         "Mi",
+         "Traste 2, dedo 2",
+         "1.ª línea"
+        ],
+        [
+         "4.ª",
+         "Fa",
+         "Traste 3, dedo 3",
+         "1.er espacio"
+        ],
+        [
+         "5.ª",
+         "La",
+         "Al aire",
+         "2.ª línea adicional"
+        ],
+        [
+         "5.ª",
+         "Si",
+         "Traste 2, dedo 2",
+         "Debajo de la 1.ª adicional"
+        ],
+        [
+         "5.ª",
+         "Do",
+         "Traste 3, dedo 3",
+         "1.ª línea adicional"
+        ],
+        [
+         "6.ª",
+         "Mi",
+         "Al aire",
+         "Debajo de la 3.ª adicional"
+        ],
+        [
+         "6.ª",
+         "Fa",
+         "Traste 1, dedo 1",
+         "3.ª línea adicional"
+        ],
+        [
+         "6.ª",
+         "Sol",
+         "Traste 3, dedo 3",
+         "Debajo de la 2.ª adicional"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Léelas",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/lec-bajos.json",
+       "titulo": "De la 6.ª a la 3.ª cuerda",
+       "principal": "ambas",
+       "motivo": "Es lectura: partitura y tablatura juntas, para comprobar.",
+       "bpms": [
+        60
+       ],
+       "notas": [
+        "El {c:1} y el {c:2} van por los bajos: mira cuántas líneas adicionales tiene cada nota."
+       ]
+      },
+      {
+       "tipo": "localizar",
+       "enunciado": "Encuentra todos los **Mi** de estas cuerdas. Te servirá para orientarte siempre.",
+       "conjunto": [
+        "Mi"
+       ],
+       "clave": "C",
+       "cuerdas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "hastaTraste": 4,
+       "final": "Hay tres Mi en la 1.ª posición: 1.ª al aire, 4.ª en el traste 2 y 6.ª al aire."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Qué nota es?",
+       "notacion": {
+        "compas": "4/4",
+        "armadura": "C",
+        "compasVisible": false,
+        "compases": [
+         {
+          "voces": [
+           [
+            {
+             "d": "1",
+             "c": 5,
+             "t": 3
+            }
+           ]
+          ]
+         }
+        ]
+       },
+       "opciones": [
+        "Si: 5.ª, traste 2",
+        "Do: 5.ª, traste 3",
+        "La: 5.ª, al aire"
+       ],
+       "correcta": 1,
+       "porque": "Sobre la 1.ª línea adicional está el Do: 5.ª cuerda, traste 3.",
+       "pista": "Una sola rayita debajo del pentagrama.",
+       "audio": {
+        "notas": [
+         [
+          5,
+          3
+         ]
+        ]
+       }
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y esta?",
+       "notacion": {
+        "compas": "4/4",
+        "armadura": "C",
+        "compasVisible": false,
+        "compases": [
+         {
+          "voces": [
+           [
+            {
+             "d": "1",
+             "c": 3,
+             "t": 2
+            }
+           ]
+          ]
+         }
+        ]
+       },
+       "opciones": [
+        "Sol: 3.ª, al aire",
+        "La: 3.ª, traste 2",
+        "Si: 2.ª, al aire"
+       ],
+       "correcta": 1,
+       "porque": "El 2.º espacio es el La.",
+       "pista": "Está justo encima del Sol de la 2.ª línea.",
+       "audio": {
+        "notas": [
+         [
+          3,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t13.l2.p2",
+         "texto": "todas las notas de la 1.ª posición, de cabeza."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La guitarra tiene un solo pentagrama, pero a menudo hay dos partes a la vez. Para distinguirlas, la partitura usa las **plicas**, los palitos de las notas."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Dos voces en un pentagrama",
+     "md": "Las notas con **plica hacia arriba** son una voz, normalmente la melodía. Las de **plica hacia abajo** son otra, normalmente el bajo. Cada voz cuenta su propio ritmo: las dos deben llenar el compás entero."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-dos-voces.json",
+     "titulo": "Melodía en negras y bajo en blancas",
+     "principal": "ambas",
+     "motivo": "Para ver cómo se escriben las dos voces.",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "En el {c:1}, la melodía tiene cuatro negras y el bajo, dos blancas. Cada voz suma cuatro tiempos."
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Tiempo",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "filas": [
+      [
+       "Melodía (plica arriba)",
+       "Do",
+       "Mi",
+       "Do",
+       "Mi"
+      ],
+      [
+       "Bajo (plica abajo)",
+       "La",
+       "(suena)",
+       "La",
+       "(suena)"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En un compás de 4/4, la voz de abajo lleva una redonda. ¿Cuántas veces la tocas?",
+     "opciones": [
+      "Una, y dura todo el compás",
+      "Cuatro",
+      "Dos"
+     ],
+     "correcta": 0,
+     "porque": "Se pulsa una vez y sigue sonando mientras la melodía se mueve.",
+     "pista": "¿Cuánto dura una redonda?"
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l3.p2",
+       "texto": "cuándo hay que apagar una de las voces."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora a leer las dos a la vez. El truco es no intentar leerlo todo de golpe."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se estudia",
+     "items": [
+      "Toca solo la melodía, con *m*.",
+      "Toca solo el bajo, con *p*, contando los cuatro tiempos.",
+      "Junta los dos muy despacio. En cada tiempo, mira qué nota nueva entra.",
+      "Cuando salga, cuida los planos: la melodía delante."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-dos-voces.json",
+     "titulo": "Melodía y bajo",
+     "principal": "partitura",
+     "motivo": "El objetivo es leer: partitura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "Mira el {c:3}: el bajo es el Re de la 4.ª al aire. Y el {c:4} termina con una redonda en el bajo."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Lees las dos voces sin parar.",
+      "Las blancas del bajo duran hasta su siguiente nota.",
+      "La melodía sigue delante."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l5.p1",
+       "texto": "una obra entera escrita así."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "Medir las distancias",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Hasta ahora has aprendido dónde están las notas. Ahora, qué distancia hay entre ellas. Esa distancia es lo que hace que una música suene de una manera u otra, y la guitarra la enseña muy bien porque se ve."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Distancia",
+        "Se escribe",
+        "En la guitarra"
+       ],
+       "filas": [
+        [
+         "**Semitono**: la distancia más pequeña",
+         "S",
+         "De un traste al de al lado"
+        ],
+        [
+         "**Tono**: dos semitonos",
+         "T",
+         "Saltando un traste: dos trastes de distancia"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "distancias",
+        "titulo": "Medir sobre una cuerda",
+        "cuerda": 1,
+        "desde": 0,
+        "trastes": [
+         0,
+         5
+        ],
+        "clave": "C",
+        "pasos": [
+         {
+          "a": 1,
+          "arco": "S",
+          "texto": "Del aire al traste 1: un traste, un semitono. Mi y Fa.",
+          "ms": 3000
+         },
+         {
+          "a": 3,
+          "arco": "T",
+          "texto": "Del traste 1 al 3: dos trastes, un tono. Fa y Sol.",
+          "ms": 3000
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Un semitono",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           1
+          ]
+         ]
+        },
+        {
+         "etiqueta": "Un tono",
+         "notas": [
+          [
+           1,
+           1
+          ],
+          [
+           1,
+           3
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "El semitono suena como un paso muy pegado; el tono, como un paso normal."
+      }
+     ]
+    },
+    {
+     "titulo": "Mi-Fa y Si-Do",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Las siete notas naturales (Do, Re, Mi, Fa, Sol, La, Si) no están a la misma distancia. Casi siempre hay un tono entre una y la siguiente, salvo en dos sitios."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Do–Re",
+        "Re–Mi",
+        "Mi–Fa",
+        "Fa–Sol",
+        "Sol–La",
+        "La–Si",
+        "Si–Do"
+       ],
+       "filas": [
+        [
+         "T",
+         "T",
+         "**S**",
+         "T",
+         "T",
+         "T",
+         "**S**"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Los semitonos naturales",
+       "md": "**Mi-Fa** y **Si-Do** están pegados. Por eso has visto que Fa está en el traste 1 de la 1.ª cuerda (Mi al aire) y Do en el traste 1 de la 2.ª (Si al aire). Las demás parejas tienen un traste libre en medio."
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "¿Qué hay en el traste libre?",
+       "md": "Entre Fa y Sol hay un traste: es otra nota. Se llama **Fa sostenido, Fa♯**: el Fa subido un semitono. El **sostenido (♯)** sube una nota un semitono, un traste más. También puede nombrarse desde arriba: el **bemol (♭)** baja un semitono, y Sol♭ es el mismo traste. Por eso has tocado Fa♯ en el traste 2 de la 1.ª."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "distancias",
+        "titulo": "La 2.ª cuerda, de Si a Re",
+        "cuerda": 2,
+        "desde": 0,
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "C",
+        "pasos": [
+         {
+          "a": 1,
+          "arco": "S",
+          "texto": "Si a Do: pegados, un semitono.",
+          "ms": 2600
+         },
+         {
+          "a": 3,
+          "arco": "T",
+          "texto": "Do a Re: un traste libre en medio, un tono.",
+          "ms": 2600
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t3.l3.p2",
+         "texto": "lo compruebas."
+        },
+        {
+         "paso": "n1.t4.l1.p1",
+         "texto": "con este dibujo se construye la escala mayor."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Recuerda las dos reglas: un traste es un semitono, dos trastes son un tono. Y entre las notas naturales solo Mi-Fa y Si-Do son semitonos."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En una misma cuerda vas del traste 5 al traste 7. ¿Qué distancia hay?",
+     "opciones": [
+      "Un semitono",
+      "Un tono",
+      "Dos tonos"
+     ],
+     "correcta": 1,
+     "porque": "Son dos trastes, y dos trastes son un tono.",
+     "pista": "Cuenta los trastes: cada uno es un semitono."
+    },
+    {
+     "tipo": "preguntas",
+     "n": 4
+    }
+   ]
+  },
+  "n1.t3.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Mi-Fa y Si-Do están por toda la guitarra. Encontrarlos en cualquier cuerda es tu primer mapa del diapasón: una vez que sabes dónde están, las demás notas se deducen."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Encuentra todas las parejas **Mi-Fa** y **Si-Do** en la 1.ª posición. Al pulsar oirás la distancia.",
+     "conjunto": [
+      "Mi",
+      "Fa",
+      "Si",
+      "Do"
+     ],
+     "clave": "C",
+     "cuerdas": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "hastaTraste": 4,
+     "final": "Siempre juntas: un traste de distancia."
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "En cada cuerda, tocar una pareja de notas pegadas y otra separada, diciendo cuál es cuál.",
+     "porque": "Las manos y los oídos aprenden juntos la misma distancia.",
+     "atencion": "Di S o T antes de tocarlas, no después.",
+     "empieza": "Al ritmo que quieras, sin metrónomo.",
+     "sube": "Lo haces en las seis cuerdas sin mirar la tabla."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes decir en qué cuerdas y trastes están Mi-Fa y Si-Do.",
+      "Reconoces de oído si es un paso pegado o normal."
+     ]
+    }
+   ]
+  },
+  "n1.t3.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una **escala** son las notas seguidas, en orden, desde una nota hasta su repetición más aguda. La de **Do mayor** son las siete notas naturales, de Do a Do. Es la primera que se aprende porque no lleva sostenidos ni bemoles. El porqué de ese nombre lo verás en el tramo siguiente."
+    },
+    {
+     "tipo": "grados",
+     "clave": "C",
+     "titulo": "Do mayor: pulsa cada nota"
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "recorrido",
+      "titulo": "Dónde está",
+      "clave": "C",
+      "trastes": [
+       0,
+       4
+      ],
+      "ms": 1000,
+      "notas": [
+       {
+        "c": 5,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 4,
+        "t": 0
+       },
+       {
+        "c": 4,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 4,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 3,
+        "t": 0
+       },
+       {
+        "c": 3,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 2,
+        "t": 0
+       },
+       {
+        "c": 2,
+        "t": 1,
+        "dedo": 1
+       }
+      ],
+      "final": "Mira los dos últimos pares: Mi-Fa (4.ª) y Si-Do (2.ª) son los semitonos."
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Do mayor, una octava, subiendo y bajando, con i-m apoyando.",
+     "porque": "Une lo que has aprendido: notas, dedos, apoyando y lectura.",
+     "atencion": "Un dedo por traste. Di el nombre de cada nota antes de tocarla.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Sale tres veces igual, con el mismo sonido en las cuerdas al aire y en las pisadas."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-do-mayor-1pos.json",
+     "titulo": "Do mayor, una octava",
+     "principal": "ambas",
+     "motivo": "Para ver la escala en el pentagrama y en la guitarra.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Las notas al aire suelen salir más fuertes que las pisadas: compensa."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suena igual al subir y al bajar.",
+      "No hay cortes entre una cuerda y la siguiente."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l1.p1",
+       "texto": "por qué esta escala es mayor."
+      },
+      {
+       "paso": "n1.t9.l2.p1",
+       "texto": "Do mayor en dos octavas."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "Corcheas",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Una figura más corta",
+       "md": "La **corchea** dura medio tiempo: dos corcheas caben en una negra. Se cuentan añadiendo una «y»: **1 y 2 y 3 y 4 y**. Una corchea lleva un corchete, y varias juntas se unen con una barra."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/rit-corcheas.json",
+       "titulo": "De negras a corcheas",
+       "principal": "tablatura",
+       "motivo": "Importa contar: tablatura con el pulso.",
+       "bpms": [
+        60
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "El puntillo",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Un punto que alarga",
+       "md": "El **puntillo** es un punto a la derecha de una nota. **Le añade la mitad de lo que dura.** No es algo nuevo que aprender: solo una suma."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ritmo",
+        "titulo": "Lo que añade el puntillo",
+        "tiempos": 3,
+        "por": 66,
+        "figuras": [
+         {
+          "d": 3,
+          "etiqueta": "blanca con puntillo",
+          "nombre": "Blanca con puntillo: tres tiempos."
+         },
+         {
+          "d": 1.5,
+          "etiqueta": "negra con puntillo",
+          "nombre": "Negra con puntillo: uno y medio."
+         },
+         {
+          "d": 0.5,
+          "etiqueta": "corchea",
+          "nombre": "La corchea, justo después."
+         },
+         {
+          "d": 1,
+          "etiqueta": "negra",
+          "nombre": "Negra."
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Figura",
+        "Dura",
+        "Con puntillo",
+        "Se cuenta"
+       ],
+       "filas": [
+        [
+         "Blanca",
+         "2 tiempos",
+         "2 + 1 = **3 tiempos**",
+         "1 2 3"
+        ],
+        [
+         "Negra",
+         "1 tiempo",
+         "1 + ½ = **1 tiempo y medio**",
+         "1 y 2"
+        ]
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/rit-puntillo.json",
+       "titulo": "Con y sin puntillo",
+       "principal": "partitura",
+       "motivo": "Aquí importa la figura: partitura.",
+       "bpms": [
+        60
+       ],
+       "notas": [
+        "En el {c:1} y el {c:2} hay blancas con puntillo, todo el compás de 3/4.",
+        "En el {c:3}, negra con puntillo y corchea: la corchea entra en la «y» del segundo tiempo."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Decir el ritmo en voz alta y después tocarlo.",
+       "porque": "La negra con puntillo suele salir como si fuera negra. Contar la «y» evita ese error.",
+       "atencion": "La corchea no cae en el tiempo 2: cae justo después.",
+       "empieza": "♩ = 50.",
+       "sube": "Coincides con el audio."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      },
+      {
+       "tipo": "completar",
+       "enunciado": "Completa:",
+       "partes": [
+        "Una blanca con puntillo dura ",
+        {
+         "correcta": "3",
+         "opciones": [
+          "2",
+          "3",
+          "4"
+         ]
+        },
+        " tiempos. Una negra con puntillo dura ",
+        {
+         "correcta": "1 y medio",
+         "opciones": [
+          "1",
+          "1 y medio",
+          "2"
+         ]
+        },
+        "."
+       ],
+       "pista": "Añade la mitad de lo que dura la figura.",
+       "final": "Suma la mitad, siempre."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t12.l4.p4",
+         "texto": "puntillo y semicorcheas."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Tu primer entrenamiento de oído con notas: saber si una melodía **sube o baja**. Parece fácil, pero es la base de lo demás: de repetir una melodía, de cantarla y de reconocer un intervalo. Oyes una vez, y decides."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo hacerlo",
+     "items": [
+      "Escucha las dos notas o la frase completa.",
+      "Tararéalas: la voz suele saber antes que la cabeza.",
+      "Decide si la última nota queda por encima o por debajo de la primera."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Sube o baja?",
+     "audio": {
+      "notas": [
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     "opciones": [
+      "Sube",
+      "Baja"
+     ],
+     "correcta": 0,
+     "porque": "De Do a Sol: sube.",
+     "pista": "Compara la segunda nota con la primera."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Y aquí?",
+     "audio": {
+      "notas": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ]
+     },
+     "opciones": [
+      "Sube",
+      "Baja"
+     ],
+     "correcta": 1,
+     "porque": "De Mi a Si: baja.",
+     "pista": "Compara la segunda nota con la primera."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Ahora una frase de tres notas.",
+     "audio": {
+      "notas": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "duracion": 0.7
+     },
+     "opciones": [
+      "Sube",
+      "Baja"
+     ],
+     "correcta": 0,
+     "porque": "Sol, La, Si: va subiendo.",
+     "pista": "¿La última es más aguda que la primera?"
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Otra.",
+     "audio": {
+      "notas": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "duracion": 0.7
+     },
+     "opciones": [
+      "Sube",
+      "Baja"
+     ],
+     "correcta": 1,
+     "porque": "Sol, Fa, Mi: va bajando.",
+     "pista": "¿La última es más aguda que la primera?"
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Y una con un pequeño giro: ¿cómo termina respecto a su principio?",
+     "audio": {
+      "notas": [
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "duracion": 0.65
+     },
+     "opciones": [
+      "Más arriba",
+      "Más abajo"
+     ],
+     "correcta": 0,
+     "porque": "Baja un momento, pero termina en Sol, por encima del Do del principio.",
+     "pista": "Fíjate solo en la primera y en la última."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l3.p3",
+       "texto": "reconocer intervalos."
+      },
+      {
+       "paso": "n1.t13.l5.p1",
+       "texto": "repetir una melodía de oído."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué aprendes con ella",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-sor-andante-op-31-n-1",
+       "md": "Tu primera obra con **melodía y bajo a la vez**. Es lo que acabas de practicar, ahora escrito en dos voces."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sor-op31-1.json",
+       "titulo": "Sor, op. 31 n.º 1: la obra entera",
+       "principal": "ambas",
+       "motivo": "Melodía y bajo escritos en dos voces: partitura y tablatura juntas.",
+       "bpms": [
+        60,
+        80
+       ],
+       "notas": [
+        "La A son los {c:1-16} y la B, los {c:17-32}; cada una se repite. El primer sol es una anacrusa, una nota que entra antes del primer compás.",
+        "En el {c:3} aparece la tensión: sol, fa, re sobre el bajo re. En el {c:11} sube un cromatismo: sol, fa♯, fa."
+       ]
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Qué mirar",
+        "Qué te dice"
+       ],
+       "filas": [
+        [
+         "Los dos números del principio",
+         "El compás: cuéntalo en voz alta"
+        ],
+        [
+         "Las plicas",
+         "Hacia arriba, melodía; hacia abajo, bajo"
+        ],
+        [
+         "Los bajos",
+         "Con líneas adicionales: La, Si y Do de la 5.ª, y Mi, Fa y Sol de la 6.ª"
+        ],
+        [
+         "Los números pequeños junto a las notas, si los hay",
+         "El dedo de la mano izquierda"
+        ]
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "Fuente: edición de F. Sor, op. 31, *Leçon I*, de dominio público (IMSLP). Los dedos son los de la edición; los que faltan y la mano derecha, propuesta de la academia."
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se trabaja",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por capas",
+       "items": [
+        "**Solo la melodía**, cantada y después con *m*, diciendo el nombre de las notas.",
+        "**Solo el bajo**, con *p*, contando.",
+        "**Las dos** en trozos de dos compases, muy despacio.",
+        "**Los planos**, cuando ya no te equivoques de notas."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Montar la obra por capas.",
+       "porque": "Cada capa es más sencilla que el conjunto. Así no aprendes los errores que aparecen cuando intentas hacer todo a la vez.",
+       "atencion": "La melodía delante y el bajo como una sombra.",
+       "empieza": "Con el tempo al que no tengas que parar, como ♩ = 50.",
+       "sube": "El trozo sale tres veces seguidas."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-sor-andante-op-31-n-1",
+       "bpm": 50
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Tocas la obra sin parar.",
+        "La melodía se oye por encima del bajo.",
+        "Cuentas el compás mientras tocas, al menos por dentro."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t3.l5.p4",
+         "texto": "la comprobación."
+        },
+        {
+         "paso": "n1.t5.l4.p4",
+         "texto": "el mismo problema en *Lágrima*: si el acompañamiento tapa."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Hay una idea de digitación que verás en muchas obras: **usar una cuerda al aire para ganar tiempo**. Mientras la cuerda suena sola, la mano izquierda queda libre y puede ir al sitio siguiente sin cortar nada."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué funciona",
+     "md": "Una nota pisada se corta si levantas el dedo. Una cuerda al aire sigue sonando aunque la mano se mueva. Por eso, lo más inteligente es hacer los cambios justo cuando suena una cuerda al aire."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-al-aire-cambio.json",
+     "titulo": "Ejemplo escrito para la academia: no es de Sor",
+     "principal": "tablatura",
+     "motivo": "Es una digitación: tablatura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "En el {c:1}, mientras suena el Mi al aire, el dedo 3 tiene tiempo de pasar de la 5.ª a la 6.ª cuerda.",
+      "Compruébalo: el bajo cambia en el {c:2}, y la melodía no se ha cortado."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La melodía no se corta cuando la mano cambia de sitio.",
+      "Sabes decir qué cuerda al aire te da tiempo para el cambio."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op31-1.json",
+     "titulo": "Los primeros compases de la obra",
+     "principal": "ambas",
+     "motivo": "Para buscar la idea en la partitura.",
+     "bpms": [
+      60
+     ],
+     "compases": [
+      0,
+      8
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Búscalo en la obra: en el {c:1}, el bajo do queda sonando mientras la melodía pasa de mi a do. Mira en la partitura qué cuerdas al aire aparecen justo antes de que cambie el bajo."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l4.p1",
+       "texto": "cuando no hay cuerda al aire: el dedo común."
+      },
+      {
+       "paso": "n1.t5.l2.p1",
+       "texto": "y el dedo guía."
+      }
+     ]
+    }
+   ],
+   "verificado": true
+  },
+  "n1.t3.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La frase",
+     "md": "La música también tiene frases. Una **frase** es un trozo que se entiende por sí mismo, como lo que dices sin tomar aire. Al terminar, la música **respira**: es lo que hace que suene natural."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Pistas de que una frase termina",
+      "Por qué"
+     ],
+     "filas": [
+      [
+       "Una nota más larga",
+       "Es el sitio donde descansa la melodía"
+      ],
+      [
+       "Vuelve una nota que suena a casa",
+       "Ya llegó"
+      ],
+      [
+       "Lo que viene después empieza como el principio",
+       "Empieza una frase nueva"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Frase que queda abierta",
+       "notas": [
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         3
+        ]
+       ],
+       "duracion": 0.7
+      },
+      {
+       "etiqueta": "Frase que termina",
+       "notas": [
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         2,
+         1
+        ]
+       ],
+       "duracion": 0.7
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Escucha esta frase. ¿Suena a terminada?",
+     "audio": {
+      "notas": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "duracion": 0.8
+     },
+     "opciones": [
+      "Sí: termina en Do y descansa",
+      "No: se queda esperando algo"
+     ],
+     "correcta": 0,
+     "porque": "Do es la nota de casa en esta escala: el oído descansa ahí.",
+     "pista": "¿Te quedas esperando algo más?"
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Busca las respiraciones en tu partitura",
+     "items": [
+      "Canta o tararea la melodía de la obra, sin tocar.",
+      "Coge aire donde te lo pida. Eso suele ser el final de una frase.",
+      "Marca una coma a lápiz sobre esa nota.",
+      "Al tocar, deja ahí un mínimo de aire: la nota siguiente empieza limpia, sin parar el pulso."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op31-1.json",
+     "titulo": "Busca las respiraciones aquí",
+     "principal": "ambas",
+     "motivo": "Para marcar las frases.",
+     "bpms": [
+      60
+     ],
+     "compases": [
+      0,
+      8
+     ],
+     "notas": [
+      "Escúchalo: la frase llega al {c:4} y se abre otra. Otra pausa llega en el {c:8}."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l5.p1",
+       "texto": "el punto más alto de una frase."
+      },
+      {
+       "paso": "n1.t13.l4.p3",
+       "texto": "frases que preguntan y responden."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t3.l5.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Dos pruebas. Si alguna falla, nada se bloquea: tienes abajo dónde se trabaja."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "1. Los dos planos",
+     "items": [
+      "El ejercicio de melodía y bajo, los tres compases, a ♩ = 60."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/tec-melodia-bajo.json",
+     "titulo": "Ver el ejercicio",
+     "principal": "tablatura",
+     "motivo": "Para comprobar: tablatura.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "2. La obra",
+     "items": [
+      "El *Andante* de Sor entero, sin parar."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que ya te sale",
+     "items": [
+      "La melodía queda delante sin que el bajo desaparezca.",
+      "La obra, entera y sin parar.",
+      "Respiras al final de cada frase, sin perder el pulso."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l1.p3",
+       "texto": "si fallan los planos."
+      },
+      {
+       "paso": "n1.t3.l2.p3",
+       "texto": "si falla la lectura de dos voces."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

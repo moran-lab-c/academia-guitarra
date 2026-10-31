@@ -6,7 +6,7 @@
 // Formato del archivo (todo lo marcado «opcional» puede faltar):
 //   { titulo, compas: '3/4', armadura: 'E' | 'Em' | 'C' …, afinacion: ['E4','B3','G3','D3','A2','E2'] (opcional),
 //     tempo: { bpm, figura: '4', naturaleza } (opcional), parcial: { transcritos, total, nota } (opcional),
-//     repetir: true (barras de repetición), conteo: true (el pulso debajo: 1 y 2 y…),
+//     repetir: true (barras de repetición), conteo: true (el pulso debajo: 1 y 2 y…), primerCompas: 9 (si es una parte de la obra),
 //     compases: [{ pos: 'V' | 'C II' (opcional), voces: [[nota, …], …] }] }
 //   nota: { d: '1'|'2'|'4'|'8'|'16'|'32', p: true (puntillo), s: true (silencio) | c: cuerda 1-6, t: traste 0-24 |
 //           acorde: [{ c, t }],  dedo: 0-4, mano: 'p'|'i'|'m'|'a'|'c', lig: 'h'|'p' (ligado a la siguiente),
@@ -143,6 +143,9 @@ export function prepararNotacion(p, { compases = null } = {}) {
   const arm = armadura(p.armadura ?? 'C');
   const afinacion = (p.afinacion ?? AFINACION).map(midiDe);
   const total = p.compases.length;
+  // Un fragmento se pide con los números de la obra; dentro, se cuenta desde el primer compás del archivo.
+  const antes0 = (p.primerCompas ?? 1) - 1;
+  if (compases) compases = compases.map(x => x - antes0);
   const [desde, hasta] = compases ? [Math.max(1, compases[0]), Math.min(total, compases[1])] : [1, total];
   const avisos = [];
   if (compases && (compases[0] > total || desde > hasta)) {
@@ -160,7 +163,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
         const antes = k > 0 ? voz[k - 1] : i > desde - 1 ? p.compases[i - 1].voces[v]?.at(-1) : null;
         const nota = {
           duracion: String(n.d), puntillo: !!n.p, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
-          dedo: n.dedo ?? null, rotulo: n.rotulo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
+          dedo: n.dedo ?? null, dedos: n.dedos ?? null, rotulo: n.rotulo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
           ligadaDesdeAntes: !n.s && !!antes?.tie,
         };
         inicio += ticks(n);
@@ -189,7 +192,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
       });
       delete n._g;
     }
-    salida.push({ numero: i + 1, pos: m.pos ?? null, voces });
+    salida.push({ numero: i + 1 + antes0, pos: m.pos ?? null, voces });
   }
   return {
     ok: true, errores: [], titulo: p.titulo ?? null, compas: compasEn(p.compas), compasVisible: p.compasVisible !== false, armadura: arm.clave, tempo: p.tempo ?? null,

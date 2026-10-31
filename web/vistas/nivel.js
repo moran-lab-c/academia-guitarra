@@ -28,7 +28,7 @@ export default function nivel({ id } = {}) {
   const numero = id ? Number(String(id).replace('nivel:', '')) : (cur.nivel ?? 1);
   const niv = ind.niveles.find(n => n.numero === numero) ?? ind.niveles[0];
   const esActual = niv.numero === (cur.nivel ?? 1);
-  const dest = continuar(ind, esActual ? cur : { ...cur, nivel: niv.numero, posicion: null });
+  const dest = continuar(ind, esActual ? cur : { ...cur, nivel: niv.numero });
   const r = resumenNivel(ind, cur, niv.numero);
   const encargo = (datos().estado.tareasProfesor || []).find(t => t.estado !== 'hecha' && t.estado !== 'cancelada');
   const atril = enElAtril(ind, cur);

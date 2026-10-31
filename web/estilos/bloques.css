@@ -189,3 +189,19 @@ label.bien__item { display: flex; flex-direction: row; gap: 10px; align-items: f
 .figura { max-width: 560px; }
 .figura img { display: block; width: 100%; height: auto; }
 .figura figcaption { margin-top: 6px; }
+
+/* El zoom del mástil: los trastes se abren. */
+.mastil__movil { transition: transform .8s cubic-bezier(.3,.7,.2,1), opacity .4s; }
+@media (prefers-reduced-motion: reduce) { .mastil__movil { transition: none; } }
+
+/* El ritmo: una barra por nota, sobre los tiempos del compás. */
+.ritmo__svg { display: block; width: 100%; height: auto; max-width: 760px; }
+.ritmo__tiempo { stroke: var(--borde); stroke-width: 1; }
+.ritmo__fuerte { stroke: var(--texto-3); stroke-width: 1.5; }
+.ritmo__num { fill: var(--texto-3); font: 12px 'Courier Prime', monospace; }
+.ritmo__barra { fill: var(--sup-3); transition: fill .15s; }
+.ritmo__barra.es-oida { fill: #5C8F6B; }
+.ritmo__barra.es-ahora { fill: var(--verde); }
+.ritmo__barra.es-fuerte { stroke: var(--texto); stroke-width: 1.5; }
+.ritmo__nombre { fill: var(--texto); font-size: 12px; pointer-events: none; }
+.ritmo__barra.es-ahora + .ritmo__nombre { fill: var(--tinta); font-weight: 700; }

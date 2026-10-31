@@ -228,6 +228,41 @@ const ESCENAS = {
     return { trastes: rangoDe([acorde]), boca: true, cuadros };
   },
 
+  // Un ejercicio de principio a fin: el fragmento de mástil, el zoom a la zona, cada dedo que aparece, la secuencia con lo que hace
+  // cada mano, y el resultado. notas: [{ c, t, dedo, mano, con: [otra nota a la vez], texto }]. Un dedo es una sola marca: si cambia de
+  // sitio se le ve viajar, y si no se mueve se queda puesto. Sirve para escalas, ligados, dedo guía, cruces y trémolo.
+  ejercicio({ notas, clave = 'C', trastes = [0, 12], zoom = null, ms = 850, inicio, final }) {
+    const todas = notas.flatMap(n => [n, ...(n.con ?? [])]);
+    const conMano = todas.some(n => n.mano);
+    const manos = conMano ? [...new Map(todas.filter(n => n.mano).map(n => [n.c, { c: n.c, letra: n.mano }])).values()] : undefined;
+    const marca = n => (n.dedo
+      ? { k: `d${n.dedo}`, c: n.c, t: n.t, dedo: n.dedo, nota: notaEn(n.c, n.t, clave) }
+      : { k: `a${n.c}`, c: n.c, t: 0, aire: true, nota: notaEn(n.c, 0, clave) });
+    const cuadros = [];
+    if (zoom) {
+      cuadros.push({ base: 1, marcas: [], ms: 1600, texto: inicio ?? 'Este es el mástil. Vamos a acercarnos a la zona donde se toca.' });
+      cuadros.push({ base: 1, marcas: [], zoom, ms: 1500, texto: `Aquí: ${zoom[0] <= 1 ? 'al principio del mástil' : `del traste ${zoom[0]} al ${zoom[1]}`}.` });
+    }
+    // Cada dedo, de uno en uno, donde va a empezar.
+    const puestos = new Map();
+    for (const n of todas) if (n.dedo && !puestos.has(n.dedo)) {
+      puestos.set(n.dedo, marca(n));
+      cuadros.push({ base: 1, marcas: [...puestos.values()], zoom, ms: 1500, suena: [midiEn(n.c, n.t)], texto: `Dedo ${n.dedo}: ${ordinal(n.c)} cuerda, traste ${n.t}. ${notaEn(n.c, n.t, clave)}.` });
+    }
+    // La secuencia: los dedos siguen donde se quedaron y se marca lo que suena.
+    const vivos = new Map();
+    for (const n of notas) {
+      const grupo = [n, ...(n.con ?? [])];
+      for (const x of grupo) if (x.dedo) vivos.set(x.dedo, marca(x));
+      const ahora = new Set(grupo.map(x => marca(x).k));
+      const lista = [...vivos.values(), ...grupo.filter(x => !x.dedo).map(marca)].map(m => (ahora.has(m.k) ? { ...m, rol: 'ahora' } : m));
+      cuadros.push({ base: 1, marcas: lista, zoom, manos, pulso: n.c, pulsos: grupo.map(x => x.c), boca: conMano, ms: n.ms ?? ms, suena: grupo.map(x => midiEn(x.c, x.t)),
+        texto: n.texto ?? grupo.map(x => `${x.mano ? `${x.mano}: ` : ''}${ordinal(x.c)}${x.t ? `, traste ${x.t}, dedo ${x.dedo}` : ' al aire'} · ${notaEn(x.c, x.t, clave)}`).join('  +  ') });
+    }
+    cuadros.push({ base: 1, marcas: [...vivos.values()], zoom, manos, ms: 2400, suena: [], texto: final ?? 'Ahora tócalo tú, igual de despacio.' });
+    return { trastes, boca: conMano, cuadros };
+  },
+
   // Cuadros escritos a mano para lo que no es un patrón (la resolución del tritono, p. ej.). Las notas se calculan igual.
   libre({ trastes = [0, 4], clave = 'C', cuadros }) {
     return { trastes, cuadros: cuadros.map(q => ({
@@ -238,8 +273,19 @@ const ESCENAS = {
   },
 };
 
-export const TIPOS_ESCENA = Object.keys(ESCENAS);
+// El ritmo, sin mástil: cada nota es una barra que ocupa lo que dura, sobre los tiempos del compás. Lo dibuja web/componentes/ritmo.js.
+// figuras: [{ d: duración en negras, nota: [cuerda, traste], fuerte, nombre }]; tiempos: cuántos tiene el compás; agrupar: cada cuántos se marca.
+export function escenaRitmo({ figuras, tiempos = 4, por = 60 }) {
+  let t = 0;
+  const lista = figuras.map(f => { const x = { ...f, t }; t += f.d; return x; });
+  const cuadros = lista.map((f, i) => ({ encendidas: i + 1, suena: [midiEn(f.nota?.[0] ?? 1, f.nota?.[1] ?? 0)], ms: Math.max(350, f.d * (60000 / por)), texto: f.texto ?? `${f.nombre ?? ''}` }));
+  cuadros.push({ encendidas: lista.length, ms: 1800, texto: 'Todo junto, sobre el pulso.', suena: [] });
+  return { lista, tiempos, largo: t, cuadros };
+}
+
+export const TIPOS_ESCENA = [...Object.keys(ESCENAS), 'ritmo'];
 export function escena(spec) {
+  if (spec?.tipo === 'ritmo') return escenaRitmo(spec);
   const crear = ESCENAS[spec?.tipo];
   return crear ? crear(spec) : null;
 }
@@ -247,6 +293,7 @@ export function escena(spec) {
 // Los errores de una descripción de escena (vacío si está bien): acordes que existen, cuerdas y trastes posibles.
 export function validarEscena(spec) {
   const err = [];
+  if (spec?.tipo === 'ritmo') { const e = escenaRitmo(spec); return Math.abs((e.largo / e.tiempos) % 1) < 1e-9 ? [] : [`el ritmo dura ${e.largo} tiempos y no llena compases de ${e.tiempos}`]; }
   if (!ESCENAS[spec?.tipo]) return [`escena desconocida: ${spec?.tipo}`];
   for (const n of [spec.acorde, spec.de, spec.a]) if (n && !ACORDES[n]) err.push(`acorde desconocido: ${n}`);
   if (err.length) return err;

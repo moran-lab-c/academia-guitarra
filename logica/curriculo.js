@@ -1,7 +1,12 @@
-// El recorrido del currículo aprobado (V3.1): Nivel → Tramo → Lección → Paso. Sabe dónde está el alumno, qué hace
+// El recorrido del currículo aprobado (V3.1): Nivel → Tramo → Lección → Paso. Sabe qué le queda al alumno, qué hace
 // «Continuar», cuánto lleva y qué toca repasar. Lógica pura: los datos salen de contenido/curriculo/clasica.json y el
 // progreso, de estado.curriculo:
-//   { nivel, posicion: id del paso, pasos: { id: { e: 'hecho'|'practica', t: día } }, repasos: { id: { n, prox } }, seguidos }
+//   { nivel, pasos: { id: { e: 'hecho'|'practica', t: día } }, repasos: { id: { n, prox } }, seguidos, pantallas: { id: n } }
+// Tres cosas distintas, y solo una deja huella en el progreso:
+//   VISITAR: entrar en un paso, por cualquier camino. No cambia nada.
+//   COMPLETAR: pulsar el botón del paso (marcar). Es lo único que hace avanzar.
+//   CONTINUAR: el primer paso pendiente del nivel, en el orden de la ruta. No depende de lo que se haya mirado.
+// (El antiguo campo «posicion» guardaba lo último visitado; ya no se escribe ni se lee, aunque siga en datos viejos.)
 import { dia } from './fechas.js';
 
 // Los días que pasan hasta volver a ver lo aprendido [Decisión, los mismos que el dominio]. El alumno solo ve «Para repasar».
@@ -29,7 +34,7 @@ export function indexarCurriculo(datos) {
   return { ...datos, pasos, porId, lecciones, obraPorId: new Map(datos.obras.map(o => [o.id, o])) };
 }
 
-export const progresoVacio = () => ({ nivel: 1, posicion: null, pasos: {}, repasos: {}, seguidos: 0 });
+export const progresoVacio = () => ({ nivel: 1, pasos: {}, repasos: {}, seguidos: 0 });
 const de = cur => cur ?? progresoVacio();
 const pasado = (cur, id) => !!de(cur).pasos?.[id];
 
@@ -38,10 +43,15 @@ const delNivel = (ind, n) => ind.pasos.filter(e => e.nivel.numero === n);
 // El nivel en el que está: el que dijo por última vez o el primero.
 export const nivelActual = (ind, cur) => ind.niveles.find(n => n.numero === de(cur).nivel) ?? ind.niveles[0];
 
-// El primer paso sin hacer de un nivel a partir de un punto; si no queda ninguno detrás, vuelve al principio del nivel.
-function siguienteSinHacer(ind, cur, n, desde = -1) {
-  const pasos = delNivel(ind, n);
-  return pasos.find(e => e.indice > desde && !pasado(cur, e.paso.id)) ?? pasos.find(e => !pasado(cur, e.paso.id)) ?? null;
+// El siguiente punto de la ruta: el primer paso sin completar del nivel, siempre desde su principio.
+export const primerPendiente = (ind, cur, n) => delNivel(ind, n).find(e => !pasado(cur, e.paso.id)) ?? null;
+
+// Qué es este paso para su ruta. actual: el que toca; adelantado: está sin hacer y aún no toca (o es de otro nivel);
+// consulta: ya lo ha completado y ha vuelto a mirarlo. De aquí salen los botones del paso.
+export function papelDelPaso(ind, curso, entrada) {
+  const cur = de(curso);
+  if (pasado(cur, entrada.paso.id)) return 'consulta';
+  return primerPendiente(ind, cur, nivelActual(ind, cur).numero)?.paso.id === entrada.paso.id ? 'actual' : 'adelantado';
 }
 
 // Lo que toca repasar hoy, lo más antiguo primero.
@@ -56,10 +66,7 @@ export function paraRepasar(ind, cur, hoy = dia(new Date())) {
 export function continuar(ind, curso, hoy = dia(new Date())) {
   const cur = de(curso);
   const nivel = nivelActual(ind, cur);
-  const pos = cur.posicion ? ind.porId.get(cur.posicion) : null;
-  // A mitad: el paso exacto donde lo dejó.
-  if (pos && pos.nivel.numero === nivel.numero && !pasado(cur, pos.paso.id)) return { accion: 'paso', entrada: pos, etiqueta: 'Continuar', nivel };
-  const proximo = siguienteSinHacer(ind, cur, nivel.numero, pos && pos.nivel.numero === nivel.numero ? pos.indice : -1);
+  const proximo = primerPendiente(ind, cur, nivel.numero);
   // Los repasos se intercalan entre lecciones, nunca a mitad de una, y como mucho dos seguidos.
   const entreLecciones = !proximo || proximo.enLeccion === 0;
   if (entreLecciones && (cur.seguidos ?? 0) < MAX_REPASOS_SEGUIDOS) {
@@ -74,18 +81,11 @@ export function continuar(ind, curso, hoy = dia(new Date())) {
   return otro ? { accion: 'siguiente-nivel', entrada: null, etiqueta: `Empezar el nivel ${otro.numero}`, nivel, otro } : { accion: 'fin', entrada: null, etiqueta: null, nivel };
 }
 
-// Abrir un paso: desde aquí sigue «Continuar».
-export function abrir(cur, entrada) {
-  cur.posicion = entrada.paso.id;
-  cur.nivel = entrada.nivel.numero;
-}
-
 // resultado: 'hecho' (Lo he aprendido, o Continuar en un paso de leer) o 'practica' (Sigo practicando).
 export function marcar(cur, entrada, resultado, hoy = dia(new Date())) {
   const id = entrada.paso.id;
   (cur.pasos ??= {})[id] = { e: resultado, t: hoy };
-  cur.posicion = id;
-  cur.nivel = entrada.nivel.numero;
+  if (cur.pantallas) delete cur.pantallas[id];
   cur.seguidos = 0;
   if (resultado === 'hecho' && seRepasa(entrada.paso) && !cur.repasos?.[id]) (cur.repasos ??= {})[id] = { n: 0, prox: sumarDias(hoy, INTERVALOS[0]) };
 }
@@ -107,10 +107,9 @@ export function responderRepaso(cur, entrada, respuesta, hoy = dia(new Date())) 
   }
 }
 
-// Empezar otro nivel a mano (sin bloquear nada: todo se puede abrir).
+// Empezar otro nivel a mano (sin bloquear nada: todo se puede abrir). Es lo único que cambia de nivel: mirar un paso de otro, no.
 export function cambiarNivel(cur, n) {
   cur.nivel = n;
-  cur.posicion = null;
 }
 
 // Cuánto lleva de un nivel: lo que ve el alumno y nada más.

@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { generar } from '../herramientas/generar-curriculo.mjs';
-import { indexarCurriculo, continuar, marcar, abrir, responderRepaso, resumenNivel, enElAtril, paraRepasar, progresoObra, progresoVacio, esDePractica, INTERVALOS, validarCurriculo } from '../logica/curriculo.js';
+import { indexarCurriculo, continuar, marcar, responderRepaso, resumenNivel, enElAtril, paraRepasar, progresoObra, progresoVacio, esDePractica, INTERVALOS, validarCurriculo } from '../logica/curriculo.js';
 import { ACORDES, acordesDe, ventana } from '../logica/acordes.js';
 import { PREGUNTAS, preguntasDelPaso } from '../logica/preguntasPaso.js';
 import { validarEstado, estadoInicial } from '../logica/esquema.js';
@@ -59,34 +59,12 @@ test('Continuar: la primera vez, Comenzar por el primer paso', () => {
   assert.equal(d.entrada.paso.id, 'n1.t1.l1.p1');
 });
 
-test('Continuar: a mitad de una lección, el paso exacto donde lo dejó', () => {
-  const c = nuevo();
-  abrir(c, ind.porId.get('n1.t4.l2.p3'));
-  const d = continuar(ind, c);
-  assert.equal(d.entrada.paso.id, 'n1.t4.l2.p3');
-  assert.equal(d.etiqueta, 'Continuar');
-});
-
 test('Continuar: al marcar un paso pasa al siguiente, y «Sigo practicando» también avanza', () => {
   const c = nuevo();
   marcar(c, ind.porId.get('n1.t1.l1.p1'), 'hecho', '2026-11-01');
   assert.equal(continuar(ind, c, '2026-11-01').entrada.paso.id, 'n1.t1.l1.p2');
   marcar(c, ind.porId.get('n1.t1.l1.p2'), 'practica', '2026-11-01');
   assert.equal(continuar(ind, c, '2026-11-01').entrada.paso.id, 'n1.t1.l1.p3');
-});
-
-test('Continuar: al volver atrás a mirar algo ya hecho sigue por lo que falta', () => {
-  const c = nuevo();
-  for (const e of ind.pasos.slice(0, 5)) marcar(c, e, 'hecho', '2026-11-01');
-  abrir(c, ind.pasos[1]);
-  assert.equal(continuar(ind, c, '2026-11-01').entrada.paso.id, ind.pasos[5].paso.id);
-});
-
-test('nada se bloquea: se puede abrir cualquier paso de cualquier nivel', () => {
-  const c = nuevo();
-  abrir(c, ind.porId.get('n7.t4.l1.p1'));
-  assert.equal(c.nivel, 7);
-  assert.equal(continuar(ind, c).entrada.paso.id, 'n7.t4.l1.p1');
 });
 
 test('terminado el nivel, propone el siguiente; terminado todo, nada', () => {
@@ -104,10 +82,10 @@ test('los repasos entran solos entre lecciones, nunca a mitad, y como mucho dos 
   const c = nuevo();
   const ejercicios = ind.pasos.filter(e => e.paso.tipo === 'Ejercicio' && e.paso.ejercicios).slice(0, 4);
   for (const e of ejercicios) marcar(c, e, 'hecho', '2026-11-01');
-  const dentro = ind.pasos.find(e => e.enLeccion === 1 && !c.pasos[e.paso.id] && !c.pasos[e.leccion.pasos[0].id]);
-  abrir(c, dentro);
+  // A mitad de una lección no interrumpe: hecho el primer paso, queda el segundo.
+  marcar(c, ind.pasos[0], 'hecho', '2026-11-01');
   assert.equal(continuar(ind, c, '2026-12-30').accion, 'paso', 'a mitad de una lección no interrumpe');
-  c.posicion = null;
+  for (const p of ind.pasos[0].leccion.pasos.slice(1)) marcar(c, ind.porId.get(p.id), 'hecho', '2026-11-01');
   const r1 = continuar(ind, c, '2026-12-30');
   assert.equal(r1.accion, 'repaso');
   responderRepaso(c, r1.entrada, 'bien', '2026-12-30');

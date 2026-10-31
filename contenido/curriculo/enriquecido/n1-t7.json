@@ -387,6 +387,65 @@
      "sube": "Sale sin pararte en Re♯ ni en Do♯."
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Mi menor armónica: la primera octava",
+      "clave": "Em",
+      "trastes": [
+       0,
+       8
+      ],
+      "zoom": [
+       0,
+       5
+      ],
+      "ms": 700,
+      "notas": [
+       {
+        "c": 6,
+        "t": 0
+       },
+       {
+        "c": 6,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 6,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 5,
+        "t": 0
+       },
+       {
+        "c": 5,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 5,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 4,
+        "t": 1,
+        "dedo": 1,
+        "texto": "Re♯: la sensible. 4.ª, traste 1, dedo 1"
+       },
+       {
+        "c": 4,
+        "t": 2,
+        "dedo": 2
+       }
+      ],
+      "final": "Mira el dedo 1 del Re♯: es lo único que cambia respecto a la natural."
+     }
+    },
+    {
      "tipo": "notacion",
      "fuente": "notacion/esc-mi-menor-3-formas.json",
      "titulo": "Mi menor: natural, armónica y melódica",
@@ -1230,23 +1289,32 @@
     },
     {
      "tipo": "pasos",
-     "titulo": "Mira tu partitura",
+     "titulo": "Mira la parte B",
      "items": [
-      "Busca dónde empieza la B: cambia la armadura, o aparecen becuadros.",
-      "Recorre las corcheas con el dedo. ¿Qué notas forman una línea que podrías cantar?",
-      "Escucha la B en una [grabación](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra) siguiendo la partitura.",
+      "Empieza en el compás 9: un becuadro cancela los sostenidos y queda uno solo, Fa♯.",
+      "Recorre las corcheas con el dedo: ¿qué notas forman una línea que podrías cantar?",
+      "Escúchala abajo.",
       "Cántala con *la-la*."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-b.json",
+     "titulo": "La parte B",
+     "principal": "ambas",
+     "motivo": "Sigue la música mientras suena.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "En los {c:13-14} la melodía vuelve a subir, ahora en menor."
      ]
     },
     {
      "tipo": "concepto",
      "titulo": "El becuadro",
      "md": "Si tu edición no cambia la armadura, verás **becuadros (♮)** en notas que antes llevaban sostenido. El becuadro **anula** la alteración: Sol♯ pasa a ser Sol natural."
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Sin la edición comprobada, la academia no puede indicarte compás a compás cuáles son las notas de la voz principal. Coméntalo con tu profesor."
     }
    ]
   },
@@ -1260,16 +1328,25 @@
      "tipo": "pasos",
      "titulo": "Cómo prepararla",
      "items": [
-      "Localízala en tu edición: suele indicarse con C o ½C, y un número romano para el traste.",
+      "Alier marca dos: la cejilla en el II en el {c:9}, y en el VII en el {c:12}.",
       "Mira qué acorde pide y cómo es la nota anterior.",
       "Practica solo el paso: lo de antes y la cejilla, repetido y muy despacio.",
       "Sal antes de tiempo: el dedo tiene que llegar plano al traste."
      ]
     },
     {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Dónde se usa exactamente la media cejilla está por comprobar con la edición de Alier. No te damos un compás sin haberlo visto."
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-b.json",
+     "titulo": "Las cejillas de la B",
+     "principal": "tablatura",
+     "motivo": "Es una digitación: tablatura.",
+     "bpms": [
+      44
+     ],
+     "compases": [
+      9,
+      12
+     ]
     },
     {
      "tipo": "bien",
@@ -1278,7 +1355,8 @@
       "La cejilla llega a tiempo y suena limpia."
      ]
     }
-   ]
+   ],
+   "verificado": true
   },
   "n1.t7.l4.p3": {
    "bloques": [
@@ -1301,14 +1379,28 @@
      "sube": "Tres veces seguidas, con la línea delante."
     },
     {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-b.json",
+     "titulo": "Compases 9-12",
+     "principal": "tablatura",
+     "motivo": "Es técnica y digitación: tablatura.",
+     "bpms": [
+      44,
+      60
+     ],
+     "compases": [
+      9,
+      12
+     ],
+     "notas": [
+      "El {c:9} lleva un arrastre del sol al do con el dedo 2. La app lo muestra como dos notas; hazlo resbalando.",
+      "En el {c:10}, el mi al aire sigue sonando sobre las terceras."
+     ]
+    },
+    {
      "tipo": "metronomo",
      "clave": "o1-tarrega-lagrima",
      "bpm": 44
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "La tablatura de la B aún no está en la app. Si quieres, escribe cuerda y traste a lápiz en tu partitura."
     },
     {
      "tipo": "bien",
@@ -1333,6 +1425,21 @@
     {
      "tipo": "texto",
      "md": "Mismo método. Fíjate en cómo termina: al final de la B, la música tiene que llevarte de vuelta a la A, y ahí suele estar la dominante, el Si7."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-b.json",
+     "titulo": "Compases 13-16",
+     "principal": "tablatura",
+     "motivo": "Es técnica y digitación: tablatura.",
+     "bpms": [
+      44,
+      60
+     ],
+     "compases": [
+      13,
+      16
+     ]
     },
     {
      "tipo": "escuchar",

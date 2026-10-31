@@ -48,7 +48,7 @@ test('lo que se puede oír tiene audio y la tablatura enseña a tocar', () => {
   for (const def of Object.values(datos.enriquecido)) for (const b of bloquesDe(def).filter(x => x.tipo === 'notacion')) {
     const j = notaciones.get(b.fuente);
     for (const m of j.compases) for (const n of m.voces.flat()) {
-      if (n.acorde) { assert.ok(n.rotulo || m.voces.flat().some(x => x.rotulo), `${b.fuente}: acorde sin nombre`); continue; }
+      if (n.acorde) { assert.ok(b.fuente.includes('obra-') || n.rotulo || m.voces.flat().some(x => x.rotulo), `${b.fuente}: acorde sin nombre`); continue; }
       if (n.t > 0) assert.ok(n.dedo, `${b.fuente}: nota en el traste ${n.t} sin dedo`);
     }
     // Cada nota pulsada lleva su dedo de la derecha; la que llega por un ligado no se pulsa.
@@ -212,7 +212,7 @@ test('la escena de un acorde sigue el orden pedido y termina con el acorde compl
 });
 
 test('la escena reutilizable sirve para todos sus tipos', () => {
-  assert.deepEqual(TIPOS_ESCENA.sort(), ['acorde', 'cambio', 'distancias', 'libre', 'manoDerecha', 'recorrido']);
+  assert.deepEqual(TIPOS_ESCENA.sort(), ['acorde', 'cambio', 'distancias', 'ejercicio', 'libre', 'manoDerecha', 'recorrido', 'ritmo']);
   const c = escena({ tipo: 'cambio', de: 'Si7', a: 'Mi' });
   const d2 = q => q.marcas.find(m => m.k === 'd2');
   assert.deepEqual([d2(c.cuadros[0]).c, d2(c.cuadros[0]).t], [d2(c.cuadros.at(-1)).c, d2(c.cuadros.at(-1)).t], 'el dedo 2 se queda donde está');

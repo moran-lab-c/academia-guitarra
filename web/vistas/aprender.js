@@ -3,7 +3,7 @@
 import { h } from '../nucleo/dom.js';
 import { datos, curriculo, cambiar, ctx } from '../nucleo/almacen.js';
 import { enlace } from '../nucleo/rutas.js';
-import { abrir, marcar, responderRepaso, esDePractica, progresoVacio } from '../../logica/curriculo.js';
+import { marcar, responderRepaso, esDePractica, papelDelPaso, progresoVacio } from '../../logica/curriculo.js';
 import { acordesDe } from '../../logica/acordes.js';
 import { PREGUNTAS } from '../../logica/preguntasPaso.js';
 import { formatoPara } from '../../logica/recomendador.js';
@@ -27,17 +27,15 @@ export default function aprender({ id }, { repaso = false } = {}) {
   if (!e) return h('p', { class: 'suave' }, 'Este paso no existe.');
   const { paso, leccion, tramo, nivel, enLeccion } = e;
   const cur = datos().estado.curriculo ?? progresoVacio();
-  // Desde aquí sigue «Continuar» (también si ha vuelto atrás a mirar algo). No en un repaso: no le mueve de donde iba.
-  if (!repaso && cur.posicion !== id) queueMicrotask(() => { cambiar(est => { abrir((est.curriculo ??= progresoVacio()), e); }); });
-
+  // Entrar en un paso no cambia el progreso: solo lo completa su botón.
   const anterior = enLeccion > 0 ? leccion.pasos[enLeccion - 1] : null;
   const estado = cur.pasos?.[id]?.e;
   // Un paso enriquecido puede tener varias pantallas: se avanza por partes y el botón del paso sale al final. Nada se bloquea.
   const partes = !repaso ? pantallasDe(ind.enriquecido?.[id]) : [];
-  const parte = partes.length ? Math.min(cur.pantalla?.id === id ? cur.pantalla.n : 0, partes.length - 1) : 0;
-  const irParte = n => () => { cambiar(est => { (est.curriculo ??= progresoVacio()).pantalla = { id, n }; }); document.querySelector('.pantalla-paso')?.scrollIntoView(); };
+  const parte = partes.length ? Math.min(cur.pantallas?.[id] ?? 0, partes.length - 1) : 0;
+  const irParte = n => () => { cambiar(est => { ((est.curriculo ??= progresoVacio()).pantallas ??= {})[id] = n; }); document.querySelector('.pantalla-paso')?.scrollIntoView(); };
   const ultima = parte >= partes.length - 1;
-  const acciones = repaso ? botonesRepaso(e) : ultima ? botonesPaso(e, estado) : [h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: irParte(parte + 1) }, 'Siguiente ▶')];
+  const acciones = repaso ? botonesRepaso(e) : ultima ? botonesPaso(e, estado, papelDelPaso(ind, cur, e)) : [papelDelPaso(ind, cur, e) !== 'actual' && h('button', { type: 'button', class: 'btn btn-borde', onclick: irAContinuar }, 'Continuar mi ruta'), h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: irParte(parte + 1) }, 'Siguiente ▶')];
   const def = !repaso && ind.enriquecido?.[id];
 
   return h('div', { class: 'pantalla-paso' },
@@ -59,7 +57,7 @@ export default function aprender({ id }, { repaso = false } = {}) {
         partes.length > 1 && partes[parte].titulo && h('h2', { class: 'parte-titulo' }, partes[parte].titulo),
         bloquesDelPaso(partes[parte].bloques, id, ind, parte),
       ] : contenido(e, ind),
-      paso.porVerificar && h('p', { class: 'pequeno ocre' }, `Por verificar: ${paso.porVerificar}.`),
+      paso.porVerificar && !def?.verificado && h('p', { class: 'pequeno ocre' }, `Por verificar: ${paso.porVerificar}.`),
       paso.edicion && h('p', { class: 'pequeno suave' }, 'Esta obra se toca con una edición publicada: aquí está la lección, no la partitura.'),
       paso.apoyo && h('p', { class: 'pequeno suave' }, `Te ayudará tener antes: ${paso.apoyo.replace(/^necesita /, '')}.`)),
     h('footer', { class: 'paso-pie' },
@@ -112,16 +110,23 @@ function fichaEjercicio(f) {
     f.porVerificar && h('p', { class: 'pequeno ocre' }, `Por verificar: ${f.porVerificar}`));
 }
 
-function botonesPaso(e, estado) {
+// papel: actual, el botón completa y sigue. Adelantado o consulta: «Continuar mi ruta» vuelve a lo pendiente sin marcar nada,
+// y completar sigue siendo posible, pero aparte y a propósito.
+function botonesPaso(e, estado, papel = 'actual') {
   const hecho = resultado => () => {
     cambiar(est => { marcar((est.curriculo ??= progresoVacio()), e, resultado); });
     irAContinuar();
   };
-  if (!esDePractica(e.paso)) return [h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: hecho('hecho') }, 'Continuar ▶')];
+  const ruta = papel !== 'actual' && h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: irAContinuar }, 'Continuar mi ruta ▶');
+  if (!esDePractica(e.paso)) {
+    if (papel === 'actual') return [h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: hecho('hecho') }, 'Continuar ▶')];
+    return [papel === 'adelantado' && h('button', { type: 'button', class: 'btn btn-borde', onclick: hecho('hecho') }, 'Marcar como hecho'), ruta];
+  }
   const ya = e.paso.tipo === '◇';
   return [
     h('button', { type: 'button', class: 'btn btn-borde', 'aria-pressed': estado === 'practica' ? 'true' : null, onclick: hecho('practica') }, ya ? 'Prefiero trabajarlo' : 'Sigo practicando'),
-    h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: hecho('hecho') }, ya ? 'Ya lo sé ▶' : 'Lo he aprendido ▶'),
+    h('button', { type: 'button', class: papel === 'actual' ? 'btn btn-papel btn-grande' : 'btn btn-borde', onclick: hecho('hecho') }, ya ? 'Ya lo sé' : 'Lo he aprendido', papel === 'actual' ? ' ▶' : ''),
+    ruta,
   ];
 }
 

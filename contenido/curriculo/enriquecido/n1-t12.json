@@ -468,9 +468,23 @@
        "md": "**Qué aprendes:** dos voces independientes, un bajo que se repite, y el sonido de una música muy antigua."
       },
       {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-romanesca.json",
+       "titulo": "*La Romanesca*: la obra entera",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura juntas.",
+       "bpms": [
+        50,
+        66
+       ],
+       "notas": [
+        "Versión de Sor editada por D. Fortea, en la transcripción de Tony Wilkinson (IMSLP). El último acorde son armónicos en el XII."
+       ]
+      },
+      {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "Hay muchas versiones. IMSLP recoge [una aquí](https://imslp.org/wiki/La_Romanesca_%28Sor,_Fernando%29), pero no hemos comprobado que sea la que usa este nivel: pregunta a tu profesor cuál usar. Por eso, ningún compás se da como dato."
+       "md": "IMSLP advierte que esta *Romanesca* es muy probablemente una falsificación de Fétis, y no el bajo renacentista explicado arriba. Falta confirmar si es la pieza exacta que el nivel pedía. La otra romanesca de la vihuela es la de Mudarra."
       },
       {
        "tipo": "pasos",
@@ -710,6 +724,73 @@
      "md": "El 6/8 tiene **6 corcheas por compás**, pero **se siente en dos**: dos grupos de tres. El pulso es la **negra con puntillo**, que dura tres corcheas. Se cuenta **1-2-3 4-5-6**, cargando el 1 y el 4, o «uno y-a, dos y-a»."
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "6/8: dos grupos de tres",
+      "tiempos": 6,
+      "por": 180,
+      "figuras": [
+       {
+        "d": 1,
+        "fuerte": true,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "1",
+        "nombre": "Uno: el apoyo."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         0
+        ],
+        "etiqueta": "2",
+        "nombre": "dos"
+       },
+       {
+        "d": 1,
+        "nota": [
+         2,
+         0
+        ],
+        "etiqueta": "3",
+        "nombre": "tres"
+       },
+       {
+        "d": 1,
+        "fuerte": true,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "4",
+        "nombre": "Cuatro: el segundo apoyo."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         0
+        ],
+        "etiqueta": "5",
+        "nombre": "cinco"
+       },
+       {
+        "d": 1,
+        "nota": [
+         2,
+         0
+        ],
+        "etiqueta": "6",
+        "nombre": "seis"
+       }
+      ]
+     }
+    },
+    {
      "tipo": "tabla",
      "cabecera": [
       "",
@@ -927,6 +1008,47 @@
        ""
       ]
      ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "Hemiolia: tres grupos de dos",
+      "tiempos": 6,
+      "por": 180,
+      "figuras": [
+       {
+        "d": 2,
+        "fuerte": true,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "1-2",
+        "nombre": "Primer grupo de dos."
+       },
+       {
+        "d": 2,
+        "fuerte": true,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "3-4",
+        "nombre": "Segundo grupo."
+       },
+       {
+        "d": 2,
+        "fuerte": true,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "5-6",
+        "nombre": "Tercero: las mismas corcheas, otro acento."
+       }
+      ]
+     }
     },
     {
      "tipo": "notacion",
@@ -1166,9 +1288,20 @@
        "md": "**Qué aprendes:** una danza barroca, con su hemiolia, su mordente y sus cadencias. Es una de las tres piezas posibles de tu recital."
       },
       {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "Hay versiones de distinta dificultad, y la que uses la decide tu profesor. Sin ella, ni la tonalidad, ni el compás, ni el número de compases se dan como dato."
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sanz-espanoleta.json",
+       "titulo": "Sanz, *Españoleta*",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura juntas.",
+       "bpms": [
+        60,
+        80
+       ],
+       "notas": [
+        "Versión de Stefan Apke (CC BY-SA 4.0), con sus dedos. Mano derecha: propuesta de la academia.",
+        "Los adornos: Apke marca mordentes sobre el primer tiempo del {c:2} y sobre otras notas largas, y trinos en los {c:17} y {c:21}. Añádelos cuando el pulso sea firme.",
+        "El grupo rápido del {c:13} es un tresillo: en la app está escrito aproximado."
+       ]
       },
       {
        "tipo": "pasos",
@@ -1352,9 +1485,17 @@
      ]
     },
     {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Sin la edición comprobada, la academia no te indica en qué compases aparecen. Cuanto hayas marcado a lápiz, revísalo con tu profesor."
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sanz-espanoleta.json",
+     "titulo": "Busca aquí las cadencias",
+     "principal": "ambas",
+     "motivo": "Para marcar finales de frase.",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "Las frases terminan en los {c:4}, {c:8}, {c:12} y {c:16}, con el acorde largo."
+     ]
     },
     {
      "tipo": "notacion",

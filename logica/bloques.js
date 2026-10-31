@@ -7,6 +7,7 @@
 //   ejercicio {que, porque, atencion, empieza, sube} · progresion {acordes:[{n, g, papel}], bpms} · pista {fuente, compases, bpm, etiquetas}
 //   metronomo {clave, bpm, abierto} · preguntas {n} · obra {id, md}
 //   pentagrama {notacion, pie} · figura {src, alt, pie}: un esquema de web/figuras/ (solo si enseña lo que el texto no puede)
+//   escenas de mastil: acorde, cambio, recorrido, distancias, manoDerecha, ejercicio (zoom, dedos y secuencia), ritmo, libre
 //   Comprobaciones: localizar {conjunto | objetivos, cuerdas, hastaTraste} · elige {opciones, correcta, porque, audio, notacion}
 //   ordenar {items, barajadas} · completar {partes} · bien {items}
 // Un paso es { bloques } o, si necesita ir por partes, { pantallas: [{ titulo, bloques }] }.
@@ -49,7 +50,8 @@ export function validarPaso(id, def, { pasos, obras, notaciones, preguntas }) {
     if (b.tipo === 'progresion') for (const a of b.acordes ?? []) if (!ACORDES[a.n]) err.push(`${donde}: acorde ${a.n}`);
     for (const t of textosDe(b)) {
       for (const m of t.matchAll(COMPAS)) {
-        const total = notaciones.get(b.tipo === 'notacion' ? b.fuente : fuentes[0])?.compases?.length ?? 0;
+        const nota = notaciones.get(b.tipo === 'notacion' ? b.fuente : fuentes[0]);
+        const total = (nota?.compases?.length ?? 0) + (nota?.primerCompas ?? 1) - 1;
         if (!total) err.push(`${donde}: cita el compás ${m[1]} y el paso no tiene notación`);
         else if (Number(m[2] ?? m[1]) > total) err.push(`${donde}: cita el compás ${m[2] ?? m[1]} y la notación tiene ${total}`);
       }

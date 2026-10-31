@@ -204,6 +204,7 @@ export function dibujar(VF, plan, vista, ancho) {
         ctx.save();
         if (tab && x.n.dedo) { ctx.setFont('Archivo, sans-serif', 12, 'bold'); ctx.setFillStyle(COLOR_DEDO[x.n.dedo] ?? '#1D1D1B'); ctx.fillText(String(x.n.dedo), xn, tab.getYForLine(0) - (dosFilas && x.v === 0 ? 20 : 7)); }
         if (tab && dosFilas && x.n.mano) { ctx.setFont('Academico, serif', 11, 'normal', 'italic'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.mano, xn, tab.getYForLine(5) + (conPartitura ? 12 : 50) + x.v * 12); }
+        if (tab && x.n.dedos) x.n.dedos.filter(Boolean).forEach((d, k) => { ctx.setFont('Archivo, sans-serif', 11, 'bold'); ctx.setFillStyle(COLOR_DEDO[d] ?? '#1D1D1B'); ctx.fillText(String(d), xn + k * 8, tab.getYForLine(0) - (dosFilas && x.v === 0 ? 20 : 7)); });
         if (x.n.rotulo) { ctx.setFont('Archivo, sans-serif', 13, 'bold'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.rotulo, xn, (stave ?? tab).getYForLine(0) - (stave ? 30 : dosFilas ? 34 : 22)); }
         if (plan.conteo && x.v === 0 && tab) {
           const pulso = x.n.inicio, entero = Number.isInteger(pulso);

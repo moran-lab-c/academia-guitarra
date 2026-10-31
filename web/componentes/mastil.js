@@ -6,6 +6,7 @@ import { escena, midiEn } from '../../logica/guitarra.js';
 import { tocar } from './sonido.js';
 import { controlCuadros } from './cuadros.js';
 import { diagramaAnimado } from './diagramaAnimado.js';
+import { ritmo } from './ritmo.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
 const s = (tag, attrs = {}, ...hijos) => {
@@ -17,8 +18,8 @@ const s = (tag, attrs = {}, ...hijos) => {
 const ANCHO = 760, PASO_Y = 30, X0 = 86, BOCA = 150;
 const PUNTOS = new Set([3, 5, 7, 9, 12, 15]);
 
-function geometria(e) {
-  const [a, b] = e.trastes;
+function geometria(e, ventana = e.trastes) {
+  const [a, b] = ventana;
   const primero = Math.max(a, 1), n = b - primero + 1;
   const Y0 = e.cuadros.some(q => q.arcos?.length) ? 74 : 26; // arriba, sitio solo si hay arcos
   const pasoX = (ANCHO - X0 - 24 - (e.boca ? BOCA : 0)) / n;
@@ -36,8 +37,8 @@ function madera(e, g) {
   const grupo = s('g', { class: 'mastil__madera' });
   grupo.append(s('rect', { x: X0, y: Y0 - 12, width: g.fin - X0, height: alto + 24, rx: 3, class: 'mastil__diapason' }));
   for (let t = g.primero; t < g.primero + g.n; t++) {
-    if (PUNTOS.has(t)) grupo.append(s('circle', { cx: g.xT(t), cy: Y0 + alto / 2, r: 4, class: 'mastil__punto' }));
-    grupo.append(s('text', { x: g.xT(t), y: Y0 + alto + 30, class: 'mastil__numero', 'text-anchor': 'middle' }, String(t)));
+    if (PUNTOS.has(t)) grupo.append(s('circle', { cx: 0, cy: Y0 + alto / 2, r: 4, class: 'mastil__punto mastil__movil', 'data-casilla': t }));
+    grupo.append(s('text', { x: 0, y: Y0 + alto + 30, class: 'mastil__numero mastil__movil', 'text-anchor': 'middle', 'data-casilla': t }, String(t)));
   }
   return grupo;
 }
@@ -45,7 +46,7 @@ function madera(e, g) {
 function trazos(e, g) {
   const alto = 5 * PASO_Y, { Y0 } = g;
   const grupo = s('g', { class: 'mastil__trazos' });
-  for (let i = 0; i <= g.n; i++) grupo.append(s('line', { x1: g.xF(i), x2: g.xF(i), y1: Y0 - 12, y2: Y0 + alto + 12, class: i === 0 && g.primero === 1 ? 'mastil__ceja' : 'mastil__traste', pathLength: 1 }));
+  for (let i = 0; i <= g.n; i++) grupo.append(s('line', { x1: 0, x2: 0, y1: Y0 - 12, y2: Y0 + alto + 12, class: `${i === 0 && g.primero === 1 ? 'mastil__ceja' : 'mastil__traste'} mastil__movil`, 'data-raya': g.primero + i, pathLength: 1 }));
   for (let c = 1; c <= 6; c++) {
     grupo.append(s('line', { x1: X0 - 4, x2: e.boca ? ANCHO - 16 : g.fin, y1: g.y(c), y2: g.y(c), class: `mastil__cuerda mastil__cuerda--${c}`, 'data-c': c, pathLength: 1 }));
     grupo.append(s('text', { x: 10, y: g.y(c) + 4, class: 'mastil__nombre' }, `${c}.ª`));
@@ -77,7 +78,24 @@ function rellenarMarca(el, m) {
   if (m.nota) el.append(s('text', { 'text-anchor': m.aire ? 'end' : 'start', x: m.aire ? -15 : 15, y: 4, class: 'mastil__nota' }, m.nota));
 }
 
-function pintarCuadro(raiz, g, q) {
+// Acercarse a una zona: los trastes se abren y las marcas van con ellos; ni las cuerdas ni los dedos se deforman.
+function colocar(raiz, g, total) {
+  const fuera = x => x < X0 - 1 || x > total.fin + 1;
+  for (const el of raiz.querySelectorAll('[data-raya]')) {
+    const x = g.xF(Number(el.dataset.raya) - g.primero);
+    el.style.transform = `translateX(${x}px)`;
+    el.style.opacity = fuera(x) ? 0 : '';
+  }
+  for (const el of raiz.querySelectorAll('[data-casilla]')) {
+    const x = g.xT(Number(el.dataset.casilla));
+    el.style.transform = `translateX(${x}px)`;
+    el.style.opacity = fuera(x) ? 0 : '';
+  }
+}
+
+function pintarCuadro(raiz, total, e, q) {
+  const g = q.zoom ? geometria(e, q.zoom) : total;
+  colocar(raiz, g, total);
   raiz.classList.toggle('mastil--sin-trazos', !q.base);
   // Las marcas: las que siguen viajan, las nuevas entran y las demás se van.
   const capa = raiz.querySelector('.mastil__marcas');
@@ -106,10 +124,11 @@ function pintarCuadro(raiz, g, q) {
     const largo = Math.hypot(x2 - x1, y2 - y1) || 1, ux = (x2 - x1) / largo, uy = (y2 - y1) / largo;
     extra.append(s('line', { x1: x1 + ux * 14, y1: y1 + uy * 14, x2: x2 - ux * 16, y2: y2 - uy * 16, class: 'mastil__flecha', 'marker-end': 'url(#mastil-punta)' }));
   }
-  for (const c of raiz.querySelectorAll('.mastil__cuerda')) c.classList.toggle('mastil__cuerda--pulso', Number(c.dataset.c) === q.pulso);
+  const pulsadas = q.pulsos ?? (q.pulso ? [q.pulso] : []);
+  for (const c of raiz.querySelectorAll('.mastil__cuerda')) c.classList.toggle('mastil__cuerda--pulso', pulsadas.includes(Number(c.dataset.c)));
   for (const m of q.manos ?? []) {
-    const x = g.fin + 60, y = g.y(m.c);
-    extra.append(s('circle', { cx: x, cy: y, r: 12, class: `mastil__mano${q.pulso === m.c ? ' mastil__mano--pulso' : ''}` }));
+    const x = total.fin + 60, y = g.y(m.c);
+    extra.append(s('circle', { cx: x, cy: y, r: 12, class: `mastil__mano${pulsadas.includes(m.c) ? ' mastil__mano--pulso' : ''}` }));
     extra.append(s('text', { x, y: y + 4.5, 'text-anchor': 'middle', class: 'mastil__mano-letra' }, m.letra));
   }
 }
@@ -117,6 +136,7 @@ function pintarCuadro(raiz, g, q) {
 // clave: única por paso, pantalla y bloque. spec: la descripción de la escena (contenido del paso).
 export function mastil(spec, clave) {
   if (spec.tipo === 'acorde') return diagramaAnimado(spec, clave);
+  if (spec.tipo === 'ritmo') return ritmo(spec, clave);
   const e = escena(spec);
   if (!e) return null;
   const g = geometria(e);
@@ -124,7 +144,7 @@ export function mastil(spec, clave) {
   svg.append(
     s('defs', {}, s('marker', { id: 'mastil-punta', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, s('path', { d: 'M 0 0 L 10 5 L 0 10 z', class: 'mastil__punta' }))),
     madera(e, g), trazos(e, g), s('g', { class: 'mastil__extra' }), s('g', { class: 'mastil__marcas' }));
-  const ctl = controlCuadros({ cuadros: e.cuadros, clave, pintar: q => pintarCuadro(svg, g, q) });
+  const ctl = controlCuadros({ cuadros: e.cuadros, clave, pintar: q => pintarCuadro(svg, g, e, q) });
   const nodo = h('figure', { class: 'mastil' }, spec.titulo && h('figcaption', { class: 'rotulo mastil__titulo' }, spec.titulo), svg, ctl.leyenda, ctl.controles);
   ctl.montar(nodo);
   return nodo;

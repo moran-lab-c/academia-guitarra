@@ -1,127 +1,1371 @@
-{"tramo":"n1.t5","nota":"Primera aparición de posición y dedo guía. La partitura de Lágrima sigue fuera de la app: ninguna nota, compás ni digitación concreta se da por cierta (por verificar con la edición de Alier). Los ejercicios son propios y lo dicen.","pasos":{
-"n1.t5.l1.p1":{"bloques":[
-  {"tipo":"texto","md":"**Francisco Tárrega** (Vila-real, 1852 - Barcelona, 1909) es uno de los guitarristas que más cambiaron el instrumento: buena parte de cómo se toca hoy viene de él. Además de sus obras, escribió estudios y transcripciones que aún se tocan."},
-  {"tipo":"concepto","titulo":"*Lágrima*, un preludio en dos partes","md":"Un **preludio** es una pieza breve, sin una forma estricta. *Lágrima* es muy corta y tiene dos partes: la **A**, en Mi mayor, y la **B**, en Mi menor, tras la cual vuelve la A. Es sencilla de notas y difícil de hacer bonita: por eso enseña tanto."},
-  {"tipo":"tabla","cabecera":["Qué te enseña","Dónde lo has preparado"],"filas":[["La melodía por encima del acompañamiento","Los dos planos, Tramo 3"],["El sonido apoyado","Apoyando, Tramo 2"],["Los acordes de Mi–La–Si7–Mi","Tramo 4"],["Moverte por el mástil con un dedo guía","Aquí, en este tramo"]]},
-  {"tipo":"obra","id":"o1-tarrega-lagrima"},
-  {"tipo":"reaparece","items":[{"paso":"n1.t7.l4.p1","texto":"la parte B."},{"paso":"n1.t8.l1.p1","texto":"la obra entera."}]}]},
-"n1.t5.l1.p2":{"bloques":[
-  {"tipo":"texto","md":"Vuelve a escuchar *Lágrima*, ahora solo su principio. Ya sabes en qué fijarte, porque tienes el vocabulario que no tenías en el Tramo 1."},
-  {"tipo":"concepto","titulo":"Dónde escucharla","md":"[Buscar *Lágrima* en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra). Elige una versión de guitarrista clásico y escucha hasta que oigas cambiar el color: esa es la parte B."},
-  {"tipo":"lista","titulo":"Tres escuchas, con un objetivo cada una","items":["**La melodía.** Síguela arriba y tararéala.","**Lo de debajo.** Son **corcheas**, un movimiento continuo, más suave. Marca el pulso con el pie: va en tres.","**Los dos planos.** Mira cómo la melodía queda delante aunque las corcheas nunca se paren."]},
-  {"tipo":"elige","enunciado":"Si el compás es 3/4 y el acompañamiento va en corcheas, ¿cuántas caben en un compás?","opciones":["Tres","Seis","Ocho"],"correcta":1,"porque":"Cada negra son dos corcheas: tres negras, seis corcheas.","pista":"Dos corcheas caben en una negra."}]},
-"n1.t5.l1.p3":{"bloques":[
-  {"tipo":"texto","md":"Antes de tocar, mira qué es lo que vas a tocar. Abre la partitura: [*Lágrima* en IMSLP](https://imslp.org/wiki/L%C3%A1grima_%28T%C3%A1rrega,_Francisco%29)."},
-  {"tipo":"tabla","cabecera":["Lo que puedes ver","Qué significa"],"filas":[["Cuatro sostenidos al principio","Mi mayor: la armadura que estudiaste en el Tramo 4"],["Un 3 sobre un 4","Tres negras por compás, como un vals lento"],["Plicas arriba y abajo","Melodía y acompañamiento, dos voces"]]},
-  {"tipo":"concepto","titulo":"Los acordes que ya conoces","md":"La parte A tiene 8 compases y gira sobre la familia que ya has trabajado: **Mi** (reposo), **La** (alejamiento) y **Si7** (tensión). Al leerla, intenta reconocerlos por el bajo y por las notas que suenan juntas."},
-  {"tipo":"progresion","acordes":[{"n":"Mi","g":"I","papel":"reposo"},{"n":"La","g":"IV","papel":"alejamiento"},{"n":"Si7","g":"V7","papel":"tensión"},{"n":"Mi","g":"I","papel":"reposo"}],"bpms":[60]},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Qué acorde hay exactamente en cada compás está por comprobar con la edición de Alier. Hazlo como ejercicio: escribe a lápiz sobre tu partitura el acorde que creas que hay, y coméntalo con tu profesor."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l2.p4","texto":"si quieres repasar esta progresión."}]}]},
-"n1.t5.l2.p1":{"bloques":[
-  {"tipo":"concepto","titulo":"El dedo guía","md":"Cuando la mano tiene que ir a otro sitio del mástil, saltar es arriesgado: el dedo puede caer mal y el sonido se corta. El **dedo guía** es el dedo que **se queda en la cuerda y viaja por ella**, como un raíl, hasta llegar a su sitio."},
-  {"tipo":"mastil","escena":{"tipo":"libre","titulo":"El dedo 1, viajando por la 2.ª cuerda","trastes":[0,8],"clave":"E","cuadros":[
-    {"marcas":[{"k":"g","c":2,"t":2,"dedo":1}],"texto":"El dedo 1 pisa en el traste 2.","ms":2400},
-    {"marcas":[{"k":"g","c":2,"t":2,"dedo":1}],"suena":[],"texto":"Afloja la presión, sin levantar el dedo: sigue tocando la cuerda.","ms":2400},
-    {"marcas":[{"k":"g","c":2,"t":4,"dedo":1}],"texto":"Desliza hasta el traste 4 y vuelve a pisar. Ya está.","ms":2400},
-    {"marcas":[{"k":"g","c":2,"t":7,"dedo":1}],"texto":"Lo mismo hasta el traste 7: un viaje más largo.","ms":2600},
-    {"marcas":[{"k":"g","c":2,"t":2,"dedo":1}],"texto":"Y de vuelta: la mano entera acompaña al dedo.","ms":2600}]}},
-  {"tipo":"pasos","titulo":"Los tres tiempos","items":["**Aflojar:** el dedo deja de pisar, sin separarse de la cuerda.","**Deslizar:** el brazo lleva la mano. El dedo no estira.","**Volver a pisar:** justo a tiempo, junto al traste."]},
-  {"tipo":"errores","items":[{"error":"Se oye un chirrido al deslizar.","arreglo":"Sigues apretando: afloja más. Un pequeño roce es normal en los bordones (6.ª, 5.ª y 4.ª), pero no debe ser fuerte."},{"error":"Llegas tarde.","arreglo":"El viaje empieza antes de que acabe la nota anterior. Salir a tiempo es lo que permite llegar a tiempo."},{"error":"El dedo estira y la mano se queda atrás.","arreglo":"Lo que se mueve es el brazo entero."}]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l2.p2","texto":"el ejercicio."},{"paso":"n1.t4.l4.p1","texto":"ya lo viste de La a Si7: el dedo 1 se desliza un traste."}]}]},
-"n1.t5.l2.p2":{"bloques":[
-  {"tipo":"ejercicio","que":"Viajar por una cuerda con un mismo dedo, sin que el cambio se oiga.","porque":"Es lo que te permitirá subir en *Lágrima*, y más adelante en el *Romance* o en *Adelita*.","atencion":"Escucha lo que pasa **entre** las notas: ahí se nota si el cambio está bien.","empieza":"♩ = 50, con el dedo 1. Después, los mismos trastes con el dedo 2 y con el 3.","sube":"Con los tres dedos, el cambio no se oye."},
-  {"tipo":"notacion","fuente":"notacion/tec-dedo-guia.json","titulo":"El dedo guía en una cuerda","principal":"tablatura","motivo":"Es técnica de mano izquierda: tablatura.","bpms":[50,60],"notas":["En el {c:1} y el {c:2}, el mismo dedo en los trastes 2, 4, 7 y de vuelta al 4. El arrastre no está escrito: tú decides que el dedo no se levante."]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"bien","items":["El cambio no se oye.","Llegas a tiempo sin correr al final.","El dedo no se separa de la cuerda en ningún momento."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l2.p4","texto":"su uso en *Lágrima*."},{"paso":"n1.t7.l4.p3","texto":"también en la B."}]}]},
-"n1.t5.l2.p3":{"bloques":[
-  {"tipo":"texto","md":"Hasta ahora has tocado siempre en la misma zona del mástil. Para hablar de otras zonas hace falta una palabra."},
-  {"tipo":"concepto","titulo":"Qué es una posición","md":"Una **posición** se nombra por el traste en el que está el **dedo 1**, y normalmente se escribe en números romanos. En la **1.ª posición**, el dedo 1 va en el traste 1. En la **II**, en el 2, y el resto de dedos, un traste más allá cada uno."},
-  {"tipo":"mastil","escena":{"tipo":"libre","titulo":"La mano cambia de sitio; los dedos, no de orden","trastes":[0,9],"clave":"C","cuadros":[
-    {"marcas":[{"k":"a","c":2,"t":1,"dedo":1},{"k":"b","c":2,"t":2,"dedo":2},{"k":"c","c":2,"t":3,"dedo":3},{"k":"d","c":2,"t":4,"dedo":4}],"suena":[],"texto":"1.ª posición: dedos 1, 2, 3 y 4 en los trastes 1, 2, 3 y 4.","ms":3000},
-    {"marcas":[{"k":"a","c":2,"t":2,"dedo":1},{"k":"b","c":2,"t":3,"dedo":2},{"k":"c","c":2,"t":4,"dedo":3},{"k":"d","c":2,"t":5,"dedo":4}],"suena":[],"texto":"Posición II: la mano sube un traste. Todo sube con ella.","ms":3000},
-    {"marcas":[{"k":"a","c":2,"t":5,"dedo":1},{"k":"b","c":2,"t":6,"dedo":2},{"k":"c","c":2,"t":7,"dedo":3},{"k":"d","c":2,"t":8,"dedo":4}],"suena":[],"texto":"Posición V: el dedo 1 en el traste 5.","ms":3000}]}},
-  {"tipo":"elige","enunciado":"El dedo 1 está en el traste 7. ¿En qué posición estás?","opciones":["1.ª","V","VII"],"correcta":2,"porque":"La posición es el traste del dedo 1.","pista":"¿Qué dedo da el nombre a la posición?"},
-  {"tipo":"elige","enunciado":"Estás en posición V. ¿En qué traste cae normalmente el dedo 3?","opciones":["Traste 3","Traste 7","Traste 8"],"correcta":1,"porque":"Dedo 1 en el 5, dedo 2 en el 6, dedo 3 en el 7.","pista":"Un dedo por traste, desde el 5."},
-  {"tipo":"texto","md":"La parte A de *Lágrima* sale de la 1.ª posición hacia posiciones altas y vuelve. Mira la partitura: los números romanos, si los trae tu edición, te dirán por dónde vas."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l2.p1","texto":"una escala con un cambio de posición."}]}]},
-"n1.t5.l2.p4":{"bloques":[
-  {"tipo":"texto","md":"Una digitación no es un capricho del editor. Casi siempre responde a algo: mantener una línea ligada, ganar tiempo o preparar lo siguiente. Aquí, el motivo es el dedo guía."},
-  {"tipo":"concepto","titulo":"Por qué ese dedo y no otro","md":"Cuando la melodía sube a una posición alta, el mejor dedo para viajar suele ser **el que ya está en la cuerda de la melodía**. Si viaja ese, la melodía sigue ligada, sin corte. Si lo hiciera otro, la mano se levantaría y la melodía se oiría a trozos."},
-  {"tipo":"pasos","titulo":"Encuéntralo en tu edición","items":["Busca el momento en que la melodía deja de estar en la 1.ª posición.","Mira qué dedo escribe tu edición en la última nota antes del cambio y en la primera después.","Si es el mismo número en la misma cuerda: ese es tu dedo guía.","Toca solo esas dos notas, varias veces, como en el ejercicio."]},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Qué dedo y qué compás exactos se usan está por comprobar con la edición de Alier: no te los damos sin haberlo visto. Si tu edición no trae digitación en ese punto, pregunta a tu profesor."},
-  {"tipo":"bien","items":["Sabes explicar qué dedo viaja y por qué.","La melodía no se corta en el cambio."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l4.p1","texto":"montar los compases."}]}]},
-"n1.t5.l3.p1":{"bloques":[
-  {"tipo":"concepto","titulo":"Si se puede cantar, se sabe adónde va","md":"Una melodía cantada tiene dirección: la voz sube con esfuerzo, descansa, respira. Los dedos no saben nada de eso. Si cantas una frase antes de tocarla, tus manos reciben una idea clara de lo que quieres, y se nota."},
-  {"tipo":"tabla","cabecera":["Lo que te da cantar","Por qué ayuda"],"filas":[["Saber dónde respirar","Allí termina la frase"],["Saber cuál es el punto más alto","Hacia allí va todo"],["Oír la nota antes de tocarla","Si la oyes por dentro, la tocas mejor"]]},
-  {"tipo":"texto","md":"Ya has hecho ecos y has cantado 1-3-5. Es la misma capacidad, ahora al servicio de una obra."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t2.l5.p4","texto":"tus primeros ecos."},{"paso":"n1.t4.l2.p5","texto":"cantar 1-3-5."}]}]},
-"n1.t5.l3.p2":{"bloques":[
-  {"tipo":"ejercicio","que":"Cantar la melodía de la A acompañado por una grabación.","porque":"Vas a saber la frase de oído antes de pelearte con los dedos, lo que hace más fácil todo lo demás.","atencion":"Da igual si tienes que cantarla más grave o más aguda. Busca la altura que te vaya bien, y usa *la-la*.","empieza":"Con la grabación, cantando a la vez. Después, sin ella.","sube":"Puedes cantar la A sola, llegando al final en la nota correcta."},
-  {"tipo":"concepto","titulo":"Con qué","md":"La app aún no trae el acompañamiento de *Lágrima*, así que usa una grabación: [buscar en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra). Lo que sí tienes aquí es la nota de casa y los acordes, para orientarte."},
-  {"tipo":"escuchar","items":[{"etiqueta":"La nota de casa: Mi","notas":[[1,0]],"duracion":2},{"etiqueta":"El acorde de Mi","acorde":"Mi"},{"etiqueta":"Mi–La–Si7–Mi","acordes":["Mi","La","Si7","Mi"],"duracion":1.6}]},
-  {"tipo":"bien","items":["Cantas la melodía de la A sin ayuda.","Sabes dónde respiras.","Terminas en la nota correcta."]}]},
-"n1.t5.l4.p1":{"pantallas":[
- {"titulo":"Prepara las manos","bloques":[
-  {"tipo":"texto","md":"Antes de la obra, una preparación: una melodía larga arriba y corcheas debajo, sobre los acordes que ya conoces. Tiene la misma mecánica que vas a usar, sin necesidad de leer nada nuevo."},
-  {"tipo":"notacion","fuente":"notacion/prep-melodia-corcheas.json","titulo":"Ejercicio escrito para la academia: no es *Lágrima*","principal":"tablatura","motivo":"Es una preparación técnica: tablatura.","bpms":[50,66],"notas":["Arriba, una nota por compás con *a*, apoyando o muy presente. Debajo, seis corcheas seguidas y suaves."]},
-  {"tipo":"bien","items":["La nota de arriba sigue oyéndose hasta el compás siguiente.","Las corcheas no se paran ni se aceleran."]}]},
- {"titulo":"Compases 1-4","bloques":[
-  {"tipo":"obra","id":"o1-tarrega-lagrima","md":"**Qué parte:** los cuatro primeros compases de la A. **Técnica:** melodía sobre corcheas. **Dificultad:** mantener los dos planos."},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"La tablatura de *Lágrima* aún no está en la app: trabaja desde tu [partitura en IMSLP](https://imslp.org/wiki/L%C3%A1grima_%28T%C3%A1rrega,_Francisco%29) o desde la edición de tu profesor. Si te cuesta el pentagrama, escríbete a lápiz cuerda y traste encima de las notas."},
-  {"tipo":"pasos","titulo":"Cómo lo divides","items":["**Melodía sola**, cantada y tocada con la digitación de tu edición.","**Acompañamiento solo**, en corcheas regulares.","**Compás 1**, las dos cosas a la vez, muy despacio. Luego el 2.","**Une 1-2**, luego 3-4 y, por último, 1-4."]},
-  {"tipo":"ejercicio","que":"Montar los compases 1-4.","porque":"Cuatro compases son una frase: si salen bien, ya tienes el modelo de sonido para el resto.","atencion":"Lee en el pentagrama que hay dos voces: plicas arriba, melodía; plicas abajo, acompañamiento.","empieza":"♩ = 40-50, o lo que te permita no parar.","sube":"Salen tres veces seguidas, con la melodía delante."},
-  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":44},
-  {"tipo":"bien","items":["Los cuatro compases sin parar.","La melodía canta por encima.","Las corcheas son regulares."]}]}]},
-"n1.t5.l4.p2":{"bloques":[
-  {"tipo":"texto","md":"Mismo método para la segunda frase. Aquí conviene fijarse en lo que es nuevo y en lo que se parece a la primera."},
-  {"tipo":"pasos","titulo":"Antes de tocar, mira","items":["¿Hay algún compás igual o casi igual a uno de los cuatro primeros? No lo vuelvas a estudiar desde cero.","¿Dónde hay un cambio de posición? Prepáralo con el dedo guía, solo esas dos notas.","¿En qué nota termina la frase? Ahí vas a respirar."]},
-  {"tipo":"ejercicio","que":"Montar los compases 5-8, en trozos y luego juntos.","porque":"Con esto completas la A.","atencion":"En el cambio de posición, sal antes de tiempo. No te pares a esperar el pulso siguiente.","empieza":"El mismo tempo que usaste con los compases 1-4.","sube":"Te salen 5-8 igual que 1-4."},
-  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":44},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Compases y digitación, con la partitura delante. Lo que dice la academia sobre el reparto de frases puede cambiar con la edición: manda lo que veas y lo que diga tu profesor."},
-  {"tipo":"bien","items":["Los compases 5-8 sin parar.","El cambio de posición no corta la melodía."]}]},
-"n1.t5.l4.p3":{"bloques":[
-  {"tipo":"texto","md":"Ahora, las dos frases seguidas. Unir no es solo sumar: hay que conseguir que el compás 4 enlace con el 5 sin pararse y que la melodía se entienda como un todo."},
-  {"tipo":"pasos","titulo":"Cómo unirlas","items":["Practica solo los compases 4 y 5, el enlace.","Toca la A entera a un tempo cómodo.","Grábate con el móvil y escucha: ¿se oye la melodía?","Cuando salga tres días seguidos, deja que pase al atril."]},
-  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":50},
-  {"tipo":"bien","items":["La A, sin parar y con el tempo estable.","La melodía queda delante de principio a fin.","Lo has comprobado otro día, sin calentar."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l5.p5","texto":"la comprobación."},{"paso":"n1.t8.l1.p1","texto":"la obra entera."}]}]},
-"n1.t5.l4.p4":{"bloques":[
-  {"tipo":"guia","md":"Si el acompañamiento tapa la melodía, **se baja el acompañamiento; no se sube la melodía**."},
-  {"tipo":"concepto","titulo":"Por qué","md":"Al querer que la melodía se oiga, lo que sale de forma natural es tocarla más fuerte. Pero así la melodía se vuelve dura y no canta. Lo que suena mejor es lo contrario: deja la melodía como está y haz que las corcheas casi susurren."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Melodía delante, corcheas suaves","notas":[[1,0],[3,1],[2,0],[1,2],[3,1],[2,0]],"duracion":0.6,"destacar":[0,3]},{"etiqueta":"Todo igual","notas":[[1,0],[3,1],[2,0],[1,2],[3,1],[2,0]],"duracion":0.6}]},
-  {"tipo":"errores","items":[{"error":"Cuanto más lo intentas, más fuerte suena todo.","arreglo":"Toca solo el acompañamiento lo más suave posible, sin que se deje de oír. Después, añade la melodía sin cambiarlo."}]},
-  {"tipo":"elige","enunciado":"Grabas la A y las corcheas se oyen casi tanto como la melodía. ¿Qué haces?","opciones":["Tocar más fuerte la melodía","Tocar más suaves las corcheas","Tocar todo más rápido"],"correcta":1,"porque":"El contraste se consigue bajando lo que acompaña.","pista":"Es lo que dice el consejo del principio."}]},
-"n1.t5.l5.p1":{"bloques":[
-  {"tipo":"texto","md":"Ya te sale la A. Ahora empieza lo que hace que parezca música: la **forma de la frase**. Una frase no es plana: sube hacia algún sitio y baja."},
-  {"tipo":"concepto","titulo":"El punto más alto","md":"Casi cada frase tiene un momento hacia el que va todo, muchas veces (no siempre) su nota más aguda. Lo que lleva a ese punto crece un poco; lo que viene después se relaja. Así la frase parece respirar."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Una frase que sube y baja","notas":[[1,0],[1,2],[1,4],[1,5],[1,4],[1,2],[1,0]],"duracion":0.6,"destacar":[3]}]},
-  {"tipo":"pasos","titulo":"Búscalo en la A","items":["Canta la primera frase y señala en qué nota sientes que llegas.","Márcala a lápiz.","Tócala con un pequeño crescendo hacia esa nota y un diminuendo después.","Hazlo también con la segunda frase, y mira si llega más lejos que la primera."]},
-  {"tipo":"guia","tipoGuia":"Sin respuesta única","md":"Aquí no hay una sola opción válida. Lo que no vale es que no haya ninguna: una frase con el mismo volumen de principio a fin suena a ejercicio."},
-  {"tipo":"bien","items":["Puedes señalar adónde va cada frase.","Se nota al oírlo: hay crecimiento y descanso."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t8.l1.p2","texto":"el carácter de cada parte."}]}]},
-"n1.t5.l5.p2":{"bloques":[
-  {"tipo":"texto","md":"Oír a dos intérpretes es la forma más rápida de entender que una partitura no lo dice todo. Tienen las mismas notas y suenan distintos."},
-  {"tipo":"concepto","titulo":"Dónde escucharlos","md":"Elige dos versiones distintas de guitarristas clásicos: [buscar en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra+cl%C3%A1sica). La academia aún no ha elegido dos grabaciones concretas."},
-  {"tipo":"tabla","cabecera":["Compara","Pregúntate"],"filas":[["El tempo","¿Cuál va más despacio?"],["La frase","¿Dónde respira cada uno? ¿Hacia dónde va?"],["El volumen","¿Cuánto más alta está la melodía que el acompañamiento?"],["El color","¿Dónde pulsa? ¿Cambia de color en algún momento?"]]},
-  {"tipo":"texto","md":"Después, elige una cosa que te guste de uno de ellos e inténtala. Eso es aprender de escuchar."},
-  {"tipo":"bien","items":["Sabes decir una diferencia concreta entre las dos versiones.","Has copiado una idea en tu A."]}]},
-"n1.t5.l5.p3":{"bloques":[
-  {"tipo":"texto","md":"Ya tocas estos compases, probablemente siguiendo tu tablatura escrita a lápiz o de memoria. Ahora se trata de **leerlos**. Es la mejor forma de aprender a leer: ya sabes cómo deben sonar."},
-  {"tipo":"pasos","titulo":"Lee los compases 1-2 de tu partitura","items":["Tápate los apuntes de cuerda y traste.","Lee solo la voz de arriba, en voz alta, con las notas y el ritmo.","Di las de abajo: ¿qué notas son? Con los cuatro sostenidos de la armadura, el Fa, el Do, el Sol y el Re ya llevan ♯.","Toca, mirando el pentagrama y no la mano."]},
-  {"tipo":"elige","enunciado":"Con la armadura de Mi mayor, ves un Sol sin nada delante. ¿Qué tocas?","notacion":{"compas":"3/4","armadura":"E","compasVisible":false,"compases":[{"voces":[[{"d":"2","p":true,"c":3,"t":1}]]}]},"opciones":["Sol natural","Sol♯"],"correcta":1,"porque":"La armadura vale para toda la obra: el Sol es Sol♯ salvo que se indique otra cosa.","pista":"Mira los signos del principio.","audio":{"notas":[[3,1]]}},
-  {"tipo":"bien","items":["Lees los dos compases sin mirar la mano.","Sabes el nombre de cada nota de la melodía."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l1.p4","texto":"la armadura de Mi mayor."}]}]},
-"n1.t5.l5.p4":{"bloques":[
-  {"tipo":"texto","md":"La melodía de la A se mueve por el mástil. Saber en qué cuerda y traste está cada nota, además de cómo se llama, es lo que te permite moverte con seguridad."},
-  {"tipo":"localizar","enunciado":"Empieza por las notas de Mi mayor en la 1.ª y 2.ª cuerda, hasta el traste 9. Encuéntralas todas. Son el mapa en el que se mueve la melodía.","conjunto":["Mi","Fa♯","Sol♯","La","Si","Do♯","Re♯"],"clave":"E","cuerdas":[1,2],"hastaTraste":9,"final":"Has encontrado la escala de Mi mayor en las dos cuerdas agudas."},
-  {"tipo":"pasos","titulo":"Y ahora con la melodía","items":["Escribe, sobre cada nota de la melodía, su nombre.","Escribe al lado cuerda y traste, según tu digitación.","Tócala diciendo el nombre de cada nota."]},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"La lista exacta, nota a nota, se completará cuando *Lágrima* esté transcrita en la app. De momento sale de tu partitura."},
-  {"tipo":"bien","items":["Sabes qué nota estás tocando en cada momento de la melodía.","Sabes en qué posición estás."]}]},
-"n1.t5.l5.p5":{"bloques":[
-  {"tipo":"texto","md":"Una sola prueba, pero completa: la A, sin parar, con la melodía arriba."},
-  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["Toda la A, sin parar y sin perder el pulso.","La melodía se oye por encima de las corcheas en todo momento.","Los cambios de posición no cortan la melodía.","Las frases respiran y van hacia algún sitio."]},
-  {"tipo":"metronomo","clave":"o1-tarrega-lagrima","bpm":50},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l4.p4","texto":"si el acompañamiento tapa."},{"paso":"n1.t5.l2.p2","texto":"si fallan los cambios."},{"paso":"n1.t5.l5.p1","texto":"si la frase queda plana."},{"paso":"n1.t7.l4.p1","texto":"lo que viene: la parte B."}]}]}
-}}
+{
+ "tramo": "n1.t5",
+ "nota": "Primera aparición de posición y dedo guía. La partitura de Lágrima sigue fuera de la app: ninguna nota, compás ni digitación concreta se da por cierta (por verificar con la edición de Alier). Los ejercicios son propios y lo dicen.",
+ "pasos": {
+  "n1.t5.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "**Francisco Tárrega** (Vila-real, 1852 - Barcelona, 1909) es uno de los guitarristas que más cambiaron el instrumento: buena parte de cómo se toca hoy viene de él. Además de sus obras, escribió estudios y transcripciones que aún se tocan."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "*Lágrima*, un preludio en dos partes",
+     "md": "Un **preludio** es una pieza breve, sin una forma estricta. *Lágrima* es muy corta y tiene dos partes: la **A**, en Mi mayor, y la **B**, en Mi menor, tras la cual vuelve la A. Es sencilla de notas y difícil de hacer bonita: por eso enseña tanto."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Qué te enseña",
+      "Dónde lo has preparado"
+     ],
+     "filas": [
+      [
+       "La melodía por encima del acompañamiento",
+       "Los dos planos, Tramo 3"
+      ],
+      [
+       "El sonido apoyado",
+       "Apoyando, Tramo 2"
+      ],
+      [
+       "Los acordes de Mi–La–Si7–Mi",
+       "Tramo 4"
+      ],
+      [
+       "Moverte por el mástil con un dedo guía",
+       "Aquí, en este tramo"
+      ]
+     ]
+    },
+    {
+     "tipo": "obra",
+     "id": "o1-tarrega-lagrima"
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l4.p1",
+       "texto": "la parte B."
+      },
+      {
+       "paso": "n1.t8.l1.p1",
+       "texto": "la obra entera."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Vuelve a escuchar *Lágrima*, ahora solo su principio. Ya sabes en qué fijarte, porque tienes el vocabulario que no tenías en el Tramo 1."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Dónde escucharla",
+     "md": "[Buscar *Lágrima* en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra). Elige una versión de guitarrista clásico y escucha hasta que oigas cambiar el color: esa es la parte B."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "La parte A",
+     "principal": "ambas",
+     "motivo": "Sigue la música mientras suena.",
+     "bpms": [
+      50,
+      66
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Tres escuchas, con un objetivo cada una",
+     "items": [
+      "**La melodía.** Síguela arriba y tararéala.",
+      "**Lo de debajo.** Son **corcheas**, un movimiento continuo, más suave. Marca el pulso con el pie: va en tres.",
+      "**Los dos planos.** Mira cómo la melodía queda delante aunque las corcheas nunca se paren."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Si el compás es 3/4 y el acompañamiento va en corcheas, ¿cuántas caben en un compás?",
+     "opciones": [
+      "Tres",
+      "Seis",
+      "Ocho"
+     ],
+     "correcta": 1,
+     "porque": "Cada negra son dos corcheas: tres negras, seis corcheas.",
+     "pista": "Dos corcheas caben en una negra."
+    }
+   ]
+  },
+  "n1.t5.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Antes de tocar, mira qué es lo que vas a tocar. La tienes aquí mismo, en la edición de Ildefonso Alier, con sus dedos y cuerdas."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "La parte A, con los dedos de Alier",
+     "principal": "ambas",
+     "motivo": "Para mirar la obra entera.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "Los {c:1-2} son el motivo: melodía sol♯, la, si sobre bajo mi, fa♯, sol♯. Los {c:3-4} lo repiten.",
+      "Los {c:5-6} suben al traste 12: ahí la mano cambia de posición."
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Lo que puedes ver",
+      "Qué significa"
+     ],
+     "filas": [
+      [
+       "Cuatro sostenidos al principio",
+       "Mi mayor: la armadura que estudiaste en el Tramo 4"
+      ],
+      [
+       "Un 3 sobre un 4",
+       "Tres negras por compás, como un vals lento"
+      ],
+      [
+       "Plicas arriba y abajo",
+       "Melodía y acompañamiento, dos voces"
+      ]
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Los acordes que ya conoces",
+     "md": "La parte A tiene 8 compases y gira sobre la familia que ya has trabajado: **Mi** (reposo), **La** (alejamiento) y **Si7** (tensión). Al leerla, intenta reconocerlos por el bajo y por las notas que suenan juntas."
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Mi",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "La",
+       "g": "IV",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "Si7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Mi",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l2.p4",
+       "texto": "si quieres repasar esta progresión."
+      }
+     ]
+    }
+   ],
+   "verificado": true
+  },
+  "n1.t5.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El dedo guía",
+     "md": "Cuando la mano tiene que ir a otro sitio del mástil, saltar es arriesgado: el dedo puede caer mal y el sonido se corta. El **dedo guía** es el dedo que **se queda en la cuerda y viaja por ella**, como un raíl, hasta llegar a su sitio."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "El dedo 1, viajando por la 2.ª cuerda",
+      "trastes": [
+       0,
+       8
+      ],
+      "clave": "E",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "k": "g",
+          "c": 2,
+          "t": 2,
+          "dedo": 1
+         }
+        ],
+        "texto": "El dedo 1 pisa en el traste 2.",
+        "ms": 2400
+       },
+       {
+        "marcas": [
+         {
+          "k": "g",
+          "c": 2,
+          "t": 2,
+          "dedo": 1
+         }
+        ],
+        "suena": [],
+        "texto": "Afloja la presión, sin levantar el dedo: sigue tocando la cuerda.",
+        "ms": 2400
+       },
+       {
+        "marcas": [
+         {
+          "k": "g",
+          "c": 2,
+          "t": 4,
+          "dedo": 1
+         }
+        ],
+        "texto": "Desliza hasta el traste 4 y vuelve a pisar. Ya está.",
+        "ms": 2400
+       },
+       {
+        "marcas": [
+         {
+          "k": "g",
+          "c": 2,
+          "t": 7,
+          "dedo": 1
+         }
+        ],
+        "texto": "Lo mismo hasta el traste 7: un viaje más largo.",
+        "ms": 2600
+       },
+       {
+        "marcas": [
+         {
+          "k": "g",
+          "c": 2,
+          "t": 2,
+          "dedo": 1
+         }
+        ],
+        "texto": "Y de vuelta: la mano entera acompaña al dedo.",
+        "ms": 2600
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Los tres tiempos",
+     "items": [
+      "**Aflojar:** el dedo deja de pisar, sin separarse de la cuerda.",
+      "**Deslizar:** el brazo lleva la mano. El dedo no estira.",
+      "**Volver a pisar:** justo a tiempo, junto al traste."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Se oye un chirrido al deslizar.",
+       "arreglo": "Sigues apretando: afloja más. Un pequeño roce es normal en los bordones (6.ª, 5.ª y 4.ª), pero no debe ser fuerte."
+      },
+      {
+       "error": "Llegas tarde.",
+       "arreglo": "El viaje empieza antes de que acabe la nota anterior. Salir a tiempo es lo que permite llegar a tiempo."
+      },
+      {
+       "error": "El dedo estira y la mano se queda atrás.",
+       "arreglo": "Lo que se mueve es el brazo entero."
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l2.p2",
+       "texto": "el ejercicio."
+      },
+      {
+       "paso": "n1.t4.l4.p1",
+       "texto": "ya lo viste de La a Si7: el dedo 1 se desliza un traste."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Viajar por una cuerda con un mismo dedo, sin que el cambio se oiga.",
+     "porque": "Es lo que te permitirá subir en *Lágrima*, y más adelante en el *Romance* o en *Adelita*.",
+     "atencion": "Escucha lo que pasa **entre** las notas: ahí se nota si el cambio está bien.",
+     "empieza": "♩ = 50, con el dedo 1. Después, los mismos trastes con el dedo 2 y con el 3.",
+     "sube": "Con los tres dedos, el cambio no se oye."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "El dedo guía, con zoom",
+      "clave": "E",
+      "trastes": [
+       0,
+       12
+      ],
+      "zoom": [
+       1,
+       8
+      ],
+      "ms": 1500,
+      "notas": [
+       {
+        "c": 2,
+        "t": 2,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 4,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 7,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 4,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 2,
+        "dedo": 1
+       }
+      ],
+      "final": "El dedo nunca se ha separado de la cuerda."
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-dedo-guia.json",
+     "titulo": "El dedo guía en una cuerda",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      50,
+      60
+     ],
+     "notas": [
+      "En el {c:1} y el {c:2}, el mismo dedo en los trastes 2, 4, 7 y de vuelta al 4. El arrastre no está escrito: tú decides que el dedo no se levante."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El cambio no se oye.",
+      "Llegas a tiempo sin correr al final.",
+      "El dedo no se separa de la cuerda en ningún momento."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l2.p4",
+       "texto": "su uso en *Lágrima*."
+      },
+      {
+       "paso": "n1.t7.l4.p3",
+       "texto": "también en la B."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Hasta ahora has tocado siempre en la misma zona del mástil. Para hablar de otras zonas hace falta una palabra."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Qué es una posición",
+     "md": "Una **posición** se nombra por el traste en el que está el **dedo 1**, y normalmente se escribe en números romanos. En la **1.ª posición**, el dedo 1 va en el traste 1. En la **II**, en el 2, y el resto de dedos, un traste más allá cada uno."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "La mano cambia de sitio; los dedos, no de orden",
+      "trastes": [
+       0,
+       9
+      ],
+      "clave": "C",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "k": "a",
+          "c": 2,
+          "t": 1,
+          "dedo": 1
+         },
+         {
+          "k": "b",
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "k": "c",
+          "c": 2,
+          "t": 3,
+          "dedo": 3
+         },
+         {
+          "k": "d",
+          "c": 2,
+          "t": 4,
+          "dedo": 4
+         }
+        ],
+        "suena": [],
+        "texto": "1.ª posición: dedos 1, 2, 3 y 4 en los trastes 1, 2, 3 y 4.",
+        "ms": 3000
+       },
+       {
+        "marcas": [
+         {
+          "k": "a",
+          "c": 2,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "k": "b",
+          "c": 2,
+          "t": 3,
+          "dedo": 2
+         },
+         {
+          "k": "c",
+          "c": 2,
+          "t": 4,
+          "dedo": 3
+         },
+         {
+          "k": "d",
+          "c": 2,
+          "t": 5,
+          "dedo": 4
+         }
+        ],
+        "suena": [],
+        "texto": "Posición II: la mano sube un traste. Todo sube con ella.",
+        "ms": 3000
+       },
+       {
+        "marcas": [
+         {
+          "k": "a",
+          "c": 2,
+          "t": 5,
+          "dedo": 1
+         },
+         {
+          "k": "b",
+          "c": 2,
+          "t": 6,
+          "dedo": 2
+         },
+         {
+          "k": "c",
+          "c": 2,
+          "t": 7,
+          "dedo": 3
+         },
+         {
+          "k": "d",
+          "c": 2,
+          "t": 8,
+          "dedo": 4
+         }
+        ],
+        "suena": [],
+        "texto": "Posición V: el dedo 1 en el traste 5.",
+        "ms": 3000
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "El dedo 1 está en el traste 7. ¿En qué posición estás?",
+     "opciones": [
+      "1.ª",
+      "V",
+      "VII"
+     ],
+     "correcta": 2,
+     "porque": "La posición es el traste del dedo 1.",
+     "pista": "¿Qué dedo da el nombre a la posición?"
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Estás en posición V. ¿En qué traste cae normalmente el dedo 3?",
+     "opciones": [
+      "Traste 3",
+      "Traste 7",
+      "Traste 8"
+     ],
+     "correcta": 1,
+     "porque": "Dedo 1 en el 5, dedo 2 en el 6, dedo 3 en el 7.",
+     "pista": "Un dedo por traste, desde el 5."
+    },
+    {
+     "tipo": "texto",
+     "md": "La parte A sale de la 1.ª posición hacia la IX, en el compás 5, y vuelve. En la tablatura de la obra lo verás en los números."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l2.p1",
+       "texto": "una escala con un cambio de posición."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l2.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una digitación no es un capricho del editor. Casi siempre responde a algo: mantener una línea ligada, ganar tiempo o preparar lo siguiente. Aquí, el motivo es el dedo guía."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué ese dedo y no otro",
+     "md": "En los {c:4-5} la melodía salta del fa♯ del traste 2 al mi del traste 12. Alier resuelve el salto con un cambio de posición y una cejilla en el IX: la cuerda al aire del compás 4 da tiempo para llegar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "El cambio de la A",
+     "principal": "tablatura",
+     "motivo": "Es una digitación: tablatura.",
+     "bpms": [
+      44
+     ],
+     "compases": [
+      4,
+      6
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Trabaja este cambio",
+     "items": [
+      "Toca el último tiempo del {c:4} y la primera nota del {c:5}, en bucle.",
+      "Sal mientras suena la cuerda al aire: no esperes al pulso.",
+      "Coloca primero la cejilla del traste 9 y luego el dedo 4.",
+      "Añade el resto del compás cuando el salto salga limpio."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes explicar qué dedo viaja y por qué.",
+      "La melodía no se corta en el cambio."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l4.p1",
+       "texto": "montar los compases."
+      }
+     ]
+    }
+   ],
+   "verificado": true
+  },
+  "n1.t5.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Si se puede cantar, se sabe adónde va",
+     "md": "Una melodía cantada tiene dirección: la voz sube con esfuerzo, descansa, respira. Los dedos no saben nada de eso. Si cantas una frase antes de tocarla, tus manos reciben una idea clara de lo que quieres, y se nota."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Lo que te da cantar",
+      "Por qué ayuda"
+     ],
+     "filas": [
+      [
+       "Saber dónde respirar",
+       "Allí termina la frase"
+      ],
+      [
+       "Saber cuál es el punto más alto",
+       "Hacia allí va todo"
+      ],
+      [
+       "Oír la nota antes de tocarla",
+       "Si la oyes por dentro, la tocas mejor"
+      ]
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Ya has hecho ecos y has cantado 1-3-5. Es la misma capacidad, ahora al servicio de una obra."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t2.l5.p4",
+       "texto": "tus primeros ecos."
+      },
+      {
+       "paso": "n1.t4.l2.p5",
+       "texto": "cantar 1-3-5."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Cantar la melodía de la A acompañado por una grabación.",
+     "porque": "Vas a saber la frase de oído antes de pelearte con los dedos, lo que hace más fácil todo lo demás.",
+     "atencion": "Da igual si tienes que cantarla más grave o más aguda. Busca la altura que te vaya bien, y usa *la-la*.",
+     "empieza": "Con la grabación, cantando a la vez. Después, sin ella.",
+     "sube": "Puedes cantar la A sola, llegando al final en la nota correcta."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Con qué",
+     "md": "La app aún no trae el acompañamiento de *Lágrima*, así que usa una grabación: [buscar en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra). Lo que sí tienes aquí es la nota de casa y los acordes, para orientarte."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La nota de casa: Mi",
+       "notas": [
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 2
+      },
+      {
+       "etiqueta": "El acorde de Mi",
+       "acorde": "Mi"
+      },
+      {
+       "etiqueta": "Mi–La–Si7–Mi",
+       "acordes": [
+        "Mi",
+        "La",
+        "Si7",
+        "Mi"
+       ],
+       "duracion": 1.6
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Cantas la melodía de la A sin ayuda.",
+      "Sabes dónde respiras.",
+      "Terminas en la nota correcta."
+     ]
+    }
+   ]
+  },
+  "n1.t5.l4.p1": {
+   "pantallas": [
+    {
+     "titulo": "Prepara las manos",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Antes de la obra, una preparación: una melodía larga arriba y corcheas debajo, sobre los acordes que ya conoces. Tiene la misma mecánica que vas a usar, sin necesidad de leer nada nuevo."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/prep-melodia-corcheas.json",
+       "titulo": "Ejercicio escrito para la academia: no es *Lágrima*",
+       "principal": "tablatura",
+       "motivo": "Es una preparación técnica: tablatura.",
+       "bpms": [
+        50,
+        66
+       ],
+       "notas": [
+        "Arriba, una nota por compás con *a*, apoyando o muy presente. Debajo, seis corcheas seguidas y suaves."
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "La nota de arriba sigue oyéndose hasta el compás siguiente.",
+        "Las corcheas no se paran ni se aceleran."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Compases 1-4",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-tarrega-lagrima",
+       "md": "**Qué parte:** los cuatro primeros compases de la A. **Técnica:** melodía sobre corcheas. **Dificultad:** mantener los dos planos."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-lagrima-a.json",
+       "titulo": "Compases 1-4",
+       "principal": "tablatura",
+       "motivo": "Es técnica y digitación: tablatura; la partitura, cuando quieras.",
+       "bpms": [
+        44,
+        60
+       ],
+       "compases": [
+        1,
+        4
+       ],
+       "notas": [
+        "Los dedos y las cuerdas son de Alier. La mano derecha es una propuesta de la academia."
+       ]
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Cómo lo divides",
+       "items": [
+        "**Melodía sola**, cantada y tocada con la digitación de tu edición.",
+        "**Acompañamiento solo**, en corcheas regulares.",
+        "**Compás 1**, las dos cosas a la vez, muy despacio. Luego el 2.",
+        "**Une 1-2**, luego 3-4 y, por último, 1-4."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Montar los compases 1-4.",
+       "porque": "Cuatro compases son una frase: si salen bien, ya tienes el modelo de sonido para el resto.",
+       "atencion": "Lee en el pentagrama que hay dos voces: plicas arriba, melodía; plicas abajo, acompañamiento.",
+       "empieza": "♩ = 40-50, o lo que te permita no parar.",
+       "sube": "Salen tres veces seguidas, con la melodía delante."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-tarrega-lagrima",
+       "bpm": 44
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Los cuatro compases sin parar.",
+        "La melodía canta por encima.",
+        "Las corcheas son regulares."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Mismo método para la segunda frase. Aquí conviene fijarse en lo que es nuevo y en lo que se parece a la primera."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "Compases 5-8",
+     "principal": "tablatura",
+     "motivo": "Es técnica y digitación: tablatura.",
+     "bpms": [
+      40,
+      56
+     ],
+     "compases": [
+      5,
+      8
+     ],
+     "notas": [
+      "{c:5}: cejilla en el IX y luego en el VII. {c:7}: cejilla en el II. Alier las marca: no son opcionales aquí.",
+      "El {c:8} cierra: mi, sol♯, mi y el bajo mi. Es el final de la obra, *Fin*, cuando vuelvas de la B."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Antes de tocar, mira",
+     "items": [
+      "¿Hay algún compás igual o casi igual a uno de los cuatro primeros? No lo vuelvas a estudiar desde cero.",
+      "¿Dónde hay un cambio de posición? Prepáralo con el dedo guía, solo esas dos notas.",
+      "¿En qué nota termina la frase? Ahí vas a respirar."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Montar los compases 5-8, en trozos y luego juntos.",
+     "porque": "Con esto completas la A.",
+     "atencion": "En el cambio de posición, sal antes de tiempo. No te pares a esperar el pulso siguiente.",
+     "empieza": "El mismo tempo que usaste con los compases 1-4.",
+     "sube": "Te salen 5-8 igual que 1-4."
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-tarrega-lagrima",
+     "bpm": 44
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Los compases 5-8 sin parar.",
+      "El cambio de posición no corta la melodía."
+     ]
+    }
+   ]
+  },
+  "n1.t5.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora, las dos frases seguidas. Unir no es solo sumar: hay que conseguir que el compás 4 enlace con el 5 sin pararse y que la melodía se entienda como un todo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "La A entera",
+     "principal": "tablatura",
+     "motivo": "Ya puedes elegir cómo verla.",
+     "bpms": [
+      50,
+      66
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo unirlas",
+     "items": [
+      "Practica solo los compases 4 y 5, el enlace.",
+      "Toca la A entera a un tempo cómodo.",
+      "Grábate con el móvil y escucha: ¿se oye la melodía?",
+      "Cuando salga tres días seguidos, deja que pase al atril."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-tarrega-lagrima",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La A, sin parar y con el tempo estable.",
+      "La melodía queda delante de principio a fin.",
+      "Lo has comprobado otro día, sin calentar."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l5.p5",
+       "texto": "la comprobación."
+      },
+      {
+       "paso": "n1.t8.l1.p1",
+       "texto": "la obra entera."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "guia",
+     "md": "Si el acompañamiento tapa la melodía, **se baja el acompañamiento; no se sube la melodía**."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué",
+     "md": "Al querer que la melodía se oiga, lo que sale de forma natural es tocarla más fuerte. Pero así la melodía se vuelve dura y no canta. Lo que suena mejor es lo contrario: deja la melodía como está y haz que las corcheas casi susurren."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Melodía delante, corcheas suaves",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         3,
+         1
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         3,
+         1
+        ],
+        [
+         2,
+         0
+        ]
+       ],
+       "duracion": 0.6,
+       "destacar": [
+        0,
+        3
+       ]
+      },
+      {
+       "etiqueta": "Todo igual",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         3,
+         1
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         3,
+         1
+        ],
+        [
+         2,
+         0
+        ]
+       ],
+       "duracion": 0.6
+      }
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Cuanto más lo intentas, más fuerte suena todo.",
+       "arreglo": "Toca solo el acompañamiento lo más suave posible, sin que se deje de oír. Después, añade la melodía sin cambiarlo."
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Grabas la A y las corcheas se oyen casi tanto como la melodía. ¿Qué haces?",
+     "opciones": [
+      "Tocar más fuerte la melodía",
+      "Tocar más suaves las corcheas",
+      "Tocar todo más rápido"
+     ],
+     "correcta": 1,
+     "porque": "El contraste se consigue bajando lo que acompaña.",
+     "pista": "Es lo que dice el consejo del principio."
+    }
+   ]
+  },
+  "n1.t5.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya te sale la A. Ahora empieza lo que hace que parezca música: la **forma de la frase**. Una frase no es plana: sube hacia algún sitio y baja."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El punto más alto",
+     "md": "Casi cada frase tiene un momento hacia el que va todo, muchas veces (no siempre) su nota más aguda. Lo que lleva a ese punto crece un poco; lo que viene después se relaja. Así la frase parece respirar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "Oye adónde va",
+     "principal": "ambas",
+     "motivo": "Para seguir la frase.",
+     "bpms": [
+      50
+     ],
+     "compases": [
+      1,
+      8
+     ],
+     "notas": [
+      "La primera frase descansa en el {c:2}, la segunda en el {c:4} y la tercera sube hasta el mi del {c:5}, el punto más alto, y baja hasta el {c:8}."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Una frase que sube y baja",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         5
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.6,
+       "destacar": [
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Búscalo en la A",
+     "items": [
+      "Canta la primera frase y señala en qué nota sientes que llegas.",
+      "Márcala a lápiz.",
+      "Tócala con un pequeño crescendo hacia esa nota y un diminuendo después.",
+      "Hazlo también con la segunda frase, y mira si llega más lejos que la primera."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Sin respuesta única",
+     "md": "Aquí no hay una sola opción válida. Lo que no vale es que no haya ninguna: una frase con el mismo volumen de principio a fin suena a ejercicio."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes señalar adónde va cada frase.",
+      "Se nota al oírlo: hay crecimiento y descanso."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l1.p2",
+       "texto": "el carácter de cada parte."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Oír a dos intérpretes es la forma más rápida de entender que una partitura no lo dice todo. Tienen las mismas notas y suenan distintos."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Dónde escucharlos",
+     "md": "Elige dos versiones distintas de guitarristas clásicos: [buscar en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra+cl%C3%A1sica). La academia aún no ha elegido dos grabaciones concretas."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Compara",
+      "Pregúntate"
+     ],
+     "filas": [
+      [
+       "El tempo",
+       "¿Cuál va más despacio?"
+      ],
+      [
+       "La frase",
+       "¿Dónde respira cada uno? ¿Hacia dónde va?"
+      ],
+      [
+       "El volumen",
+       "¿Cuánto más alta está la melodía que el acompañamiento?"
+      ],
+      [
+       "El color",
+       "¿Dónde pulsa? ¿Cambia de color en algún momento?"
+      ]
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Después, elige una cosa que te guste de uno de ellos e inténtala. Eso es aprender de escuchar."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes decir una diferencia concreta entre las dos versiones.",
+      "Has copiado una idea en tu A."
+     ]
+    }
+   ]
+  },
+  "n1.t5.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya tocas estos compases. Ahora se trata de **leerlos**. Es la mejor forma de aprender a leer: ya sabes cómo deben sonar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-lagrima-a.json",
+     "titulo": "Compases 1-2",
+     "principal": "partitura",
+     "motivo": "El objetivo es leer: partitura.",
+     "bpms": [
+      44
+     ],
+     "compases": [
+      1,
+      2
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Lee los compases 1-2 de tu partitura",
+     "items": [
+      "Tápate los apuntes de cuerda y traste.",
+      "Lee solo la voz de arriba, en voz alta, con las notas y el ritmo.",
+      "Di las de abajo: ¿qué notas son? Con los cuatro sostenidos de la armadura, el Fa, el Do, el Sol y el Re ya llevan ♯.",
+      "Toca, mirando el pentagrama y no la mano."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Con la armadura de Mi mayor, ves un Sol sin nada delante. ¿Qué tocas?",
+     "notacion": {
+      "compas": "3/4",
+      "armadura": "E",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "2",
+           "p": true,
+           "c": 3,
+           "t": 1
+          }
+         ]
+        ]
+       }
+      ]
+     },
+     "opciones": [
+      "Sol natural",
+      "Sol♯"
+     ],
+     "correcta": 1,
+     "porque": "La armadura vale para toda la obra: el Sol es Sol♯ salvo que se indique otra cosa.",
+     "pista": "Mira los signos del principio.",
+     "audio": {
+      "notas": [
+       [
+        3,
+        1
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Lees los dos compases sin mirar la mano.",
+      "Sabes el nombre de cada nota de la melodía."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l1.p4",
+       "texto": "la armadura de Mi mayor."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t5.l5.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La melodía de la A se mueve por el mástil. Saber en qué cuerda y traste está cada nota, además de cómo se llama, es lo que te permite moverte con seguridad."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Melodía",
+      "Sol♯",
+      "La",
+      "Si",
+      "Fa♯",
+      "Mi",
+      "Re♯",
+      "Do♯"
+     ],
+     "filas": [
+      [
+       "Cuerda y traste",
+       "1.ª, 4",
+       "1.ª, 5",
+       "1.ª, 7",
+       "1.ª, 2",
+       "1.ª, 12",
+       "1.ª, 11",
+       "1.ª, 9"
+      ],
+      [
+       "Compás",
+       "1",
+       "1",
+       "1",
+       "2",
+       "5",
+       "5",
+       "5"
+      ]
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Y ahora con la melodía",
+     "items": [
+      "Escribe, sobre cada nota de la melodía, su nombre.",
+      "Escribe al lado cuerda y traste, según tu digitación.",
+      "Tócala diciendo el nombre de cada nota."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes qué nota estás tocando en cada momento de la melodía.",
+      "Sabes en qué posición estás."
+     ]
+    }
+   ]
+  },
+  "n1.t5.l5.p5": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una sola prueba, pero completa: la A, sin parar, con la melodía arriba."
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que ya te sale",
+     "items": [
+      "Toda la A, sin parar y sin perder el pulso.",
+      "La melodía se oye por encima de las corcheas en todo momento.",
+      "Los cambios de posición no cortan la melodía.",
+      "Las frases respiran y van hacia algún sitio."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-tarrega-lagrima",
+     "bpm": 50
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t5.l4.p4",
+       "texto": "si el acompañamiento tapa."
+      },
+      {
+       "paso": "n1.t5.l2.p2",
+       "texto": "si fallan los cambios."
+      },
+      {
+       "paso": "n1.t5.l5.p1",
+       "texto": "si la frase queda plana."
+      },
+      {
+       "paso": "n1.t7.l4.p1",
+       "texto": "lo que viene: la parte B."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

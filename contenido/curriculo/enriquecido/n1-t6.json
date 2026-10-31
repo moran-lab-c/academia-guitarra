@@ -1,125 +1,1712 @@
-{"tramo":"n1.t6","nota":"Primera aparición de nota destacada, inversión, cadencia y armónicos. Los datos del Estudio en Mi menor salen de su propia transcripción (08 - Guitarra/Clásica). Giuliani sigue fuera de la app.","pasos":{
-"n1.t6.l1.p1":{"bloques":[
-  {"tipo":"texto","md":"En los arpegios que ya tocas, todas las notas suenan igual. Ese era el objetivo hasta ahora. Pero en una obra suele haber una melodía **dentro** del arpegio y hay que sacarla. Es la misma idea de los dos planos, ahora con una nota entre otras."},
-  {"tipo":"concepto","titulo":"La nota que canta","md":"La **nota destacada** es una nota del arpegio tocada con más peso que las demás. No es un golpe: es el mismo movimiento, con más velocidad en ese dedo y menos en los otros."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Todo igual","notas":[[5,0],[3,2],[2,1],[1,0],[5,0],[3,2],[2,1],[1,0]],"duracion":0.42},{"etiqueta":"La *a* destacada","notas":[[5,0],[3,2],[2,1],[1,0],[5,0],[3,2],[2,1],[1,0]],"duracion":0.42,"destacar":[3,7]},{"etiqueta":"La *m* destacada","notas":[[5,0],[3,2],[2,1],[1,0],[5,0],[3,2],[2,1],[1,0]],"duracion":0.42,"destacar":[2,6]}]},
-  {"tipo":"pasos","titulo":"Cómo se hace","items":["Prepara los cuatro dedos, como en el arpegio clásico.","Piensa en el dedo que va a cantar. Los otros tocan muy suaves: casi rozando.","El que canta sale con más velocidad, desde el nudillo.","La mano no se mueve: si salta, estás empujando con el brazo."]},
-  {"tipo":"errores","items":[{"error":"La nota destacada suena a golpe.","arreglo":"Baja el volumen de las demás en vez de subir el de esa."},{"error":"La siguiente nota también sale fuerte.","arreglo":"Es la inercia. Practica muy lento, pensando «fuerte, suave, suave, suave»."}]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l1.p1","texto":"la misma idea de los dos planos."},{"paso":"n1.t4.l3.p2","texto":"las fórmulas que ahora puedes destacar."}]}]},
-"n1.t6.l1.p2":{"bloques":[
-  {"tipo":"ejercicio","que":"El arpegio p-i-m-a, con la nota de *a* más fuerte que las demás.","porque":"Al final de este nivel se busca el arpegio con la melodía destacada, a ♩ = 72 en corcheas.","atencion":"Sigue siendo tirando. Escucha lo que pasa con *p*, *i* y *m*: tienen que quedar por debajo sin desaparecer.","empieza":"♩ = 48 en corcheas.","sube":"Se oye una línea melódica sobre las otras notas. Sube hasta ♩ = 72. Después, prueba a destacar *m* o *p*."},
-  {"tipo":"notacion","fuente":"notacion/arp-nota-destacada.json","titulo":"Con la *a* destacada","principal":"ambas","motivo":"Para ver el acento en las dos escrituras.","bpms":[48,72],"notas":["El signo > sobre una nota es un **acento**: tócala con más presencia que las demás. En el {c:1}, La m; en el {c:2}, Mi."]},
-  {"tipo":"metronomo","bpm":48},
-  {"tipo":"bien","items":["La nota destacada forma una línea que podrías cantar.","Las demás siguen ahí, parejas.","La mano derecha se queda quieta."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t6.l3.p3","texto":"se usa en tu *Estudio en Mi menor*."}]}]},
-"n1.t6.l1.p3":{"bloques":[
-  {"tipo":"guia","md":"Donde la 2.ª cuerda tiene que seguir sonando, la *a* destaca **tirando**, no apoyando."},
-  {"tipo":"concepto","titulo":"Por qué","md":"Apoyar es la forma más directa de que una nota salga llena. Pero el dedo apoyado **toca la cuerda vecina**, y esa cuerda se calla. La *a* apoyada en la 1.ª caería en la 2.ª. Si la 2.ª tiene una nota del acorde que debe sonar, hay que pasar por encima."},
-  {"tipo":"tabla","cabecera":["¿Debe seguir sonando la 2.ª cuerda?","La *a*"],"filas":[["Sí","Tirando, con más velocidad"],["No","Puedes apoyar"]]},
-  {"tipo":"escuchar","items":[{"etiqueta":"Lo que debe oírse: el acorde sigue vibrando","notas":[[[5,0],[3,2]],[[2,1]],[[1,0]]],"duracion":1.1,"destacar":[2]}]},
-  {"tipo":"elige","enunciado":"En un arpegio, la 2.ª cuerda acaba de sonar con *m* y quieres destacar la 1.ª. ¿Qué haces?","opciones":["*a* apoyando, para que suene más","*a* tirando, con más velocidad"],"correcta":1,"porque":"Apoyando, la *a* se pararía sobre la 2.ª y cortaría la nota de *m*.","pista":"¿Dónde se queda el dedo en un apoyando?"}]},
-"n1.t6.l2.p1":{"pantallas":[
- {"titulo":"Qué es una inversión","bloques":[
-  {"tipo":"texto","md":"Un acorde de Do tiene tres notas: Do, Mi y Sol. Hasta ahora, la más grave era siempre el Do. Pero pueden colocarse de otras maneras, y **la nota que está más abajo cambia cómo suena**."},
-  {"tipo":"tabla","cabecera":["Nota en el bajo","Se llama","Se escribe","Cómo suena"],"filas":[["La fundamental (Do)","**Estado fundamental**","Do","Asentado, firme"],["La 3.ª (Mi)","**Primera inversión**","Do/Mi","Más ligero, con ganas de seguir"],["La 5.ª (Sol)","**Segunda inversión**","Do/Sol","Inestable, en el aire"]]},
-  {"tipo":"escuchar","items":[{"etiqueta":"Do","notas":[[[5,3],[4,2],[3,0],[2,1]]],"duracion":2.2},{"etiqueta":"Do/Mi","notas":[[[4,2],[3,0],[2,1],[1,0]]],"duracion":2.2},{"etiqueta":"Do/Sol","notas":[[[6,3],[4,2],[3,0],[2,1]]],"duracion":2.2}]},
-  {"tipo":"concepto","titulo":"El bajo manda","md":"Las notas de arriba pueden estar en cualquier orden: **el nombre lo decide solo la más grave**. Por eso, en un arpegio, mirar lo que toca el pulgar suele ser suficiente para saber la inversión."}]},
- {"titulo":"Por qué se usan","bloques":[
-  {"tipo":"texto","md":"Si todos los acordes estuvieran en estado fundamental, el bajo daría saltos grandes. Con inversiones, el bajo puede moverse por pasos pequeños, como una segunda melodía."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Bajo a saltos: Do, Sol, Do","notas":[[[5,3],[3,0],[2,1]],[[6,3],[3,0],[2,0]],[[5,3],[3,0],[2,1]]],"duracion":1.3},{"etiqueta":"Bajo por pasos: Do, Sol/Si, Do","notas":[[[5,3],[3,0],[2,1]],[[5,2],[3,0],[2,0]],[[5,3],[3,0],[2,1]]],"duracion":1.3}]},
-  {"tipo":"elige","enunciado":"Acorde de Sol (Sol, Si, Re). El bajo toca Si. ¿Cómo está?","opciones":["Estado fundamental","Primera inversión","Segunda inversión"],"correcta":1,"porque":"Si es la 3.ª del acorde: primera inversión.","pista":"Sol es la fundamental; Si, la 3.ª; Re, la 5.ª."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t6.l2.p2","texto":"lo practicas."},{"paso":"n1.t6.l2.p3","texto":"inversiones en tu *Estudio*."}]}]}]},
-"n1.t6.l2.p2":{"bloques":[
-  {"tipo":"texto","md":"Recuerda: mira qué nota es el bajo y localízala en el acorde. Fundamental, estado fundamental. 3.ª, primera inversión. 5.ª, segunda inversión."},
-  {"tipo":"preguntas","n":5}]},
-"n1.t6.l2.p3":{"pantallas":[
- {"titulo":"Qué mirar","bloques":[
-  {"tipo":"obra","id":"o1-estudio-en-mi-menor","md":"Lo tocas desde hace tiempo. Ahora vas a entender qué estás tocando."},
-  {"tipo":"tabla","cabecera":["Compases","Qué hay"],"filas":[["1-2","Entrada"],["3-10 (A) y 11-18 (B)","Dos bloques de ocho compases"],["19-34","A y B, una octava más arriba"],["35-50","Octavas descendentes"],["51-66","A y B otra vez"],["67-74","A arriba, con armónicos"]]},
-  {"tipo":"concepto","titulo":"Cómo está hecho","md":"Es un compás de 4/4, con un bajo en redonda y un arpegio en corcheas por encima. Ya tienes todo el vocabulario: el pulgar da el **bajo** y por eso te dice el acorde y su inversión."},
-  {"tipo":"pasos","titulo":"Analiza un bloque","items":["Abre *Estudio en Mi menor.pdf* por el compás 3.","Escribe qué nota hace el pulgar en cada compás.","Mira las notas del arpegio y ponle nombre al acorde.","Si el bajo no es la fundamental, escribe la inversión: por ejemplo, Do/Mi."]}]},
- {"titulo":"La cadencia","bloques":[
-  {"tipo":"concepto","titulo":"Qué es una cadencia","md":"Una **cadencia** es la fórmula con la que termina una frase: los compases en los que la música llega a un sitio y descansa. Es como el punto de una oración. La verás a fondo en el Tramo 12."},
-  {"tipo":"texto","md":"En tu *Estudio*, cada bloque de ocho compases acaba igual: **Mi–Re♯–Do♯–Re♯–Mi**. Escúchala."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Mi–Re♯–Do♯–Re♯–Mi","notas":[[1,0],[2,4],[2,2],[2,4],[1,0]],"duracion":0.8}]},
-  {"tipo":"elige","enunciado":"Esa cadencia tiene un Re♯ justo antes de llegar al Mi. ¿Qué hace esa nota?","opciones":["Está a un semitono del Mi: pide llegar","Está a un tono del Mi: suena lejana","Es la fundamental del acorde"],"correcta":0,"porque":"De Re♯ a Mi hay un semitono, igual que entre la 7.ª y la 8.ª de la escala. El oído quiere resolver.","pista":"Mira la distancia que hay entre Re♯ y Mi."},
-  {"tipo":"bien","items":["Sabes decir el acorde de un bloque, compás a compás.","Reconoces la cadencia cuando llega."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t7.l2.p4","texto":"por qué el Re♯ es tan importante en Mi menor."},{"paso":"n1.t12.l6.p2","texto":"las cadencias, con su nombre."}]}]}]},
-"n1.t6.l3.p1":{"bloques":[
-  {"tipo":"texto","md":"Ya conoces las corcheas. Ahora, seis en cada compás: es el ritmo de la mayoría de los arpegios de este tramo y de la parte B de *Lágrima*."},
-  {"tipo":"tabla","cabecera":["Pulso","1","","2","","3",""],"filas":[["Se dice","**1**","y","**2**","y","**3**","y"]]},
-  {"tipo":"notacion","fuente":"notacion/rit-corcheas-3-4.json","titulo":"Corcheas en 3/4","principal":"ambas","motivo":"Aquí importa contar.","bpms":[50,72],"notas":["En el {c:1}, negras; en el {c:2}, corcheas, y en el {c:3}, un arpegio: *p* siempre en el «1»."]},
-  {"tipo":"ejercicio","que":"Contar en voz alta «1 y 2 y 3 y» mientras tocas.","porque":"Si cuentas por tiempos, el arpegio deja de correr: las corcheas se reparten igual.","atencion":"Es fácil acelerar al final del compás. Las «y» duran lo mismo que los números.","empieza":"♩ = 50.","sube":"Cuentas sin parar a ♩ = 72."},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"elige","enunciado":"Escucha este compás en 3/4. ¿En qué nota cae el «2»?","audio":{"notas":[[6,0],[3,1],[2,0],[1,0],[2,0],[3,1]],"duracion":0.4},"opciones":["En la segunda nota","En la tercera nota","En la cuarta nota"],"correcta":1,"porque":"Nota 1 = «1», nota 2 = «y», nota 3 = «2».","pista":"Cuenta: 1, y, 2…"}]},
-"n1.t6.l3.p2":{"pantallas":[
- {"titulo":"Qué aprendes con ella","bloques":[
-  {"tipo":"obra","id":"o1-giuliani-op-1-parte-4-n-3","md":"**Qué aprendes:** el arpegio dentro de una pieza. Hasta ahora eran fórmulas; aquí, música."},
-  {"tipo":"concepto","titulo":"De dónde sale","md":"Es uno de los doce estudios de la cuarta parte del *Studio per la chitarra*, op. 1, de Mauro Giuliani: la misma obra de las fórmulas que has practicado. Partitura en [IMSLP, Giuliani, op. 1](https://imslp.org/wiki/Studio_per_la_chitarra,_Op.1_%28Giuliani,_Mauro%29)."},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Aún no está transcrito en la app, y tampoco hemos comprobado sus acordes compás a compás. Trabaja con tu partitura."},
-  {"tipo":"pasos","titulo":"Antes de tocar","items":["¿Qué compás y qué armadura tiene?","Busca la fórmula de la mano derecha en los primeros compases: ¿se parece a alguna de las que ya tocas?","Toca los acordes **plaqué**, es decir, todas las notas de cada compás a la vez. Así entiendes la armonía y preparas la mano izquierda.","Mira los bajos. ¿Hay inversiones?"]}]},
- {"titulo":"Cómo se trabaja","bloques":[
-  {"tipo":"ejercicio","que":"Montar el estudio por compases, primero plaqué y luego arpegiado.","porque":"Si los acordes salen limpios, la mano derecha puede centrarse en la fórmula.","atencion":"Los dedos de la izquierda se quedan puestos mientras dura el acorde. Es lo que hace que el arpegio resuene.","empieza":"♩ = 48 en corcheas.","sube":"Tres veces sin parar. Después, busca qué nota puede cantar."},
-  {"tipo":"metronomo","clave":"o1-giuliani-op-1-parte-4-n-3","bpm":48},
-  {"tipo":"bien","items":["Tocas la pieza entera sin cortar el arpegio.","Las notas de cada acorde siguen sonando hasta el cambio.","Sabes cómo se llama cada acorde."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t6.l3.p4","texto":"leer sus cuatro primeros compases."}]}]}]},
-"n1.t6.l3.p3":{"bloques":[
-  {"tipo":"obra","id":"o1-estudio-en-mi-menor","md":"Ahora lo tocas con lo que acabas de aprender: en lugar de un arpegio uniforme, una línea que sale."},
-  {"tipo":"pasos","titulo":"Qué cambiar","items":["Elige un bloque de ocho compases, por ejemplo el 3-10.","Decide qué dedo lleva la línea: normalmente el que toca la nota más aguda.","Tócalo despacio, destacando esa línea.","Comprueba si el bloque suena como una frase y llega a la cadencia."]},
-  {"tipo":"ejercicio","que":"El estudio entero, con la línea superior delante.","porque":"Es tu medida de progreso: la obra que ya sabías, con una técnica nueva.","atencion":"Recuerda el consejo: si la 2.ª cuerda debe seguir sonando, la *a* destaca tirando.","empieza":"Al tempo que te permita controlar el volumen de cada dedo. El audio de tu carpeta va a ♩ = 80.","sube":"Se oye la línea en todos los bloques."},
-  {"tipo":"bien","items":["La línea se oye por encima del arpegio.","La cadencia suena como un final.","Tocas con más control que en el Tramo 1."]}]},
-"n1.t6.l3.p4":{"bloques":[
-  {"tipo":"texto","md":"Ya has tocado este estudio. Aquí se trata de leer sus cuatro primeros compases desde la partitura, muy despacio, sin memoria ni tablatura."},
-  {"tipo":"pasos","titulo":"Cómo se lee un arpegio","items":["Fíjate en el grupo de notas de cada compás. Suele ser un acorde que se reconoce de un vistazo.","Lee primero el bajo: te sitúa.","Después sube, nota a nota, diciendo los nombres.","Toca solo cuando las hayas dicho todas."]},
-  {"tipo":"metronomo","clave":"o1-giuliani-op-1-parte-4-n-3","bpm":40},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Sigue con tu partitura de IMSLP. Lo que importa es no mirar la mano."},
-  {"tipo":"bien","items":["Lees los cuatro compases sin mirar la mano.","Sabes el acorde de cada uno sin tocarlo antes."]}]},
-"n1.t6.l4.p1":{"pantallas":[
- {"titulo":"Qué es un armónico","bloques":[
-  {"tipo":"concepto","titulo":"Una cuerda que vibra por partes","md":"Una cuerda suena porque vibra entera. Si la rozas justo en su mitad, no puede vibrar entera: vibra **en dos mitades**. El resultado es una nota muy aguda, limpia y parecida a una campana. Es un **armónico natural**, y solo sale en puntos exactos."},
-  {"tipo":"pasos","titulo":"Cómo se hace","items":["Coloca un dedo de la mano izquierda **justo encima del traste 12**, no entre los trastes.","Roza la cuerda, sin apretarla contra el mástil.","Pulsa con la mano derecha cerca del puente.","Suelta el dedo izquierdo en cuanto la cuerda haya sonado."]},
-  {"tipo":"errores","items":[{"error":"Suena una nota apagada y sin brillo.","arreglo":"Estás apretando. Basta con el peso del dedo."},{"error":"No suena nada.","arreglo":"No has soltado a tiempo o no estás encima del traste. Muévelo un poco."}]},
-  {"tipo":"texto","md":"Pruébalo primero en el XII: es el más fácil. Después en el VII y en el V, donde se necesita más precisión."}]},
- {"titulo":"XII, VII y V","bloques":[
-  {"tipo":"mastil","escena":{"tipo":"libre","titulo":"Dónde se rozan","trastes":[0,12],"clave":"C","cuadros":[
-    {"marcas":[{"c":6,"t":12,"sinNota":true}],"suena":[52],"texto":"Traste XII: la cuerda se divide en 2. Suena la octava: Mi.","ms":3000},
-    {"marcas":[{"c":6,"t":7,"sinNota":true}],"suena":[59],"texto":"Traste VII: se divide en 3. Suena la 5.ª, una octava más arriba: Si.","ms":3000},
-    {"marcas":[{"c":6,"t":5,"sinNota":true}],"suena":[64],"texto":"Traste V: se divide en 4. Suena dos octavas por encima: Mi.","ms":3000}]}},
-  {"tipo":"texto","md":"Lo que oyes es la altura del armónico, tocada con una nota normal: la app no tiene un sonido de armónico grabado. El timbre real, de campana, lo oirás en tu guitarra."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t6.l4.p2","texto":"qué nota suena en cada cuerda."},{"paso":"n1.t1.l5.p4","texto":"cómo se escribe: un número entre < >."}]}]}]},
-"n1.t6.l4.p2":{"bloques":[
-  {"tipo":"tabla","cabecera":["Traste","Qué nota suena","Sobre la 6.ª (Mi)","Sobre la 5.ª (La)","Sobre la 4.ª (Re)"],"filas":[["XII","La misma nota, una octava arriba","Mi","La","Re"],["VII","La 5.ª, una octava más arriba","Si","Mi","La"],["V","La misma nota, dos octavas arriba","Mi","La","Re"]]},
-  {"tipo":"escuchar","items":[{"etiqueta":"6.ª al aire y su XII","notas":[[6,0],[6,12]],"duracion":1.1},{"etiqueta":"6.ª al aire y su VII","notas":[[6,0],[6,19]],"duracion":1.1},{"etiqueta":"6.ª al aire y su V","notas":[[6,0],[6,24]],"duracion":1.1}]},
-  {"tipo":"elige","enunciado":"Rozas la 5.ª cuerda (La) en el traste XII. ¿Qué nota suena?","opciones":["La, una octava más arriba","Mi","Re"],"correcta":0,"porque":"En el XII suena la misma nota, una octava más arriba.","pista":"Mira la primera fila de la tabla."},
-  {"tipo":"elige","enunciado":"Rozas la 4.ª cuerda (Re) en el traste VII. ¿Qué nota suena?","opciones":["Re","La","Sol"],"correcta":1,"porque":"En el VII suena la 5.ª de la cuerda: la 5.ª de Re es La.","pista":"Cuenta cinco notas desde Re: Re, Mi, Fa, Sol, La."},
-  {"tipo":"elige","enunciado":"Rozas la 6.ª cuerda en el traste V. ¿Qué nota suena?","opciones":["Si","La","Mi"],"correcta":2,"porque":"En el V suena la misma nota de la cuerda, dos octavas más arriba.","pista":"Mira la última fila."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t1.l3.p4","texto":"si comparas el armónico V de una cuerda con el VII de la vecina, los batidos te dirán si están afinadas."}]}]},
-"n1.t6.l4.p3":{"bloques":[
-  {"tipo":"obra","id":"o1-estudio-en-mi-menor","md":"Tus armónicos están en los **compases 67 y 69**, en el traste XII, dentro del último bloque."},
-  {"tipo":"texto","md":"Son fáciles de sacar por separado y difíciles de sacar a tiempo, porque hay que levantar la mano del acorde anterior y colocarla encima del traste."},
-  {"tipo":"pasos","titulo":"Cómo se prepara","items":["Toca solo esos armónicos, sin ritmo, hasta que salgan todos.","Practica la llegada: el compás 66 y el 67, muy despacio.","Sal del acorde anterior antes de tiempo.","Deja que el armónico suene todo lo que dice la partitura."]},
-  {"tipo":"ejercicio","que":"Los compases 66-70, con los armónicos a tiempo.","porque":"Es el único sitio del estudio con esta técnica y es lo que se recuerda al terminar.","atencion":"La mano derecha pulsa más cerca del puente en ese momento.","empieza":"Mucho más lento que el tempo de la obra.","sube":"Los armónicos salen claros tres veces seguidas."},
-  {"tipo":"bien","items":["Los armónicos de los compases 67 y 69 se oyen claros.","No cortan el pulso."]}]},
-"n1.t6.l5.p1":{"pantallas":[
- {"titulo":"Los mismos papeles, en menor","bloques":[
-  {"tipo":"texto","md":"En el Tramo 4 aprendiste a reconocer I, IV y V en mayor. Tu *Estudio* está en Mi menor, así que vas a oír esas mismas funciones. La teoría del modo menor llega en el tramo siguiente: aquí lo importante es oír."},
-  {"tipo":"tabla","cabecera":["Grado","En Mi menor","Papel"],"filas":[["I","Mi m","Reposo"],["IV","La m","Alejamiento"],["V","Si7","Tensión: quiere volver"]]},
-  {"tipo":"progresion","acordes":[{"n":"Mi m","g":"I","papel":"reposo"},{"n":"La m","g":"IV","papel":"alejamiento"},{"n":"Si7","g":"V7","papel":"tensión"},{"n":"Mi m","g":"I","papel":"reposo"}],"bpms":[60]},
-  {"tipo":"pasos","titulo":"Cómo reconocerlos","items":["Oye primero el I: es tu casa.","Después, el otro acorde. ¿Te quedas en casa? I.","¿Te alejas sin prisa? IV.","¿Notas que necesita volver? V."]}]},
- {"titulo":"Ahora, tú","bloques":[
-  {"tipo":"elige","enunciado":"Primero el I, después otro acorde. ¿Cuál es?","audio":{"notas":[[[6,0],[5,2],[4,2],[3,0],[2,0],[1,0]],[[5,0],[4,2],[3,2],[2,1],[1,0]]],"duracion":1.6},"opciones":["I","IV","V"],"correcta":1,"porque":"Mi m y después La m: se aleja sin tensión.","pista":"¿Quiere volver, o se queda tranquilo en otro sitio?"},
-  {"tipo":"elige","enunciado":"¿Y este?","audio":{"notas":[[[6,0],[5,2],[4,2],[3,0],[2,0],[1,0]],[[5,2],[4,1],[3,2],[2,0],[1,2]]],"duracion":1.6},"opciones":["I","IV","V"],"correcta":2,"porque":"Mi m y después Si7: oyes la tensión del Re♯.","pista":"¿Quiere volver?"},
-  {"tipo":"elige","enunciado":"¿Y este?","audio":{"notas":[[[6,0],[5,2],[4,2],[3,0],[2,0],[1,0]],[[6,0],[5,2],[4,2],[3,0],[2,0],[1,0]]],"duracion":1.6},"opciones":["I","IV","V"],"correcta":0,"porque":"Es el mismo acorde: no hay movimiento.","pista":"¿Ha cambiado algo?"},
-  {"tipo":"elige","enunciado":"Otra.","audio":{"notas":[[[6,0],[5,2],[4,2],[3,0],[2,0],[1,0]],[[5,2],[4,1],[3,2],[2,0],[1,2]],[[6,0],[5,2],[4,2],[3,0],[2,0],[1,0]]],"duracion":1.3},"opciones":["I–IV–I","I–V–I"],"correcta":1,"porque":"La tensión del medio se resuelve al volver.","pista":"El acorde del medio, ¿pide volver?"},
-  {"tipo":"reaparece","items":[{"paso":"n1.t7.l2.p3","texto":"esta progresión, tocada."}]}]}]},
-"n1.t6.l5.p2":{"pantallas":[
- {"titulo":"Tocar","bloques":[
-  {"tipo":"texto","md":"Tres pruebas. Lo que no salga no bloquea nada."},
-  {"tipo":"lista","titulo":"1. Arpegio con nota destacada","items":["El ejercicio con la *a* destacada, a un tempo cómodo."]},
-  {"tipo":"notacion","plegado":true,"fuente":"notacion/arp-nota-destacada.json","titulo":"Ver el ejercicio","principal":"tablatura","motivo":"Para comprobar.","bpms":[60]},
-  {"tipo":"lista","titulo":"2. El estudio de Giuliani","items":["Entero, sin parar, con las notas de cada acorde resonando."]},
-  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["La nota destacada forma una línea.","El estudio de Giuliani, entero y sin cortes."]}]},
- {"titulo":"3. Una pregunta de inversiones","bloques":[
-  {"tipo":"elige","enunciado":"Acorde de La menor (La, Do, Mi). El bajo toca Mi. ¿Cómo está?","opciones":["Estado fundamental","Primera inversión","Segunda inversión"],"correcta":2,"porque":"Mi es la 5.ª del acorde: segunda inversión.","pista":"La es la fundamental; Do, la 3.ª; Mi, la 5.ª."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t6.l1.p2","texto":"si falla la nota destacada."},{"paso":"n1.t6.l2.p1","texto":"si fallan las inversiones."}]}]}]}
-}}
+{
+ "tramo": "n1.t6",
+ "nota": "Primera aparición de nota destacada, inversión, cadencia y armónicos. Los datos del Estudio en Mi menor salen de su propia transcripción (08 - Guitarra/Clásica). Giuliani sigue fuera de la app.",
+ "pasos": {
+  "n1.t6.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En los arpegios que ya tocas, todas las notas suenan igual. Ese era el objetivo hasta ahora. Pero en una obra suele haber una melodía **dentro** del arpegio y hay que sacarla. Es la misma idea de los dos planos, ahora con una nota entre otras."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "La nota que canta",
+     "md": "La **nota destacada** es una nota del arpegio tocada con más peso que las demás. No es un golpe: es el mismo movimiento, con más velocidad en ese dedo y menos en los otros."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Todo igual",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.42
+      },
+      {
+       "etiqueta": "La *a* destacada",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.42,
+       "destacar": [
+        3,
+        7
+       ]
+      },
+      {
+       "etiqueta": "La *m* destacada",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.42,
+       "destacar": [
+        2,
+        6
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Prepara los cuatro dedos, como en el arpegio clásico.",
+      "Piensa en el dedo que va a cantar. Los otros tocan muy suaves: casi rozando.",
+      "El que canta sale con más velocidad, desde el nudillo.",
+      "La mano no se mueve: si salta, estás empujando con el brazo."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "La nota destacada suena a golpe.",
+       "arreglo": "Baja el volumen de las demás en vez de subir el de esa."
+      },
+      {
+       "error": "La siguiente nota también sale fuerte.",
+       "arreglo": "Es la inercia. Practica muy lento, pensando «fuerte, suave, suave, suave»."
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l1.p1",
+       "texto": "la misma idea de los dos planos."
+      },
+      {
+       "paso": "n1.t4.l3.p2",
+       "texto": "las fórmulas que ahora puedes destacar."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "El arpegio p-i-m-a, con la nota de *a* más fuerte que las demás.",
+     "porque": "Al final de este nivel se busca el arpegio con la melodía destacada, a ♩ = 72 en corcheas.",
+     "atencion": "Sigue siendo tirando. Escucha lo que pasa con *p*, *i* y *m*: tienen que quedar por debajo sin desaparecer.",
+     "empieza": "♩ = 48 en corcheas.",
+     "sube": "Se oye una línea melódica sobre las otras notas. Sube hasta ♩ = 72. Después, prueba a destacar *m* o *p*."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-nota-destacada.json",
+     "titulo": "Con la *a* destacada",
+     "principal": "ambas",
+     "motivo": "Para ver el acento en las dos escrituras.",
+     "bpms": [
+      48,
+      72
+     ],
+     "notas": [
+      "El signo > sobre una nota es un **acento**: tócala con más presencia que las demás. En el {c:1}, La m; en el {c:2}, Mi."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 48
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La nota destacada forma una línea que podrías cantar.",
+      "Las demás siguen ahí, parejas.",
+      "La mano derecha se queda quieta."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t6.l3.p3",
+       "texto": "se usa en tu *Estudio en Mi menor*."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "guia",
+     "md": "Donde la 2.ª cuerda tiene que seguir sonando, la *a* destaca **tirando**, no apoyando."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué",
+     "md": "Apoyar es la forma más directa de que una nota salga llena. Pero el dedo apoyado **toca la cuerda vecina**, y esa cuerda se calla. La *a* apoyada en la 1.ª caería en la 2.ª. Si la 2.ª tiene una nota del acorde que debe sonar, hay que pasar por encima."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "¿Debe seguir sonando la 2.ª cuerda?",
+      "La *a*"
+     ],
+     "filas": [
+      [
+       "Sí",
+       "Tirando, con más velocidad"
+      ],
+      [
+       "No",
+       "Puedes apoyar"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Lo que debe oírse: el acorde sigue vibrando",
+       "notas": [
+        [
+         [
+          5,
+          0
+         ],
+         [
+          3,
+          2
+         ]
+        ],
+        [
+         [
+          2,
+          1
+         ]
+        ],
+        [
+         [
+          1,
+          0
+         ]
+        ]
+       ],
+       "duracion": 1.1,
+       "destacar": [
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En un arpegio, la 2.ª cuerda acaba de sonar con *m* y quieres destacar la 1.ª. ¿Qué haces?",
+     "opciones": [
+      "*a* apoyando, para que suene más",
+      "*a* tirando, con más velocidad"
+     ],
+     "correcta": 1,
+     "porque": "Apoyando, la *a* se pararía sobre la 2.ª y cortaría la nota de *m*.",
+     "pista": "¿Dónde se queda el dedo en un apoyando?"
+    }
+   ]
+  },
+  "n1.t6.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué es una inversión",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Un acorde de Do tiene tres notas: Do, Mi y Sol. Hasta ahora, la más grave era siempre el Do. Pero pueden colocarse de otras maneras, y **la nota que está más abajo cambia cómo suena**."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Nota en el bajo",
+        "Se llama",
+        "Se escribe",
+        "Cómo suena"
+       ],
+       "filas": [
+        [
+         "La fundamental (Do)",
+         "**Estado fundamental**",
+         "Do",
+         "Asentado, firme"
+        ],
+        [
+         "La 3.ª (Mi)",
+         "**Primera inversión**",
+         "Do/Mi",
+         "Más ligero, con ganas de seguir"
+        ],
+        [
+         "La 5.ª (Sol)",
+         "**Segunda inversión**",
+         "Do/Sol",
+         "Inestable, en el aire"
+        ]
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Do",
+         "notas": [
+          [
+           [
+            5,
+            3
+           ],
+           [
+            4,
+            2
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ]
+          ]
+         ],
+         "duracion": 2.2
+        },
+        {
+         "etiqueta": "Do/Mi",
+         "notas": [
+          [
+           [
+            4,
+            2
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ],
+           [
+            1,
+            0
+           ]
+          ]
+         ],
+         "duracion": 2.2
+        },
+        {
+         "etiqueta": "Do/Sol",
+         "notas": [
+          [
+           [
+            6,
+            3
+           ],
+           [
+            4,
+            2
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ]
+          ]
+         ],
+         "duracion": 2.2
+        }
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "El bajo manda",
+       "md": "Las notas de arriba pueden estar en cualquier orden: **el nombre lo decide solo la más grave**. Por eso, en un arpegio, mirar lo que toca el pulgar suele ser suficiente para saber la inversión."
+      }
+     ]
+    },
+    {
+     "titulo": "Por qué se usan",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Si todos los acordes estuvieran en estado fundamental, el bajo daría saltos grandes. Con inversiones, el bajo puede moverse por pasos pequeños, como una segunda melodía."
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Bajo a saltos: Do, Sol, Do",
+         "notas": [
+          [
+           [
+            5,
+            3
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ]
+          ],
+          [
+           [
+            6,
+            3
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            0
+           ]
+          ],
+          [
+           [
+            5,
+            3
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ]
+          ]
+         ],
+         "duracion": 1.3
+        },
+        {
+         "etiqueta": "Bajo por pasos: Do, Sol/Si, Do",
+         "notas": [
+          [
+           [
+            5,
+            3
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ]
+          ],
+          [
+           [
+            5,
+            2
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            0
+           ]
+          ],
+          [
+           [
+            5,
+            3
+           ],
+           [
+            3,
+            0
+           ],
+           [
+            2,
+            1
+           ]
+          ]
+         ],
+         "duracion": 1.3
+        }
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "Acorde de Sol (Sol, Si, Re). El bajo toca Si. ¿Cómo está?",
+       "opciones": [
+        "Estado fundamental",
+        "Primera inversión",
+        "Segunda inversión"
+       ],
+       "correcta": 1,
+       "porque": "Si es la 3.ª del acorde: primera inversión.",
+       "pista": "Sol es la fundamental; Si, la 3.ª; Re, la 5.ª."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t6.l2.p2",
+         "texto": "lo practicas."
+        },
+        {
+         "paso": "n1.t6.l2.p3",
+         "texto": "inversiones en tu *Estudio*."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Recuerda: mira qué nota es el bajo y localízala en el acorde. Fundamental, estado fundamental. 3.ª, primera inversión. 5.ª, segunda inversión."
+    },
+    {
+     "tipo": "preguntas",
+     "n": 5
+    }
+   ]
+  },
+  "n1.t6.l2.p3": {
+   "pantallas": [
+    {
+     "titulo": "Qué mirar",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-estudio-en-mi-menor",
+       "md": "Lo tocas desde hace tiempo. Ahora vas a entender qué estás tocando."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Compases",
+        "Qué hay"
+       ],
+       "filas": [
+        [
+         "1-2",
+         "Entrada"
+        ],
+        [
+         "3-10 (A) y 11-18 (B)",
+         "Dos bloques de ocho compases"
+        ],
+        [
+         "19-34",
+         "A y B, una octava más arriba"
+        ],
+        [
+         "35-50",
+         "Octavas descendentes"
+        ],
+        [
+         "51-66",
+         "A y B otra vez"
+        ],
+        [
+         "67-74",
+         "A arriba, con armónicos"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Cómo está hecho",
+       "md": "Es un compás de 4/4, con un bajo en redonda y un arpegio en corcheas por encima. Ya tienes todo el vocabulario: el pulgar da el **bajo** y por eso te dice el acorde y su inversión."
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Analiza un bloque",
+       "items": [
+        "Abre *Estudio en Mi menor.pdf* por el compás 3.",
+        "Escribe qué nota hace el pulgar en cada compás.",
+        "Mira las notas del arpegio y ponle nombre al acorde.",
+        "Si el bajo no es la fundamental, escribe la inversión: por ejemplo, Do/Mi."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "La cadencia",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Qué es una cadencia",
+       "md": "Una **cadencia** es la fórmula con la que termina una frase: los compases en los que la música llega a un sitio y descansa. Es como el punto de una oración. La verás a fondo en el Tramo 12."
+      },
+      {
+       "tipo": "texto",
+       "md": "En tu *Estudio*, cada bloque de ocho compases acaba igual: **Mi–Re♯–Do♯–Re♯–Mi**. Escúchala."
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Mi–Re♯–Do♯–Re♯–Mi",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           2,
+           4
+          ],
+          [
+           2,
+           2
+          ],
+          [
+           2,
+           4
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         "duracion": 0.8
+        }
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "Esa cadencia tiene un Re♯ justo antes de llegar al Mi. ¿Qué hace esa nota?",
+       "opciones": [
+        "Está a un semitono del Mi: pide llegar",
+        "Está a un tono del Mi: suena lejana",
+        "Es la fundamental del acorde"
+       ],
+       "correcta": 0,
+       "porque": "De Re♯ a Mi hay un semitono, igual que entre la 7.ª y la 8.ª de la escala. El oído quiere resolver.",
+       "pista": "Mira la distancia que hay entre Re♯ y Mi."
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Sabes decir el acorde de un bloque, compás a compás.",
+        "Reconoces la cadencia cuando llega."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t7.l2.p4",
+         "texto": "por qué el Re♯ es tan importante en Mi menor."
+        },
+        {
+         "paso": "n1.t12.l6.p2",
+         "texto": "las cadencias, con su nombre."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya conoces las corcheas. Ahora, seis en cada compás: es el ritmo de la mayoría de los arpegios de este tramo y de la parte B de *Lágrima*."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Pulso",
+      "1",
+      "",
+      "2",
+      "",
+      "3",
+      ""
+     ],
+     "filas": [
+      [
+       "Se dice",
+       "**1**",
+       "y",
+       "**2**",
+       "y",
+       "**3**",
+       "y"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-corcheas-3-4.json",
+     "titulo": "Corcheas en 3/4",
+     "principal": "ambas",
+     "motivo": "Aquí importa contar.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "En el {c:1}, negras; en el {c:2}, corcheas, y en el {c:3}, un arpegio: *p* siempre en el «1»."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Contar en voz alta «1 y 2 y 3 y» mientras tocas.",
+     "porque": "Si cuentas por tiempos, el arpegio deja de correr: las corcheas se reparten igual.",
+     "atencion": "Es fácil acelerar al final del compás. Las «y» duran lo mismo que los números.",
+     "empieza": "♩ = 50.",
+     "sube": "Cuentas sin parar a ♩ = 72."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Escucha este compás en 3/4. ¿En qué nota cae el «2»?",
+     "audio": {
+      "notas": [
+       [
+        6,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "duracion": 0.4
+     },
+     "opciones": [
+      "En la segunda nota",
+      "En la tercera nota",
+      "En la cuarta nota"
+     ],
+     "correcta": 1,
+     "porque": "Nota 1 = «1», nota 2 = «y», nota 3 = «2».",
+     "pista": "Cuenta: 1, y, 2…"
+    }
+   ]
+  },
+  "n1.t6.l3.p2": {
+   "pantallas": [
+    {
+     "titulo": "Qué aprendes con ella",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-giuliani-op-1-parte-4-n-3",
+       "md": "**Qué aprendes:** el arpegio dentro de una pieza. Hasta ahora eran fórmulas; aquí, música."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-giuliani-op1-3.json",
+       "titulo": "Giuliani, op. 1, parte 4, n.º 3",
+       "principal": "ambas",
+       "motivo": "Para leer y tocar: partitura y tablatura juntas.",
+       "bpms": [
+        40,
+        60
+       ],
+       "notas": [
+        "Empieza con una corchea sola, la anacrusa. Dedos y mano derecha son una propuesta de la academia."
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "De dónde sale",
+       "md": "Es uno de los doce estudios de la cuarta parte del *Studio per la chitarra*, op. 1, de Mauro Giuliani: la misma obra de las fórmulas que has practicado. Partitura en [IMSLP, Giuliani, op. 1](https://imslp.org/wiki/Studio_per_la_chitarra,_Op.1_%28Giuliani,_Mauro%29)."
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Antes de tocar",
+       "items": [
+        "¿Qué compás y qué armadura tiene?",
+        "Busca la fórmula de la mano derecha en los primeros compases: ¿se parece a alguna de las que ya tocas?",
+        "Toca los acordes **plaqué**, es decir, todas las notas de cada compás a la vez. Así entiendes la armonía y preparas la mano izquierda.",
+        "Mira los bajos. ¿Hay inversiones?"
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se trabaja",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Montar el estudio por compases, primero plaqué y luego arpegiado.",
+       "porque": "Si los acordes salen limpios, la mano derecha puede centrarse en la fórmula.",
+       "atencion": "Los dedos de la izquierda se quedan puestos mientras dura el acorde. Es lo que hace que el arpegio resuene.",
+       "empieza": "♩ = 48 en corcheas.",
+       "sube": "Tres veces sin parar. Después, busca qué nota puede cantar."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-giuliani-op-1-parte-4-n-3",
+       "bpm": 48
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Tocas la pieza entera sin cortar el arpegio.",
+        "Las notas de cada acorde siguen sonando hasta el cambio.",
+        "Sabes cómo se llama cada acorde."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t6.l3.p4",
+         "texto": "leer sus cuatro primeros compases."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-estudio-en-mi-menor",
+     "md": "Ahora lo tocas con lo que acabas de aprender: en lugar de un arpegio uniforme, una línea que sale."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Qué cambiar",
+     "items": [
+      "Elige un bloque de ocho compases, por ejemplo el 3-10.",
+      "Decide qué dedo lleva la línea: normalmente el que toca la nota más aguda.",
+      "Tócalo despacio, destacando esa línea.",
+      "Comprueba si el bloque suena como una frase y llega a la cadencia."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "El estudio entero, con la línea superior delante.",
+     "porque": "Es tu medida de progreso: la obra que ya sabías, con una técnica nueva.",
+     "atencion": "Recuerda el consejo: si la 2.ª cuerda debe seguir sonando, la *a* destaca tirando.",
+     "empieza": "Al tempo que te permita controlar el volumen de cada dedo. El audio de tu carpeta va a ♩ = 80.",
+     "sube": "Se oye la línea en todos los bloques."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La línea se oye por encima del arpegio.",
+      "La cadencia suena como un final.",
+      "Tocas con más control que en el Tramo 1."
+     ]
+    }
+   ]
+  },
+  "n1.t6.l3.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya has tocado este estudio. Aquí se trata de leer sus cuatro primeros compases desde la partitura, muy despacio, sin memoria ni tablatura."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op1-3.json",
+     "titulo": "Los cuatro primeros compases",
+     "principal": "partitura",
+     "motivo": "El objetivo es leer: partitura.",
+     "bpms": [
+      40
+     ],
+     "compases": [
+      0,
+      4
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se lee un arpegio",
+     "items": [
+      "Fíjate en el grupo de notas de cada compás. Suele ser un acorde que se reconoce de un vistazo.",
+      "Lee primero el bajo: te sitúa.",
+      "Después sube, nota a nota, diciendo los nombres.",
+      "Toca solo cuando las hayas dicho todas."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "clave": "o1-giuliani-op-1-parte-4-n-3",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Lees los cuatro compases sin mirar la mano.",
+      "Sabes el acorde de cada uno sin tocarlo antes."
+     ]
+    }
+   ]
+  },
+  "n1.t6.l4.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué es un armónico",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Una cuerda que vibra por partes",
+       "md": "Una cuerda suena porque vibra entera. Si la rozas justo en su mitad, no puede vibrar entera: vibra **en dos mitades**. El resultado es una nota muy aguda, limpia y parecida a una campana. Es un **armónico natural**, y solo sale en puntos exactos."
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Cómo se hace",
+       "items": [
+        "Coloca un dedo de la mano izquierda **justo encima del traste 12**, no entre los trastes.",
+        "Roza la cuerda, sin apretarla contra el mástil.",
+        "Pulsa con la mano derecha cerca del puente.",
+        "Suelta el dedo izquierdo en cuanto la cuerda haya sonado."
+       ]
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Suena una nota apagada y sin brillo.",
+         "arreglo": "Estás apretando. Basta con el peso del dedo."
+        },
+        {
+         "error": "No suena nada.",
+         "arreglo": "No has soltado a tiempo o no estás encima del traste. Muévelo un poco."
+        }
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "Pruébalo primero en el XII: es el más fácil. Después en el VII y en el V, donde se necesita más precisión."
+      }
+     ]
+    },
+    {
+     "titulo": "XII, VII y V",
+     "bloques": [
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "libre",
+        "titulo": "Dónde se rozan",
+        "trastes": [
+         0,
+         12
+        ],
+        "clave": "C",
+        "cuadros": [
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 12,
+            "sinNota": true
+           }
+          ],
+          "suena": [
+           52
+          ],
+          "texto": "Traste XII: la cuerda se divide en 2. Suena la octava: Mi.",
+          "ms": 3000
+         },
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 7,
+            "sinNota": true
+           }
+          ],
+          "suena": [
+           59
+          ],
+          "texto": "Traste VII: se divide en 3. Suena la 5.ª, una octava más arriba: Si.",
+          "ms": 3000
+         },
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 5,
+            "sinNota": true
+           }
+          ],
+          "suena": [
+           64
+          ],
+          "texto": "Traste V: se divide en 4. Suena dos octavas por encima: Mi.",
+          "ms": 3000
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "texto",
+       "md": "Lo que oyes es la altura del armónico, tocada con una nota normal: la app no tiene un sonido de armónico grabado. El timbre real, de campana, lo oirás en tu guitarra."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t6.l4.p2",
+         "texto": "qué nota suena en cada cuerda."
+        },
+        {
+         "paso": "n1.t1.l5.p4",
+         "texto": "cómo se escribe: un número entre < >."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Traste",
+      "Qué nota suena",
+      "Sobre la 6.ª (Mi)",
+      "Sobre la 5.ª (La)",
+      "Sobre la 4.ª (Re)"
+     ],
+     "filas": [
+      [
+       "XII",
+       "La misma nota, una octava arriba",
+       "Mi",
+       "La",
+       "Re"
+      ],
+      [
+       "VII",
+       "La 5.ª, una octava más arriba",
+       "Si",
+       "Mi",
+       "La"
+      ],
+      [
+       "V",
+       "La misma nota, dos octavas arriba",
+       "Mi",
+       "La",
+       "Re"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "6.ª al aire y su XII",
+       "notas": [
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         12
+        ]
+       ],
+       "duracion": 1.1
+      },
+      {
+       "etiqueta": "6.ª al aire y su VII",
+       "notas": [
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         19
+        ]
+       ],
+       "duracion": 1.1
+      },
+      {
+       "etiqueta": "6.ª al aire y su V",
+       "notas": [
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         24
+        ]
+       ],
+       "duracion": 1.1
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Rozas la 5.ª cuerda (La) en el traste XII. ¿Qué nota suena?",
+     "opciones": [
+      "La, una octava más arriba",
+      "Mi",
+      "Re"
+     ],
+     "correcta": 0,
+     "porque": "En el XII suena la misma nota, una octava más arriba.",
+     "pista": "Mira la primera fila de la tabla."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Rozas la 4.ª cuerda (Re) en el traste VII. ¿Qué nota suena?",
+     "opciones": [
+      "Re",
+      "La",
+      "Sol"
+     ],
+     "correcta": 1,
+     "porque": "En el VII suena la 5.ª de la cuerda: la 5.ª de Re es La.",
+     "pista": "Cuenta cinco notas desde Re: Re, Mi, Fa, Sol, La."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Rozas la 6.ª cuerda en el traste V. ¿Qué nota suena?",
+     "opciones": [
+      "Si",
+      "La",
+      "Mi"
+     ],
+     "correcta": 2,
+     "porque": "En el V suena la misma nota de la cuerda, dos octavas más arriba.",
+     "pista": "Mira la última fila."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t1.l3.p4",
+       "texto": "si comparas el armónico V de una cuerda con el VII de la vecina, los batidos te dirán si están afinadas."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-estudio-en-mi-menor",
+     "md": "Tus armónicos están en los **compases 67 y 69**, en el traste XII, dentro del último bloque."
+    },
+    {
+     "tipo": "texto",
+     "md": "Son fáciles de sacar por separado y difíciles de sacar a tiempo, porque hay que levantar la mano del acorde anterior y colocarla encima del traste."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se prepara",
+     "items": [
+      "Toca solo esos armónicos, sin ritmo, hasta que salgan todos.",
+      "Practica la llegada: el compás 66 y el 67, muy despacio.",
+      "Sal del acorde anterior antes de tiempo.",
+      "Deja que el armónico suene todo lo que dice la partitura."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Los compases 66-70, con los armónicos a tiempo.",
+     "porque": "Es el único sitio del estudio con esta técnica y es lo que se recuerda al terminar.",
+     "atencion": "La mano derecha pulsa más cerca del puente en ese momento.",
+     "empieza": "Mucho más lento que el tempo de la obra.",
+     "sube": "Los armónicos salen claros tres veces seguidas."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Los armónicos de los compases 67 y 69 se oyen claros.",
+      "No cortan el pulso."
+     ]
+    }
+   ]
+  },
+  "n1.t6.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "Los mismos papeles, en menor",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "En el Tramo 4 aprendiste a reconocer I, IV y V en mayor. Tu *Estudio* está en Mi menor, así que vas a oír esas mismas funciones. La teoría del modo menor llega en el tramo siguiente: aquí lo importante es oír."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Grado",
+        "En Mi menor",
+        "Papel"
+       ],
+       "filas": [
+        [
+         "I",
+         "Mi m",
+         "Reposo"
+        ],
+        [
+         "IV",
+         "La m",
+         "Alejamiento"
+        ],
+        [
+         "V",
+         "Si7",
+         "Tensión: quiere volver"
+        ]
+       ]
+      },
+      {
+       "tipo": "progresion",
+       "acordes": [
+        {
+         "n": "Mi m",
+         "g": "I",
+         "papel": "reposo"
+        },
+        {
+         "n": "La m",
+         "g": "IV",
+         "papel": "alejamiento"
+        },
+        {
+         "n": "Si7",
+         "g": "V7",
+         "papel": "tensión"
+        },
+        {
+         "n": "Mi m",
+         "g": "I",
+         "papel": "reposo"
+        }
+       ],
+       "bpms": [
+        60
+       ]
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Cómo reconocerlos",
+       "items": [
+        "Oye primero el I: es tu casa.",
+        "Después, el otro acorde. ¿Te quedas en casa? I.",
+        "¿Te alejas sin prisa? IV.",
+        "¿Notas que necesita volver? V."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Ahora, tú",
+     "bloques": [
+      {
+       "tipo": "elige",
+       "enunciado": "Primero el I, después otro acorde. ¿Cuál es?",
+       "audio": {
+        "notas": [
+         [
+          [
+           6,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         [
+          [
+           5,
+           0
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           1
+          ],
+          [
+           1,
+           0
+          ]
+         ]
+        ],
+        "duracion": 1.6
+       },
+       "opciones": [
+        "I",
+        "IV",
+        "V"
+       ],
+       "correcta": 1,
+       "porque": "Mi m y después La m: se aleja sin tensión.",
+       "pista": "¿Quiere volver, o se queda tranquilo en otro sitio?"
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y este?",
+       "audio": {
+        "notas": [
+         [
+          [
+           6,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         [
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           1
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           2
+          ]
+         ]
+        ],
+        "duracion": 1.6
+       },
+       "opciones": [
+        "I",
+        "IV",
+        "V"
+       ],
+       "correcta": 2,
+       "porque": "Mi m y después Si7: oyes la tensión del Re♯.",
+       "pista": "¿Quiere volver?"
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Y este?",
+       "audio": {
+        "notas": [
+         [
+          [
+           6,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         [
+          [
+           6,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           0
+          ]
+         ]
+        ],
+        "duracion": 1.6
+       },
+       "opciones": [
+        "I",
+        "IV",
+        "V"
+       ],
+       "correcta": 0,
+       "porque": "Es el mismo acorde: no hay movimiento.",
+       "pista": "¿Ha cambiado algo?"
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "Otra.",
+       "audio": {
+        "notas": [
+         [
+          [
+           6,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           0
+          ]
+         ],
+         [
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           1
+          ],
+          [
+           3,
+           2
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           2
+          ]
+         ],
+         [
+          [
+           6,
+           0
+          ],
+          [
+           5,
+           2
+          ],
+          [
+           4,
+           2
+          ],
+          [
+           3,
+           0
+          ],
+          [
+           2,
+           0
+          ],
+          [
+           1,
+           0
+          ]
+         ]
+        ],
+        "duracion": 1.3
+       },
+       "opciones": [
+        "I–IV–I",
+        "I–V–I"
+       ],
+       "correcta": 1,
+       "porque": "La tensión del medio se resuelve al volver.",
+       "pista": "El acorde del medio, ¿pide volver?"
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t7.l2.p3",
+         "texto": "esta progresión, tocada."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t6.l5.p2": {
+   "pantallas": [
+    {
+     "titulo": "Tocar",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Tres pruebas. Lo que no salga no bloquea nada."
+      },
+      {
+       "tipo": "lista",
+       "titulo": "1. Arpegio con nota destacada",
+       "items": [
+        "El ejercicio con la *a* destacada, a un tempo cómodo."
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "plegado": true,
+       "fuente": "notacion/arp-nota-destacada.json",
+       "titulo": "Ver el ejercicio",
+       "principal": "tablatura",
+       "motivo": "Para comprobar.",
+       "bpms": [
+        60
+       ]
+      },
+      {
+       "tipo": "lista",
+       "titulo": "2. El estudio de Giuliani",
+       "items": [
+        "Entero, sin parar, con las notas de cada acorde resonando."
+       ]
+      },
+      {
+       "tipo": "bien",
+       "titulo": "Marca lo que ya te sale",
+       "items": [
+        "La nota destacada forma una línea.",
+        "El estudio de Giuliani, entero y sin cortes."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "3. Una pregunta de inversiones",
+     "bloques": [
+      {
+       "tipo": "elige",
+       "enunciado": "Acorde de La menor (La, Do, Mi). El bajo toca Mi. ¿Cómo está?",
+       "opciones": [
+        "Estado fundamental",
+        "Primera inversión",
+        "Segunda inversión"
+       ],
+       "correcta": 2,
+       "porque": "Mi es la 5.ª del acorde: segunda inversión.",
+       "pista": "La es la fundamental; Do, la 3.ª; Mi, la 5.ª."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t6.l1.p2",
+         "texto": "si falla la nota destacada."
+        },
+        {
+         "paso": "n1.t6.l2.p1",
+         "texto": "si fallan las inversiones."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

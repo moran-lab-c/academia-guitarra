@@ -1,82 +1,966 @@
-{"tramo":"n1.t10","nota":"Primera aparición de la armadura con bemol, las sextas, ligado frente a ligadura y la presión justa. Sor op. 44 sigue fuera de la app. La digitación de las sextas es una propuesta de la academia.","pasos":{
-"n1.t10.l1.p1":{"bloques":[
-  {"tipo":"texto","md":"Hasta ahora has leído lo que la academia te daba en trozos. Este tramo es distinto: **vas a leer una obra entera por tu cuenta**. Y eso empieza antes de tocar la primera nota."},
-  {"tipo":"tabla","cabecera":["Antes de tocar, mira","Te dice","Si no lo miras"],"filas":[["**Compás**","Cómo se cuenta","Pierdes el pulso a la primera"],["**Armadura**","Qué notas llevan alteración","Tocas notas equivocadas sin darte cuenta"],["**Repeticiones**","El orden real de la obra","Te pierdes al llegar al signo"],["**Posición**","Si baja de la 1.ª o sube","Te sorprende un cambio"]]},
-  {"tipo":"concepto","titulo":"Las barras de repetición","md":"Una barra doble con **dos puntos** significa repetir. Si los puntos están a la izquierda de la barra, vuelves al último signo con los puntos a la derecha; si no lo hay, al principio. La has visto en muchos ejercicios de la academia."},
-  {"tipo":"notacion","fuente":"notacion/lec-recorrido.json","titulo":"Un ejemplo para mirar","principal":"partitura","motivo":"Es para mirar: partitura.","bpms":[60],"notas":["Compás de 3/4, un sostenido en la armadura y barras de repetición."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t7.l5.p2","texto":"es lo mismo que haces en la primera vista."}]}]},
-"n1.t10.l1.p2":{"bloques":[
-  {"tipo":"texto","md":"Mira de nuevo el ejemplo y responde sin tocar. Después abre la obra y hazte estas mismas preguntas: [Sor, op. 44, en IMSLP](https://imslp.org/wiki/24_Petites_pi%C3%A8ces_progressives,_Op.44_%28Sor,_Fernando%29). Busca el n.º 1."},
-  {"tipo":"notacion","fuente":"notacion/lec-recorrido.json","titulo":"El ejemplo","principal":"partitura","motivo":"Es para mirar: partitura.","bpms":[60]},
-  {"tipo":"elige","enunciado":"¿Cuántos tiempos tiene cada compás?","opciones":["2","3","4"],"correcta":1,"porque":"Es un 3/4.","pista":"El número de arriba."},
-  {"tipo":"elige","enunciado":"Con esa armadura, ¿qué nota lleva sostenido en todo el fragmento?","opciones":["Fa","Do","Sol"],"correcta":0,"porque":"Un sostenido en la armadura siempre es Fa♯.","pista":"Recuerda el orden: Fa♯, Do♯, Sol♯…"},
-  {"tipo":"elige","enunciado":"Al llegar a la barra con dos puntos, ¿qué haces?","opciones":["Terminar","Volver a empezar desde el principio, una vez","Parar un compás"],"correcta":1,"porque":"Si no hay otro signo de repetición antes, se vuelve al principio.","pista":"Es lo que explica la pantalla anterior."},
-  {"tipo":"bien","titulo":"En la obra de Sor","items":["Sabes su compás y lo has contado.","Has dicho qué notas lleva la armadura.","Sabes si tiene repeticiones."]}]},
-"n1.t10.l2.p1":{"pantallas":[
- {"titulo":"Cómo se trabaja","bloques":[
-  {"tipo":"obra","id":"o1-sor-andante-op-44-n-1","md":"**Qué aprendes:** a leer una obra entera sin ayuda. Es la primera vez que la partitura es el único punto de partida."},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"Esta obra aún no está transcrita en la app. Como el objetivo es leer, la tablatura no hace falta: si necesitas comprobar una nota, usa la tabla de notas o pregunta a tu profesor. Los compases y las notas no se dan sin haber visto la edición."},
-  {"tipo":"pasos","titulo":"Frase a frase","items":["Lee sin guitarra: nombres de las notas y ritmo.","Marca el pulso con el pie y di la frase con su ritmo.","Tócala lentamente, sin mirarte la mano.","Si no estás seguro de una nota, escribe solo esa, a lápiz.","Pasa a la siguiente frase y únelas."]}]},
- {"titulo":"Qué vigilar","bloques":[
-  {"tipo":"ejercicio","que":"Leer la obra frase a frase, hasta tocarla entera.","porque":"Es la prueba de todo lo que llevas leído desde el Tramo 1.","atencion":"Cuando la memorices, empieza a leerla por otro sitio: la memoria tapa la lectura. Observa las dos voces.","empieza":"♩ = 50, o más lento.","sube":"Te sale sin mirar la mano."},
-  {"tipo":"metronomo","clave":"o1-sor-andante-op-44-n-1","bpm":50},
-  {"tipo":"errores","items":[{"error":"Bajas la mirada en cada cambio.","arreglo":"Toca las posiciones conocidas sin mirar. Si necesitas mirar, hazlo en la nota anterior, no en la nota a la que vas."},{"error":"Te paras en cuanto te equivocas.","arreglo":"Sigue. Una lectura sin parar con dos errores es mejor que una lectura perfecta con diez paradas."}]},
-  {"tipo":"bien","items":["Puedes tocar la obra entera mirando solo la partitura.","Sabes decir qué nota estás tocando.","Respetas repeticiones y figuras."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t2.l4.p2","texto":"tu primera obra leída."},{"paso":"n1.t14.l3.p3","texto":"la primera vista en la prueba corta."}]}]}]},
-"n1.t10.l2.p2":{"bloques":[
-  {"tipo":"concepto","titulo":"Leer lo fácil","md":"Leer tiene mucho de reconocer: una nota, una figura, un grupo de notas. Cuantas más veces los hayas visto, menos te cuesta. Y eso solo se consigue leyendo muchas páginas fáciles, no pocas difíciles."},
-  {"tipo":"tabla","cabecera":["Lectura difícil","Lectura fácil"],"filas":[["Te obliga a parar","La tocas seguida"],["Solo ves las notas de una en una","Empiezas a ver grupos"],["Aprendes esa obra","Aprendes a leer"]]},
-  {"tipo":"texto","md":"Por eso esta es una obra de lectura, no de concierto. Cuando más adelante te encuentres con una obra difícil, ya no tendrás que descifrar notas: podrás pensar en la música."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t13.l4.p4","texto":"ocho compases a primera vista en La mayor."}]}]},
-"n1.t10.l3.p1":{"bloques":[
-  {"tipo":"texto","md":"Hasta ahora todas tus armaduras llevaban sostenidos. Con el patrón T-T-S-T-T-T-S desde **Fa** ocurre algo nuevo."},
-  {"tipo":"tabla","cabecera":["Desde","El patrón pide","La nota natural que sigue","¿Encaja?","Resultado"],"filas":[["Fa","T","Sol, a 2 semitonos","Sí","Sol"],["Sol","T","La, a 2 semitonos","Sí","La"],["La","**S**","Si, a 2 semitonos","No: **hay que bajarla**","**Si♭**"],["Si♭","T","Do, a 2 semitonos","Sí","Do"],["Do","T","Re","Sí","Re"],["Re","T","Mi","Sí","Mi"],["Mi","S","Fa, a 1 semitono","Sí","Fa"]]},
-  {"tipo":"concepto","titulo":"El primer bemol","md":"El patrón necesita un semitono donde había un tono. La solución es bajar el Si: **Si♭**. No puede ser La♯, porque las letras no se pueden repetir ni saltar: una escala tiene una nota de cada letra. Por eso, la armadura de Fa mayor lleva **un bemol, Si♭**, y su relativo es **Re menor**."},
-  {"tipo":"grados","clave":"F","patron":true,"titulo":"Fa mayor, con sus distancias"},
-  {"tipo":"pentagrama","pie":"La armadura de Fa mayor: un bemol, en la línea del Si.","notacion":{"compas":"4/4","armadura":"F","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":2,"t":1}]]}]}},
-  {"tipo":"elige","enunciado":"Con esta armadura ves un Si sin nada delante, en la 3.ª línea. ¿Qué tocas?","opciones":["Si natural: 2.ª cuerda al aire","Si♭: 3.ª cuerda, traste 3"],"correcta":1,"porque":"La armadura lo convierte en bemol, un semitono más abajo: 3.ª cuerda, traste 3.","pista":"¿Qué dice la armadura?","audio":{"notas":[[3,3]]}},
-  {"tipo":"reaparece","items":[{"paso":"n1.t3.l3.p1","texto":"qué es un bemol."},{"paso":"n1.t14.l3.p1","texto":"Fa mayor en la prueba corta."}]}]},
-"n1.t10.l3.p2":{"bloques":[
-  {"tipo":"ejercicio","que":"Fa mayor, dos octavas, desde la 6.ª cuerda.","porque":"Es la única escala de este nivel con bemol, y empieza en un traste, no al aire.","atencion":"Si♭ está en la 5.ª traste 1 y en la 3.ª traste 3. Un dedo por traste. Di en voz alta «Si bemol» al pasar.","empieza":"♩ = 50 en corcheas.","sube":"Sale igual al subir y al bajar."},
-  {"tipo":"notacion","fuente":"notacion/esc-fa-mayor-2oct.json","titulo":"Fa mayor, dos octavas","principal":"ambas","motivo":"Para ver la armadura y la digitación.","bpms":[50,72]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"localizar","enunciado":"Encuentra todos los **Si♭** de la 1.ª posición.","conjunto":["Si♭"],"clave":"F","hastaTraste":4,"final":"Dos sitios: la 5.ª en el traste 1 y la 3.ª en el traste 3."},
-  {"tipo":"bien","items":["Tocas Si♭ todas las veces.","Sale sin parar, en los dos sentidos."]}]},
-"n1.t10.l3.p3":{"bloques":[
-  {"tipo":"concepto","titulo":"Las sextas","md":"Una **6.ª** abarca seis letras: Fa–Re (Fa, Sol, La, Si, Do, Re). Tiene un sonido dulce y lleno. Tocar una escala **en sextas** significa acompañar cada nota con la que está seis letras por encima. Son las dos líneas de la escala moviéndose juntas."},
-  {"tipo":"tabla","cabecera":["Grave","Fa","Sol","La","Si♭","Do","Re","Mi","Fa"],"filas":[["Aguda","Re","Mi","Fa","Sol","La","Si♭","Do","Re"],["Semitonos","9 (mayor)","9","8 (menor)","9","9","8","8","9"]]},
-  {"tipo":"ejercicio","que":"Fa mayor en sextas, una octava, juntas y separadas.","porque":"Dos notas a la vez, sobre una línea que se mueve: la base de muchos pasajes del nivel siguiente.","atencion":"Las dos notas suenan a la vez y limpias. Usa los cambios de posición que marca la tablatura, deslizando y sin saltar.","empieza":"Separadas, ♩ = 50. Juntas, ♩ = 40.","sube":"Las dos notas de cada sexta suenan juntas."},
-  {"tipo":"notacion","fuente":"notacion/tec-sextas-fa.json","titulo":"Sextas de Fa mayor","principal":"tablatura","motivo":"Es técnica: tablatura.","detalle":"La digitación es una propuesta de la academia","bpms":[40,50],"notas":["Juntas: {c:1-2}. Separadas: {c:3-4}.","Salvo la primera, todas van por la 3.ª y la 1.ª cuerda."]},
-  {"tipo":"metronomo","bpm":40},
-  {"tipo":"bien","items":["Las dos notas de cada sexta suenan a la vez y limpias.","Oyes que forman dos melodías paralelas."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l3.p1","texto":"los intervalos."}]}]},
-"n1.t10.l4.p1":{"bloques":[
-  {"tipo":"texto","md":"Ya lo probaste en el Tramo 1. Antes de seguir, comprueba cómo te sale ahora."},
-  {"tipo":"notacion","fuente":"notacion/tec-ligados-1pos.json","titulo":"Ligados en 1.ª posición","principal":"tablatura","motivo":"Es técnica de mano izquierda: tablatura.","bpms":[60]},
-  {"tipo":"bien","titulo":"Te sirve si","items":["Los dos sonidos de cada ligado suenan parecidos.","Los cuatro dedos consiguen el ligado.","La mano se queda quieta."]}]},
-"n1.t10.l4.p2":{"bloques":[
-  {"tipo":"tabla","cabecera":["","Ascendente","Descendente"],"filas":[["Qué hace el dedo","Cae sobre la cuerda","Sale de la cuerda"],["Con qué parte","La punta, justo junto al traste","Tirando hacia la palma, como si pulsara"],["Qué debe pasar","Suena sin la mano derecha","Suena la nota de abajo, ya preparada"]]},
-  {"tipo":"pasos","titulo":"Cómo se hace bien","items":["**Ascendente:** levanta poco el dedo y déjalo caer rápido. Es velocidad, no fuerza.","**Descendente:** primero prepara la nota de abajo. El dedo que se va tira un poco de la cuerda hacia la palma.","**Las dos:** no empujes la cuerda hacia un lado o la nota se desafinará."]},
-  {"tipo":"errores","items":[{"error":"El descendente no suena.","arreglo":"Solo estás levantando el dedo. Tira hacia la palma: es un pequeño pizzicato."},{"error":"La cuerda vecina suena o se apaga sin querer.","arreglo":"Al tirar, el dedo puede rozarla. A veces hay que apoyarlo a propósito en la vecina; otras veces, evitarlo."}]},
-  {"tipo":"elige","enunciado":"En un ligado descendente, el dedo...","opciones":["se levanta hacia arriba, sin más","tira de la cuerda hacia la palma"],"correcta":1,"porque":"Ese pequeño tirón es lo que hace sonar la nota siguiente.","pista":"Mira la tabla."},
-  {"tipo":"escuchar","items":[{"etiqueta":"Ascendente","notas":[[1,1],[1,3]],"duracion":0.5},{"etiqueta":"Descendente","notas":[[1,3],[1,1]],"duracion":0.5}]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t12.l5.p1","texto":"el mordente."}]}]},
-"n1.t10.l4.p3":{"bloques":[
-  {"tipo":"ejercicio","que":"El dedo 1 se queda fijo; los dedos 2, 3 y 4 ligan desde él.","porque":"Es la independencia que piden el mordente y, más adelante, el trino.","atencion":"El dedo 1 no se levanta ni se mueve en todo el compás. Los demás caen, y tiran hacia la palma al bajar.","empieza":"♩ = 50 en corcheas.","sube":"Las dos notas suenan iguales. Luego, en otra cuerda."},
-  {"tipo":"notacion","fuente":"notacion/tec-ligados-dedo-fijo.json","titulo":"Ligados con dedo fijo","principal":"tablatura","motivo":"Es técnica de mano izquierda: tablatura.","bpms":[50,66],"notas":["En el {c:1}, ascendentes 1-2, 1-3 y 1-4; en el {c:2}, los descendentes."]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"bien","items":["Las dos notas suenan igual.","El dedo fijo no se mueve."]}]},
-"n1.t10.l4.p4":{"bloques":[
-  {"tipo":"concepto","titulo":"Cuánta fuerza hace falta","md":"Casi todo el mundo pisa con más fuerza de la necesaria. Eso cansa, tensa la mano y hace que los cambios sean lentos. Este ejercicio te enseña **dónde está el límite**."},
-  {"tipo":"pasos","titulo":"Cómo se hace","items":["Pisa una nota con fuerza normal y tócala.","Tócala varias veces, aflojando un poco cada vez.","Llegará un punto en que empiece a trastear o se apague. Ese es el límite.","Vuelve a apretar lo mínimo para que suene limpia. Esa es la presión justa."]},
-  {"tipo":"notacion","fuente":"notacion/tec-presion.json","titulo":"Una nota, varias veces","principal":"tablatura","motivo":"Es técnica de mano izquierda: tablatura.","bpms":[50],"notas":["Con cada dedo, en cuerdas distintas."]},
-  {"tipo":"bien","items":["Sabes dónde deja de sonar la nota y pisas justo por encima.","Tu mano está más suelta que antes."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t1.l2.p3","texto":"el pulgar que no aprieta."}]}]},
-"n1.t10.l4.p5":{"bloques":[
-  {"tipo":"texto","md":"En la partitura, dos cosas muy distintas se escriben con el mismo arco: conviene saber distinguirlas al leer."},
-  {"tipo":"tabla","cabecera":["","Ligado","Ligadura"],"filas":[["Une","Dos notas **distintas**","Dos notas **iguales**"],["Qué haces","Tocas dos notas; la segunda con la mano izquierda","Tocas una sola vez; la nota dura lo que las dos juntas"],["Para qué","Articulación","Prolongar la duración"]]},
-  {"tipo":"pentagrama","pie":"Un ligado: dos notas distintas.","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"2","c":1,"t":1,"dedo":1,"lig":"h"},{"d":"2","c":1,"t":3,"dedo":3}]]}]}},
-  {"tipo":"pentagrama","pie":"Una ligadura: dos notas iguales, y se toca una sola vez.","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"2","c":1,"t":1,"tie":true},{"d":"2","c":1,"t":1}]]}]}},
-  {"tipo":"elige","enunciado":"Ves este arco. ¿Cuántas veces pulsas con la mano derecha?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"2","c":2,"t":3,"tie":true},{"d":"2","c":2,"t":3}]]}]},"opciones":["Una, y la nota dura las dos figuras","Dos"],"correcta":0,"porque":"Las dos notas son iguales: es una ligadura.","pista":"¿Las dos notas son iguales o distintas?"},
-  {"tipo":"elige","enunciado":"¿Y este?","notacion":{"compas":"4/4","armadura":"C","compasVisible":false,"compases":[{"voces":[[{"d":"2","c":2,"t":1,"dedo":1,"lig":"h"},{"d":"2","c":2,"t":3,"dedo":3}]]}]},"opciones":["Una sola nota larga","Dos notas: la primera, pulsada; la segunda, con un ligado"],"correcta":1,"porque":"Las notas son distintas: es un ligado.","pista":"¿Las dos notas son iguales o distintas?"}]}
-}}
+{
+ "tramo": "n1.t10",
+ "nota": "Primera aparición de la armadura con bemol, las sextas, ligado frente a ligadura y la presión justa. Sor op. 44 sigue fuera de la app. La digitación de las sextas es una propuesta de la academia.",
+ "pasos": {
+  "n1.t10.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Hasta ahora has leído lo que la academia te daba en trozos. Este tramo es distinto: **vas a leer una obra entera por tu cuenta**. Y eso empieza antes de tocar la primera nota."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Antes de tocar, mira",
+      "Te dice",
+      "Si no lo miras"
+     ],
+     "filas": [
+      [
+       "**Compás**",
+       "Cómo se cuenta",
+       "Pierdes el pulso a la primera"
+      ],
+      [
+       "**Armadura**",
+       "Qué notas llevan alteración",
+       "Tocas notas equivocadas sin darte cuenta"
+      ],
+      [
+       "**Repeticiones**",
+       "El orden real de la obra",
+       "Te pierdes al llegar al signo"
+      ],
+      [
+       "**Posición**",
+       "Si baja de la 1.ª o sube",
+       "Te sorprende un cambio"
+      ]
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Las barras de repetición",
+     "md": "Una barra doble con **dos puntos** significa repetir. Si los puntos están a la izquierda de la barra, vuelves al último signo con los puntos a la derecha; si no lo hay, al principio. La has visto en muchos ejercicios de la academia."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-recorrido.json",
+     "titulo": "Un ejemplo para mirar",
+     "principal": "partitura",
+     "motivo": "Es para mirar: partitura.",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "Compás de 3/4, un sostenido en la armadura y barras de repetición."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l5.p2",
+       "texto": "es lo mismo que haces en la primera vista."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Mira de nuevo el ejemplo y responde sin tocar. Después abre la obra y hazte estas mismas preguntas: [Sor, op. 44, en IMSLP](https://imslp.org/wiki/24_Petites_pi%C3%A8ces_progressives,_Op.44_%28Sor,_Fernando%29). Busca el n.º 1."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-recorrido.json",
+     "titulo": "El ejemplo",
+     "principal": "partitura",
+     "motivo": "Es para mirar: partitura.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cuántos tiempos tiene cada compás?",
+     "opciones": [
+      "2",
+      "3",
+      "4"
+     ],
+     "correcta": 1,
+     "porque": "Es un 3/4.",
+     "pista": "El número de arriba."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Con esa armadura, ¿qué nota lleva sostenido en todo el fragmento?",
+     "opciones": [
+      "Fa",
+      "Do",
+      "Sol"
+     ],
+     "correcta": 0,
+     "porque": "Un sostenido en la armadura siempre es Fa♯.",
+     "pista": "Recuerda el orden: Fa♯, Do♯, Sol♯…"
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Al llegar a la barra con dos puntos, ¿qué haces?",
+     "opciones": [
+      "Terminar",
+      "Volver a empezar desde el principio, una vez",
+      "Parar un compás"
+     ],
+     "correcta": 1,
+     "porque": "Si no hay otro signo de repetición antes, se vuelve al principio.",
+     "pista": "Es lo que explica la pantalla anterior."
+    },
+    {
+     "tipo": "bien",
+     "titulo": "En la obra de Sor",
+     "items": [
+      "Sabes su compás y lo has contado.",
+      "Has dicho qué notas lleva la armadura.",
+      "Sabes si tiene repeticiones."
+     ]
+    }
+   ]
+  },
+  "n1.t10.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "Cómo se trabaja",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-sor-andante-op-44-n-1",
+       "md": "**Qué aprendes:** a leer una obra entera sin ayuda. Es la primera vez que la partitura es el único punto de partida."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sor-op44-1.json",
+       "titulo": "Sor, op. 44 n.º 1: la obra entera",
+       "principal": "partitura",
+       "motivo": "El objetivo es leer: partitura; la tablatura, solo para comprobar.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "Sor avisa arriba: no levantes el dedo que pisa una cuerda hasta que lo necesites en otro sitio.",
+        "Fuente: primera edición, París (IMSLP), dominio público. Dedos del original; los que faltan y la mano derecha, propuesta de la academia."
+       ]
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Frase a frase",
+       "items": [
+        "Lee sin guitarra: nombres de las notas y ritmo.",
+        "Marca el pulso con el pie y di la frase con su ritmo.",
+        "Tócala lentamente, sin mirarte la mano.",
+        "Si no estás seguro de una nota, escribe solo esa, a lápiz.",
+        "Pasa a la siguiente frase y únelas."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Qué vigilar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Leer la obra frase a frase, hasta tocarla entera.",
+       "porque": "Es la prueba de todo lo que llevas leído desde el Tramo 1.",
+       "atencion": "Cuando la memorices, empieza a leerla por otro sitio: la memoria tapa la lectura. Observa las dos voces.",
+       "empieza": "♩ = 50, o más lento.",
+       "sube": "Te sale sin mirar la mano."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-sor-andante-op-44-n-1",
+       "bpm": 50
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Bajas la mirada en cada cambio.",
+         "arreglo": "Toca las posiciones conocidas sin mirar. Si necesitas mirar, hazlo en la nota anterior, no en la nota a la que vas."
+        },
+        {
+         "error": "Te paras en cuanto te equivocas.",
+         "arreglo": "Sigue. Una lectura sin parar con dos errores es mejor que una lectura perfecta con diez paradas."
+        }
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Puedes tocar la obra entera mirando solo la partitura.",
+        "Sabes decir qué nota estás tocando.",
+        "Respetas repeticiones y figuras."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t2.l4.p2",
+         "texto": "tu primera obra leída."
+        },
+        {
+         "paso": "n1.t14.l3.p3",
+         "texto": "la primera vista en la prueba corta."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Leer lo fácil",
+     "md": "Leer tiene mucho de reconocer: una nota, una figura, un grupo de notas. Cuantas más veces los hayas visto, menos te cuesta. Y eso solo se consigue leyendo muchas páginas fáciles, no pocas difíciles."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Lectura difícil",
+      "Lectura fácil"
+     ],
+     "filas": [
+      [
+       "Te obliga a parar",
+       "La tocas seguida"
+      ],
+      [
+       "Solo ves las notas de una en una",
+       "Empiezas a ver grupos"
+      ],
+      [
+       "Aprendes esa obra",
+       "Aprendes a leer"
+      ]
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Por eso esta es una obra de lectura, no de concierto. Cuando más adelante te encuentres con una obra difícil, ya no tendrás que descifrar notas: podrás pensar en la música."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t13.l4.p4",
+       "texto": "ocho compases a primera vista en La mayor."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Hasta ahora todas tus armaduras llevaban sostenidos. Con el patrón T-T-S-T-T-T-S desde **Fa** ocurre algo nuevo."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Desde",
+      "El patrón pide",
+      "La nota natural que sigue",
+      "¿Encaja?",
+      "Resultado"
+     ],
+     "filas": [
+      [
+       "Fa",
+       "T",
+       "Sol, a 2 semitonos",
+       "Sí",
+       "Sol"
+      ],
+      [
+       "Sol",
+       "T",
+       "La, a 2 semitonos",
+       "Sí",
+       "La"
+      ],
+      [
+       "La",
+       "**S**",
+       "Si, a 2 semitonos",
+       "No: **hay que bajarla**",
+       "**Si♭**"
+      ],
+      [
+       "Si♭",
+       "T",
+       "Do, a 2 semitonos",
+       "Sí",
+       "Do"
+      ],
+      [
+       "Do",
+       "T",
+       "Re",
+       "Sí",
+       "Re"
+      ],
+      [
+       "Re",
+       "T",
+       "Mi",
+       "Sí",
+       "Mi"
+      ],
+      [
+       "Mi",
+       "S",
+       "Fa, a 1 semitono",
+       "Sí",
+       "Fa"
+      ]
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El primer bemol",
+     "md": "El patrón necesita un semitono donde había un tono. La solución es bajar el Si: **Si♭**. No puede ser La♯, porque las letras no se pueden repetir ni saltar: una escala tiene una nota de cada letra. Por eso, la armadura de Fa mayor lleva **un bemol, Si♭**, y su relativo es **Re menor**."
+    },
+    {
+     "tipo": "grados",
+     "clave": "F",
+     "patron": true,
+     "titulo": "Fa mayor, con sus distancias"
+    },
+    {
+     "tipo": "pentagrama",
+     "pie": "La armadura de Fa mayor: un bemol, en la línea del Si.",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "F",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "1",
+           "c": 2,
+           "t": 1
+          }
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Con esta armadura ves un Si sin nada delante, en la 3.ª línea. ¿Qué tocas?",
+     "opciones": [
+      "Si natural: 2.ª cuerda al aire",
+      "Si♭: 3.ª cuerda, traste 3"
+     ],
+     "correcta": 1,
+     "porque": "La armadura lo convierte en bemol, un semitono más abajo: 3.ª cuerda, traste 3.",
+     "pista": "¿Qué dice la armadura?",
+     "audio": {
+      "notas": [
+       [
+        3,
+        3
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l3.p1",
+       "texto": "qué es un bemol."
+      },
+      {
+       "paso": "n1.t14.l3.p1",
+       "texto": "Fa mayor en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Fa mayor, dos octavas, desde la 6.ª cuerda.",
+     "porque": "Es la única escala de este nivel con bemol, y empieza en un traste, no al aire.",
+     "atencion": "Si♭ está en la 5.ª traste 1 y en la 3.ª traste 3. Un dedo por traste. Di en voz alta «Si bemol» al pasar.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Sale igual al subir y al bajar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-fa-mayor-2oct.json",
+     "titulo": "Fa mayor, dos octavas",
+     "principal": "ambas",
+     "motivo": "Para ver la armadura y la digitación.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Encuentra todos los **Si♭** de la 1.ª posición.",
+     "conjunto": [
+      "Si♭"
+     ],
+     "clave": "F",
+     "hastaTraste": 4,
+     "final": "Dos sitios: la 5.ª en el traste 1 y la 3.ª en el traste 3."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tocas Si♭ todas las veces.",
+      "Sale sin parar, en los dos sentidos."
+     ]
+    }
+   ]
+  },
+  "n1.t10.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Las sextas",
+     "md": "Una **6.ª** abarca seis letras: Fa–Re (Fa, Sol, La, Si, Do, Re). Tiene un sonido dulce y lleno. Tocar una escala **en sextas** significa acompañar cada nota con la que está seis letras por encima. Son las dos líneas de la escala moviéndose juntas."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Grave",
+      "Fa",
+      "Sol",
+      "La",
+      "Si♭",
+      "Do",
+      "Re",
+      "Mi",
+      "Fa"
+     ],
+     "filas": [
+      [
+       "Aguda",
+       "Re",
+       "Mi",
+       "Fa",
+       "Sol",
+       "La",
+       "Si♭",
+       "Do",
+       "Re"
+      ],
+      [
+       "Semitonos",
+       "9 (mayor)",
+       "9",
+       "8 (menor)",
+       "9",
+       "9",
+       "8",
+       "8",
+       "9"
+      ]
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Fa mayor en sextas, una octava, juntas y separadas.",
+     "porque": "Dos notas a la vez, sobre una línea que se mueve: la base de muchos pasajes del nivel siguiente.",
+     "atencion": "Las dos notas suenan a la vez y limpias. Usa los cambios de posición que marca la tablatura, deslizando y sin saltar.",
+     "empieza": "Separadas, ♩ = 50. Juntas, ♩ = 40.",
+     "sube": "Las dos notas de cada sexta suenan juntas."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-sextas-fa.json",
+     "titulo": "Sextas de Fa mayor",
+     "principal": "tablatura",
+     "motivo": "Es técnica: tablatura.",
+     "detalle": "La digitación es una propuesta de la academia",
+     "bpms": [
+      40,
+      50
+     ],
+     "notas": [
+      "Juntas: {c:1-2}. Separadas: {c:3-4}.",
+      "Salvo la primera, todas van por la 3.ª y la 1.ª cuerda."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las dos notas de cada sexta suenan a la vez y limpias.",
+      "Oyes que forman dos melodías paralelas."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l3.p1",
+       "texto": "los intervalos."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya lo probaste en el Tramo 1. Antes de seguir, comprueba cómo te sale ahora."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-ligados-1pos.json",
+     "titulo": "Ligados en 1.ª posición",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Te sirve si",
+     "items": [
+      "Los dos sonidos de cada ligado suenan parecidos.",
+      "Los cuatro dedos consiguen el ligado.",
+      "La mano se queda quieta."
+     ]
+    }
+   ]
+  },
+  "n1.t10.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "Ascendente",
+      "Descendente"
+     ],
+     "filas": [
+      [
+       "Qué hace el dedo",
+       "Cae sobre la cuerda",
+       "Sale de la cuerda"
+      ],
+      [
+       "Con qué parte",
+       "La punta, justo junto al traste",
+       "Tirando hacia la palma, como si pulsara"
+      ],
+      [
+       "Qué debe pasar",
+       "Suena sin la mano derecha",
+       "Suena la nota de abajo, ya preparada"
+      ]
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace bien",
+     "items": [
+      "**Ascendente:** levanta poco el dedo y déjalo caer rápido. Es velocidad, no fuerza.",
+      "**Descendente:** primero prepara la nota de abajo. El dedo que se va tira un poco de la cuerda hacia la palma.",
+      "**Las dos:** no empujes la cuerda hacia un lado o la nota se desafinará."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "El descendente no suena.",
+       "arreglo": "Solo estás levantando el dedo. Tira hacia la palma: es un pequeño pizzicato."
+      },
+      {
+       "error": "La cuerda vecina suena o se apaga sin querer.",
+       "arreglo": "Al tirar, el dedo puede rozarla. A veces hay que apoyarlo a propósito en la vecina; otras veces, evitarlo."
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En un ligado descendente, el dedo...",
+     "opciones": [
+      "se levanta hacia arriba, sin más",
+      "tira de la cuerda hacia la palma"
+     ],
+     "correcta": 1,
+     "porque": "Ese pequeño tirón es lo que hace sonar la nota siguiente.",
+     "pista": "Mira la tabla."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Ascendente",
+       "notas": [
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         3
+        ]
+       ],
+       "duracion": 0.5
+      },
+      {
+       "etiqueta": "Descendente",
+       "notas": [
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "duracion": 0.5
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l5.p1",
+       "texto": "el mordente."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "El dedo 1 se queda fijo; los dedos 2, 3 y 4 ligan desde él.",
+     "porque": "Es la independencia que piden el mordente y, más adelante, el trino.",
+     "atencion": "El dedo 1 no se levanta ni se mueve en todo el compás. Los demás caen, y tiran hacia la palma al bajar.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Las dos notas suenan iguales. Luego, en otra cuerda."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Dedo fijo: el 1 no se mueve",
+      "trastes": [
+       0,
+       8
+      ],
+      "zoom": [
+       0,
+       5
+      ],
+      "ms": 900,
+      "notas": [
+       {
+        "c": 1,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 1,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 1,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 1,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 1,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 1,
+        "t": 4,
+        "dedo": 4
+       }
+      ],
+      "final": "El dedo 1 sigue en su sitio: solo caen los otros."
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-ligados-dedo-fijo.json",
+     "titulo": "Ligados con dedo fijo",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "En el {c:1}, ascendentes 1-2, 1-3 y 1-4; en el {c:2}, los descendentes."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las dos notas suenan igual.",
+      "El dedo fijo no se mueve."
+     ]
+    }
+   ]
+  },
+  "n1.t10.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Cuánta fuerza hace falta",
+     "md": "Casi todo el mundo pisa con más fuerza de la necesaria. Eso cansa, tensa la mano y hace que los cambios sean lentos. Este ejercicio te enseña **dónde está el límite**."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Pisa una nota con fuerza normal y tócala.",
+      "Tócala varias veces, aflojando un poco cada vez.",
+      "Llegará un punto en que empiece a trastear o se apague. Ese es el límite.",
+      "Vuelve a apretar lo mínimo para que suene limpia. Esa es la presión justa."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-presion.json",
+     "titulo": "Una nota, varias veces",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "Con cada dedo, en cuerdas distintas."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes dónde deja de sonar la nota y pisas justo por encima.",
+      "Tu mano está más suelta que antes."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t1.l2.p3",
+       "texto": "el pulgar que no aprieta."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t10.l4.p5": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En la partitura, dos cosas muy distintas se escriben con el mismo arco: conviene saber distinguirlas al leer."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "Ligado",
+      "Ligadura"
+     ],
+     "filas": [
+      [
+       "Une",
+       "Dos notas **distintas**",
+       "Dos notas **iguales**"
+      ],
+      [
+       "Qué haces",
+       "Tocas dos notas; la segunda con la mano izquierda",
+       "Tocas una sola vez; la nota dura lo que las dos juntas"
+      ],
+      [
+       "Para qué",
+       "Articulación",
+       "Prolongar la duración"
+      ]
+     ]
+    },
+    {
+     "tipo": "pentagrama",
+     "pie": "Un ligado: dos notas distintas.",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "C",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "2",
+           "c": 1,
+           "t": 1,
+           "dedo": 1,
+           "lig": "h"
+          },
+          {
+           "d": "2",
+           "c": 1,
+           "t": 3,
+           "dedo": 3
+          }
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "pentagrama",
+     "pie": "Una ligadura: dos notas iguales, y se toca una sola vez.",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "C",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "2",
+           "c": 1,
+           "t": 1,
+           "tie": true
+          },
+          {
+           "d": "2",
+           "c": 1,
+           "t": 1
+          }
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Ves este arco. ¿Cuántas veces pulsas con la mano derecha?",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "C",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "2",
+           "c": 2,
+           "t": 3,
+           "tie": true
+          },
+          {
+           "d": "2",
+           "c": 2,
+           "t": 3
+          }
+         ]
+        ]
+       }
+      ]
+     },
+     "opciones": [
+      "Una, y la nota dura las dos figuras",
+      "Dos"
+     ],
+     "correcta": 0,
+     "porque": "Las dos notas son iguales: es una ligadura.",
+     "pista": "¿Las dos notas son iguales o distintas?"
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Y este?",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "C",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "2",
+           "c": 2,
+           "t": 1,
+           "dedo": 1,
+           "lig": "h"
+          },
+          {
+           "d": "2",
+           "c": 2,
+           "t": 3,
+           "dedo": 3
+          }
+         ]
+        ]
+       }
+      ]
+     },
+     "opciones": [
+      "Una sola nota larga",
+      "Dos notas: la primera, pulsada; la segunda, con un ligado"
+     ],
+     "correcta": 1,
+     "porque": "Las notas son distintas: es un ligado.",
+     "pista": "¿Las dos notas son iguales o distintas?"
+    }
+   ]
+  }
+ }
+}

@@ -1,155 +1,1763 @@
-{"tramo":"n1.t9","nota":"Primera aparición de alternancia con cruces, semicorchea, cromática, intervalos con calidad y trémolo. El Estudio en Do no está localizado con seguridad: por verificar qué edición usar.","pasos":{
-"n1.t9.l1.p1":{"pantallas":[
- {"titulo":"Lo que ya haces y lo que se añade","bloques":[
-  {"tipo":"texto","md":"Si vienes del picado, alternar i-m ya te sale. Lo que añade este nivel es el **sonido clásico** igual en los dos dedos, y otra pareja: **m-a**, que lo trabaja todo."},
-  {"tipo":"tabla","cabecera":["Pareja","Se usa para","Lo más difícil"],"filas":[["**i-m**","Casi todas las escalas","Que *m* no suene más fuerte"],["**m-a**","Cuando *i* tiene otra cosa que hacer, o por color","La *a* es más débil y menos independiente"]]},
-  {"tipo":"bien","titulo":"Comprueba si ya lo tienes","items":["Alternas i-m en una cuerda y suena igual.","No hay chasquido de uña."]}]},
- {"titulo":"El cruce de cuerda","bloques":[
-  {"tipo":"concepto","titulo":"Dos dedos que pueden estorbarse","md":"Al cambiar de cuerda importa qué dedo va a cuál. *m* es más largo que *i*, así que le resulta natural tocar la cuerda **más aguda**, que está más lejos. Si *i* toca la aguda y *m* la grave, los dedos se cruzan. Eso se llama **cruce**."},
-  {"tipo":"tabla","cabecera":["Vas de","Con","Cómo queda la mano"],"filas":[["Grave a aguda","*i* y luego *m*","Natural: los dedos se abren"],["Grave a aguda","*m* y luego *i*","Cruzada: los dedos se juntan"],["Aguda a grave","*m* y luego *i*","Natural"],["Aguda a grave","*i* y luego *m*","Cruzada"]]},
-  {"tipo":"texto","md":"El cruce no está prohibido. No siempre se puede evitar, y por eso hay que practicarlo. Pero si eliges dónde empezar, puedes conseguir que lo incómodo no caiga en un sitio delicado."},
-  {"tipo":"elige","enunciado":"Pasas de la 3.ª a la 2.ª cuerda. ¿Cuál es la pareja natural?","opciones":["*i* en la 3.ª y *m* en la 2.ª","*m* en la 3.ª e *i* en la 2.ª"],"correcta":0,"porque":"Vas de grave a aguda: *m*, el más largo, a la aguda.","pista":"La 2.ª es más aguda que la 3.ª. ¿Qué dedo llega mejor?"},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l4.p2","texto":"por qué un estudio empieza con un dedo y no con otro."}]}]}]},
-"n1.t9.l1.p2":{"bloques":[
-  {"tipo":"ejercicio","que":"Dos notas por cuerda, de la 6.ª a la 1.ª y vuelta.","porque":"Aquí aparecen todos los cruces posibles, sin otra dificultad: solo hay cuerdas al aire.","atencion":"Escucha el momento del cambio de cuerda: ahí se nota el cruce. Empieza por *i*, después por *m*, y luego con m-a.","empieza":"♩ = 60 en corcheas.","sube":"Suena igual, empieces por el dedo que empieces."},
-  {"tipo":"notacion","fuente":"notacion/tec-escalera-cruces.json","titulo":"La escalera de cruces","principal":"tablatura","motivo":"Es técnica de mano derecha: tablatura.","bpms":[60,80],"notas":["Este es el camino i-m. Repítelo empezando por *m*, y después con m-a."]},
-  {"tipo":"metronomo","bpm":60},
-  {"tipo":"bien","items":["No se nota en qué compás cambias de cuerda.","Suena igual con cualquier dedo inicial."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l4.p1","texto":"en una obra de verdad."}]}]},
-"n1.t9.l1.p3":{"bloques":[
-  {"tipo":"concepto","titulo":"La escala cromática","md":"La **cromática** sube **de semitono en semitono**: todas las notas, una a una. En la guitarra es un dibujo muy sencillo: un dedo por traste. No es música todavía, sino gimnasia que coloca la mano."},
-  {"tipo":"mastil","escena":{"tipo":"recorrido","titulo":"En la 1.ª cuerda","clave":"C","trastes":[0,4],"ms":900,"notas":[{"c":1,"t":0},{"c":1,"t":1,"dedo":1},{"c":1,"t":2,"dedo":2},{"c":1,"t":3,"dedo":3},{"c":1,"t":4,"dedo":4}],"final":"Traste a traste, dedo a dedo."}},
-  {"tipo":"ejercicio","que":"La cromática en 1.ª posición, alternando i-m.","porque":"Trabaja al mismo tiempo la alternancia, los cruces y la independencia de la mano izquierda.","atencion":"Deja los dedos puestos al subir: no los levantes hasta que haga falta. El meñique se queda corto: acerca la mano.","empieza":"♩ = 50 en corcheas.","sube":"Tres veces sin cortes. Luego ♩ = 66."},
-  {"tipo":"notacion","fuente":"notacion/esc-cromatica-1pos.json","titulo":"Cromática en 1.ª posición","principal":"tablatura","motivo":"Es técnica: tablatura.","bpms":[50,66]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"bien","items":["Un dedo por traste, sin mover la mano.","Las notas no se cortan al cambiar de cuerda."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l5.p4","texto":"la misma, con ligados."}]}]},
-"n1.t9.l2.p1":{"pantallas":[
- {"titulo":"Sol mayor","bloques":[
-  {"tipo":"texto","md":"El patrón T-T-S-T-T-T-S ya lo conoces. **Sol mayor** solo necesita un sostenido: **Fa♯**. Y se toca en dos octavas sin salir de la 1.ª posición."},
-  {"tipo":"grados","clave":"G","patron":true,"titulo":"Sol mayor, con sus distancias"},
-  {"tipo":"ejercicio","que":"Sol mayor, dos octavas, con i-m apoyando.","porque":"La necesitarás en la primera vista de este tramo y en las escalas del final del nivel.","atencion":"Fa♯ está en el traste 2 de la 6.ª, en el 4 de la 4.ª y en el 2 de la 1.ª.","empieza":"♩ = 50 en corcheas.","sube":"Suena igual al subir y al bajar."},
-  {"tipo":"notacion","fuente":"notacion/esc-sol-mayor-1pos.json","titulo":"Sol mayor, dos octavas","principal":"ambas","motivo":"Para ver la armadura y la digitación.","bpms":[50,72]},
-  {"tipo":"metronomo","bpm":50}]},
- {"titulo":"Do mayor, con un cambio","bloques":[
-  {"tipo":"texto","md":"Do mayor en dos octavas no cabe en la 1.ª posición: la nota más aguda queda más arriba. Hay que cambiar de posición, y aquí es donde usarás el **dedo guía**."},
-  {"tipo":"mastil","escena":{"tipo":"libre","titulo":"El cambio, en la 1.ª cuerda","trastes":[0,9],"clave":"C","cuadros":[
-    {"marcas":[{"k":"g","c":1,"t":1,"dedo":1}],"texto":"Fa, con el dedo 1, en el traste 1.","ms":2200},
-    {"marcas":[{"k":"g","c":1,"t":1,"dedo":1},{"k":"h","c":1,"t":3,"dedo":3}],"suena":[67],"texto":"Sol, con el dedo 3. Aquí acaba la 1.ª posición.","ms":2600},
-    {"marcas":[{"k":"g","c":1,"t":5,"dedo":1}],"texto":"El dedo 1 viaja hasta el traste 5: La. Estás en posición V.","ms":3000},
-    {"marcas":[{"k":"g","c":1,"t":5,"dedo":1},{"k":"h","c":1,"t":7,"dedo":3}],"suena":[71],"texto":"Si, con el dedo 3.","ms":2200},
-    {"marcas":[{"k":"g","c":1,"t":5,"dedo":1},{"k":"h","c":1,"t":7,"dedo":3},{"k":"d","c":1,"t":8,"dedo":4}],"suena":[72],"texto":"Do, con el dedo 4: dos octavas por encima del primero.","ms":2600}]}},
-  {"tipo":"notacion","fuente":"notacion/esc-do-mayor-2oct.json","titulo":"Do mayor, dos octavas, con un cambio a la V","principal":"ambas","motivo":"Para ver la digitación y la partitura.","bpms":[50,72],"notas":["El cambio llega en el {c:2}: de Sol a La. Bajando, en el {c:3}."]},
-  {"tipo":"bien","items":["El cambio no se oye en ninguna de las dos direcciones.","Sale tres veces igual."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t5.l2.p1","texto":"el dedo guía."},{"paso":"n1.t14.l3.p1","texto":"Sol mayor en la prueba corta."}]}]}]},
-"n1.t9.l2.p2":{"pantallas":[
- {"titulo":"Tres arpegios, dos octavas","bloques":[
-  {"tipo":"texto","md":"Ya tocaste el arpegio de Mi mayor en dos octavas. Es la misma idea: solo las notas de la triada, una por una. Aquí Sol y La mayores y Mi menor."},
-  {"tipo":"tabla","cabecera":["Arpegio","Notas"],"filas":[["Sol mayor","Sol, Si, Re"],["La mayor","La, Do♯, Mi"],["Mi menor","Mi, Sol, Si"]]},
-  {"tipo":"ejercicio","que":"Los tres arpegios, sin que las notas se solapen.","porque":"Unen la teoría de la triada con el mapa del mástil.","atencion":"Di el papel de cada nota: 1, 3, 5. Cada nota se apaga cuando entra la siguiente.","empieza":"♩ = 50 en corcheas.","sube":"Te sale tres veces, sin solaparse."},
-  {"tipo":"notacion","fuente":"notacion/arp-sol-la-mim.json","titulo":"Sol, La y Mi m","principal":"ambas","motivo":"Para ver la digitación.","bpms":[50,66],"notas":["Sol: {c:1-2}. La: {c:3-4}. Mi m: {c:5-6}."]},
-  {"tipo":"metronomo","bpm":50}]},
- {"titulo":"El acorde partido","bloques":[
-  {"tipo":"concepto","titulo":"Partir un acorde","md":"Un **acorde partido** toca las notas del acorde en parejas o por saltos, con un dibujo que se repite. Suena más a música que un arpegio directo y se usa mucho en el clasicismo."},
-  {"tipo":"notacion","fuente":"notacion/arp-partido-sol.json","titulo":"Acorde partido de Sol","principal":"tablatura","motivo":"Es técnica: tablatura.","bpms":[50,66],"notas":["Fíjate en el dibujo: una nota del acorde, salta hacia abajo y sube."]},
-  {"tipo":"bien","items":["Los tres arpegios, limpios y sin solaparse.","El acorde partido sale con el dibujo regular."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l3.p3","texto":"el de Mi mayor."}]}]}]},
-"n1.t9.l2.p3":{"bloques":[
-  {"tipo":"texto","md":"La **armadura** te dice qué notas llevan sostenido. Ya viste la de Mi mayor. Y no se ponen en cualquier orden: siempre es **Fa♯, Do♯, Sol♯, Re♯**, y así sucesivamente."},
-  {"tipo":"tabla","cabecera":["Mayor","Su relativo menor","Armadura"],"filas":[["Do","La menor","Sin alteraciones"],["Sol","Mi menor","1: Fa♯"],["Re","Si menor","2: Fa♯, Do♯"]]},
-  {"tipo":"pentagrama","pie":"La armadura de Sol mayor y Mi menor: un sostenido, en la línea del Fa.","notacion":{"compas":"4/4","armadura":"G","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":3,"t":0}]]}]}},
-  {"tipo":"pentagrama","pie":"La de Re mayor y Si menor: dos sostenidos, Fa y Do.","notacion":{"compas":"4/4","armadura":"D","compasVisible":false,"compases":[{"voces":[[{"d":"1","c":4,"t":0}]]}]}},
-  {"tipo":"concepto","titulo":"Un truco para reconocerla","md":"El último sostenido de la armadura está **a un semitono por debajo de la tónica mayor**. Fa♯ → Sol. Do♯ → Re. Con Sol♯ como último sostenido, la tónica es La."},
-  {"tipo":"preguntas","n":4},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l1.p4","texto":"la de Mi mayor."},{"paso":"n1.t10.l3.p1","texto":"el primer bemol."}]}]},
-"n1.t9.l3.p1":{"pantallas":[
- {"titulo":"Qué es un intervalo, con su calidad","bloques":[
-  {"tipo":"texto","md":"Ya sabes qué es una tercera y cómo distinguir la mayor de la menor. Vas a completar el sistema. Un **intervalo** tiene un **número** (cuántas notas abarca) y una **calidad** (cuántos semitonos exactos hay)."},
-  {"tipo":"tabla","cabecera":["Número","Desde Do","Semitonos","Nombre"],"filas":[["2.ª","Do–Re♭ / Do–Re","1 / 2","Menor / Mayor"],["3.ª","Do–Mi♭ / Do–Mi","3 / 4","Menor / Mayor"],["4.ª","Do–Fa","5","Justa"],["—","Do–Fa♯","6","**Tritono**"],["5.ª","Do–Sol","7","Justa"],["6.ª","Do–La♭ / Do–La","8 / 9","Menor / Mayor"],["7.ª","Do–Si♭ / Do–Si","10 / 11","Menor / Mayor"],["8.ª","Do–Do","12","Justa"]]},
-  {"tipo":"concepto","titulo":"Por qué hay dos nombres","md":"Las 4.ªs, 5.ªs y 8.ªs se llaman **justas**: solo tienen una versión habitual. Las demás pueden ser **mayores** o **menores**, con un semitono de diferencia. La mayor es la que sale en la escala mayor desde la tónica."}]},
- {"titulo":"Mídelos en una cuerda","bloques":[
-  {"tipo":"mastil","escena":{"tipo":"distancias","titulo":"Desde Mi, en la 1.ª cuerda","cuerda":1,"desde":0,"trastes":[0,12],"clave":"C","pasos":[{"a":3,"arco":"3.ª m","texto":"3 trastes: 3.ª menor. Mi–Sol.","ms":2400},{"a":4,"mover":3,"arco":"3.ª M","de":0,"texto":"4 trastes: 3.ª mayor. Mi–Sol♯.","ms":2400},{"a":5,"mover":4,"arco":"4.ª","de":0,"texto":"5 trastes: 4.ª justa. Mi–La.","ms":2400},{"a":7,"mover":5,"arco":"5.ª","de":0,"texto":"7 trastes: 5.ª justa. Mi–Si.","ms":2400},{"a":12,"mover":7,"arco":"8.ª","de":0,"texto":"12 trastes: la octava. Mi–Mi.","ms":2600}]}},
-  {"tipo":"escuchar","items":[{"etiqueta":"3.ª menor","notas":[[1,0],[1,3]]},{"etiqueta":"3.ª mayor","notas":[[1,0],[1,4]]},{"etiqueta":"4.ª justa","notas":[[1,0],[1,5]]},{"etiqueta":"Tritono","notas":[[1,0],[1,6]]},{"etiqueta":"5.ª justa","notas":[[1,0],[1,7]]},{"etiqueta":"8.ª","notas":[[1,0],[1,12]]}]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t4.l2.p1","texto":"la tercera dentro de la triada."},{"paso":"n1.t4.l2.p3","texto":"el tritono del Si7."}]}]}]},
-"n1.t9.l3.p2":{"bloques":[
-  {"tipo":"texto","md":"Para acertar un intervalo: primero cuenta las **letras** (Do, Re, Mi: tres, una 3.ª). Después cuenta los **semitonos** para saber su calidad. Fíjate en que las opciones pueden tener el mismo número y distinta calidad."},
-  {"tipo":"tabla","cabecera":["Ejemplo","Letras","Semitonos","Intervalo"],"filas":[["Re–Fa","Re, Mi, Fa: 3.ª","3","3.ª menor"],["Re–Fa♯","Re, Mi, Fa: 3.ª","4","3.ª mayor"]]},
-  {"tipo":"preguntas","n":5}]},
-"n1.t9.l3.p3":{"pantallas":[
- {"titulo":"Cómo reconocerlos","bloques":[
-  {"tipo":"texto","md":"Ahora de oído. Cada intervalo tiene un carácter. El truco es asociar cada uno con algo que ya conoces. Aquí tienes una ayuda, pero la mejor referencia es la que encuentres tú."},
-  {"tipo":"tabla","cabecera":["Intervalo","Carácter","Cómo reconocerlo"],"filas":[["3.ª menor","Sombría","Tus triadas menores: 1-3"],["3.ª mayor","Luminosa","Tus triadas mayores: 1-3"],["4.ª justa","Abierta, llamada","Mi–La: suena a llamada"],["5.ª justa","Firme, hueca","Mi–Si: 1-5 de tu 1-3-5"],["8.ª","Lo mismo, más alto","Parece la misma nota"]]},
-  {"tipo":"escuchar","items":[{"etiqueta":"3.ª menor","notas":[[2,0],[2,3]]},{"etiqueta":"3.ª mayor","notas":[[2,0],[2,4]]},{"etiqueta":"4.ª justa","notas":[[2,0],[2,5]]},{"etiqueta":"5.ª justa","notas":[[2,0],[2,7]]},{"etiqueta":"8.ª","notas":[[2,0],[2,12]]}]}]},
- {"titulo":"Ahora, tú","bloques":[
-  {"tipo":"texto","md":"Tararea la distancia antes de contestar. Si dudas entre dos, compáralos arriba."},
-  {"tipo":"preguntas","n":6},
-  {"tipo":"reaparece","items":[{"paso":"n1.t14.l3.p4","texto":"en la prueba corta."}]}]}]},
-"n1.t9.l3.p4":{"bloques":[
-  {"tipo":"texto","md":"En la guitarra, los intervalos se ven como **dibujos** entre cuerdas vecinas. Y los dibujos no cambian de sitio: sirven en todo el mástil."},
-  {"tipo":"mastil","escena":{"tipo":"libre","titulo":"Dibujos entre cuerdas vecinas","trastes":[0,5],"clave":"C","cuadros":[
-    {"marcas":[{"c":6,"t":0},{"c":5,"t":0}],"arpegiado":true,"texto":"Mismo traste, cuerda vecina: 4.ª justa. Mi–La.","ms":3200},
-    {"marcas":[{"c":6,"t":0},{"c":5,"t":2}],"arpegiado":true,"texto":"Cuerda vecina, dos trastes más arriba: 5.ª justa. Mi–Si.","ms":3200},
-    {"marcas":[{"c":6,"t":1},{"c":5,"t":0}],"arpegiado":true,"texto":"Cuerda vecina, un traste atrás: 3.ª mayor. Fa–La.","ms":3200},
-    {"marcas":[{"c":6,"t":2},{"c":5,"t":0}],"arpegiado":true,"texto":"Cuerda vecina, dos trastes atrás: 3.ª menor. Fa♯–La.","ms":3200},
-    {"marcas":[{"c":6,"t":0},{"c":4,"t":2}],"arpegiado":true,"texto":"Saltando una cuerda, dos trastes más arriba: la octava. Mi–Mi.","ms":3200}]}},
-  {"tipo":"guia","tipoGuia":"La excepción","md":"Entre la **3.ª y la 2.ª cuerda** todo se desplaza un traste, por la misma razón de la afinación: mismo traste ahí es una 3.ª mayor, no una 4.ª."},
-  {"tipo":"ejercicio","que":"Buscar cada dibujo en varias cuerdas, tocándolo y diciendo su nombre.","porque":"Es un mapa que te servirá en todo el mástil.","atencion":"Solo en cuerdas vecinas distintas de 3.ª-2.ª. Comprueba con el oído.","empieza":"Sin tempo.","sube":"Lo haces en todas las parejas."},
-  {"tipo":"bien","items":["Encuentras una 5.ª, una 4.ª y una 3.ª desde cualquier nota de la 6.ª cuerda.","Recuerdas la excepción de 3.ª-2.ª."]}]},
-"n1.t9.l4.p1":{"pantallas":[
- {"titulo":"Qué aprendes con ella","bloques":[
-  {"tipo":"obra","id":"o1-tarrega-estudio-en-do","md":"**Qué aprendes:** a usar la alternancia y los cruces en una obra, con el sonido clásico."},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"No hemos localizado con seguridad qué edición de este *Estudio en Do* es la que usa el nivel. Puedes buscar entre los [estudios de Tárrega en IMSLP](https://imslp.org/wiki/Estudios_%28T%C3%A1rrega,_Francisco%29), o pedírselo a tu profesor. Por eso, ningún compás se da como dato."},
-  {"tipo":"tabla","cabecera":["Qué mirar","Qué te dice"],"filas":[["Compás y armadura","Do mayor: sin alteraciones"],["Dónde cambia de cuerda","Marca a lápiz los cruces"],["Las letras i, m, a, si las hay","La digitación de la derecha"]]}]},
- {"titulo":"Cómo se trabaja","bloques":[
-  {"tipo":"pasos","titulo":"Por trozos","items":["Lee sin tocar: nombres y ritmo.","Marca los cambios de cuerda y decide con qué dedo vas a empezar.","Toca dos compases muy lento, con el dedo marcado.","Une.","Sube el tempo cuando salga sin fallos."]},
-  {"tipo":"ejercicio","que":"La obra entera, con alternancia y sin cortes.","porque":"Es el resultado de la escalera de cruces.","atencion":"Si en un punto te tropiezas siempre, comprueba si estás haciendo un cruce y prueba a empezar por el otro dedo.","empieza":"♩ = 50, o más lento.","sube":"Tres veces sin parar."},
-  {"tipo":"metronomo","clave":"o1-tarrega-estudio-en-do","bpm":50},
-  {"tipo":"bien","items":["La obra entera, sin parar.","El sonido no cambia en los cambios de cuerda.","Lees sin mirar la mano."]}]}]},
-"n1.t9.l4.p2":{"bloques":[
-  {"tipo":"texto","md":"Una alternancia no es «i, m, i, m» sin más. **Con qué dedo empiezas decide dónde caen los cruces.** Empezar con el otro cambia todo el pasaje."},
-  {"tipo":"notacion","fuente":"notacion/tec-cruce-elegir.json","titulo":"Ejemplo escrito para la academia: mismo pasaje, dos digitaciones","principal":"tablatura","motivo":"Es una digitación: tablatura.","bpms":[60],"notas":["En el {c:1}, empiezas por *i*: al subir de la 2.ª a la 1.ª cuerda, el dedo que sube es *m*.","En el {c:2}, empiezas por *m*: en el mismo cambio, sube *i* y los dedos se cruzan."]},
-  {"tipo":"concepto","titulo":"La regla práctica","md":"Mira los cambios de cuerda más importantes y cuenta hacia atrás. Quieres que el cruce caiga en **el dedo que sube**: *m* a la aguda y, por tanto, *i* en la grave."},
-  {"tipo":"elige","enunciado":"Un pasaje tiene tres notas en la 2.ª cuerda y luego va a la 1.ª. Quieres que la 1.ª la toque *m*. ¿Con qué dedo empiezas?","opciones":["*i*: i, m, i, y entonces *m*","*m*: m, i, m, y entonces *i*"],"correcta":0,"porque":"Alternando desde *i*, la cuarta nota es *m*.","pista":"Cuenta: 1.ª, 2.ª, 3.ª y 4.ª."},
-  {"tipo":"guia","tipoGuia":"Por verificar","md":"En tu edición: mira qué dedo escribe el editor y comprueba si cumple esta idea. Si no, puede ser una decisión por otro motivo: pregunta a tu profesor."}]},
-"n1.t9.l4.p3":{"bloques":[
-  {"tipo":"texto","md":"Recuerda: 20 segundos para mirar compás, armadura y lo raro. Después, sin parar pase lo que pase. Esta vez, la armadura lleva **Fa♯**, y todos los Fa son sostenidos."},
-  {"tipo":"notacion","fuente":"notacion/lec-primera-vista-sol.json","titulo":"Seis compases en Sol mayor","principal":"partitura","motivo":"El objetivo es leer: partitura.","bpms":[50],"notas":["No pulses el audio hasta haberla tocado una vez."]},
-  {"tipo":"bien","items":["Has llegado al final sin parar.","Has tocado Fa♯ todas las veces."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t7.l5.p2","texto":"qué es la primera vista."}]}]},
-"n1.t9.l5.p1":{"bloques":[
-  {"tipo":"concepto","titulo":"Qué es el trémolo","md":"El **trémolo** son notas rápidas repetidas sobre una misma cuerda, con un bajo debajo. El resultado parece una melodía que no se apaga. Es de los sonidos más característicos de la guitarra."},
-  {"tipo":"tabla","cabecera":["","Clásico","Flamenco"],"filas":[["Fórmula","**p-a-m-i**","p-i-a-m-i"],["Notas por grupo","4 (el bajo y 3 repetidas)","5 (el bajo y 4 repetidas)"],["Lo que se busca","Una línea continua e igualada","Un sonido brillante, muy rápido"]]},
-  {"tipo":"guia","tipoGuia":"No las mezcles","md":"Si ya haces el trémolo flamenco, tienes independencia y una base. Pero son técnicas distintas: la clásica tiene otro orden y otro objetivo. Al tocar, piensa en cuál estás haciendo."},
-  {"tipo":"concepto","titulo":"La semicorchea","md":"La **semicorchea** dura un cuarto de tiempo: cuatro caben en una negra. Tiene dos corchetes o dos barras. Se cuenta **1-e-y-a**, o como te resulte más cómodo."},
-  {"tipo":"reaparece","items":[{"paso":"n1.t12.l4.p4","texto":"puntillo y semicorcheas."}]}]},
-"n1.t9.l5.p2":{"bloques":[
-  {"tipo":"ejercicio","que":"p-a-m-i, lento, en cuerdas al aire.","porque":"Empezar pronto el clásico aprovecha tu base flamenca sin mezclarlas.","atencion":"*a* suele sonar más flojo y *i*, más fuerte. Escucha las tres notas agudas: tienen que ser iguales. Lo primero es la igualdad, no la velocidad.","empieza":"♩ = 40 en semicorcheas.","sube":"Tres notas iguales, aunque sea lento. Más adelante vas subiendo muy poco a poco."},
-  {"tipo":"notacion","fuente":"notacion/tec-tremolo.json","titulo":"Trémolo: primer contacto","principal":"tablatura","motivo":"Es técnica de mano derecha: tablatura.","bpms":[40,50]},
-  {"tipo":"metronomo","bpm":40},
-  {"tipo":"errores","items":[{"error":"Las tres notas suenan a galope, con una más larga.","arreglo":"Di a-m-i en voz alta, muy lento y regular, y baja el tempo."},{"error":"Vuelves al flamenco sin querer.","arreglo":"Empieza siempre con *p* y *a*: cuatro golpes, no cinco."}]},
-  {"tipo":"bien","items":["Las tres notas agudas suenan iguales.","El grupo tiene cuatro notas, no cinco.","No hay tensión en la mano."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t13.l5.p2","texto":"un poco más deprisa, con bajo alternante."}]}]},
-"n1.t9.l5.p3":{"bloques":[
-  {"tipo":"texto","md":"Ahora mira adónde lleva este camino. *Recuerdos de la Alhambra*, de Tárrega, es la obra de trémolo más conocida de la guitarra. La tocarás en el nivel 5."},
-  {"tipo":"concepto","titulo":"Dónde escucharla","md":"[Buscar *Recuerdos de la Alhambra* en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+Recuerdos+de+la+Alhambra+guitarra)."},
-  {"tipo":"lista","titulo":"Qué oír","items":["¿Parece una sola melodía sostenida?","Fíjate en que el bajo y las notas agudas parecen dos personas distintas.","¿Oyes alguna nota separada del resto? Una buena interpretación casi no lo deja notar."]},
-  {"tipo":"guia","tipoGuia":"Sin prisa","md":"Es normal sentir que queda lejos. No la intentes ahora: el camino es muy lento, y en este nivel solo quieres tres notas iguales a un tempo cómodo."}]},
-"n1.t9.l5.p4":{"bloques":[
-  {"tipo":"texto","md":"Ya tocas la cromática pulsando todas las notas. Ahora, **cada pareja se liga**: la mano derecha solo pulsa la primera de cada dos."},
-  {"tipo":"ejercicio","que":"La cromática con ligados ascendentes de dos notas.","porque":"Fortalece la mano izquierda y prepara los ligados del tramo siguiente.","atencion":"Las dos notas tienen que sonar igual. El dedo cae sobre el traste con decisión.","empieza":"♩ = 50 en corcheas.","sube":"Sale con todos los dedos."},
-  {"tipo":"notacion","fuente":"notacion/esc-cromatica-ligados.json","titulo":"Cromática con ligados","principal":"tablatura","motivo":"Es técnica de mano izquierda: tablatura.","bpms":[50,66],"notas":["Cada arco une dos notas: la primera se pulsa; la segunda, no."]},
-  {"tipo":"metronomo","bpm":50},
-  {"tipo":"bien","items":["La nota ligada suena casi tan fuerte como la pulsada.","La mano no se mueve."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t10.l4.p2","texto":"los ligados a fondo."}]}]},
-"n1.t9.l5.p5":{"bloques":[
-  {"tipo":"texto","md":"Cuatro pruebas. Nada se bloquea."},
-  {"tipo":"lista","titulo":"1. Sol mayor en dos octavas","items":["Sin cortes, a un tempo cómodo."]},
-  {"tipo":"notacion","plegado":true,"fuente":"notacion/esc-sol-mayor-1pos.json","titulo":"Ver la escala","principal":"tablatura","motivo":"Para comprobar.","bpms":[60]},
-  {"tipo":"lista","titulo":"2. Intervalos","items":["Dos preguntas, abajo."]},
-  {"tipo":"elige","enunciado":"¿Qué intervalo hay entre Sol y Si?","opciones":["3.ª menor","3.ª mayor","4.ª justa"],"correcta":1,"porque":"Son tres letras y cuatro semitonos.","pista":"Cuenta letras y luego semitonos: Sol, La, Si."},
-  {"tipo":"elige","enunciado":"¿Y esto, de oído?","audio":{"notas":[[3,0],[3,7]]},"opciones":["4.ª justa","5.ª justa","8.ª"],"correcta":1,"porque":"Son siete trastes: 5.ª justa, firme y hueca.","pista":"Compáralo con los que has oído."},
-  {"tipo":"lista","titulo":"3. El estudio","items":["El *Estudio en Do*, sin parar."]},
-  {"tipo":"lista","titulo":"4. El trémolo lento","items":["Tres notas iguales."]},
-  {"tipo":"bien","titulo":"Marca lo que ya te sale","items":["Sol mayor en dos octavas.","El *Estudio en Do* entero.","El trémolo lento, con tres notas iguales."]},
-  {"tipo":"reaparece","items":[{"paso":"n1.t9.l2.p1","texto":"si falla la escala."},{"paso":"n1.t9.l3.p1","texto":"si fallan los intervalos."},{"paso":"n1.t9.l5.p2","texto":"si falla el trémolo."}]}]}
-}}
+{
+ "tramo": "n1.t9",
+ "nota": "Primera aparición de alternancia con cruces, semicorchea, cromática, intervalos con calidad y trémolo. El Estudio en Do no está localizado con seguridad: por verificar qué edición usar.",
+ "pasos": {
+  "n1.t9.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "Lo que ya haces y lo que se añade",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Si vienes del picado, alternar i-m ya te sale. Lo que añade este nivel es el **sonido clásico** igual en los dos dedos, y otra pareja: **m-a**, que lo trabaja todo."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Pareja",
+        "Se usa para",
+        "Lo más difícil"
+       ],
+       "filas": [
+        [
+         "**i-m**",
+         "Casi todas las escalas",
+         "Que *m* no suene más fuerte"
+        ],
+        [
+         "**m-a**",
+         "Cuando *i* tiene otra cosa que hacer, o por color",
+         "La *a* es más débil y menos independiente"
+        ]
+       ]
+      },
+      {
+       "tipo": "bien",
+       "titulo": "Comprueba si ya lo tienes",
+       "items": [
+        "Alternas i-m en una cuerda y suena igual.",
+        "No hay chasquido de uña."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "El cruce de cuerda",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Dos dedos que pueden estorbarse",
+       "md": "Al cambiar de cuerda importa qué dedo va a cuál. *m* es más largo que *i*, así que le resulta natural tocar la cuerda **más aguda**, que está más lejos. Si *i* toca la aguda y *m* la grave, los dedos se cruzan. Eso se llama **cruce**."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Vas de",
+        "Con",
+        "Cómo queda la mano"
+       ],
+       "filas": [
+        [
+         "Grave a aguda",
+         "*i* y luego *m*",
+         "Natural: los dedos se abren"
+        ],
+        [
+         "Grave a aguda",
+         "*m* y luego *i*",
+         "Cruzada: los dedos se juntan"
+        ],
+        [
+         "Aguda a grave",
+         "*m* y luego *i*",
+         "Natural"
+        ],
+        [
+         "Aguda a grave",
+         "*i* y luego *m*",
+         "Cruzada"
+        ]
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "El cruce no está prohibido. No siempre se puede evitar, y por eso hay que practicarlo. Pero si eliges dónde empezar, puedes conseguir que lo incómodo no caiga en un sitio delicado."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "Pasas de la 3.ª a la 2.ª cuerda. ¿Cuál es la pareja natural?",
+       "opciones": [
+        "*i* en la 3.ª y *m* en la 2.ª",
+        "*m* en la 3.ª e *i* en la 2.ª"
+       ],
+       "correcta": 0,
+       "porque": "Vas de grave a aguda: *m*, el más largo, a la aguda.",
+       "pista": "La 2.ª es más aguda que la 3.ª. ¿Qué dedo llega mejor?"
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t9.l4.p2",
+         "texto": "por qué un estudio empieza con un dedo y no con otro."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "Dos notas por cuerda, de la 6.ª a la 1.ª y vuelta.",
+     "porque": "Aquí aparecen todos los cruces posibles, sin otra dificultad: solo hay cuerdas al aire.",
+     "atencion": "Escucha el momento del cambio de cuerda: ahí se nota el cruce. Empieza por *i*, después por *m*, y luego con m-a.",
+     "empieza": "♩ = 60 en corcheas.",
+     "sube": "Suena igual, empieces por el dedo que empieces."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Los cruces, cuerda a cuerda",
+      "trastes": [
+       0,
+       4
+      ],
+      "ms": 750,
+      "notas": [
+       {
+        "c": 3,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 3,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 2,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 2,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       }
+      ],
+      "final": "Fíjate: al subir de cuerda, el dedo que llega es i. Ahora repítelo empezando por m."
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-escalera-cruces.json",
+     "titulo": "La escalera de cruces",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano derecha: tablatura.",
+     "bpms": [
+      60,
+      80
+     ],
+     "notas": [
+      "Este es el camino i-m. Repítelo empezando por *m*, y después con m-a."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "No se nota en qué compás cambias de cuerda.",
+      "Suena igual con cualquier dedo inicial."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l4.p1",
+       "texto": "en una obra de verdad."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La escala cromática",
+     "md": "La **cromática** sube **de semitono en semitono**: todas las notas, una a una. En la guitarra es un dibujo muy sencillo: un dedo por traste. No es música todavía, sino gimnasia que coloca la mano."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "recorrido",
+      "titulo": "En la 1.ª cuerda",
+      "clave": "C",
+      "trastes": [
+       0,
+       4
+      ],
+      "ms": 900,
+      "notas": [
+       {
+        "c": 1,
+        "t": 0
+       },
+       {
+        "c": 1,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 1,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 1,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 1,
+        "t": 4,
+        "dedo": 4
+       }
+      ],
+      "final": "Traste a traste, dedo a dedo."
+     }
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Un dedo por traste, y se quedan puestos",
+      "clave": "C",
+      "trastes": [
+       0,
+       12
+      ],
+      "zoom": [
+       0,
+       5
+      ],
+      "ms": 700,
+      "notas": [
+       {
+        "c": 2,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 2,
+        "dedo": 2
+       },
+       {
+        "c": 2,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 2,
+        "t": 4,
+        "dedo": 4
+       }
+      ],
+      "final": "Los dedos no se levantan al subir: así la mano está lista para bajar."
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La cromática en 1.ª posición, alternando i-m.",
+     "porque": "Trabaja al mismo tiempo la alternancia, los cruces y la independencia de la mano izquierda.",
+     "atencion": "Deja los dedos puestos al subir: no los levantes hasta que haga falta. El meñique se queda corto: acerca la mano.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Tres veces sin cortes. Luego ♩ = 66."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-cromatica-1pos.json",
+     "titulo": "Cromática en 1.ª posición",
+     "principal": "tablatura",
+     "motivo": "Es técnica: tablatura.",
+     "bpms": [
+      50,
+      66
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Un dedo por traste, sin mover la mano.",
+      "Las notas no se cortan al cambiar de cuerda."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l5.p4",
+       "texto": "la misma, con ligados."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "Sol mayor",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "El patrón T-T-S-T-T-T-S ya lo conoces. **Sol mayor** solo necesita un sostenido: **Fa♯**. Y se toca en dos octavas sin salir de la 1.ª posición."
+      },
+      {
+       "tipo": "grados",
+       "clave": "G",
+       "patron": true,
+       "titulo": "Sol mayor, con sus distancias"
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Sol mayor, dos octavas, con i-m apoyando.",
+       "porque": "La necesitarás en la primera vista de este tramo y en las escalas del final del nivel.",
+       "atencion": "Fa♯ está en el traste 2 de la 6.ª, en el 4 de la 4.ª y en el 2 de la 1.ª.",
+       "empieza": "♩ = 50 en corcheas.",
+       "sube": "Suena igual al subir y al bajar."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/esc-sol-mayor-1pos.json",
+       "titulo": "Sol mayor, dos octavas",
+       "principal": "ambas",
+       "motivo": "Para ver la armadura y la digitación.",
+       "bpms": [
+        50,
+        72
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      }
+     ]
+    },
+    {
+     "titulo": "Do mayor, con un cambio",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Do mayor en dos octavas no cabe en la 1.ª posición: la nota más aguda queda más arriba. Hay que cambiar de posición, y aquí es donde usarás el **dedo guía**."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "libre",
+        "titulo": "El cambio, en la 1.ª cuerda",
+        "trastes": [
+         0,
+         9
+        ],
+        "clave": "C",
+        "cuadros": [
+         {
+          "marcas": [
+           {
+            "k": "g",
+            "c": 1,
+            "t": 1,
+            "dedo": 1
+           }
+          ],
+          "texto": "Fa, con el dedo 1, en el traste 1.",
+          "ms": 2200
+         },
+         {
+          "marcas": [
+           {
+            "k": "g",
+            "c": 1,
+            "t": 1,
+            "dedo": 1
+           },
+           {
+            "k": "h",
+            "c": 1,
+            "t": 3,
+            "dedo": 3
+           }
+          ],
+          "suena": [
+           67
+          ],
+          "texto": "Sol, con el dedo 3. Aquí acaba la 1.ª posición.",
+          "ms": 2600
+         },
+         {
+          "marcas": [
+           {
+            "k": "g",
+            "c": 1,
+            "t": 5,
+            "dedo": 1
+           }
+          ],
+          "texto": "El dedo 1 viaja hasta el traste 5: La. Estás en posición V.",
+          "ms": 3000
+         },
+         {
+          "marcas": [
+           {
+            "k": "g",
+            "c": 1,
+            "t": 5,
+            "dedo": 1
+           },
+           {
+            "k": "h",
+            "c": 1,
+            "t": 7,
+            "dedo": 3
+           }
+          ],
+          "suena": [
+           71
+          ],
+          "texto": "Si, con el dedo 3.",
+          "ms": 2200
+         },
+         {
+          "marcas": [
+           {
+            "k": "g",
+            "c": 1,
+            "t": 5,
+            "dedo": 1
+           },
+           {
+            "k": "h",
+            "c": 1,
+            "t": 7,
+            "dedo": 3
+           },
+           {
+            "k": "d",
+            "c": 1,
+            "t": 8,
+            "dedo": 4
+           }
+          ],
+          "suena": [
+           72
+          ],
+          "texto": "Do, con el dedo 4: dos octavas por encima del primero.",
+          "ms": 2600
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/esc-do-mayor-2oct.json",
+       "titulo": "Do mayor, dos octavas, con un cambio a la V",
+       "principal": "ambas",
+       "motivo": "Para ver la digitación y la partitura.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "El cambio llega en el {c:2}: de Sol a La. Bajando, en el {c:3}."
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "El cambio no se oye en ninguna de las dos direcciones.",
+        "Sale tres veces igual."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t5.l2.p1",
+         "texto": "el dedo guía."
+        },
+        {
+         "paso": "n1.t14.l3.p1",
+         "texto": "Sol mayor en la prueba corta."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "Tres arpegios, dos octavas",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ya tocaste el arpegio de Mi mayor en dos octavas. Es la misma idea: solo las notas de la triada, una por una. Aquí Sol y La mayores y Mi menor."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Arpegio",
+        "Notas"
+       ],
+       "filas": [
+        [
+         "Sol mayor",
+         "Sol, Si, Re"
+        ],
+        [
+         "La mayor",
+         "La, Do♯, Mi"
+        ],
+        [
+         "Mi menor",
+         "Mi, Sol, Si"
+        ]
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Los tres arpegios, sin que las notas se solapen.",
+       "porque": "Unen la teoría de la triada con el mapa del mástil.",
+       "atencion": "Di el papel de cada nota: 1, 3, 5. Cada nota se apaga cuando entra la siguiente.",
+       "empieza": "♩ = 50 en corcheas.",
+       "sube": "Te sale tres veces, sin solaparse."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/arp-sol-la-mim.json",
+       "titulo": "Sol, La y Mi m",
+       "principal": "ambas",
+       "motivo": "Para ver la digitación.",
+       "bpms": [
+        50,
+        66
+       ],
+       "notas": [
+        "Sol: {c:1-2}. La: {c:3-4}. Mi m: {c:5-6}."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      }
+     ]
+    },
+    {
+     "titulo": "El acorde partido",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Partir un acorde",
+       "md": "Un **acorde partido** toca las notas del acorde en parejas o por saltos, con un dibujo que se repite. Suena más a música que un arpegio directo y se usa mucho en el clasicismo."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/arp-partido-sol.json",
+       "titulo": "Acorde partido de Sol",
+       "principal": "tablatura",
+       "motivo": "Es técnica: tablatura.",
+       "bpms": [
+        50,
+        66
+       ],
+       "notas": [
+        "Fíjate en el dibujo: una nota del acorde, salta hacia abajo y sube."
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Los tres arpegios, limpios y sin solaparse.",
+        "El acorde partido sale con el dibujo regular."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t4.l3.p3",
+         "texto": "el de Mi mayor."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La **armadura** te dice qué notas llevan sostenido. Ya viste la de Mi mayor. Y no se ponen en cualquier orden: siempre es **Fa♯, Do♯, Sol♯, Re♯**, y así sucesivamente."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Mayor",
+      "Su relativo menor",
+      "Armadura"
+     ],
+     "filas": [
+      [
+       "Do",
+       "La menor",
+       "Sin alteraciones"
+      ],
+      [
+       "Sol",
+       "Mi menor",
+       "1: Fa♯"
+      ],
+      [
+       "Re",
+       "Si menor",
+       "2: Fa♯, Do♯"
+      ]
+     ]
+    },
+    {
+     "tipo": "pentagrama",
+     "pie": "La armadura de Sol mayor y Mi menor: un sostenido, en la línea del Fa.",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "G",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "1",
+           "c": 3,
+           "t": 0
+          }
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "pentagrama",
+     "pie": "La de Re mayor y Si menor: dos sostenidos, Fa y Do.",
+     "notacion": {
+      "compas": "4/4",
+      "armadura": "D",
+      "compasVisible": false,
+      "compases": [
+       {
+        "voces": [
+         [
+          {
+           "d": "1",
+           "c": 4,
+           "t": 0
+          }
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Un truco para reconocerla",
+     "md": "El último sostenido de la armadura está **a un semitono por debajo de la tónica mayor**. Fa♯ → Sol. Do♯ → Re. Con Sol♯ como último sostenido, la tónica es La."
+    },
+    {
+     "tipo": "preguntas",
+     "n": 4
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l1.p4",
+       "texto": "la de Mi mayor."
+      },
+      {
+       "paso": "n1.t10.l3.p1",
+       "texto": "el primer bemol."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué es un intervalo, con su calidad",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ya sabes qué es una tercera y cómo distinguir la mayor de la menor. Vas a completar el sistema. Un **intervalo** tiene un **número** (cuántas notas abarca) y una **calidad** (cuántos semitonos exactos hay)."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Número",
+        "Desde Do",
+        "Semitonos",
+        "Nombre"
+       ],
+       "filas": [
+        [
+         "2.ª",
+         "Do–Re♭ / Do–Re",
+         "1 / 2",
+         "Menor / Mayor"
+        ],
+        [
+         "3.ª",
+         "Do–Mi♭ / Do–Mi",
+         "3 / 4",
+         "Menor / Mayor"
+        ],
+        [
+         "4.ª",
+         "Do–Fa",
+         "5",
+         "Justa"
+        ],
+        [
+         "—",
+         "Do–Fa♯",
+         "6",
+         "**Tritono**"
+        ],
+        [
+         "5.ª",
+         "Do–Sol",
+         "7",
+         "Justa"
+        ],
+        [
+         "6.ª",
+         "Do–La♭ / Do–La",
+         "8 / 9",
+         "Menor / Mayor"
+        ],
+        [
+         "7.ª",
+         "Do–Si♭ / Do–Si",
+         "10 / 11",
+         "Menor / Mayor"
+        ],
+        [
+         "8.ª",
+         "Do–Do",
+         "12",
+         "Justa"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Por qué hay dos nombres",
+       "md": "Las 4.ªs, 5.ªs y 8.ªs se llaman **justas**: solo tienen una versión habitual. Las demás pueden ser **mayores** o **menores**, con un semitono de diferencia. La mayor es la que sale en la escala mayor desde la tónica."
+      }
+     ]
+    },
+    {
+     "titulo": "Mídelos en una cuerda",
+     "bloques": [
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "distancias",
+        "titulo": "Desde Mi, en la 1.ª cuerda",
+        "cuerda": 1,
+        "desde": 0,
+        "trastes": [
+         0,
+         12
+        ],
+        "clave": "C",
+        "pasos": [
+         {
+          "a": 3,
+          "arco": "3.ª m",
+          "texto": "3 trastes: 3.ª menor. Mi–Sol.",
+          "ms": 2400
+         },
+         {
+          "a": 4,
+          "mover": 3,
+          "arco": "3.ª M",
+          "de": 0,
+          "texto": "4 trastes: 3.ª mayor. Mi–Sol♯.",
+          "ms": 2400
+         },
+         {
+          "a": 5,
+          "mover": 4,
+          "arco": "4.ª",
+          "de": 0,
+          "texto": "5 trastes: 4.ª justa. Mi–La.",
+          "ms": 2400
+         },
+         {
+          "a": 7,
+          "mover": 5,
+          "arco": "5.ª",
+          "de": 0,
+          "texto": "7 trastes: 5.ª justa. Mi–Si.",
+          "ms": 2400
+         },
+         {
+          "a": 12,
+          "mover": 7,
+          "arco": "8.ª",
+          "de": 0,
+          "texto": "12 trastes: la octava. Mi–Mi.",
+          "ms": 2600
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "3.ª menor",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           3
+          ]
+         ]
+        },
+        {
+         "etiqueta": "3.ª mayor",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           4
+          ]
+         ]
+        },
+        {
+         "etiqueta": "4.ª justa",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           5
+          ]
+         ]
+        },
+        {
+         "etiqueta": "Tritono",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           6
+          ]
+         ]
+        },
+        {
+         "etiqueta": "5.ª justa",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           7
+          ]
+         ]
+        },
+        {
+         "etiqueta": "8.ª",
+         "notas": [
+          [
+           1,
+           0
+          ],
+          [
+           1,
+           12
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t4.l2.p1",
+         "texto": "la tercera dentro de la triada."
+        },
+        {
+         "paso": "n1.t4.l2.p3",
+         "texto": "el tritono del Si7."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Para acertar un intervalo: primero cuenta las **letras** (Do, Re, Mi: tres, una 3.ª). Después cuenta los **semitonos** para saber su calidad. Fíjate en que las opciones pueden tener el mismo número y distinta calidad."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Ejemplo",
+      "Letras",
+      "Semitonos",
+      "Intervalo"
+     ],
+     "filas": [
+      [
+       "Re–Fa",
+       "Re, Mi, Fa: 3.ª",
+       "3",
+       "3.ª menor"
+      ],
+      [
+       "Re–Fa♯",
+       "Re, Mi, Fa: 3.ª",
+       "4",
+       "3.ª mayor"
+      ]
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 5
+    }
+   ]
+  },
+  "n1.t9.l3.p3": {
+   "pantallas": [
+    {
+     "titulo": "Cómo reconocerlos",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Ahora de oído. Cada intervalo tiene un carácter. El truco es asociar cada uno con algo que ya conoces. Aquí tienes una ayuda, pero la mejor referencia es la que encuentres tú."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Intervalo",
+        "Carácter",
+        "Cómo reconocerlo"
+       ],
+       "filas": [
+        [
+         "3.ª menor",
+         "Sombría",
+         "Tus triadas menores: 1-3"
+        ],
+        [
+         "3.ª mayor",
+         "Luminosa",
+         "Tus triadas mayores: 1-3"
+        ],
+        [
+         "4.ª justa",
+         "Abierta, llamada",
+         "Mi–La: suena a llamada"
+        ],
+        [
+         "5.ª justa",
+         "Firme, hueca",
+         "Mi–Si: 1-5 de tu 1-3-5"
+        ],
+        [
+         "8.ª",
+         "Lo mismo, más alto",
+         "Parece la misma nota"
+        ]
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "3.ª menor",
+         "notas": [
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           3
+          ]
+         ]
+        },
+        {
+         "etiqueta": "3.ª mayor",
+         "notas": [
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           4
+          ]
+         ]
+        },
+        {
+         "etiqueta": "4.ª justa",
+         "notas": [
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           5
+          ]
+         ]
+        },
+        {
+         "etiqueta": "5.ª justa",
+         "notas": [
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           7
+          ]
+         ]
+        },
+        {
+         "etiqueta": "8.ª",
+         "notas": [
+          [
+           2,
+           0
+          ],
+          [
+           2,
+           12
+          ]
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Ahora, tú",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Tararea la distancia antes de contestar. Si dudas entre dos, compáralos arriba."
+      },
+      {
+       "tipo": "preguntas",
+       "n": 6
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t14.l3.p4",
+         "texto": "en la prueba corta."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l3.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En la guitarra, los intervalos se ven como **dibujos** entre cuerdas vecinas. Y los dibujos no cambian de sitio: sirven en todo el mástil."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "Dibujos entre cuerdas vecinas",
+      "trastes": [
+       0,
+       5
+      ],
+      "clave": "C",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "c": 6,
+          "t": 0
+         },
+         {
+          "c": 5,
+          "t": 0
+         }
+        ],
+        "arpegiado": true,
+        "texto": "Mismo traste, cuerda vecina: 4.ª justa. Mi–La.",
+        "ms": 3200
+       },
+       {
+        "marcas": [
+         {
+          "c": 6,
+          "t": 0
+         },
+         {
+          "c": 5,
+          "t": 2
+         }
+        ],
+        "arpegiado": true,
+        "texto": "Cuerda vecina, dos trastes más arriba: 5.ª justa. Mi–Si.",
+        "ms": 3200
+       },
+       {
+        "marcas": [
+         {
+          "c": 6,
+          "t": 1
+         },
+         {
+          "c": 5,
+          "t": 0
+         }
+        ],
+        "arpegiado": true,
+        "texto": "Cuerda vecina, un traste atrás: 3.ª mayor. Fa–La.",
+        "ms": 3200
+       },
+       {
+        "marcas": [
+         {
+          "c": 6,
+          "t": 2
+         },
+         {
+          "c": 5,
+          "t": 0
+         }
+        ],
+        "arpegiado": true,
+        "texto": "Cuerda vecina, dos trastes atrás: 3.ª menor. Fa♯–La.",
+        "ms": 3200
+       },
+       {
+        "marcas": [
+         {
+          "c": 6,
+          "t": 0
+         },
+         {
+          "c": 4,
+          "t": 2
+         }
+        ],
+        "arpegiado": true,
+        "texto": "Saltando una cuerda, dos trastes más arriba: la octava. Mi–Mi.",
+        "ms": 3200
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "La excepción",
+     "md": "Entre la **3.ª y la 2.ª cuerda** todo se desplaza un traste, por la misma razón de la afinación: mismo traste ahí es una 3.ª mayor, no una 4.ª."
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Buscar cada dibujo en varias cuerdas, tocándolo y diciendo su nombre.",
+     "porque": "Es un mapa que te servirá en todo el mástil.",
+     "atencion": "Solo en cuerdas vecinas distintas de 3.ª-2.ª. Comprueba con el oído.",
+     "empieza": "Sin tempo.",
+     "sube": "Lo haces en todas las parejas."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Encuentras una 5.ª, una 4.ª y una 3.ª desde cualquier nota de la 6.ª cuerda.",
+      "Recuerdas la excepción de 3.ª-2.ª."
+     ]
+    }
+   ]
+  },
+  "n1.t9.l4.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué aprendes con ella",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-tarrega-estudio-en-do",
+       "md": "**Qué aprendes:** a usar la alternancia y los cruces en una obra, con el sonido clásico."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-tarrega-estudio-do.json",
+       "titulo": "Tárrega, *Estudio en Do*: la obra entera",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura juntas.",
+       "bpms": [
+        40,
+        60
+       ],
+       "notas": [
+        "La fórmula de la derecha es p-i-m-a-m-i-a-m-i-a-m-i. Dedos y fórmula: edición de Jonathan Richter. Se atribuye a Tárrega; no se conoce el manuscrito.",
+        "La edición escribe 4/4 con tresillos; aquí va en 12/8, que suena igual. Tiene dos partes, {c:1-8} y {c:9-16}, y cada una se repite."
+       ]
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Qué mirar",
+        "Qué te dice"
+       ],
+       "filas": [
+        [
+         "Compás y armadura",
+         "Do mayor: sin alteraciones"
+        ],
+        [
+         "Dónde cambia de cuerda",
+         "Marca a lápiz los cruces"
+        ],
+        [
+         "Las letras i, m, a, si las hay",
+         "La digitación de la derecha"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se trabaja",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por trozos",
+       "items": [
+        "Lee sin tocar: nombres y ritmo.",
+        "Marca los cambios de cuerda y decide con qué dedo vas a empezar.",
+        "Toca dos compases muy lento, con el dedo marcado.",
+        "Une.",
+        "Sube el tempo cuando salga sin fallos."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "La obra entera, con alternancia y sin cortes.",
+       "porque": "Es el resultado de la escalera de cruces.",
+       "atencion": "Si en un punto te tropiezas siempre, comprueba si estás haciendo un cruce y prueba a empezar por el otro dedo.",
+       "empieza": "♩ = 50, o más lento.",
+       "sube": "Tres veces sin parar."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-tarrega-estudio-en-do",
+       "bpm": 50
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "La obra entera, sin parar.",
+        "El sonido no cambia en los cambios de cuerda.",
+        "Lees sin mirar la mano."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una alternancia no es «i, m, i, m» sin más. **Con qué dedo empiezas decide dónde caen los cruces.** Empezar con el otro cambia todo el pasaje."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-cruce-elegir.json",
+     "titulo": "Ejemplo escrito para la academia: mismo pasaje, dos digitaciones",
+     "principal": "tablatura",
+     "motivo": "Es una digitación: tablatura.",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "En el {c:1}, empiezas por *i*: al subir de la 2.ª a la 1.ª cuerda, el dedo que sube es *m*.",
+      "En el {c:2}, empiezas por *m*: en el mismo cambio, sube *i* y los dedos se cruzan."
+     ]
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "La regla práctica",
+     "md": "Mira los cambios de cuerda más importantes y cuenta hacia atrás. Quieres que el cruce caiga en **el dedo que sube**: *m* a la aguda y, por tanto, *i* en la grave."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Un pasaje tiene tres notas en la 2.ª cuerda y luego va a la 1.ª. Quieres que la 1.ª la toque *m*. ¿Con qué dedo empiezas?",
+     "opciones": [
+      "*i*: i, m, i, y entonces *m*",
+      "*m*: m, i, m, y entonces *i*"
+     ],
+     "correcta": 0,
+     "porque": "Alternando desde *i*, la cuarta nota es *m*.",
+     "pista": "Cuenta: 1.ª, 2.ª, 3.ª y 4.ª."
+    },
+    {
+     "tipo": "texto",
+     "md": "En el *Estudio en Do* la fórmula ya está decidida: repetir a-m-i hace que la mano nunca se cruce."
+    }
+   ],
+   "verificado": true
+  },
+  "n1.t9.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Recuerda: 20 segundos para mirar compás, armadura y lo raro. Después, sin parar pase lo que pase. Esta vez, la armadura lleva **Fa♯**, y todos los Fa son sostenidos."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-primera-vista-sol.json",
+     "titulo": "Seis compases en Sol mayor",
+     "principal": "partitura",
+     "motivo": "El objetivo es leer: partitura.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "No pulses el audio hasta haberla tocado una vez."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Has llegado al final sin parar.",
+      "Has tocado Fa♯ todas las veces."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l5.p2",
+       "texto": "qué es la primera vista."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Qué es el trémolo",
+     "md": "El **trémolo** son notas rápidas repetidas sobre una misma cuerda, con un bajo debajo. El resultado parece una melodía que no se apaga. Es de los sonidos más característicos de la guitarra."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "Clásico",
+      "Flamenco"
+     ],
+     "filas": [
+      [
+       "Fórmula",
+       "**p-a-m-i**",
+       "p-i-a-m-i"
+      ],
+      [
+       "Notas por grupo",
+       "4 (el bajo y 3 repetidas)",
+       "5 (el bajo y 4 repetidas)"
+      ],
+      [
+       "Lo que se busca",
+       "Una línea continua e igualada",
+       "Un sonido brillante, muy rápido"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "No las mezcles",
+     "md": "Si ya haces el trémolo flamenco, tienes independencia y una base. Pero son técnicas distintas: la clásica tiene otro orden y otro objetivo. Al tocar, piensa en cuál estás haciendo."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "La semicorchea",
+     "md": "La **semicorchea** dura un cuarto de tiempo: cuatro caben en una negra. Tiene dos corchetes o dos barras. Se cuenta **1-e-y-a**, o como te resulte más cómodo."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l4.p4",
+       "texto": "puntillo y semicorcheas."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "ejercicio",
+     "que": "p-a-m-i, lento, en cuerdas al aire.",
+     "porque": "Empezar pronto el clásico aprovecha tu base flamenca sin mezclarlas.",
+     "atencion": "*a* suele sonar más flojo y *i*, más fuerte. Escucha las tres notas agudas: tienen que ser iguales. Lo primero es la igualdad, no la velocidad.",
+     "empieza": "♩ = 40 en semicorcheas.",
+     "sube": "Tres notas iguales, aunque sea lento. Más adelante vas subiendo muy poco a poco."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "p-a-m-i: quién actúa y cuándo",
+      "trastes": [
+       0,
+       4
+      ],
+      "ms": 850,
+      "notas": [
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       }
+      ],
+      "final": "Cuatro golpes: el pulgar y tres dedos sobre la misma cuerda."
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tremolo.json",
+     "titulo": "Trémolo: primer contacto",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano derecha: tablatura.",
+     "bpms": [
+      40,
+      50
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Las tres notas suenan a galope, con una más larga.",
+       "arreglo": "Di a-m-i en voz alta, muy lento y regular, y baja el tempo."
+      },
+      {
+       "error": "Vuelves al flamenco sin querer.",
+       "arreglo": "Empieza siempre con *p* y *a*: cuatro golpes, no cinco."
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las tres notas agudas suenan iguales.",
+      "El grupo tiene cuatro notas, no cinco.",
+      "No hay tensión en la mano."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t13.l5.p2",
+       "texto": "un poco más deprisa, con bajo alternante."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora mira adónde lleva este camino. *Recuerdos de la Alhambra*, de Tárrega, es la obra de trémolo más conocida de la guitarra. La tocarás en el nivel 5."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Dónde escucharla",
+     "md": "[Buscar *Recuerdos de la Alhambra* en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+Recuerdos+de+la+Alhambra+guitarra)."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Qué oír",
+     "items": [
+      "¿Parece una sola melodía sostenida?",
+      "Fíjate en que el bajo y las notas agudas parecen dos personas distintas.",
+      "¿Oyes alguna nota separada del resto? Una buena interpretación casi no lo deja notar."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Sin prisa",
+     "md": "Es normal sentir que queda lejos. No la intentes ahora: el camino es muy lento, y en este nivel solo quieres tres notas iguales a un tempo cómodo."
+    }
+   ]
+  },
+  "n1.t9.l5.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya tocas la cromática pulsando todas las notas. Ahora, **cada pareja se liga**: la mano derecha solo pulsa la primera de cada dos."
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La cromática con ligados ascendentes de dos notas.",
+     "porque": "Fortalece la mano izquierda y prepara los ligados del tramo siguiente.",
+     "atencion": "Las dos notas tienen que sonar igual. El dedo cae sobre el traste con decisión.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Sale con todos los dedos."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-cromatica-ligados.json",
+     "titulo": "Cromática con ligados",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "Cada arco une dos notas: la primera se pulsa; la segunda, no."
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La nota ligada suena casi tan fuerte como la pulsada.",
+      "La mano no se mueve."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l4.p2",
+       "texto": "los ligados a fondo."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t9.l5.p5": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cuatro pruebas. Nada se bloquea."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "1. Sol mayor en dos octavas",
+     "items": [
+      "Sin cortes, a un tempo cómodo."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "plegado": true,
+     "fuente": "notacion/esc-sol-mayor-1pos.json",
+     "titulo": "Ver la escala",
+     "principal": "tablatura",
+     "motivo": "Para comprobar.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "2. Intervalos",
+     "items": [
+      "Dos preguntas, abajo."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué intervalo hay entre Sol y Si?",
+     "opciones": [
+      "3.ª menor",
+      "3.ª mayor",
+      "4.ª justa"
+     ],
+     "correcta": 1,
+     "porque": "Son tres letras y cuatro semitonos.",
+     "pista": "Cuenta letras y luego semitonos: Sol, La, Si."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Y esto, de oído?",
+     "audio": {
+      "notas": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        7
+       ]
+      ]
+     },
+     "opciones": [
+      "4.ª justa",
+      "5.ª justa",
+      "8.ª"
+     ],
+     "correcta": 1,
+     "porque": "Son siete trastes: 5.ª justa, firme y hueca.",
+     "pista": "Compáralo con los que has oído."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "3. El estudio",
+     "items": [
+      "El *Estudio en Do*, sin parar."
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "4. El trémolo lento",
+     "items": [
+      "Tres notas iguales."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "titulo": "Marca lo que ya te sale",
+     "items": [
+      "Sol mayor en dos octavas.",
+      "El *Estudio en Do* entero.",
+      "El trémolo lento, con tres notas iguales."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l2.p1",
+       "texto": "si falla la escala."
+      },
+      {
+       "paso": "n1.t9.l3.p1",
+       "texto": "si fallan los intervalos."
+      },
+      {
+       "paso": "n1.t9.l5.p2",
+       "texto": "si falla el trémolo."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

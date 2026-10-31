@@ -44,5 +44,6 @@ Las notas de `web/sonidos/guitarra/40.mp3` a `88.mp3` salen de **FluidSynth con 
 - El contenido decide los bloques; la extensión no es un objetivo.
 - Lo que dependa de una partitura o edición sigue *por verificar*.
 - Una animación solo donde enseñe algo.
-- Una obra sin notación en la app enlaza su edición, enseña a trabajarla y usa ejercicios propios, que lo dicen. Ningún compás, nota o digitación suya se da sin comprobar.
+- Las obras de dominio público se transcriben a `contenido/notacion/obra-*.json`, con su fuente en el archivo. Una digitación que no sea de la fuente se dice. Lo no comprobado queda por verificar. Lo protegido no se transcribe: método, escucha y ejercicios propios.
+- En IMSLP, la verificación de persona la hace él una vez en el navegador integrado; después, cada PDF se abre allí, se esperan 15 s y llega a Descargas.
 - El guía es hoy un recuadro (`guia`); el personaje queda para una fase posterior y no cambiará el contenido.
