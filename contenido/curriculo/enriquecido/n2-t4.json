@@ -1,0 +1,742 @@
+{
+ "tramo": "n2.t4",
+ "nota": "Curso 2. La Sonatina se integra por su tema inicial, transcrito a ojo de la primera edición; el resto, en la edición enlazada. La forma se da como marco y lo concreto queda por verificar.",
+ "pasos": {
+  "n2.t4.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Mauro Giuliani en Viena",
+     "md": "Italiano (1781-1829), se instaló en Viena en 1806 y allí fue una estrella: tocó para Beethoven y con el círculo de Hummel. La Viena de Haydn y Mozart seguía viva; en ese mundo cuenta **la proporción**: frases iguales, preguntas y respuestas, armonía sencilla y clara."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "La *Sonatina*",
+     "md": "Es una sonata pequeña, pensada para principiantes: la edición dice «di una facilità progressiva, ad uso di principianti». El opus 71 tiene tres. La primera, en Do, empieza con un «Maestoso»: es el movimiento de este tramo, y lleva después un Minueto."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "El programa de referencia cita el «Maestoso» de la *Sonatina* op. 71 sin decir cuál de las tres. La n.º 1 lleva ese nombre en la edición que hemos consultado, así que aquí se usa esa."
+    }
+   ]
+  },
+  "n2.t4.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Clásico o romántico",
+     "md": "Dos épocas vecinas que piensan distinto. **Clásico** (Haydn, Mozart, Giuliani, Sor): frases cuadradas, equilibrio, poco rubato y dinámica clara. **Romántico** (Tárrega, Coste, Mertz): melodías largas, cromatismos, armonías sorprendentes, rubato. Lo notas en el bajo: clásico, acompaña; romántico, se mueve con la melodía."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "Clásico",
+      "Romántico"
+     ],
+     "filas": [
+      [
+       "**Frases**",
+       "Iguales: 4 + 4",
+       "Largas, se desbordan"
+      ],
+      [
+       "**Armonía**",
+       "I, IV, V",
+       "Más color, más cromatismo"
+      ],
+      [
+       "**Tempo**",
+       "Estable",
+       "Respira"
+      ],
+      [
+       "**Ejemplos**",
+       "Giuliani, Sor",
+       "Tárrega, Coste"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op71-1.json",
+     "titulo": "Fragmento clásico: Giuliani",
+     "principal": "ambas",
+     "motivo": "Escucha su equilibrio.",
+     "bpms": [
+      60,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Fragmento romántico: *Romance*",
+     "principal": "ambas",
+     "motivo": "Escucha el color y el movimiento.",
+     "bpms": [
+      50,
+      66
+     ],
+     "compases": [
+      17,
+      20
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Oyes frases simétricas, bajo sencillo y tempo estricto. ¿Qué época?",
+     "opciones": [
+      "Clásico",
+      "Romántico"
+     ],
+     "correcta": 0,
+     "porque": "Simetría y claridad armónica son lo clásico. Romántico sería más color y más libertad."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l2.p4",
+       "texto": "de qué época es una obra, en la prueba corta."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t4.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "La idea",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Forma sonatina",
+       "md": "Es la sonata en pequeño. Tiene **dos temas en dos tonalidades** y luego vuelve. Lo importante: un tema se presenta en la tónica, otro aparece en otra tonalidad (normalmente la dominante), y al final **los dos vuelven a la tónica**: la tensión de haber salido se resuelve."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Parte",
+        "Qué pasa",
+        "Tonalidad"
+       ],
+       "filas": [
+        [
+         "**Exposición**",
+         "Tema 1; puente; Tema 2",
+         "I; luego V"
+        ],
+        [
+         "**(Desarrollo)**",
+         "Breve o ninguno, en la sonatina",
+         "Se mueve"
+        ],
+        [
+         "**Reexposición**",
+         "Tema 1; Tema 2",
+         "Todo en I"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Por qué",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Los compositores clásicos tenían un problema: ¿cómo hacer una pieza larga sin que aburra? Con un viaje: salir de casa, estar fuera, volver. Por eso **la modulación** es lo que da forma: al oído le importa más dónde está la música que qué nota toca."
+      },
+      {
+       "tipo": "lista",
+       "titulo": "Para qué te sirve",
+       "items": [
+        "Si te pierdes al memorizar, sabes dónde estás: «ya voy por el segundo tema».",
+        "Tocas distinto la vuelta: ya no es sorpresa, es llegada.",
+        "Este mapa vale para Sor, Giuliani y casi todo el Clasicismo."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t4.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Vas a buscar el mapa en la partitura real."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op71-1.json",
+     "titulo": "El tema 1",
+     "principal": "partitura",
+     "motivo": "El objetivo es analizar: partitura.",
+     "bpms": [
+      60,
+      72
+     ],
+     "notas": [
+      "El {c:1-4} es la pregunta y el {c:5-8} repite y responde."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Búscalo en la edición",
+     "items": [
+      "Abre [la primera edición de Mechetti en IMSLP](https://imslp.org/wiki/3_Guitar_Sonatinas,_Op.71_%28Giuliani,_Mauro%29), páginas 2 y 3.",
+      "Busca el primer sitio donde el tema en Do cambia a Sol: el Fa♯ te lo dice.",
+      "Busca el sitio donde vuelve el tema del principio.",
+      "Marca los tres puntos a lápiz."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Falta cotejar con la edición los compases exactos de cada parte; por eso no se dan aquí. La academia solo ha transcrito el tema inicial."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Vuelve el primer tema tras una parte en la dominante. ¿Qué parte es?",
+     "opciones": [
+      "Exposición",
+      "Reexposición",
+      "Coda"
+     ],
+     "correcta": 1,
+     "porque": "Lo que vuelve es la reexposición: la vuelta a casa."
+    }
+   ]
+  },
+  "n2.t4.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "Re mayor con cambio de posición",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Las escalas del Nivel 1 estaban en una zona. Ahora suben dos octavas, y eso obliga a mover la mano. El truco es hacerlo **en un semitono**, donde el traslado se tapa: el mismo dedo se desliza de Fa♯ a Sol."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/esc-re-2oct.json",
+       "titulo": "Re mayor, dos octavas",
+       "principal": "ambas",
+       "motivo": "Técnica y lectura.",
+       "bpms": [
+        50,
+        80
+       ],
+       "notas": [
+        "En el {c:2} el dedo 1 pasa de 1-2 a 1-3: **ese es el cambio**. Después, sustitución al llegar al 7.",
+        "Al bajar, en el {c:3}, igual: el mismo sitio, al revés."
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El cambio, en semitono",
+        "clave": "D",
+        "trastes": [
+         0,
+         11
+        ],
+        "zoom": [
+         1,
+         10
+        ],
+        "ms": 800,
+        "notas": [
+         {
+          "c": 1,
+          "t": 2,
+          "dedo": 1,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 3,
+          "dedo": 1,
+          "mano": "m",
+          "texto": "El dedo 1 se desliza: ya estás en la III."
+         },
+         {
+          "c": 1,
+          "t": 5,
+          "dedo": 3,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 7,
+          "dedo": 4,
+          "mano": "m"
+         }
+        ],
+        "final": "Fa♯ y Sol con el mismo dedo."
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "a-m-i",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Tres dedos",
+       "md": "Hasta ahora, *i-m*. Añadimos *a*: **a-m-i**, de la 3.ª a la 1.ª. Es más difícil, porque *a* es menos independiente; a cambio, permite velocidades que dos dedos no dan. Empieza despacio, sintiendo cómo vuelve cada dedo."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/esc-re-2oct-ami.json",
+       "titulo": "Con a-m-i",
+       "principal": "tablatura",
+       "motivo": "Técnica: la mano derecha debajo.",
+       "bpms": [
+        40,
+        60
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "E-Re mayor dos octavas, primero con *i-m* y después con *a-m-i*.",
+       "porque": "Las escalas del nivel se piden con cambio de posición.",
+       "atencion": "Primero marca el cambio; después, a tempo.",
+       "empieza": "♩ = 50 en corcheas.",
+       "sube": "El cambio no se oye."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "El cambio de posición no se oye.",
+        "*a* suena igual que *i* y *m*."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n2.t5.l2.p1",
+         "texto": "Fa y Si♭ con la misma idea."
+        },
+        {
+         "paso": "n2.t11.l3.p1",
+         "texto": "Fa♯ menor."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t4.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La escala cromática es la que sube de semitono en semitono: **todas** las notas. Sirve para que los cuatro dedos se igualen y para que las dos manos se coordinen. Aquí, dos octavas de La a La."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-cromatica-2oct.json",
+     "titulo": "Cromática de dos octavas",
+     "principal": "tablatura",
+     "motivo": "Técnica: los dedos importan.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Un dedo por traste. Al cambiar de cuerda en la 3.ª y 2.ª, la distancia es distinta: el dedo 2 cae en el traste 1 de la 2.ª."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Sube y baja sin parar en el centro.",
+     "porque": "Es lo que iguala los dedos.",
+     "atencion": "Los dedos que ya han tocado **se quedan** al subir por la misma cuerda; no se levantan.",
+     "empieza": "♩ = 50 en corcheas."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Cada nota dura lo mismo.",
+      "Los dedos no se levantan de más."
+     ]
+    }
+   ]
+  },
+  "n2.t4.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Staccato y legato",
+     "md": "**Legato** es ligado: cada nota toca a la siguiente, sin aire. **Staccato** es lo contrario: nota corta, con un punto encima. En guitarra, una nota no se apaga sola, así que **el staccato se hace callando**: el dedo vuelve a la cuerda justo después, o el dedo izquierdo afloja. No es tocar más fuerte: es tocar más corto."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Signo",
+      "Nombre",
+      "Cómo se toca"
+     ],
+     "filas": [
+      [
+       "·",
+       "Staccato",
+       "Se apaga con el dedo que vuelve"
+      ],
+      [
+       "Arco",
+       "Legato",
+       "Dedos pegados, sin levantar"
+      ],
+      [
+       ">",
+       "Acento",
+       "Con más peso"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Legato (notas enlazadas)",
+       "notas": [
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "duracion": 0.8
+      },
+      {
+       "etiqueta": "Corto, con aire entre notas",
+       "notas": [
+        [
+         2,
+         1
+        ],
+        [],
+        [
+         2,
+         3
+        ],
+        [],
+        [
+         1,
+         0
+        ],
+        [],
+        [
+         1,
+         1
+        ]
+       ],
+       "duracion": 0.28
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Toca Do en 2-1 con *i*.",
+      "Justo después, apoya *i* otra vez sobre la cuerda: se apaga.",
+      "Sigue con Re, igual. Oirás silencios entre notas."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Entre nota y nota se oye un silencio real.",
+      "El sonido no se vuelve seco de más."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t12.l4.p1",
+       "texto": "primera vista con staccato."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t4.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Leer varias notas a la vez",
+     "md": "Dos notas en la misma plica se tocan juntas; se leen **de abajo arriba**. No hace falta nombrar cada nota: se reconoce la forma. Dos notas en líneas vecinas son una tercera; tres notas apiladas, una triada."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-acordes-escritos.json",
+     "titulo": "Acordes escritos",
+     "principal": "partitura",
+     "motivo": "Es lectura: partitura.",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo leer",
+     "items": [
+      "Lee primero la de abajo: es la cuerda más grave.",
+      "Mira la distancia hasta la siguiente: tercera, cuarta, sexta.",
+      "Coloca los dedos de una vez."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Dos notas: una en una línea y la otra en la línea siguiente. ¿Qué intervalo hay?",
+     "opciones": [
+      "Tercera",
+      "Quinta",
+      "Segunda"
+     ],
+     "correcta": 0,
+     "porque": "De línea a línea hay una tercera. De línea a espacio vecino, una segunda."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Colocas los dedos antes de tocar.",
+      "No lees nota a nota."
+     ]
+    }
+   ]
+  },
+  "n2.t4.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ir al IV o al V. El I en casa; el IV se aleja, abierto y con luz; el V tiene tensión, quiere volver. Antes los has cantado por separado; aquí se trata de oír **a dónde va la música**."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "I-IV-I",
+       "acordes": [
+        "Do",
+        "Fa△7",
+        "Do"
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "I-V-I",
+       "acordes": [
+        "Do",
+        "Sol7",
+        "Do"
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Escucha la del medio. Si parece que sube y se abre, es IV; si queda en el aire y pide resolver, V."
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l5.p2",
+       "texto": "oíste el I, el IV y el V por separado."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t4.l6.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-giuliani-sonatina-op-71-i",
+       "md": "**Por qué está aquí:** es la primera sonatina del programa; lo que aprendas de ella sirve para Sor y para todo el Clasicismo. **Qué escuchar:** dos frases iguales que preguntan y responden. **Dificultad:** media, por el pulso firme y los puntillos."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-giuliani-op71-1.json",
+       "titulo": "*Sonatina* op. 71, I: el tema",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura para la parte transcrita.",
+       "bpms": [
+        60,
+        72
+       ],
+       "notas": [
+        "Anacrusa y {c:1}: empieza con un apoyo, como todo este estilo.",
+        "El {c:2} sube a Do y baja a Si: el punto alto, en el tercer tiempo.",
+        "El {c:4} cierra con corchea con puntillo y semicorchea: no los hagas iguales.",
+        "El {c:5-8} repite y responde."
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "El tema está transcrito a ojo de un escaneo antiguo y conviene cotejarlo. El resto del movimiento no está transcrito en la app: se estudia en [la primera edición de Mechetti en IMSLP](https://imslp.org/wiki/3_Guitar_Sonatinas,_Op.71_%28Giuliani,_Mauro%29). Todo lo que dice este paso sobre compases se refiere al tema."
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por partes",
+       "items": [
+        "Solo el bajo, con el metrónomo en blancas: dos pulsos por compás.",
+        "Solo la melodía.",
+        "Juntos, muy lento, sintiendo dos pulsos y no cuatro.",
+        "Sigue en la edición, de frase en frase."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "El tema, y lo que hayas alcanzado de la edición, con el pulso de blanca firme.",
+       "porque": "Es la obra troncal del Clasicismo en este nivel.",
+       "atencion": "Lo que manda es el pulso. Si un compás cuesta, baja el metrónomo; no estires el compás.",
+       "empieza": "Blanca = 48.",
+       "sube": "Blanca = 72."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 96,
+       "clave": "o2-giuliani-sonatina-op-71-i"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Los puntillos salen como dos corcheas.",
+         "arreglo": "Cuenta la semicorchea, «1-e-y-a»; el puntillo llega hasta la «a»."
+        },
+        {
+         "error": "Aceleras en lo fácil.",
+         "arreglo": "Lo clásico se nota enseguida. Graba y escucha contra el metrónomo."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t4.l6.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El carácter clásico",
+     "md": "**Claridad:** cada nota en su sitio, sin difuminar. **Frases iguales:** dos que se responden, con un final que se nota. **Poco rubato:** el pulso aguanta, y lo expresivo se hace con dinámica y articulación. Si al tocar Giuliani te sale como el *Romance*, sobra romanticismo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op71-1.json",
+     "titulo": "Tócalo así",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      72
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Cómo se consigue",
+     "items": [
+      "El final de cada frase se aligera.",
+      "El bajo no pesa; acompaña.",
+      "Las notas largas no llevan vibrato; como mucho, en el punto alto."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Alguien que te oiga marcaría el pulso sin problema."
+     ]
+    }
+   ]
+  },
+  "n2.t4.l6.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación. La obra, y dos preguntas de forma sin mirar atrás."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El movimiento, o lo que lleves de él, a pulso firme."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué tonalidad tiene el segundo tema en una forma sonatina en Do?",
+     "opciones": [
+      "Do",
+      "Sol",
+      "Fa"
+     ],
+     "correcta": 1,
+     "porque": "Sale a la dominante, Sol, y vuelve al final a Do."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué pasa en la reexposición con el segundo tema?",
+     "opciones": [
+      "Vuelve en la tónica",
+      "Sigue en la dominante",
+      "Desaparece"
+     ],
+     "correcta": 0,
+     "porque": "Vuelve en la tónica: todo acaba en casa."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t10.l4.p2",
+       "texto": "la modulación a la dominante en Sor."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

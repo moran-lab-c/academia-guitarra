@@ -1,0 +1,944 @@
+{
+ "tramo": "n3.t1",
+ "nota": "Curso 3. Sor op. 35 n.º 22 sale de Mutopia. Las tres voces de la fuente se dibujan en dos: la melodía es la primera corchea de cada grupo. Dedos de la app, propuesta.",
+ "pasos": {
+  "n3.t1.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o2-anonimo-romance",
+     "md": "Empieza por lo que ya tienes."
+    },
+    {
+     "tipo": "texto",
+     "md": "Toca el *Romance*, sin calentar y de memoria si puedes. La foto de cómo llegas al Nivel 3: ¿sigue saliendo la melodía sola? ¿Las dos cejillas están en su sitio?"
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Por si hace falta",
+     "principal": "ambas",
+     "bpms": [
+      48,
+      72
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Lo acabas.",
+      "La melodía se canta."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t3.l5.p2",
+       "texto": "donde lo cerraste."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El nivel anterior te dejó en la VII. Aquí todo sigue, otro escalón."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Área",
+      "Al terminar el nivel"
+     ],
+     "filas": [
+      [
+       "**Mano izquierda**",
+       "Posiciones hasta la IX, tres voces, trino medido"
+      ],
+      [
+       "**Mano derecha**",
+       "Tres planos de sonido; las primeras ráfagas de velocidad; rasgueado barroco"
+      ],
+      [
+       "**Recursos**",
+       "Armónicos octavados, tambora, portamento"
+      ],
+      [
+       "**Lectura**",
+       "Posición VII, doce compases a primera vista"
+      ],
+      [
+       "**Teoría y armonía**",
+       "Dominantes secundarias, modular, notas de adorno, modos a vista de pájaro"
+      ],
+      [
+       "**Oído**",
+       "Las 2.ª, cadencias perfecta e imperfecta, séptima disminuida y una voz de dos"
+      ],
+      [
+       "**Obras**",
+       "De Bach a Lauro; un recital grabado sin cortes, con dos de memoria"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Guía",
+     "md": "La **velocidad** empieza aquí, con ráfagas cortas: no se empuja, se construye. Empezamos con Sor."
+    }
+   ]
+  },
+  "n3.t1.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Si menor con cambio de posición ya la viste. Aquí, las dos formas seguidas: armónica para el acorde, melódica para cantar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-si-menor-2oct.json",
+     "titulo": "Si menor, armónica",
+     "principal": "ambas",
+     "motivo": "Escala.",
+     "bpms": [
+      60,
+      88
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Forma",
+      "Al subir",
+      "Al bajar"
+     ],
+     "filas": [
+      [
+       "**Natural**",
+       "Sol, La",
+       "Sol, La"
+      ],
+      [
+       "**Armónica**",
+       "Sol, **La♯**",
+       "La♯, Sol"
+      ],
+      [
+       "**Melódica**",
+       "**Sol♯, La♯**",
+       "La, Sol"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Armónica: el salto entre 6.º y 7.º",
+       "notas": [
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         6
+        ],
+        [
+         1,
+         7
+        ]
+       ],
+       "duracion": 0.6
+      },
+      {
+       "etiqueta": "Melódica: la subida lisa",
+       "notas": [
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         6
+        ],
+        [
+         1,
+         7
+        ]
+       ],
+       "duracion": 0.6
+      }
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Las dos formas, sin parar entre ellas.",
+     "porque": "Es la tonalidad de la obra.",
+     "atencion": "El Sol y el La deciden qué forma es. Di en voz alta la que toca.",
+     "empieza": "♩ = 60.",
+     "sube": "♩ = 80."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t10.l1.p1",
+       "texto": "Si menor con cambio."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dos sostenidos, en menor",
+     "md": "Si la armadura trae Fa♯ y Do♯ pueden ser dos cosas: **Re mayor** o **Si menor**. Mira dos sitios: la última nota del bajo, y si aparece un **La♯** por el camino (la sensible de Si)."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-si-menor.json",
+     "titulo": "Una línea para leer",
+     "principal": "partitura",
+     "motivo": "Es lectura.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "{c:1-2} sube por Si menor.",
+      "{c:5} el Re se ve arriba y aún no es Re mayor: mira cómo acaba.",
+      "{c:8} Si: aquí está la respuesta."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Dos sostenidos, abundan los La♯, final en Si. ¿Tonalidad?",
+     "opciones": [
+      "Re mayor",
+      "Si menor",
+      "Sol mayor"
+     ],
+     "correcta": 1,
+     "porque": "La♯ es la sensible de Si, y acaba ahí."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Lees sin la tablatura."
+     ]
+    }
+   ]
+  },
+  "n3.t1.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El gesto del *Romance* sobre otra mano izquierda. Aquí la cejilla no se suelta nunca: toda la mano en su sitio y *a* cantando encima. Lo nuevo es sostener: la presión debe durar más."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-melodia-a-cejilla.json",
+     "titulo": "Melodía en *a*, con cejilla",
+     "principal": "ambas",
+     "motivo": "Se ve la cejilla y la melodía.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "{c:1} Si m en la cejilla II. *a* toca la 1.ª.",
+      "{c:2} Fa♯7: la mano no se mueve; el dedo 2 viaja."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "acorde",
+      "titulo": "Si menor con cejilla en el II",
+      "acorde": "Si m (cejilla II)",
+      "clave": "D"
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Los cuatro compases, con la melodía arriba.",
+     "porque": "Prepara el estudio.",
+     "atencion": "Peso del brazo; el pulgar no se agarra.",
+     "empieza": "♩ = 50.",
+     "sube": "♩ = 66."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t2.l2.p2",
+       "texto": "la melodía en *a*."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora en la obra: el arpegio va a la vez que la melodía **pero más grave**, y la melodía sigue siendo la nota de arriba. Es la misma técnica que el *Romance* con otra forma: aquí son corcheas, no tresillos, y el bajo es largo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op35-22.json",
+     "titulo": "La melodía sobre el arpegio",
+     "principal": "ambas",
+     "motivo": "Dos voces.",
+     "bpms": [
+      50,
+      76
+     ],
+     "notas": [
+      "Cada compás son seis corcheas. La primera de cada dos tiempos es la melodía.",
+      "La nota de bajo dura todo el compás."
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Prepara",
+     "items": [
+      "Solo el bajo y la primera corchea de cada grupo.",
+      "Añade el resto en voz baja.",
+      "Pon peso solo en la nota de melodía."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La melodía se oye larga, aunque el arpegio se mueva."
+     ]
+    }
+   ]
+  },
+  "n3.t1.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Soltar sin soltar",
+     "md": "En una cejilla larga no aprietes todo el rato. **Afloja un poco en cada cambio de acorde**, sin separar el dedo de la cuerda. Respira la mano. Si cuesta, hazlo notar: aprieta en el 1 y suelta en el 3."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo del profesor",
+     "md": "Una cejilla larga bien tocada dura más cuanto menos pesa. Si te duele al minuto, es que no estás usando el peso."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Aguantas un minuto sin dolor, y las cuerdas siguen sonando."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t1.l2.p3",
+       "texto": "la cejilla que respira."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Sor, a través de Segovia",
+     "md": "Fernando Sor (1778-1839) está contigo desde el Nivel 1. El *op. 35* son estudios a medida de sus alumnos. **Andrés Segovia** eligió veinte estudios de Sor para una selección que acabó siendo clásica, y este suele contarse entre ellos, lo que explica que sea tan conocido."
+    },
+    {
+     "tipo": "texto",
+     "md": "Es un *Allegretto* en Si menor, pero lo importante es la melodía: dos notas largas por compás sobre una textura muy igual. El reto es sonar a una sola voz."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "La pertenencia a la selección de Segovia se cita por consenso; falta contrastar la lista exacta con la edición."
+    }
+   ]
+  },
+  "n3.t1.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-sor-op-35-n-22",
+       "md": "**Por qué está aquí:** arpegio con melodía, a un nivel más alto. **Qué escuchar:** dos largas por compás. **Dificultad:** media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sor-op35-22.json",
+       "titulo": "Sor, op. 35 n.º 22",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        50,
+        88
+       ],
+       "notas": [
+        "{c:1-16} primera parte: Si menor y su relativo.",
+        "{c:17-24} segunda: ahí empieza Re.",
+        "{c:25-32} se va hacia colores más oscuros.",
+        "{c:33-48} vuelve, y cierra.",
+        "Fuente: Mutopia, sobre Simrock. Tres voces en dos: la melodía es la primera nota de cada grupo. Dedos propuestos."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Por frases de cuatro compases. Primero el bajo; luego la melodía; luego todo.",
+       "porque": "Es un estudio de cantar sobre arpegio.",
+       "atencion": "Primero la melodía suelta, con *a* o con *m*, y con los dedos que pisarás luego.",
+       "empieza": "♩ = 50.",
+       "sube": "♩ = 88."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-sor-op-35-n-22"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Todo suena igual.",
+         "arreglo": "Baja el volumen del arpegio; no subas el de la melodía."
+        },
+        {
+         "error": "Se corta el bajo.",
+         "arreglo": "El dedo que pisa el bajo se queda, aunque moleste."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "¿Por qué la misma cuerda?",
+     "md": "Una melodía puede ir por varias cuerdas. Si la dejas en **una sola**, el color no cambia, y parece una voz. Si cambias de cuerda, hay un salto de color. Por eso, a veces merece la pena subir de posición: **para seguir en la misma cuerda**."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La nota en la 2.ª",
+       "notas": [
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "La misma, en la 3.ª",
+       "notas": [
+        [
+         3,
+         7
+        ]
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "La misma, en la 4.ª",
+       "notas": [
+        [
+         4,
+         12
+        ]
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Una melodía de tres notas va por la 1.ª. La tercera se puede tocar en la 2.ª o subiendo en la 1.ª. ¿Qué mantiene el color?",
+     "opciones": [
+      "Subir en la 1.ª",
+      "Pasar a la 2.ª"
+     ],
+     "correcta": 0,
+     "porque": "Misma cuerda, mismo color."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Digitación de la app: propuesta. La edición puede indicar otras posiciones; la razón es la misma."
+    }
+   ]
+  },
+  "n3.t1.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "**Estudia sin guitarra.** Lee la partitura sentado, canta la melodía, mira dónde cambian los acordes y dónde va a costar. Lo que aprendes así no se gasta, y no te cansa la mano."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Mira la partitura, sin tocar: ¿dónde está la frase? ¿Dónde el punto alto?",
+      "Canta la melodía.",
+      "Di los acordes.",
+      "Imagina la digitación, compás a compás.",
+      "Ahora, toca."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo del profesor",
+     "md": "Diez minutos sin guitarra rinden como media hora con ella. Sobre todo al memorizar."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes cantar la melodía sin ayuda."
+     ]
+    }
+   ]
+  },
+  "n3.t1.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Pregunta y respuesta",
+     "md": "Una **frase antecedente** deja algo en el aire: termina en el V o en otra cosa que no reposa. La **consecuente** responde y cierra en el I. Es lo mismo que hablar: «¿Quieres…?» «Sí, gracias». Y casi siempre son dos frases del mismo tamaño."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Frase",
+      "Empieza",
+      "Acaba",
+      "Efecto"
+     ],
+     "filas": [
+      [
+       "**Antecedente**",
+       "En I",
+       "En V",
+       "Pregunta"
+      ],
+      [
+       "**Consecuente**",
+       "En I",
+       "En I",
+       "Respuesta"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Lo conoces: *Romance*",
+     "principal": "partitura",
+     "bpms": [
+      48
+     ],
+     "notas": [
+      "{c:1-8} antecedente: no reposa.",
+      "{c:9-16} consecuente: acaba en Mi menor."
+     ],
+     "compases": [
+      1,
+      16
+     ]
+    }
+   ]
+  },
+  "n3.t1.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Busca el par en el estudio, escuchando. No hace falta ser exacto: ¿dónde queda en el aire y dónde responde?"
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op35-22.json",
+     "titulo": "Las frases",
+     "principal": "partitura",
+     "motivo": "Análisis.",
+     "bpms": [
+      60,
+      88
+     ],
+     "notas": [
+      "{c:1-8} primera frase.",
+      "{c:9-16} segunda.",
+      "Mira cómo acaban: {c:8} y {c:16}."
+     ],
+     "compases": [
+      1,
+      16
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "La frase acaba en Fa♯ con La♯ (el V de Si m). ¿Qué es?",
+     "opciones": [
+      "Antecedente",
+      "Consecuente"
+     ],
+     "correcta": 0,
+     "porque": "Queda abierta."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "La siguiente termina en Si. ¿Qué es?",
+     "opciones": [
+      "Antecedente",
+      "Consecuente"
+     ],
+     "correcta": 1,
+     "porque": "Cierra en la tónica."
+    }
+   ]
+  },
+  "n3.t1.l6.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Las segundas",
+     "md": "La 2.ª mayor son **dos semitonos** (Do–Re). La 2.ª menor, **uno** (Mi–Fa). A la vez, la 2.ª menor es la más disonante que hay. Hay un truco clásico: 2.ª menor = *Tiburón*; 2.ª mayor = el principio de *Cumpleaños feliz*."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "2.ª mayor",
+       "notas": [
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 0.8
+      },
+      {
+       "etiqueta": "2.ª menor",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "duracion": 0.8
+      },
+      {
+       "etiqueta": "2.ª mayor, a la vez",
+       "notas": [
+        [
+         [
+          2,
+          1
+         ],
+         [
+          3,
+          5
+         ]
+        ]
+       ],
+       "duracion": 1.4
+      },
+      {
+       "etiqueta": "2.ª menor, a la vez",
+       "notas": [
+        [
+         [
+          1,
+          0
+         ],
+         [
+          2,
+          6
+         ]
+        ]
+       ],
+       "duracion": 1.4
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    }
+   ]
+  },
+  "n3.t1.l6.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Perfecta o imperfecta",
+     "md": "Las dos son V-I y se oyen en cierre. La **perfecta** acaba con los dos en fundamental y con la tónica arriba: es un punto final. La **imperfecta** tiene el mismo acorde, pero otra nota arriba: es un punto y coma."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Perfecta: acaba en Do",
+       "notas": [
+        [
+         [
+          6,
+          3
+         ],
+         [
+          4,
+          0
+         ],
+         [
+          3,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          5,
+          3
+         ],
+         [
+          4,
+          2
+         ],
+         [
+          3,
+          0
+         ],
+         [
+          2,
+          1
+         ]
+        ]
+       ],
+       "duracion": 1.2
+      },
+      {
+       "etiqueta": "Imperfecta: acaba en Mi",
+       "notas": [
+        [
+         [
+          6,
+          3
+         ],
+         [
+          4,
+          0
+         ],
+         [
+          3,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ],
+        [
+         [
+          5,
+          3
+         ],
+         [
+          4,
+          2
+         ],
+         [
+          3,
+          0
+         ],
+         [
+          1,
+          0
+         ]
+        ]
+       ],
+       "duracion": 1.2
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Oyes el final con la tónica arriba, con reposo total. ¿Qué es?",
+     "opciones": [
+      "Perfecta",
+      "Imperfecta"
+     ],
+     "correcta": 0,
+     "porque": "Tónica arriba y bajo en la fundamental.",
+     "audio": {
+      "notas": [
+       [
+        2,
+        1
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Oyes que el acorde es el I, pero queda un poco abierto.",
+     "opciones": [
+      "Perfecta",
+      "Imperfecta"
+     ],
+     "correcta": 1,
+     "porque": "El I, sin tónica arriba.",
+     "audio": {
+      "notas": [
+       [
+        1,
+        0
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l6.p4",
+       "texto": "conclusiva o suspensiva."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l7.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El trémolo con bajo que cambia, del Tramo 8 del Nivel 2, ahora con cejilla. Doble trabajo: la izquierda sostiene mientras la derecha no para. **Lento**: se trata de que no se tuerza."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tremolo-cejilla.json",
+     "titulo": "Trémolo en el II y en el V",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      56
+     ],
+     "notas": [
+      "{c:1-2} Si m y Fa♯ m, cejilla II.",
+      "{c:3-4} La y Re m, cejilla V."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Los cuatro compases, sin soltar la cejilla.",
+     "porque": "Es la entrada al trémolo sobre progresión.",
+     "atencion": "El antebrazo izquierdo suelto. Si duele, para.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t8.l1.p1",
+       "texto": "el trémolo con bajo que cambia."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t1.l7.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación del tramo: el estudio entero y dos preguntas sobre las cadencias que acabas de oír. Recuerda: la perfecta cierra con la tónica arriba; la imperfecta deja otra nota arriba."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op35-22.json",
+     "titulo": "El estudio",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      88
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Termina con tónica arriba y bajo en la fundamental:",
+     "opciones": [
+      "Perfecta",
+      "Imperfecta"
+     ],
+     "correcta": 0,
+     "porque": "Punto final."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Termina sin tónica arriba:",
+     "opciones": [
+      "Perfecta",
+      "Imperfecta"
+     ],
+     "correcta": 1,
+     "porque": "Punto y coma."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El estudio, con la melodía por encima.",
+      "Sabes las dos cadencias."
+     ]
+    }
+   ]
+  }
+ }
+}

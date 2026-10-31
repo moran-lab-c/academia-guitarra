@@ -1,0 +1,1245 @@
+{
+ "tramo": "n2.t2",
+ "nota": "Curso 2. El Romance es de autor discutido y aquí sale de Mutopia. La digitación y las cejillas son propuesta; la mano derecha a-m-i y los tresillos, de la tradición de la obra.",
+ "pasos": {
+  "n2.t2.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué es",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "El tresillo",
+       "md": "Hasta ahora, cada pulso se partía en dos (corcheas) o en cuatro (semicorcheas). **El tresillo lo parte en tres**: tres notas iguales en el sitio de dos, con un 3 encima. Cuenta «**tre-si-llo**» en cada pulso. Suena redondo, como un balanceo, y es lo que mueve todo el *Romance*."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ritmo",
+        "titulo": "Un pulso en tres",
+        "tiempos": 3,
+        "por": 420,
+        "figuras": [
+         {
+          "d": 1,
+          "nota": [
+           5,
+           0
+          ],
+          "etiqueta": "tre",
+          "fuerte": true,
+          "nombre": "La primera cae en el pulso."
+         },
+         {
+          "d": 1,
+          "nota": [
+           3,
+           0
+          ],
+          "etiqueta": "si",
+          "nombre": "La segunda."
+         },
+         {
+          "d": 1,
+          "nota": [
+           2,
+           0
+          ],
+          "etiqueta": "llo",
+          "nombre": "La tercera: y el pulso siguiente."
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/rit-tresillo.json",
+       "titulo": "Del pulso al tresillo",
+       "principal": "ambas",
+       "motivo": "Hay que ver el 3 y las notas dentro de cada pulso.",
+       "bpms": [
+        50,
+        66
+       ],
+       "notas": [
+        "En el {c:1} cuatro negras: el pulso limpio.",
+        "En el {c:2}, tresillos en cada pulso.",
+        "En el {c:3-4} se mezclan corcheas y tresillos: lo difícil es no correr al cambiar."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Sin guitarra y con ella",
+       "items": [
+        "Da palmas con el metrónomo y di «tre-si-llo» en cada golpe.",
+        "Toca el {c:1-2}, cambiando de negras a tresillos sin que el pulso se mueva.",
+        "Toca el {c:3-4}: corcheas y tresillos, sin correr."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "El tresillo suena como «corchea, corchea, corchea» y llega tarde.",
+         "arreglo": "Las tres tienen que caber en el pulso. Di «tre-si-llo» antes de tocar."
+        },
+        {
+         "error": "Al pasar de tresillos a corcheas aceleras.",
+         "arreglo": "Cuenta en voz alta el cambio; ahí se nota."
+        }
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Tresillos y corcheas mezclados, sin acelerar.",
+        "El primer «tre» cae exactamente en el golpe."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t12.l2.p1",
+         "texto": "el 6/8, también de tres en tres, pero con otro pulso."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La melodía en a",
+     "md": "En *Lágrima* la melodía iba arriba, con *m* o con *a*. Ahora la melodía **es el arpegio**: *a* toca la nota alta y *m-i* acompañan sin dejar de moverse. Lo que hace que se oiga la melodía es solo esto: *a* pesa más."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Dedo",
+      "Qué toca",
+      "Cómo suena"
+     ],
+     "filas": [
+      [
+       "***a***",
+       "La melodía, en la 1.ª",
+       "Con peso: un poco de apoyo, sin gritar"
+      ],
+      [
+       "***m***",
+       "La 2.ª",
+       "Suave, por debajo"
+      ],
+      [
+       "***i***",
+       "La 3.ª",
+       "Suave, por debajo"
+      ],
+      [
+       "***p***",
+       "El bajo",
+       "Lleno y corto; suena mientras tanto"
+      ]
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "manoDerecha",
+      "titulo": "a, m, i: la primera nota destaca",
+      "acorde": "Mi m",
+      "clave": "G",
+      "veces": 2,
+      "ms": 480,
+      "cuerdas": [
+       {
+        "c": 1,
+        "mano": "a"
+       },
+       {
+        "c": 2,
+        "mano": "m"
+       },
+       {
+        "c": 3,
+        "mano": "i"
+       },
+       {
+        "c": 1,
+        "mano": "a"
+       },
+       {
+        "c": 2,
+        "mano": "m"
+       },
+       {
+        "c": 3,
+        "mano": "i"
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Prepara los tres dedos sobre sus cuerdas, sin tocar.",
+      "Pulsa *a* con intención y deja que caigan *m* e *i* casi solos.",
+      "Vuelve a preparar. Entre grupo y grupo la mano no se levanta."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Se oyen tres notas iguales.",
+       "arreglo": "Toca solo *a* más fuerte, con *m* e *i* apenas rozando. Después acércalos."
+      },
+      {
+       "error": "El acompañamiento se atropella.",
+       "arreglo": "*i* llega demasiado pronto. Baja el tempo y escucha los tres iguales en tiempo, no en volumen."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Antes de la obra, el mismo gesto sobre dos acordes. La melodía es lo que escribe la primera nota de cada tresillo: canta esas notas antes de tocar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-melodia-a.json",
+     "titulo": "Melodía en *a* con tresillos",
+     "principal": "ambas",
+     "motivo": "Técnica de mano derecha, y además se ve qué nota canta.",
+     "bpms": [
+      40,
+      50
+     ],
+     "notas": [
+      "Cada tresillo empieza con *a*; el bajo entra con *a* en el primer tiempo, una sola vez.",
+      "En el {c:2} la melodía baja, Si, La, Sol, sin que el acompañamiento se mueva.",
+      "En el {c:3} cambia el acorde: el bajo y la 3.ª se mueven; la mano derecha sigue igual."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Tocar los cuatro compases con la melodía destacada.",
+     "porque": "Es la técnica que el nivel pide dominar: melodía en *a* sobre tresillos, clara y a tempo estable.",
+     "atencion": "La *a* fuerte, el resto piano. Si no se canta sola, baja el volumen del acompañamiento, no subas el de *a*.",
+     "empieza": "♩ = 40.",
+     "sube": "♩ = 50 y la melodía se canta sola."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sin mirar la partitura, alguien podría cantar la melodía.",
+      "El pulso no se tuerce al cambiar de acorde."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t1.l4.p2",
+       "texto": "las fórmulas de Carlevaro te lo prepararon."
+      },
+      {
+       "paso": "n2.t2.l3.p3",
+       "texto": "esta técnica, ya en la obra."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Una pieza sin autor seguro",
+     "md": "Se conoce como *Romance anónimo*, *Romance de amor* o *Juegos prohibidos*, porque sale en esa película de 1952, tocada por Narciso Yepes. Se ha atribuido a varios guitarristas, entre ellos Antonio Rubira y Yepes, pero **nadie lo ha demostrado**: lo que hay es tradición oral y varias versiones. Por eso esta academia dice «anónimo, siglo XIX» y no da un nombre."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Lo que sí sabemos",
+     "items": [
+      "Es una melodía con arpegio en tresillos, con estructura de dos partes: una en menor y otra en mayor.",
+      "Es de las primeras «grandes» obras con las que se estudia la cejilla.",
+      "Las ediciones difieren en detalles: esta es la de Mutopia, según manuscrito, y puede no coincidir nota a nota con la que tengas."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Falta una fuente documental firme para datar la pieza. Fechas y atribuciones concretas no se dan aquí como dato."
+    }
+   ]
+  },
+  "n2.t2.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Escucha antes de tocar. Busca tres intérpretes distintos y fíjate en tres cosas: **cómo de lento** empieza cada uno, **cuánto destaca** la melodía y **qué hacen** con el paso a la parte en Mayor."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Búscalos",
+     "items": [
+      "[Narciso Yepes](https://www.youtube.com/results?search_query=Narciso+Yepes+Romance), la versión que lo hizo famoso.",
+      "[Julian Bream](https://www.youtube.com/results?search_query=Julian+Bream+Romance+anonimo), con otro color.",
+      "[Ana Vidović](https://www.youtube.com/results?search_query=Ana+Vidovic+Romance+guitar), con un sonido actual."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Esta es la melodía de la primera frase",
+       "notas": [
+        [
+         1,
+         7
+        ],
+        [
+         1,
+         7
+        ],
+        [
+         1,
+         7
+        ],
+        [
+         1,
+         7
+        ],
+        [
+         1,
+         5
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.6
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "La app reproduce las notas con muestras de guitarra para que las tengas en el oído; no es una interpretación. Para el carácter, escucha a músicos."
+    }
+   ]
+  },
+  "n2.t2.l3.p3": {
+   "pantallas": [
+    {
+     "titulo": "Primera frase",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-anonimo-romance",
+       "md": "**Por qué está aquí:** es la primera obra troncal del nivel. Reúne melodía en *a*, tresillos y cejilla. **Qué escuchar:** una melodía larga que flota sobre un movimiento continuo. **Dificultad:** alcanzable, si la mano derecha no aprieta."
+      },
+      {
+       "tipo": "texto",
+       "md": "La tablatura es la principal aquí porque el objetivo es la mano; pulsa Partitura o Ambas si prefieres leer. Trabaja de ocho en ocho compases: esta es **la primera frase**."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-romance.json",
+       "titulo": "*Romance*: primera frase",
+       "principal": "tablatura",
+       "motivo": "Para tocar: la tablatura enseña la cuerda y el dedo.",
+       "bpms": [
+        48,
+        66
+       ],
+       "notas": [
+        "Los {c:1-2} son una misma idea: Si, Si, Si, Si, La, Sol.",
+        "Fíjate en el {c:4}: tras bajar hasta Mi, la melodía sube Mi-Sol-Si: un salto de más de una octava entre el {c:4} y el {c:5}.",
+        "Del {c:5} al {c:6} la melodía está en el traste 12: la mano sube sin dejar de tocar el arpegio.",
+        "El {c:7} es tu primera cejilla: el V. Va en la lección siguiente."
+       ],
+       "compases": [
+        1,
+        8
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por capas",
+       "items": [
+        "Solo la melodía: la primera nota de cada tresillo, con *a*.",
+        "El tresillo sin melodía destacada, con la mano izquierda ya colocada.",
+        "Las dos cosas, con *a* destacando.",
+        "Añade el bajo al principio de cada compás."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Primera frase, compases 1 a 8, con la melodía por encima.",
+       "porque": "Es lo mismo que la pieza entera te pedirá durante dos tramos.",
+       "atencion": "Los saltos: no bajes la mirada. Mira el traste de llegada **antes** de soltar.",
+       "empieza": "♩ = 48.",
+       "sube": "Tres pasadas limpias."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 48,
+       "clave": "o2-anonimo-romance"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Al subir al traste 12 se corta el sonido.",
+         "arreglo": "Suelta y llega durante la última nota del tresillo; el aire de la 2.ª y la 3.ª te da tiempo."
+        },
+        {
+         "error": "La melodía se oye a golpes.",
+         "arreglo": "Canta la melodía sola, ligada, y busca esa línea al tocar."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Segunda frase",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-romance.json",
+       "titulo": "*Romance*: segunda frase",
+       "principal": "tablatura",
+       "motivo": "Sigue con la tablatura.",
+       "bpms": [
+        48,
+        66
+       ],
+       "notas": [
+        "El {c:9-10} es Si7 con cejilla en el VII: Si en la 6.ª cuerda, melodía en la 1.ª. Es un salto grande de mano.",
+        "Del {c:11-12} se vuelve a Mi menor, igual que al principio."
+       ],
+       "compases": [
+        9,
+        16
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "La frase respira: el final del {c:15-16} suena a llegada."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l4.p1": {
+   "pantallas": [
+    {
+     "titulo": "La idea",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Leer por posiciones",
+       "md": "Una **posición** es el traste donde pones el dedo 1. En la posición II, el dedo 1 va al traste 2, el 2 al 3, el 3 al 4 y el 4 al 5: un dedo por traste, sin mover la mano. Ventaja: nuevas notas sin saltos, y la tonalidad de Re y de La se tocan casi sin notas al aire."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "recorrido",
+        "titulo": "La posición II: un dedo por traste",
+        "clave": "D",
+        "trastes": [
+         0,
+         6
+        ],
+        "ms": 900,
+        "notas": [
+         {
+          "c": 4,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "c": 4,
+          "t": 4,
+          "dedo": 3
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "c": 3,
+          "t": 4,
+          "dedo": 3
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 2
+         },
+         {
+          "c": 2,
+          "t": 5,
+          "dedo": 4
+         },
+         {
+          "c": 1,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "c": 1,
+          "t": 3,
+          "dedo": 2
+         },
+         {
+          "c": 1,
+          "t": 5,
+          "dedo": 4
+         }
+        ],
+        "final": "Mira que la mano no se mueve."
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Leer",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Antes de tocar, di el nombre de las notas. Una ayuda: en esta posición, **lo que se leía con el aire ahora se pisa**. El Mi agudo, por ejemplo, ya no es la 1.ª al aire sino la 2.ª en el traste 5."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/lec-pos2.json",
+       "titulo": "Líneas en la posición II",
+       "principal": "partitura",
+       "motivo": "Es lectura: partitura, y la tablatura solo para comprobar.",
+       "bpms": [
+        50,
+        72
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "En la posición II, ¿qué dedo pisa el traste 4?",
+       "opciones": [
+        "El 2",
+        "El 3",
+        "El 4"
+       ],
+       "correcta": 1,
+       "porque": "El 1 va al traste 2, el 2 al 3 y el 3 al 4."
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Lees sin mirar la mano.",
+        "El brazo no se mueve durante el ejercicio."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Lo mismo vale para el mástil. Ya conoces la primera posición; ahora, hasta el traste 5 en todas las cuerdas. Un truco: el traste 5 de cada cuerda da la cuerda al aire siguiente, salvo entre la 3.ª y la 2.ª, donde es el 4."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Encuentra todos los **La** hasta el traste 5.",
+     "conjunto": [
+      "La"
+     ],
+     "clave": "C",
+     "hastaTraste": 5,
+     "final": "6.ª en el 5, 5.ª al aire, 3.ª en el 2 y 1.ª en el 5."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Encuentra todos los **Re**.",
+     "conjunto": [
+      "Re"
+     ],
+     "clave": "C",
+     "hastaTraste": 5,
+     "final": "5.ª en el 5, 4.ª al aire, 2.ª en el 3."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Encuentra todos los **Si**.",
+     "conjunto": [
+      "Si"
+     ],
+     "clave": "C",
+     "hastaTraste": 5,
+     "final": "5.ª en el 2, 3.ª en el 4 y 2.ª al aire."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t13.l2.p2",
+       "texto": "las notas de la 1.ª posición."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "El círculo",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "De quinta en quinta",
+       "md": "Empieza en Do mayor, sin alteraciones. Sube una quinta: Sol, **un sostenido**. Otra: Re, **dos**. Otra: La, **tres**. Y Mi, **cuatro**. Hacia el otro lado, cada quinta que bajas añade un bemol: Fa, **un bemol**; Si♭, **dos**; Mi♭, **tres**. Dibujado, cierra un círculo: es **el círculo de quintas**, el mapa de todas las tonalidades."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Mayor",
+        "Armadura",
+        "Menor relativa"
+       ],
+       "filas": [
+        [
+         "**Do**",
+         "Nada",
+         "La m"
+        ],
+        [
+         "**Sol**",
+         "1♯: Fa",
+         "Mi m"
+        ],
+        [
+         "**Re**",
+         "2♯: Fa, Do",
+         "Si m"
+        ],
+        [
+         "**La**",
+         "3♯: Fa, Do, Sol",
+         "Fa♯ m"
+        ],
+        [
+         "**Mi**",
+         "4♯: Fa, Do, Sol, Re",
+         "Do♯ m"
+        ],
+        [
+         "**Si**",
+         "5♯",
+         "Sol♯ m"
+        ],
+        [
+         "**Fa**",
+         "1♭: Si",
+         "Re m"
+        ],
+        [
+         "**Si♭**",
+         "2♭: Si, Mi",
+         "Sol m"
+        ],
+        [
+         "**Mi♭**",
+         "3♭: Si, Mi, La",
+         "Do m"
+        ],
+        [
+         "**La♭**",
+         "4♭",
+         "Fa m"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Por qué funciona",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "El sostenido nuevo siempre es **la nota anterior a la tónica**: en Sol, Fa♯; en Re, Do♯. Y la tónica de los bemoles es **el penúltimo bemol**: con Si♭ y Mi♭ estás en Si♭. La escala se construye con el mismo patrón que ya sabes, tono-tono-semitono-tono-tono-tono-semitono: cada tonalidad necesita un retoque más que la anterior."
+      },
+      {
+       "tipo": "grados",
+       "clave": "D",
+       "marcar": [
+        1,
+        3,
+        5
+       ],
+       "nombre": "Re mayor",
+       "titulo": "Re: dos sostenidos, Fa♯ y Do♯"
+      },
+      {
+       "tipo": "lista",
+       "titulo": "Dónde lo usarás",
+       "items": [
+        "Sabes en qué tonalidad estás con solo mirar la armadura.",
+        "Sabes qué acordes vecinos son: los que están al lado en el círculo son IV y V.",
+        "El Mi menor del *Romance* es la relativa de Sol: un sostenido."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Compruébalo. Recuerda: el último sostenido es un semitono bajo la tónica mayor; el penúltimo bemol es la tónica."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Una armadura con tres sostenidos. ¿Qué mayor es?",
+     "opciones": [
+      "Sol",
+      "Re",
+      "La"
+     ],
+     "correcta": 2,
+     "porque": "Do♯ no: Fa, Do y Sol sostenidos. El último es Sol♯; un semitono arriba, La."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Una armadura con dos bemoles. ¿Qué mayor es?",
+     "opciones": [
+      "Fa",
+      "Si♭",
+      "Mi♭"
+     ],
+     "correcta": 1,
+     "porque": "Bemoles: Si y Mi. El penúltimo es Si♭."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cuál es la relativa menor de Re mayor?",
+     "opciones": [
+      "Si m",
+      "Re m",
+      "Sol m"
+     ],
+     "correcta": 0,
+     "porque": "Dos sostenidos también: Si menor. La relativa está tres semitonos abajo."
+    },
+    {
+     "tipo": "ordenar",
+     "enunciado": "Ordena de menos a más sostenidos.",
+     "items": [
+      "Do",
+      "Sol",
+      "Re",
+      "La",
+      "Mi"
+     ],
+     "barajadas": [
+      2,
+      0,
+      4,
+      1,
+      3
+     ],
+     "final": "Cada uno, una quinta por encima del anterior."
+    },
+    {
+     "tipo": "completar",
+     "enunciado": "Completa la vuelta de los bemoles: ",
+     "partes": [
+      "Do → Fa (1♭) → ",
+      {
+       "correcta": "Si♭",
+       "opciones": [
+        "Si♭",
+        "Sol",
+        "La"
+       ]
+      },
+      " (2♭) → ",
+      {
+       "correcta": "Mi♭",
+       "opciones": [
+        "Mi♭",
+        "Re",
+        "Do"
+       ]
+      },
+      " (3♭)"
+     ],
+     "final": "Cada paso baja una quinta."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l2.p3",
+       "texto": "las armaduras de cero a dos alteraciones."
+      },
+      {
+       "paso": "n2.t5.l2.p2",
+       "texto": "con los bemoles, al detalle."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l6.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dos notas a la vez",
+     "md": "Hasta aquí oías un intervalo nota tras nota. Ahora, también **a la vez**. Se percibe distinto: no se oye un salto, se oye un color. La 3.ª y la 6.ª son dulces, la 5.ª y la 8.ª huecas y limpias, la 4.ª un poco en vilo."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "3.ª mayor, a la vez",
+       "notas": [
+        [
+         [
+          3,
+          0
+         ],
+         [
+          2,
+          0
+         ]
+        ]
+       ],
+       "duracion": 1.2
+      },
+      {
+       "etiqueta": "5.ª justa, a la vez",
+       "notas": [
+        [
+         [
+          5,
+          3
+         ],
+         [
+          4,
+          5
+         ]
+        ]
+       ],
+       "duracion": 1.2
+      },
+      {
+       "etiqueta": "6.ª mayor, a la vez",
+       "notas": [
+        [
+         [
+          5,
+          3
+         ],
+         [
+          3,
+          2
+         ]
+        ]
+       ],
+       "duracion": 1.2
+      },
+      {
+       "etiqueta": "8.ª, a la vez",
+       "notas": [
+        [
+         [
+          5,
+          3
+         ],
+         [
+          3,
+          5
+         ]
+        ]
+       ],
+       "duracion": 1.2
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    }
+   ]
+  },
+  "n2.t2.l6.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cantar cierra el oído con la voz. Afina la 1.ª nota con la guitarra y canta «1-2-3-4-5» de Mi menor: Mi, Fa♯, Sol, La, Si. Después, saltos dentro de esas notas. No hace falta buena voz, hace falta llegar a la nota sin ayuda."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "1-2-3-4-5 de Mi menor",
+       "notas": [
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         4
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "duracion": 0.7
+      },
+      {
+       "etiqueta": "Saltos: 1-3-5-3-1",
+       "notas": [
+        [
+         4,
+         2
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         4,
+         2
+        ]
+       ],
+       "duracion": 0.7
+      },
+      {
+       "etiqueta": "Saltos: 1-5-4-3-1",
+       "notas": [
+        [
+         4,
+         2
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         4,
+         2
+        ]
+       ],
+       "duracion": 0.7
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo hacerlo",
+     "items": [
+      "Escucha la primera nota y cántala.",
+      "Canta los cinco grados de seguido.",
+      "Canta el salto sin tocar, y compruébalo después con la guitarra."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Compruebas con la guitarra y estabas en la nota, o muy cerca."
+     ]
+    }
+   ]
+  },
+  "n2.t2.l6.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Canta la melodía del *Romance* con la app tocando los tresillos. Cantar te enseña dónde respira la frase, y eso luego lo hará *a*."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/sol-romance-melodia.json",
+     "titulo": "La melodía, sola",
+     "principal": "partitura",
+     "motivo": "Es para cantar: basta el pentagrama.",
+     "bpms": [
+      48,
+      60
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Canta encima de esto",
+     "principal": "ambas",
+     "motivo": "Déjala sonar y canta la melodía por encima.",
+     "bpms": [
+      48,
+      60
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sigues la melodía sin perder el tresillo de abajo."
+     ]
+    }
+   ]
+  },
+  "n2.t2.l7.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En esta parte hay dos cejillas. Preparar es **pensar en la cejilla en el compás de antes**, no al llegar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "La parte en Mi menor: dónde se prepara",
+     "principal": "tablatura",
+     "motivo": "Mira los compases marcados C V y C VII.",
+     "bpms": [
+      48,
+      60
+     ],
+     "notas": [
+      "La primera, {c:7}: cejilla en el V, sobre La menor.",
+      "La segunda, {c:9}: cejilla en el VII, sobre Si7, con el bajo en la 6.ª.",
+      "Antes de cada una tienes una nota al aire o un cambio más simple: ese es el momento de mover el brazo."
+     ],
+     "compases": [
+      6,
+      12
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo prepararla",
+     "items": [
+      "Toca solo el compás anterior y el de la cejilla, en bucle.",
+      "En la última nota del anterior, el brazo ya se está moviendo.",
+      "Coloca la cejilla **de una vez**, no dedo a dedo.",
+      "Usa el peso; no aprietes con el pulgar."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Son las cejillas de la digitación que aquí se propone, y las que usa la mayoría de versiones. Tu edición puede indicar el traste o la extensión de otra manera."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El cambio no interrumpe el tresillo."
+     ]
+    }
+   ]
+  },
+  "n2.t2.l7.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La parte en Mi menor entera, 16 compases. Cuando salga, se **pasa al atril**: desde ahí la tocarás como pieza, no como ejercicio."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "*Romance*: la parte en Mi menor",
+     "principal": "ambas",
+     "motivo": "Partitura y tablatura: ya puedes leer parte de ella.",
+     "bpms": [
+      48,
+      66
+     ],
+     "compases": [
+      1,
+      16
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La parte en Mi menor, entera, sin parar.",
+     "porque": "Es la mitad de la obra troncal.",
+     "atencion": "No corras al llegar a la parte cómoda del {c:11}.",
+     "empieza": "♩ = 48.",
+     "sube": "Tres pasadas limpias."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 48,
+     "clave": "o2-anonimo-romance"
+    },
+    {
+     "tipo": "texto",
+     "md": "¿Se puede tocar más lento que tu grabación favorita? Sí. Manda tu mano, y luego tu profesor."
+    }
+   ]
+  },
+  "n2.t2.l7.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El crescendo largo",
+     "md": "Una melodía sobre tresillos continuos corre el peligro de sonar igual de principio a fin. La frase necesita un plan: **empezar en poco y crecer hasta un punto**, durante varios compases. Aquí, ese punto está arriba, cuando la melodía llega a Mi en el traste 12."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo tocar un crescendo largo",
+     "items": [
+      "Busca el punto más alto de la frase: es el destino.",
+      "Empieza con *a* menos fuerte de lo que crees: si no, no hay sitio para crecer.",
+      "Sube poco a poco, compás a compás.",
+      "Después del punto alto, baja de nuevo."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Busca el punto alto",
+     "principal": "ambas",
+     "bpms": [
+      48,
+      60
+     ],
+     "notas": [
+      "Del {c:1} al {c:5}: crece. El {c:5} es la llegada.",
+      "Después baja hasta el {c:8}."
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Alguien que te oiga sabría dónde está el punto más alto."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t11.l4.p1",
+       "texto": "la primera dinámica de frase."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t2.l7.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación del tramo. Sin prisas."
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La parte en Mi menor sin parar, con la melodía arriba.",
+     "porque": "Lo que hay que oír es una melodía acompañada, no un arpegio.",
+     "atencion": "Las dos cejillas sin corte.",
+     "empieza": "La que te permita no parar."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "No te paras.",
+      "La melodía se canta sola.",
+      "Las cejillas entran en su sitio."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t3.l3.p1",
+       "texto": "la parte en Mi mayor, con vibrato."
+      },
+      {
+       "paso": "n2.t13.l1.p3",
+       "texto": "el *Romance* en el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

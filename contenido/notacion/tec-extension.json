@@ -1,0 +1,124 @@
+{
+ "titulo": "Extensión entre los dedos 1 y 4",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 9,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 8,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 2,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 9,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 8,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 3,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 9,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 8,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 3,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  }
+ ]
+}

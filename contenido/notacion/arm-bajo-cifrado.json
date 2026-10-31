@@ -1,0 +1,84 @@
+{
+ "titulo": "Un bajo cifrado",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 3,
+      "dedo": 3,
+      "mano": "p",
+      "rotulo": "Do"
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 2,
+      "dedo": 2,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "rotulo": "La m"
+     },
+     {
+      "d": "2",
+      "c": 4,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 3,
+      "dedo": 3,
+      "mano": "p",
+      "rotulo": "Sol7"
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 2,
+      "dedo": 2,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 5,
+      "t": 3,
+      "dedo": 3,
+      "mano": "p",
+      "rotulo": "Do"
+     }
+    ]
+   ]
+  }
+ ]
+}

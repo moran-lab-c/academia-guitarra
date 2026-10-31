@@ -160,7 +160,10 @@ test('las notas de cada acorde son las que dice su nombre', () => {
   const clases = n => new Set(ACORDES[n].cuerdas.map((t, i) => (t === null ? null : (AIRE[i] + t) % 12)).filter(x => x !== null));
   const esperado = { Mi: [4, 8, 11], La: [9, 1, 4], Si7: [11, 3, 6, 9], Do: [0, 4, 7], Re: [2, 6, 9], Sol: [7, 11, 2], 'La m': [9, 0, 4], 'Mi m': [4, 7, 11], 'Re m': [2, 5, 9], Fa: [5, 9, 0],
     Sol7: [7, 11, 2, 5], Re7: [2, 6, 9, 0], La7: [9, 1, 4, 7], Mi7: [4, 8, 11, 2], Do7: [0, 4, 10], 'Fa△7': [5, 9, 0, 4], // Do7: la forma abierta habitual no lleva la 5.ª
-    'Sol m': [7, 10, 2], 'Si♭': [10, 2, 5], 'La (cejilla V)': [9, 1, 4] };
+    'Sol m': [7, 10, 2], 'Si♭': [10, 2, 5], 'La (cejilla V)': [9, 1, 4],
+    'Fa (cejilla I)': [5, 9, 0], 'Sol (cejilla III)': [7, 11, 2], 'Fa7 (cejilla I)': [5, 9, 0, 3], 'Sol7 (cejilla III)': [7, 11, 2, 5], 'La m (cejilla V)': [9, 0, 4], 'Fa♯ m (cejilla II)': [6, 9, 1], 'Si m (cejilla VII)': [11, 2, 6],
+    'Do (cejilla III)': [0, 4, 7], 'Re (cejilla V)': [2, 6, 9], 'Si (cejilla II)': [11, 3, 6], 'Re m (cejilla V)': [2, 5, 9], 'Si m (cejilla II)': [11, 2, 6], 'Do m (cejilla III)': [0, 3, 7], 'Re7 (cejilla V)': [2, 6, 9, 0], 'Do7 (cejilla III)': [0, 4, 7, 10],
+    'Do△7': [0, 4, 7, 11], 'La m7': [9, 0, 4, 7], 'Re m7': [2, 5, 9, 0], 'Mi m7': [4, 7, 11, 2], 'Si m7♭5': [11, 2, 5, 9], 'Fa♯7': [6, 10, 1, 4] };
   for (const [n, notas] of Object.entries(esperado)) assert.deepEqual([...clases(n)].sort((a, b) => a - b), [...notas].sort((a, b) => a - b), n);
   assert.equal(Object.keys(esperado).length, Object.keys(ACORDES).length);
 });

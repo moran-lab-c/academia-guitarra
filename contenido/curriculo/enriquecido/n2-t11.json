@@ -1,0 +1,590 @@
+{
+ "tramo": "n2.t11",
+ "nota": "Curso 2. Coste, op. 38 n.º 1: integrado solo el inicio (13 compases), porque el escaneo disponible no permite leer el resto con seguridad. Limitación declarada.",
+ "pasos": {
+  "n2.t11.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "Por qué suena",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "La cuerda se parte",
+       "md": "Cuando rozas una cuerda en su **mitad** (traste XII) y la pulsas, vibra en dos partes y suena una octava arriba. En un **tercio** (VII o XIX), en tres partes: octava y quinta. En un **cuarto** (V): dos octavas. En un **quinto** (IV o IX): dos octavas y una tercera. Por eso cada traste da su nota, y por eso los armónicos no están en todos los trastes."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Traste",
+        "La cuerda vibra en",
+        "Suena por encima del aire"
+       ],
+       "filas": [
+        [
+         "**XII**",
+         "2 partes",
+         "Octava"
+        ],
+        [
+         "**VII, XIX**",
+         "3 partes",
+         "Octava + quinta"
+        ],
+        [
+         "**V**",
+         "4 partes",
+         "Dos octavas"
+        ],
+        [
+         "**IV, IX**",
+         "5 partes",
+         "Dos octavas + tercera"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "libre",
+        "titulo": "Dónde se rozan",
+        "trastes": [
+         0,
+         19
+        ],
+        "clave": "C",
+        "cuadros": [
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 12
+           }
+          ],
+          "texto": "XII: la mitad.",
+          "ms": 2200
+         },
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 7
+           },
+           {
+            "c": 6,
+            "t": 19
+           }
+          ],
+          "texto": "VII y XIX: los tercios.",
+          "ms": 2200
+         },
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 5
+           }
+          ],
+          "texto": "V: el cuarto.",
+          "ms": 2200
+         },
+         {
+          "marcas": [
+           {
+            "c": 6,
+            "t": 4
+           },
+           {
+            "c": 6,
+            "t": 9
+           }
+          ],
+          "texto": "IV y IX: los quintos.",
+          "ms": 2500
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo sale",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Cómo se hace",
+       "items": [
+        "Roza la cuerda con un dedo izquierdo, justo **encima** del traste, no antes.",
+        "No la aprietes contra el mástil.",
+        "Pulsa cerca del puente, con decisión.",
+        "Suelta el dedo izquierdo al instante."
+       ]
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Suena apagada.",
+         "arreglo": "El dedo estaba al lado del traste o no se ha ido. Mira el metal, no el espacio."
+        },
+        {
+         "error": "Solo se oye un golpe.",
+         "arreglo": "Pulsa más cerca del puente: ahí el armónico tiene más sitio."
+        }
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t13.l4.p1",
+         "texto": "los armónicos de XII, VII y V."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t11.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-armonicos.json",
+     "titulo": "Armónicos de XII a XIX",
+     "principal": "tablatura",
+     "motivo": "Técnica: los trastes importan.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "{c:1-5} los que ya conoces.",
+      "{c:6-8} los nuevos: IV, IX y XIX, en las cuerdas graves, donde suenan mejor.",
+      "{c:9-10} una pequeña melodía, cruzando cuerdas."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Cada grupo, despacio, hasta que suenen limpios.",
+     "porque": "El nivel pide los nuevos, en las seis cuerdas.",
+     "atencion": "El IV y el IX salen peor en las cuerdas agudas; no es culpa tuya.",
+     "empieza": "♩ = 50.",
+     "sube": "Suenan claros y se sostienen."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suenan claros y se sostienen."
+     ]
+    }
+   ]
+  },
+  "n2.t11.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Afinar con armónicos",
+     "md": "El armónico del V de una cuerda y el del VII de la cuerda siguiente dan **la misma nota**. Y dos armónicos casi iguales producen un **batido**: wa-wa-wa. Cuanto más lento el batido, más cerca estás; cuando desaparece, está afinada. Es más fiel que comparar notas."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Toca el armónico V de la 6.ª y el VII de la 5.ª.",
+      "Si oyes batido, gira la clavija de la 5.ª hasta que se quede quieto.",
+      "Repite: V de 5.ª con VII de 4.ª; V de 4.ª con VII de 3.ª.",
+      "La 2.ª: VII de la 6.ª al aire de la 2.ª. Y la 1.ª: V de la 6.ª al aire de la 1.ª."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mismas notas: V y VII",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         5
+        ]
+       ],
+       "duracion": 1.2
+      },
+      {
+       "etiqueta": "Un poco desafinadas: batido",
+       "notas": [
+        [
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          0
+         ]
+        ]
+       ],
+       "duracion": 2,
+       "desafinar": 6
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "La guitarra nunca queda perfecta: el temple se reparte. Comprueba en un acorde al final."
+    }
+   ]
+  },
+  "n2.t11.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Glissando y arrastre",
+     "md": "El **glissando** une dos notas deslizando el dedo por la cuerda, y se oye todo el camino; las dos se tocan o solo la primera. El **arrastre** es un glissando corto y expresivo, que une sin que se oigan las notas intermedias. Es lo que oyes en un violín, y es **un adorno**, no un descuido al cambiar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-glissando.json",
+     "titulo": "Glissando y arrastre",
+     "principal": "tablatura",
+     "motivo": "Técnica: la línea indica el deslizamiento.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "{c:1-2} glissando: el dedo no se levanta.",
+      "{c:3-4} arrastre: se llega, y la segunda nota se pulsa o no."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Pisa con presión normal.",
+      "Afloja un poco mientras viajas.",
+      "Vuelve a apretar al llegar."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Oyes el trayecto, sin chillidos."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t3.l2.p1",
+       "texto": "el traslado deslizado."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t11.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-extension.json",
+     "titulo": "Extensión 1-4",
+     "principal": "tablatura",
+     "motivo": "Técnica: los dedos 1 y 4 lejos.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "En el {c:1-3}: del traste 5 al 9, en la 1.ª, 2.ª y 3.ª. El dedo 1 no suelta."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Abrir la mano sin forzar.",
+     "porque": "Sale en Coste, Sor y más allá.",
+     "atencion": "Si duele, baja al V o cambia de cuerda; las cuerdas graves cuestan más.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Te duele la base del dedo 4.",
+       "arreglo": "Para. Sube a una zona más alta, donde los trastes están más juntos."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t11.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Del codo, no de los dedos",
+     "md": "La extensión no se saca forzando los dedos, sino **moviendo el codo**: si llevas el codo un poco hacia delante, la mano gira y el 4 llega sin estirar. Y antes de una zona con extensiones, sube el codo un poco antes de llegar."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo del profesor",
+     "md": "Si la mano sufre, no lo soluciones con más fuerza: gira el antebrazo."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El dedo 4 llega sin dolor."
+     ]
+    }
+   ]
+  },
+  "n2.t11.l2.p4": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "¿Extensión o cambio?",
+     "md": "Dos soluciones a un mismo problema: una nota lejos. La **extensión** mantiene la voz ligada y gasta mano. El **cambio de posición** es más cómodo y puede cortar el legato. Pregunta: ¿qué se oye más en ese momento: una línea ligada o un sonido limpio?"
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Elige",
+      "Cuando"
+     ],
+     "filas": [
+      [
+       "**Extensión**",
+       "La melodía tiene que seguir ligada, o hay notas sostenidas por debajo"
+      ],
+      [
+       "**Cambio**",
+       "Puede respirar; hay un aire o un silencio que lo tape"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Tienes una melodía larga con una nota sostenida en el bajo. ¿Qué haces?",
+     "opciones": [
+      "Extensión",
+      "Cambio de posición"
+     ],
+     "correcta": 0,
+     "porque": "El bajo sigue pisado: un cambio lo cortaría. Compensa el esfuerzo."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Una frase acaba, hay un silencio, y la siguiente empieza lejos.",
+     "opciones": [
+      "Extensión",
+      "Cambio de posición"
+     ],
+     "correcta": 1,
+     "porque": "Tienes aire: cambia y queda cómodo."
+    }
+   ]
+  },
+  "n2.t11.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-fasm-2oct.json",
+     "titulo": "Fa♯ menor armónica",
+     "principal": "ambas",
+     "motivo": "La última escala del nivel.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Armadura con tres sostenidos. Mi♯ es la sensible: en el {c:1} y el {c:3}.",
+      "Hay que estirar del 2 al 5 en la 6.ª: extensión."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Sube y baja.",
+     "porque": "Lo pide la prueba corta.",
+     "atencion": "Todo es forma de la mano: los bemoles no estorban, la zona es incómoda.",
+     "empieza": "♩ = 50.",
+     "sube": "Sin que se oiga el cambio."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t11.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Napoléon Coste",
+     "md": "Francés (1805-1883), alumno y amigo de Sor, y gran guitarrista de París. Editó también a Sor. Con él el estudio ya no es solo técnica: es música. Sus *25 estudios* op. 38 son romanticismo de verdad, con color, armonía y acentos propios."
+    },
+    {
+     "tipo": "texto",
+     "md": "La reedición alemana que usamos ya advertía que algunas de sus piezas tienen un valor musical muy alto. Fíjate en cómo mezcla técnica y carácter."
+    }
+   ]
+  },
+  "n2.t11.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-coste-op-38-n-1",
+       "md": "**Por qué está aquí:** para ver cómo un estudio se convierte en una pieza. **Qué escuchar:** acentos en acordes a contratiempo. **Dificultad:** media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-coste-op38-1.json",
+       "titulo": "Coste, op. 38 n.º 1: el inicio",
+       "principal": "ambas",
+       "motivo": "Lo transcrito.",
+       "bpms": [
+        60,
+        112
+       ],
+       "notas": [
+        "*Allegretto*, ♩ = 112 en la edición. La menor, 2/4, anacrusa.",
+        "{c:1-5} *p* al bajo y acordes a contratiempo.",
+        "{c:8} empiezan los acordes en cejilla: V, III y I."
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "**Solo están transcritos estos 13 compases.** El estudio entero tiene unos 44. El resto, en [la edición en IMSLP](https://imslp.org/wiki/25_%C3%89tudes,_Op.38_%28Coste,_Napol%C3%A9on%29). El escaneo disponible no permitió leerlo con suficiente seguridad: es una limitación real, no una decisión musical."
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "El inicio, y lo que quieras de la edición.",
+       "porque": "Lo que falte, con la edición en la mano.",
+       "atencion": "El bajo marca; el acorde a contratiempo es ligero.",
+       "empieza": "♩ = 60.",
+       "sube": "♩ = 112, si llega."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o2-coste-op-38-n-1"
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t11.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Color con intención",
+     "md": "El sonido cambia según **dónde** pulsas. Cerca del puente, *metálico*: brillante y duro. Sobre la boca, normal. Cerca del mástil, *dulce*: oscuro. Lo importante: **no es un adorno; es una decisión**. Cada sección de Coste puede tener su color."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Zona",
+      "Se llama",
+      "Suena"
+     ],
+     "filas": [
+      [
+       "Junto al puente",
+       "*Ponticello*",
+       "Metálico, con tensión"
+      ],
+      [
+       "Sobre la boca",
+       "Normal",
+       "Equilibrado"
+      ],
+      [
+       "Junto al mástil",
+       "*Tasto*",
+       "Dulce, íntimo"
+      ]
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Pruébalo",
+     "items": [
+      "Toca la melodía del inicio junto al puente.",
+      "Otra vez junto al mástil.",
+      "Decide: ¿cuál quieres para la primera sección, y cuál para la siguiente?"
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Eliges el color antes de tocar, y puedes decir por qué."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t11.l3.p1",
+       "texto": "los tres colores."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t11.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-armonicos.json",
+     "titulo": "Armónicos",
+     "principal": "tablatura",
+     "bpms": [
+      50
+     ],
+     "compases": [
+      6,
+      7
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-coste-op38-1.json",
+     "titulo": "El estudio",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      112
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El inicio del estudio, con color elegido.",
+      "Armónicos de IV y IX claros."
+     ]
+    }
+   ]
+  }
+ }
+}

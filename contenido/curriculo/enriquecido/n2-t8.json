@@ -1,0 +1,465 @@
+{
+ "tramo": "n2.t8",
+ "nota": "Curso 2. El Preludio de Tárrega sale del MIDI que trae su edición en IMSLP, cotejado con otra edición. Los armónicos finales se escriben pisados.",
+ "pasos": {
+  "n2.t8.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El trémolo que conoces: *p*, y *a-m-i* sobre una misma nota. La novedad: **el bajo cambia** mientras los otros tres siguen. Es la base de *Recuerdos de la Alhambra*, aunque esa obra queda lejos todavía."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tremolo-bajo-cambia.json",
+     "titulo": "Trémolo con bajo que cambia",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Cada grupo: *p-a-m-i*. El bajo cambia en el tercer grupo de cada compás, y de acorde en cada compás.",
+      "El {c:3} pide dedos 1 y 2 del Si7, sin que la 1.ª se corte."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "manoDerecha",
+      "titulo": "p, a, m, i",
+      "acorde": "Mi m",
+      "clave": "G",
+      "veces": 3,
+      "ms": 350,
+      "cuerdas": [
+       {
+        "c": 6,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "mano": "i"
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Los cuatro compases, con la 1.ª al aire.",
+     "porque": "El final del nivel pide ocho compases de melodía en trémolo.",
+     "atencion": "Cuando *p* cambia de cuerda, *a-m-i* no se entera. Es lo que hay que oír.",
+     "empieza": "♩ = 40 en semicorcheas.",
+     "sube": "♩ = 50-60."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Se oye un galope: *a* más fuerte y los otros más débiles.",
+       "arreglo": "Baja la velocidad y mira *i*: suele ser el dedo perezoso."
+      },
+      {
+       "error": "Al cambiar de bajo se tuerce el trémolo.",
+       "arreglo": "Practica solo el cambio y los dos grupos que lo rodean."
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l4.p2",
+       "texto": "el trémolo del Nivel 1."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t8.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Tu oído no puede juzgar el trémolo mientras lo toca. Con el móvil, sí."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Graba diez segundos.",
+      "Escucha sin la guitarra en la mano.",
+      "Las tres notas altas, ¿pesan igual?",
+      "Baja la velocidad a la mitad en el reproductor, si tienes esa opción: ahí se ve quién se adelanta."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo del profesor",
+     "md": "No se arregla tocando más rato. Se arregla oyendo qué dedo falla y tocando más lento con ese dedo vigilado."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes qué dedo te falla, o que ninguno."
+     ]
+    }
+   ]
+  },
+  "n2.t8.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Si aprieta, se cansa",
+     "md": "El trémolo no se hace con fuerza: se hace con dedos sueltos. Si el antebrazo te arde a los treinta segundos, estás apretando la mano entera. La pausa natural es **el cambio de bajo**: ahí la mano puede respirar un instante."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Revisa",
+     "items": [
+      "Hombro abajo, codo libre.",
+      "La muñeca, sin doblarse del todo.",
+      "Los dedos que no tocan, sueltos: *a-m-i* no se agarran entre sí.",
+      "Cada vez que *p* cambia de cuerda, suelta un poco el antebrazo."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Oye el descanso en cada bajo",
+       "notas": [
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.18
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Aguantas un minuto sin molestia. Si duele, para: es información, no una prueba."
+     ]
+    }
+   ]
+  },
+  "n2.t8.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Antes de tocar una melodía en trémolo, cántala. Esta se ha escrito para el ejercicio: ocho compases sobre acordes que ya conoces."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/sol-melodia-8.json",
+     "titulo": "La melodía",
+     "principal": "partitura",
+     "motivo": "Para cantar: el pentagrama.",
+     "bpms": [
+      50,
+      60
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Escucha la melodía una vez.",
+      "Canta los cuatro primeros compases. Compruébalo.",
+      "Canta los ocho, sin ayuda."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes cantarla entera sin ayuda."
+     ]
+    }
+   ]
+  },
+  "n2.t8.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-melodia-tremolo.json",
+     "titulo": "La misma melodía, en trémolo",
+     "principal": "ambas",
+     "motivo": "Hay que ver qué nota canta y qué bajo lleva.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Cada tiempo es un grupo: el bajo y tres veces la nota de la melodía. Es esa nota la que oyes como canción.",
+      "Solo dos cuerdas, la 1.ª y la 2.ª, para que la mano derecha aprenda a cambiar sin perder el sitio.",
+      "{c:3-4}: pasa a la 2.ª cuerda. *a-m-i* la siguen."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Melodía de ocho compases, lenta y regular.",
+     "porque": "Es lo que pide el nivel antes de pasar al trémolo sobre progresión.",
+     "atencion": "Que se oiga la melodía, no tres notas rápidas.",
+     "empieza": "♩ = 40.",
+     "sube": "♩ = 60."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Se oye una melodía, no tres notas rápidas.",
+      "Los cambios de acorde no cortan el trémolo."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t4.l1.p1",
+       "texto": "en el Nivel 3 continúa sobre una progresión."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t8.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Lo que estás haciendo",
+     "md": "El trémolo es una ilusión: las notas son notas repetidas, pero el oído las une en **una sola nota larga que no se apaga**. En guitarra las notas se extinguen; el trémolo permite sostenerlas como un violín. Por eso, si piensas en velocidad, se acaba el encanto. Piensa en cantar."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué tiene que oírse en un trémolo?",
+     "opciones": [
+      "Tres notas rápidas e iguales",
+      "Una melodía sostenida",
+      "Un bajo muy fuerte"
+     ],
+     "correcta": 1,
+     "porque": "Las tres notas iguales son el medio; el fin es que el oído oiga una melodía larga."
+    }
+   ]
+  },
+  "n2.t8.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Lo oíste en el Tramo 5. Lo importante ahora es decir, nada más sonar, si es V7: **no reposa**. Mayor y menor pueden quedarse así para siempre; el V7 pide algo."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mayor",
+       "acorde": "Do"
+      },
+      {
+       "etiqueta": "Menor",
+       "acorde": "La m"
+      },
+      {
+       "etiqueta": "V7",
+       "acorde": "Sol7"
+      },
+      {
+       "etiqueta": "V7 → I",
+       "acordes": [
+        "Sol7",
+        "Do"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    }
+   ]
+  },
+  "n2.t8.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Los preludios de Tárrega",
+     "md": "Francisco Tárrega (1852-1909) escribió decenas de piezas breves. Sus **preludios** son miniaturas para guitarra, sin forma fija: una idea, unos colores y fin. Parecen improvisadas, y conviene tocarlos así: no como estudios, sino como una frase que se te ocurre."
+    },
+    {
+     "tipo": "texto",
+     "md": "La edición que usamos fecha este en 1889. El programa de referencia lo coloca entre 1.º y 2.º de Profesionales: exige melodía sobre acordes, cejillas de un momento, y escuchar."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Lleva la **6.ª cuerda en Re**: bájala un tono antes de tocar. Para afinarla, pisa la 6.ª en el traste 12 y compárala con la 4.ª al aire: tienen que dar el mismo Re."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La 4.ª al aire: la referencia",
+       "notas": [
+        [
+         4,
+         0
+        ]
+       ],
+       "duracion": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t8.l4.p3": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-tarrega-preludio-n-1",
+       "md": "**Por qué está aquí:** un preludio romántico corto: en muy poco, armonía, color y frase. **Qué escuchar:** el canto que asoma entre acordes. **Dificultad:** media-alta; se aplica, no se memoriza."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-tarrega-preludio-1.json",
+       "titulo": "Tárrega, *Preludio n.º 1*",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        50,
+        88
+       ],
+       "notas": [
+        "La edición pide ♩ = 88 y *Moderato*. Re menor con la 6.ª en Re.",
+        "{c:1-2} la melodía en lo alto: 4, con el dedo 4 en lo más alto; {c:3} baja en corcheas.",
+        "{c:6-8} cejillas de un momento: VI, VIII y I.",
+        "{c:17-18} *poco rit.* y *a tempo*.",
+        "{c:38-40} en el original son **armónicos de octava**: aquí se muestran pisados, porque esa técnica es del Nivel 3.",
+        "Fuente: IMSLP, edición con MIDI, cotejada con la revisión de Marieh. Digitación de la app, calculada: propuesta."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por zonas",
+       "items": [
+        "{c:1-5}: arriba, con el dedo 4.",
+        "{c:6-11}: cejillas breves, dedos que se quedan.",
+        "{c:12-17}: acentos y ligaduras.",
+        "{c:18-40}: lo mismo, con variaciones."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "El preludio, primero muy lento.",
+       "porque": "Es una pieza de nivel, no un estudio: se toca hacia alguien.",
+       "atencion": "La melodía de arriba siempre destacada: cántala.",
+       "empieza": "♩ = 50.",
+       "sube": "♩ = 88, si lo pide tu mano."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o2-tarrega-preludio-n-1"
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t8.l4.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación del tramo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-melodia-tremolo.json",
+     "titulo": "La melodía en trémolo",
+     "principal": "ambas",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-preludio-1.json",
+     "titulo": "El preludio",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      88
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Ocho compases de trémolo, lentos y regulares.",
+      "El preludio entero. Si no lo tienes de memoria, no importa."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l2.p1",
+       "texto": "el trémolo en la prueba corta."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

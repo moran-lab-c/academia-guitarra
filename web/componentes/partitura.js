@@ -106,7 +106,7 @@ export function senalarCompases(contenedor, desde, hasta = desde) {
 // Plan de dibujo → SVG con VexFlow. Devuelve el SVG como texto, para guardarlo.
 export function dibujar(VF, plan, vista, ancho) {
   const { Renderer, Stave, TabStave, StaveNote, TabNote, GhostNote, Voice, Formatter, Beam, Accidental, Dot, Annotation, FretHandFinger,
-    Articulation, StaveTie, TabTie, StaveConnector, Curve, Modifier, Barline } = VF;
+    Articulation, StaveTie, TabTie, TabSlide, StaveConnector, Curve, Modifier, Barline, Tuplet } = VF;
   const lineas = sistemas(plan, ancho - 2, vista);
   const conPartitura = vista !== 'tablatura', conTab = vista !== 'partitura';
   // Lo que va encima de la primera nota (posición y, con dos voces, mano derecha o dinámica): el tempo va por encima.
@@ -144,28 +144,29 @@ export function dibujar(VF, plan, vista, ancho) {
       tab?.setContext(ctx).draw();
       if (c.primero && stave && tab) new StaveConnector(stave, tab).setType('singleLeft').setContext(ctx).draw();
       const dosVoces = m.voces.length > 1;
-      const vocesP = [], vocesT = [], notasP = [], notasT = [];
+      const vocesP = [], vocesT = [], notasP = [], notasT = [], tresillos = [];
       m.voces.forEach((voz, v) => {
         const plica = !dosVoces ? undefined : v === 0 ? 1 : -1; // con dos voces, melodía arriba y bajo abajo
         const listaP = [], listaT = [];
         voz.forEach((n, k) => {
           const dur = n.duracion + (n.silencio ? 'r' : '');
           if (conPartitura) {
-            const sn = new StaveNote({ keys: n.silencio ? [dosVoces ? (v === 0 ? 'e/5' : 'f/4') : 'b/4'] : n.claves, duration: dur, dots: n.puntillo ? 1 : 0, clef: 'treble', ...(plica ? { stemDirection: plica } : { autoStem: true }) });
-            if (n.puntillo) Dot.buildAndAttach([sn], { all: true });
+            const sn = n.oculto ? new GhostNote({ duration: n.duracion, dots: n.puntillo ? 1 : 0 }) : new StaveNote({ keys: n.silencio ? [dosVoces ? (v === 0 ? 'e/5' : 'f/4') : 'b/4'] : n.claves, duration: dur, dots: n.puntillo ? 1 : 0, clef: 'treble', ...(plica ? { stemDirection: plica } : { autoStem: true }) });
+            if (n.puntillo && !n.oculto) Dot.buildAndAttach([sn], { all: true });
             for (const a of n.alteraciones) sn.addModifier(new Accidental(a.tipo), a.indice);
             if (n.dedo != null) sn.addModifier(new FretHandFinger(String(n.dedo)).setPosition(Modifier.Position.LEFT), 0);
             // Con dos voces, lo de la melodía va arriba y lo del bajo abajo, para que no choquen.
             const lado = dosVoces && v === 0 ? Annotation.VerticalJustify.TOP : Annotation.VerticalJustify.BOTTOM;
             if (n.mano && !conTab) sn.addModifier(new Annotation(n.mano).setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(lado), 0);
             for (const a of n.art) sn.addModifier(new Articulation(ART[a]).setPosition(v === 1 ? Modifier.Position.BELOW : Modifier.Position.ABOVE), 0);
+            if (n.arm || n.oct) sn.addModifier(new Annotation(n.oct ? 'oct.' : 'arm.').setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(Annotation.VerticalJustify.TOP), 0);
             if (n.din) sn.addModifier(new Annotation(n.din).setFont('Academico', 13, 'bold', 'italic').setVerticalJustification(lado), 0);
             if (k === 0 && v === 0 && m.pos) sn.addModifier(new Annotation(m.pos).setFont('Academico', 12, 'bold').setVerticalJustification(Annotation.VerticalJustify.TOP), 0);
             listaP.push(sn);
           }
           if (conTab) {
             const tn = n.silencio ? new GhostNote({ duration: n.duracion, dots: n.puntillo ? 1 : 0 })
-              : new TabNote({ positions: n.tab.map(x => ({ str: x.cuerda, fret: x.traste })), duration: n.duracion, dots: n.puntillo ? 1 : 0 }, !conPartitura);
+              : new TabNote({ positions: n.tab.map(x => ({ str: x.cuerda, fret: n.arm ? `<${x.traste}>` : n.oct ? `(${x.traste})` : x.traste })), duration: n.duracion, dots: n.puntillo ? 1 : 0 }, !conPartitura);
             if (!conPartitura && !n.silencio) tn.setStemDirection(-1); // en la tablatura sola, el ritmo va debajo
             // Con dos voces, la mano derecha va en filas fijas (abajo), para que no se pisen.
             if (!n.silencio && n.mano && !dosVoces) tn.addModifier(new Annotation(n.mano).setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(Annotation.VerticalJustify.BOTTOM), 0);
@@ -174,6 +175,14 @@ export function dibujar(VF, plan, vista, ancho) {
           }
           notasLinea.push({ n, sn: listaP.at(-1) ?? null, tn: listaT.at(-1) ?? null, v, compas: c.indice });
         });
+        // Tres figuras de tresillo seguidas forman un grupo, en las dos pautas; el 3 se dibuja solo donde hay plicas.
+        for (let k = 0; k + 2 < voz.length; k++) {
+          if (!voz[k].tres || !voz[k + 1].tres || !voz[k + 2].tres) continue;
+          const opc = { numNotes: 3, notesOccupied: 2, bracketed: false, ratioed: false };
+          if (conPartitura) tresillos.push(new Tuplet(listaP.slice(k, k + 3), { ...opc, location: plica === -1 ? -1 : 1 }));
+          if (conTab) { const t = new Tuplet(listaT.slice(k, k + 3), { ...opc, location: -1 }); if (!conPartitura) tresillos.push(t); }
+          k += 2;
+        }
         const hacerVoz = lista => new Voice({ numBeats: plan.compas.num, beatValue: plan.compas.den }).setMode(Voice.Mode.SOFT).addTickables(lista);
         if (conPartitura) { vocesP.push(hacerVoz(listaP)); notasP.push({ lista: listaP, plica }); }
         if (conTab) { vocesT.push(hacerVoz(listaT)); notasT.push({ lista: listaT, plica }); }
@@ -187,12 +196,13 @@ export function dibujar(VF, plan, vista, ancho) {
       // Los silencios se pasan (sin viga) para que no descuadren los grupos.
       const groups = Beam.getDefaultBeamGroups(`${plan.compas.num}/${plan.compas.den}`);
       const vigas = [
-        ...notasP.flatMap(({ lista, plica }) => Beam.generateBeams(lista, { groups, beamRests: false, maintainStemDirections: !!plica, ...(plica ? { stemDirection: plica } : {}) })),
+        ...notasP.flatMap(({ lista, plica }) => Beam.generateBeams(lista.filter(x => !(x instanceof GhostNote)), { groups, beamRests: false, maintainStemDirections: !!plica, ...(plica ? { stemDirection: plica } : {}) })),
         ...(!conPartitura ? notasT.flatMap(({ lista }) => Beam.generateBeams(lista.filter(x => x instanceof TabNote), { groups, stemDirection: -1, maintainStemDirections: true })) : []),
       ];
       vocesP.forEach(v => v.draw(ctx, stave));
       vocesT.forEach(v => v.draw(ctx, tab));
       vigas.forEach(b => b.setContext(ctx).draw());
+      tresillos.forEach(t => t.setContext(ctx).draw());
       // Encima de la tablatura, una línea con el dedo de la mano izquierda, en su color; encima de todo, el acorde; debajo, el pulso.
       // Van en una fila fija, sin mezclarse con los números de los trastes.
       const delCompas = notasLinea.filter(y => y.compas === c.indice);
@@ -228,7 +238,7 @@ export function dibujar(VF, plan, vista, ancho) {
       }
       if (x.tn && sig.tn) {
         const notas = { firstNote: x.tn, lastNote: sig.tn, ...indices };
-        (x.n.lig === 'h' ? TabTie.createHammeron(notas) : x.n.lig === 'p' ? TabTie.createPulloff(notas) : new TabTie(notas)).setContext(ctx).draw();
+        (x.n.lig === 's' ? new TabSlide(notas, sig.n.tab[0].traste >= x.n.tab[0].traste ? TabSlide.SLIDE_UP : TabSlide.SLIDE_DOWN) : x.n.lig === 'h' ? TabTie.createHammeron(notas) : x.n.lig === 'p' ? TabTie.createPulloff(notas) : new TabTie(notas)).setContext(ctx).draw();
       }
     }
   });

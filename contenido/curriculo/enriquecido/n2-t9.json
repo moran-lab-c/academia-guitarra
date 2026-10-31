@@ -1,0 +1,646 @@
+{
+ "tramo": "n2.t9",
+ "nota": "Curso 2. Giuliani op. 51 n.º 10 sale de Mutopia. La digitación y el arpegio de op. 1 son propuesta.",
+ "pasos": {
+  "n2.t9.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Lo que cambia",
+     "md": "En el Nivel 1 el arpegio se quedaba en un acorde. Ahora **el acorde cambia** dentro del arpegio, y eso pide otra atención: las últimas notas del compás ya están pensando en el siguiente."
+    },
+    {
+     "tipo": "texto",
+     "md": "Vuelves a tu Giuliani del Nivel 1, *op. 1*, con otra mirada: trabaja los compases donde cambia el acorde."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op1-3.json",
+     "titulo": "Giuliani, op. 1: arpegios de la colección",
+     "principal": "ambas",
+     "motivo": "Una que ya conoces.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Tócala, parando solo en los cambios: el acorde siguiente, sin tocar, antes de soltar el anterior.",
+     "porque": "Prepara todo el arpegio de este nivel.",
+     "atencion": "Lo que falla casi siempre es la mano izquierda llegando tarde, no la derecha.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t11.l1.p2",
+       "texto": "la primera vez que la tocaste."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t9.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Anticipar",
+     "md": "Mientras suena la última nota de un compás, la mano izquierda **ya está viajando**. Si esperas a que acabe, llegas tarde, y el corte se oye. Puedes hacerlo porque la mano derecha está tocando cuerdas que no dependen del dedo que se mueve."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "cambio",
+      "titulo": "Do → La m: el dedo 1 se queda",
+      "de": "Do",
+      "a": "La m",
+      "clave": "C",
+      "textos": {
+       "inicio": "Do. Dedo 1 en la 2.ª: no se mueve.",
+       "medio": "El 2 y el 3 viajan durante la última nota.",
+       "fin": "La m. El arpegio no se ha parado."
+      }
+     }
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "cambio",
+      "titulo": "Re m → Sol7: todo cambia",
+      "de": "Re m",
+      "a": "Sol7",
+      "clave": "C",
+      "textos": {
+       "inicio": "Re m.",
+       "medio": "Aquí no hay dedo común: el viaje empieza antes.",
+       "fin": "Sol7."
+      }
+     }
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo practicarlo",
+     "items": [
+      "Toca solo la última nota del acorde y la primera del siguiente.",
+      "Mueve los dedos **antes** de que caiga la primera.",
+      "Añade notas por detrás, de una en una."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El arpegio no se corta al cambiar de acorde."
+     ]
+    }
+   ]
+  },
+  "n2.t9.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "ii-V-I",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Una cadencia más larga",
+       "md": "Sabes I-IV-V-I. **El ii** (segundo grado, menor) hace el mismo oficio que el IV, pero de otra manera: va hacia el V por quinta, y el oído lo agradece. En Do: **Re m–Sol7–Do**. Es la progresión más frecuente de la música tonal."
+      },
+      {
+       "tipo": "progresion",
+       "acordes": [
+        {
+         "n": "Re m",
+         "g": "ii",
+         "papel": "hacia el V"
+        },
+        {
+         "n": "Sol7",
+         "g": "V7",
+         "papel": "tensión"
+        },
+        {
+         "n": "Do",
+         "g": "I",
+         "papel": "reposo"
+        }
+       ],
+       "bpms": [
+        50,
+        72
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "ii-V-I",
+         "acordes": [
+          "Re m",
+          "Sol7",
+          "Do"
+         ],
+         "duracion": 1
+        },
+        {
+         "etiqueta": "IV-V-I, para comparar",
+         "acordes": [
+          "Fa△7",
+          "Sol7",
+          "Do"
+         ],
+         "duracion": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "La dominante de la dominante",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "V/V",
+       "md": "El V se puede «preparar» con **su propia dominante**. En Do, el V es Sol, y la dominante de Sol es Re. Pero Re7 tiene un **Fa♯** que no está en Do: es una nota prestada que empuja hacia Sol. Se escribe **V/V**. Un Do–Re7–Sol7–Do suena a un pequeño viaje a Sol y vuelta."
+      },
+      {
+       "tipo": "anatomia",
+       "acorde": "Re7",
+       "clave": "G"
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Do–Re7–Sol7–Do",
+         "acordes": [
+          "Do",
+          "Re7",
+          "Sol7",
+          "Do"
+         ],
+         "duracion": 1
+        },
+        {
+         "etiqueta": "Do–Re m–Sol7–Do",
+         "acordes": [
+          "Do",
+          "Re m",
+          "Sol7",
+          "Do"
+         ],
+         "duracion": 1
+        }
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Qué nota de Re7 no pertenece a Do mayor?",
+       "opciones": [
+        "Re",
+        "Fa♯",
+        "La"
+       ],
+       "correcta": 1,
+       "porque": "Fa♯: es la sensible de Sol. Por eso empuja hacia él.",
+       "audio": {
+        "notas": [
+         [
+          1,
+          2
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t9.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-ii-v-i.json",
+     "titulo": "Las dos progresiones, en arpegio",
+     "principal": "ambas",
+     "motivo": "Para oír y tocar.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "{c:1-5} Do, La m, Re m, Sol7, Do: ii-V-I con el vi antes.",
+      "{c:5-8} Do, Re7, Sol7, Do: la dominante de la dominante."
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "La m",
+       "g": "vi",
+       "papel": "color"
+      },
+      {
+       "n": "Re m",
+       "g": "ii",
+       "papel": "hacia el V"
+      },
+      {
+       "n": "Sol7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Las dos progresiones, con un acorde por compás.",
+     "porque": "Lo que aprendes con estas dos, lo reconocerás en mil obras.",
+     "atencion": "Di el grado en voz alta al cambiar.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes qué acorde sigue antes de tocarlo."
+     ]
+    }
+   ]
+  },
+  "n2.t9.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Con formas móviles, la misma progresión en otras zonas: **ii-V-I en Do en el III y el V**. La mano se queda en un sitio, y solo cambian formas."
+    },
+    {
+     "tipo": "acordes",
+     "nombres": [
+      "Re m (cejilla V)",
+      "Sol7 (cejilla III)",
+      "Do (cejilla III)"
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "cambio",
+      "titulo": "Sol7 → Do, ya con cejillas",
+      "de": "Sol7 (cejilla III)",
+      "a": "Do (cejilla III)",
+      "clave": "C",
+      "textos": {
+       "inicio": "Sol7 en el III: forma de Mi7.",
+       "medio": "La cejilla no se mueve. Los otros dedos cambian de forma.",
+       "fin": "Do en el III: forma de La."
+      }
+     }
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Re m (cejilla V)",
+       "g": "ii",
+       "papel": "hacia el V"
+      },
+      {
+       "n": "Sol7 (cejilla III)",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Do (cejilla III)",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La progresión con cejillas, sin mirar los cambios.",
+     "porque": "Es el trabajo real del final del nivel.",
+     "atencion": "Peso del brazo; si duele, para y suelta.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t1.l3.p1",
+       "texto": "las formas móviles."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t9.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Décimas y octavas",
+     "md": "Son dos notas a distancia fija que suben juntas. **Octavas:** la misma nota dos veces. **Décimas:** una octava más una tercera. Suena lleno, y además obliga a mover la mano con precisión. Clásicos como Sor los usan para dar plenitud a una escala sencilla."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-decimas-octavas.json",
+     "titulo": "Do mayor en décimas y octavas",
+     "principal": "ambas",
+     "motivo": "Se ve el dibujo de la mano.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:1-2} décimas.",
+      "{c:3-4} octavas: la forma no cambia y la mano sube."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Sube y baja, sin cortar.",
+     "porque": "Es la entrada a los pasajes que se ven en Sor.",
+     "atencion": "Las dos notas exactamente juntas: *p* e *i* o *m* a la vez.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Digitación propuesta; hay otras igual de buenas. Las décimas y octavas de la escala son las que el programa pide en una octava."
+    }
+   ]
+  },
+  "n2.t9.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/car-3.json",
+     "titulo": "Fórmulas 11 a 15",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      50,
+      60
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Una fórmula por minuto, consciente de cada dedo.",
+     "porque": "Cierra las quince.",
+     "atencion": "Si alguna suena diferente, aísla los dos dedos que la fallan.",
+     "empieza": "♩ = 50, corcheas.",
+     "sube": "Igual en todas sus notas a ♩ = 60."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Numeración por cotejar con el cuaderno 2 de Carlevaro."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las quince fórmulas se te quedan como un gesto, sin pensar qué dedo sigue."
+     ]
+    }
+   ]
+  },
+  "n2.t9.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dictado rítmico",
+     "md": "Escuchar y **escribir** el ritmo. Parece difícil; en realidad son tres pasos: contar los pulsos, ver qué pulsos tienen dos notas, y escribir. Empieza con tus palabras: *larga*, *corta-corta*."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Compás 1 del dictado",
+       "notas": [
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         0
+        ]
+       ],
+       "duracion": 0.45
+      }
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-dictado.json",
+     "titulo": "Y este es el resultado",
+     "principal": "ambas",
+     "motivo": "Escucha sin mirar y luego compara.",
+     "bpms": [
+      60
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo lo haces",
+     "items": [
+      "Escucha dos veces, marcando el pulso con el pie.",
+      "Cuenta cuántas notas caen en cada pulso.",
+      "Escribe en un papel, con palos sobre el papel.",
+      "Compara con la partitura."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cuántas notas entran en un pulso de dos corcheas?",
+     "opciones": [
+      "Una",
+      "Dos",
+      "Tres"
+     ],
+     "correcta": 1,
+     "porque": "Dos. Tres sería un tresillo."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Lo escrito coincide con lo que suena."
+     ]
+    }
+   ]
+  },
+  "n2.t9.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-giuliani-op-51-n-10",
+       "md": "**Por qué está aquí:** arpegio con cambio de acorde en 6/8. **Qué escuchar:** la línea alta sobre un arpegio en *p*. **Dificultad:** media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-giuliani-op51-10.json",
+       "titulo": "Giuliani, op. 51 n.º 10",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        60,
+        96
+       ],
+       "notas": [
+        "Andantino en Do, 6/8. Mira la anacrusa: empieza con Sol antes del {c:1}.",
+        "{c:1-8} primera frase, con el bajo arpegiado.",
+        "{c:15-16} los bajos caminan. Oye Sol, La, Si, Do, Re.",
+        "{c:17-27} hacia el final: dinámica ascendente y Do final con acorde.",
+        "Fuente: Mutopia, sobre Richault, CC BY-SA 4.0. Digitación propuesta."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Por frases: ocho compases cada vez.",
+       "porque": "Es el estudio de aplicación de este tramo.",
+       "atencion": "Anticipa los cambios de acorde. Las notas de *p* no deben ganar a la melodía.",
+       "empieza": "Corchea = 60.",
+       "sube": "Corchea = 96."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o2-giuliani-op-51-n-10"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "El bajo tapa la melodía.",
+         "arreglo": "Toca el bajo con el mínimo sonido y sube después."
+        },
+        {
+         "error": "El 6/8 suena a 3/4.",
+         "arreglo": "Dos pulsos, cada uno de tres corcheas: marca dos con el pie."
+        }
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t12.l1.p1",
+         "texto": "el 6/8."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t9.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op51-10.json",
+     "titulo": "El estudio",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      96
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Re m (cejilla V)",
+       "g": "ii",
+       "papel": "hacia el V"
+      },
+      {
+       "n": "Sol7 (cejilla III)",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Do (cejilla III)",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El estudio, sin cortes en los cambios.",
+      "La progresión ii-V-I, con cejilla, en dos sitios."
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -10,7 +10,7 @@ Claude Code lee este archivo al empezar cada sesión, en este equipo o en la nub
 - **Las decisiones que le tocan a él** están en `INFORME-FASE-3.md`, apartados J y Q.
 - **La revisión independiente de la interfaz de la Fase 3 quedó sin terminar.** Él decide si se hace.
 - **Implementación del currículo V3.1:** empezada el 30/10/2026 con su aprobación. Estado y pendientes en `docs/IMPLEMENTACION-V3.1.md`.
-- **Enriquecimiento del contenido:** empezado el 30/10/2026 con un tramo de referencia, el 4 del Nivel 1. Aprobado el 30/10/2026 tras reescribirlo: ahora se enriquece el Curso 1 entero, tramo a tramo (`docs/INFORME-CURSO-1.md`). Consolidación del Curso 1 en `docs/INFORME-CONSOLIDACION-CURSO-1.md`. El Curso 2 y el 3 van después, cuando el 1 esté validado. Sistema en `docs/ENRIQUECIMIENTO.md`.
+- **Enriquecimiento del contenido:** empezado el 30/10/2026 con un tramo de referencia, el 4 del Nivel 1. Aprobado el 30/10/2026 tras reescribirlo: ahora se enriquece el Curso 1 entero, tramo a tramo (`docs/INFORME-CURSO-1.md`). Consolidación del Curso 1 en `docs/INFORME-CONSOLIDACION-CURSO-1.md`. Cursos 2 y 3 enriquecidos el 31/10/2026: `docs/INFORME-CURSOS-2-Y-3.md`. Sistema en `docs/ENRIQUECIMIENTO.md`.
 
 ## Qué leer antes de tocar nada
 

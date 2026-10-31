@@ -1,0 +1,2653 @@
+{
+ "titulo": "Anónimo, Romance",
+ "compas": "3/4",
+ "armadura": "Em",
+ "conteo": true,
+ "fuente": "Mutopia Project (ref. 795, J. Covey, según manuscrito), CC BY-SA 2.5. Digitación y mano derecha: propuesta de la academia.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "Mi m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "mano": "a",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 3,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 3,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 3,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 10,
+      "mano": "a",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 8,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 8,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "La m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 5,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 5,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 5,
+      "mano": "i",
+      "dedo": 1
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ],
+   "pos": "C V"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 5,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 5,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 8,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 5,
+      "mano": "i",
+      "dedo": 1
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 1,
+      "rotulo": "Si7"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 8,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 7,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ],
+   "pos": "C VII"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 11,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 8,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 7,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "Mi m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "mano": "a",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 3,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 3,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 3,
+      "rotulo": "Si7"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "i",
+      "dedo": 3
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 2,
+      "mano": "p",
+      "p": true,
+      "dedo": 2
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 3,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "i",
+      "dedo": 3
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 4,
+      "t": 1,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a",
+      "rotulo": "Mi m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "4",
+      "c": 4,
+      "t": 2,
+      "mano": "p",
+      "dedo": 2
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 2,
+      "mano": "p",
+      "dedo": 2
+     },
+     {
+      "d": "4",
+      "c": 6,
+      "t": 3,
+      "mano": "p",
+      "dedo": 3
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "4",
+      "s": true
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "s": true,
+      "oculto": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "Mi"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a",
+      "rotulo": "Fa♯7/La"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 4,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 4,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 4,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 4,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "mano": "a",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 4,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 2,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 4,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "Si7"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 7,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ],
+   "pos": "C VII"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 11,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 7,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 8,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 7,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "Mi"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ],
+   "pos": "C VII"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 11,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ],
+   "pos": "C IX"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 12,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 11,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 10,
+      "mano": "a",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 9,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 9,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4,
+      "rotulo": "La"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 6,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 6,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 6,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ],
+   "pos": "C V"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 9,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 6,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 7,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 6,
+      "mano": "i",
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 5,
+      "mano": "m",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 6,
+      "mano": "i",
+      "dedo": 2
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 0,
+      "mano": "p",
+      "p": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 3,
+      "rotulo": "Si"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 2,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ],
+   "pos": "C II"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 4,
+      "mano": "a",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "mano": "a",
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "mano": "a",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 4,
+      "mano": "m",
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "mano": "i",
+      "dedo": 3
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 5,
+      "t": 2,
+      "mano": "p",
+      "p": true,
+      "dedo": 1
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a",
+      "rotulo": "Mi"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 1,
+      "mano": "i",
+      "dedo": 1
+     }
+    ],
+    [
+     {
+      "d": "4",
+      "c": 4,
+      "t": 2,
+      "mano": "p",
+      "dedo": 2
+     },
+     {
+      "d": "4",
+      "c": 5,
+      "t": 2,
+      "mano": "p",
+      "dedo": 1
+     },
+     {
+      "d": "4",
+      "c": 6,
+      "t": 4,
+      "mano": "p",
+      "dedo": 4
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 1,
+      "t": 0,
+      "mano": "a"
+     },
+     {
+      "d": "4",
+      "s": true
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "s": true,
+      "oculto": true
+     }
+    ]
+   ]
+  }
+ ]
+}

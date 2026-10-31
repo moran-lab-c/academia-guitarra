@@ -1,0 +1,237 @@
+{
+ "titulo": "Armónicos naturales",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 12,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 12,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 4,
+      "t": 12,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 3,
+      "t": 12,
+      "dedo": 1,
+      "mano": "i",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 7,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 7,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 4,
+      "t": 7,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 3,
+      "t": 7,
+      "dedo": 1,
+      "mano": "i",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 5,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 5,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 4,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 4,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 9,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 9,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 6,
+      "t": 19,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     },
+     {
+      "d": "2",
+      "c": 5,
+      "t": 19,
+      "dedo": 1,
+      "mano": "p",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 3,
+      "t": 7,
+      "dedo": 1,
+      "mano": "i",
+      "arm": true
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 7,
+      "dedo": 1,
+      "mano": "m",
+      "arm": true
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 12,
+      "dedo": 1,
+      "mano": "i",
+      "arm": true
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 12,
+      "dedo": 1,
+      "mano": "m",
+      "arm": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 1,
+      "t": 12,
+      "dedo": 1,
+      "mano": "a",
+      "arm": true
+     }
+    ]
+   ]
+  }
+ ]
+}

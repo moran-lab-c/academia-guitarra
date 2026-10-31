@@ -1,0 +1,643 @@
+{
+ "tramo": "n3.t6",
+ "nota": "Curso 3. Mertz: solo el inicio, 4 compases a ojo; el resto, en la edición de IMSLP. Los octavados son un recurso de la app para que suenen a su altura.",
+ "pasos": {
+  "n3.t6.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Johann Kaspar Mertz",
+     "md": "Húngaro (1806-1856), vivió en Viena. Su guitarra es de **salón romántico**: acordes llenos, melodías amplias y mucha expresión, y escribió también para guitarras de más cuerdas. Sus *3 Nocturnos* op. 4 son uno de sus títulos más tocados."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El nocturno",
+     "md": "Lo inventó el pianista John Field; lo hizo famoso Chopin. **Una melodía que canta como una voz, sobre un acompañamiento tranquilo**: música para la noche, íntima y sin prisa. La guitarra lo imita bien, pero solo si el canto destaca."
+    },
+    {
+     "tipo": "texto",
+     "md": "El programa de referencia lo pone en 2.º de Profesionales. Es decir: a esta altura es exigente."
+    }
+   ]
+  },
+  "n3.t6.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tres planos",
+     "md": "Hasta ahora, dos: melodía y resto. Aquí, **tres volúmenes distintos a la vez**: la melodía con *a*, **apoyando**, fuerte; el acompañamiento, tirando y flojo; el bajo, tirando y medio. Parece imposible hasta que se entrena por separado."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tres-planos.json",
+     "titulo": "Tres volúmenes",
+     "principal": "ambas",
+     "motivo": "Se ve la melodía con acento.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "La nota de *a* lleva el acento.",
+      "El bajo, sonoro pero sin mandar.",
+      "*m* e *i*, apenas."
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Plano",
+      "Dedo",
+      "Técnica",
+      "Volumen"
+     ],
+     "filas": [
+      [
+       "Melodía",
+       "*a*",
+       "Apoyando",
+       "*f*"
+      ],
+      [
+       "Bajo",
+       "*p*",
+       "Tirando",
+       "*mf*"
+      ],
+      [
+       "Acompañamiento",
+       "*m*, *i*",
+       "Tirando",
+       "*p*"
+      ]
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Melodía apoyando, acompañamiento y bajo tirando, cada uno con su volumen.",
+     "porque": "Es lo que distingue un nocturno de un ejercicio.",
+     "atencion": "Primero *a* sola y las otras dos, mudas. Después, añade.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Alguien podría cantar la melodía y decir que el bajo existe."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t6.l1.p2",
+       "texto": "la nota destacada."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-mertz-nocturno-op-4-n-1",
+       "md": "**Por qué está aquí:** tres planos al servicio de una melodía. **Qué escuchar:** la línea alta, por encima de todo. **Dificultad:** alta."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-mertz-nocturno-1.json",
+       "titulo": "Mertz, *Nocturno* op. 4 n.º 1: el inicio",
+       "principal": "ambas",
+       "motivo": "Lo transcrito.",
+       "bpms": [
+        50,
+        76
+       ],
+       "notas": [
+        "*Andante con moto*, La menor.",
+        "{c:1-2} acordes y melodía con puntillo.",
+        "{c:4} tresillos al bajo."
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "**Solo están transcritos estos 4 compases, a ojo.** La obra entera, en [la edición en IMSLP](https://imslp.org/wiki/3_Nocturnes,_Op.4_%28Mertz,_Johann_Kaspar%29). Es una limitación real: el resto no se ha pasado a la app."
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Lo transcrito, y lo que quieras de la edición.",
+       "porque": "Se aplica el trabajo de tres planos.",
+       "atencion": "Melodía sola, primero, y canta.",
+       "empieza": "♩ = 50.",
+       "sube": "♩ = 76."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-mertz-nocturno-op-4-n-1"
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Antes del octavado, repaso de memoria: ¿dónde suena qué?"
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Traste",
+      "Suena"
+     ],
+     "filas": [
+      [
+       "XII",
+       "Octava de la cuerda"
+      ],
+      [
+       "VII",
+       "Octava + quinta"
+      ],
+      [
+       "V",
+       "Dos octavas"
+      ],
+      [
+       "IV, IX",
+       "Dos octavas + tercera"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Armónico de la 6.ª en el VII. ¿Qué nota?",
+     "opciones": [
+      "Si",
+      "Mi",
+      "Sol♯"
+     ],
+     "correcta": 0,
+     "porque": "Octava y quinta sobre Mi: Si.",
+     "audio": {
+      "notas": [
+       [
+        3,
+        4
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Armónico de la 5.ª en el V. ¿Qué nota?",
+     "opciones": [
+      "La",
+      "Mi",
+      "Do♯"
+     ],
+     "correcta": 0,
+     "porque": "Dos octavas sobre La: La."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Armónico de la 4.ª en el IV. ¿Qué nota?",
+     "opciones": [
+      "Fa♯",
+      "Re",
+      "La"
+     ],
+     "correcta": 0,
+     "porque": "Dos octavas y una tercera sobre Re: Fa♯."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t11.l1.p1",
+       "texto": "por qué."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El octavado",
+     "md": "Los naturales solo dan unas pocas notas. **El octavado da cualquiera**: pisas una nota con la izquierda, y *i* roza la cuerda **doce trastes por encima**. *a* pulsa detrás. Suena una octava por encima de lo pisado, y con el color de un armónico."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Pisa Do en la 5.ª, traste 3.",
+      "Estira el dedo *i* sobre el traste 15.",
+      "Pulsa con *a* detrás de *i*.",
+      "Levanta *i* justo al tocar."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "Pisado en el 3; rozado en el 15",
+      "trastes": [
+       0,
+       16
+      ],
+      "clave": "C",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "c": 5,
+          "t": 3,
+          "dedo": 3
+         }
+        ],
+        "texto": "La izquierda pisa Do.",
+        "ms": 2200
+       },
+       {
+        "marcas": [
+         {
+          "c": 5,
+          "t": 3,
+          "dedo": 3
+         },
+         {
+          "c": 5,
+          "t": 15
+         }
+        ],
+        "texto": "El dedo i de la derecha roza 12 trastes más arriba, y a pulsa.",
+        "ms": 3000
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Do, una octava arriba",
+       "notas": [
+        [
+         5,
+         15
+        ]
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suena limpio, sin golpe."
+     ]
+    }
+   ]
+  },
+  "n3.t6.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-octavados.json",
+     "titulo": "Do mayor en octavados",
+     "principal": "tablatura",
+     "motivo": "Técnica: el paréntesis indica octavado.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Cada nota: la izquierda pisa, *i* roza 12 más allá, *a* pulsa.",
+      "La app la toca una octava más alta, como suena."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Do mayor en una octava.",
+     "porque": "Es la primera vez; en el Nivel 4 van en melodía.",
+     "atencion": "Sigue el traste con la mirada: *i* se mueve con cada nota.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Cada armónico suena claro y a tiempo."
+     ]
+    }
+   ]
+  },
+  "n3.t6.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-mi-3oct.json",
+     "titulo": "Mi mayor, tres octavas",
+     "principal": "ambas",
+     "motivo": "Escala.",
+     "bpms": [
+      50,
+      80
+     ],
+     "notas": [
+      "{c:3} sube a la zona alta: trastes juntos, codo cerca.",
+      "El cambio se hace en un semitono: ya lo sabes."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-mib-2oct.json",
+     "titulo": "Mi♭ mayor, dos octavas",
+     "principal": "ambas",
+     "motivo": "Sin aire.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Forma móvil: toda pisada."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Las dos, a una velocidad igual.",
+     "porque": "Es la escala de la prueba.",
+     "atencion": "Todo en un semitono. Di el cambio al llegar.",
+     "empieza": "♩ = 50.",
+     "sube": "♩ = 80."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t4.l1.p3",
+       "texto": "Mi mayor en primera."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-mi-3oct.json",
+     "titulo": "Arpegio de Mi, tres octavas",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Tres octavas, subir y bajar.",
+     "porque": "Lo pide el nivel.",
+     "atencion": "Los cambios de posición, sobre las cuerdas al aire.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n3.t6.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Por qué en un semitono",
+     "md": "Un cambio de posición cuesta menos si **el dedo recorre poco**. Un semitono es el mínimo. Además, el dedo 1 hace la nota y el 2 sigue, sin que se note. Por eso se elige dónde cambiar: **no donde se llega, sino donde cuesta menos**."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Dónde cambias en una escala: entre Mi y Fa, o entre Fa y Sol?",
+     "opciones": [
+      "Entre Mi y Fa, que es semitono",
+      "Entre Fa y Sol, que es tono"
+     ],
+     "correcta": 0,
+     "porque": "El semitono es el más corto."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t4.l3.p1",
+       "texto": "el mismo principio."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Dos acordes, sin prisa. El cambio de bajo es lo difícil; más si cambia de dedos a la vez. Prepáralo en el último *i*."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tremolo-i-v.json",
+     "titulo": "Trémolo con I y V",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      56
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Solo I-V, lento.",
+     "porque": "Prepara la progresión del Tramo 9.",
+     "atencion": "Si el trémolo se tuerce al cambiar, para y hazlo sin trémolo.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t9.l3.p1",
+       "texto": "el trémolo sobre I-IV-V-I."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l6.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Las notas de adorno del Tramo 3, ahora en el nocturno. De paso: une dos reales. Bordadura: sale y vuelve. Apoyatura: cae en el fuerte y resuelve."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-mertz-nocturno-1.json",
+     "titulo": "Busca",
+     "principal": "partitura",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "En el {c:2}, Sol y Fa pasan rápido antes de volver: bordadura o paso.",
+      "En el {c:4}, la anacrusa con 8. : Fa cae en fuerte y resuelve en Mi: apoyatura."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Sobre La m: Sol y Fa, sin estar en el acorde, y bajan por grados.",
+     "opciones": [
+      "De paso",
+      "Reales",
+      "Apoyaturas"
+     ],
+     "correcta": 0,
+     "porque": "Pasan por grados."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Una nota de fuera en el tiempo fuerte, que baja y resuelve.",
+     "opciones": [
+      "De paso",
+      "Apoyatura",
+      "Bordadura"
+     ],
+     "correcta": 1,
+     "porque": "En el fuerte: apoyatura."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t3.l6.p3",
+       "texto": "notas reales y de adorno."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t6.l6.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cuatro acordes: decide."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mayor",
+       "acorde": "Do"
+      },
+      {
+       "etiqueta": "Menor",
+       "acorde": "La m"
+      },
+      {
+       "etiqueta": "V7",
+       "acorde": "Sol7"
+      },
+      {
+       "etiqueta": "Disminuida",
+       "notas": [
+        [
+         [
+          5,
+          0
+         ],
+         [
+          4,
+          1
+         ],
+         [
+          3,
+          2
+         ],
+         [
+          2,
+          4
+         ]
+        ]
+       ],
+       "duracion": 1.6
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 8
+    }
+   ]
+  },
+  "n3.t6.l6.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tres-planos.json",
+     "titulo": "Tres planos",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      66
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-mi-3oct.json",
+     "titulo": "Mi mayor, tres octavas",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      80
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El nocturno, o lo que lleves, con tres planos.",
+      "La escala, sin que se oiga el cambio."
+     ]
+    }
+   ]
+  }
+ }
+}

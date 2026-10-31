@@ -6,7 +6,7 @@ created: 2026-10-30
 ---
 # Enriquecimiento del contenido
 
-Cómo se convierte un paso del currículo V3.1 en material de estudio completo, sin tocar el currículo congelado. El **Tramo 4 del Nivel 1** es el tramo de referencia, aprobado el 30/10/2026 tras reescribirlo (`docs/AUDITORIA-TRAMO-4.md`): un estándar, no una plantilla. El Curso 1 se enriquece tramo a tramo; `docs/CONCEPTOS-CURSO-1.md` dice dónde se enseña cada concepto por primera vez, y `docs/INFORME-CURSO-1.md`, cómo va.
+Cómo se convierte un paso del currículo V3.1 en material de estudio completo, sin tocar el currículo congelado. El **Tramo 4 del Nivel 1** es el tramo de referencia, aprobado el 30/10/2026 tras reescribirlo (`docs/AUDITORIA-TRAMO-4.md`): un estándar, no una plantilla. Los Cursos 1, 2 y 3 están enriquecidos; `docs/CONCEPTOS-CURSO-1.md` dice dónde se enseña cada concepto por primera vez, y `docs/INFORME-CURSO-1.md`, cómo va.
 
 ## El estándar
 Primero enseñar, después mostrar, hacer, escuchar, comprobar y aplicar. No se presupone nada porque el currículo lo nombre, ni se pregunta lo que no se ha explicado. Cada concepto responde: qué es, cómo se construye, por qué, para qué, dónde está en la guitarra, cómo se toca, cómo se oye, cómo saber si va bien y dónde vuelve. Esa lista es una comprobación interna, no una plantilla en pantalla. Las pruebas no bastan: el criterio es si lo entiende alguien sin conocimientos previos.
@@ -38,7 +38,7 @@ Sobre la tablatura, una fila con el dedo de la mano izquierda, en su color. Deba
 En un texto, `{c:7-8}` crea un botón que señala esos compases en la notación del paso. La validación falla si el compás no existe.
 
 ## Audio
-Las notas de `web/sonidos/guitarra/40.mp3` a `88.mp3` salen de **FluidSynth con el banco GeneralUser GS v2.0.3** (S. Christian Collins; su licencia permite usarlo en proyectos de software), guitarra de nailon, con los ajustes de los audios de `08 - Guitarra/Audio`. Se regeneran con `node herramientas/generar-sonidos.mjs`. La app las combina en acordes, notaciones y pistas, y cada cuerda suena hasta que se vuelve a tocar. No hay ni debe haber síntesis por código.
+Las notas de `web/sonidos/guitarra/38.mp3` a `88.mp3` salen de **FluidSynth con el banco GeneralUser GS v2.0.3** (S. Christian Collins; su licencia permite usarlo en proyectos de software), guitarra de nailon, con los ajustes de los audios de `08 - Guitarra/Audio`. Se regeneran con `node herramientas/generar-sonidos.mjs`. La app las combina en acordes, notaciones y pistas, y cada cuerda suena hasta que se vuelve a tocar. No hay ni debe haber síntesis por código.
 
 ## Reglas para escalar
 - El contenido decide los bloques; la extensión no es un objetivo.

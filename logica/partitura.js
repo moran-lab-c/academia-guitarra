@@ -10,7 +10,8 @@
 //     compases: [{ pos: 'V' | 'C II' (opcional), voces: [[nota, …], …] }] }
 //   nota: { d: '1'|'2'|'4'|'8'|'16'|'32', p: true (puntillo), s: true (silencio) | c: cuerda 1-6, t: traste 0-24 |
 //           acorde: [{ c, t }],  dedo: 0-4, mano: 'p'|'i'|'m'|'a'|'c', lig: 'h'|'p' (ligado a la siguiente),
-//           rotulo: 'Mi' (nombre del acorde encima), tie: true (ligadura de prolongación con la siguiente), art: ['staccato'|'acento'|'tenuto'], din: 'pp'…'ff' }
+//           tres: true (tresillo: tres de estas en el sitio de dos), arm: true (armónico natural; suena lo que da ese traste),
+//           oct: true (armónico octavado: suena una octava por encima de lo pisado), lig también 's' (glissando o arrastre en la misma cuerda), rotulo: 'Mi' (nombre del acorde encima), tie: true (ligadura de prolongación con la siguiente), art: ['staccato'|'acento'|'tenuto'], din: 'pp'…'ff' }
 
 export const DURACIONES = ['1', '2', '4', '8', '16', '32'];
 export const MANO = ['p', 'i', 'm', 'a', 'c'];
@@ -74,7 +75,9 @@ export function grafia(midi, arm) {
   return { letra, acc, octava };
 }
 
-const ticks = n => (4 / Number(n.d)) * (n.p ? 1.5 : 1); // en negras
+const ticks = n => (4 / Number(n.d)) * (n.p ? 1.5 : 1) * (n.tres ? 2 / 3 : 1); // en negras
+// Lo que suena un armónico natural, por encima de la cuerda al aire.
+export const ARMONICO = { 12: 12, 7: 19, 19: 19, 5: 24, 4: 28, 9: 28, 16: 28 };
 const compasEn = compas => { const [num, den] = String(compas).split('/').map(Number); return { num, den, negras: (num * 4) / den }; };
 
 // Errores del archivo (vacío si está bien). Lo usa el servidor al cargar el contenido y el dibujo antes de pintar.
@@ -109,14 +112,15 @@ export function validarNotacion(p, nombre = 'notación') {
         if (!DURACIONES.includes(String(n.d))) err.push(`${donde}: duración «${n.d}» (vale ${DURACIONES.join(', ')})`);
         if (n.dedo != null && !(Number.isInteger(n.dedo) && n.dedo >= 0 && n.dedo <= 4)) err.push(`${donde}: dedo fuera de 0-4`);
         if (n.mano != null && !MANO.includes(n.mano)) err.push(`${donde}: mano derecha «${n.mano}» (vale ${MANO.join(', ')})`);
-        if (n.lig != null && !['h', 'p'].includes(n.lig)) err.push(`${donde}: ligado «${n.lig}» (h ascendente, p descendente)`);
+        if (n.lig != null && !['h', 'p', 's'].includes(n.lig)) err.push(`${donde}: ligado «${n.lig}» (h ascendente, p descendente, s glissando)`);
+        if (n.arm && !ARMONICO[n.t]) err.push(`${donde}: no hay armónico natural en el traste ${n.t}`);
         if ((n.lig || n.tie) && !voz[k + 1] && !p.compases[i + 1]) err.push(`${donde}: un ligado o una ligadura necesita una nota después`);
         const sig = (n.lig || n.tie) && !n.s ? siguienteDe(i, v, k) : null;
         if (sig && typeof sig === 'object' && !sig.s) {
           // Un ligado va en la misma cuerda, hacia arriba (h) o hacia abajo (p); una ligadura une la misma altura.
           if (n.lig && !Array.isArray(n.acorde) && !Array.isArray(sig.acorde) && Number.isInteger(n.t) && Number.isInteger(sig.t)) {
             if (sig.c !== n.c) err.push(`${donde}: un ligado va en la misma cuerda`);
-            else if (n.lig === 'h' ? sig.t <= n.t : sig.t >= n.t) err.push(`${donde}: un ligado «${n.lig}» va ${n.lig === 'h' ? 'hacia un traste más agudo' : 'hacia un traste más grave'}`);
+            else if (n.lig !== 's' && (n.lig === 'h' ? sig.t <= n.t : sig.t >= n.t)) err.push(`${donde}: un ligado «${n.lig}» va ${n.lig === 'h' ? 'hacia un traste más agudo' : 'hacia un traste más grave'}`);
           }
           if (n.tie && alturas(n) !== alturas(sig)) err.push(`${donde}: una ligadura une dos notas iguales`);
         }
@@ -162,14 +166,14 @@ export function prepararNotacion(p, { compases = null } = {}) {
       return voz.map((n, k) => {
         const antes = k > 0 ? voz[k - 1] : i > desde - 1 ? p.compases[i - 1].voces[v]?.at(-1) : null;
         const nota = {
-          duracion: String(n.d), puntillo: !!n.p, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
+          duracion: String(n.d), puntillo: !!n.p, tres: !!n.tres, arm: !!n.arm, oct: !!n.oct, oculto: !!n.oculto, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
           dedo: n.dedo ?? null, dedos: n.dedos ?? null, rotulo: n.rotulo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
           ligadaDesdeAntes: !n.s && !!antes?.tie,
         };
-        inicio += ticks(n);
+        inicio = Math.round((inicio + ticks(n)) * 1e9) / 1e9;
         if (n.s) return nota;
         for (const x of Array.isArray(n.acorde) ? n.acorde : [{ c: n.c, t: n.t }]) {
-          const g = grafia(afinacion[x.c - 1] + x.t + 12, arm); // + 12: escrita una octava por encima
+          const g = grafia(afinacion[x.c - 1] + (n.arm ? ARMONICO[x.t] : x.t + (n.oct ? 12 : 0)) + 12, arm); // + 12: escrita una octava por encima
           nota.claves.push(`${g.letra}${g.acc}/${g.octava}`);
           nota.tab.push({ cuerda: x.c, traste: x.t });
           nota._g = [...(nota._g || []), g];

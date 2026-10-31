@@ -1,0 +1,117 @@
+{
+ "titulo": "El acento de la mazurca",
+ "compas": "3/4",
+ "armadura": "Em",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "acento"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "acento"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i",
+      "art": [
+       "acento"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "acento"
+      ]
+     },
+     {
+      "d": "4",
+      "s": true
+     }
+    ]
+   ]
+  }
+ ]
+}

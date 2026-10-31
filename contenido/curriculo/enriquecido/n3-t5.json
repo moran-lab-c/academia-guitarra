@@ -1,0 +1,508 @@
+{
+ "tramo": "n3.t5",
+ "nota": "Curso 3. Milán Pavana III en la edición de Stefan Nesyba (CC BY-NC-SA); Dowland Winter en la de Edson Lopes. Las dos transcritas a ojo; dedos recalculados como propuesta.",
+ "pasos": {
+  "n3.t5.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La vihuela",
+     "md": "La **vihuela** es la guitarra aristocrática de la España del XVI: seis órdenes de cuerdas dobles y una afinación casi igual a la tuya. **Luis de Milán** (hacia 1500-1561), valenciano, publicó *El Maestro* en 1536: el primer libro de música para vihuela, y con instrucciones de cómo aprender."
+    },
+    {
+     "tipo": "texto",
+     "md": "Lo más curioso es que indicaba el tempo con palabras. Y que ya entonces pedía tocar «algo apriesa» o «a espacio»."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l6.p1",
+       "texto": "Sanz, otro siglo después."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t5.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La cifra de la vihuela",
+     "md": "Es lo que mejor conoces: **números en líneas**. En la de Milán, la línea de **arriba** es la **cuerda aguda**, como en tu tablatura. Encima, unas figuras dan el ritmo. Esta notación es la tuya, con 490 años."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Línea",
+      "Cuerda",
+      "Número"
+     ],
+     "filas": [
+      [
+       "Arriba",
+       "1.ª",
+       "Traste"
+      ],
+      [
+       "Abajo",
+       "6.ª",
+       "Traste"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-milan-pavana-3.json",
+     "titulo": "Compárala con la tuya",
+     "principal": "tablatura",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "{c:1-2}: si escribieras estos compases a mano, es casi la cifra de Milán."
+     ],
+     "compases": [
+      1,
+      2
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Busca una imagen de *El Maestro* y lee unos compases en la cifra original.",
+     "porque": "Saber que la tablatura es antigua cambia cómo la miras.",
+     "atencion": "Si no lo encuentras, pregúntale a tu profesor; la edición en IMSLP lo tiene."
+    },
+    {
+     "tipo": "texto",
+     "md": "[El Maestro en IMSLP](https://imslp.org/wiki/Libro_de_M%C3%BAsica_de_Vihuela_de_mano_%28Mil%C3%A1n,_Luis%29)"
+    }
+   ]
+  },
+  "n3.t5.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "¿Sabías que…?",
+     "md": "La vihuela se afinaba con una tercera entre el 3.º y el 4.º orden, y esa distancia caía en otro sitio que en tu guitarra. Por eso **muchas transcripciones piden bajar la 3.ª cuerda a Fa♯**: así los dedos de la cifra original valen tal cual."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Tu 3.ª al aire: Sol",
+       "notas": [
+        [
+         3,
+         0
+        ]
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "La nota si la bajas: Fa♯",
+       "notas": [
+        [
+         4,
+         4
+        ]
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "La edición de Nesyba no lo pide. Es una costumbre de muchos editores, no una regla. Compruébalo en la edición que uses."
+    }
+   ]
+  },
+  "n3.t5.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Antes de las tonalidades",
+     "md": "Tu música se organiza en mayor o menor. Durante siglos la organización era otra: **los modos**, escalas con otros semitonos en otros sitios. El nombre es griego (dórico, frigio, mixolidio). En el Nivel 4 los estudiarás; aquí, solo oírlos."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Modo",
+      "Empieza en",
+      "Notas",
+      "Suena"
+     ],
+     "filas": [
+      [
+       "**Dórico**",
+       "Re",
+       "Re Mi Fa Sol La Si Do",
+       "Menor, pero luminoso"
+      ],
+      [
+       "**Frigio**",
+       "Mi",
+       "Mi Fa Sol La Si Do Re",
+       "Oscuro, muy español"
+      ],
+      [
+       "**Mixolidio**",
+       "Sol",
+       "Sol La Si Do Re Mi Fa",
+       "Mayor, pero sin sensible"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Do mayor",
+       "notas": [
+        [
+         5,
+         3
+        ],
+        [
+         5,
+         5
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         4,
+         5
+        ],
+        [
+         4,
+         7
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         3,
+         5
+        ]
+       ],
+       "duracion": 0.45
+      },
+      {
+       "etiqueta": "Re dórico",
+       "notas": [
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 0.45
+      },
+      {
+       "etiqueta": "Mi frigio",
+       "notas": [
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.45
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Guía",
+     "md": "Es un vistazo. Si no lo retienes, tranquilo: vuelve en el Nivel 4."
+    }
+   ]
+  },
+  "n3.t5.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Oye la pavana y responde con el oído: no hay una respuesta cerrada."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-milan-pavana-3.json",
+     "titulo": "Pavana",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cómo suena?",
+     "opciones": [
+      "Claramente mayor",
+      "Claramente menor",
+      "Ni una cosa ni la otra"
+     ],
+     "correcta": 2,
+     "porque": "Hay un aire de Do, pero con sus sibemoles y cadencias a sitios raros. Suena «antiguo» por eso: no es del todo tonal."
+    }
+   ]
+  },
+  "n3.t5.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La pavana es una danza lenta y noble: **se camina**. Su pulso es la **blanca**. Parece que cuatro cuartos, pero se piensa en dos, como andar en una procesión."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-pavana.json",
+     "titulo": "Dos pulsos",
+     "principal": "ambas",
+     "motivo": "Ritmo.",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t1.l5.p2",
+       "texto": "el 2/2."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t5.l3.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-milan-pavana-iii",
+       "md": "**Por qué está aquí:** el Renacimiento más temprano: acordes, poca escala y mucha nobleza. **Qué escuchar:** todo el bloque, y lo que sobresale. **Dificultad:** media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-milan-pavana-3.json",
+       "titulo": "Milán, *Pavana III*",
+       "principal": "tablatura",
+       "motivo": "Es para tocar; tablatura principal.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "{c:1-4} la frase que vuelve.",
+        "{c:10} *C III* y una escala con ligado: 4 y al aire, según la edición.",
+        "{c:13-14} Fa♯: un modo que se abre.",
+        "{c:30-31} el compás de 3/2 de la edición, repartido en dos.",
+        "{c:32-43} vuelve, y cierra.",
+        "Fuente: IMSLP, edición de Stefan Nesyba, 2017 (CC BY-NC-SA). Transcrita a ojo; simplificada a dos voces en algunos acordes."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Por frases de cuatro compases, en bloque.",
+       "porque": "Es la aplicación del Renacimiento.",
+       "atencion": "Colocar el acorde **antes** de tocar: no hay prisa.",
+       "empieza": "Blanca = 50.",
+       "sube": "Blanca = 72."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-milan-pavana-iii"
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t5.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El peso de cada voz",
+     "md": "La pavana no tiene melodía y acompañamiento: **todo cuenta**. Cada voz se oye, y cada acorde es un paso. No se hace ni *rubato* ni *vibrato* como en un Tárrega; aquí el color es la nobleza: lento, parejo, respirando en las cadencias."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes oír cada voz, sin que ninguna tape."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t6.l3.p1",
+       "texto": "dos voces en Dowland."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t5.l4.p1": {
+   "pantallas": [
+    {
+     "titulo": "Leer a dos voces",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-dowland-mrs-winter-s-jump",
+       "md": "**Por qué está aquí:** se lee. Una pieza alegre a dos voces. Se usaba en un nivel inferior, así que ahora debería salir leyendo. **Dificultad:** baja-media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-dowland-winter.json",
+       "titulo": "Dowland, *Mrs. Winter's Jump*",
+       "principal": "partitura",
+       "motivo": "Se lee.",
+       "bpms": [
+        60,
+        144
+       ],
+       "notas": [
+        "Allegro en La mayor, 3/4. Dos partes de 8 y de 17 compases.",
+        "{c:4-5} *i* y *m* juntos, *a* arriba.",
+        "Fuente: IMSLP, revisión de Edson Lopes, 1994. Transcrita a ojo. Dedos recalculados: propuesta."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Leer sin tablatura",
+       "items": [
+        "Armadura: tres sostenidos. La mayor.",
+        "Ritmo primero: palmas.",
+        "Toca despacio, sin parar.",
+        "Si te sale a la primera, sigue: el objetivo no es memorizar."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o3-dowland-mrs-winter-s-jump"
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t5.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-milan-pavana-3.json",
+     "titulo": "La pavana",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-winter.json",
+     "titulo": "La obra leída",
+     "principal": "partitura",
+     "bpms": [
+      60,
+      144
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La pavana, con nobleza.",
+      "La obra leída sin parar."
+     ]
+    }
+   ]
+  }
+ }
+}

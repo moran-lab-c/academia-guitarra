@@ -1,0 +1,729 @@
+{
+ "tramo": "n3.t4",
+ "nota": "Curso 3. Sanz, Canarios: MIDI de la edición con MIDI de IMSLP; primeros 96 compases, con repeticiones escritas. Los adornos salen como notas. Progresión por verificar.",
+ "pasos": {
+  "n3.t4.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La guitarra barroca, otra vez",
+     "md": "Gaspar Sanz (1640-1710) ya salió en el Nivel 1. Su *Instrucción de música sobre la guitarra española* (Zaragoza, 1674) es un método, y uno de los pocos que dice cómo tocar de veras. Los **canarios** son una danza vivísima, en 6/8, que vino de las Islas: se bailaba con mucho zapateado."
+    },
+    {
+     "tipo": "texto",
+     "md": "El programa de referencia sitúa esta obra en 2.º de Profesionales, y es rápida. Aquí se usa para aprender el mundo: cifra, rasgueo, campanela; la velocidad es un resultado."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l6.p1",
+       "texto": "la *Españoleta*."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t4.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La cifra de Sanz",
+     "md": "Es una tablatura italiana: **la cuerda más grave va arriba** (al revés que la tuya) y usa números. Encima lleva figuras de ritmo. Y algo muy suyo: **raya con flecha hacia arriba o hacia abajo = rasgueado**. Un punto sobre la línea es adorno."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Signo",
+      "Quiere decir"
+     ],
+     "filas": [
+      [
+       "**Línea de arriba**",
+       "La cuerda grave, al revés que hoy"
+      ],
+      [
+       "**Número**",
+       "Traste"
+      ],
+      [
+       "**Raya hacia abajo**",
+       "Rasgueo de grave a agudo"
+      ],
+      [
+       "**Raya hacia arriba**",
+       "Rasgueo de agudo a grave"
+      ],
+      [
+       "**T**",
+       "Trino"
+      ],
+      [
+       "**Trazo pequeño**",
+       "Mordente"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En la cifra de Sanz, ¿qué cuerda es la línea de arriba?",
+     "opciones": [
+      "La más aguda",
+      "La más grave"
+     ],
+     "correcta": 1,
+     "porque": "Al revés que la tablatura actual."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Los signos exactos varían entre impresos; falta cotejarlos con la edición de 1674. Aquí se dan los básicos."
+    }
+   ]
+  },
+  "n3.t4.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Rasgueado barroco",
+     "md": "No es el del flamenco ni el clásico que has visto. Aquí: **acordes enteros, con todos los dedos juntos**, cerrados, en un movimiento ágil de muñeca. Hacia abajo y hacia arriba, con el ritmo de la danza. Se notaba tanto el pulso que se decía que parecía percusión."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Mano suelta y dedos juntos, casi formando un puño suave.",
+      "Baja con el dorso de las uñas de *i*, *m* y *a*.",
+      "Sube con la yema del pulgar o con *i*.",
+      "Marca el ritmo: largo abajo, corto arriba."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Rasgueado: Re",
+       "acorde": "Re",
+       "arpegiado": true,
+       "duracion": 0.8
+      },
+      {
+       "etiqueta": "Sol",
+       "acorde": "Sol",
+       "arpegiado": true,
+       "duracion": 0.8
+      },
+      {
+       "etiqueta": "La7",
+       "acorde": "La7",
+       "arpegiado": true,
+       "duracion": 0.8
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suena como un acorde con golpe, no como un arpegio."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "La app arpegia el acorde para que oigas las notas: no es un rasgueo real."
+    }
+   ]
+  },
+  "n3.t4.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Campanela",
+     "md": "En vez de tocar una escala en una cuerda, se tocan **las notas en cuerdas distintas** y se dejan sonar: cada nota se solapa con la siguiente. Suena como un arpa o unas campanas. Requiere una digitación imposible a primera vista, y hay que pensarla antes."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "recorrido",
+      "titulo": "Re, Mi, Fa♯, Sol, La… cada una en otra cuerda",
+      "clave": "D",
+      "trastes": [
+       0,
+       9
+      ],
+      "ms": 900,
+      "notas": [
+       {
+        "c": 4,
+        "t": 0
+       },
+       {
+        "c": 5,
+        "t": 7,
+        "dedo": 4
+       },
+       {
+        "c": 4,
+        "t": 4,
+        "dedo": 2
+       },
+       {
+        "c": 3,
+        "t": 0
+       },
+       {
+        "c": 4,
+        "t": 7,
+        "dedo": 3
+       },
+       {
+        "c": 2,
+        "t": 0
+       },
+       {
+        "c": 3,
+        "t": 6,
+        "dedo": 2
+       },
+       {
+        "c": 2,
+        "t": 3,
+        "dedo": 1
+       }
+      ],
+      "final": "Ninguna nota apaga la anterior."
+     }
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Lo mismo, en una cuerda",
+       "notas": [
+        [
+         4,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         4
+        ],
+        [
+         4,
+         5
+        ],
+        [
+         4,
+         7
+        ]
+       ],
+       "duracion": 0.5
+      },
+      {
+       "etiqueta": "En campanela",
+       "notas": [
+        [
+         4,
+         0
+        ],
+        [
+         5,
+         7
+        ],
+        [
+         4,
+         4
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         4,
+         7
+        ]
+       ],
+       "duracion": 0.5
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Oyes la diferencia."
+     ]
+    }
+   ]
+  },
+  "n3.t4.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-campanela.json",
+     "titulo": "Re mayor en campanela",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:1} sube: cuerda distinta en cada nota.",
+      "Mantén cada dedo el mayor tiempo posible.",
+      "{c:3-4} baja."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Re mayor con cada nota en una cuerda distinta.",
+     "porque": "Es uno de los colores del Barroco español.",
+     "atencion": "Mantén los dedos pisados mientras puedas. Las notas tienen que solaparse como un arpa.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las notas se solapan como un arpa."
+     ]
+    }
+   ]
+  },
+  "n3.t4.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La velocidad se construye",
+     "md": "Velocidad no es apretar más. **Son movimientos más cortos** y una mano más suelta. Lo que frena es la tensión: al apretar, los dedos se frenan unos a otros. Por eso se entrena con tramos muy cortos, muy rápidos, y **parando**: la mano aprende cómo es ir rápido sin tiempo de agarrotarse."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Lo que dice este método",
+     "items": [
+      "Cuatro notas, rapidísimas, y parar.",
+      "Relajar antes de la siguiente tanda.",
+      "Luego, ocho notas.",
+      "Tempo no significa nada aquí: lo que manda es que salga limpio y sin tensión."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Es el primer ejercicio de velocidad del programa. Es a partir de aquí: no lo hagas antes de tener la técnica, pero tampoco lo retrases."
+    }
+   ]
+  },
+  "n3.t4.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-rafagas.json",
+     "titulo": "Ráfagas de cuatro y de ocho",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      60,
+      100
+     ],
+     "notas": [
+      "{c:1-2} ráfagas de cuatro: rápido y parar.",
+      "{c:3-4} de ocho."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Grupos de cuatro notas rápidos y parar; en escala con *i-m* y en arpegio; después, grupos de ocho.",
+     "porque": "La velocidad empieza aquí.",
+     "atencion": "Tras cada grupo, comprueba que la mano sigue suelta. Si se aprieta, baja.",
+     "empieza": "Lo que te salga limpio.",
+     "sube": "Sale limpia y la mano sigue suelta al parar."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "La mano se queda rígida.",
+       "arreglo": "Haz menos ráfagas. El resultado no es la cantidad."
+      },
+      {
+       "error": "La última nota se atasca.",
+       "arreglo": "Di el destino antes de empezar: la mano va hacia esa última nota."
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t9.l4.p1",
+       "texto": "ráfagas de ocho, otra vez."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t4.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Rápido, y a veces en tres",
+     "md": "El 6/8 tiene dos pulsos: dos grupos de tres. A tempo vivo se siente en dos. Pero hay un truco: si pones el acento cada dos corcheas, se siente **en tres**: 3/4. El cambio se llama **hemiolia**, y en los canarios aparece mucho."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-68-34.json",
+     "titulo": "De 6/8 a 3/4",
+     "principal": "ambas",
+     "motivo": "Se ve el ritmo.",
+     "bpms": [
+      60,
+      120
+     ],
+     "notas": [
+      "{c:1} 6/8: dos grupos.",
+      "{c:2} 3/4: tres pulsos dentro del mismo tiempo."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "Las mismas seis corcheas",
+      "tiempos": 6,
+      "por": 220,
+      "figuras": [
+       {
+        "d": 1,
+        "nota": [
+         4,
+         0
+        ],
+        "etiqueta": "1",
+        "fuerte": true,
+        "nombre": "Grupo de tres."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         2
+        ],
+        "etiqueta": "2",
+        "nombre": "dos"
+       },
+       {
+        "d": 1,
+        "nota": [
+         2,
+         3
+        ],
+        "etiqueta": "3",
+        "nombre": "tres"
+       },
+       {
+        "d": 1,
+        "nota": [
+         4,
+         0
+        ],
+        "etiqueta": "4",
+        "fuerte": true,
+        "nombre": "Grupo de tres."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         2
+        ],
+        "etiqueta": "5",
+        "nombre": "dos"
+       },
+       {
+        "d": 1,
+        "nota": [
+         2,
+         3
+        ],
+        "etiqueta": "6",
+        "nombre": "tres"
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 120
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l1.p3",
+       "texto": "hemiolia, en el Nivel 1."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t4.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-sanz-canarios",
+       "md": "**Por qué está aquí:** danza barroca española; sirve para rasgueado, campanela y un 6/8 vivo. **Qué escuchar:** el golpe de la danza. **Dificultad:** alta a tempo."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sanz-canarios.json",
+       "titulo": "Sanz, *Canarios*",
+       "principal": "tablatura",
+       "motivo": "Es para tocar; partitura disponible.",
+       "bpms": [
+        50,
+        120
+       ],
+       "notas": [
+        "Re mayor, 6/8, anacrusa. Son variaciones breves sobre un mismo bajo.",
+        "{c:1-8} primera idea.",
+        "Los adornos de la edición se han escrito como notas: los oirás muy rápidos.",
+        "Fuente: IMSLP, edición con MIDI, sobre 1674. Dedos y mano derecha, propuesta. Primeros 96 compases."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Por variaciones, cada una como si fuera una pieza.",
+       "porque": "Se trabaja el pulso, lo primero.",
+       "atencion": "A ♩. = 40 todo el tiempo que haga falta. Después, sube.",
+       "empieza": "♩ = 50.",
+       "sube": "♩ = 120."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-sanz-canarios"
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "El MIDI incluye repeticiones y compases cortos de transición, que aquí se escriben seguidos. La distribución por compases debe cotejarse con la edición."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t4.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Un trino es ligado alterno; un mordente, una vez. **Salen de los ligados**, no de una técnica aparte. En Sanz los adornos no son opcionales: sin ellos, la danza se queda sin brillo."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Adorno",
+      "Cómo"
+     ],
+     "filas": [
+      [
+       "**Trino**",
+       "De arriba abajo, varias veces"
+      ],
+      [
+       "**Mordente**",
+       "Nota, vecina, nota: una sola vez"
+      ],
+      [
+       "**Apoyatura**",
+       "Una nota antes, en el tiempo"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sanz-canarios.json",
+     "titulo": "Prueba en estos compases",
+     "principal": "ambas",
+     "bpms": [
+      50
+     ],
+     "compases": [
+      2,
+      4
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Dónde los pide Sanz está en la edición de 1674. En el MIDI van escritos como notas reales. Hay que cotejarlo."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t3.l6.p2",
+       "texto": "el trino medido."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t4.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Una progresión corta",
+     "md": "Los canarios repiten **un bajo y una armonía cortos**, una y otra vez. Sobre ella se escriben variaciones. Suena a algo así como Re, Sol, La, Re: **I-IV-V-I**. Es tan corto que se memoriza sin querer. Lo mismo pasa con las **chaconas** y los **folías**."
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Re",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "Sol",
+       "g": "IV",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "La7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Re",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      60,
+      110
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La progresión",
+       "acordes": [
+        "Re",
+        "Sol",
+        "La7",
+        "Re"
+       ],
+       "duracion": 0.9
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Por verificar con la edición: es la armonía que se oye en los primeros compases del MIDI, pero las variaciones la adornan."
+    }
+   ]
+  },
+  "n3.t4.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora tú. Sobre esa misma progresión, cuatro compases propios: cambia el ritmo, adorna o mete una campanela. **Se tiene que reconocer la armonía**."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-canarios.json",
+     "titulo": "Un ejemplo",
+     "principal": "ambas",
+     "motivo": "Solo un modelo.",
+     "bpms": [
+      60,
+      100
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Una variación tuya de cuatro compases.",
+     "porque": "Es la misma idea de las variaciones de la obra.",
+     "atencion": "Toca primero la armonía; luego añade algo arriba."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Se oye I-IV-V-I.",
+      "No se parece a la anterior."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t6.l4.p2",
+       "texto": "variar una melodía."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t4.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sanz-canarios.json",
+     "titulo": "*Canarios*",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      120
+     ],
+     "compases": [
+      1,
+      16
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-campanela.json",
+     "titulo": "Campanela",
+     "principal": "tablatura",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La obra a tempo, o el tempo que te dé la mano limpia.",
+      "La escala en campanela, con las notas solapadas."
+     ]
+    }
+   ]
+  }
+ }
+}

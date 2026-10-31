@@ -1,0 +1,97 @@
+{
+ "titulo": "Puntillo de corchea",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "p": true,
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "16",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "p": true,
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "16",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "p": true,
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "16",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "p": true,
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "16",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  }
+ ]
+}

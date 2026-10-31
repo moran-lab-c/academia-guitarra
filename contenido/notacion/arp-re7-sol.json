@@ -1,0 +1,119 @@
+{
+ "titulo": "Re7 resolviendo en Sol",
+ "compas": "4/4",
+ "armadura": "G",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 4,
+      "t": 0,
+      "mano": "p",
+      "rotulo": "Re7"
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 2,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 2,
+      "dedo": 3,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 2,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 4,
+      "t": 0,
+      "mano": "p"
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 2,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "acorde": [
+       {
+        "c": 6,
+        "t": 3
+       },
+       {
+        "c": 5,
+        "t": 2
+       },
+       {
+        "c": 4,
+        "t": 0
+       },
+       {
+        "c": 3,
+        "t": 0
+       },
+       {
+        "c": 2,
+        "t": 0
+       },
+       {
+        "c": 1,
+        "t": 3
+       }
+      ],
+      "dedos": [
+       2,
+       1,
+       0,
+       0,
+       0,
+       3
+      ],
+      "mano": "p",
+      "rotulo": "Sol"
+     },
+     {
+      "d": "2",
+      "s": true
+     }
+    ]
+   ]
+  }
+ ]
+}

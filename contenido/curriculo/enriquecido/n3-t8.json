@@ -1,0 +1,631 @@
+{
+ "tramo": "n3.t8",
+ "nota": "Curso 3. Lauro tiene derechos: nada copiado. Hemiolia, tambora y formas, con material propio.",
+ "pasos": {
+  "n3.t8.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dos compases en uno",
+     "md": "El **vals venezolano** alterna 3/4 y 6/8, a menudo con la mano derecha en uno y el bajo en otro. Es la hemiolia que ya sabes, y más viva: **tres pulsos en el bajo, dos en la melodía**, o al revés. Suena como un baile que tropieza a propósito."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Compás",
+      "Pulsos",
+      "Cuenta"
+     ],
+     "filas": [
+      [
+       "3/4",
+       "Tres",
+       "1 2 3"
+      ],
+      [
+       "6/8",
+       "Dos",
+       "1 y a 2 y a"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l1.p3",
+       "texto": "hemiolia."
+      },
+      {
+       "paso": "n3.t4.l4.p1",
+       "texto": "de 6/8 a 3/4."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t8.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-hemiolia-vals.json",
+     "titulo": "Hemiolia, en tus manos",
+     "principal": "ambas",
+     "motivo": "Ritmo.",
+     "bpms": [
+      60,
+      108
+     ],
+     "notas": [
+      "{c:1} en dos: seis corcheas.",
+      "{c:2} en tres: mismo espacio.",
+      "{c:3} repite dos.",
+      "{c:5} con puntillo."
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Ahora un ejercicio aparte: con la mano derecha, marca tres en el bajo y cuenta dos en voz alta. Cambia."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "Tres y dos, a la vez",
+      "tiempos": 6,
+      "por": 260,
+      "figuras": [
+       {
+        "d": 2,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "1",
+        "fuerte": true,
+        "nombre": "Bajo en tres."
+       },
+       {
+        "d": 2,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "2",
+        "nombre": "Bajo."
+       },
+       {
+        "d": 2,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "3",
+        "nombre": "Bajo."
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tres en el bajo y dos en la voz, sin perderte."
+     ]
+    }
+   ]
+  },
+  "n3.t8.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El puntillo alarga la nota la mitad: corchea con puntillo y semicorchea dan un ritmo saltarín, muy de danza. Los compases de 9/8 y 12/8 son grupos de tres, como el 6/8."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-puntillo-corchea.json",
+     "titulo": "Puntillo de corchea",
+     "principal": "ambas",
+     "motivo": "Ritmo.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Cuenta «1-e-y-a»: la corta entra en la «a»."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-98-128.json",
+     "titulo": "9/8 y 12/8",
+     "principal": "ambas",
+     "motivo": "Más grupos de tres.",
+     "bpms": [
+      60,
+      108
+     ],
+     "notas": [
+      "9/8: tres grupos. 12/8: cuatro. El pulso es la negra con puntillo.",
+      "Son como 3/4 y 4/4 con tresillos dentro."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cuántos grupos de tres hay en un 12/8?",
+     "opciones": [
+      "Dos",
+      "Tres",
+      "Cuatro"
+     ],
+     "correcta": 2,
+     "porque": "Doce corcheas, de tres en tres."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    }
+   ]
+  },
+  "n3.t8.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Antonio Lauro",
+     "md": "Venezolano (1917-1986), compositor y guitarrista. Llevó el **vals de su país** a la guitarra de concierto: una danza popular escrita con el rigor de un clásico. Estuvo preso por razones políticas: siguió componiendo allí, según cuenta la historia. Sus valses son hoy de los más tocados del repertorio."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "La obra está protegida. No se copia ningún compás aquí. Sirve el método de abajo y, para tocarla, tu edición."
+    }
+   ]
+  },
+  "n3.t8.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-lauro-vals-venezolano-n-2",
+       "md": "**Por qué está aquí:** el siglo XX latinoamericano, con hemiolia y carácter. **Qué escuchar:** dónde cambia el compás, dónde cae el acento. **Papel:** aplicación, con tu edición."
+      },
+      {
+       "tipo": "texto",
+       "md": "Busca el *Vals venezolano n.º 2* y escúchalo con preguntas en la mano. Después podrás comparar con lo que está escrito."
+      },
+      {
+       "tipo": "lista",
+       "titulo": "Búscalo",
+       "items": [
+        "[Lauro, Vals venezolano n.º 2](https://www.youtube.com/results?search_query=Antonio+Lauro+Vals+venezolano+n+2+guitar)"
+       ]
+      },
+      {
+       "tipo": "lista",
+       "titulo": "Qué escuchar",
+       "items": [
+        "¿Dónde se siente en dos, y dónde en tres?",
+        "¿Qué parte vuelve?",
+        "¿Qué hace la mano derecha debajo?"
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "El método",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Con tu edición",
+       "items": [
+        "Marca dónde cambia de 3/4 a 6/8.",
+        "Toca solo el ritmo, sobre una nota.",
+        "Haz la armonía en bloque.",
+        "Añade notas."
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/rit-hemiolia-vals.json",
+       "titulo": "Y el mismo mundo, en propio",
+       "principal": "ambas",
+       "motivo": "Material de la academia.",
+       "bpms": [
+        60,
+        108
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "Sin la edición no decimos compases ni dificultades concretas. Falta tu partitura."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t8.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tambora y golpe",
+     "md": "**Tambora:** golpear las cuerdas junto al puente con el lado del pulgar, o con la yema de *p*. Suena como un tambor con notas. **Golpe:** con los dedos o con el canto de la mano, en la tapa. Marcan el baile. Cuidado: una tapa se puede dañar; **el golpe va suave** y en la parte fuerte, cerca del puente."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Tambora",
+     "items": [
+      "Coge el acorde.",
+      "Mano relajada; muñeca suelta.",
+      "Deja caer el lado del pulgar sobre las cuerdas, junto al puente.",
+      "Rebota enseguida."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Golpe",
+     "items": [
+      "Solo yema y blando.",
+      "Prueba con la guitarra cerca del puente.",
+      "Que se oiga sin hacer daño."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Un acorde: la app no imita la tambora; prueba tú",
+       "acorde": "La m",
+       "duracion": 0.8
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suena el acorde, con golpe, y no se apaga enseguida."
+     ]
+    }
+   ]
+  },
+  "n3.t8.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tres formas",
+     "md": "**Binaria:** A B, cada parte repetida. **Ternaria:** A B A: la vuelta da sensación de final. **Rondó:** A B A C A: un estribillo que vuelve. Es la versión musical de canción con estrofas. Las danzas se escriben casi siempre con una de estas."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Forma",
+      "Esquema",
+      "Ejemplo del curso"
+     ],
+     "filas": [
+      [
+       "Binaria",
+       "A A B B",
+       "*Bourrée*, *Minueto*"
+      ],
+      [
+       "Ternaria",
+       "A B A",
+       "*Adelita*"
+      ],
+      [
+       "Rondó",
+       "A B A C A",
+       "Muchas danzas clásicas"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t7.l1.p2",
+       "texto": "binaria."
+      },
+      {
+       "paso": "n3.t2.l4.p1",
+       "texto": "ternaria."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t8.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Las obras de este nivel, por su forma. Recuerda: binaria es A y B, ternaria vuelve a A, y el rondó repite un estribillo entre partes distintas."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "*Adelita*, con Da Capo…",
+     "opciones": [
+      "Binaria",
+      "Ternaria",
+      "Rondó"
+     ],
+     "correcta": 1,
+     "porque": "A-B-A."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "*Bourrée*, con dos partes repetidas…",
+     "opciones": [
+      "Binaria",
+      "Ternaria",
+      "Rondó"
+     ],
+     "correcta": 0,
+     "porque": "AABB."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Si una parte vuelve tres veces con otras entre medias…",
+     "opciones": [
+      "Binaria",
+      "Ternaria",
+      "Rondó"
+     ],
+     "correcta": 2,
+     "porque": "Rondó."
+    },
+    {
+     "tipo": "completar",
+     "enunciado": "La *Bourrée* acaba cada parte en un sitio distinto. La segunda acaba en ",
+     "partes": [
+      {
+       "correcta": "Mi menor",
+       "opciones": [
+        "Mi menor",
+        "Sol mayor",
+        "Re mayor"
+       ]
+      },
+      "."
+     ],
+     "final": "Viaje: de Mi a Sol y vuelta a Mi."
+    }
+   ]
+  },
+  "n3.t8.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Esto te sirve",
+     "md": "Una obra que se entiende se recuerda. Si sabes «ya acabó A; empieza B en La», tu memoria **tiene un mapa**. Y si en un recital te pierdes, puedes volver a entrar por el siguiente sitio del mapa."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes hacer el esquema de tu obra de memoria, en papel."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l2.p1",
+       "texto": "la memoria."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t8.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "¿Sabías que…?",
+     "md": "En el Barroco a menudo **no se escribían los acordes**. Se escribía el bajo y, encima, unos números que decían los intervalos: el músico los **improvisaba**. A eso se le llama **bajo cifrado**, o bajo continuo. El laudista y el guitarrista del XVII lo hacían de corrido."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Cifrado",
+      "Qué es",
+      "Sobre Do"
+     ],
+     "filas": [
+      [
+       "Nada",
+       "Fundamental",
+       "Do, Mi, Sol"
+      ],
+      [
+       "6",
+       "Primera inversión",
+       "Mi, Sol, Do"
+      ],
+      [
+       "6/4",
+       "Segunda",
+       "Sol, Do, Mi"
+      ],
+      [
+       "7",
+       "Séptima",
+       "Sol, Si, Re, Fa"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t6.l2.p2",
+       "texto": "las inversiones."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t8.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Tocas los acordes de un bajo cifrado mientras suena una melodía grabada. Si te pierdes, deja el acorde sonando hasta el siguiente."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-bajo-cifrado.json",
+     "titulo": "El bajo",
+     "principal": "ambas",
+     "motivo": "El bajo con el nombre del acorde.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "pista",
+     "fuente": "notacion/sol-melodia-canto.json",
+     "bpm": 60,
+     "etiquetas": [
+      "La m",
+      "Do",
+      "Re m",
+      "Mi",
+      "La m",
+      "Do",
+      "Mi7",
+      "La m"
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "La m",
+       "g": "i",
+       "papel": "reposo"
+      },
+      {
+       "n": "Do",
+       "g": "III",
+       "papel": "color"
+      },
+      {
+       "n": "Mi7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "La m",
+       "g": "i",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Acompañas sin perder la melodía."
+     ]
+    }
+   ]
+  },
+  "n3.t8.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cantar una melodía leída, con la app acompañando."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/sol-melodia-canto.json",
+     "titulo": "La melodía",
+     "principal": "partitura",
+     "motivo": "Es para cantar.",
+     "bpms": [
+      60
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Lee los ocho compases sin guitarra.",
+      "La app te da el acorde. Canta.",
+      "Comprueba con la guitarra."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Tu referencia: La menor",
+       "acorde": "La m",
+       "arpegiado": true
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Llegas al final sin que te sople nada."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Si no llega el agudo, bájalo una octava; lo que importa es la distancia."
+    }
+   ]
+  },
+  "n3.t8.l5.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "obra",
+     "id": "o3-lauro-vals-venezolano-n-2",
+     "md": "Con tu edición."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-hemiolia-vals.json",
+     "titulo": "Y el trabajo de aquí",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      108
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sientes dos y tres a la vez.",
+      "Tocas el vals, si tienes su edición."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t10.l1.p4",
+       "texto": "en el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

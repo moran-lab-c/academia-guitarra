@@ -1,0 +1,760 @@
+{
+ "tramo": "n2.t10",
+ "nota": "Curso 2. Sor op. 35 n.º 8 sale de Mutopia sobre Simrock (Boije 481-2). Corregida una nota: el primer Mi del compás 2 estaba una octava alta, según la pauta de los demás.",
+ "pasos": {
+  "n2.t10.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "Si menor",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/esc-si-menor-2oct.json",
+       "titulo": "Si menor, armónica",
+       "principal": "ambas",
+       "motivo": "Escala con cambio de posición.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "Fa♯ y Do♯ en la armadura. La armónica sube el 7.º: La♯.",
+        "{c:2} el dedo 1 se traslada de 1-2 a 1-3: en semitono, sin oírse.",
+        "Sube igual, baja igual."
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "**Sol menor** es igual: dos bemoles en la armadura y dos formas. La armónica sube el 7.º. La melódica sube el 6.º y el 7.º al ascender, y al bajar recupera lo natural."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/esc-sol-menor-2oct.json",
+       "titulo": "Sol menor, melódica",
+       "principal": "ambas",
+       "motivo": "Mismo principio.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "Sube con Mi y Fa♯; al bajar, Mi♭ y Fa."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Las dos, en ambas formas.",
+       "porque": "Son las menores de este nivel.",
+       "atencion": "Di el 7.º en voz alta al llegar.",
+       "empieza": "♩ = 50.",
+       "sube": "Sin que se oiga el cambio."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Oyes la diferencia entre natural, armónica y melódica."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t7.l1.p2",
+         "texto": "Mi menor en sus tres formas."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t10.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "Más grandes o más pequeños",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Aumentados y disminuidos",
+       "md": "Ya sabes intervalos mayores, menores y justos. Si un intervalo **crece un semitono más**, es **aumentado**; si **encoge**, **disminuido**. Do–Sol es una 5.ª justa (7); Do–Sol♯, 5.ª aumentada (8); Do–Sol♭, 5.ª disminuida (6)."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Intervalo",
+        "Semitonos",
+        "Ejemplo"
+       ],
+       "filas": [
+        [
+         "4.ª justa",
+         "5",
+         "Do–Fa"
+        ],
+        [
+         "4.ª aumentada",
+         "6",
+         "Do–Fa♯"
+        ],
+        [
+         "5.ª disminuida",
+         "6",
+         "Do–Sol♭"
+        ],
+        [
+         "5.ª justa",
+         "7",
+         "Do–Sol"
+        ],
+        [
+         "5.ª aumentada",
+         "8",
+         "Do–Sol♯"
+        ],
+        [
+         "6.ª menor",
+         "8",
+         "Do–La♭"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "distancias",
+        "titulo": "Quinta justa y sus vecinas",
+        "cuerda": 5,
+        "desde": 3,
+        "trastes": [
+         3,
+         12
+        ],
+        "clave": "C",
+        "pasos": [
+         {
+          "a": 9,
+          "arco": "5.ª dism.: 6",
+          "texto": "Seis semitonos: Do–Sol♭, 5.ª disminuida.",
+          "ms": 2500
+         },
+         {
+          "a": 10,
+          "arco": "5.ª justa: 7",
+          "de": 3,
+          "texto": "Siete: Do–Sol, 5.ª justa.",
+          "ms": 2500
+         },
+         {
+          "a": 11,
+          "arco": "5.ª aum.: 8",
+          "de": 3,
+          "texto": "Ocho: Do–Sol♯, 5.ª aumentada.",
+          "ms": 2500
+         }
+        ],
+        "final": "El nombre depende de la letra, no solo de los trastes."
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Enarmonía",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Dos nombres, una tecla",
+       "md": "Do♯ y Re♭ son el mismo traste. **Se llaman distinto porque hacen cosas distintas**: Do♯ sube a Re; Re♭ baja a Do. Fa♯ (la sensible de Sol) y Sol♭ (una 5.ª disminuida de Do) suenan igual, pero uno es una tensión hacia arriba y el otro hacia abajo. A esto se le llama **enarmonía**."
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Do♯ sube a Re",
+         "notas": [
+          [
+           2,
+           2
+          ],
+          [
+           2,
+           3
+          ]
+         ],
+         "duracion": 0.8
+        },
+        {
+         "etiqueta": "Re♭ baja a Do",
+         "notas": [
+          [
+           2,
+           2
+          ],
+          [
+           2,
+           1
+          ]
+         ],
+         "duracion": 0.8
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t10.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cuenta primero las letras (el número), después los semitonos (la especie)."
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Do–Fa♯: de Do a Fa son cuatro letras, y hay seis semitonos. ¿Qué es?",
+     "opciones": [
+      "4.ª aumentada",
+      "5.ª disminuida",
+      "4.ª justa"
+     ],
+     "correcta": 0,
+     "porque": "Cuatro letras: una cuarta. Seis semitonos, uno más que justa: aumentada."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Do–Sol♭: cinco letras, seis semitonos.",
+     "opciones": [
+      "4.ª aumentada",
+      "5.ª disminuida",
+      "5.ª justa"
+     ],
+     "correcta": 1,
+     "porque": "Cinco letras: quinta. Uno menos que justa: disminuida."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l3.p2",
+       "texto": "intervalos, la primera vez."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t10.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Séptima disminuida",
+     "md": "Son **cuatro notas a tres semitonos**: una escalera de terceras menores que da la vuelta al mástil. La Do Mi♭ Sol♭. Como todas las distancias son iguales, **no hay una nota principal**: cualquiera de las cuatro puede ser la base, y por eso este acorde puede resolver a muchos sitios. Por esa misma razón da la impresión de incertidumbre, de drama."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "distancias",
+      "titulo": "De tres en tres, en una cuerda",
+      "cuerda": 5,
+      "desde": 0,
+      "trastes": [
+       0,
+       12
+      ],
+      "clave": "C",
+      "pasos": [
+       {
+        "a": 3,
+        "arco": "3",
+        "texto": "La a Do: 3.",
+        "ms": 2000
+       },
+       {
+        "a": 6,
+        "arco": "3",
+        "de": 3,
+        "texto": "Do a Mi♭: 3.",
+        "ms": 2000
+       },
+       {
+        "a": 9,
+        "arco": "3",
+        "de": 6,
+        "texto": "Mi♭ a Sol♭: 3.",
+        "ms": 2000
+       },
+       {
+        "a": 12,
+        "arco": "3",
+        "de": 9,
+        "texto": "Sol♭ a La: 3. Vuelta completa.",
+        "ms": 2000
+       }
+      ],
+      "final": "La figura se repite cada tres trastes."
+     }
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La disminuida, en arpegio",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         4,
+         1
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "duracion": 0.6
+      },
+      {
+       "etiqueta": "Todo a la vez",
+       "notas": [
+        [
+         [
+          5,
+          0
+         ],
+         [
+          4,
+          1
+         ],
+         [
+          3,
+          2
+         ],
+         [
+          2,
+          4
+         ]
+        ]
+       ],
+       "duracion": 1.6
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t10.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-dim-la.json",
+     "titulo": "Séptima disminuida desde La",
+     "principal": "ambas",
+     "motivo": "Arpegio de dos octavas.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "La digitación repite el mismo dibujo por cuerdas. Son saltos de tres trastes en la misma cuerda."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Arpegio, subiendo y bajando, de memoria.",
+     "porque": "Es el segundo arpegio de séptima del nivel.",
+     "atencion": "Mantén la mano abierta y deja que el dedo 4 llegue.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t10.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dos tensiones",
+     "md": "El V7 tiene una tensión con destino: quiere ir a un sitio. El disminuido tiene una tensión sin destino: **podría ir a varios**. Cuando lo oigas, pregúntate: ¿sé a dónde va?"
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Sol7, que va a Do",
+       "acordes": [
+        "Sol7",
+        "Do"
+       ],
+       "duracion": 1.1
+      },
+      {
+       "etiqueta": "La disminuida",
+       "notas": [
+        [
+         [
+          5,
+          0
+         ],
+         [
+          4,
+          1
+         ],
+         [
+          3,
+          2
+         ],
+         [
+          2,
+          4
+         ]
+        ]
+       ],
+       "duracion": 1.6
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    }
+   ]
+  },
+  "n2.t10.l4.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-sor-op-35-n-8",
+       "md": "**Por qué está aquí:** un estudio breve con varias partes, para oír modulación real. **Qué escuchar:** el La♯ del {c:9}, señal de que la música se va a Si. **Dificultad:** media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sor-op35-8.json",
+       "titulo": "Sor, op. 35 n.º 8",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        60,
+        108
+       ],
+       "notas": [
+        "Allegretto en 3/8, en Mi mayor. Empieza con anacrusa.",
+        "{c:1-8} tema: arpegio y notas altas.",
+        "{c:9-16} se va hacia **Si mayor**.",
+        "{c:17-24} vuelve el tema, en Mi.",
+        "{c:25-40} sección en **La mayor**: fíjate en el tresillo de {c:33}.",
+        "{c:41-64} vuelve lo primero y cierra.",
+        "Fuente: Mutopia (Simrock, Boije 481-2), CC BY-SA 3.0. Dedos de Sor; la mano derecha, propuesta. Corregida una nota del {c:2}: véase el aviso del tramo."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por secciones",
+       "items": [
+        "Sección a sección, con repetición.",
+        "Une la vuelta del {c:16} al {c:17}.",
+        "Haz notar el cambio de carácter en {c:25}."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o2-sor-op-35-n-8"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "El tresillo de {c:33} se te escapa.",
+         "arreglo": "Aíslalo: un compás, tres pulsos de corchea."
+        },
+        {
+         "error": "Corres en el arpegio de Mi.",
+         "arreglo": "Cuenta 3/8 con pulso de corchea, no de negra."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t10.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Modular a la dominante",
+     "md": "**Modular** es cambiar de tonalidad dentro de una pieza. El signo es una alteración nueva, que vuelve: en Mi mayor, el **La♯** es la sensible de Si: la música se está yendo a la dominante, y tiene un punto de llegada en {c:16}. Es el viaje de siempre."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op35-8.json",
+     "titulo": "Mira el viaje",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      84
+     ],
+     "notas": [
+      "{c:9-12} aparece La♯, y el acorde de Fa♯: es el V de Si.",
+      "{c:16} cierra en Si: reposa en la dominante.",
+      "{c:17} vuelve Mi, como si nada."
+     ],
+     "compases": [
+      8,
+      18
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Si en una pieza en Mi mayor aparece insistente el La♯, ¿a dónde se va?",
+     "opciones": [
+      "A La",
+      "A Si",
+      "A Do♯ m"
+     ],
+     "correcta": 1,
+     "porque": "La♯ es la sensible de Si: lleva a la dominante."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "La forma se ha deducido leyendo la partitura. Sor no etiqueta las partes."
+    }
+   ]
+  },
+  "n2.t10.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una palabra italiana al principio dice velocidad y carácter. No son números: un *allegro* de Mozart no es el de Paganini, pero sí dicen de qué va."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Término",
+      "Quiere decir",
+      "Aprox. ♩"
+     ],
+     "filas": [
+      [
+       "*Largo, Adagio*",
+       "Lento",
+       "hasta 60"
+      ],
+      [
+       "*Andante*",
+       "Andando",
+       "70-90"
+      ],
+      [
+       "*Andantino*",
+       "Un poco más ligero que andante",
+       "80-100"
+      ],
+      [
+       "*Moderato*",
+       "Moderado",
+       "90-110"
+      ],
+      [
+       "*Allegretto*",
+       "Algo alegre",
+       "100-120"
+      ],
+      [
+       "*Allegro*",
+       "Alegre, rápido",
+       "120-160"
+      ],
+      [
+       "*Presto*",
+       "Muy rápido",
+       "170+"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "La obra dice *Allegretto*. ¿Qué es?",
+     "opciones": [
+      "Muy lento",
+      "Algo alegre",
+      "Rapidísimo"
+     ],
+     "correcta": 1,
+     "porque": "Menos que *allegro*: algo alegre."
+    },
+    {
+     "tipo": "ordenar",
+     "enunciado": "Ordena de más lento a más rápido.",
+     "items": [
+      "Adagio",
+      "Andante",
+      "Moderato",
+      "Allegro",
+      "Presto"
+     ],
+     "barajadas": [
+      3,
+      1,
+      4,
+      0,
+      2
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Los números son orientativos. Lo del programa es el carácter, y tu profesor manda."
+    }
+   ]
+  },
+  "n2.t10.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Cantar sin ayuda",
+     "md": "Se trata de oír en la cabeza antes de que suene. Si lees «Re, Fa♯, La», tu voz busca esas notas. Empieza dándote la tónica y el acorde, y después canta seis notas por grados: 1-3-5-1-2-3."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Tu referencia: Re mayor",
+       "acorde": "Re",
+       "arpegiado": true
+      },
+      {
+       "etiqueta": "Comprueba las seis",
+       "notas": [
+        [
+         2,
+         3
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         2,
+         3
+        ],
+        [
+         1,
+         2
+        ]
+       ],
+       "duracion": 0.7
+      }
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/sol-seis-re.json",
+     "titulo": "Seis notas para leer",
+     "principal": "partitura",
+     "motivo": "Para cantar: partitura.",
+     "bpms": [
+      50
+     ],
+     "notas": [
+      "Una línea de seis notas en cada compás."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Toca el acorde.",
+      "Canta sin tocar.",
+      "Comprueba con la guitarra."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Antes de cantar ya oyes la nota."
+     ]
+    }
+   ]
+  },
+  "n2.t10.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación del tramo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-dim-la.json",
+     "titulo": "Arpegio disminuido",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op35-8.json",
+     "titulo": "La obra",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      108
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La obra, oyendo cada modulación.",
+      "Séptima disminuida de memoria.",
+      "Seis notas cantadas, sin apoyo."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l2.p1",
+       "texto": "el arpegio disminuido en la prueba."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

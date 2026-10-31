@@ -1,0 +1,517 @@
+{
+ "tramo": "n2.t13",
+ "nota": "Curso 2. Cierre del nivel: recital y prueba. Cada elección es del alumno; ninguna obra es obligatoria.",
+ "pasos": {
+  "n2.t13.l1.p1": {
+   "pantallas": [
+    {
+     "titulo": "El recital",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "El final de este nivel es un recital corto, de varias épocas, con dos obras de memoria. **Elige lo que tocas bien, no lo que suena más difícil.** No tiene que ser para mucha gente: una persona, o el móvil."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Época",
+        "Opciones"
+       ],
+       "filas": [
+        [
+         "**Renacimiento o Barroco**",
+         "Dowland, Petzold"
+        ],
+        [
+         "**Clasicismo**",
+         "Giuliani, Sor, Aguado"
+        ],
+        [
+         "**Romanticismo**",
+         "El *Romance*, Tárrega, Coste"
+        ],
+        [
+         "**Siglo XX**",
+         "Brouwer, opcional"
+        ]
+       ]
+      },
+      {
+       "tipo": "texto",
+       "md": "Empieza por el Renacimiento o el Barroco."
+      }
+     ]
+    },
+    {
+     "titulo": "Tu obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-dowland-willoughby",
+       "md": "Dos voces y variación."
+      },
+      {
+       "tipo": "obra",
+       "id": "o2-petzold-minueto-bwv-anh-114",
+       "md": "Si eliges algo que se ha leído, tócalo con más cuidado que cuando lo leías."
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Las voces no se cortan.",
+        "Puedes decir de dónde viene."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t13.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Clasicismo: claridad."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-giuliani-sonatina-op-71-i",
+     "md": "El tema, o más, con la edición."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-sor-op-35-n-8",
+     "md": "Modulación clara."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-aguado-contradanza-op-8-n-5",
+     "md": "Danza; cuida el contratiempo."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El pulso aguanta.",
+      "Se notan los finales de frase."
+     ]
+    }
+   ]
+  },
+  "n2.t13.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Romanticismo: color. El *Romance* es el candidato natural a memoria."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-anonimo-romance",
+     "md": "Melodía por encima, siempre."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-tarrega-preludio-n-1",
+     "md": "Una idea, y un final."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-coste-op-38-n-1",
+     "md": "Solo si tienes la edición."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Hay un crescendo que llega a su sitio.",
+      "Hay rubato, y se devuelve."
+     ]
+    }
+   ]
+  },
+  "n2.t13.l1.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El siglo XX, si lo tienes. Si no, no pasa nada: el nivel no depende de una obra."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-brouwer-estudio-sencillo-vii",
+     "md": "Con tu edición."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Decisión tuya",
+     "md": "Si tu profesor te ha dado otra obra de nivel, cuenta igual. Lo que se reconoce es lo que sabes hacer."
+    }
+   ]
+  },
+  "n2.t13.l1.p5": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dos de memoria",
+     "md": "Elige dos de memoria. Para saber que lo están, usa las cuatro memorias: mano, oído, vista y **cabeza**: tienes que poder empezar por cualquier sección."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Grábate",
+     "items": [
+      "Toca las obras con el móvil grabando, sin parar.",
+      "Déjalo una hora.",
+      "Escúchalo como si fuera de otra persona: anota **dos cosas buenas y una por mejorar**.",
+      "Trabaja solo esa una."
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Qué escuchar",
+     "items": [
+      "¿Se canta la melodía?",
+      "¿Se oye un plan: dónde crece, dónde llega?",
+      "¿Acabas la obra, o se te acaba?"
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Dos obras seguidas de memoria.",
+      "Dos cosas buenas, y una por mejorar, sobre papel."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l2.p1",
+       "texto": "las cuatro memorias."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t13.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La prueba corta. Es para saber qué repasar, no un examen. Lo haces cuando quieras, en el orden que quieras."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Qué",
+      "Cómo"
+     ],
+     "filas": [
+      [
+       "Si♭ mayor",
+       "Dos octavas, con cambio"
+      ],
+      [
+       "Fa♯ menor",
+       "Dos octavas, con cambio"
+      ],
+      [
+       "Séptima disminuida",
+       "Desde La, de memoria"
+      ],
+      [
+       "Cejilla",
+       "En tres trastes: I, III, V"
+      ],
+      [
+       "Trémolo",
+       "Ocho compases, lento"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-sib-2oct.json",
+     "titulo": "Si♭ mayor",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      72
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-fasm-2oct.json",
+     "titulo": "Fa♯ menor",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      72
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-dim-la.json",
+     "titulo": "Disminuida",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      72
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-cejilla-respira.json",
+     "titulo": "Cejilla",
+     "principal": "tablatura",
+     "bpms": [
+      40,
+      60
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-melodia-tremolo.json",
+     "titulo": "Trémolo",
+     "principal": "ambas",
+     "bpms": [
+      40,
+      60
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El cambio no se oye.",
+      "La cejilla no duele.",
+      "El trémolo suena como melodía."
+     ]
+    }
+   ]
+  },
+  "n2.t13.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ocho compases en 1.ª posición y en 6/8. No los mires antes de empezar: cinco segundos, y a tocar."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-vista-68.json",
+     "titulo": "Primera vista",
+     "principal": "partitura",
+     "motivo": "Primera vista.",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sin parar.",
+      "Se siente en dos pulsos."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Si te lo sabes, busca otra línea. Una primera vista solo se usa una vez."
+    }
+   ]
+  },
+  "n2.t13.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cuatro compases preparados en la V. Puedes mirarlos antes. Aquí sí se prepara."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-pos5.json",
+     "titulo": "En la V",
+     "principal": "partitura",
+     "bpms": [
+      50,
+      66
+     ],
+     "compases": [
+      1,
+      4
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sin mirar la mano.",
+      "Con el ritmo."
+     ]
+    }
+   ]
+  },
+  "n2.t13.l2.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Oído. Son los de todo el nivel. Antes de mirar la respuesta, di en voz alta lo que crees."
+    },
+    {
+     "tipo": "preguntas",
+     "n": 8
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mayor, menor o V7",
+       "acordes": [
+        "Do",
+        "La m",
+        "Sol7"
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "I-IV-I",
+       "acordes": [
+        "Do",
+        "Fa△7",
+        "Do"
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "I-V-I",
+       "acordes": [
+        "Do",
+        "Sol7",
+        "Do"
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Última pregunta, de oído y de memoria: ¿esa obra es clásica o romántica? Ponte Giuliani y Tárrega; tú dices cuál es cuál."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Frases iguales, armonía sencilla, pulso estricto.",
+     "opciones": [
+      "Clásica",
+      "Romántica"
+     ],
+     "correcta": 0,
+     "porque": "Eso es clásico."
+    }
+   ]
+  },
+  "n2.t13.l2.p5": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Teoría. Ya lo tienes todo: si dudas, vuelve al tramo donde lo viste."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Tres bemoles. ¿Qué mayor?",
+     "opciones": [
+      "Mi♭",
+      "Si♭",
+      "La♭"
+     ],
+     "correcta": 0,
+     "porque": "Si, Mi, La: el penúltimo, Mi♭."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Do–Fa♯ es…",
+     "opciones": [
+      "4.ª aumentada",
+      "5.ª disminuida",
+      "4.ª justa"
+     ],
+     "correcta": 0,
+     "porque": "Cuatro letras, seis semitonos."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Sol, Si, Re, Fa es…",
+     "opciones": [
+      "V7",
+      "Mayor con 7.ª",
+      "Semidisminuido"
+     ],
+     "correcta": 0,
+     "porque": "Mayor con 7.ª menor: séptima de dominante."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En Do mayor, Re m–Sol7–Do es…",
+     "opciones": [
+      "ii-V-I",
+      "IV-V-I",
+      "I-vi-IV"
+     ],
+     "correcta": 0,
+     "porque": "Re m es el segundo grado."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Una cadencia que acaba en el V es…",
+     "opciones": [
+      "Conclusiva",
+      "Suspensiva"
+     ],
+     "correcta": 1,
+     "porque": "No reposa: queda en el aire."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En el cifrado Do/Mi, ¿qué nota está en el bajo?",
+     "opciones": [
+      "Do",
+      "Mi",
+      "Sol"
+     ],
+     "correcta": 1,
+     "porque": "Lo que hay tras la barra está en el bajo: Do en primera inversión."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t2.l5.p1",
+       "texto": "el círculo."
+      },
+      {
+       "paso": "n2.t5.l3.p1",
+       "texto": "las cuatriadas."
+      },
+      {
+       "paso": "n2.t10.l2.p1",
+       "texto": "los intervalos."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t13.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Has llegado al final del Nivel 2. El siguiente sigue todas las líneas: posiciones hasta la IX, tres voces, el trino, los primeros octavados, el trémolo sobre una progresión, la lectura en la VII, las dominantes secundarias, las 2.ª y la séptima disminuida al oído, y obras de *Adelita* a Bach."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Guía",
+     "md": "No hay que salir de un nivel para entrar en otro. Si algo se ha quedado cojo, Continuar te lleva por el orden, y tú puedes volver cuando quieras."
+    }
+   ]
+  }
+ }
+}

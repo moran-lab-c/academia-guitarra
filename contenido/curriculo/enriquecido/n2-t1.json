@@ -1,0 +1,1475 @@
+{
+ "tramo": "n2.t1",
+ "nota": "Curso 2. Cejilla completa y formas móviles. La Contradanza se transcribe de la edición de Richault; lo dudoso se dice en el paso.",
+ "pasos": {
+  "n2.t1.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "obra",
+     "id": "o1-tarrega-lagrima",
+     "md": "Empieza el Nivel 2 tocando lo que ya sabes, sin calentar."
+    },
+    {
+     "tipo": "texto",
+     "md": "Toca *Lágrima* de memoria, de principio a fin, como la tocarías si alguien te lo pidiera. No se trata de hacerlo perfecto: es la foto de dónde estás al empezar. Si dudas en un sitio, no pares; apúntalo."
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "*Lágrima* entera y sin partitura.",
+     "porque": "El Nivel 2 construye sobre esta mano: si se ha ido algo, es mejor saberlo ahora.",
+     "atencion": "El paso de Mi mayor a Mi menor y la melodía por encima del bajo.",
+     "empieza": "La velocidad a la que no te paras."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La tocas entera sin mirar la partitura.",
+      "La melodía se oye por encima del acompañamiento."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l1.p1",
+       "texto": "donde montaste la obra."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Recuerda el trémolo del Nivel 1: *p* toca el bajo y luego *a-m-i* repiten una misma nota. Hoy solo se trata de comprobar que la mano no se ha olvidado: *p* alterna dos cuerdas al aire mientras los otros tres dedos siguen iguales."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "manoDerecha",
+      "titulo": "p-a-m-i, con el bajo alternando",
+      "acorde": "Mi m",
+      "clave": "G",
+      "veces": 2,
+      "ms": 500,
+      "cuerdas": [
+       {
+        "c": 6,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "mano": "i"
+       },
+       {
+        "c": 5,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "mano": "i"
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Trémolo sobre la 1.ª al aire: *p* en la 6.ª, *a-m-i* en la 1.ª; a los dos compases, *p* pasa a la 5.ª.",
+     "porque": "Lo retomamos con el bajo cambiando en el Tramo 8.",
+     "atencion": "Que las tres notas agudas pesen igual.",
+     "empieza": "♩ = 50, un grupo por tiempo.",
+     "sube": "Tres notas iguales durante un minuto."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t1.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El Nivel 1 te dejó sonido, lectura, oído y obras en primera posición. Aquí sigue todo, un escalón más arriba. **No es un curso de una técnica**: cada área avanza un poco en cada tramo."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Área",
+      "Al terminar el nivel"
+     ],
+     "filas": [
+      [
+       "**Mano izquierda**",
+       "Cejilla en cualquier traste hasta el VII y cambios de posición que no se oyen"
+      ],
+      [
+       "**Mano derecha**",
+       "Melodía en *a* sobre tresillos, trémolo con melodía, primeros colores"
+      ],
+      [
+       "**Lectura**",
+       "Posiciones II y V, bemoles y acordes escritos"
+      ],
+      [
+       "**Teoría**",
+       "Todas las armaduras, intervalos completos, cuatriadas y cifrado"
+      ],
+      [
+       "**Armonía**",
+       "ii-V-I, dominante de la dominante, armonizar una melodía"
+      ],
+      [
+       "**Oído**",
+       "Sextas, V7, si la música va al IV o al V, y de qué época es"
+      ],
+      [
+       "**Obras**",
+       "Un recital de varias épocas, con dos de memoria"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Guía",
+     "md": "La primera obra es una danza: la *Contradanza* de Aguado. Empezamos por lo que más le pide a la mano izquierda, la cejilla entera."
+    }
+   ]
+  },
+  "n2.t1.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ya sabes la cejilla del V del Nivel 1: el dedo 1 aplastando varias cuerdas en un mismo traste. Antes de bajarla, compruébala sonando cuerda a cuerda."
+    },
+    {
+     "tipo": "anatomia",
+     "acorde": "La (cejilla V)",
+     "clave": "A"
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Comprueba",
+     "items": [
+      "Pisa la forma completa.",
+      "Toca las seis cuerdas de una en una.",
+      "Si alguna no suena, arregla solo esa: gira el dedo hacia el canto o acércalo al traste."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Las seis cuerdas suenan limpias.",
+      "El pulgar no aprieta más de lo que hace falta."
+     ]
+    }
+   ]
+  },
+  "n2.t1.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "Por qué cuesta más abajo",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "La cuerda se resiste más cerca de la cejuela",
+       "md": "Cuanto más grave el traste, más duras están las cuerdas: la distancia hasta la madera es mayor y los trastes están más separados. Por eso el V es fácil y el I es el más exigente. **Fuerza no es la solución**: te cansará antes de que suene."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "libre",
+        "titulo": "De traste en traste, hacia la cejuela",
+        "trastes": [
+         0,
+         8
+        ],
+        "clave": "C",
+        "cuadros": [
+         {
+          "marcas": [
+           {
+            "c": 1,
+            "t": 5
+           },
+           {
+            "c": 2,
+            "t": 5
+           },
+           {
+            "c": 3,
+            "t": 5
+           },
+           {
+            "c": 4,
+            "t": 5
+           },
+           {
+            "c": 5,
+            "t": 5
+           },
+           {
+            "c": 6,
+            "t": 5
+           }
+          ],
+          "texto": "Cejilla en el V: la que ya conoces.",
+          "ms": 2500
+         },
+         {
+          "marcas": [
+           {
+            "c": 1,
+            "t": 3
+           },
+           {
+            "c": 2,
+            "t": 3
+           },
+           {
+            "c": 3,
+            "t": 3
+           },
+           {
+            "c": 4,
+            "t": 3
+           },
+           {
+            "c": 5,
+            "t": 3
+           },
+           {
+            "c": 6,
+            "t": 3
+           }
+          ],
+          "texto": "En el III, un poco más dura.",
+          "ms": 2500
+         },
+         {
+          "marcas": [
+           {
+            "c": 1,
+            "t": 2
+           },
+           {
+            "c": 2,
+            "t": 2
+           },
+           {
+            "c": 3,
+            "t": 2
+           },
+           {
+            "c": 4,
+            "t": 2
+           },
+           {
+            "c": 5,
+            "t": 2
+           },
+           {
+            "c": 6,
+            "t": 2
+           }
+          ],
+          "texto": "En el II, más todavía.",
+          "ms": 2500
+         },
+         {
+          "marcas": [
+           {
+            "c": 1,
+            "t": 1
+           },
+           {
+            "c": 2,
+            "t": 1
+           },
+           {
+            "c": 3,
+            "t": 1
+           },
+           {
+            "c": 4,
+            "t": 1
+           },
+           {
+            "c": 5,
+            "t": 1
+           },
+           {
+            "c": 6,
+            "t": 1
+           }
+          ],
+          "texto": "En el I, la más exigente. Es la del acorde de Fa.",
+          "ms": 3000
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se hace",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "El dedo, el brazo y el pulgar",
+       "items": [
+        "**El dedo 1 recto**, sin doblarse en los nudillos, y un poco girado hacia su canto: la parte de hueso pisa mejor que la blanda.",
+        "**Pegado al traste**, justo a su izquierda.",
+        "**El peso viene del brazo.** Deja caer el codo hacia abajo, como si colgaras de la cejilla. El brazo pesa mucho más de lo que hace falta.",
+        "**El pulgar solo acompaña.** Si te duele la base del pulgar, es que estás apretando con él."
+       ]
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Te duele la mano al poco tiempo.",
+         "arreglo": "Suelta del todo y vuelve con menos. Si no suena, cambia el giro del dedo antes de apretar."
+        },
+        {
+         "error": "Suenan todas menos la 2.ª o la 3.ª.",
+         "arreglo": "Están debajo del hueco del dedo. Gíralo hacia el canto o sube un poco la muñeca."
+        },
+        {
+         "error": "El codo se te va hacia fuera.",
+         "arreglo": "Déjalo colgar pegado al cuerpo: el peso solo funciona si cae."
+        }
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t13.l3.p2",
+         "texto": "la cejilla del V."
+        },
+        {
+         "paso": "n2.t1.l3.p1",
+         "texto": "la usarás en cualquier acorde."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Este ejercicio enseña cuánta presión basta. Aflojar hasta que deje de sonar no es un fallo: es la manera de encontrar la presión justa desde abajo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-cejilla-respira.json",
+     "titulo": "Cejilla que respira",
+     "principal": "tablatura",
+     "motivo": "Es técnica: tablatura con dedos.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Empieza en el {c:1-2}: en el V es fácil.",
+      "Cuando el V salga sin esfuerzo, baja: {c:3-4} en el III, {c:5} en el II y {c:6} en el I."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Pisa con la cejilla y toca las cuerdas.",
+      "Afloja poco a poco, sin levantar el dedo, hasta que dejen de sonar.",
+      "Vuelve a apretar lo justo para que suenen. **Ese es el peso que necesitas.**",
+      "Mantenlo un compás y suelta del todo."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Aflojar y volver con lo justo en el V; después en el III, el II y el I.",
+     "porque": "Una cejilla de un minuto sin dolor es lo que pide el final del nivel.",
+     "atencion": "Si te duele, para antes de que el dolor vaya a más. Dos minutos varias veces al día rinden más que diez seguidos.",
+     "empieza": "Solo el V, un minuto en total.",
+     "sube": "Las seis cuerdas suenan y la mano sigue suelta."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suenan las seis cuerdas.",
+      "La mano aguanta un minuto sin cansarse."
+     ]
+    }
+   ]
+  },
+  "n2.t1.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "La idea",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Una forma que se mueve",
+       "md": "Un acorde con cuerdas al aire no se puede subir: el aire no se mueve contigo. Pero si tapas el aire con la cejilla, **toda la forma se desplaza entera**. Fa es Mi subido un traste, con la cejilla haciendo de cejuela. Esa es toda la idea de las formas móviles: con **dos formas** tienes todos los acordes mayores."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "acorde",
+        "titulo": "Forma de Mi con cejilla: Fa, en el I",
+        "acorde": "Fa (cejilla I)",
+        "clave": "F"
+       }
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "acorde",
+        "titulo": "Forma de La con cejilla: Si♭, en el I",
+        "acorde": "Si♭",
+        "clave": "F"
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Dónde va cada dedo",
+     "bloques": [
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Forma",
+        "Fundamental en",
+        "Cejilla en",
+        "Dedos"
+       ],
+       "filas": [
+        [
+         "**De Mi**",
+         "6.ª cuerda",
+         "6 cuerdas",
+         "1 cejilla, 2 en la 3.ª, 3 en la 5.ª, 4 en la 4.ª"
+        ],
+        [
+         "**De La**",
+         "5.ª cuerda",
+         "5 cuerdas",
+         "1 cejilla, 2, 3 y 4 en fila en el traste de dos más arriba"
+        ]
+       ]
+      },
+      {
+       "tipo": "acordes",
+       "nombres": [
+        "Fa (cejilla I)",
+        "Sol (cejilla III)",
+        "Si♭",
+        "Do (cejilla III)"
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Coloca Fa y Sol con la forma de Mi; Si♭ y Do con la de La. Toca cuerda a cuerda.",
+       "porque": "Son las dos únicas formas que hay que aprender.",
+       "atencion": "Que la nota más grave sea la fundamental: la 6.ª en la forma de Mi; la 5.ª en la de La, sin tocar la 6.ª.",
+       "empieza": "Sin metrónomo.",
+       "sube": "Colocas la forma sin mirar dedo a dedo."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t13.l3.p2",
+         "texto": "La con cejilla, tu primera forma móvil."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Mover el acorde es transportar",
+     "md": "Si una forma se mueve **dos trastes** arriba, todo sube un tono: Fa pasa a Sol, Si♭ pasa a Do. Eso es **transportar**: la misma música, a otra altura. Una progresión entera se mueve así, sin pensar acorde a acorde: la forma de la mano no cambia."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "cambio",
+      "titulo": "Fa → Sol: dos trastes arriba",
+      "de": "Fa (cejilla I)",
+      "a": "Sol (cejilla III)",
+      "clave": "C",
+      "textos": {
+       "inicio": "Fa con la forma de Mi, cejilla en el I.",
+       "medio": "La mano entera se traslada, sin deshacer la forma.",
+       "fin": "Sol: la misma forma, dos trastes más arriba."
+      }
+     }
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Fa",
+       "acorde": "Fa (cejilla I)",
+       "arpegiado": true
+      },
+      {
+       "etiqueta": "Sol, dos trastes más arriba",
+       "acorde": "Sol (cejilla III)",
+       "arpegiado": true
+      }
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Traste de la cejilla",
+      "Forma de Mi (6.ª)",
+      "Forma de La (5.ª)"
+     ],
+     "filas": [
+      [
+       "I",
+       "Fa",
+       "Si♭"
+      ],
+      [
+       "III",
+       "Sol",
+       "Do"
+      ],
+      [
+       "V",
+       "La",
+       "Re"
+      ],
+      [
+       "VII",
+       "Si",
+       "Mi"
+      ]
+     ]
+    }
+   ]
+  },
+  "n2.t1.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Para saber qué acorde sale, basta con conocer la nota de la cuerda más grave de la forma en ese traste. Es la fundamental: el acorde se llama como ella."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo saberlo",
+     "items": [
+      "¿Qué forma es? De Mi: mira la 6.ª. De La: mira la 5.ª.",
+      "¿Qué nota da esa cuerda en el traste de la cejilla?",
+      "Ese es el acorde."
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Forma de Mi con la cejilla en el V. ¿Qué acorde es?",
+     "opciones": [
+      "La",
+      "Do",
+      "Re"
+     ],
+     "correcta": 0,
+     "porque": "La 6.ª en el traste 5 da La. La forma de Mi tiene su fundamental en la 6.ª.",
+     "audio": {
+      "notas": [
+       [
+        6,
+        5
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Forma de La con la cejilla en el V. ¿Qué acorde es?",
+     "opciones": [
+      "La",
+      "Re",
+      "Mi"
+     ],
+     "correcta": 1,
+     "porque": "La 5.ª en el traste 5 da Re: forma de La, fundamental en la 5.ª.",
+     "audio": {
+      "notas": [
+       [
+        5,
+        5
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Forma de Mi con la cejilla en el III. ¿Qué acorde es?",
+     "opciones": [
+      "Sol",
+      "Si♭",
+      "Do"
+     ],
+     "correcta": 0,
+     "porque": "6.ª en el traste 3: Sol."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Quieres un Do mayor con cejilla en la forma de La. ¿En qué traste?",
+     "opciones": [
+      "I",
+      "III",
+      "V"
+     ],
+     "correcta": 1,
+     "porque": "La 5.ª da Do en el traste 3."
+    }
+   ]
+  },
+  "n2.t1.l3.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora una progresión real, la que más has oído en tu vida: **I-vi-IV-V**, aquí en Fa. El vi es un acorde menor, Re m; la forma de La menor con cejilla da Re m en el V, pero aquí lo usamos abierto, que ya lo sabes. Lo nuevo es llegar a Fa y a Si♭ con cejilla, seguidos."
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Fa (cejilla I)",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "Re m",
+       "g": "vi",
+       "papel": "color"
+      },
+      {
+       "n": "Si♭",
+       "g": "IV",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "Do7",
+       "g": "V7",
+       "papel": "tensión"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-formas-moviles.json",
+     "titulo": "La progresión, escrita",
+     "principal": "ambas",
+     "motivo": "Para ver las formas una detrás de otra.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Fa, Re m, Si♭ y Do7, una vez por compás, cuatro veces seguidas.",
+     "porque": "Es lo que pide el final del nivel: cuatro acordes con cejilla seguidos y limpios.",
+     "atencion": "Prepara la forma siguiente **antes** de que acabe el compás. Suelta la cejilla un instante al cambiar; no la arrastres.",
+     "empieza": "♩ = 50, un acorde cada cuatro tiempos.",
+     "sube": "Tres pasadas limpias seguidas."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Cada acorde suena completo en el primer tiempo.",
+      "Entre acordes no hay un silencio largo."
+     ]
+    }
+   ]
+  },
+  "n2.t1.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Abel Carlevaro",
+     "md": "Guitarrista y profesor uruguayo (1916-2001). Su método parte de una pregunta sencilla: ¿qué movimiento hace exactamente cada dedo? Sus fórmulas de arpegio tienen **pocas notas y mucha conciencia**: no valen por repetirlas rápido, sino por notar qué se mueve y qué se queda quieto."
+    },
+    {
+     "tipo": "texto",
+     "md": "Se trabaja lo que se llama un **arpegio sin acorde difícil**: la mano izquierda no estorba, para que toda la atención esté en la derecha."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "La atención, en tres sitios",
+     "items": [
+      "**El nudillo**, no la punta: el dedo sale de la articulación grande.",
+      "**La muñeca quieta**, sin balancearse.",
+      "**Después de cada nota el dedo vuelve** solo, sin levantar los demás."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Las fórmulas se dan en el orden del cuaderno 2 de Carlevaro; falta cotejar que la numeración de esta edición coincida con la tuya. La idea del ejercicio no cambia."
+    }
+   ]
+  },
+  "n2.t1.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "Las cinco fórmulas",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/car-1.json",
+       "titulo": "Fórmulas 1 a 5, cada una en un compás",
+       "principal": "tablatura",
+       "motivo": "Es técnica: tablatura, con la mano derecha debajo.",
+       "bpms": [
+        50,
+        60
+       ],
+       "notas": [
+        "El {c:1} sube: *p-i-m-a*. El {c:2} baja: *p-a-m-i*. El {c:3-5} salta.",
+        "La mano izquierda no se mueve en todo el ejercicio: Do fijo."
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "manoDerecha",
+        "titulo": "Fórmula 1: p-i-m-a",
+        "acorde": "Do",
+        "clave": "C",
+        "veces": 2,
+        "ms": 650,
+        "cuerdas": [
+         {
+          "c": 5,
+          "mano": "p"
+         },
+         {
+          "c": 3,
+          "mano": "i"
+         },
+         {
+          "c": 2,
+          "mano": "m"
+         },
+         {
+          "c": 1,
+          "mano": "a"
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "manoDerecha",
+        "titulo": "Fórmula 2: p-a-m-i",
+        "acorde": "Do",
+        "clave": "C",
+        "veces": 2,
+        "ms": 650,
+        "cuerdas": [
+         {
+          "c": 5,
+          "mano": "p"
+         },
+         {
+          "c": 1,
+          "mano": "a"
+         },
+         {
+          "c": 2,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "mano": "i"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Cada fórmula, un minuto. Lenta, sintiendo el movimiento de cada dedo.",
+       "porque": "Prepara el arpegio con melodía del *Romance* y todos los de este nivel.",
+       "atencion": "Una fórmula por sesión, si las cinco cansan. Mejor poca y atenta.",
+       "empieza": "♩ = 50, corcheas.",
+       "sube": "Suena igual en todas sus notas a ♩ = 60."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Una nota de cada grupo sale más fuerte.",
+         "arreglo": "Suele ser *a* o el dedo que llega tras un salto. Aíslalo: solo *p* y ese dedo."
+        },
+        {
+         "error": "La mano entera sube y baja.",
+         "arreglo": "Apoya un dedo que no toque en su cuerda mientras los demás se mueven, para sentir la muñeca quieta."
+        }
+       ]
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Puedes decir qué dedo sigue sin pensarlo.",
+        "Todas las notas pesan lo mismo."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n2.t5.l4.p2",
+         "texto": "las fórmulas 6-10."
+        },
+        {
+         "paso": "n2.t9.l3.p2",
+         "texto": "las fórmulas 11-15."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué es",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Síncopa",
+       "md": "Normalmente lo fuerte cae en el pulso. **Una síncopa** es una nota que empieza en una parte débil y se alarga por encima de la fuerte: el golpe que esperabas no llega donde creías, y eso da impulso. El **contratiempo** es parecido, pero con silencio: la nota entra justo después del pulso, y en el pulso no hay nada."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ritmo",
+        "titulo": "Síncopa: corta, larga, corta",
+        "tiempos": 4,
+        "por": 420,
+        "figuras": [
+         {
+          "d": 1,
+          "nota": [
+           2,
+           0
+          ],
+          "etiqueta": "1",
+          "fuerte": true,
+          "nombre": "Corchea."
+         },
+         {
+          "d": 2,
+          "nota": [
+           2,
+           0
+          ],
+          "etiqueta": "y",
+          "nombre": "La larga empieza en una parte débil y pasa por encima del 2."
+         },
+         {
+          "d": 1,
+          "nota": [
+           2,
+           0
+          ],
+          "etiqueta": "y",
+          "nombre": "Corchea, y vuelve el pulso."
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ritmo",
+        "titulo": "Contratiempo: nota después del pulso",
+        "tiempos": 4,
+        "por": 420,
+        "figuras": [
+         {
+          "d": 1,
+          "etiqueta": "1",
+          "fuerte": true,
+          "nombre": "Silencio en el pulso."
+         },
+         {
+          "d": 1,
+          "nota": [
+           2,
+           0
+          ],
+          "etiqueta": "y",
+          "nombre": "La nota, justo después."
+         },
+         {
+          "d": 1,
+          "etiqueta": "2",
+          "fuerte": true,
+          "nombre": "Silencio."
+         },
+         {
+          "d": 1,
+          "nota": [
+           2,
+           0
+          ],
+          "etiqueta": "y",
+          "nombre": "La nota."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Tocarlo",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Primero cuenta en voz alta «1 y 2 y 3 y 4 y» sin guitarra y da una palmada solo donde hay nota. Cuando te salga, tócalo sobre una cuerda."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/rit-sincopa.json",
+       "titulo": "Síncopa y contratiempo",
+       "principal": "ambas",
+       "motivo": "Hay que ver el ritmo.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "El {c:2} es contratiempo puro: el pulso queda en silencio.",
+        "El {c:3} es síncopa: corta, larga, corta, por dos veces."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Puedes contar en voz alta mientras tocas.",
+        "El contratiempo no se adelanta hasta caer en el pulso."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t11.l4.p1",
+         "texto": "la síncopa simple del Nivel 1."
+        },
+        {
+         "paso": "n2.t1.l6.p2",
+         "texto": "la *Contradanza* está llena de esto."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "2/2: la blanca es el pulso",
+     "md": "El 2/2 lleva las mismas notas que el 4/4, pero se **sienten** dos pulsos, de blanca, en lugar de cuatro. El signo es una C atravesada, ₵, y por eso se llama «compasillo partido» o *alla breve*. Cambia el peso: dos apoyos por compás, más aire entre ellos, más sensación de caminar."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "Las mismas cuatro negras, con dos apoyos",
+      "tiempos": 4,
+      "por": 420,
+      "figuras": [
+       {
+        "d": 1,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "1",
+        "fuerte": true,
+        "nombre": "Primer pulso."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         0
+        ],
+        "etiqueta": "y",
+        "nombre": "Dentro del primero."
+       },
+       {
+        "d": 1,
+        "nota": [
+         5,
+         0
+        ],
+        "etiqueta": "2",
+        "fuerte": true,
+        "nombre": "Segundo pulso."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         0
+        ],
+        "etiqueta": "y",
+        "nombre": "Dentro del segundo."
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-dos-medios.json",
+     "titulo": "Contar en dos",
+     "principal": "ambas",
+     "motivo": "Para sentir el pulso de blanca.",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En un 2/2 a ♩ = 120, ¿cada cuánto cae el pulso que sientes?",
+     "opciones": [
+      "Cada negra",
+      "Cada blanca",
+      "Cada corchea"
+     ],
+     "correcta": 1,
+     "porque": "El pulso es la blanca: dos apoyos por compás."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t4.l6.p1",
+       "texto": "la *Sonatina* de Giuliani va en 2/2."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l6.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dionisio Aguado",
+     "md": "Nacido en Madrid (1784-1849), vivió años en París y compartió casa y amistad con Fernando Sor. Dejó uno de los grandes métodos de guitarra de su siglo. Inventó además un soporte, el *trípode*, para que el instrumento no vibrara contra el cuerpo."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Una danza de salón",
+     "md": "La **contradanza** se bailaba en grupo en los salones de principios del XIX: varias parejas, figuras que se repiten y mucho compás marcado. De ahí vienen el acompañamiento a contratiempo y las frases cuadradas, de ocho compases."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Qué vas a oír",
+     "items": [
+      "Un tema en Mi menor con acordes a contratiempo.",
+      "Un contraste en una segunda sección, con frases más cantadas.",
+      "Un trío en Mi mayor, con otro carácter.",
+      "Tras el trío, *Da Capo*: se vuelve al principio y se acaba en «Fin»."
+     ]
+    }
+   ]
+  },
+  "n2.t1.l6.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-aguado-contradanza-op-8-n-5",
+       "md": "**Por qué está aquí:** es una danza con síncopa y con acordes que piden cejilla parcial. **Qué escuchar:** el contratiempo debajo de la melodía larga. **Dificultad:** media; es para aplicar, no para llevar al recital."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-aguado-contradanza.json",
+       "titulo": "Aguado, *Contradanza* op. 8 n.º 5",
+       "principal": "ambas",
+       "motivo": "Obra para aplicar: partitura y tablatura.",
+       "bpms": [
+        50,
+        66
+       ],
+       "notas": [
+        "Mira el {c:2}: la melodía, Mi, se queda; debajo entra el acorde **a contratiempo**.",
+        "En el {c:7} la voz sube por la escala menor melódica: Re♯, Do♯, Re♯, hasta Mi.",
+        "El {c:9-16} es la segunda sección, con adornos que aquí se dan sin dibujar.",
+        "El {c:25-40} es el trío, en Mi mayor."
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "Transcrita a ojo de la edición de Richault. Los compases {c:13}, {c:29} y {c:37-39} son los de lectura menos segura: si algo no te suena, confía antes en tu oído y en tu profesor. La numeración «n.º 5» del currículo se ha tomado como la quinta pieza del cuaderno."
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por partes",
+       "items": [
+        "Solo la melodía, con el pulso marcado con el pie.",
+        "Solo los acordes a contratiempo, sin melodía: «nada, acorde, acorde, acorde».",
+        "Junta dos compases, muy lento.",
+        "Repite con cuatro compases, y sigue por frases de ocho."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "La primera sección, compases 1 a 8, hasta que los acordes entren en su sitio sin mirar.",
+       "porque": "Es el modelo del resto.",
+       "atencion": "El Mi largo del compás 2 tiene que seguir sonando mientras tocas los acordes: no levantes el dedo ni apagues.",
+       "empieza": "♩ = 50.",
+       "sube": "Tres pasadas limpias a una velocidad en que el pulso no se mueve."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o2-aguado-contradanza-op-8-n-5"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "El acorde a contratiempo cae en el pulso.",
+         "arreglo": "Toca la melodía sola y di «y» donde va el acorde. Luego añádelo."
+        },
+        {
+         "error": "La melodía larga se corta al tocar el acorde.",
+         "arreglo": "El dedo que pisa la melodía no se mueve; *a* no la vuelve a tocar."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l6.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "No toda cejilla tiene que ser de seis cuerdas. **Una cejilla parcial** pisa solo las cuerdas que suenan: cansa menos y deja libres los dedos. La pregunta útil, ante cualquier acorde de una obra: **¿qué cuerdas suenan de verdad aquí?**"
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo decidir",
+     "items": [
+      "Mira qué notas del acorde se tocan en ese compás.",
+      "Cuenta las cuerdas que necesitas.",
+      "Si son tres o cuatro agudas, media cejilla basta.",
+      "Si el bajo está en la 6.ª, hace falta entera."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-aguado-contradanza.json",
+     "titulo": "Dónde mirar: el trío",
+     "principal": "ambas",
+     "motivo": "Para ver las cuerdas de cada acorde.",
+     "compases": [
+      25,
+      32
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Un acorde solo usa las cuerdas 1, 2 y 3 en un mismo traste. ¿Qué cejilla pones?",
+     "opciones": [
+      "Entera, por seguridad",
+      "Parcial, de tres cuerdas",
+      "Ninguna, con tres dedos"
+     ],
+     "correcta": 1,
+     "porque": "Tres cuerdas en un traste: una cejilla parcial es lo más económico. Tres dedos también funcionan a veces, pero bloquean la mano."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Las cejillas de esta obra son propuesta de la academia. La edición antigua no las indica, y hay más de una solución."
+    }
+   ]
+  },
+  "n2.t1.l7.p1": {
+   "pantallas": [
+    {
+     "titulo": "Qué es una sexta",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "La sexta",
+       "md": "Es un salto de seis notas contando las dos de los extremos: de Do a La (Do, Re, Mi, Fa, Sol, La). Como la tercera, viene en dos tamaños: **mayor, 9 semitonos** (Do–La) y **menor, 8 semitonos** (Mi–Do). Suena abierta y cantable. Un truco para reconocerla: la mayor es el principio de *My Bonnie*, la menor, el arranque de *Love Story*."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "distancias",
+        "titulo": "Las sextas, medidas en una cuerda",
+        "cuerda": 5,
+        "desde": 0,
+        "trastes": [
+         0,
+         10
+        ],
+        "clave": "C",
+        "pasos": [
+         {
+          "a": 8,
+          "arco": "6.ª menor: 8 trastes",
+          "texto": "Ocho trastes: sexta menor.",
+          "ms": 2500
+         },
+         {
+          "a": 9,
+          "arco": "6.ª mayor: 9 trastes",
+          "de": 0,
+          "texto": "Nueve trastes: sexta mayor.",
+          "ms": 2500
+         }
+        ],
+        "final": "Un solo traste de diferencia."
+       }
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "6.ª mayor",
+         "notas": [
+          [
+           5,
+           3
+          ],
+          [
+           3,
+           2
+          ]
+         ],
+         "duracion": 0.8
+        },
+        {
+         "etiqueta": "6.ª menor",
+         "notas": [
+          [
+           4,
+           2
+          ],
+          [
+           2,
+           1
+          ]
+         ],
+         "duracion": 0.8
+        },
+        {
+         "etiqueta": "5.ª justa, para comparar",
+         "notas": [
+          [
+           5,
+           3
+          ],
+          [
+           4,
+           5
+          ]
+         ],
+         "duracion": 0.8
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Comprobar",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Escucha sin mirar. La 5.ª es hueca y estable; la 6.ª, más cálida y más grande. La 8.ª suena a la misma nota."
+      },
+      {
+       "tipo": "preguntas",
+       "n": 6
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t1.l7.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El metrónomo mide, no empuja",
+     "md": "Subir un poco cada día «a ver si sale» entrena errores. La regla de este nivel es sencilla: **tres pasadas limpias seguidas** a una velocidad, y solo entonces subir. Si la segunda falla, la cuenta vuelve a cero."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se usa",
+     "items": [
+      "Busca una velocidad en la que te salga sin esfuerzo.",
+      "Toca tres veces seguidas sin fallar. Si fallas, vuelve a la primera.",
+      "Sube cuatro puntos, o lo que te dé comodidad, y repite.",
+      "Si en una sesión no llegas, baja dos puntos y termina bien."
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Para qué sirve el metrónomo",
+     "items": [
+      "Saber dónde estás hoy.",
+      "Descubrir dónde se te acelera la mano: suele ser en lo fácil.",
+      "No para arrastrarte a una velocidad que aún no tienes."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo",
+     "md": "Tres pasadas no son un número mágico: es lo mínimo para saber que no ha sido suerte. Si tu profesor te pide otro criterio, manda el suyo."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    }
+   ]
+  },
+  "n2.t1.l7.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Cierra el tramo con dos comprobaciones. Si una no sale, no es un examen: repásala y sigue."
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Fa (cejilla I)",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "Re m (cejilla V)",
+       "g": "vi",
+       "papel": "color"
+      },
+      {
+       "n": "Si♭",
+       "g": "IV",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "Do (cejilla III)",
+       "g": "V",
+       "papel": "tensión"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-aguado-contradanza.json",
+     "titulo": "La *Contradanza*: primera sección",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      66
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Cuatro acordes con cejilla seguidos, limpios.",
+      "La *Contradanza* con la síncopa en su sitio, sin que los acordes caigan en el pulso.",
+      "Sabes qué acorde sale de una forma en cualquier traste."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t2.l7.p1",
+       "texto": "la primera cejilla del *Romance*."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

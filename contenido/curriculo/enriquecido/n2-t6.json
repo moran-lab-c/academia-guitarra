@@ -1,0 +1,590 @@
+{
+ "tramo": "n2.t6",
+ "nota": "Curso 2. La pieza de Dowland se integra en la primera guitarra de un arreglo a dúo de IMSLP, compases 1-32. El original es tablatura de laúd.",
+ "pasos": {
+  "n2.t6.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "John Dowland",
+     "md": "Inglés (1563-1626), el gran laudista de su tiempo. Trabajó en Dinamarca y en la corte inglesa, y escribió canciones y danzas de una melancolía famosa: una de sus piezas se llama *Semper Dowland, semper dolens*, «siempre Dowland, siempre doliente»."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El laúd",
+     "md": "Instrumento de cuerdas pulsadas, con la parte de atrás abombada y más cuerdas que la guitarra, muchas de ellas dobles. **La música para laúd se escribía en tablatura**: la guitarra clásica la toma prestada adaptando la afinación. La de la guitarra de hoy es prima lejana, no hija."
+    },
+    {
+     "tipo": "texto",
+     "md": "*My Lord Willoughby's Welcome Home* es una balada popular de la época sobre un héroe de guerra, Lord Willoughby. Dowland hizo con ella una pieza para laúd que varía la melodía; también William Byrd escribió variaciones sobre el mismo tema."
+    }
+   ]
+  },
+  "n2.t6.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Letras en vez de números",
+     "md": "Esto te va a sonar. **Dowland escribía en tablatura**, igual que tú, pero con letras: **a** es la cuerda al aire, **b** el primer traste, **c** el segundo, y así. Cada línea es una cuerda; el ritmo va encima. Es la tablatura francesa, y se leía con la cuerda aguda arriba."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Traste",
+      "Tablatura moderna",
+      "Tablatura francesa"
+     ],
+     "filas": [
+      [
+       "Al aire",
+       "0",
+       "a"
+      ],
+      [
+       "1",
+       "1",
+       "b"
+      ],
+      [
+       "2",
+       "2",
+       "c"
+      ],
+      [
+       "3",
+       "3",
+       "d"
+      ],
+      [
+       "4",
+       "4",
+       "e"
+      ],
+      [
+       "5",
+       "5",
+       "f"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En tablatura francesa ves una **d** en la 1.ª línea. ¿Dónde se pisa?",
+     "opciones": [
+      "Traste 3 de la 1.ª",
+      "Traste 4 de la 1.ª",
+      "La 4.ª cuerda"
+     ],
+     "correcta": 0,
+     "porque": "a al aire, b traste 1, c traste 2 y d traste 3."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué significa una **a** sobre una línea?",
+     "opciones": [
+      "La nota La",
+      "Esa cuerda al aire",
+      "Dedo anular"
+     ],
+     "correcta": 1,
+     "porque": "En esta tablatura, las letras son trastes: *a* es al aire."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "¿Sabías que…?",
+     "md": "No es una invención de los guitarristas modernos: la tablatura es **más antigua** que tu partitura de guitarra."
+    }
+   ]
+  },
+  "n2.t6.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Escucha la misma pieza en dos instrumentos. El laúd es más corto de sonido y más íntimo; la guitarra tiene más cuerpo. Fíjate en el bajo: en el laúd conversa con la melodía, no la acompaña."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Búscalos",
+     "items": [
+      "Laúd: [Paul O'Dette](https://www.youtube.com/results?search_query=Paul+O+Dette+Dowland+Lord+Willoughby+Welcome+Home+lute) o [Hopkinson Smith](https://www.youtube.com/results?search_query=Hopkinson+Smith+Dowland+Willoughby+lute).",
+      "Guitarra: [Julian Bream](https://www.youtube.com/results?search_query=Julian+Bream+Dowland+Lord+Willoughby+Welcome+Home+guitar)."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-willoughby.json",
+     "titulo": "Con muestras de guitarra, para tenerla en el oído",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      76
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    }
+   ]
+  },
+  "n2.t6.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Ligados dobles y mixtos",
+     "md": "Con dos notas, ya sabes. Con tres, una sola pulsación tiene que dar tres notas. **Ascendente:** el 1, y el 3 golpea; **descendente:** el 3 tira hacia el 1 o al aire. **Mixto:** subir y bajar sin volver a pulsar: 1-3-1. El sonido se gasta: cada nota es un poco más débil, así que el dedo que llega debe hacerlo con decisión."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-ligados-tres.json",
+     "titulo": "Ligados dobles y mixtos",
+     "principal": "tablatura",
+     "motivo": "Técnica de mano izquierda.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:1-2} mixtos: una pulsación, tres notas.",
+      "{c:3} dos subidas seguidas.",
+      "{c:4} dos bajadas seguidas."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Pulsa solo la primera.",
+      "Sube con el dedo cayendo desde el nudillo.",
+      "Baja tirando un poco hacia la palma: la cuerda vuelve a sonar.",
+      "Mantén pegados los dedos anteriores."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Los cuatro compases, sin correr.",
+     "porque": "Lo pide el nivel: tres notas iguales.",
+     "atencion": "Si la tercera apenas se oye, no pulses más fuerte: golpea con más decisión.",
+     "empieza": "♩ = 40.",
+     "sube": "Las tres notas suenan igual."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l1.p1",
+       "texto": "los ligados de dos notas."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t6.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-ligados-ascend-tres.json",
+     "titulo": "Tres notas hacia arriba",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Es lo que más cuesta: el último dedo llega con menos cuerda vibrando. {c:1} en posición; {c:2} desde la cuerda al aire."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Ascendentes de tres, en varias cuerdas.",
+     "porque": "Prepara el trino y las escalas ligadas de los niveles siguientes.",
+     "atencion": "Mantén el dedo 1 pisando mientras caen el 3 y el 4.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Oyes tres notas con una sola pulsación."
+     ]
+    }
+   ]
+  },
+  "n2.t6.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dos melodías a la vez",
+     "md": "Hasta aquí el bajo era un apoyo: una nota, y la melodía encima. Ahora **el bajo tiene su propia melodía**, que empieza, sube, baja y termina. Se llama **polifonía**: varias voces independientes. Lo difícil ya no es tocarlo, sino **oír las dos**."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-willoughby.json",
+     "titulo": "Dos voces en los primeros compases",
+     "principal": "ambas",
+     "motivo": "Hay que ver las plicas: las de arriba, una voz; las de abajo, otra.",
+     "bpms": [
+      50,
+      70
+     ],
+     "notas": [
+      "En el {c:5} el bajo camina: La, Mi. En el {c:6} responde: La, Mi, La.",
+      "Sigue la voz de abajo con el dedo."
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Canta la voz de arriba mientras tocas la de abajo. Luego al revés.",
+     "porque": "Si no la puedes cantar, no la estás oyendo.",
+     "atencion": "Toca cada voz por separado primero.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t6.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El pulgar con melodía",
+     "md": "Hasta ahora *p* tocaba apoyos. Ahora canta. Eso pide dos cosas: **cada bajo con su sonido**, no todos igual; y **apagar**: si un bajo sigue sonando cuando la armonía cambia, se ensucia. Se apaga con *p*, volviendo a la cuerda, o con el dedo izquierdo."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo apagar con p",
+     "items": [
+      "Pulsa La con *p* en la 5.ª.",
+      "Toca Mi en la 6.ª con *p*.",
+      "Cuando *p* vuelve a la 5.ª, déjala apoyada: La deja de sonar.",
+      "Lo mismo al revés."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "manoDerecha",
+      "titulo": "p solo, con melodía propia",
+      "acorde": "La m",
+      "clave": "C",
+      "veces": 2,
+      "ms": 700,
+      "cuerdas": [
+       {
+        "c": 5,
+        "mano": "p"
+       },
+       {
+        "c": 6,
+        "mano": "p"
+       },
+       {
+        "c": 5,
+        "mano": "p"
+       },
+       {
+        "c": 4,
+        "mano": "p"
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "Los bajos se mezclan en un zumbido.",
+       "arreglo": "Escucha solo los bajos. Si se oye el anterior al llegar el siguiente, apágalo."
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t3.l1.p1",
+       "texto": "melodía y bajo, en el Nivel 1."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t6.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Una voz larga solo sigue sonando si **nadie la toca ni la pisa de otra manera**. Dos decisiones de digitación:"
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Pregunta",
+      "Respuesta"
+     ],
+     "filas": [
+      [
+       "**¿Qué dedo se queda?**",
+       "El que pisa la nota larga, hasta que acabe su duración, aunque cueste"
+      ],
+      [
+       "**¿Y si necesito ese dedo?**",
+       "Cambia la digitación: otro dedo pisa la nota larga"
+      ],
+      [
+       "**¿Por qué tocar el bajo en una cuerda más alta?**",
+       "Para dejar libre la cuerda grave, o para no cortar otra voz"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-willoughby.json",
+     "titulo": "Busca la voz larga",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "{c:4} y {c:8}: acordes donde todo debe seguir sonando.",
+      "En el {c:12}, la voz de arriba tiene redonda y la de abajo se mueve: ese dedo no se levanta."
+     ],
+     "compases": [
+      4,
+      12
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Ninguna voz se corta antes de tiempo.",
+      "Lo que dices que dura, dura."
+     ]
+    }
+   ]
+  },
+  "n2.t6.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tema y variaciones",
+     "md": "Una **variación** es repetir lo mismo cambiando algo. Se conserva lo que hace que se reconozca (la melodía o la armonía), y se cambia lo demás. Es como contar el mismo chiste con otras palabras."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Se conserva",
+      "Se cambia"
+     ],
+     "filas": [
+      [
+       "La armonía",
+       "El ritmo: más notas por tiempo"
+      ],
+      [
+       "El esqueleto de la melodía",
+       "Adornos entre las notas principales"
+      ],
+      [
+       "El número de compases",
+       "El registro, la dinámica, la textura"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-willoughby.json",
+     "titulo": "Compara los compases 9-16 y 17-24",
+     "principal": "ambas",
+     "motivo": "Cuenta las notas por tiempo.",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "El {c:9-16} tiene la melodía sencilla.",
+      "El {c:17-24} es el mismo plan armónico, con más notas: corcheas."
+     ],
+     "compases": [
+      9,
+      24
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Si la armonía es igual y hay el doble de notas, ¿qué se ha variado?",
+     "opciones": [
+      "El ritmo",
+      "La tonalidad",
+      "La forma"
+     ],
+     "correcta": 0,
+     "porque": "Más notas por tiempo sobre los mismos acordes: variación rítmica."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Las divisiones en cuatro secciones son las de la edición a dúo usada. La versión para laúd de Dowland se ordena en secciones y variaciones que conviene cotejar."
+    }
+   ]
+  },
+  "n2.t6.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora te toca. Tres variaciones de la misma melodía de cuatro compases: con otro ritmo, con adornos y en otra octava. **Tiene que seguir reconociéndose.**"
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-variar.json",
+     "titulo": "La melodía y tres variaciones",
+     "principal": "ambas",
+     "motivo": "Mira qué cambia en cada grupo de cuatro.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "{c:1-4} la melodía.",
+      "{c:5-8} ritmo: las mismas notas en corcheas.",
+      "{c:9-12} adornos: una nota vecina entre las principales.",
+      "{c:13-16} registro: en otra zona del mástil."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Toca las tres. Después, varía tú la melodía de otra obra: *Lágrima*, por ejemplo.",
+     "porque": "Prepara las diferencias de los niveles siguientes y la improvisación.",
+     "atencion": "Si ya no la reconoces, has variado demasiado."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Alguien reconoce la melodía en las tres versiones."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l5.p1",
+       "texto": "improvisar sobre I-IV-V."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t6.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-dowland-willoughby",
+       "md": "**Por qué está aquí:** es la entrada al Renacimiento y a las dos voces reales. **Qué escuchar:** el bajo como segunda melodía. **Dificultad:** alta para sostener voces; lenta, sí se puede."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-dowland-willoughby.json",
+       "titulo": "*My Lord Willoughby's Welcome Home*",
+       "principal": "ambas",
+       "motivo": "Dos voces: partitura y tablatura.",
+       "bpms": [
+        50,
+        76
+       ],
+       "notas": [
+        "{c:1-8} el tema. {c:9-16} la segunda parte. {c:17-24} una variación con más movimiento. {c:25-32} otra, con escalas.",
+        "Fuente: primera guitarra de un arreglo a dúo en IMSLP. Digitación propuesta."
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "La afinación del laúd no es la de la guitarra: muchas ediciones para guitarra piden **bajar la 3.ª a Fa♯**. Este arreglo no lo pide. Si estudias con otra edición, comprueba qué dice. Además, los acordes de los {c:13-16} están leídos a ojo y simplificados a dos voces."
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Por voces",
+       "items": [
+        "Solo la voz de arriba.",
+        "Solo la de abajo.",
+        "Las dos, muy lentas.",
+        "Sigue por secciones de ocho compases."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Sección por sección, las voces enteras.",
+       "porque": "Es el ejercicio de polifonía del nivel.",
+       "atencion": "En cada redonda, escucha que sigue sonando hasta el final.",
+       "empieza": "♩ = 50.",
+       "sube": "♩ = 76."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o2-dowland-willoughby"
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t6.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación: toca sin cortar voces. Grábate y escucha solo el bajo, y luego solo la melodía."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-willoughby.json",
+     "titulo": "La obra",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      76
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes seguir el bajo sin perderte en la grabación.",
+      "Las notas largas duran lo que dicen."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t7.l3.p2",
+       "texto": "un dúo con tu propia grabación."
+      },
+      {
+       "paso": "n2.t13.l1.p1",
+       "texto": "en el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

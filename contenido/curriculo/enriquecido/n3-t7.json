@@ -1,0 +1,504 @@
+{
+ "tramo": "n3.t7",
+ "nota": "Curso 3. Narváez: MIDI de una edición en IMSLP (Mille regretz, Delphin 1538). Tres voces en dos; cejillas parciales propuestas.",
+ "pasos": {
+  "n3.t7.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Narváez y una canción de otro",
+     "md": "**Luis de Narváez** (hacia 1500-1555), vihuelista de Granada, publicó *Los seys libros del Delphín* en 1538. *La canción del Emperador* es su arreglo de *Mille regretz*, «mil pesares», una canción francesa a cuatro voces atribuida a Josquin Desprez, la preferida de Carlos V; de ahí el nombre. **Una obra vocal, pasada a la vihuela**: por eso tiene voces que entran una a una."
+    },
+    {
+     "tipo": "texto",
+     "md": "Es lo que hacían los vihuelistas: tomar una obra cantada y ponerla en la mano. Aquí también se llama *glosa* o *intabulación*."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t5.l1.p1",
+       "texto": "Milán, otro vihuelista."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t7.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Escucha el original, cantado: cuatro voces y un mismo texto. Luego la vihuela: el mismo plan, sostenido por una sola mano."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Búscalo",
+     "items": [
+      "[Josquin, *Mille regretz*, cantada](https://www.youtube.com/results?search_query=Josquin+Mille+regretz+vocal+ensemble).",
+      "[Narváez, Canción del Emperador, vihuela o guitarra](https://www.youtube.com/results?search_query=Narvaez+Cancion+del+Emperador+vihuela)."
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Fíjate",
+     "items": [
+      "¿Qué voz empieza?",
+      "¿Se oye la tercera voz en la versión de guitarra?",
+      "¿Dónde respira el canto?"
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-narvaez-emperador.json",
+     "titulo": "Sus primeros compases",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      66
+     ],
+     "compases": [
+      1,
+      4
+     ],
+     "plegado": true
+    }
+   ]
+  },
+  "n3.t7.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Solo donde hace falta",
+     "md": "La cejilla completa aplasta seis cuerdas y corta las que deberían sonar al aire. **Cejilla parcial**: la mínima que tape lo que hace falta, y nada más. Así siguen sonando otras voces. Dos, tres, cuatro cuerdas. Hay quien la llama «media» aunque no sea la mitad."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "Cejilla de tres cuerdas",
+      "trastes": [
+       0,
+       8
+      ],
+      "clave": "C",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "c": 1,
+          "t": 5
+         },
+         {
+          "c": 2,
+          "t": 5
+         },
+         {
+          "c": 3,
+          "t": 5
+         }
+        ],
+        "texto": "Las tres agudas, con el dedo 1: nada más.",
+        "ms": 2600
+       },
+       {
+        "marcas": [
+         {
+          "c": 1,
+          "t": 5
+         },
+         {
+          "c": 2,
+          "t": 5
+         },
+         {
+          "c": 3,
+          "t": 5
+         },
+         {
+          "c": 5,
+          "t": 0
+         }
+        ],
+        "texto": "La 5.ª al aire sigue sonando debajo: un bajo que no se corta.",
+        "ms": 2800
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Solo la parte del dedo que necesitas pisa.",
+      "El resto queda arqueado, sin tocar las otras cuerdas.",
+      "Toca también lo que no pisas: que suene."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l3.p2",
+       "texto": "la media cejilla."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t7.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Decide cuerda a cuerda. Pregúntate por cada acorde: ¿qué voces hay, cuántas cuerdas pisan juntas? Esa es la cejilla."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-narvaez-emperador.json",
+     "titulo": "Mira estos compases",
+     "principal": "ambas",
+     "motivo": "Fíjate en los acordes y en qué sigue sonando.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:3} tres notas en un mismo traste, con un bajo al aire.",
+      "{c:7-8} más movimiento: quizá no hace falta."
+     ],
+     "compases": [
+      3,
+      8
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Pregunta",
+      "Decisión"
+     ],
+     "filas": [
+      [
+       "¿Solo agudas, un traste?",
+       "Parcial de 3"
+      ],
+      [
+       "¿Hay un bajo pisado?",
+       "No hay más remedio que entera, o busca otra cuerda"
+      ],
+      [
+       "¿Solo dos?",
+       "Dos dedos, sin cejilla"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Las cejillas de esta obra se han calculado como propuesta: la edición con MIDI no las indica."
+    }
+   ]
+  },
+  "n3.t7.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tonalidades vecinas",
+     "md": "Dos tonalidades son **vecinas** si comparten casi todas las notas. Las de al lado en el círculo: **la dominante, la subdominante y los relativos** de cada una. Por eso un clásico modula a ellas, y el oído casi no lo nota. Más lejos, se oye mucho más."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Desde Do mayor",
+      "Armadura",
+      "Por qué es vecina"
+     ],
+     "filas": [
+      [
+       "Sol mayor",
+       "1♯",
+       "Dominante"
+      ],
+      [
+       "Fa mayor",
+       "1♭",
+       "Subdominante"
+      ],
+      [
+       "La menor",
+       "Nada",
+       "Relativa de Do"
+      ],
+      [
+       "Mi menor",
+       "1♯",
+       "Relativa de Sol"
+      ],
+      [
+       "Re menor",
+       "1♭",
+       "Relativa de Fa"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t2.l5.p1",
+       "texto": "el círculo."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t7.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprueba con el círculo en la cabeza: una alteración de diferencia, o ser relativa de una de esas, es vecina. Cuantas más alteraciones de distancia, más lejos."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cuál no es vecina de Do mayor?",
+     "opciones": [
+      "Sol mayor",
+      "La menor",
+      "Mi mayor"
+     ],
+     "correcta": 2,
+     "porque": "Mi mayor: cuatro sostenidos. Muy lejos."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Las vecinas de Sol mayor incluyen…",
+     "opciones": [
+      "Re mayor",
+      "Mi♭ mayor",
+      "Fa♯ menor"
+     ],
+     "correcta": 0,
+     "porque": "Re es su dominante. Do y Mi m también."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "La relativa de Fa mayor es…",
+     "opciones": [
+      "Re menor",
+      "Fa menor",
+      "La menor"
+     ],
+     "correcta": 0,
+     "porque": "Comparten un bemol."
+    },
+    {
+     "tipo": "ordenar",
+     "enunciado": "Ordena de más cerca a más lejos de Do mayor.",
+     "items": [
+      "Fa mayor",
+      "Re mayor",
+      "La mayor",
+      "Mi mayor"
+     ],
+     "barajadas": [
+      2,
+      0,
+      3,
+      1
+     ],
+     "final": "Cuantas más alteraciones, más lejos."
+    }
+   ]
+  },
+  "n3.t7.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En menor funciona igual que en mayor. El iv se aleja, oscuro; el V tiene sensible y pide resolver."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "i-iv-i",
+       "acordes": [
+        "La m",
+        "Re m",
+        "La m"
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "i-V-i",
+       "acordes": [
+        "La m",
+        "Mi7",
+        "La m"
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    }
+   ]
+  },
+  "n3.t7.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-narvaez-cancion-del-emperador",
+       "md": "**Por qué está aquí:** la obra troncal del Renacimiento a tres voces. **Qué escuchar:** cómo entran las voces, y la nota larga de abajo. **Dificultad:** alta por la independencia."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-narvaez-emperador.json",
+       "titulo": "Narváez, *Canción del Emperador*",
+       "principal": "ambas",
+       "motivo": "Tres voces en dos: se ve lo que pasa.",
+       "bpms": [
+        40,
+        66
+       ],
+       "notas": [
+        "{c:1-4} entra la voz alta, con otra debajo.",
+        "{c:10-20} se dialogan.",
+        "Fuente: IMSLP, edición con MIDI (n.º 582254), sobre el Delphín. El programa dibuja dos voces: la tercera está en la de abajo. Dedos propuestos."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Voz a voz",
+       "items": [
+        "La voz de arriba, sola.",
+        "La de abajo, sola.",
+        "Canta una y toca la otra.",
+        "Las dos juntas, muy lentas."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Primero 16 compases; sin cortar.",
+       "porque": "Es lo que pide el nivel.",
+       "atencion": "Lo que duran las notas lo dice la partitura, no los dedos.",
+       "empieza": "Blanca = 40.",
+       "sube": "Blanca = 66."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 40,
+       "clave": "o3-narvaez-cancion-del-emperador"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Corta una voz.",
+         "arreglo": "Reparte los dedos otra vez: el dedo de la larga no se mueve."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t7.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Esta obra pide leer en una zona alta. Practica la zona con líneas sencillas."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-pos7.json",
+     "titulo": "Líneas en la VII",
+     "principal": "partitura",
+     "motivo": "Lectura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "Todo en la VII, y Sol mayor.",
+      "{c:4} un acorde de cambio de cuerda."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Ocho compases, sin mirar la mano.",
+     "porque": "Lo pide la prueba.",
+     "atencion": "La armadura: un sostenido. El Fa♯ cae en el 2-7.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Busca los **Si** en las cuerdas 1 a 3 entre los trastes 7 y 12.",
+     "conjunto": [
+      "Si"
+     ],
+     "clave": "G",
+     "cuerdas": [
+      1,
+      2,
+      3
+     ],
+     "hastaTraste": 12,
+     "final": "1.ª en el 7 y 2.ª en el 12."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "No miras la mano."
+     ]
+    }
+   ]
+  },
+  "n3.t7.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-narvaez-emperador.json",
+     "titulo": "La obra",
+     "principal": "ambas",
+     "bpms": [
+      40,
+      66
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sin cortar ninguna voz.",
+      "La voz larga, larga."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t10.l1.p4",
+       "texto": "en el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

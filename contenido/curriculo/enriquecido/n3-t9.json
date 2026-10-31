@@ -1,0 +1,476 @@
+{
+ "tramo": "n3.t9",
+ "nota": "Curso 3. Giuliani op. 100 n.º 12 con inicio transcrito a ojo (Gitarrefreund); op. 50 n.º 17 de Mutopia. Ejercicios de la academia.",
+ "pasos": {
+  "n3.t9.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-ligados-cuatro.json",
+     "titulo": "Ligados de tres y cuatro",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:1-2} de tres.",
+      "{c:3-4} de cuatro: una pulsación y cuatro notas."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Ligados de tres y cuatro en cada cuerda.",
+     "porque": "Es el final de la línea de los ligados de este nivel.",
+     "atencion": "La cuarta nota es la que más cuesta: dedo con decisión, no pulsación más fuerte.",
+     "empieza": "♩ = 40.",
+     "sube": "Las cuatro notas iguales."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t3.l6.p2",
+       "texto": "el trino."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-terceras.json",
+     "titulo": "Do mayor en terceras",
+     "principal": "tablatura",
+     "motivo": "Técnica: dos notas a la vez.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Cada acorde son dos notas en cuerdas vecinas: una tercera.",
+      "Mano arriba: todo pisado en la zona de V a XIII."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Una octava en terceras.",
+     "porque": "Lo pide la prueba.",
+     "atencion": "Las dos notas juntas. *i-m* o *m-a*, siempre el mismo par.",
+     "empieza": "♩ = 40."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "recorrido",
+      "titulo": "Terceras: el dibujo de la mano",
+      "clave": "C",
+      "trastes": [
+       4,
+       14
+      ],
+      "ms": 1100,
+      "notas": [
+       {
+        "c": 2,
+        "t": 5,
+        "dedo": 1
+       },
+       {
+        "c": 3,
+        "t": 7,
+        "dedo": 4
+       },
+       {
+        "c": 2,
+        "t": 6,
+        "dedo": 2
+       },
+       {
+        "c": 3,
+        "t": 9,
+        "dedo": 4
+       },
+       {
+        "c": 2,
+        "t": 8,
+        "dedo": 4
+       },
+       {
+        "c": 1,
+        "t": 5,
+        "dedo": 1
+       }
+      ],
+      "final": "Los dedos van cambiando dentro de un dibujo."
+     }
+    }
+   ]
+  },
+  "n3.t9.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-do-menor.json",
+     "titulo": "Do menor, armónica y melódica",
+     "principal": "ambas",
+     "motivo": "Escala móvil.",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-dosm-menor.json",
+     "titulo": "Do♯ menor",
+     "principal": "ambas",
+     "motivo": "Lo mismo, un traste más arriba.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Armadura de cuatro sostenidos; la armónica añade Si♯."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Las dos, sin aire: forma móvil.",
+     "porque": "Cierra las menores del nivel.",
+     "atencion": "Es la misma forma, un traste más. Eso es lo bueno de las formas móviles.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n3.t9.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tremolo-progresion.json",
+     "titulo": "Trémolo sobre I-IV-V-I",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:1} Sol; {c:2} Do; {c:3} Re7; {c:4} Sol.",
+      "La 1.ª sigue al aire: lo que cambia es la armonía."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Primero solo I-V; después toda la progresión.",
+     "porque": "Es el siguiente peldaño hacia *Recuerdos*.",
+     "atencion": "Cambiar de acorde sin cortar.",
+     "empieza": "♩ = 40.",
+     "sube": "♩ = 60."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Los cambios de acorde no se notan en el trémolo."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t6.l5.p1",
+       "texto": "con I y V."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo del profesor",
+     "md": "Al cambiar de acorde, **el trémolo no espera**: la izquierda llega antes, durante el último *i* del acorde anterior. Es igual que en el arpegio, y a menos tiempo."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El trémolo no se para."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t9.l1.p2",
+       "texto": "anticipar."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ráfagas de ocho: ya no son cuatro. Si no sale limpio, baja a seis. Mano suelta."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-rafagas-ocho.json",
+     "titulo": "Ráfagas de ocho",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      60,
+      100
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sale limpia y la mano sigue suelta al parar."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t4.l3.p2",
+       "texto": "las de cuatro."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-v7-dim-2oct.json",
+     "titulo": "V7 y disminuida, dos octavas",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "{c:1-2} Sol7.",
+      "{c:3-4} disminuida, desde La."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "De memoria, los dos.",
+     "porque": "Lo pide el nivel.",
+     "atencion": "Mantén la mano abierta en la disminuida.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t10.l3.p2",
+       "texto": "una octava menos."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l4.p3": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-giuliani-op-100-n-12",
+       "md": "**Por qué está aquí:** un estudio de arpegio continuo. **Qué escuchar:** el bajo largo bajo el movimiento. **Dificultad:** media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-giuliani-op100-12.json",
+       "titulo": "Giuliani, op. 100 n.º 12: inicio",
+       "principal": "ambas",
+       "motivo": "Lo transcrito.",
+       "bpms": [
+        50,
+        84
+       ],
+       "notas": [
+        "*Capriccio*, *Gracioso*, 6/8 en Sol.",
+        "Cada mitad de compás: un silencio de semicorchea y cinco notas: un arpegio que sube y baja.",
+        "El bajo dura lo mismo: dos notas por compás."
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "**Solo 8 compases transcritos, a ojo**, y en los bajos de los {c:3-5} la lectura es menos segura. El resto, en [la edición en IMSLP](https://imslp.org/wiki/24_Studies_for_the_Guitar,_Op.100_%28Giuliani,_Mauro%29). Es la edición Gitarrefreund, n.º 12."
+      }
+     ]
+    },
+    {
+     "titulo": "Practicar",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Lo transcrito, y sigue en la edición.",
+       "porque": "Es el estudio del tramo.",
+       "atencion": "La semicorchea de silencio del principio de cada grupo: no la llenes.",
+       "empieza": "♩. = 50.",
+       "sube": "♩. = 84."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-giuliani-op-100-n-12"
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra leída",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-giuliani-op-50-n-17",
+       "md": "**Por qué está aquí:** una pieza breve de *Le Papillon*, para leer. **Dificultad:** baja."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-giuliani-op50-17.json",
+       "titulo": "Giuliani, op. 50 n.º 17",
+       "principal": "partitura",
+       "motivo": "Se lee.",
+       "bpms": [
+        60,
+        120
+       ],
+       "notas": [
+        "Sol menor, 3/8. Dos bemoles.",
+        "{c:1-4} primero acordes sobre un bajo que baja: Sol, Do, La, Fa♯.",
+        "{c:8} pequeña cadencia.",
+        "Fuente: Mutopia, CC BY 3.0. Dedos y mano derecha: propuesta."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Leer",
+       "items": [
+        "Armadura y compás.",
+        "Solo el bajo.",
+        "Toca, sin parar."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o3-giuliani-op-50-n-17"
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t9.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Doce compases, 1.ª y 2.ª posición. No los mires antes."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-vista-fas.json",
+     "titulo": "Primera vista",
+     "principal": "partitura",
+     "motivo": "Primera vista.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "Tres sostenidos: Fa♯ menor."
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sin parar.",
+      "Con el ritmo."
+     ]
+    }
+   ]
+  },
+  "n3.t9.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-giuliani-op100-12.json",
+     "titulo": "El estudio",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      84
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tremolo-progresion.json",
+     "titulo": "La progresión",
+     "principal": "tablatura",
+     "bpms": [
+      40,
+      60
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El estudio, parejo.",
+      "El trémolo sobre I-IV-V-I, sin cortes."
+     ]
+    }
+   ]
+  }
+ }
+}

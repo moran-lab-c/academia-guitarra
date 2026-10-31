@@ -13,7 +13,7 @@ const CARPETA = process.argv[2] ?? path.join(RAIZ, '..', '08 - Guitarra', 'Tabla
 const FLUIDSYNTH = path.join(CARPETA, 'fluidsynth-v2.6.1-win10-x64-cpp11', 'bin', 'fluidsynth.exe');
 const BANCO = path.join(CARPETA, 'GeneralUser-GS.sf2');
 const DESTINO = path.join(RAIZ, 'web', 'sonidos', 'guitarra');
-const NAILON = 24, TPQ = 480, DESDE = 40, HASTA = 88, VEL = 95, BPM = 60, TIEMPOS = 3;
+const NAILON = 24, TPQ = 480, DESDE = 38, HASTA = 88, VEL = 95, BPM = 60, TIEMPOS = 3;
 const temporal = path.join(os.tmpdir(), 'academia-nota');
 
 const vlq = n => { const b = [n & 0x7f]; while ((n >>= 7)) b.unshift((n & 0x7f) | 0x80); return b; };

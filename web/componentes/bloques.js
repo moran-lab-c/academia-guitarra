@@ -105,7 +105,7 @@ function escuchar(b) {
     const sec = x.acorde
       ? [ACORDES[x.acorde].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)]))]
       : x.acordes ? x.acordes.map(n => ACORDES[n].cuerdas.flatMap((t, i) => (t === null ? [] : [midiEn(6 - i, t)])))
-        : x.notas.map(n => (Array.isArray(n[0]) ? n.map(y => midiEn(y[0], y[1])) : [midiEn(n[0], n[1])]));
+        : x.notas.map(n => (!n.length ? [] : Array.isArray(n[0]) ? n.map(y => midiEn(y[0], y[1])) : [midiEn(n[0], n[1])]));
     tocar(sec, { duracion: x.duracion ?? (x.acorde ? 1.6 : 0.9), arpegiado: !!x.arpegiado, destacar: x.destacar, desafinar: x.desafinar });
   } }, `♪ ${x.etiqueta}`)));
 }

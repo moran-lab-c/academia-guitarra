@@ -1,0 +1,844 @@
+{
+ "tramo": "n2.t3",
+ "nota": "Curso 2. Parte en Mi mayor del Romance. El camino al revés de Lágrima. Digitaciones y vibrato propuestos.",
+ "pasos": {
+  "n2.t3.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Mi menor y Mi mayor comparten tónica",
+     "md": "Ya lo conoces de *Lágrima*: el **homónimo** es la tonalidad mayor o menor con **la misma tónica**. Mi mayor y Mi menor empiezan en Mi, pero tres notas cambian: **Sol♯, Do♯ y Re♯** aparecen en mayor. Eso basta para pasar de sombra a luz sin moverse de sitio."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Grado",
+      "Mi menor",
+      "Mi mayor"
+     ],
+     "filas": [
+      [
+       "1",
+       "Mi",
+       "Mi"
+      ],
+      [
+       "2",
+       "Fa♯",
+       "Fa♯"
+      ],
+      [
+       "3",
+       "Sol",
+       "**Sol♯**"
+      ],
+      [
+       "4",
+       "La",
+       "La"
+      ],
+      [
+       "5",
+       "Si",
+       "Si"
+      ],
+      [
+       "6",
+       "Do",
+       "**Do♯**"
+      ],
+      [
+       "7",
+       "Re",
+       "**Re♯**"
+      ]
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "*Lágrima* iba de Mi mayor a Mi menor; el *Romance* hace el camino contrario: pasa de la sombra a la luz. Es la misma idea, al revés, y por eso sientes la misma sorpresa. Lo dice la armadura, que en el {c:17} añade tres sostenidos: de uno pasa a cuatro."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "El cambio, en la partitura",
+     "principal": "ambas",
+     "motivo": "Mira la melodía en Sol♯.",
+     "compases": [
+      15,
+      18
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t7.l1.p4",
+       "texto": "el homónimo, cuando lo viste por primera vez."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t3.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Escúchalo. Es la misma nota de bajo y la misma mano; solo cambia un dedo en la 3.ª: del aire al traste 1. Sol pasa a Sol♯."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mi menor",
+       "acorde": "Mi m",
+       "arpegiado": true
+      },
+      {
+       "etiqueta": "Mi mayor",
+       "acorde": "Mi",
+       "arpegiado": true
+      }
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "El momento del cambio",
+     "principal": "ambas",
+     "motivo": "Toca a la vez que escuchas.",
+     "bpms": [
+      48,
+      60
+     ],
+     "notas": [
+      "En el {c:15-16} termina Mi menor. El {c:17} ya es Mi mayor."
+     ],
+     "compases": [
+      15,
+      18
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué nota de la melodía te dice que ya es mayor?",
+     "opciones": [
+      "Sol♯",
+      "Si",
+      "Mi"
+     ],
+     "correcta": 0,
+     "porque": "Sol♯ es la 3.ª mayor. Si y Mi son comunes a los dos acordes.",
+     "audio": {
+      "notas": [
+       [
+        1,
+        4
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "n2.t3.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "Las tres maneras",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Traslado",
+       "md": "Es cambiar la mano de posición. **Se puede hacer de tres maneras**, y cada una deja la frase distinta:"
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Manera",
+        "Cómo",
+        "Para qué"
+       ],
+       "filas": [
+        [
+         "**Sustitución**",
+         "Un dedo sustituye a otro en la misma nota",
+         "Mantiene la nota sonando; casi no se oye"
+        ],
+        [
+         "**Deslizamiento**",
+         "El dedo que pisa se desliza por la cuerda, y es el guía",
+         "Une dos notas; puede oírse el roce"
+        ],
+        [
+         "**Salto**",
+         "Se suelta, se mueve y se pisa en otra zona",
+         "Para distancias largas; hace falta un aire que lo tape"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "libre",
+        "titulo": "Sustitución: el 1 y el 3 en el traste 5",
+        "trastes": [
+         1,
+         8
+        ],
+        "clave": "C",
+        "cuadros": [
+         {
+          "marcas": [
+           {
+            "k": "d3",
+            "c": 1,
+            "t": 5,
+            "dedo": 3
+           }
+          ],
+          "texto": "El dedo 3 pisa La en el traste 5.",
+          "ms": 2500
+         },
+         {
+          "marcas": [
+           {
+            "k": "d1",
+            "c": 1,
+            "t": 5,
+            "dedo": 1
+           }
+          ],
+          "texto": "En la misma nota, el dedo 1 sustituye al 3. La mano ha subido: ya estás en la posición V.",
+          "ms": 3000
+         }
+        ]
+       }
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "libre",
+        "titulo": "Deslizamiento: el mismo dedo viaja",
+        "trastes": [
+         1,
+         8
+        ],
+        "clave": "C",
+        "cuadros": [
+         {
+          "marcas": [
+           {
+            "k": "d2",
+            "c": 2,
+            "t": 3,
+            "dedo": 2
+           }
+          ],
+          "texto": "El dedo 2 en el traste 3 de la 2.ª.",
+          "ms": 2200
+         },
+         {
+          "marcas": [
+           {
+            "k": "d2",
+            "c": 2,
+            "t": 5,
+            "dedo": 2
+           }
+          ],
+          "texto": "Sin levantarse, sube al traste 5. Es el dedo guía del Nivel 1, en un cambio de posición.",
+          "ms": 2800
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Quién lo enseña",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Carlevaro trabajó estos tres traslados por separado en su cuaderno de la mano izquierda. La idea importante es que **no hay una manera mejor**: hay la que deja la frase más ligada en cada sitio. En la digitación de la obra, si un cambio se oye demasiado, prueba otra de las tres."
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t5.l1.p1",
+         "texto": "el dedo guía."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t3.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-tres-traslados.json",
+     "titulo": "El mismo cambio, de tres maneras",
+     "principal": "tablatura",
+     "motivo": "Es técnica de mano izquierda: tablatura con dedos.",
+     "bpms": [
+      40,
+      60
+     ],
+     "notas": [
+      "{c:1-2}: sustitución. El dedo 3 llega al traste 5, y el 1 lo reemplaza.",
+      "{c:3}: deslizamiento. El dedo 2 sube sin soltar.",
+      "{c:4-6}: salto. Suelta antes de moverte y aterriza en el VII."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Tocar cada manera hasta oír la diferencia.",
+     "porque": "Es lo que el nivel pide: un cambio de posición que no se oye.",
+     "atencion": "Primero marca bien el cambio; después, a tempo.",
+     "empieza": "♩ = 40.",
+     "sube": "Eliges la manera según lo que quieres que suene."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 40
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "El deslizamiento chilla.",
+       "arreglo": "Afloja la presión durante el viaje y aprieta al llegar."
+      },
+      {
+       "error": "En el salto llegas tarde.",
+       "arreglo": "Mira adonde vas antes de soltar y prepara el brazo: el dedo solo sigue a la mano."
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes elegir la manera que deja la frase más ligada."
+     ]
+    }
+   ]
+  },
+  "n2.t3.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "En esta parte hay varios cambios. Decide cuál es cada uno mirando la melodía: **lo que manda es que siga ligada**."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Parte en Mi mayor: los traslados",
+     "principal": "tablatura",
+     "motivo": "Sigue la melodía en la 1.ª.",
+     "bpms": [
+      48,
+      60
+     ],
+     "notas": [
+      "{c:17-18} se queda en primera posición: dedo 1 en la 3.ª y 4 en la melodía.",
+      "{c:21} salto al VII: se suelta en el aire, durante la 3.ª nota del tresillo anterior.",
+      "{c:23-24} estás en VII, y a Si le llega el dedo 1; a Do♯, el 4.",
+      "{c:25} deslizamiento o salto al IX: el traste 12 te espera.",
+      "{c:27-28} bajas al V: el dedo 1 hace de guía por la 1.ª."
+     ],
+     "compases": [
+      17,
+      32
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Compás",
+      "Cambio",
+      "Qué manera"
+     ],
+     "filas": [
+      [
+       "{c:21}",
+       "De I a VII",
+       "Salto"
+      ],
+      [
+       "{c:25}",
+       "De VII a IX",
+       "Deslizamiento de la cejilla"
+      ],
+      [
+       "{c:27}",
+       "De IX a V",
+       "Salto o guía"
+      ],
+      [
+       "{c:29}",
+       "De V a II",
+       "Salto"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "La digitación es la habitual y es propuesta de la academia. La edición que usamos no la trae."
+    }
+   ]
+  },
+  "n2.t3.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El vibrato",
+     "md": "Es una oscilación pequeña de la altura de una nota larga. Hace que la nota parezca respirar. Lo oíste en *Lágrima*. **En guitarra clásica se hace a lo largo de la cuerda, no de lado**: el dedo se queda pisando y el brazo empuja y tira, levemente, hacia el clavijero y hacia el puente. La cuerda se tensa y se destensa."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Pisa con el dedo 2 o 3 en la 1.ª, en el traste 7 o 9.",
+      "Suelta el pulgar del mástil: si aprieta, no hay movimiento.",
+      "Mueve el brazo entero desde el codo, muy poco, hacia un lado y hacia otro, sin que el dedo se deslice.",
+      "Empieza a una velocidad lenta, como una ola; después, un poco más viva."
+     ]
+    },
+    {
+     "tipo": "errores",
+     "items": [
+      {
+       "error": "La nota sube y no baja.",
+       "arreglo": "Si tiras hacia un solo lado, solo sube. Vuelve a la posición de partida."
+      },
+      {
+       "error": "El dedo se mueve pero la nota no.",
+       "arreglo": "Es la muñeca sola. Suelta el pulgar y deja al brazo."
+      }
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Oyes la nota oscilar sin que se apague."
+     ]
+    }
+   ]
+  },
+  "n2.t3.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Las notas largas de la melodía son las primeras de cada compás. Pero aquí la nota dura un tresillo, y enseguida la repites: el vibrato se pone en las que tienen tiempo de oírse."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "Dónde poner vibrato",
+     "principal": "ambas",
+     "motivo": "Mira la melodía.",
+     "bpms": [
+      48
+     ],
+     "notas": [
+      "{c:23-26}: la melodía en la cejilla, traste 7 y 12, es donde mejor se oye.",
+      "{c:27}: Do♯, otra nota expuesta."
+     ],
+     "compases": [
+      23,
+      28
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Vibrato en una nota por frase, solo donde queda tiempo.",
+     "porque": "Se oye expresión, no adorno automático.",
+     "atencion": "Que el tresillo no se tuerza: la derecha sigue a tiempo aunque la izquierda vibre.",
+     "empieza": "♩ = 48."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 48
+    }
+   ]
+  },
+  "n2.t3.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "No en todas las notas",
+     "md": "El vibrato es **expresión**. Si todas vibran, ninguna destaca. Compara con cantar: un cantante no vibra en la nota de paso, sino en la nota a la que llega. Úsalo donde la frase lo pida: la cumbre, una llegada, un final."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Dónde pondrías vibrato?",
+     "opciones": [
+      "En cada nota de la melodía",
+      "En la nota más alta de la frase",
+      "En las notas del acompañamiento"
+     ],
+     "correcta": 1,
+     "porque": "La nota alta es donde va la frase. Vibrar todo le quita importancia a todo."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t11.l4.p3",
+       "texto": "el color con intención, otra manera de lo mismo."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t3.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Rubato",
+     "md": "*Tempo rubato* quiere decir «tiempo robado»: te tomas un poquito de tiempo en un sitio y **lo devuelves después**. Si solo estiras, vas más lento; si estiras y devuelves, respiras. En el *Romance* funciona en el punto alto de la frase y en los finales."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Toca la frase perfectamente a tempo con metrónomo.",
+      "Quita el metrónomo. Estira un poco al llegar al punto alto.",
+      "Devuelve ese tiempo en los compases siguientes.",
+      "Grábate: si no notas el pulso de fondo, es demasiado."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La frase, tal como está escrita (la app no hace rubato)",
+       "notas": [
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "duracion": 0.6
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "El rubato no arregla un paso difícil. Si estiras porque no llegas, se nota. Primero, a tempo."
+    }
+   ]
+  },
+  "n2.t3.l4.p2": {
+   "pantallas": [
+    {
+     "titulo": "Por frases",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-romance.json",
+       "titulo": "La parte en Mi mayor",
+       "principal": "ambas",
+       "motivo": "Por frases.",
+       "bpms": [
+        48,
+        66
+       ],
+       "notas": [
+        "{c:17-20} empieza como en menor, pero con Sol♯: se oye la luz.",
+        "{c:21-24} cejilla en el VII y Do♯.",
+        "{c:25-28} el punto alto de la obra. Mi en el 12.",
+        "{c:29-32} cierra: bajo, Si y Mi."
+       ],
+       "compases": [
+        17,
+        32
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "La obra entera",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-romance.json",
+       "titulo": "*Romance*: la obra entera",
+       "principal": "ambas",
+       "motivo": "Con repeticiones: cada parte, dos veces.",
+       "bpms": [
+        48,
+        72
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "El *Romance* entero, con las dos partes y sus repeticiones.",
+       "porque": "Es la primera obra troncal del Nivel 2.",
+       "atencion": "El cambio del {c:16} al {c:17}: una pequeña respiración, no un corte.",
+       "empieza": "♩ = 48.",
+       "sube": "La velocidad a la que la melodía se canta."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 48,
+       "clave": "o2-anonimo-romance"
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t3.l4.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Memorizar diciendo los acordes en voz alta une la cabeza con la mano: si se te olvida el dedo, te queda la armonía. Si te sabes los acordes, hay por dónde volver."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Compases",
+      "Acordes, en voz alta"
+     ],
+     "filas": [
+      [
+       "1-6",
+       "Mi m"
+      ],
+      [
+       "7-8",
+       "La m"
+      ],
+      [
+       "9-10",
+       "Si7"
+      ],
+      [
+       "11-12",
+       "Mi m"
+      ],
+      [
+       "13-14",
+       "Si7"
+      ],
+      [
+       "15-16",
+       "Mi m"
+      ],
+      [
+       "17-18",
+       "Mi"
+      ],
+      [
+       "19-20",
+       "Fa♯7"
+      ],
+      [
+       "21-22",
+       "Si7"
+      ],
+      [
+       "23-26",
+       "Mi"
+      ],
+      [
+       "27-28",
+       "La"
+      ],
+      [
+       "29-30",
+       "Si"
+      ],
+      [
+       "31-32",
+       "Mi"
+      ]
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Toca la obra leyendo y di cada acorde al llegar.",
+      "Apaga la partitura y dilos sin tocar.",
+      "Toca solo los bajos, sin melodía, de memoria.",
+      "Toca entero. Si fallas, empieza desde el acorde anterior."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l2.p1",
+       "texto": "la memoria de *Lágrima*."
+      },
+      {
+       "paso": "n2.t13.l1.p5",
+       "texto": "dos obras de memoria en el recital."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t3.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Pasar de tablatura a partitura es entender que son **dos dibujos de lo mismo**. La tablatura dice dónde pisar; la partitura dice qué nota es. Si sabes uno, sabes el otro, y el puente es el nombre de la nota."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Tablatura",
+      "Nota",
+      "Partitura"
+     ],
+     "filas": [
+      [
+       "1.ª en el 7",
+       "Si",
+       "La línea superior más dos arriba"
+      ],
+      [
+       "1.ª en el 5",
+       "La",
+       "Una línea adicional"
+      ],
+      [
+       "1.ª en el 3",
+       "Sol",
+       "Encima del pentagrama"
+      ],
+      [
+       "2.ª al aire",
+       "Si",
+       "La línea central"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cómo se escribe en el pentagrama la 1.ª en el traste 7?",
+     "opciones": [
+      "Si por encima del pentagrama",
+      "Mi en la cuarta línea",
+      "Si en la línea central"
+     ],
+     "correcta": 0,
+     "porque": "Es el Si agudo. El de la línea central es el de la 2.ª al aire, una octava abajo.",
+     "audio": {
+      "notas": [
+       [
+        1,
+        7
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En la partitura está el La de la línea adicional de encima. ¿Dónde lo pisas, en primera posición del *Romance*?",
+     "opciones": [
+      "1.ª en el 5",
+      "2.ª en el 2",
+      "3.ª en el 2"
+     ],
+     "correcta": 0,
+     "porque": "La, encima del pentagrama: 1.ª en el traste 5.",
+     "audio": {
+      "notas": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Y si el pentagrama da La, en el segundo espacio: ¿dónde es?",
+     "opciones": [
+      "3.ª en el 2",
+      "1.ª en el 5",
+      "5.ª al aire"
+     ],
+     "correcta": 0,
+     "porque": "Ese es el La grave de los dos tresillos: 3.ª en el traste 2.",
+     "audio": {
+      "notas": [
+       [
+        3,
+        2
+       ]
+      ]
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Escribe en papel los dos primeros compases, en pentagrama, a partir de la tablatura. Después, al revés, los compases 17 y 18.",
+     "porque": "Es lo que pide el nivel: pasar cuatro compases de un sistema a otro.",
+     "atencion": "Primero el nombre de la nota; luego, su sitio."
+    }
+   ]
+  },
+  "n2.t3.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Último paso del tramo: la obra entera. Si puedes, de memoria. Si no, con partitura y a por ello otro día."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-romance.json",
+     "titulo": "*Romance*",
+     "principal": "ambas",
+     "motivo": "Toca con esta o sin ella.",
+     "bpms": [
+      48,
+      72
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La tocas entera, con la melodía por encima.",
+      "El paso a Mi mayor se oye como un cambio de color.",
+      "Si es de memoria, sabes por qué acorde vas en cualquier momento."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l1.p3",
+       "texto": "en el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

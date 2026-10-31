@@ -1,0 +1,119 @@
+{
+ "titulo": "Ligados ascendentes de tres",
+ "compas": "4/4",
+ "armadura": "Am",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 3,
+      "t": 2,
+      "dedo": 1,
+      "mano": "i",
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 4,
+      "dedo": 3,
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 5,
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "s": true
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i",
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 3,
+      "dedo": 3,
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 5,
+      "dedo": 4
+     },
+     {
+      "d": "8",
+      "s": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 1,
+      "t": 0,
+      "mano": "i",
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 1,
+      "dedo": 1,
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 3,
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "s": true
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 0,
+      "mano": "i",
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 2,
+      "dedo": 2,
+      "lig": "h"
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 3,
+      "dedo": 3
+     },
+     {
+      "d": "8",
+      "s": true
+     }
+    ]
+   ]
+  }
+ ]
+}

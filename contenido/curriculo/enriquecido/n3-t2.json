@@ -1,0 +1,704 @@
+{
+ "tramo": "n3.t2",
+ "nota": "Curso 3. Adelita sale de Mutopia (Boije). Las voces se reparten en dos. Los portamentos no van dibujados: los enseña el paso.",
+ "pasos": {
+  "n3.t2.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tárrega y la mazurca",
+     "md": "La **mazurca** es una danza polaca en 3/4 que Chopin llevó al piano y llenó Europa. En los salones del XIX se escribían miles. Tárrega, entonces, escribe muchas. *Adelita* es una de ellas: una miniatura con tonalidad menor y una parte central en mayor. **Un cuadro pequeño, pero muy bien pintado.**"
+    },
+    {
+     "tipo": "texto",
+     "md": "Mira la obra sabiendo que no tiene que parecer un estudio: es una mazurca, con su balanceo."
+    }
+   ]
+  },
+  "n3.t2.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El acento desplazado",
+     "md": "El vals carga en el 1. La mazurca, a menudo, **carga en el 2 o el 3**. Es como un pequeño salto al pisar, y da su baile. No lo exageres, solo que no sea un vals."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "El peso va al 2",
+      "tiempos": 3,
+      "por": 520,
+      "figuras": [
+       {
+        "d": 1,
+        "nota": [
+         6,
+         0
+        ],
+        "etiqueta": "1",
+        "nombre": "Primer pulso, sin peso."
+       },
+       {
+        "d": 1,
+        "nota": [
+         2,
+         0
+        ],
+        "etiqueta": "2",
+        "fuerte": true,
+        "nombre": "Aquí está el peso."
+       },
+       {
+        "d": 1,
+        "nota": [
+         3,
+         0
+        ],
+        "etiqueta": "3",
+        "nombre": "Y se suelta."
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/rit-mazurca.json",
+     "titulo": "Bajo, acento y suelta",
+     "principal": "ambas",
+     "motivo": "Ritmo.",
+     "bpms": [
+      60,
+      90
+     ]
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 70
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Se nota el acento sin perder el pulso."
+     ]
+    }
+   ]
+  },
+  "n3.t2.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Portamento",
+     "md": "Une dos notas **deslizando**, como canta una voz cuando pasa de una a otra. No hay que oír los trastes: se oye un recorrido. Se pulsa la primera; el dedo viaja; la segunda se pulsa o no, según la edición. Tárrega y su escuela lo escriben a menudo."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Toca la nota de salida con *m* o *a*.",
+      "El dedo no suelta: afloja apenas y viaja.",
+      "Justo antes de llegar, aprieta.",
+      "Decide si hay que volver a pulsar."
+     ]
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Con",
+      "Efecto"
+     ],
+     "filas": [
+      [
+       "El dedo **de salida**",
+       "Se oye la subida desde abajo"
+      ],
+      [
+       "El dedo **de llegada**",
+       "Llega por sorpresa desde un punto anterior"
+      ]
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Sin portamento",
+       "notas": [
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         7
+        ]
+       ],
+       "duracion": 0.8
+      }
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t11.l2.p1",
+       "texto": "glissando y arrastre."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t2.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-portamento.json",
+     "titulo": "Portamento",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      50,
+      60
+     ],
+     "notas": [
+      "{c:1-2} terceras y quintas en la 1.ª: con el dedo de salida.",
+      "{c:3} en la 2.ª: suena más oscuro.",
+      "{c:4} lo mismo con dedo de llegada: la línea va al final."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Dos notas a distancia de 3.ª y de 5.ª en una cuerda, con el dedo de llegada y con el de salida.",
+     "porque": "Es el recurso de Adelita.",
+     "atencion": "Que suene como una voz que liga. Si suena a chiste, baja la velocidad y la fuerza.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Suena como una voz que liga."
+     ]
+    }
+   ]
+  },
+  "n3.t2.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "El vibrato del Nivel 2, sobre *Adelita*. Sus notas largas son pocas y están muy expuestas: los Do del principio, las notas altas. Una ola, no un temblor."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-adelita.json",
+     "titulo": "Las notas largas",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      70
+     ],
+     "notas": [
+      "{c:1} Do, larga, en el traste 8: vibrato.",
+      "{c:3} sube y vuelve."
+     ],
+     "compases": [
+      1,
+      4
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Vibrato solo en las largas, con el bajo sonando.",
+     "porque": "Es lo que da vida a una miniatura.",
+     "atencion": "Suelta el pulgar. Solo una ola.",
+     "empieza": "♩ = 60."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t3.l3.p1",
+       "texto": "el vibrato."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t2.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-tarrega-adelita",
+       "md": "**Por qué está aquí:** es la obra troncal del Romanticismo en este nivel. **Qué escuchar:** cómo se abre en la parte en Mayor, con el mismo gesto. **Dificultad:** media-alta por la expresión, no por la velocidad."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-tarrega-adelita.json",
+       "titulo": "Tárrega, *Adelita*",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        50,
+        70
+       ],
+       "notas": [
+        "Lento. {c:1-8}: Mi menor. *Fine* en el {c:8}.",
+        "{c:9-16}: Mi mayor, con los sostenidos delante. *D.C. al Fine*: se vuelve al principio y se acaba en el {c:8}.",
+        "{c:4} y {c:12}: adornos: en la edición llevan una apoyatura doble, aquí como nota real.",
+        "Fuente: Mutopia (Boije), CC BY-SA 2.5. Voces en dos; apoyaturas sin dibujar. Dedos: propuesta; en la edición hay cejillas VII, IV, IX y II."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se monta",
+     "bloques": [
+      {
+       "tipo": "ejercicio",
+       "que": "Cada ocho compases: la melodía sola y luego con todo.",
+       "porque": "Es una pieza para tocar hacia alguien.",
+       "atencion": "El primer Mi es alto (traste 12): llega a él sin susto. Muñeca recta.",
+       "empieza": "♩ = 50.",
+       "sube": "La velocidad en que canta, hacia ♩ = 70."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-tarrega-adelita"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "El acorde se come la melodía.",
+         "arreglo": "Toca el acorde en mp y la melodía en mf."
+        },
+        {
+         "error": "Corres en el {c:12}.",
+         "arreglo": "Deja que cada corchea diga algo: es la parte en que más cuenta."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t2.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Con el codo cerca",
+     "md": "Más allá del VII, la mano no llega si no acercas el codo al cuerpo. Con la muñeca **recta** y el codo acercándose, los dedos caen desde arriba sin esfuerzo. Si doblas la muñeca hacia delante, te cuesta el doble y duele."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Pisa en el IX.",
+      "Acerca el codo izquierdo al cuerpo.",
+      "La muñeca, recta: mírala en un espejo.",
+      "Ahora toca."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "recorrido",
+      "titulo": "Posición IX",
+      "clave": "E",
+      "trastes": [
+       7,
+       14
+      ],
+      "ms": 900,
+      "notas": [
+       {
+        "c": 3,
+        "t": 9,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 9,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 10,
+        "dedo": 2
+       },
+       {
+        "c": 2,
+        "t": 12,
+        "dedo": 4
+       },
+       {
+        "c": 1,
+        "t": 9,
+        "dedo": 1
+       },
+       {
+        "c": 1,
+        "t": 11,
+        "dedo": 3
+       },
+       {
+        "c": 1,
+        "t": 12,
+        "dedo": 4
+       }
+      ],
+      "final": "Los trastes aquí están más juntos: ojo al dedo 4."
+     }
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La muñeca está recta y no te duele."
+     ]
+    }
+   ]
+  },
+  "n3.t2.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La obra va hasta el traste 12. Antes de seguir, comprueba que sabes qué nota es cada una."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Busca los **Mi** en la 1.ª hasta el XII.",
+     "conjunto": [
+      "Mi"
+     ],
+     "clave": "E",
+     "cuerdas": [
+      1
+     ],
+     "hastaTraste": 12,
+     "final": "1.ª al aire y traste 12."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Busca todos los **Do♯** y **Si** en la 1.ª.",
+     "conjunto": [
+      "Do♯",
+      "Si"
+     ],
+     "clave": "E",
+     "cuerdas": [
+      1
+     ],
+     "hastaTraste": 12,
+     "final": "Si en el 7, Do♯ en el 9."
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Busca **Si** en las 2.ª, 3.ª y 1.ª.",
+     "conjunto": [
+      "Si"
+     ],
+     "clave": "E",
+     "cuerdas": [
+      1,
+      2,
+      3
+     ],
+     "hastaTraste": 12,
+     "final": "1.ª en el 7, 2.ª al aire y en el 12, 3.ª en el 4."
+    }
+   ]
+  },
+  "n3.t2.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Otra vez el homónimo",
+     "md": "Ya es la tercera vez que te lo encuentras: *Lágrima*, el *Romance* y ahora *Adelita*. Mi menor y Mi mayor con la misma tónica. Es una forma de hablar del XIX: pasar de sombra a luz sin moverse del sitio. Y **forma ternaria**: A (menor), B (mayor), A (menor), que en la partitura se ve como *D.C. al Fine*."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Parte",
+      "Tonalidad",
+      "Compases"
+     ],
+     "filas": [
+      [
+       "**A**",
+       "Mi menor",
+       "{c:1-8}"
+      ],
+      [
+       "**B**",
+       "Mi mayor",
+       "{c:9-16}"
+      ],
+      [
+       "**A**",
+       "Mi menor",
+       "Da Capo, otra vez {c:1-8}"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-adelita.json",
+     "titulo": "Las partes",
+     "principal": "partitura",
+     "bpms": [
+      60
+     ],
+     "plegado": true
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t8.l1.p1",
+       "texto": "en *Lágrima*."
+      },
+      {
+       "paso": "n2.t3.l1.p1",
+       "texto": "en el *Romance*."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t2.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El deslizamiento es música",
+     "md": "Tárrega no los escribe para que el dedo llegue mejor: **son parte de lo que se oye**. En *Adelita* la edición indica en varios sitios cómo se liga, y con qué dedo. Pregunta: ¿quiero oír el camino? Si la respuesta es sí, usa el dedo que da el trayecto más largo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-adelita.json",
+     "titulo": "Dónde pueden ir",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "{c:4}: de 2-3 a 3 y a B: la edición usa el 2 en la 2.ª.",
+      "{c:12}: bajada de A a F#, con el 4."
+     ],
+     "compases": [
+      4,
+      12
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "La fuente de Mutopia lleva digitación y líneas de portamento, simplificadas aquí. Conviene mirarlas en una edición de Tárrega."
+    }
+   ]
+  },
+  "n3.t2.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "El rubato de la mazurca",
+     "md": "Como cualquier rubato: estirar y devolver. Pero aquí **el bajo sigue siendo 3/4**, y lo que se estira es el arranque del compás. Tárrega, según cuentan los que le oyeron, tocaba con mucha libertad, pero sin desarmar la danza."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Pruébalo",
+     "items": [
+      "A tempo, con el metrónomo.",
+      "Sin él: un poco más de tiempo en la primera nota alta.",
+      "Devuelve después, y llega al siguiente compás a su hora."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Lo de que «cuentan» no es un dato de partitura: es memoria de oyentes. Tu oído manda, y tu profesor antes."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Te sigue el pulso de fondo, con libertad."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t3.l4.p1",
+       "texto": "el rubato."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t2.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Escucha dos versiones y anota **dónde cambia** cada una. No hay una correcta."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Búscalas",
+     "items": [
+      "[Adelita, Tárrega](https://www.youtube.com/results?search_query=Tarrega+Adelita+guitar): busca dos intérpretes de distinta época.",
+      "[Una grabación de sus alumnos](https://www.youtube.com/results?search_query=Miguel+Llobet+Tarrega+Adelita+historical+recording) o antigua, si hay."
+     ]
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Preguntas",
+     "items": [
+      "¿Quién estira más el primer compás?",
+      "¿Quién tarda más en el {c:12}?",
+      "¿Y cuál te gusta? ¿Por qué?"
+     ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Si puedes, grábate también. Tu rubato tampoco es igual cada día."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-adelita.json",
+     "titulo": "Fragmento, para el oído",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      70
+     ],
+     "compases": [
+      1,
+      4
+     ],
+     "plegado": true
+    }
+   ]
+  },
+  "n3.t2.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La textura",
+     "md": "**Melodía acompañada**: una voz canta y el resto acompaña. **Polifonía**: varias voces tan importantes como la otra. **Acordes**: todo junto, sin una línea que destaque."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-adelita.json",
+     "titulo": "Fragmento 1",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "compases": [
+      1,
+      2
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-dowland-willoughby.json",
+     "titulo": "Fragmento 2",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "compases": [
+      5,
+      7
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-milan-pavana-3.json",
+     "titulo": "Fragmento 3",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "compases": [
+      1,
+      3
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Fragmento 1: *Adelita*.",
+     "opciones": [
+      "Melodía acompañada",
+      "Polifonía",
+      "Acordes"
+     ],
+     "correcta": 0,
+     "porque": "La nota alta canta; lo demás apoya."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Fragmento 2: Dowland.",
+     "opciones": [
+      "Melodía acompañada",
+      "Polifonía",
+      "Acordes"
+     ],
+     "correcta": 1,
+     "porque": "El bajo tiene su propia melodía."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Fragmento 3: Milán.",
+     "opciones": [
+      "Melodía acompañada",
+      "Polifonía",
+      "Acordes"
+     ],
+     "correcta": 2,
+     "porque": "Todo a la vez, sin una voz que destaque."
+    }
+   ]
+  },
+  "n3.t2.l5.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-tarrega-adelita.json",
+     "titulo": "*Adelita*",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      70
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La tocas, con *D.C. al Fine*.",
+      "El paso a la parte en Mayor cambia el color."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t10.l1.p3",
+       "texto": "puede ir al recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

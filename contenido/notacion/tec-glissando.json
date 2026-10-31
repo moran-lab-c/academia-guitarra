@@ -1,0 +1,100 @@
+{
+ "titulo": "Glissando y arrastre",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 1,
+      "t": 3,
+      "dedo": 1,
+      "mano": "i",
+      "lig": "s"
+     },
+     {
+      "d": "2",
+      "c": 1,
+      "t": 7,
+      "dedo": 1
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "i",
+      "lig": "s"
+     },
+     {
+      "d": "2",
+      "c": 2,
+      "t": 7,
+      "dedo": 2
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "s": true
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 8,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 8,
+      "dedo": 4,
+      "mano": "i",
+      "lig": "s"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 10,
+      "dedo": 4
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 1,
+      "t": 10,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ]
+   ]
+  }
+ ]
+}

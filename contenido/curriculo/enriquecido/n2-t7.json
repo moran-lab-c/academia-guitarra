@@ -1,0 +1,410 @@
+{
+ "tramo": "n2.t7",
+ "nota": "Curso 2. Petzold y Sor, dos obras para leer. La primera, con MIDI de IMSLP; la segunda, de Mutopia.",
+ "pasos": {
+  "n2.t7.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Una atribución equivocada",
+     "md": "Durante siglos se dijo que este minueto, el más famoso del Barroco, era de Bach. Está en el **cuaderno de Anna Magdalena Bach**, una libreta familiar de 1725 donde su mujer copiaba música para aprender y enseñar. En los años 70 del siglo XX se demostró que era de **Christian Petzold** (1677-1733), organista de Dresde. Moraleja: lo que parece seguro a veces no lo es."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El minueto",
+     "md": "Danza francesa en 3/4, en parejas, con pasos pequeños y elegantes. Pasó del baile a la música de cámara, y la forma se quedó aunque ya nadie bailara."
+    }
+   ]
+  },
+  "n2.t7.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "La forma binaria",
+     "md": "Dos partes, **A** y **B**, y cada una se repite: AABB. A sale de la tónica y acaba en otra parte; B vuelve y termina en la tónica. Es la abuela de la sonata: en pequeño, el mismo viaje."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Parte",
+      "Compases",
+      "Tonalidad"
+     ],
+     "filas": [
+      [
+       "**A**",
+       "1-16",
+       "De Sol a Sol, y se repite"
+      ],
+      [
+       "**B**",
+       "17-32",
+       "Sale a Re, Mi menor; vuelve a Sol"
+      ]
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-petzold-minueto.json",
+     "titulo": "Mira las dos partes",
+     "principal": "partitura",
+     "motivo": "Se lee en partitura.",
+     "bpms": [
+      80,
+      96
+     ],
+     "notas": [
+      "El {c:16} acaba A: reposa. El {c:32} acaba B: reposa.",
+      "En el {c:17} empieza B: lo oirás como un cambio de luz."
+     ]
+    }
+   ]
+  },
+  "n2.t7.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Las notas un poco separadas",
+     "md": "En el Barroco no se tocaba todo ligado: lo natural era **una ligera separación** entre notas, como quien habla con claridad. Lo legato se escribía o se decidía para un sitio concreto. En guitarra: **las corcheas algo cortas y las negras no pegadas**, con peso en el tiempo fuerte del compás."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Toca el compás 1 sin arrastrar las corcheas.",
+      "Suelta un poco el dedo izquierdo entre nota y nota.",
+      "Da peso al 1 y aligera el 2 y el 3."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Ligado",
+       "notas": [
+        [
+         2,
+         3
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 0.5
+      },
+      {
+       "etiqueta": "Un poco separado",
+       "notas": [
+        [
+         2,
+         3
+        ],
+        [],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         1
+        ],
+        [],
+        [
+         2,
+         3
+        ]
+       ],
+       "duracion": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t7.l1.p4": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Adornos",
+     "md": "El mordente ya lo sabes: la nota, la de abajo o arriba y otra vez la nota, muy rápido. Otro adorno barroco es **la apoyatura**: una nota de fuera de la armonía, puesta en el tiempo fuerte, que luego **resuelve** bajando o subiendo a la real. Suena como un suspiro, y por eso lleva más peso que su resolución."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "La real, sin adorno: Si",
+       "notas": [
+        [
+         2,
+         0
+        ]
+       ],
+       "duracion": 1
+      },
+      {
+       "etiqueta": "Con apoyatura: Do–Si",
+       "notas": [
+        [
+         2,
+         1
+        ],
+        [
+         2,
+         0
+        ]
+       ],
+       "duracion": 0.7
+      }
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Toca la apoyatura en el tiempo.",
+      "Liga con la nota real, sin pulsar.",
+      "Haz que la apoyatura pese más que la resolución."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l4.p2",
+       "texto": "el mordente."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t7.l2.p1": {
+   "pantallas": [
+    {
+     "titulo": "El minueto",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-petzold-minueto-bwv-anh-114",
+       "md": "**Por qué está aquí:** es la obra de lectura: primera lectura entera de Barroco. **Qué escuchar:** la melodía de arriba conversa con un bajo sencillo. **Dificultad:** baja; precisamente por eso se lee, no se memoriza."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-petzold-minueto.json",
+       "titulo": "Petzold, *Minueto* BWV Anh. 114",
+       "principal": "partitura",
+       "motivo": "El objetivo es leer: partitura. La tablatura, para comprobar.",
+       "bpms": [
+        60,
+        96
+       ],
+       "notas": [
+        "{c:1-2} la idea: Re, y luego la escala. Ya la oíste en mil sitios.",
+        "{c:9} responde el principio con otro final.",
+        "{c:25-32} cierre: desde el bajo también se oye la melodía.",
+        "Fuente: edición con MIDI en IMSLP. Pasada a guitarra sin cambiar notas; digitación y mano derecha, propuesta de la academia."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se lee",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Sin guitarra primero",
+       "items": [
+        "Mira la armadura: un sostenido. Sol mayor.",
+        "Lee las notas de los ocho primeros compases, en voz alta.",
+        "Toca sin mirar la mano. Si te pierdes, no pares.",
+        "Sigue. Hoy no se memoriza: se lee."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o2-petzold-minueto-bwv-anh-114"
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "Lo memorizas a la tercera vez.",
+         "arreglo": "No pasa nada: empieza por otro sitio o tápate el compás anterior. El objetivo de hoy es leer."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t7.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "El estudio de Sor",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-sor-op-44-n-2",
+       "md": "**Por qué está aquí:** una segunda lectura, clásica, para comparar. **Qué escuchar:** lo mismo de Sor: una melodía con bajo muy claro. **Dificultad:** baja-media."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-sor-op44-2.json",
+       "titulo": "Sor, op. 44 n.º 2",
+       "principal": "partitura",
+       "motivo": "Se lee.",
+       "bpms": [
+        60,
+        84
+       ],
+       "notas": [
+        "{c:1-4} un arpegio: Do, Sol, Mi, Do, sobre un bajo que se queda.",
+        "{c:17-24} el centro: se va hacia Sol.",
+        "{c:25-32} vuelve la idea del principio.",
+        "Fuente: Mutopia. Dos voces y dedos, según su edición. La mano derecha, propuesta."
+       ]
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 60,
+       "clave": "o2-sor-op-44-n-2"
+      },
+      {
+       "tipo": "texto",
+       "md": "Compáralo con Petzold: ¿qué te resulta más cómodo de leer? ¿Dónde te paras? Ahí es donde hay que trabajar la lectura."
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "Las dos obras enteras, leídas sin parar."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t7.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Tocar con alguien",
+     "md": "Tocar a dúo no es tocar a la vez. Es **escuchar al otro mientras tocas**: si se acelera, lo notas; si frasea, lo sigues. Empieza fácil: la otra persona eres tú mismo, grabado. Tu grabación no espera, igual que un dúo real."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Antes de empezar",
+     "items": [
+      "Elige un tempo que os salga a los dos, es decir, a ti.",
+      "Marca dos compases de entrada en voz alta.",
+      "Si te pierdes, no pares: entra en el siguiente compás fuerte."
+     ]
+    }
+   ]
+  },
+  "n2.t7.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Graba el bajo del minueto con el móvil, y toca encima la melodía. Después, al revés. La app también puede sonar: úsala para probar, y luego graba tú."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-petzold-minueto.json",
+     "titulo": "Suena el minueto",
+     "principal": "ambas",
+     "motivo": "Déjala sonar y toca encima.",
+     "bpms": [
+      60,
+      80
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Graba solo la voz de abajo, a tempo, con un clic si quieres.",
+      "Reproduce y toca la de arriba.",
+      "Graba la de arriba y toca la de abajo.",
+      "Escucha el resultado: ¿os juntáis en los finales de frase?"
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "El minueto a dos voces con tu propia grabación.",
+     "porque": "Es lo que pide el nivel: tocar tu voz sin perder la del otro.",
+     "atencion": "No mires la mano. Escucha.",
+     "empieza": "♩ = 60."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Te oyes a ti y a la grabación a la vez."
+     ]
+    }
+   ]
+  },
+  "n2.t7.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación: el minueto entero, con tu grabación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-petzold-minueto.json",
+     "titulo": "*Minueto*",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      96
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sabes tocar los 32 compases con tu grabación sin descolgarte.",
+      "Se oyen las dos partes."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l1.p1",
+       "texto": "podría ir al recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

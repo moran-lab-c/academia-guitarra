@@ -106,8 +106,8 @@ test('las digitaciones de las tablas de la armadura son correctas', () => {
   }
 });
 
-test('solo se enriquece el Curso 1: los demás siguen sin tocar', () => {
-  assert.ok(Object.keys(datos.enriquecido).every(id => id.startsWith('n1.')));
+test('se enriquecen los Cursos 1, 2 y 3: los demás siguen sin tocar', () => {
+  assert.ok(Object.keys(datos.enriquecido).every(id => /^n[123]\./.test(id)));
 });
 
 test('cada tramo escrito está entero y sus esquemas existen', () => {
@@ -139,6 +139,46 @@ test('el Curso 1 está enriquecido entero y Continuar lo recorre en orden hasta 
     c.repasos = {};
   }
   assert.equal(continuar(ind, c, '2026-11-01').otro.numero, 2);
+});
+
+for (const [nivel, siguiente] of [[2, 3], [3, 4]]) test(`el Curso ${nivel} está enriquecido entero y Continuar lo recorre en orden`, () => {
+  const curso = ind.pasos.filter(e => e.paso.id.startsWith(`n${nivel}.`));
+  const escritos = curso.filter(e => datos.enriquecido[e.paso.id]);
+  if (!escritos.length) return; // aún sin escribir
+  assert.equal(escritos.length, curso.length);
+  const c = progresoVacio();
+  c.nivel = nivel;
+  for (const e of ind.pasos.slice(0, ind.pasos.indexOf(curso[0]))) marcar(c, e, 'hecho', '2026-11-01');
+  c.repasos = {};
+  for (const e of curso) {
+    assert.equal(continuar(ind, c, '2026-11-01').entrada.paso.id, e.paso.id);
+    marcar(c, e, esDePractica(e.paso) ? 'practica' : 'hecho', '2026-11-01');
+    c.repasos = {};
+  }
+  assert.equal(continuar(ind, c, '2026-11-01').otro.numero, siguiente);
+});
+
+test('los tresillos llenan el compás y suenan a su tiempo; los armónicos suenan a lo que dan', () => {
+  const j = { compas: '3/4', compases: [{ voces: [Array.from({ length: 9 }, () => ({ d: '8', tres: true, c: 1, t: 0 }))] }] };
+  assert.ok(prepararNotacion(j).ok);
+  const { eventos } = eventosDeNotacion(j);
+  assert.ok(Math.abs(eventos[3].t - 1) < 1e-6);
+  assert.ok(Math.abs(eventos[0].dur - 1 / 3) < 1e-6);
+  const arm = { compas: '4/4', compases: [{ voces: [[{ d: '1', c: 6, t: 7, arm: true }]] }] };
+  assert.equal(eventosDeNotacion(arm).eventos[0].midis[0], 40 + 19);
+  assert.ok(!prepararNotacion({ compas: '4/4', compases: [{ voces: [[{ d: '1', c: 6, t: 6, arm: true }]] }] }).ok, 'en el traste 6 no hay armónico');
+  const romance = notaciones.get('notacion/obra-romance.json');
+  assert.equal(romance.compases.length, 32);
+  assert.equal(romance.compases[0].voces[0].length, 9);
+  // La melodía del Romance: primera nota de cada tresillo en la 1.ª cuerda.
+  assert.deepEqual(romance.compases[0].voces[0].filter((_, i) => i % 3 === 0).map(n => [n.c, n.t]), [[1, 7], [1, 7], [1, 7]]);
+});
+
+test('una anacrusa no deja un hueco antes del compás 1', () => {
+  const j = notaciones.get('notacion/obra-sor-op35-8.json');
+  const { eventos } = eventosDeNotacion(j);
+  assert.ok(Math.abs(eventos[0].t - 1) < 1e-6, 'el 3/8 dura 1,5 negras y la anacrusa 0,5');
+  assert.ok(eventos.filter(e => e.compas === 1).every(e => e.t >= 1.5 - 1e-6));
 });
 
 test('los enlaces de una obra son seguros y ningún paso cita un compás de una obra sin transcribir', () => {
@@ -282,7 +322,7 @@ test('Continuar y el progreso recorren el tramo igual que antes', () => {
 
 test('hay muestra de guitarra para toda nota que puede sonar', () => {
   const hay = n => fs.existsSync(new URL(`../web/sonidos/guitarra/${n}.mp3`, import.meta.url));
-  for (let n = 40; n <= 88; n++) assert.ok(hay(n), `falta la nota ${n}`);
+  for (let n = 38; n <= 88; n++) assert.ok(hay(n), `falta la nota ${n}`);
   for (const f of notaciones.values()) for (const ev of eventosDeNotacion(f).eventos) for (const m of ev.midis) assert.ok(hay(m), `${f.titulo}: nota ${m}`);
   for (const id of Object.keys(PREGUNTAS)) for (const q of preguntasDelPaso(id, 20)) for (const m of (q.audio?.secuencia ?? []).flat()) assert.ok(hay(m), `${id}: nota ${m}`);
 });

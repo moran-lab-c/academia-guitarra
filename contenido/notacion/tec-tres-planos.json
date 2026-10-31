@@ -1,0 +1,164 @@
+{
+ "titulo": "Melodía, acompañamiento y bajo",
+ "compas": "3/4",
+ "armadura": "Am",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 0,
+      "mano": "a",
+      "art": [
+       "acento"
+      ],
+      "rotulo": "La m"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 1,
+      "dedo": 1,
+      "mano": "a",
+      "art": [
+       "acento"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 0,
+      "mano": "a",
+      "art": [
+       "acento"
+      ],
+      "rotulo": "Mi7"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "m"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 6,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 0,
+      "mano": "a",
+      "art": [
+       "acento"
+      ],
+      "rotulo": "La m"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 5,
+      "t": 0,
+      "mano": "p"
+     }
+    ]
+   ]
+  }
+ ]
+}

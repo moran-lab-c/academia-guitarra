@@ -1,0 +1,258 @@
+{
+ "titulo": "Primera vista con staccato",
+ "compas": "4/4",
+ "armadura": "G",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 3,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ],
+      "din": "mp"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "s": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 3,
+      "dedo": 3,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "2",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 3,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ],
+      "din": "mf"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i",
+      "art": [
+       "staccato"
+      ]
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "2",
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 2,
+      "t": 1,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 0,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 2,
+      "dedo": 2,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "1",
+      "c": 3,
+      "t": 0,
+      "mano": "i"
+     }
+    ]
+   ]
+  }
+ ]
+}

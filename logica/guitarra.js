@@ -2,7 +2,7 @@
 // se quedan al cambiar y las escenas animadas del mástil. Nada se escribe a mano: si el dato sale de aquí, no puede
 // contradecir al diagrama ni a la tablatura. Lógica pura: lo dibuja web/componentes/mastil.js.
 import { ACORDES, ventana } from './acordes.js';
-import { AFINACION, armadura, grafia, midiDe, prepararNotacion } from './partitura.js';
+import { AFINACION, ARMONICO, armadura, grafia, midiDe, prepararNotacion } from './partitura.js';
 
 const AIRE = AFINACION.map(midiDe); // índice 0 = 1.ª cuerda
 const LETRA = { c: 'Do', d: 'Re', e: 'Mi', f: 'Fa', g: 'Sol', a: 'La', b: 'Si' };
@@ -88,10 +88,12 @@ export function eventosDeNotacion(json, { compases = null, seco = false } = {}) 
   const afinacion = (json.afinacion ?? AFINACION).map(midiDe);
   const negras = (plan.compas.num * 4) / plan.compas.den;
   const eventos = [];
+  // Una anacrusa entra al final de su compás: sin un hueco antes del compás 1.
+  const vacio = json.anacrusa && plan.compases[0].numero === (json.primerCompas ?? 1) ? negras - Math.max(...plan.compases[0].voces.map(v => v.reduce((s, n) => s + (4 / Number(n.duracion)) * (n.puntillo ? 1.5 : 1) * (n.tres ? 2 / 3 : 1), 0))) : 0;
   plan.compases.forEach((m, i) => {
     for (const voz of m.voces) for (const n of voz) {
       if (n.silencio) continue;
-      eventos.push({ t: i * negras + n.inicio, dur: (4 / Number(n.duracion)) * (n.puntillo ? 1.5 : 1), midis: n.tab.map(x => afinacion[x.cuerda - 1] + x.traste), cuerdas: n.tab.map(x => x.cuerda), compas: m.numero });
+      eventos.push({ t: i * negras + n.inicio + (i === 0 ? vacio : 0), dur: (4 / Number(n.duracion)) * (n.puntillo ? 1.5 : 1) * (n.tres ? 2 / 3 : 1), midis: n.tab.map(x => afinacion[x.cuerda - 1] + (n.arm ? ARMONICO[x.traste] : x.traste + (n.oct ? 12 : 0))), cuerdas: n.tab.map(x => x.cuerda), compas: m.numero });
     }
   });
   eventos.sort((a, b) => a.t - b.t);

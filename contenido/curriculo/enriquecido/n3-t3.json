@@ -1,0 +1,1097 @@
+{
+ "tramo": "n3.t3",
+ "nota": "Curso 3. Bach, Bourrée BWV 996: MIDI de una edición en IMSLP, sin cambiar notas, en Mi menor. Dedos: propuesta.",
+ "pasos": {
+  "n3.t3.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Bach y el laúd",
+     "md": "Johann Sebastian Bach (1685-1750) escribió unas pocas obras para laúd o para **clave-laúd**, un clavecín con cuerdas de tripa que imitaba su sonido. La *Suite en Mi menor* BWV 996 es una de ellas, de hacia 1712-1717. Una **bourrée** es una danza francesa, en dos partes que se repiten, y rápida: dos pulsos por compás, y empieza con un pequeño salto, una anacrusa."
+    },
+    {
+     "tipo": "texto",
+     "md": "Es tal vez la pieza más conocida de Bach en guitarra (y está en cierta canción de Jethro Tull). No te fíes: fácil de oír, difícil de hacer limpia."
+    }
+   ]
+  },
+  "n3.t3.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Compara laúd y guitarra. En el laúd oirás cuerdas más cortas y un bajo muy claro; en la guitarra, más cuerpo. Fíjate: **¿oyes dos voces?** Es lo que va a importar."
+    },
+    {
+     "tipo": "lista",
+     "titulo": "Búscalas",
+     "items": [
+      "En laúd: [Bach BWV 996 Bourrée, laúd](https://www.youtube.com/results?search_query=Bach+Bourree+BWV+996+lute).",
+      "En guitarra: [Julian Bream o John Williams](https://www.youtube.com/results?search_query=Bach+Bourree+BWV+996+guitar+Williams)."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Muestras, para tener el oído",
+     "principal": "ambas",
+     "bpms": [
+      60,
+      72
+     ],
+     "compases": [
+      0,
+      4
+     ],
+     "plegado": true
+    }
+   ]
+  },
+  "n3.t3.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Lo que no dice la tablatura",
+     "md": "La tablatura te dice cuándo empieza una nota. **La duración no siempre.** En polifonía eso importa mucho: ¿este Sol sigue sonando bajo el siguiente? Solo la partitura lo dice: la plica hacia abajo y la figura de esa voz. Por eso esta obra se aprende **con la partitura delante**."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "",
+      "Tablatura",
+      "Partitura"
+     ],
+     "filas": [
+      [
+       "Qué nota",
+       "Sí",
+       "Sí"
+      ],
+      [
+       "Cuándo empieza",
+       "Sí",
+       "Sí"
+      ],
+      [
+       "**Cuánto dura**",
+       "Rara vez",
+       "Sí"
+      ],
+      [
+       "**A qué voz pertenece**",
+       "No",
+       "Sí"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t6.l3.p1",
+       "texto": "dos voces en Dowland."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Lee solo la voz de arriba de los primeros compases, luego solo la de abajo. Las plicas lo dicen: arriba, hacia arriba; abajo, hacia abajo."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Primeros compases: dos voces",
+     "principal": "partitura",
+     "motivo": "Se lee en partitura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "En {c:0} la anacrusa: dos notas de entrada, con su bajo.",
+      "En {c:1} el bajo baja por grados: Mi, La, Si, La.",
+      "En {c:2} arriba un salto y abajo un bajo que camina."
+     ],
+     "compases": [
+      0,
+      4
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En una plica hacia abajo hay una negra. ¿De qué voz es?",
+     "opciones": [
+      "De la de abajo",
+      "De la de arriba"
+     ],
+     "correcta": 0,
+     "porque": "En música a dos voces, plica abajo = voz de abajo."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes seguir una voz sin perder la otra."
+     ]
+    }
+   ]
+  },
+  "n3.t3.l3.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La clave de la polifonía: una voz se queda mientras la otra se mueve. Aquí se separa y se trabaja por los dos lados."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-voz-larga.json",
+     "titulo": "Voz larga, voz que se mueve",
+     "principal": "ambas",
+     "motivo": "Dos voces.",
+     "bpms": [
+      50,
+      70
+     ],
+     "notas": [
+      "{c:1-2}: bajo en blancas, melodía en corcheas.",
+      "{c:3-4}: al revés."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Los cuatro compases, en los dos sentidos.",
+     "porque": "Es lo que pide el nivel.",
+     "atencion": "Si una nota larga se apaga antes, revisa el dedo: ¿lo has levantado?",
+     "empieza": "♩ = 50.",
+     "sube": "Ninguna nota larga se corta antes de tiempo."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Ninguna nota larga se corta antes de tiempo."
+     ]
+    }
+   ]
+  },
+  "n3.t3.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Por voces",
+     "md": "El método es siempre igual: **cada voz sola**, con los dedos que tendrá con la otra. Luego juntas. Así aprendes lo que dura cada una."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Pasos",
+     "items": [
+      "Solo la voz de arriba, con su digitación real.",
+      "Solo la de abajo, igual.",
+      "Canta una, toca la otra.",
+      "Las dos, muy lentas, escuchando la que menos te llama."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Compases 1 a 4",
+     "principal": "ambas",
+     "bpms": [
+      40,
+      60
+     ],
+     "compases": [
+      1,
+      4
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo del profesor",
+     "md": "Lento no es un paso previo: es la manera de oír. Si a ♩ = 50 no oyes las dos voces, a tempo tampoco."
+    }
+   ]
+  },
+  "n3.t3.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Primero la voz larga",
+     "md": "Digitar polifonía empieza por una pregunta: **¿qué nota tiene que seguir sonando?** Ese dedo queda fijado. El resto se adapta. Si es imposible, cambia de cuerda: una voz puede ir por otra cuerda para dejarle sitio a la larga."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Paso",
+      "Pregunta"
+     ],
+     "filas": [
+      [
+       "1",
+       "¿Qué voz es la larga?"
+      ],
+      [
+       "2",
+       "¿Qué dedo la pisa?"
+      ],
+      [
+       "3",
+       "¿Qué dedos me quedan para la otra?"
+      ],
+      [
+       "4",
+       "¿Hace falta cambiar de cuerda?"
+      ]
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Los dedos de esta obra son calculados por la academia para no cortar voces; hay que probarlos con la mano y, si no van, buscar otros."
+    }
+   ]
+  },
+  "n3.t3.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "La app toca la voz de abajo; tú cantas la de arriba. Es difícil porque la de abajo te tira. **Empieza por las cuatro primeras notas.**"
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Canta sobre esto",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      60
+     ],
+     "compases": [
+      0,
+      4
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Sigues la voz de arriba sin confundirte con la de abajo."
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Ayuda",
+     "md": "Usa la opción de oír compases sueltos, lento."
+    }
+   ]
+  },
+  "n3.t3.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora al revés: dos voces que la app toca dos veces. Tú, de memoria, tocas solo la de arriba."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Dos voces, frase 1",
+       "notas": [
+        [
+         [
+          1,
+          0
+         ],
+         [
+          6,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          2
+         ],
+         [
+          5,
+          0
+         ]
+        ],
+        [
+         [
+          1,
+          3
+         ],
+         [
+          5,
+          2
+         ]
+        ],
+        [
+         [
+          1,
+          2
+         ],
+         [
+          5,
+          0
+         ]
+        ]
+       ],
+       "duracion": 0.9
+      },
+      {
+       "etiqueta": "Dos voces, frase 2",
+       "notas": [
+        [
+         [
+          1,
+          0
+         ],
+         [
+          6,
+          0
+         ]
+        ],
+        [
+         [
+          2,
+          3
+         ],
+         [
+          5,
+          3
+         ]
+        ],
+        [
+         [
+          1,
+          0
+         ],
+         [
+          5,
+          2
+         ]
+        ],
+        [
+         [
+          2,
+          0
+         ],
+         [
+          6,
+          0
+         ]
+        ]
+       ],
+       "duracion": 0.9
+      }
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Cuál es la voz de arriba de la frase 1?",
+     "opciones": [
+      "Mi, Fa♯, Sol, Fa♯",
+      "Mi, La, Si, La",
+      "Mi, Re, Mi, Si"
+     ],
+     "correcta": 0,
+     "porque": "La de arriba es Mi–Fa♯–Sol–Fa♯, la que la 1.ª cuerda da: 0, 2, 3 y 2.",
+     "audio": {
+      "notas": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "duracion": 0.6
+     }
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Al oírlo dos veces, la tocas de memoria."
+     ]
+    }
+   ]
+  },
+  "n3.t3.l5.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Cambiar de tónica",
+     "md": "**Modular** es salir de una tonalidad a otra. Hay dos caminos fáciles: a la dominante (de Do a Sol, un sostenido más) y al **relativo** (de Mi menor a Sol mayor, sin alteraciones nuevas). El signo es la alteración de la nueva sensible: Fa♯, para Sol."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "De",
+      "A",
+      "Señal"
+     ],
+     "filas": [
+      [
+       "Do mayor",
+       "Sol (dominante)",
+       "Fa♯"
+      ],
+      [
+       "Sol mayor",
+       "Re (dominante)",
+       "Do♯"
+      ],
+      [
+       "Mi menor",
+       "Sol (relativo)",
+       "Fa♯ sin Re♯; Fa natural no"
+      ],
+      [
+       "La menor",
+       "Do (relativo)",
+       "Sol natural, no Sol♯"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t10.l4.p2",
+       "texto": "modular a la dominante."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "¿Adónde va la primera mitad? Lee la última línea de la parte A: el acorde, el bajo y la señal."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Final de la primera parte",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "{c:6-8} acercándose: mira el bajo.",
+      "El acorde del {c:8} es la respuesta."
+     ],
+     "compases": [
+      5,
+      8
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "La primera parte acaba en Sol mayor. ¿Qué es Sol respecto a Mi menor?",
+     "opciones": [
+      "Su dominante",
+      "Su relativo",
+      "Su homónimo"
+     ],
+     "correcta": 1,
+     "porque": "Mi menor y Sol mayor comparten armadura."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Que la primera mitad acaba en Sol mayor es lo que se comprueba en el MIDI de la edición usada. Otras ediciones pueden repartir compases de otro modo."
+    }
+   ]
+  },
+  "n3.t3.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dominante de otro",
+     "md": "Ya viste el V/V. Se generaliza: **cualquier acorde mayor o menor de la tonalidad puede tener su propia dominante**. Do7 es la dominante de Fa: lleva Si♭ prestado. La7 es la dominante de Re m: lleva Do♯ prestado. A eso se le llama **dominante secundaria**: un acorde que dura muy poco y empuja hacia otro. Se escribe V/IV o V/ii."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Secundaria",
+      "En Do",
+      "Empuja a",
+      "Nota prestada"
+     ],
+     "filas": [
+      [
+       "V/IV",
+       "Do7",
+       "Fa",
+       "Si♭"
+      ],
+      [
+       "V/ii",
+       "La7",
+       "Re m",
+       "Do♯"
+      ],
+      [
+       "V/V",
+       "Re7",
+       "Sol",
+       "Fa♯"
+      ],
+      [
+       "V/vi",
+       "Mi7",
+       "La m",
+       "Sol♯"
+      ]
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t9.l2.p1",
+       "texto": "V/V."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l5.p4": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arm-sec.json",
+     "titulo": "Do–Do7–Fa–La7–Re m–Sol7–Do",
+     "principal": "ambas",
+     "motivo": "Se ve la nota prestada.",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "{c:2} Do7: Si♭ se oye.",
+      "{c:4} La7: Do♯."
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "Do7",
+       "g": "V/IV",
+       "papel": "hacia Fa"
+      },
+      {
+       "n": "Fa",
+       "g": "IV",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "La7",
+       "g": "V/ii",
+       "papel": "hacia Re m"
+      },
+      {
+       "n": "Re m",
+       "g": "ii",
+       "papel": "hacia el V"
+      },
+      {
+       "n": "Sol7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Toda seguida",
+       "acordes": [
+        "Do",
+        "Do7",
+        "Fa",
+        "La7",
+        "Re m",
+        "Sol7",
+        "Do"
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La progresión, con un acorde por compás.",
+     "porque": "Oirás cada dominante hacia su sitio.",
+     "atencion": "Di «va a Fa», «va a Re menor» mientras tocas.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n3.t3.l6.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Trino",
+     "md": "Alternar **rápido** dos notas vecinas. Se hace con ligados: una pulsación y dedos que golpean y tiran. En el Barroco, **suele empezar por la nota superior**, y en el Clasicismo tardío, muchas veces desde la principal. Es un adorno, no hay que hacerlo rápido de entrada: se hace **medido**."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Pulsa la de arriba.",
+      "Tira hacia la de abajo (ligado descendente).",
+      "Golpea hacia la de arriba (ligado ascendente).",
+      "Mantén el dedo de abajo fijo."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Corcheas: lo mismo, lento",
+       "notas": [
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "duracion": 0.4
+      },
+      {
+       "etiqueta": "Semicorcheas",
+       "notas": [
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "duracion": 0.2
+      }
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Cómo empieza el trino varía según el tratado y el estilo. Es una regla general, con matices; aquí se empieza arriba. Tu profesor puede indicar otra cosa."
+    }
+   ]
+  },
+  "n3.t3.l6.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-trino.json",
+     "titulo": "Trino medido",
+     "principal": "tablatura",
+     "motivo": "Técnica: ligados que se ven.",
+     "bpms": [
+      50,
+      80
+     ],
+     "notas": [
+      "{c:1} corcheas, lento.",
+      "{c:2} semicorcheas: el dedo 3 fijo, el 4 golpea.",
+      "{c:3-4} con otros pares de dedos."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Trino en semicorcheas y en fusas, con cada par de dedos.",
+     "porque": "Cierra los ligados de este nivel.",
+     "atencion": "Lo primero es que sea regular. Si es desigual, baja. La velocidad vendrá sola.",
+     "empieza": "♩ = 50, en semicorcheas.",
+     "sube": "Regular y subiendo."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "El trino es regular a ♩ = 50 en semicorcheas."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l4.p2",
+       "texto": "el mordente."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l6.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Lo que es de la armonía y lo que no",
+     "md": "En una melodía hay **notas reales**, que pertenecen al acorde, y **notas de adorno**, que no pero pasan por ahí. Las de adorno crean tensión y se resuelven."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Nota",
+      "Qué hace"
+     ],
+     "filas": [
+      [
+       "**De paso**",
+       "Une dos reales por grados"
+      ],
+      [
+       "**Bordadura**",
+       "Sale de una real y vuelve a ella"
+      ],
+      [
+       "**Apoyatura**",
+       "Cae en el tiempo fuerte, resuelve después"
+      ],
+      [
+       "**Anticipación**",
+       "Se adelanta a la real"
+      ]
+     ]
+    },
+    {
+     "tipo": "completar",
+     "enunciado": "Sobre el acorde de Do: Do, Re, Mi. El Re es una nota ",
+     "partes": [
+      {
+       "correcta": "de paso",
+       "opciones": [
+        "de paso",
+        "real",
+        "de bordadura"
+       ]
+      }
+     ],
+     "final": "Une Do y Mi por grados y no está en el acorde."
+    },
+    {
+     "tipo": "completar",
+     "enunciado": "Sobre Do: Mi, Fa, Mi. El Fa es una ",
+     "partes": [
+      {
+       "correcta": "bordadura",
+       "opciones": [
+        "bordadura",
+        "apoyatura",
+        "nota real"
+       ]
+      }
+     ],
+     "final": "Sale de Mi y vuelve a Mi."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Sobre Do: en el tiempo fuerte suena Fa, que baja a Mi.",
+     "opciones": [
+      "Nota de paso",
+      "Apoyatura",
+      "Bordadura"
+     ],
+     "correcta": 1,
+     "porque": "Cae en el fuerte y resuelve."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t6.l6.p1",
+       "texto": "en Mertz."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l7.p1": {
+   "pantallas": [
+    {
+     "titulo": "Primera mitad",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o3-bach-bourree-bwv-996",
+       "md": "**Por qué está aquí:** la obra troncal del Barroco en este nivel. **Qué escuchar:** dos voces que dialogan. **Dificultad:** alta para que quede limpia, no tanto para tocarla."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-bach-bourree.json",
+       "titulo": "Primera parte",
+       "principal": "partitura",
+       "motivo": "Partitura principal: las duraciones importan.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "{c:0} anacrusa: empieza antes del compás.",
+        "{c:1-4} dos ideas: el bajo baja, arriba responde.",
+        "{c:5-8} lleva a Sol.",
+        "Fuente: IMSLP, edición con MIDI de la Suite. Sin cambiar notas; dedos, propuesta."
+       ],
+       "compases": [
+        0,
+        8
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Segunda mitad",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-bach-bourree.json",
+       "titulo": "Segunda parte",
+       "principal": "partitura",
+       "motivo": "Sigue en partitura.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "{c:9-16} una zona de modulaciones: Do, La m, Si.",
+        "{c:17-23} vuelve a Mi menor."
+       ],
+       "compases": [
+        8,
+        24
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "La obra entera",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-bach-bourree.json",
+       "titulo": "*Bourrée* BWV 996",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        50,
+        100
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Toda, con cada parte repetida.",
+       "porque": "Es la obra troncal.",
+       "atencion": "Corcheas iguales, dos pulsos de blanca.",
+       "empieza": "Blanca = 50.",
+       "sube": "Blanca = 72."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o3-bach-bourree-bwv-996"
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l7.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Separadas y ligadas",
+     "md": "Sin marcas, en Bach, **lo natural es articular**: grupos cortos y no todo pegado. Una práctica muy frecuente: las corcheas que suben por grados, ligadas de dos en dos; las notas en salto, un poco separadas. No es regla: pruébalo y decide. Lo de que el último compás no acabe «con sopapo» sí lo es."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Pruébalo",
+     "principal": "ambas",
+     "bpms": [
+      60
+     ],
+     "notas": [
+      "En {c:1-2} prueba: dos ligadas, dos sueltas."
+     ],
+     "compases": [
+      1,
+      4
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tus corcheas no suenan como una máquina."
+     ]
+    }
+   ]
+  },
+  "n3.t3.l7.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Ornamentar la repetición",
+     "md": "En el Barroco, **repetir igual se consideraba poco imaginativo**: en la segunda vuelta se añadían adornos. Muy poco: un mordente en una negra, una nota de paso entre dos, un trino en la cadencia. La primera vez tal cual está; la segunda, tuya."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Toca la parte A tal cual.",
+      "En la repetición añade **un** adorno en cada frase.",
+      "Trino en la cadencia del {c:8}.",
+      "Si te pierdes, quita uno."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "Dónde poner",
+     "principal": "ambas",
+     "bpms": [
+      50
+     ],
+     "compases": [
+      1,
+      8
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Añades sin que se pierda la melodía."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t6.l4.p2",
+       "texto": "variar una melodía."
+      }
+     ]
+    }
+   ]
+  },
+  "n3.t3.l7.p4": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-bach-bourree.json",
+     "titulo": "La obra",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      100
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "La tocas entera, con las voces claras.",
+      "El bajo nunca se calla sin motivo."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n3.t10.l1.p1",
+       "texto": "en el recital."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

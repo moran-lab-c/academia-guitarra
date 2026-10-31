@@ -1,0 +1,170 @@
+{
+ "titulo": "Tres traslados: el mismo cambio",
+ "compas": "4/4",
+ "armadura": "C",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 3,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "c": 1,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 7,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "c": 1,
+      "t": 8,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ]
+   ],
+   "pos": "V"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "i",
+      "lig": "s"
+     },
+     {
+      "d": "2",
+      "c": 2,
+      "t": 5,
+      "dedo": 2
+     },
+     {
+      "d": "4",
+      "c": 2,
+      "t": 5,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 7,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "c": 1,
+      "t": 3,
+      "dedo": 1,
+      "mano": "i"
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 3,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 5,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "s": true
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "4",
+      "c": 1,
+      "t": 7,
+      "dedo": 1,
+      "mano": "i"
+     },
+     {
+      "d": "4",
+      "c": 1,
+      "t": 8,
+      "dedo": 2,
+      "mano": "i"
+     },
+     {
+      "d": "2",
+      "c": 1,
+      "t": 10,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ]
+   ],
+   "pos": "VII"
+  }
+ ]
+}

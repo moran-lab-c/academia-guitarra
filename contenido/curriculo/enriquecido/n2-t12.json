@@ -1,0 +1,619 @@
+{
+ "tramo": "n2.t12",
+ "nota": "Curso 2. Brouwer VII tiene derechos: no se transcribe ni una nota. Trabajo: su mundo, oído, y un ostinato propio. Partitura con él, hay que comprarla.",
+ "pasos": {
+  "n2.t12.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Pizzicato",
+     "md": "Efecto de cuerda pinzada, sin resonancia, parecido a un contrabajo. Se apoya **el canto de la mano derecha**, en la parte blanda bajo el meñique, sobre la cuerda **justo junto al puente**: apaga un poco, sin ahogar. Se pulsa con *p*. Si apoyas demasiado cerca del mástil, no suena; muy cerca del puente, no se apaga."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Apoya el canto de la mano en las cuerdas graves, justo antes del puente.",
+      "Pulsa con *p*.",
+      "Mueve la mano hacia dentro o hacia fuera hasta que suene corto pero con nota."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Las notas, cortas: acércate a este carácter",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         4,
+         2
+        ]
+       ],
+       "duracion": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t12.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Rasgueado clásico",
+     "md": "En el Nivel 1 rasgueabas para acompañar. Aquí es una articulación escrita: **con *p***, de bajo a agudo, redondo y amplio. **Con *i***, hacia arriba y hacia abajo. **Con varios dedos seguidos**: el dedo *a*, luego *m* y luego *i*, abriendo como un abanico. No confundas con el rasgueado flamenco, que tiene otro golpe y otra técnica."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo se hace",
+     "items": [
+      "Rasga con *p*: el pulgar empuja, la muñeca se mueve lo justo.",
+      "Con *i*: hacia abajo la uña, hacia arriba la yema.",
+      "Abanico: *a-m-i* salen uno a uno, muy juntos."
+     ]
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Rasgueado: arpegiado rápido del acorde",
+       "acorde": "La m",
+       "arpegiado": true,
+       "duracion": 0.9
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t12.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-pizz-rasg.json",
+     "titulo": "La m – Mi7: pizzicato y rasgueado",
+     "principal": "ambas",
+     "motivo": "Se ve el arpegio y el acorde tocado.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "{c:1-2} pizzicato, con *p*.",
+      "{c:3-4} rasgueado: en cada acorde escrito."
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "La m",
+       "g": "i",
+       "papel": "reposo"
+      },
+      {
+       "n": "Mi7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "La m",
+       "g": "i",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La progresión en los dos modos.",
+     "porque": "Se trata de cambiar de carácter a voluntad.",
+     "atencion": "Si el pizzicato suena apagado, mueve el canto de la mano.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t12.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Leo Brouwer",
+     "md": "Cubano (1939), compositor, guitarrista y director. Sus *Estudios sencillos* son de lo más tocado del repertorio moderno. Reúnen técnica muy clara con lenguaje del siglo XX: ostinatos, acentos que no coinciden con el compás, armonías sin función tonal, cosas de su Cuba."
+    },
+    {
+     "tipo": "texto",
+     "md": "Ya lo viste con el VI. El VII sigue la misma línea."
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Derechos",
+     "md": "Está protegido. No lo reproducimos ni siquiera un compás. Hay que tener la edición para tocarlo; el trabajo de aquí se hace con material propio y escuchando."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t12.l3.p1",
+       "texto": "el Estudio VI, en el Nivel 1."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t12.l2.p2": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-brouwer-estudio-sencillo-vii",
+       "md": "**Por qué está aquí:** el siglo XX en el recital. **Qué escuchar:** dónde cae el acento, y si coincide con el compás. **Papel:** aplicación, con edición propia."
+      },
+      {
+       "tipo": "texto",
+       "md": "Escucha el *Estudio VII* y responde a cuatro preguntas, en papel. Es la manera de saber qué trabajar antes de ponerse con la partitura."
+      },
+      {
+       "tipo": "lista",
+       "titulo": "Búscalo",
+       "items": [
+        "[Estudios sencillos de Brouwer](https://www.youtube.com/results?search_query=Brouwer+Estudios+sencillos+VII+guitar), varias versiones."
+       ]
+      },
+      {
+       "tipo": "lista",
+       "titulo": "Preguntas",
+       "items": [
+        "¿Hay un patrón repetido? ¿De cuántos pulsos?",
+        "¿La mano izquierda se mueve mucho, o poco?",
+        "¿Dónde caen los acentos? ¿Son regulares?",
+        "¿Dónde suena más fuerte?"
+       ]
+      },
+      {
+       "tipo": "guia",
+       "tipoGuia": "Por verificar",
+       "md": "Falta su edición para decir compases y lo que trabaja. Cuando la tengas, lo que se oye se puede comparar con lo que está escrito."
+      }
+     ]
+    },
+    {
+     "titulo": "Método",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/tec-ostinato-propio.json",
+       "titulo": "Mismo mundo: un ostinato propio",
+       "principal": "ambas",
+       "motivo": "Material de la academia, que no copia la obra.",
+       "bpms": [
+        50,
+        72
+       ],
+       "notas": [
+        "{c:1} bajo y dos notas arriba, con acento en cada grupo.",
+        "{c:2} el acento se va a otro sitio: la 4.ª corchea, y cambia la cuerda.",
+        "{c:4} cambia el bajo: sigue sonando igual."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "El ostinato, con los acentos marcados.",
+       "porque": "Es la técnica que el estudio pide: repetir sin aburrirse y sin que los acentos se muevan.",
+       "atencion": "El acento sale con peso, no con rigidez.",
+       "empieza": "Corchea = 100."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t12.l2.p3": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Dónde cae el peso",
+     "md": "**Acento** es una nota con más peso. Normalmente coincide con el fuerte del compás. Pero si se mueve, el compás se pone en duda, y eso es lo que tiene gracia en Brouwer y en buena parte del XX. Marca con el pie el compás y haz los acentos en otro sitio: **no pierdas ninguna de las dos cosas**."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "El acento en lo fuerte",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ]
+       ],
+       "duracion": 0.4,
+       "destacar": [
+        0,
+        3
+       ]
+      },
+      {
+       "etiqueta": "El acento en la 2.ª",
+       "notas": [
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         3,
+         2
+        ],
+        [
+         2,
+         1
+        ]
+       ],
+       "duracion": 0.4,
+       "destacar": [
+        1,
+        4
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/tec-ostinato-propio.json",
+     "titulo": "Con los acentos",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Oyes un pulso regular y una nota fuerte que no cae en él. ¿Qué es?",
+     "opciones": [
+      "Un acento desplazado",
+      "Una cejilla",
+      "Un rubato"
+     ],
+     "correcta": 0,
+     "porque": "Es lo que se llama desplazar el acento."
+    }
+   ]
+  },
+  "n2.t12.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "La idea",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Armonizar",
+       "md": "Es ponerle acordes a una melodía. Hay un método: **cada compás, mira qué notas caen en el tiempo fuerte**, y busca el acorde que las tenga. Con cuatro acordes se armoniza casi todo: I, IV, V y vi."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Acorde en Do",
+        "Notas"
+       ],
+       "filas": [
+        [
+         "**I, Do**",
+         "Do, Mi, Sol"
+        ],
+        [
+         "**IV, Fa**",
+         "Fa, La, Do"
+        ],
+        [
+         "**V, Sol**",
+         "Sol, Si, Re"
+        ],
+        [
+         "**vi, La m**",
+         "La, Do, Mi"
+        ]
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/arm-melodia-armonizar.json",
+       "titulo": "Una melodía de ocho compases",
+       "principal": "partitura",
+       "motivo": "Escribe el acorde sobre cada compás.",
+       "bpms": [
+        60
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Pruébalo",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Cómo",
+       "items": [
+        "Canta la melodía.",
+        "Compás 1: Mi y Si en lo fuerte: Do o Mi m. Do.",
+        "Sigue. Termina en I, y antes pon V.",
+        "Toca los acordes y pregúntate: ¿te gusta?"
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "La melodía tiene Fa y La en los tiempos fuertes. ¿Qué acorde pones?",
+       "opciones": [
+        "Do",
+        "Fa",
+        "Sol"
+       ],
+       "correcta": 1,
+       "porque": "Fa y La son de Fa mayor; también podría ser Re m, pero de esos cuatro, Fa."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "El último acorde de la pieza es normalmente…",
+       "opciones": [
+        "El I",
+        "El IV",
+        "El vi"
+       ],
+       "correcta": 0,
+       "porque": "Se acaba en casa."
+      },
+      {
+       "tipo": "completar",
+       "enunciado": "Una armonización posible: Do, Do, ",
+       "partes": [
+        {
+         "correcta": "Fa",
+         "opciones": [
+          "Fa△7",
+          "Fa",
+          "La"
+         ]
+        },
+        ", Sol7, Do, Sol7, La m, ",
+        {
+         "correcta": "Do",
+         "opciones": [
+          "Do",
+          "Re",
+          "Si"
+         ]
+        }
+       ],
+       "final": "Otra versión puede funcionar: mientras suene y las notas fuertes estén en el acorde."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Compás",
+        "Acorde"
+       ],
+       "filas": [
+        [
+         "1",
+         "Do"
+        ],
+        [
+         "2",
+         "Do"
+        ],
+        [
+         "3",
+         "Fa"
+        ],
+        [
+         "4",
+         "Sol7"
+        ],
+        [
+         "5",
+         "Fa"
+        ],
+        [
+         "6",
+         "Do/Sol"
+        ],
+        [
+         "7",
+         "Sol7"
+        ],
+        [
+         "8",
+         "Do"
+        ]
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t12.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Ahora, tú haces los acordes y la app, la melodía. No mires la mano. Si el pulso se tuerce, oyes enseguida que no estáis juntos."
+    },
+    {
+     "tipo": "pista",
+     "fuente": "notacion/arm-melodia-armonizar.json",
+     "bpm": 60,
+     "etiquetas": [
+      "Do",
+      "Do",
+      "Fa",
+      "Sol7",
+      "Fa",
+      "Do",
+      "Sol7",
+      "Do"
+     ]
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      },
+      {
+       "n": "Fa△7",
+       "g": "IV",
+       "papel": "alejamiento"
+      },
+      {
+       "n": "Sol7",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Tu armonización, sobre la melodía de la app.",
+     "porque": "Armonizar y tocar con otro es el fin de este paso.",
+     "atencion": "Si no sabes qué acorde sigue, deja sonar el anterior.",
+     "empieza": "♩ = 60."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 60
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tu armonía cabe con la melodía."
+     ]
+    }
+   ]
+  },
+  "n2.t12.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Primera vista significa: **no lo has visto antes**. Cinco segundos para mirar: armadura, compás, zonas raras. Y sigue sin parar. Aquí, además, staccato en los compases con punto, *mp* y *mf*."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-vista-staccato.json",
+     "titulo": "Ocho compases a primera vista",
+     "principal": "partitura",
+     "motivo": "Primera vista: solo partitura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "{c:1} con punto: corto.",
+      "{c:5} cambia a *mf*."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Una pasada, sin parar. Si fallas, sigue.",
+     "porque": "Es la lectura que pide el nivel.",
+     "atencion": "Staccato y dinámica, ya en la primera lectura.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Atención",
+     "md": "Si te lo aprendes, ya no es primera vista. Busca otra línea, de Sor o de la misma lección."
+    }
+   ]
+  },
+  "n2.t12.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación."
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Puedes hablar del *Estudio VII*, y lo has tocado si tienes la partitura.",
+      "Tu melodía armonizada, con la app."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l1.p4",
+       "texto": "en el recital, si quieres."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

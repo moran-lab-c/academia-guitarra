@@ -1,0 +1,369 @@
+{
+ "titulo": "Melodía en a, con la cejilla en el II",
+ "compas": "3/4",
+ "armadura": "Bm",
+ "conteo": true,
+ "fuente": "Ejercicio de la academia; digitación propuesta.",
+ "compases": [
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a",
+      "rotulo": "Si m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 5,
+      "t": 2,
+      "dedo": 1,
+      "mano": "p"
+     }
+    ]
+   ],
+   "pos": "C II"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a",
+      "rotulo": "Fa♯7"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 2,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 3,
+      "dedo": 2,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 2,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 3,
+      "dedo": 2,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 2,
+      "dedo": 1,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 3,
+      "dedo": 2,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 6,
+      "t": 2,
+      "dedo": 1,
+      "mano": "p"
+     }
+    ]
+   ],
+   "pos": "C II"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "dedo": 4,
+      "mano": "a",
+      "rotulo": "Si m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "dedo": 4,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 3,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 5,
+      "dedo": 4,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 3,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 5,
+      "t": 2,
+      "dedo": 1,
+      "mano": "p"
+     }
+    ]
+   ],
+   "pos": "C II"
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a",
+      "rotulo": "Si m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 1,
+      "t": 2,
+      "dedo": 1,
+      "mano": "a"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 2,
+      "t": 3,
+      "dedo": 2,
+      "mano": "m"
+     },
+     {
+      "d": "8",
+      "tres": true,
+      "c": 3,
+      "t": 4,
+      "dedo": 4,
+      "mano": "i"
+     }
+    ],
+    [
+     {
+      "d": "2",
+      "p": true,
+      "c": 5,
+      "t": 2,
+      "dedo": 1,
+      "mano": "p"
+     }
+    ]
+   ],
+   "pos": "C II"
+  }
+ ]
+}

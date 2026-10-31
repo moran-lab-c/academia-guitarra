@@ -1,0 +1,844 @@
+{
+ "tramo": "n2.t5",
+ "nota": "Curso 2. Carcassi sale de Mutopia. Lo que trabaja se ha descrito mirando la propia partitura. Las cuatriadas abiertas son formas habituales.",
+ "pasos": {
+  "n2.t5.l1.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Leer por posiciones",
+     "md": "En primera posición, cada nota suele tener un solo sitio. Más arriba no: **la misma nota está en varias cuerdas**. Por eso se lee pensando en un marco: «estoy en la V, un dedo por traste desde el 5». Dentro de ese marco cada nota escrita tiene una cuerda natural."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "recorrido",
+      "titulo": "La posición V: del 5 al 8",
+      "clave": "C",
+      "trastes": [
+       3,
+       10
+      ],
+      "ms": 850,
+      "notas": [
+       {
+        "c": 3,
+        "t": 5,
+        "dedo": 1
+       },
+       {
+        "c": 3,
+        "t": 7,
+        "dedo": 3
+       },
+       {
+        "c": 2,
+        "t": 5,
+        "dedo": 1
+       },
+       {
+        "c": 2,
+        "t": 6,
+        "dedo": 2
+       },
+       {
+        "c": 2,
+        "t": 8,
+        "dedo": 4
+       },
+       {
+        "c": 1,
+        "t": 5,
+        "dedo": 1
+       },
+       {
+        "c": 1,
+        "t": 7,
+        "dedo": 3
+       },
+       {
+        "c": 1,
+        "t": 8,
+        "dedo": 4
+       }
+      ],
+      "final": "Una escala de Do en la V, sin cambiar de sitio."
+     }
+    },
+    {
+     "tipo": "texto",
+     "md": "Ventaja práctica: si una obra se queda en la V, aprendes una vez la posición y lees sin mirar. Por eso el nivel pide leer cuatro compases preparados ahí."
+    }
+   ]
+  },
+  "n2.t5.l1.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-pos5.json",
+     "titulo": "Líneas en la posición V",
+     "principal": "partitura",
+     "motivo": "Es lectura: partitura.",
+     "bpms": [
+      50,
+      66
+     ],
+     "notas": [
+      "Todo en la V: la mano no se mueve.",
+      "Di el nombre antes de tocar. En el {c:4} empiezas en la 2.ª: fíjate en el dedo 4."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Leer las seis líneas, sin mirar la mano.",
+     "porque": "Lo pide la prueba del nivel.",
+     "atencion": "La tablatura solo para comprobar.",
+     "empieza": "♩ = 50.",
+     "sube": "Sin paradas."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Tus ojos no bajan al mástil.",
+      "Dices las notas al leer."
+     ]
+    }
+   ]
+  },
+  "n2.t5.l1.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Tres sitios para una nota son tres colores: la cuerda aguda es brillante; la grave, más oscura. Aquí solo se trata de encontrarlas. **Di la nota, busca dónde.**"
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "libre",
+      "titulo": "Mi, tres sitios",
+      "trastes": [
+       0,
+       12
+      ],
+      "clave": "C",
+      "cuadros": [
+       {
+        "marcas": [
+         {
+          "c": 1,
+          "t": 0
+         }
+        ],
+        "texto": "1.ª al aire: Mi.",
+        "ms": 2200
+       },
+       {
+        "marcas": [
+         {
+          "c": 2,
+          "t": 5
+         }
+        ],
+        "texto": "2.ª en el traste 5: el mismo Mi.",
+        "ms": 2200
+       },
+       {
+        "marcas": [
+         {
+          "c": 3,
+          "t": 9
+         }
+        ],
+        "texto": "3.ª en el traste 9: el mismo Mi.",
+        "ms": 2200
+       }
+      ]
+     }
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Los tres, seguidos",
+       "notas": [
+        [
+         1,
+         0
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         3,
+         9
+        ]
+       ],
+       "duracion": 1
+      }
+     ]
+    },
+    {
+     "tipo": "localizar",
+     "enunciado": "Encuentra todos los **Do** hasta el traste 12.",
+     "conjunto": [
+      "Do"
+     ],
+     "clave": "C",
+     "hastaTraste": 12,
+     "final": "Seis: 6.ª en el 8, 5.ª en el 3, 4.ª en el 10, 3.ª en el 5, 2.ª en el 1 y 1.ª en el 8."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t6.l3.p3",
+       "texto": "elegir cuerda según la voz."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t5.l2.p1": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-fa-2oct-pos.json",
+     "titulo": "Fa mayor, dos octavas",
+     "principal": "ambas",
+     "motivo": "Escala con bemol y cambio de posición.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Fa ya la sabías en la zona baja. En el {c:3} subes a la V: el dedo 1 va a por La en el traste 5 de la 1.ª: ese es tu cambio."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/esc-sib-2oct.json",
+     "titulo": "Si♭ mayor, dos octavas",
+     "principal": "ambas",
+     "motivo": "Con dos bemoles.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "Empiezas en 5-1, el Si♭ de la cuerda. Si y Mi llevan bemol."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Las dos escalas, subiendo y bajando.",
+     "porque": "Cierran las mayores de este nivel.",
+     "atencion": "Di en voz alta el bemol al pasar. Mantén los dedos pegados en el cambio.",
+     "empieza": "♩ = 50 en corcheas.",
+     "sube": "Sin que el cambio se oiga."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t10.l3.p2",
+       "texto": "Fa mayor en primera posición."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t5.l2.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Armaduras con bemoles",
+     "md": "Se añaden siempre en este orden: **Si, Mi, La, Re**. Para saber la tonalidad: el penúltimo bemol es la tónica (Si♭, Mi♭: estás en Si♭). Con un bemol solo es Fa, y conviene aprenderlo aparte."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Bemoles",
+      "Mayor",
+      "Menor"
+     ],
+     "filas": [
+      [
+       "1: Si",
+       "Fa",
+       "Re m"
+      ],
+      [
+       "2: Si, Mi",
+       "Si♭",
+       "Sol m"
+      ],
+      [
+       "3: Si, Mi, La",
+       "Mi♭",
+       "Do m"
+      ],
+      [
+       "4: Si, Mi, La, Re",
+       "La♭",
+       "Fa m"
+      ]
+     ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "¿Qué tonalidad mayor tiene tres bemoles?",
+     "opciones": [
+      "Si♭",
+      "Mi♭",
+      "La♭"
+     ],
+     "correcta": 1,
+     "porque": "Si, Mi y La: el penúltimo es Mi♭."
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "Armadura de dos bemoles y final en Sol. ¿Qué tonalidad?",
+     "opciones": [
+      "Sol m",
+      "Si♭",
+      "Sol"
+     ],
+     "correcta": 0,
+     "porque": "Dos bemoles: Si♭ o su relativa, Sol menor. Acaba en Sol, así que es Sol menor."
+    },
+    {
+     "tipo": "completar",
+     "enunciado": "En Fa mayor, la escala es Fa, Sol, La, ",
+     "partes": [
+      {
+       "correcta": "Si♭",
+       "opciones": [
+        "Si♭",
+        "Si",
+        "La♯"
+       ]
+      },
+      ", Do, Re, Mi."
+     ],
+     "final": "Si bemol, y no La sostenido: cada letra una vez."
+    }
+   ]
+  },
+  "n2.t5.l3.p1": {
+   "pantallas": [
+    {
+     "titulo": "Cuatro notas",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Cuatriadas",
+       "md": "Una **triada** son tres notas apiladas de tercera en tercera. Si apilas una tercera más, sale **una cuatriada**: fundamental, 3.ª, 5.ª y **7.ª**. La séptima no reposa: da color, tensión. Hay cuatro tipos en este nivel:"
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Nombre",
+        "Se escribe",
+        "Se construye",
+        "Ejemplo",
+        "Color"
+       ],
+       "filas": [
+        [
+         "**Séptima de dominante**",
+         "Sol7",
+         "Mayor + 7.ª menor",
+         "Sol, Si, Re, Fa",
+         "Pide resolver"
+        ],
+        [
+         "**Mayor con 7.ª**",
+         "Do△7",
+         "Mayor + 7.ª mayor",
+         "Do, Mi, Sol, Si",
+         "Luminoso, flotante"
+        ],
+        [
+         "**Menor con 7.ª**",
+         "La m7",
+         "Menor + 7.ª menor",
+         "La, Do, Mi, Sol",
+         "Suave"
+        ],
+        [
+         "**Semidisminuido**",
+         "Si m7♭5",
+         "Disminuido + 7.ª menor",
+         "Si, Re, Fa, La",
+         "Inquieto"
+        ]
+       ]
+      },
+      {
+       "tipo": "escuchar",
+       "items": [
+        {
+         "etiqueta": "Sol7",
+         "acorde": "Sol7",
+         "arpegiado": true
+        },
+        {
+         "etiqueta": "Do△7",
+         "acorde": "Do△7",
+         "arpegiado": true
+        },
+        {
+         "etiqueta": "La m7",
+         "acorde": "La m7",
+         "arpegiado": true
+        },
+        {
+         "etiqueta": "Si m7♭5",
+         "acorde": "Si m7♭5",
+         "arpegiado": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Y las triadas",
+     "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Las cuatro triadas",
+       "md": "Ya sabes dos. Con la quinta se construyen las otras: **mayor** (3.ª mayor + 3.ª menor), **menor** (3.ª menor + 3.ª mayor), **aumentada** (dos 3.ª mayores) y **disminuida** (dos 3.ª menores)."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Triada",
+        "Sobre Do",
+        "Terceras",
+        "5.ª"
+       ],
+       "filas": [
+        [
+         "Mayor",
+         "Do, Mi, Sol",
+         "M + m",
+         "Justa"
+        ],
+        [
+         "Menor",
+         "Do, Mi♭, Sol",
+         "m + M",
+         "Justa"
+        ],
+        [
+         "Aumentada",
+         "Do, Mi, Sol♯",
+         "M + M",
+         "Aumentada"
+        ],
+        [
+         "Disminuida",
+         "Do, Mi♭, Sol♭",
+         "m + m",
+         "Disminuida"
+        ]
+       ]
+      },
+      {
+       "tipo": "grados",
+       "clave": "C",
+       "marcar": [
+        1,
+        3,
+        5,
+        7
+       ],
+       "nombre": "Una cuatriada de Do",
+       "titulo": "Do, Mi, Sol, Si: una sí, una no, una sí, una no"
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t4.l2.p6",
+         "texto": "la triada mayor y la menor."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t5.l3.p2": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Las formas abiertas son para los primeros trastes. Las de cejilla se mueven: Sol7 con la forma de Mi7, Do7 con la de La7."
+    },
+    {
+     "tipo": "acordes",
+     "nombres": [
+      "Do△7",
+      "La m7",
+      "Re m7",
+      "Mi m7",
+      "Si m7♭5"
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "acorde",
+      "titulo": "Sol7 con cejilla en el III",
+      "acorde": "Sol7 (cejilla III)",
+      "clave": "C"
+     }
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "acorde",
+      "titulo": "Re7 con cejilla en el V",
+      "acorde": "Re7 (cejilla V)",
+      "clave": "G"
+     }
+    },
+    {
+     "tipo": "progresion",
+     "acordes": [
+      {
+       "n": "Do△7",
+       "g": "I△7",
+       "papel": "reposo con color"
+      },
+      {
+       "n": "La m7",
+       "g": "vi7",
+       "papel": "suave"
+      },
+      {
+       "n": "Re m7",
+       "g": "ii7",
+       "papel": "hacia el V"
+      },
+      {
+       "n": "Sol7 (cejilla III)",
+       "g": "V7",
+       "papel": "tensión"
+      },
+      {
+       "n": "Do",
+       "g": "I",
+       "papel": "reposo"
+      }
+     ],
+     "bpms": [
+      50,
+      72
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "La progresión, con un acorde por compás.",
+     "porque": "Las cuatriadas salen enseguida en los acordes de los tramos siguientes.",
+     "atencion": "Cada dedo cae en su traste a la vez.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t5.l3.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Solo una cosa: **la de dominante** quiere irse. Mayor reposa, menor reposa y es más oscuro, séptima de dominante no reposa: pide un acorde más."
+    },
+    {
+     "tipo": "escuchar",
+     "items": [
+      {
+       "etiqueta": "Mayor",
+       "acorde": "Do"
+      },
+      {
+       "etiqueta": "Menor",
+       "acorde": "La m"
+      },
+      {
+       "etiqueta": "Séptima de dominante",
+       "acorde": "Sol7"
+      }
+     ]
+    },
+    {
+     "tipo": "preguntas",
+     "n": 6
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t8.l4.p1",
+       "texto": "el V7 otra vez, antes del preludio."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t5.l4.p1": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Arpegio de séptima de dominante",
+     "md": "Tocar Re7 nota a nota, y al final resolver en Sol. Oirás lo que hace la 7.ª: Do baja a Si, y Fa♯ sube a Sol. Es exactamente el mismo gesto del Si7–Mi del Nivel 1, pero en otra tonalidad."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/arp-re7-sol.json",
+     "titulo": "Re7 → Sol",
+     "principal": "ambas",
+     "motivo": "Se ve el arpegio y el acorde al que va.",
+     "bpms": [
+      50,
+      72
+     ],
+     "notas": [
+      "{c:1} sube y baja por Re7: Re, La, Do, Fa♯, Do, La, Re, La.",
+      "{c:2} resuelve: Fa♯ sube a Sol en la 1.ª y Do baja a Si en la 2.ª."
+     ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "cambio",
+      "titulo": "Re7 → Sol: las dos voces resuelven",
+      "de": "Re7",
+      "a": "Sol",
+      "clave": "G",
+      "textos": {
+       "inicio": "Re7, el V de Sol.",
+       "medio": "Fa♯ sube a Sol y Do baja a Si.",
+       "fin": "Sol. Reposo."
+      }
+     }
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Arpegio y resolución, de memoria.",
+     "porque": "Lo pide el nivel: los dos arpegios de séptima de memoria.",
+     "atencion": "Escucha la 7.ª; es la que quiere moverse.",
+     "empieza": "♩ = 50."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    }
+   ]
+  },
+  "n2.t5.l4.p2": {
+   "bloques": [
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/car-2.json",
+     "titulo": "Fórmulas 6 a 10",
+     "principal": "tablatura",
+     "motivo": "Técnica.",
+     "bpms": [
+      50,
+      60
+     ],
+     "notas": [
+      "Cada compás, una fórmula. Ahora *p* comparte el trabajo con repeticiones: dos notas seguidas con el mismo dedo."
+     ]
+    },
+    {
+     "tipo": "ejercicio",
+     "que": "Una fórmula por minuto, consciente de cada dedo.",
+     "porque": "Sigue de los 1-5 del Tramo 1.",
+     "atencion": "La muñeca quieta. La nota repetida suena igual que la primera.",
+     "empieza": "♩ = 50, corcheas.",
+     "sube": "Igual en todas sus notas a ♩ = 60."
+    },
+    {
+     "tipo": "metronomo",
+     "bpm": 50
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Por verificar",
+     "md": "Numeración por cotejar con el cuaderno 2 de Carlevaro. Las fórmulas aquí están reescritas con palabras de la academia."
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t1.l4.p2",
+       "texto": "fórmulas 1-5."
+      },
+      {
+       "paso": "n2.t9.l3.p2",
+       "texto": "fórmulas 11-15."
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t5.l5.p1": {
+   "pantallas": [
+    {
+     "titulo": "La obra",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o2-carcassi-op-60-n-7",
+       "md": "**Por qué está aquí:** es un estudio de arpegio rápido con el bajo marcado; la melodía va en el bajo, y eso obliga a escucharlo. **Qué escuchar:** en cada grupo, el bajo. **Dificultad:** media, por la velocidad y la igualdad."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-carcassi-op60-7.json",
+       "titulo": "Carcassi, op. 60 n.º 7",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura.",
+       "bpms": [
+        50,
+        80
+       ],
+       "notas": [
+        "Allegro en La menor, dos partes. Cada grupo de cuatro semicorcheas empieza con el bajo: {c:1}.",
+        "El {c:9} pasa a Do mayor: oye el cambio de luz.",
+        "El {c:16-20} es la zona de los ligados: Fa-Mi, Sol♯-Mi, Si-Mi.",
+        "El {c:23} pisa bemol: ahí está la sorpresa, Si♭.",
+        "Fuente: Mutopia, dominio público. Digitación y mano derecha: propuesta de la academia."
+       ]
+      }
+     ]
+    },
+    {
+     "titulo": "Lo que trabaja",
+     "bloques": [
+      {
+       "tipo": "lista",
+       "titulo": "Cómo es por dentro",
+       "items": [
+        "Cada tiempo es un grupo de cuatro semicorcheas: el bajo y tres notas repetidas o quebradas.",
+        "La melodía está **en los bajos**, escrita aparte: {c:1} La, Do, Fa, Mi.",
+        "Dinámica escrita: *f*, *dim.*, *cresc.*, *p*: hazla, porque es la gracia."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Primera parte, ocho compases.",
+       "porque": "Es un estudio: cada cosa, aislada, y luego junta.",
+       "atencion": "El bajo lleva la melodía. *p* tiene que salir lleno; las notas repetidas, igual de suaves.",
+       "empieza": "♩ = 50.",
+       "sube": "Cuando esté limpio; el allegro llegará mucho después."
+      },
+      {
+       "tipo": "metronomo",
+       "bpm": 50,
+       "clave": "o2-carcassi-op-60-n-7"
+      }
+     ]
+    }
+   ]
+  },
+  "n2.t5.l5.p2": {
+   "bloques": [
+    {
+     "tipo": "concepto",
+     "titulo": "Estudiar primero lo difícil",
+     "md": "Lo natural es empezar por el principio. **Mal negocio:** el principio se gasta y lo difícil queda siempre para el final, con la mano cansada. Mejor: busca el compás más duro y empieza por él, en trozos de dos tiempos."
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "Cómo",
+     "items": [
+      "Toca la obra y señala el compás que peor te sale.",
+      "Trocéalo: dos tiempos.",
+      "Tócalo lento hasta que salga tres veces.",
+      "Añade el tiempo siguiente. Luego el anterior.",
+      "Al final, tócalo con lo que lo rodea."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-carcassi-op60-7.json",
+     "titulo": "Ejemplo: el compás de los ligados",
+     "principal": "ambas",
+     "bpms": [
+      40,
+      60
+     ],
+     "compases": [
+      16,
+      18
+     ]
+    },
+    {
+     "tipo": "guia",
+     "tipoGuia": "Consejo",
+     "md": "Antes de cerrar la guitarra, toca una vez despacio lo difícil. Lo último que se practica se queda."
+    }
+   ]
+  },
+  "n2.t5.l5.p3": {
+   "bloques": [
+    {
+     "tipo": "texto",
+     "md": "Comprobación. Sin el metrónomo primero; luego con él."
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/lec-pos5.json",
+     "titulo": "Lee estos cuatro",
+     "principal": "partitura",
+     "bpms": [
+      50
+     ],
+     "compases": [
+      1,
+      4
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-carcassi-op60-7.json",
+     "titulo": "El estudio",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      80
+     ]
+    },
+    {
+     "tipo": "bien",
+     "items": [
+      "Cuatro compases leídos en la V.",
+      "El estudio, con el bajo por encima de las notas repetidas."
+     ]
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n2.t13.l2.p3",
+       "texto": "leer en la V en la prueba corta."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
