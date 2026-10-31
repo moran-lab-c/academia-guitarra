@@ -180,7 +180,17 @@
       "c": 2,
       "t": 7,
       "dedo": 1,
-      "mano": "m"
+      "mano": "m",
+      "gracia": [
+       {
+        "c": 2,
+        "t": 7
+       },
+       {
+        "c": 2,
+        "t": 8
+       }
+      ]
      },
      {
       "d": "8",
@@ -660,7 +670,17 @@
       "c": 2,
       "t": 16,
       "dedo": 4,
-      "mano": "i"
+      "mano": "i",
+      "gracia": [
+       {
+        "c": 2,
+        "t": 16
+       },
+       {
+        "c": 2,
+        "t": 17
+       }
+      ]
      },
      {
       "d": "8",
@@ -706,7 +726,17 @@
       "c": 2,
       "t": 14,
       "dedo": 4,
-      "mano": "i"
+      "mano": "i",
+      "gracia": [
+       {
+        "c": 2,
+        "t": 14
+       },
+       {
+        "c": 2,
+        "t": 16
+       }
+      ]
      },
      {
       "d": "8",
@@ -879,7 +909,17 @@
       "p": true,
       "c": 1,
       "t": 0,
-      "mano": "m"
+      "mano": "m",
+      "gracia": [
+       {
+        "c": 1,
+        "t": 0
+       },
+       {
+        "c": 1,
+        "t": 2
+       }
+      ]
      },
      {
       "d": "16",
@@ -1070,5 +1110,7 @@
     ]
    ]
   }
- ]
+ ],
+ "simplificacion": "Simplificación visual: la obra tiene tres planos y la app dibuja dos. Las notas son todas las de la fuente; lo que cambia es a qué voz se dibujan.",
+ "digitacion": "propuesta"
 }

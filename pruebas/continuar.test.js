@@ -124,3 +124,24 @@ test('F y G: el progreso sobrevive a cerrar y abrir, con datos temporales', asyn
     fs.rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('Cursos 1, 2 y 3 juntos: visitar no mueve la ruta, completar sí, y Continuar es siempre el primer pendiente', () => {
+  const c = progresoVacio();
+  const hoy = '2026-11-01';
+  const n = k => ind.pasos.filter(e => e.paso.id.startsWith(`n${k}.`));
+  // Se marcan unos pasos del Curso 1: Continuar sigue en el primero que falta.
+  const uno = n(1);
+  for (const e of uno.slice(0, 5)) marcar(c, e, 'hecho', hoy);
+  c.repasos = {};
+  assert.equal(continuar(ind, c, hoy).entrada.paso.id, uno[5].paso.id);
+  // Completar un paso adelantado de otro curso no adelanta la ruta ni cambia de nivel.
+  const antes = JSON.stringify(c.nivel);
+  marcar(c, n(3)[10], 'hecho', hoy);
+  c.repasos = {};
+  assert.equal(continuar(ind, c, hoy).entrada.paso.id, uno[5].paso.id);
+  assert.equal(JSON.stringify(c.nivel), antes);
+  // Y al completar lo que falta se pasa al paso siguiente.
+  marcar(c, uno[5], 'hecho', hoy);
+  c.repasos = {};
+  assert.equal(continuar(ind, c, hoy).entrada.paso.id, uno[6].paso.id);
+});

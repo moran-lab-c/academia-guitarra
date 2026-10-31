@@ -93,6 +93,7 @@ export function eventosDeNotacion(json, { compases = null, seco = false } = {}) 
   plan.compases.forEach((m, i) => {
     for (const voz of m.voces) for (const n of voz) {
       if (n.silencio) continue;
+      n.gracia.forEach((x, k) => eventos.push({ t: Math.max(0, i * negras + n.inicio + (i === 0 ? vacio : 0) - 0.125 * (n.gracia.length - k)), dur: 0.125, midis: [afinacion[x.cuerda - 1] + x.traste], cuerdas: [x.cuerda], compas: m.numero }));
       eventos.push({ t: i * negras + n.inicio + (i === 0 ? vacio : 0), dur: (4 / Number(n.duracion)) * (n.puntillo ? 1.5 : 1) * (n.tres ? 2 / 3 : 1), midis: n.tab.map(x => afinacion[x.cuerda - 1] + (n.arm ? ARMONICO[x.traste] : x.traste + (n.oct ? 12 : 0))), cuerdas: n.tab.map(x => x.cuerda), compas: m.numero });
     }
   });

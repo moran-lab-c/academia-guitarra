@@ -3,7 +3,7 @@
  "compas": "3/4",
  "armadura": "A",
  "conteo": true,
- "fuente": "IMSLP, revisión y digitación de Edson Lopes, 1994 (n.º 249570). Transcrita a ojo; los dedos de la app se han recalculado y son propuesta.",
+ "fuente": "IMSLP, revisión y digitación de Edson Lopes, 1994 (n.º 249570). Releída con ampliación y cotejada con otra edición. Los dedos de la app se han recalculado: son propuesta, no los de esa edición.",
  "compases": [
   {
    "voces": [
@@ -138,7 +138,7 @@
      },
      {
       "d": "4",
-      "c": 4,
+      "c": 5,
       "t": 2,
       "dedo": 2,
       "mano": "p"
@@ -231,6 +231,10 @@
       "d": "4",
       "acorde": [
        {
+        "c": 2,
+        "t": 0
+       },
+       {
         "c": 3,
         "t": 0
        },
@@ -240,6 +244,7 @@
        }
       ],
       "dedos": [
+       0,
        0,
        2
       ],
@@ -263,7 +268,7 @@
     [
      {
       "d": "2",
-      "c": 5,
+      "c": 6,
       "t": 3,
       "dedo": 3,
       "mano": "p"
@@ -298,6 +303,10 @@
       "d": "4",
       "acorde": [
        {
+        "c": 2,
+        "t": 0
+       },
+       {
         "c": 3,
         "t": 1
        },
@@ -307,6 +316,7 @@
        }
       ],
       "dedos": [
+       0,
        1,
        2
       ],
@@ -322,10 +332,8 @@
      },
      {
       "d": "4",
-      "c": 4,
-      "t": 2,
-      "dedo": 2,
-      "mano": "p"
+      "s": true,
+      "oculto": true
      }
     ]
    ]
@@ -344,16 +352,11 @@
        {
         "c": 4,
         "t": 2
-       },
-       {
-        "c": 5,
-        "t": 4
        }
       ],
       "dedos": [
-       1,
-       1,
-       3
+       2,
+       2
       ],
       "mano": "p"
      }
@@ -362,9 +365,8 @@
      {
       "d": "2",
       "p": true,
-      "c": 6,
-      "t": 5,
-      "dedo": 4,
+      "c": 5,
+      "t": 0,
       "mano": "p"
      }
     ]
@@ -447,13 +449,14 @@
     [
      {
       "d": "4",
+      "p": true,
       "c": 4,
       "t": 2,
       "dedo": 2,
       "mano": "p"
      },
      {
-      "d": "4",
+      "d": "8",
       "c": 4,
       "t": 0,
       "mano": "p"
@@ -480,13 +483,13 @@
         "t": 3
        },
        {
-        "c": 3,
-        "t": 1
+        "c": 4,
+        "t": 4
        }
       ],
       "dedos": [
        3,
-       1
+       4
       ],
       "mano": "p"
      },
@@ -659,10 +662,8 @@
      },
      {
       "d": "4",
-      "c": 4,
-      "t": 2,
-      "dedo": 2,
-      "mano": "p"
+      "s": true,
+      "oculto": true
      }
     ]
    ]
@@ -1012,7 +1013,7 @@
      },
      {
       "d": "4",
-      "c": 5,
+      "c": 6,
       "t": 7,
       "dedo": 3,
       "mano": "p"
@@ -1076,7 +1077,7 @@
      },
      {
       "d": "4",
-      "c": 5,
+      "c": 6,
       "t": 7,
       "dedo": 3,
       "mano": "p"
@@ -1118,5 +1119,6 @@
     ]
    ]
   }
- ]
+ ],
+ "digitacion": "propuesta"
 }

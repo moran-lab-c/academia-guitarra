@@ -174,6 +174,23 @@ test('los tresillos llenan el compás y suenan a su tiempo; los armónicos suena
   assert.deepEqual(romance.compases[0].voces[0].filter((_, i) => i % 3 === 0).map(n => [n.c, n.t]), [[1, 7], [1, 7], [1, 7]]);
 });
 
+test('los adornos suenan antes de su nota, no ocupan compás, y cada obra dice de quién es la digitación', () => {
+  const j = { compas: '4/4', compases: [{ voces: [[{ d: '4', c: 1, t: 5, gracia: [{ c: 1, t: 7 }] }, { d: '2', p: true, c: 1, t: 3 }]] }] };
+  assert.ok(prepararNotacion(j).ok);
+  const ev = eventosDeNotacion(j).eventos;
+  assert.deepEqual(ev.map(e => e.midis[0]), [64 + 7, 64 + 5, 64 + 3]);
+  const oct = { compas: '4/4', compases: [{ voces: [[{ d: '1', c: 5, t: 3, oct: true }]] }] };
+  assert.equal(eventosDeNotacion(oct).eventos[0].midis[0], 45 + 3 + 12);
+  for (const [f, n] of notaciones) if (f.includes('/obra-')) assert.ok(['edicion', 'mixta', 'propuesta'].includes(n.digitacion), `${f}: sin origen de la digitación`);
+});
+
+test('las obras antes parciales ya están enteras, salvo la Sonatina, que lo dice', () => {
+  assert.equal(notaciones.get('notacion/obra-coste-op38-1.json').compases.length, 44);
+  assert.equal(notaciones.get('notacion/obra-mertz-nocturno-1.json').compases.length, 47);
+  assert.equal(notaciones.get('notacion/obra-giuliani-op100-12.json').compases.length, 46);
+  assert.ok(notaciones.get('notacion/obra-giuliani-op71-1.json').parcial);
+});
+
 test('una anacrusa no deja un hueco antes del compás 1', () => {
   const j = notaciones.get('notacion/obra-sor-op35-8.json');
   const { eventos } = eventosDeNotacion(j);

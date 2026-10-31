@@ -106,7 +106,7 @@ export function senalarCompases(contenedor, desde, hasta = desde) {
 // Plan de dibujo → SVG con VexFlow. Devuelve el SVG como texto, para guardarlo.
 export function dibujar(VF, plan, vista, ancho) {
   const { Renderer, Stave, TabStave, StaveNote, TabNote, GhostNote, Voice, Formatter, Beam, Accidental, Dot, Annotation, FretHandFinger,
-    Articulation, StaveTie, TabTie, TabSlide, StaveConnector, Curve, Modifier, Barline, Tuplet } = VF;
+    Articulation, GraceNote, GraceNoteGroup, StaveTie, TabTie, TabSlide, StaveConnector, Curve, Modifier, Barline, Tuplet } = VF;
   const lineas = sistemas(plan, ancho - 2, vista);
   const conPartitura = vista !== 'tablatura', conTab = vista !== 'partitura';
   // Lo que va encima de la primera nota (posición y, con dos voces, mano derecha o dinámica): el tempo va por encima.
@@ -160,6 +160,7 @@ export function dibujar(VF, plan, vista, ancho) {
             if (n.mano && !conTab) sn.addModifier(new Annotation(n.mano).setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(lado), 0);
             for (const a of n.art) sn.addModifier(new Articulation(ART[a]).setPosition(v === 1 ? Modifier.Position.BELOW : Modifier.Position.ABOVE), 0);
             if (n.arm || n.oct) sn.addModifier(new Annotation(n.oct ? 'oct.' : 'arm.').setFont('Academico', 11, 'normal', 'italic').setVerticalJustification(Annotation.VerticalJustify.TOP), 0);
+            if (n.gracia.length) { const gs = n.gracia.map(x => { const g = new GraceNote({ keys: [x.clave], duration: '16', slash: n.gracia.length === 1, clef: 'treble' }); if (x.acc) g.addModifier(new Accidental(x.acc), 0); return g; }); sn.addModifier(new GraceNoteGroup(gs, n.gracia.length > 1).beamNotes(), 0); }
             if (n.din) sn.addModifier(new Annotation(n.din).setFont('Academico', 13, 'bold', 'italic').setVerticalJustification(lado), 0);
             if (k === 0 && v === 0 && m.pos) sn.addModifier(new Annotation(m.pos).setFont('Academico', 12, 'bold').setVerticalJustification(Annotation.VerticalJustify.TOP), 0);
             listaP.push(sn);
@@ -180,7 +181,7 @@ export function dibujar(VF, plan, vista, ancho) {
           if (!voz[k].tres || !voz[k + 1].tres || !voz[k + 2].tres) continue;
           const opc = { numNotes: 3, notesOccupied: 2, bracketed: false, ratioed: false };
           if (conPartitura) tresillos.push(new Tuplet(listaP.slice(k, k + 3), { ...opc, location: plica === -1 ? -1 : 1 }));
-          if (conTab) { const t = new Tuplet(listaT.slice(k, k + 3), { ...opc, location: -1 }); if (!conPartitura) tresillos.push(t); }
+          if (conTab) { const grupo = listaT.slice(k, k + 3), t = new Tuplet(grupo, { ...opc, location: -1 }); if (!conPartitura && grupo.every(x => x instanceof TabNote)) tresillos.push(t); }
           k += 2;
         }
         const hacerVoz = lista => new Voice({ numBeats: plan.compas.num, beatValue: plan.compas.den }).setMode(Voice.Mode.SOFT).addTickables(lista);
@@ -212,6 +213,7 @@ export function dibujar(VF, plan, vista, ancho) {
         if (!ancla || x.n.silencio) continue;
         const xn = ancla.getAbsoluteX();
         ctx.save();
+        if (tab && x.n.gracia.length) { ctx.setFont('Archivo, sans-serif', 9, 'normal'); ctx.setFillStyle('#4A4A47'); ctx.fillText(x.n.gracia.map(g => g.traste).join('·'), xn - 8 - 8 * x.n.gracia.length, tab.getYForLine(x.n.gracia[0].cuerda - 1) - 4); }
         if (tab && x.n.dedo) { ctx.setFont('Archivo, sans-serif', 12, 'bold'); ctx.setFillStyle(COLOR_DEDO[x.n.dedo] ?? '#1D1D1B'); ctx.fillText(String(x.n.dedo), xn, tab.getYForLine(0) - (dosFilas && x.v === 0 ? 20 : 7)); }
         if (tab && dosFilas && x.n.mano) { ctx.setFont('Academico, serif', 11, 'normal', 'italic'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.mano, xn, tab.getYForLine(5) + (conPartitura ? 12 : 50) + x.v * 12); }
         if (tab && x.n.dedos) x.n.dedos.filter(Boolean).forEach((d, k) => { ctx.setFont('Archivo, sans-serif', 11, 'bold'); ctx.setFillStyle(COLOR_DEDO[d] ?? '#1D1D1B'); ctx.fillText(String(d), xn + k * 8, tab.getYForLine(0) - (dosFilas && x.v === 0 ? 20 : 7)); });

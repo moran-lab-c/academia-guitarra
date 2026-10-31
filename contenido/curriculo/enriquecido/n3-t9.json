@@ -1,6 +1,6 @@
 {
  "tramo": "n3.t9",
- "nota": "Curso 3. Giuliani op. 100 n.º 12 con inicio transcrito a ojo (Gitarrefreund); op. 50 n.º 17 de Mutopia. Ejercicios de la academia.",
+ "nota": "Curso 3. Giuliani op. 100 n.º 12 entero, leído a ojo con ampliación de la edición Gitarrefreund; op. 50 n.º 17 de Mutopia. Ejercicios de la academia.",
  "pasos": {
   "n3.t9.l1.p1": {
    "bloques": [
@@ -318,9 +318,9 @@
       {
        "tipo": "notacion",
        "fuente": "notacion/obra-giuliani-op100-12.json",
-       "titulo": "Giuliani, op. 100 n.º 12: inicio",
+       "titulo": "Giuliani, op. 100 n.º 12",
        "principal": "ambas",
-       "motivo": "Lo transcrito.",
+       "motivo": "Partitura y tablatura.",
        "bpms": [
         50,
         84
@@ -328,13 +328,15 @@
        "notas": [
         "*Capriccio*, *Gracioso*, 6/8 en Sol.",
         "Cada mitad de compás: un silencio de semicorchea y cinco notas: un arpegio que sube y baja.",
-        "El bajo dura lo mismo: dos notas por compás."
+        "El bajo dura lo mismo: dos notas por compás.",
+        "{c:30-31} el centro: Fa♯ mayor.",
+        "{c:44-46} cadencia final."
        ]
       },
       {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "**Solo 8 compases transcritos, a ojo**, y en los bajos de los {c:3-5} la lectura es menos segura. El resto, en [la edición en IMSLP](https://imslp.org/wiki/24_Studies_for_the_Guitar,_Op.100_%28Giuliani,_Mauro%29). Es la edición Gitarrefreund, n.º 12."
+       "md": "Leído a ojo de [la edición Gitarrefreund](https://imslp.org/wiki/24_Studies_for_the_Guitar,_Op.100_%28Giuliani,_Mauro%29), comprobando la armonía de cada compás. Algunos bajos con líneas adicionales (Fa♯, Sol) se han decidido por la armonía y los dedos de la edición: {c:3}, {c:6} y {c:31}. La edición pide cejillas I, II, III, IV y V; los dedos de la app son propuesta."
       }
      ]
     },
@@ -343,7 +345,7 @@
      "bloques": [
       {
        "tipo": "ejercicio",
-       "que": "Lo transcrito, y sigue en la edición.",
+       "que": "El estudio, por frases de cuatro compases.",
        "porque": "Es el estudio del tramo.",
        "atencion": "La semicorchea de silencio del principio de cada grupo: no la llenes.",
        "empieza": "♩. = 50.",
@@ -382,7 +384,8 @@
         "Sol menor, 3/8. Dos bemoles.",
         "{c:1-4} primero acordes sobre un bajo que baja: Sol, Do, La, Fa♯.",
         "{c:8} pequeña cadencia.",
-        "Fuente: Mutopia, CC BY 3.0. Dedos y mano derecha: propuesta."
+        "Fuente: Mutopia, CC BY 3.0. Dedos y mano derecha: propuesta.",
+        "Por verificar: en el {c:7} y el {c:17} esta fuente da Mi♭ y otra edición cotejada, Mi natural."
        ]
       }
      ]

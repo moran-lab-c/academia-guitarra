@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t11",
- "nota": "Curso 2. Coste, op. 38 n.º 1: integrado solo el inicio (13 compases), porque el escaneo disponible no permite leer el resto con seguridad. Limitación declarada.",
+ "nota": "Curso 2. Coste, op. 38 n.º 1, entero: notas del MIDI de una tablatura independiente, cotejado por muestreo con la reedición de IMSLP.",
  "pasos": {
   "n2.t11.l1.p1": {
    "pantallas": [
@@ -450,23 +450,25 @@
       {
        "tipo": "notacion",
        "fuente": "notacion/obra-coste-op38-1.json",
-       "titulo": "Coste, op. 38 n.º 1: el inicio",
+       "titulo": "Coste, op. 38 n.º 1",
        "principal": "ambas",
-       "motivo": "Lo transcrito.",
+       "motivo": "Partitura y tablatura.",
        "bpms": [
         60,
         112
        ],
        "notas": [
-        "*Allegretto*, ♩ = 112 en la edición. La menor, 2/4, anacrusa.",
-        "{c:1-5} *p* al bajo y acordes a contratiempo.",
-        "{c:8} empiezan los acordes en cejilla: V, III y I."
+        "*Allegretto*, ♩ = 112 en la edición. La menor, 2/4. El primer compás empieza con un silencio.",
+        "{c:1-8} *p* en el bajo y acordes a contratiempo.",
+        "{c:9-12} acordes en cejilla: V, III y I.",
+        "{c:29-30} el pasaje rápido, con ligados.",
+        "{c:43-44} cierra en La."
        ]
       },
       {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "**Solo están transcritos estos 13 compases.** El estudio entero tiene unos 44. El resto, en [la edición en IMSLP](https://imslp.org/wiki/25_%C3%89tudes,_Op.38_%28Coste,_Napol%C3%A9on%29). El escaneo disponible no permitió leerlo con suficiente seguridad: es una limitación real, no una decisión musical."
+       "md": "Las notas salen del MIDI de una tablatura independiente, y se han cotejado por muestreo con [la edición en IMSLP](https://imslp.org/wiki/25_%C3%89tudes,_Op.38_%28Coste,_Napol%C3%A9on%29), no compás a compás. Los dedos son propuesta: los de la edición, en ella."
       }
      ]
     },
@@ -475,8 +477,8 @@
      "bloques": [
       {
        "tipo": "ejercicio",
-       "que": "El inicio, y lo que quieras de la edición.",
-       "porque": "Lo que falte, con la edición en la mano.",
+       "que": "El estudio entero, por secciones.",
+       "porque": "Es un estudio romántico: técnica al servicio del carácter.",
        "atencion": "El bajo marca; el acorde a contratiempo es ligero.",
        "empieza": "♩ = 60.",
        "sube": "♩ = 112, si llega."
@@ -580,7 +582,7 @@
     {
      "tipo": "bien",
      "items": [
-      "El inicio del estudio, con color elegido.",
+      "El estudio, con un color elegido para cada sección.",
       "Armónicos de IV y IX claros."
      ]
     }

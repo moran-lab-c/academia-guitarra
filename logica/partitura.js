@@ -11,6 +11,7 @@
 //   nota: { d: '1'|'2'|'4'|'8'|'16'|'32', p: true (puntillo), s: true (silencio) | c: cuerda 1-6, t: traste 0-24 |
 //           acorde: [{ c, t }],  dedo: 0-4, mano: 'p'|'i'|'m'|'a'|'c', lig: 'h'|'p' (ligado a la siguiente),
 //           tres: true (tresillo: tres de estas en el sitio de dos), arm: true (armónico natural; suena lo que da ese traste),
+//           gracia: [{ c, t }] (notas de adorno antes de esta, sin valor en el compás),
 //           oct: true (armónico octavado: suena una octava por encima de lo pisado), lig también 's' (glissando o arrastre en la misma cuerda), rotulo: 'Mi' (nombre del acorde encima), tie: true (ligadura de prolongación con la siguiente), art: ['staccato'|'acento'|'tenuto'], din: 'pp'…'ff' }
 
 export const DURACIONES = ['1', '2', '4', '8', '16', '32'];
@@ -156,6 +157,8 @@ export function prepararNotacion(p, { compases = null } = {}) {
     return { ok: false, errores: [`Los compases ${compases[0]}-${compases[1]} no están en la notación (tiene ${total})`], compases: [], avisos: ['Ese fragmento no está transcrito todavía.'] };
   }
   if (compases && compases[1] > total) avisos.push(`Del fragmento (compases ${compases[0]}-${compases[1]}) solo están transcritos hasta el ${total}.`);
+  if (p.simplificacion) avisos.push(p.simplificacion);
+  if (p.digitacion) avisos.push({ edicion: 'Digitación: la de la edición.', mixta: 'Digitación: la de la edición donde la trae; el resto, propuesta de la Academia.', propuesta: 'Digitación: propuesta de la Academia, calculada y sin probar con la mano. No es la de la edición.' }[p.digitacion]);
   if (p.parcial) avisos.push(`Transcritos ${p.parcial.transcritos} de ${p.parcial.total} compases${p.parcial.nota ? `: ${p.parcial.nota}` : ''}. El resto está por hacer y no se dibuja.`);
 
   const salida = [];
@@ -166,7 +169,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
       return voz.map((n, k) => {
         const antes = k > 0 ? voz[k - 1] : i > desde - 1 ? p.compases[i - 1].voces[v]?.at(-1) : null;
         const nota = {
-          duracion: String(n.d), puntillo: !!n.p, tres: !!n.tres, arm: !!n.arm, oct: !!n.oct, oculto: !!n.oculto, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
+          duracion: String(n.d), puntillo: !!n.p, tres: !!n.tres, arm: !!n.arm, oct: !!n.oct, gracia: (n.gracia ?? []).map(x => { const g = grafia(afinacion[x.c - 1] + x.t + 12, arm); return { clave: `${g.letra}${g.acc}/${g.octava}`, acc: g.acc, cuerda: x.c, traste: x.t }; }), oculto: !!n.oculto, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
           dedo: n.dedo ?? null, dedos: n.dedos ?? null, rotulo: n.rotulo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
           ligadaDesdeAntes: !n.s && !!antes?.tie,
         };

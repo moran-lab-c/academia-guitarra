@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t4",
- "nota": "Curso 2. La Sonatina se integra por su tema inicial, transcrito a ojo de la primera edición; el resto, en la edición enlazada. La forma se da como marco y lo concreto queda por verificar.",
+ "nota": "Curso 2. La Sonatina se integra por su tema y su primera vuelta (21 compases), releídos de la primera edición. El resto no se puede leer con seguridad en el único escaneo disponible. Según esa edición, este movimiento es un tema con variaciones.",
  "pasos": {
   "n2.t4.l1.p1": {
    "bloques": [
@@ -179,7 +179,8 @@
       72
      ],
      "notas": [
-      "El {c:1-4} es la pregunta y el {c:5-8} repite y responde."
+      "El {c:1-4} es la pregunta y el {c:5-8} empieza a responder.",
+      "Desde el {c:13} vuelve con el acompañamiento más movido."
      ]
     },
     {
@@ -195,7 +196,7 @@
     {
      "tipo": "guia",
      "tipoGuia": "Por verificar",
-     "md": "Falta cotejar con la edición los compases exactos de cada parte; por eso no se dan aquí. La academia solo ha transcrito el tema inicial."
+     "md": "**Una duda seria.** El currículo presenta aquí la forma sonatina, pero en la primera edición este «Maestoso» parece un **tema con variaciones**: el mismo plan vuelve con tresillos y después con semicorcheas, y un catálogo comercial lo describe igual. Aquí se enseña la forma sonatina porque volverá en Sor y en Clementi, pero no se afirma que este movimiento la siga. Compruébalo con tu profesor. Si es así, busca en la edición dónde vuelve el tema y qué cambia."
     },
     {
      "tipo": "elige",
@@ -604,15 +605,16 @@
        ],
        "notas": [
         "Anacrusa y {c:1}: empieza con un apoyo, como todo este estilo.",
-        "El {c:2} sube a Do y baja a Si: el punto alto, en el tercer tiempo.",
+        "El {c:2} salta a Sol: el punto alto, en el tercer tiempo.",
         "El {c:4} cierra con corchea con puntillo y semicorchea: no los hagas iguales.",
-        "El {c:5-8} repite y responde."
+        "El {c:9-10} deja un silencio y repite la idea un tono más abajo.",
+        "El {c:17-20} mueve el bajo en corcheas."
        ]
       },
       {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "El tema está transcrito a ojo de un escaneo antiguo y conviene cotejarlo. El resto del movimiento no está transcrito en la app: se estudia en [la primera edición de Mechetti en IMSLP](https://imslp.org/wiki/3_Guitar_Sonatinas,_Op.71_%28Giuliani,_Mauro%29). Todo lo que dice este paso sobre compases se refiere al tema."
+       "md": "**Están transcritos 21 compases**, leídos a ojo de un escaneo con el pentagrama muy gastado: conviene cotejarlos. Las variaciones siguientes no se han pasado a la app, porque no se pueden leer con seguridad y no hay otra edición libre a la vista. Se estudian en [la primera edición de Mechetti en IMSLP](https://imslp.org/wiki/3_Guitar_Sonatinas,_Op.71_%28Giuliani,_Mauro%29)."
       }
      ]
     },
@@ -697,7 +699,7 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "Comprobación. La obra, y dos preguntas de forma sin mirar atrás."
+     "md": "Comprobación. La obra, y dos preguntas sobre la forma sonatina como modelo, sea o no la de este movimiento."
     },
     {
      "tipo": "bien",
@@ -707,7 +709,7 @@
     },
     {
      "tipo": "elige",
-     "enunciado": "¿Qué tonalidad tiene el segundo tema en una forma sonatina en Do?",
+     "enunciado": "En una forma sonatina en Do, ¿qué tonalidad suele tener el segundo tema?",
      "opciones": [
       "Do",
       "Sol",

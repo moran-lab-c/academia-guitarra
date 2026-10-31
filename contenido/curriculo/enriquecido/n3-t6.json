@@ -1,6 +1,6 @@
 {
  "tramo": "n3.t6",
- "nota": "Curso 3. Mertz: solo el inicio, 4 compases a ojo; el resto, en la edición de IMSLP. Los octavados son un recurso de la app para que suenen a su altura.",
+ "nota": "Curso 3. Mertz entero: notas del MIDI de una tablatura independiente sobre Haslinger. Tres planos dibujados en dos voces.",
  "pasos": {
   "n3.t6.l1.p1": {
    "bloques": [
@@ -113,9 +113,9 @@
       {
        "tipo": "notacion",
        "fuente": "notacion/obra-mertz-nocturno-1.json",
-       "titulo": "Mertz, *Nocturno* op. 4 n.º 1: el inicio",
+       "titulo": "Mertz, *Nocturno* op. 4 n.º 1",
        "principal": "ambas",
-       "motivo": "Lo transcrito.",
+       "motivo": "Partitura y tablatura.",
        "bpms": [
         50,
         76
@@ -123,13 +123,16 @@
        "notas": [
         "*Andante con moto*, La menor.",
         "{c:1-2} acordes y melodía con puntillo.",
-        "{c:4} tresillos al bajo."
+        "{c:4} el bajo canta en tresillos.",
+        "{c:5-6} *stentando*: se retiene.",
+        "{c:8-12} los acordes en tresillos: aquí se oyen los tres planos.",
+        "Dibujo: la app reparte los tres planos en dos voces."
        ]
       },
       {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "**Solo están transcritos estos 4 compases, a ojo.** La obra entera, en [la edición en IMSLP](https://imslp.org/wiki/3_Nocturnes,_Op.4_%28Mertz,_Johann_Kaspar%29). Es una limitación real: el resto no se ha pasado a la app."
+       "md": "Las notas salen del MIDI de una tablatura independiente sobre la edición de Haslinger, cotejado por muestreo con [la edición en IMSLP](https://imslp.org/wiki/3_Nocturnes,_Op.4_%28Mertz,_Johann_Kaspar%29). Los adornos rápidos pueden estar escritos como notas. Los dedos son propuesta."
       }
      ]
     },
@@ -138,7 +141,7 @@
      "bloques": [
       {
        "tipo": "ejercicio",
-       "que": "Lo transcrito, y lo que quieras de la edición.",
+       "que": "El nocturno por frases.",
        "porque": "Se aplica el trabajo de tres planos.",
        "atencion": "Melodía sola, primero, y canta.",
        "empieza": "♩ = 50.",
@@ -514,8 +517,8 @@
       50
      ],
      "notas": [
-      "En el {c:2}, Sol y Fa pasan rápido antes de volver: bordadura o paso.",
-      "En el {c:4}, la anacrusa con 8. : Fa cae en fuerte y resuelve en Mi: apoyatura."
+      "En el {c:2}, Sol y Fa pasan rápido antes de volver a Mi: notas de paso.",
+      "En el {c:4}, Fa cae con acento y resuelve en Mi: apoyatura."
      ]
     },
     {
