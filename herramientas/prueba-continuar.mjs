@@ -24,7 +24,7 @@ const ir = async id => { await js(`location.hash='#/aprender/${id}'`); await esp
 const botones = () => js(`[...document.querySelectorAll('.paso-pie .btn')].map(b=>b.textContent.trim())`);
 const pulsar = async t => { await js(`[...document.querySelectorAll('.paso-pie .btn')].find(b=>b.textContent.includes('${t}')).click()`); await espera(700); };
 const hash = () => js('location.hash');
-const irAlFinal = async () => { for (let k = 0; k < 8; k++) { const b = await botones(); if (!b.some(x => x.includes('Siguiente'))) return; await pulsar('Siguiente'); } };
+const irAlFinal = async () => { for (let k = 0; k < 8; k++) { const ultima = await js(`(()=>{const p=[...document.querySelectorAll('.partes__p')];return !p.length||p.at(-1).classList.contains('es-actual')})()`); if (ultima) return; await pulsar('Continuar'); } };
 const progreso = async () => (await js(`fetch('/api/estado').then(r=>r.json())`)).estado.curriculo?.pasos ?? {};
 try {
   await espera(1000);
@@ -34,9 +34,9 @@ try {
   await ir('n1.t1.l6.p1');             // visita un paso futuro
   await irAlFinal();
   const adelantado = await botones();
-  assert.ok(adelantado.some(x => x.includes('Continuar mi ruta')), `paso adelantado: ${adelantado}`);
+  assert.equal(adelantado.filter(x => !x.includes('Atrás')).join(), 'Continuar ▶', `paso adelantado: ${adelantado}`);
   assert.deepEqual(await progreso(), {}, 'visitar no completa');
-  await pulsar('Continuar mi ruta');
+  await pulsar('Continuar');
   assert.match(await hash(), /n1\.t1\.l1\.p1/, 'vuelve al primer pendiente');
 
   await irAlFinal();
@@ -51,8 +51,9 @@ try {
   assert.match(principal, /n1\.t1\.l1\.p2/, 'tras recargar, el mismo punto');
 
   await ir('n1.t1.l1.p1');             // consulta algo ya hecho
-  assert.ok((await botones()).some(x => x.includes('Continuar mi ruta')));
-  await pulsar('Continuar mi ruta');
+  await irAlFinal();
+  assert.equal((await botones()).filter(x => !x.includes('Atrás')).join(), 'Continuar ▶');
+  await pulsar('Continuar');
   assert.match(await hash(), /n1\.t1\.l1\.p2/);
   console.log('Continuar en el navegador: todo correcto');
 } finally {

@@ -3,7 +3,7 @@
 import { h } from '../nucleo/dom.js';
 import { datos, curriculo, cambiar, ctx } from '../nucleo/almacen.js';
 import { enlace } from '../nucleo/rutas.js';
-import { marcar, responderRepaso, esDePractica, papelDelPaso, progresoVacio } from '../../logica/curriculo.js';
+import { marcar, responderRepaso, papelDelPaso, progresoVacio } from '../../logica/curriculo.js';
 import { acordesDe } from '../../logica/acordes.js';
 import { PREGUNTAS } from '../../logica/preguntasPaso.js';
 import { formatoPara } from '../../logica/recomendador.js';
@@ -29,13 +29,12 @@ export default function aprender({ id }, { repaso = false } = {}) {
   const cur = datos().estado.curriculo ?? progresoVacio();
   // Entrar en un paso no cambia el progreso: solo lo completa su botón.
   const anterior = enLeccion > 0 ? leccion.pasos[enLeccion - 1] : null;
-  const estado = cur.pasos?.[id]?.e;
   // Un paso enriquecido puede tener varias pantallas: se avanza por partes y el botón del paso sale al final. Nada se bloquea.
   const partes = !repaso ? pantallasDe(ind.enriquecido?.[id]) : [];
   const parte = partes.length ? Math.min(cur.pantallas?.[id] ?? 0, partes.length - 1) : 0;
   const irParte = n => () => { cambiar(est => { ((est.curriculo ??= progresoVacio()).pantallas ??= {})[id] = n; }); document.querySelector('.pantalla-paso')?.scrollIntoView(); };
   const ultima = parte >= partes.length - 1;
-  const acciones = repaso ? botonesRepaso(e) : ultima ? botonesPaso(e, estado, papelDelPaso(ind, cur, e)) : [papelDelPaso(ind, cur, e) !== 'actual' && h('button', { type: 'button', class: 'btn btn-borde', onclick: irAContinuar }, 'Continuar mi ruta'), h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: irParte(parte + 1) }, 'Siguiente ▶')];
+  const acciones = repaso ? botonesRepaso(e) : [botonContinuar(ultima ? terminarPaso(e, papelDelPaso(ind, cur, e)) : irParte(parte + 1))];
   const def = !repaso && ind.enriquecido?.[id];
 
   return h('div', { class: 'pantalla-paso' },
@@ -110,24 +109,19 @@ function fichaEjercicio(f) {
     f.porVerificar && h('p', { class: 'pequeno ocre' }, `Por verificar: ${f.porVerificar}`));
 }
 
-// papel: actual, el botón completa y sigue. Adelantado o consulta: «Continuar mi ruta» vuelve a lo pendiente sin marcar nada,
-// y completar sigue siendo posible, pero aparte y a propósito.
-function botonesPaso(e, estado, papel = 'actual') {
-  const hecho = resultado => () => {
-    cambiar(est => { marcar((est.curriculo ??= progresoVacio()), e, resultado); });
+const botonContinuar = onclick => h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick }, 'Continuar ▶');
+
+// Hay un solo botón: lo siguiente que toque. En el paso actual lo completa; en uno adelantado o ya hecho no marca nada y
+// vuelve al primer pendiente, porque visitar no es completar.
+function terminarPaso(e, papel) {
+  return () => {
+    cambiar(est => {
+      const cur = (est.curriculo ??= progresoVacio());
+      if (papel === 'actual') marcar(cur, e, 'hecho');
+      else if (cur.pantallas) delete cur.pantallas[e.paso.id];
+    });
     irAContinuar();
   };
-  const ruta = papel !== 'actual' && h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: irAContinuar }, 'Continuar mi ruta ▶');
-  if (!esDePractica(e.paso)) {
-    if (papel === 'actual') return [h('button', { type: 'button', class: 'btn btn-papel btn-grande', onclick: hecho('hecho') }, 'Continuar ▶')];
-    return [papel === 'adelantado' && h('button', { type: 'button', class: 'btn btn-borde', onclick: hecho('hecho') }, 'Marcar como hecho'), ruta];
-  }
-  const ya = e.paso.tipo === '◇';
-  return [
-    h('button', { type: 'button', class: 'btn btn-borde', 'aria-pressed': estado === 'practica' ? 'true' : null, onclick: hecho('practica') }, ya ? 'Prefiero trabajarlo' : 'Sigo practicando'),
-    h('button', { type: 'button', class: papel === 'actual' ? 'btn btn-papel btn-grande' : 'btn btn-borde', onclick: hecho('hecho') }, ya ? 'Ya lo sé' : 'Lo he aprendido', papel === 'actual' ? ' ▶' : ''),
-    ruta,
-  ];
 }
 
 function botonesRepaso(e) {
