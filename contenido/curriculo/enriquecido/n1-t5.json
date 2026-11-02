@@ -64,9 +64,11 @@
      "md": "Vuelve a escuchar *Lágrima*, ahora solo su principio. Ya sabes en qué fijarte, porque tienes el vocabulario que no tenías en el Tramo 1."
     },
     {
-     "tipo": "concepto",
-     "titulo": "Dónde escucharla",
-     "md": "[Buscar *Lágrima* en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra). Elige una versión de guitarrista clásico y escucha hasta que oigas cambiar el color: esa es la parte B."
+     "tipo": "video",
+     "id": "wI6t829uDfo",
+     "titulo": "*Lágrima*, por Pepe Romero",
+     "capitulos": [],
+     "nota": "Escucha hasta que oigas cambiar el color: esa es la parte B."
     },
     {
      "tipo": "notacion",

@@ -15,7 +15,7 @@ import { ACORDES } from './acordes.js';
 import { validarEscena } from './guitarra.js';
 
 export const TIPOS_BLOQUE = ['texto', 'concepto', 'pasos', 'lista', 'errores', 'bien', 'reaparece', 'guia', 'mastil', 'acordes', 'anatomia', 'tabla',
-  'localizar', 'elige', 'ordenar', 'completar', 'grados', 'dedos', 'ejercicio', 'progresion', 'notacion', 'pentagrama', 'escuchar', 'pista', 'metronomo', 'preguntas', 'obra', 'figura'];
+  'localizar', 'elige', 'ordenar', 'completar', 'grados', 'dedos', 'ejercicio', 'progresion', 'notacion', 'pentagrama', 'escuchar', 'pista', 'metronomo', 'preguntas', 'obra', 'figura', 'video'];
 
 // Todos los bloques de un paso, sea cual sea su forma.
 export const bloquesDe = def => (def.pantallas ? def.pantallas.flatMap(p => p.bloques) : def.bloques ?? []);
@@ -40,6 +40,7 @@ export function validarPaso(id, def, { pasos, obras, notaciones, preguntas }) {
     if (b.tipo === 'anatomia' && !ACORDES[b.acorde]) err.push(`${donde}: acorde ${b.acorde}`);
     if ((b.tipo === 'notacion' || b.tipo === 'pista') && !notaciones.has(b.fuente)) err.push(`${donde}: no existe ${b.fuente}`);
     if (b.tipo === 'reaparece') for (const x of b.items) if (!pasos.has(x.paso)) err.push(`${donde}: no existe el paso ${x.paso}`);
+    if (b.tipo === 'video' && !/^[A-Za-z0-9_-]{11}$/.test(b.id ?? '')) err.push(`${donde}: identificador de YouTube no válido`);
     if (b.tipo === 'figura' && !b.alt) err.push(`${donde}: un esquema necesita su descripción`);
     if (b.tipo === 'obra' && !obras.has(b.id)) err.push(`${donde}: no existe la obra ${b.id}`);
     if (b.tipo === 'preguntas' && !preguntas.has(id)) err.push(`${donde}: este paso no tiene preguntas calculadas`);

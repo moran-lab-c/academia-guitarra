@@ -147,8 +147,8 @@
        "principal": "partitura",
        "motivo": "El objetivo es leer: partitura; la tablatura, solo para comprobar.",
        "bpms": [
-        50,
-        72
+        60,
+        120
        ],
        "notas": [
         "Sor avisa arriba: no levantes el dedo que pisa una cuerda hasta que lo necesites en otro sitio.",

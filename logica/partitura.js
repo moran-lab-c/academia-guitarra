@@ -112,7 +112,7 @@ export function validarNotacion(p, nombre = 'notación') {
         if (!n || typeof n !== 'object') return err.push(`${donde}: no es una nota`);
         if (!DURACIONES.includes(String(n.d))) err.push(`${donde}: duración «${n.d}» (vale ${DURACIONES.join(', ')})`);
         if (n.dedo != null && !(Number.isInteger(n.dedo) && n.dedo >= 0 && n.dedo <= 4)) err.push(`${donde}: dedo fuera de 0-4`);
-        if (n.mano != null && !MANO.includes(n.mano)) err.push(`${donde}: mano derecha «${n.mano}» (vale ${MANO.join(', ')})`);
+        if (n.mano != null && !String(n.mano).split(' ').every(x => MANO.includes(x))) err.push(`${donde}: mano derecha «${n.mano}» (vale ${MANO.join(', ')})`);
         if (n.lig != null && !['h', 'p', 's'].includes(n.lig)) err.push(`${donde}: ligado «${n.lig}» (h ascendente, p descendente, s glissando)`);
         if (n.arm && !ARMONICO[n.t]) err.push(`${donde}: no hay armónico natural en el traste ${n.t}`);
         if ((n.lig || n.tie) && !voz[k + 1] && !p.compases[i + 1]) err.push(`${donde}: un ligado o una ligadura necesita una nota después`);
@@ -158,9 +158,11 @@ export function prepararNotacion(p, { compases = null } = {}) {
   }
   if (compases && compases[1] > total) avisos.push(`Del fragmento (compases ${compases[0]}-${compases[1]}) solo están transcritos hasta el ${total}.`);
   if (p.simplificacion) avisos.push(p.simplificacion);
-  if (p.digitacion) avisos.push({ edicion: 'Digitación: la de la edición.', mixta: 'Digitación: la de la edición donde la trae; el resto, propuesta de la Academia.', propuesta: 'Digitación: propuesta de la Academia, calculada y sin probar con la mano. No es la de la edición.' }[p.digitacion]);
+  if (p.digitacion) avisos.push({ edicion: 'Digitación: la de la edición.', tutorial: `Digitación: la del tutorial de ${p.digitacionFuente ?? 'YouTube'}.`, mixta: 'Mano izquierda: la de la edición. La mano derecha no se muestra hasta cotejarla con un tutorial.', propuesta: 'Sin digitación hasta cotejarla con un tutorial.' }[p.digitacion]);
   if (p.parcial) avisos.push(`Transcritos ${p.parcial.transcritos} de ${p.parcial.total} compases${p.parcial.nota ? `: ${p.parcial.nota}` : ''}. El resto está por hacer y no se dibuja.`);
 
+  // Lo que no sale de una edición o de un tutorial no se enseña: solo eran dedos calculados por la Academia.
+  const sinMano = ['mixta', 'propuesta'].includes(p.digitacion), sinDedo = p.digitacion === 'propuesta';
   const salida = [];
   for (let i = desde - 1; i < hasta; i++) {
     const m = p.compases[i];
@@ -170,7 +172,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
         const antes = k > 0 ? voz[k - 1] : i > desde - 1 ? p.compases[i - 1].voces[v]?.at(-1) : null;
         const nota = {
           duracion: String(n.d), puntillo: !!n.p, tres: !!n.tres, arm: !!n.arm, oct: !!n.oct, gracia: (n.gracia ?? []).map(x => { const g = grafia(afinacion[x.c - 1] + x.t + 12, arm); return { clave: `${g.letra}${g.acc}/${g.octava}`, acc: g.acc, cuerda: x.c, traste: x.t }; }), oculto: !!n.oculto, silencio: !!n.s, claves: [], alteraciones: [], tab: [], inicio,
-          dedo: n.dedo ?? null, dedos: n.dedos ?? null, rotulo: n.rotulo ?? null, mano: n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
+          dedo: sinDedo ? null : n.dedo ?? null, dedos: sinDedo ? null : n.dedos ?? null, rotulo: n.rotulo ?? null, mano: sinMano ? null : n.mano ?? null, lig: n.lig ?? null, tie: !!n.tie, art: n.art ?? [], din: n.din ?? null,
           ligadaDesdeAntes: !n.s && !!antes?.tie,
         };
         inicio = Math.round((inicio + ticks(n)) * 1e9) / 1e9;
@@ -199,7 +201,7 @@ export function prepararNotacion(p, { compases = null } = {}) {
       });
       delete n._g;
     }
-    salida.push({ numero: i + 1 + antes0, pos: m.pos ?? null, voces });
+    salida.push({ numero: i + 1 + antes0, pos: m.pos ?? null, repite: m.repite ?? null, voces });
   }
   return {
     ok: true, errores: [], titulo: p.titulo ?? null, compas: compasEn(p.compas), compasVisible: p.compasVisible !== false, armadura: arm.clave, tempo: p.tempo ?? null,

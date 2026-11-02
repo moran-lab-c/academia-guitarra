@@ -140,6 +140,8 @@ export function dibujar(VF, plan, vista, ancho) {
       }
       if (plan.repetir && c.numero === plan.compases[0].numero) { stave?.setBegBarType(Barline.type.REPEAT_BEGIN); tab?.setBegBarType(Barline.type.REPEAT_BEGIN); }
       if (plan.repetir && c.numero === plan.compases.at(-1).numero) { stave?.setEndBarType(Barline.type.REPEAT_END); tab?.setEndBarType(Barline.type.REPEAT_END); }
+      if (plan.compases[c.indice].repite === 'inicio') { stave?.setBegBarType(Barline.type.REPEAT_BEGIN); tab?.setBegBarType(Barline.type.REPEAT_BEGIN); }
+      if (plan.compases[c.indice].repite === 'fin') { stave?.setEndBarType(Barline.type.REPEAT_END); tab?.setEndBarType(Barline.type.REPEAT_END); }
       stave?.setContext(ctx).draw();
       tab?.setContext(ctx).draw();
       if (c.primero && stave && tab) new StaveConnector(stave, tab).setType('singleLeft').setContext(ctx).draw();

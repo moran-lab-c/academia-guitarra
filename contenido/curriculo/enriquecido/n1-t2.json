@@ -902,11 +902,61 @@
        "motivo": "Es una obra para leer: partitura y tablatura juntas.",
        "bpms": [
         60,
-        88
+        112
        ],
        "notas": [
-        "Tiene dos partes de ocho compases, y cada una se repite. Los dedos que ves son los de la edición; la mano derecha es una propuesta de la academia.",
-        "Fíjate en el {c:8} y el {c:16}: los dos acaban en un acorde y un silencio. Ahí termina cada parte."
+        "Tiene dos partes de ocho compases, y cada una se repite. Los dedos de las dos manos son los que enseña Ross en el vídeo.",
+        "Fíjate en el {c:8} y el {c:16}: los dos acaban en un acorde y un silencio. Ahí termina cada parte.",
+        "El tempo de ♩=112 sale de grabaciones reales, que van más o menos de 100 a 125. Es la meta, no el principio."
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "LN7xxd_SDq4",
+       "titulo": "Ross the Music Teacher: la lección, línea a línea",
+       "nota": "Está en inglés: se abre con los subtítulos puestos. Ross enseña primero la mano izquierda y luego la derecha de cada línea, con los dedos escritos en la partitura.",
+       "capitulos": [
+        [
+         41,
+         "Oírla entera"
+        ],
+        [
+         122,
+         "Línea 1: izquierda"
+        ],
+        [
+         231,
+         "Línea 1: derecha"
+        ],
+        [
+         281,
+         "Línea 2: izquierda"
+        ],
+        [
+         346,
+         "Línea 2: derecha"
+        ],
+        [
+         380,
+         "Línea 3: izquierda"
+        ],
+        [
+         456,
+         "Línea 3: derecha"
+        ],
+        [
+         501,
+         "Línea 4: izquierda"
+        ],
+        [
+         552,
+         "Línea 4: derecha"
+        ],
+        [
+         580,
+         "Cómo está construida"
+        ]
        ]
       },
       {
@@ -918,6 +968,16 @@
         "Pasa la vista por las notas y di el nombre de las que reconozcas.",
         "Marca con lápiz las que no conozcas y búscalas en la tabla."
        ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Cómo se toca: una voz que parece sola",
+       "md": "Aunque se escribe nota a nota, aquí hay un **bajo** y una **melodía**. No levantes los dedos de la izquierda hasta que tengas que usarlos: si dejas sonar las notas, salen acordes (lo verás muy claro desde el {c:9}). Piensa en dos pulsos por compás, no en cuatro, y haz crecer cada frase de cuatro compases hacia su final."
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Por qué estos dedos de la derecha",
+       "md": "**p** toca los bajos, y **i** y **m** se alternan arriba: nunca el mismo dedo dos veces seguidas. **a** aparece donde hay un salto de cuerda ({c:4}, {c:10} y {c:11}), porque así la mano no tiene que moverse. Otros profesores lo digitan distinto (en el {c:1}, por ejemplo, a-m-i) y también vale, siempre que alternes."
       },
       {
        "tipo": "texto",

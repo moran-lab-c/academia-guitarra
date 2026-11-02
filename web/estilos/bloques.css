@@ -205,3 +205,16 @@ label.bien__item { display: flex; flex-direction: row; gap: 10px; align-items: f
 .ritmo__barra.es-fuerte { stroke: var(--texto); stroke-width: 1.5; }
 .ritmo__nombre { fill: var(--texto); font-size: 12px; pointer-events: none; }
 .ritmo__barra.es-ahora + .ritmo__nombre { fill: var(--tinta); font-weight: 700; }
+
+/* Vídeos de YouTube; «lado» los pone junto a la partitura y los deja a la vista al bajar. */
+.video { margin: 0; display: flex; flex-direction: column; gap: 10px; max-width: 720px; }
+.video__marco { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--r-2); background: var(--sup-1); }
+.video__capitulos { display: flex; flex-wrap: wrap; gap: 6px; }
+.video__capitulos .btn { min-height: 32px; padding: 4px 10px; font-size: 13px; }
+.lado { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.lado > * { min-width: 0; }
+@media (min-width: 1280px) {
+  .pantalla-paso:has(.lado) { max-width: 1320px; }
+  .lado { display: grid; grid-template-columns: minmax(0, 1fr) 400px; align-items: start; }
+  .lado > .video { position: sticky; top: 16px; }
+}

@@ -182,6 +182,16 @@ function pista(b, pasoId) {
     h('p', { class: 'pequeno suave' }, 'Una base para tocar encima, en bucle, hasta que la pares.'));
 }
 
+// Un vídeo de YouTube dentro de la app, con subtítulos en español si los hay. Cada capítulo salta a su momento.
+const SALTO = new Map(); // id del vídeo → segundo en que se dejó
+function video(b) {
+  const url = (s, sigue) => `https://www.youtube-nocookie.com/embed/${b.id}?rel=0&hl=es&cc_load_policy=1&cc_lang_pref=es&start=${s}${sigue ? '&autoplay=1' : ''}`;
+  const marco = h('iframe', { class: 'video__marco', src: url(SALTO.get(b.id) ?? 0), title: b.titulo.replaceAll('*', ''), loading: 'lazy', allow: 'autoplay; encrypted-media; picture-in-picture', allowfullscreen: true, referrerpolicy: 'strict-origin-when-cross-origin' });
+  return h('figure', { class: 'video' }, marco,
+    h('figcaption', { class: 'pila-s' }, h('strong', null, textoRico(b.titulo)), b.nota && h('p', { class: 'pequeno suave' }, textoRico(b.nota)),
+      b.capitulos?.length > 0 && h('div', { class: 'video__capitulos' }, b.capitulos.map(([s, t]) => h('button', { type: 'button', class: 'btn btn-borde', onclick: () => { SALTO.set(b.id, s); marco.src = url(s, true); } }, t)))));
+}
+
 const RENDER = {
   texto: (b, x) => h('p', { class: 'paso-texto' }, md(b.md, x.raiz)),
   concepto: (b, x) => h('section', { class: 'concepto' }, b.titulo && h('h2', { class: 'concepto__titulo' }, b.titulo), h('p', null, md(b.md, x.raiz))),
@@ -209,6 +219,7 @@ const RENDER = {
   escuchar,
   pista: (b, x) => pista(b, x.pasoId),
   metronomo: (b, x) => { const c = ctx(); return h('details', { class: 'paso-metronomo', open: b.abierto || estadoMetronomo().estado === 'sonando' || null }, h('summary', null, 'Metrónomo'), barraMetronomo({ clave: b.clave ?? x.pasoId, tempo: { ...tempoDe(c, b.clave ?? x.pasoId, {}), ...(b.bpm ? { inicial: b.bpm } : {}) } })); },
+  video,
   preguntas: (b, x) => bloquePreguntas(x.pasoId, b.n ?? 5),
   obra: (b, x) => { const o = x.ind.obraPorId.get(b.id); return h('div', { class: 'pila-s' }, b.md && h('p', null, md(b.md, x.raiz)), h('a', { class: 'obra-enlace', href: enlace('/obras', o.id) }, h('span', { class: 'titulo-obra' }, o.titulo), o.compositor ? ` · ${o.compositor}` : '', ' →')); },
 };
@@ -217,7 +228,14 @@ const RENDER = {
 export function bloquesDelPaso(bloques, pasoId, ind, parte = 0) {
   const raiz = { el: null };
   const x = { pasoId, ind, raiz, parte, tramoDe: id => { const e = ind.porId.get(id); return `Tramo ${e.tramo.numero}, ${e.leccion.titulo}`; } };
-  const nodo = h('div', { class: 'bloques pila' }, bloques.map((b, i) => RENDER[b.tipo]?.(b, x, i)));
+  const nodos = [];
+  bloques.forEach((b, i) => {
+    const n = RENDER[b.tipo]?.(b, x, i);
+    // Un vídeo «alLado» se pone junto al bloque anterior, normalmente la partitura.
+    if (b.alLado && nodos.length) nodos.push(h('div', { class: 'lado' }, nodos.pop(), n));
+    else nodos.push(n);
+  });
+  const nodo = h('div', { class: 'bloques pila' }, nodos);
   raiz.el = nodo;
   return nodo;
 }

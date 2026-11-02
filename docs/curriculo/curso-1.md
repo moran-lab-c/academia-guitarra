@@ -84,7 +84,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 ## Mapa de tramos
 | Tramo | Música | Qué se trabaja |
 |---|---|---|
-| 1 | Escuchar *Lágrima* | Postura, uñas, afinar; lo que ya sabe; el primer pentagrama; cómo estudiar |
+| 1 | Antes de empezar | Postura, uñas, afinar; lo que ya sabe; el primer pentagrama; cómo estudiar |
 | 2 | Sor, op. 60 n.º 1 | Apoyando y tirando; las notas de la 1.ª y 2.ª cuerda; figuras; Sor; color; pulso |
 | 3 | Sor, *Andante* op. 31 n.º 1 | Dos planos; bajos y dos voces; tono y semitono; Do mayor; puntillo; ¿sube o baja?; cuerda al aire para cambiar |
 | 4 | Mi mayor: Mi–La–Si7–Mi | Escala y triada; funciones; el tritono; arpegio de Giuliani; dedo común; I-IV-V en Do y Sol; improvisar; calidad de la triada |
@@ -101,7 +101,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 
 ---
 
-## Tramo 1 · Escuchar *Lágrima*
+## Tramo 1 · Antes de empezar
 **L1.1 · Bienvenida** {Repertorio, Musicalidad}
 1. Explicación (guía) · Adónde lleva este nivel: tocar, leer, entender y escuchar a la vez.
 2. Escucha · *Lágrima* entera: «aquí llegas en este nivel» · ♪ enlace.

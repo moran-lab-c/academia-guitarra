@@ -181,7 +181,7 @@ test('los adornos suenan antes de su nota, no ocupan compás, y cada obra dice d
   assert.deepEqual(ev.map(e => e.midis[0]), [64 + 7, 64 + 5, 64 + 3]);
   const oct = { compas: '4/4', compases: [{ voces: [[{ d: '1', c: 5, t: 3, oct: true }]] }] };
   assert.equal(eventosDeNotacion(oct).eventos[0].midis[0], 45 + 3 + 12);
-  for (const [f, n] of notaciones) if (f.includes('/obra-')) assert.ok(['edicion', 'mixta', 'propuesta'].includes(n.digitacion), `${f}: sin origen de la digitación`);
+  for (const [f, n] of notaciones) if (f.includes('/obra-')) assert.ok(['edicion', 'tutorial', 'mixta', 'propuesta'].includes(n.digitacion), `${f}: sin origen de la digitación`);
 });
 
 test('las obras antes parciales ya están enteras, salvo la Sonatina, que lo dice', () => {

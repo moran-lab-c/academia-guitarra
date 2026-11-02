@@ -84,9 +84,10 @@
      "md": "Antes de nada, escucha adónde vas. Es *Lágrima*, de Francisco Tárrega: una pieza de unos dos minutos que aprenderás entera en este nivel."
     },
     {
-     "tipo": "concepto",
-     "titulo": "Escúchala aquí",
-     "md": "La app todavía no trae esta obra grabada, así que se abre fuera: [buscar *Lágrima* en YouTube](https://www.youtube.com/results?search_query=T%C3%A1rrega+L%C3%A1grima+guitarra). Elige una versión de un guitarrista clásico."
+     "tipo": "video",
+     "id": "wI6t829uDfo",
+     "titulo": "*Lágrima*, por Pepe Romero",
+     "capitulos": []
     },
     {
      "tipo": "lista",
