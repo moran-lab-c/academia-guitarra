@@ -4,6 +4,7 @@ import { repintar } from '../nucleo/rutas.js';
 import { preguntasDelPaso } from '../../logica/preguntasPaso.js';
 import { notacionSuelta } from './partitura.js';
 import { tocar } from './sonido.js';
+import { efecto } from './efectos.js';
 
 // Lo que lleva contestado, solo mientras está en esta pantalla.
 let sesion = { id: null, ronda: 0, respuestas: [] };
@@ -22,6 +23,7 @@ export function bloquePreguntas(pasoId, n = 5) {
   const q = lista[i];
   const contestar = (boton, k) => {
     const ok = k === q.correcta;
+    efecto(ok ? 'acierto' : 'fallo');
     boton.closest('.preguntas').querySelectorAll('.preguntas__opcion').forEach((b, n) => {
       b.disabled = true;
       if (n === q.correcta) b.classList.add('es-correcta');

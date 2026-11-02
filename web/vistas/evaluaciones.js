@@ -20,6 +20,7 @@ import { notacionSuelta } from '../componentes/partitura.js';
 import { barraMetronomo } from '../componentes/metronomo.js';
 import { formularioRegistro } from '../componentes/registro.js';
 import { tocar } from '../componentes/sonido.js';
+import { efecto } from '../componentes/efectos.js';
 
 // El módulo abierto; se conserva al repintar y al ir a otra pantalla y volver: { area, hipotesis, respuestas, tanda, hecho }.
 let mod = null;
@@ -178,7 +179,7 @@ function pruebaApp(c, comp) {
     h('div', { class: 'rejilla-2', role: 'group', 'aria-label': 'Respuestas' }, q.opciones.map((o, k) => h('button', {
       type: 'button', class: 'btn-borde', 'aria-disabled': String(contestada),
       style: contestada && k === q.correcta ? 'box-shadow:inset 0 0 0 2px var(--verde)' : contestada && k === t.elegida ? 'box-shadow:inset 0 0 0 2px var(--ocre)' : null,
-      onclick: () => { if (contestada) return; t.elegida = k; if (k === q.correcta) t.aciertos++; else t.errores++; repintar(); },
+      onclick: () => { if (contestada) return; t.elegida = k; if (k === q.correcta) t.aciertos++; else t.errores++; efecto(k === q.correcta ? 'acierto' : 'fallo'); repintar(); },
     }, o))),
     contestada && h('div', { class: 'fila-entre' },
       h('span', { class: t.elegida === q.correcta ? '' : 'ocre' }, t.elegida === q.correcta ? 'Correcto.' : `No: es «${q.opciones[q.correcta]}».`),

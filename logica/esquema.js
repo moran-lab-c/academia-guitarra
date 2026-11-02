@@ -36,6 +36,7 @@ export function estadoInicial() {
       minutosHabituales: 60,
       repartoAmbas: 0.65,      // parte clásica cuando la sesión es de las dos rutas
       formatoPreferido: null,  // null = lo que recomiende la app; 'partitura' o 'tablatura' pesa en la recomendación
+      efectosSonido: true,     // sonidos de botones, aciertos y lo que se completa (web/componentes/efectos.js)
       latenciaMs: 0,           // calibración del retraso del equipo (pruebas de ritmo)
       copiaExterna: null,      // { carpeta, cadaDias }: preparada para más adelante, apagada
     },

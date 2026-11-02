@@ -90,6 +90,15 @@ export function marcar(cur, entrada, resultado, hoy = dia(new Date())) {
   if (resultado === 'hecho' && seRepasa(entrada.paso) && !cur.repasos?.[id]) (cur.repasos ??= {})[id] = { n: 0, prox: sumarDias(hoy, INTERVALOS[0]) };
 }
 
+// Lo más grande que cierra este paso ya completado: 'nivel', 'tramo', 'leccion' o solo 'paso'.
+export function cierreDe(curso, { paso, leccion, tramo, nivel }) {
+  const cur = de(curso);
+  const hechos = l => l.pasos.every(p => pasado(cur, p.id));
+  if (!pasado(cur, paso.id) || !hechos(leccion)) return 'paso';
+  if (!tramo.lecciones.every(hechos)) return 'leccion';
+  return nivel.tramos.every(t => t.lecciones.every(hechos)) ? 'nivel' : 'tramo';
+}
+
 // «Bien · Regular · No salió». Bien lo aleja, Regular lo deja igual y No salió lo vuelve a poner en práctica.
 export function responderRepaso(cur, entrada, respuesta, hoy = dia(new Date())) {
   const id = entrada.paso.id;

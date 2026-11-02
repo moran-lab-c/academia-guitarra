@@ -8,7 +8,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { cargarCurriculo } from '../servidor/catalogo.js';
-import { indexarCurriculo, continuar, marcar, papelDelPaso, cambiarNivel, progresoVacio, resumenNivel } from '../logica/curriculo.js';
+import { indexarCurriculo, continuar, marcar, papelDelPaso, cambiarNivel, progresoVacio, resumenNivel, cierreDe } from '../logica/curriculo.js';
 
 const ind = indexarCurriculo(cargarCurriculo(fileURLToPath(new URL('../contenido/', import.meta.url))));
 const HOY = '2026-11-01';
@@ -17,6 +17,20 @@ const P = id => ind.porId.get(id);
 // Visitar es, a propósito, no hacer nada: la app ya no escribe el progreso al entrar en un paso.
 const visitar = (c, id) => papelDelPaso(ind, c, P(id));
 const hechos = (c, n) => ind.pasos.slice(0, n).forEach(e => marcar(c, e, 'hecho', HOY));
+
+test('el sonido de completar distingue paso, lección, tramo y nivel', () => {
+  const c = progresoVacio();
+  const n1 = ind.pasos.filter(e => e.nivel.numero === 1);
+  const vistos = new Map();
+  for (const e of n1) { marcar(c, e, 'hecho', HOY); vistos.set(e.paso.id, cierreDe(c, e)); }
+  const ultimo = a => a[a.length - 1];
+  const nivel = n1[0].nivel, tramo = nivel.tramos[0], leccion = tramo.lecciones[0];
+  assert.equal(vistos.get(ultimo(leccion.pasos).id), tramo.lecciones.length > 1 ? 'leccion' : 'tramo');
+  assert.equal(vistos.get(ultimo(ultimo(tramo.lecciones).pasos).id), 'tramo');
+  assert.equal(vistos.get(ultimo(n1).paso.id), 'nivel');
+  if (leccion.pasos.length > 1) assert.equal(vistos.get(leccion.pasos[0].id), 'paso');
+  assert.equal(cierreDe(progresoVacio(), n1[0]), 'paso');
+});
 
 test('A: en el primer paso, completarlo lleva al siguiente lógico', () => {
   const c = progresoVacio();

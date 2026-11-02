@@ -3,7 +3,7 @@
 import { h } from '../nucleo/dom.js';
 import { datos, curriculo, cambiar, ctx } from '../nucleo/almacen.js';
 import { enlace } from '../nucleo/rutas.js';
-import { marcar, responderRepaso, papelDelPaso, progresoVacio } from '../../logica/curriculo.js';
+import { marcar, responderRepaso, papelDelPaso, progresoVacio, cierreDe } from '../../logica/curriculo.js';
 import { acordesDe } from '../../logica/acordes.js';
 import { PREGUNTAS } from '../../logica/preguntasPaso.js';
 import { formatoPara } from '../../logica/recomendador.js';
@@ -15,11 +15,13 @@ import { diagramas } from '../componentes/acorde.js';
 import { bloquePreguntas } from '../componentes/preguntasPaso.js';
 import { bloquesDelPaso } from '../componentes/bloques.js';
 import { textoRico } from '../componentes/texto.js';
+import { efecto } from '../componentes/efectos.js';
 import { irAContinuar } from './nivel.js';
 
 // Los mensajes del guía: hoy un recuadro sobrio; mañana se cambia por un personaje sin tocar los datos.
 const GUIA = new Set(['Consejo del profesor', '¿Sabías que…?', 'Esto te sirve para…', 'Fíjate en…']);
 const ETIQUETA = { 'Comprobación del tramo': 'De principio a fin', '◇': 'Esto ya lo sabes', Nota: '', Técnica: 'Técnica', 'Obra conocida': 'Obra' };
+let pantallaVista = null; // el contenido entra suave solo al llegar a una pantalla, no cada vez que se redibuja
 
 export default function aprender({ id }, { repaso = false } = {}) {
   const ind = curriculo();
@@ -33,9 +35,12 @@ export default function aprender({ id }, { repaso = false } = {}) {
   const partes = !repaso ? pantallasDe(ind.enriquecido?.[id]) : [];
   const parte = partes.length ? Math.min(cur.pantallas?.[id] ?? 0, partes.length - 1) : 0;
   const irParte = n => () => { cambiar(est => { ((est.curriculo ??= progresoVacio()).pantallas ??= {})[id] = n; }); document.querySelector('.pantalla-paso')?.scrollIntoView(); };
+  const avanzar = irParte(parte + 1);
   const ultima = parte >= partes.length - 1;
-  const acciones = repaso ? botonesRepaso(e) : [botonContinuar(ultima ? terminarPaso(e, papelDelPaso(ind, cur, e)) : irParte(parte + 1))];
+  const acciones = repaso ? botonesRepaso(e) : [botonContinuar(ultima ? terminarPaso(e, papelDelPaso(ind, cur, e)) : () => { efecto('avance'); avanzar(); })];
   const def = !repaso && ind.enriquecido?.[id];
+  const entra = pantallaVista !== `${id}:${parte}`;
+  pantallaVista = `${id}:${parte}`;
 
   return h('div', { class: 'pantalla-paso' },
     h('div', { class: 'fila-entre' },
@@ -46,7 +51,7 @@ export default function aprender({ id }, { repaso = false } = {}) {
       h('h1', { class: 'display display-m' }, leccion.titulo),
       !repaso && h('p', { class: 'pasos-puntos', role: 'list', 'aria-label': `Paso ${enLeccion + 1} de ${leccion.pasos.length}` },
         leccion.pasos.map((p, i) => h('a', { role: 'listitem', href: enlace('/aprender', p.id), class: `paso-punto${i === enLeccion ? ' paso-punto--ahora' : ''}${cur.pasos?.[p.id] ? ' paso-punto--hecho' : ''}`, 'aria-label': `Paso ${i + 1}`, 'aria-current': i === enLeccion ? 'step' : null })))),
-    h('article', { class: 'paso-cuerpo pila' },
+    h('article', { class: `paso-cuerpo pila${entra ? ' paso-entra' : ''}` },
       repaso && h('p', { class: 'rotulo rotulo-verde' }, 'UN REPASO · SIN CALENTAR'),
       partes.length > 1 && h('nav', { class: 'partes', 'aria-label': 'Partes de este paso' },
         h('span', { class: 'rotulo' }, `Parte ${parte + 1} de ${partes.length}`),
@@ -120,6 +125,7 @@ function terminarPaso(e, papel) {
       if (papel === 'actual') marcar(cur, e, 'hecho');
       else if (cur.pantallas) delete cur.pantallas[e.paso.id];
     });
+    efecto(papel === 'actual' ? cierreDe(datos().estado.curriculo, e) : 'avance');
     irAContinuar();
   };
 }
@@ -127,6 +133,7 @@ function terminarPaso(e, papel) {
 function botonesRepaso(e) {
   const responder = r => () => {
     cambiar(est => { responderRepaso((est.curriculo ??= progresoVacio()), e, r); });
+    if (r === 'bien') efecto('paso');
     irAContinuar();
   };
   return [

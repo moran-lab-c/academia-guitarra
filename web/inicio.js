@@ -20,6 +20,7 @@ import nivel from './vistas/nivel.js';
 import aprender, { repasar } from './vistas/aprender.js';
 import obras, { obra as obraCurriculo } from './vistas/obras.js';
 import miProgreso from './vistas/miProgreso.js';
+import './componentes/efectos.js';
 
 // Iconos de trazo (20×20, currentColor). Cada entrada: [destino, texto, trazo, direcciones que lo dejan marcado].
 const ICONOS = {

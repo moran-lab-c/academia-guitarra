@@ -33,6 +33,11 @@
 .paso-punto--hecho { background: var(--texto-3); }
 .paso-punto--ahora { background: var(--verde); }
 .paso-cuerpo { min-height: 240px; }
+.paso-entra > * { animation: tc-aparecer .32s var(--curva-entrada, ease-out) backwards; }
+.paso-entra > :nth-child(2) { animation-delay: .06s; }
+.paso-entra > :nth-child(3) { animation-delay: .12s; }
+.paso-entra > :nth-child(4) { animation-delay: .18s; }
+.paso-entra > :nth-child(n+5) { animation-delay: .24s; }
 .paso-texto { font-size: 18px; line-height: 1.55; max-width: 66ch; margin: 0; }
 .guia { background: var(--sup-1); border-left: 3px solid var(--ocre); border-radius: var(--r-2); padding: 14px 18px; }
 .guia__tipo { color: var(--ocre); margin-bottom: 6px; }

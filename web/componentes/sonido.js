@@ -32,6 +32,32 @@ const muestra = midi => {
 };
 const preparar = midis => Promise.all([...new Set(midis)].map(muestra));
 
+// Cuánto hace que sonó algo: si la acción de un botón ya ha sonado, el botón no añade su clic.
+let ultimoSonido = -Infinity;
+export const sonoHace = () => performance.now() - ultimoSonido;
+
+// Los sonidos de la interfaz, tal cual: sin el limitador de la guitarra, que les quitaría la pegada.
+const archivos = new Map(); // ruta → Promise<AudioBuffer>
+const archivo = ruta => {
+  if (!archivos.has(ruta)) {
+    const p = fetch(ruta).then(r => { if (!r.ok) throw new Error(`Falta ${ruta}`); return r.arrayBuffer(); }).then(b => audio.decodeAudioData(b));
+    p.catch(() => archivos.delete(ruta));
+    archivos.set(ruta, p);
+  }
+  return archivos.get(ruta);
+};
+export const precargarArchivos = rutas => { contexto(); rutas.forEach(r => archivo(r).catch(() => {})); };
+export function sonarArchivo(ruta) {
+  contexto();
+  ultimoSonido = performance.now();
+  return archivo(ruta).then(b => {
+    const src = audio.createBufferSource();
+    src.buffer = b;
+    src.connect(audio.destination);
+    src.start();
+  }).catch(e => console.error('No se ha podido cargar el sonido:', e.message));
+}
+
 // Suena durante «duracion» segundos y se apaga en poco tiempo, como una cuerda que se apaga con el dedo.
 function nota(buffers, midi, cuando, duracion, volumen = 0.85, cents = 0) {
   const n = Math.min(NOTA_MAX, Math.max(NOTA_MIN, midi));
@@ -57,6 +83,7 @@ const mapaDe = async midis => {
 // desafinar: cuántos cents se desvía la última nota de cada grupo (para oír los batidos).
 export function tocar(secuencia, { duracion = 0.8, arpegiado = false, destacar = null, desafinar = 0 } = {}) {
   contexto();
+  ultimoSonido = performance.now();
   return mapaDe(secuencia.flat()).then(buffers => {
     let t = audio.currentTime + 0.03;
     secuencia.forEach((grupo, g) => {
@@ -86,6 +113,7 @@ export function pararReproduccion() {
 export function reproducir(id, eventos, { bpm = 72, bucle = 0, largo = 0, alCompas, alTerminar } = {}) {
   pararReproduccion();
   contexto();
+  ultimoSonido = performance.now();
   const negra = 60 / bpm;
   const r = { id, timers: [], fuentes: [], alTerminar, vigia: null };
   actual = r;

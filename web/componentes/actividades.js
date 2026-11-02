@@ -4,6 +4,7 @@ import { h } from '../nucleo/dom.js';
 import { midiEn, notaEn, ordinal } from '../../logica/guitarra.js';
 import { textoRico } from './texto.js';
 import { tocar } from './sonido.js';
+import { efecto } from './efectos.js';
 import { notacionSuelta } from './partitura.js';
 
 const memoria = new Map(); // lo que lleva hecho mientras no sale de la app
@@ -24,7 +25,7 @@ export function elige(b, clave) {
       h('p', { class: 'actividad__enunciado' }, textoRico(b.enunciado)),
       b.notacion && h('div', { class: 'atril atril--pequeno' }, notacionSuelta(b.notacion, 'partitura', b.enunciado, b.ancho ?? 300)),
       b.audio && h('button', { type: 'button', class: 'btn btn-borde actividad__oir', onclick: () => sonar(b.audio) }, '♪ Escuchar'),
-      h('div', { class: 'fila' }, b.opciones.map((o, k) => h('button', { type: 'button', class: `btn btn-borde preguntas__opcion${st.eleccion === k ? (k === b.correcta ? ' es-correcta' : ' es-fallo') : ''}`, disabled: hecho && k !== b.correcta ? true : null, onclick: () => { st.eleccion = k; pintar(); } }, textoRico(String(o))))),
+      h('div', { class: 'fila' }, b.opciones.map((o, k) => h('button', { type: 'button', class: `btn btn-borde preguntas__opcion${st.eleccion === k ? (k === b.correcta ? ' es-correcta' : ' es-fallo') : ''}`, disabled: hecho && k !== b.correcta ? true : null, onclick: () => { st.eleccion = k; efecto(k === b.correcta ? 'acierto' : 'fallo'); pintar(); } }, textoRico(String(o))))),
       st.eleccion != null && h('p', { class: `actividad__respuesta${hecho ? ' es-bien' : ''}`, 'aria-live': 'polite' }, hecho ? h('strong', null, 'Eso es. ') : h('strong', null, 'Todavía no. '), textoRico(hecho ? b.porque ?? '' : b.pista ?? 'Vuelve a mirarlo y prueba otra vez.')));
   };
   pintar();
@@ -45,7 +46,7 @@ export function ordenar(b, clave) {
         return h('button', { type: 'button', class: `btn btn-borde preguntas__opcion${st.fallo === k ? ' es-fallo' : ''}`, disabled: usado || null, onclick: () => {
           const toca = b.items.findIndex((x, i) => i === st.puestos.length);
           // Dos fichas iguales (dos T) valen lo mismo: se compara lo que dice, no cuál es.
-          if (b.items[k] === b.items[toca]) { st.puestos.push(k); st.fallo = null; b.audio?.[k] && tocar(b.audio[k]); } else st.fallo = k;
+          if (b.items[k] === b.items[toca]) { st.puestos.push(k); st.fallo = null; b.audio?.[k] && tocar(b.audio[k]); if (st.puestos.length === b.items.length) efecto('acierto'); } else { st.fallo = k; efecto('fallo'); }
           pintar();
         } }, b.items[k]);
       })),
@@ -71,7 +72,7 @@ export function completar(b, clave) {
         if (typeof x === 'string') return textoRico(x);
         const i = ++k;
         const bien = st.r[i] === x.correcta;
-        return h('select', { class: `completar__hueco${st.r[i] == null ? '' : bien ? ' es-correcta' : ' es-fallo'}`, 'aria-label': `Hueco ${i + 1}`, onchange: ev => { st.r[i] = ev.target.value || null; pintar(); } },
+        return h('select', { class: `completar__hueco${st.r[i] == null ? '' : bien ? ' es-correcta' : ' es-fallo'}`, 'aria-label': `Hueco ${i + 1}`, onchange: ev => { st.r[i] = ev.target.value || null; if (st.r[i]) efecto(st.r[i] === x.correcta ? 'acierto' : 'fallo'); pintar(); } },
           h('option', { value: '' }, '…'), x.opciones.map(o => h('option', { value: o, selected: st.r[i] === o ? true : null }, o)));
       })),
       todo && h('p', { class: 'actividad__respuesta es-bien' }, h('strong', null, 'Eso es. '), textoRico(b.final ?? '')),
@@ -108,7 +109,7 @@ export function localizar(b, clave) {
       Array.from({ length: hasta + 1 }, (_, t) => {
         const el = h('button', { type: 'button', class: `diapason__celda${t === 0 ? ' diapason__celda--aire' : ''}`, 'aria-label': `${ordinal(c)} cuerda, ${t === 0 ? 'al aire' : `traste ${t}`}`, onclick: () => {
           tocar([[midiEn(c, t)]], { duracion: 0.9 });
-          if (es(c, t, b.objetivos)) { if (!es(c, t, st.puestos)) st.puestos.push([c, t]); st.fallo = null; } else st.fallo = [c, t];
+          if (es(c, t, b.objetivos)) { if (!es(c, t, st.puestos)) { st.puestos.push([c, t]); if (b.objetivos.every(x => es(x[0], x[1], st.puestos))) efecto('acierto'); } st.fallo = null; } else st.fallo = [c, t];
           pintar();
         } });
         celdas.push({ c, t, el });

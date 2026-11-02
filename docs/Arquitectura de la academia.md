@@ -31,7 +31,8 @@ Cómo está hecha la app de la academia de guitarra: tecnología, carpetas, mód
 | Datos del usuario | Archivos en la vault: `estado.json` + historial mensual en JSONL | Ver «Dónde se guardan sus datos» |
 | Pentagrama y tablatura en pantalla | **VexFlow 5.0.0** (MIT), copiado en `web/vendor/vexflow/` y cargado la primera vez que hace falta, sin npm. Dos capas: `logica/partitura.js` (puro: alturas escritas, alteraciones, compases, reparto en líneas) y `web/componentes/partitura.js` (solo pasa ese plan a VexFlow) | Las dos vistas salen de la misma notación de la app (cuerda y traste por nota), así que el formato de los datos no depende de la librería, y lo musical se prueba sin navegador |
 | Metrónomo | Web Audio del navegador: cada 25 ms se programan los golpes de los próximos 120 ms. La lógica (límites, estados, compás, de dónde sale el tempo) es pura, en `logica/metronomo.js` | Es la forma de que no se retrase aunque la pantalla vaya cargada |
-| Sonido de las preguntas de oído | Web Audio (onda triangular que se apaga como una cuerda), `web/componentes/sonido.js` | No graba ni escucha nada: solo hace sonar lo que se pregunta |
+| Sonido de la app | Web Audio con las notas de guitarra de `web/sonidos/guitarra`, `web/componentes/sonido.js` | No graba ni escucha nada: solo hace sonar lo que se pide |
+| Sonidos de la interfaz | Archivos no musicales de `web/sonidos/interfaz` (`herramientas/generar-efectos.mjs`), `web/componentes/efectos.js`: clic, avance, acierto, fallo y cierre de paso, lección, tramo y nivel | Se apagan en Ajustes (`preferencias.efectosSonido`) |
 | Service worker | No, por ahora | Todo es local: sin Internet ya funciona. Solo añadiría el riesgo de ver código viejo |
 
 ## Estructura de carpetas

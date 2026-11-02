@@ -17,7 +17,7 @@ export default function ajustes() {
     const v = valores(prefs);
     cambiar(est => {
       Object.assign(est.perfil, { nombre: v.nombre || null, guitarra: v.guitarra || null, clase: v.clase || null });
-      Object.assign(est.preferencias, { minutosHabituales: v.minutos || 60, programaPrincipal: v.programa, repartoAmbas: (v.reparto ?? 65) / 100, formatoPreferido: v.formato || null });
+      Object.assign(est.preferencias, { minutosHabituales: v.minutos || 60, programaPrincipal: v.programa, repartoAmbas: (v.reparto ?? 65) / 100, formatoPreferido: v.formato || null, efectosSonido: v.efectos });
     });
     pantalla.mensaje = 'Guardado.';
   } },
@@ -28,7 +28,8 @@ export default function ajustes() {
       h('label', null, 'Minutos habituales', h('input', { type: 'number', name: 'minutos', value: p.minutosHabituales ?? 60, style: 'width:6em' })),
       h('label', null, 'Programa por defecto', h('select', { name: 'programa' }, [['clasica', 'Clásico'], ['flamenca', 'Flamenco'], ['ambas', 'Los dos']].map(([v, t]) => h('option', { value: v, selected: p.programaPrincipal === v }, t)))),
       h('label', null, 'Con los dos programas, % de clásico', h('input', { type: 'number', name: 'reparto', value: Math.round((p.repartoAmbas ?? 0.65) * 100), min: 10, max: 90, style: 'width:6em' })),
-      h('label', null, 'Partitura o tablatura', h('select', { name: 'formato' }, [['', 'Lo que recomiende la app en cada caso'], ['tablatura', 'Prefiero tablatura'], ['partitura', 'Prefiero partitura']].map(([v, t]) => h('option', { value: v, selected: (p.formatoPreferido ?? '') === v }, t))))),
+      h('label', null, 'Partitura o tablatura', h('select', { name: 'formato' }, [['', 'Lo que recomiende la app en cada caso'], ['tablatura', 'Prefiero tablatura'], ['partitura', 'Prefiero partitura']].map(([v, t]) => h('option', { value: v, selected: (p.formatoPreferido ?? '') === v }, t)))),
+      h('label', null, h('input', { type: 'checkbox', name: 'efectos', checked: p.efectosSonido !== false }), ' Sonidos de botones y logros')),
     h('button', { class: 'principal', type: 'submit' }, 'Guardar'));
 
   const archivo = h('input', { type: 'file', accept: '.json,application/json', onchange: async e => {
