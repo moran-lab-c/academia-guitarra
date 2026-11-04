@@ -3,7 +3,7 @@
  "armadura": "E",
  "compas": "3/4",
  "conteo": true,
- "fuente": "Transcrita de la edición de Ildefonso Alier (Madrid, plancha 5230 A), de dominio público, y cotejada con el arreglo de J. J. Olson en Mutopia (dominio público). Dedos, cuerdas y cejillas de la izquierda: los de Alier. Mano derecha y dedos que Alier no escribe: propuesta de la academia.",
+ "fuente": "Transcrita de la edición de Ildefonso Alier (Madrid, plancha 5230 A), de dominio público, y cotejada con el arreglo de J. J. Olson en Mutopia (dominio público). Dedos, cuerdas y cejillas de la izquierda: los de Alier. Mano derecha y dedos que Alier no escribe: propuesta de la academia. Cuerdas, trastes y dedos: los del tutorial de Pablo Romero Luis.",
  "nota": "La app dibuja dos voces. Donde Alier escribe tres planos, la nota larga se muestra una vez y sigue sonando.",
  "compases": [
   {
@@ -13,21 +13,18 @@
       "d": "4",
       "c": 1,
       "t": 4,
-      "mano": "a",
-      "dedo": 3
+      "dedo": 4,
+      "mano": "m"
      },
      {
       "d": "4",
       "c": 1,
-      "t": 5,
-      "mano": "a",
-      "dedo": 2
+      "t": 5
      },
      {
       "d": "4",
       "c": 1,
       "t": 7,
-      "mano": "a",
       "dedo": 4
      }
     ],
@@ -36,40 +33,35 @@
       "d": "8",
       "c": 4,
       "t": 2,
-      "mano": "p",
-      "dedo": 1
+      "dedo": 1,
+      "mano": "p"
      },
      {
       "d": "8",
       "c": 2,
       "t": 0,
-      "mano": "m"
+      "mano": "i"
      },
      {
       "d": "8",
       "c": 4,
-      "t": 4,
-      "mano": "p",
-      "dedo": 1
+      "t": 4
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      },
      {
       "d": "8",
       "c": 4,
       "t": 6,
-      "mano": "p",
-      "dedo": 3
+      "dedo": 2
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      }
     ]
    ]
@@ -78,11 +70,10 @@
    "voces": [
     [
      {
-      "p": true,
       "d": "2",
       "c": 1,
       "t": 2,
-      "mano": "a",
+      "p": true,
       "dedo": 4
      }
     ],
@@ -91,40 +82,34 @@
       "d": "8",
       "c": 4,
       "t": 1,
-      "mano": "p",
       "dedo": 1
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      },
      {
       "d": "8",
       "c": 3,
       "t": 2,
-      "mano": "i",
       "dedo": 3
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      },
      {
       "d": "8",
       "c": 5,
       "t": 2,
-      "mano": "p",
       "dedo": 2
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      }
     ]
    ]
@@ -136,21 +121,18 @@
       "d": "4",
       "c": 1,
       "t": 4,
-      "mano": "a",
-      "dedo": 3
+      "dedo": 4,
+      "mano": "m"
      },
      {
       "d": "4",
       "c": 1,
-      "t": 5,
-      "mano": "a",
-      "dedo": 2
+      "t": 5
      },
      {
       "d": "4",
       "c": 1,
       "t": 7,
-      "mano": "a",
       "dedo": 4
      }
     ],
@@ -159,40 +141,35 @@
       "d": "8",
       "c": 4,
       "t": 2,
-      "mano": "p",
-      "dedo": 1
+      "dedo": 1,
+      "mano": "p"
      },
      {
       "d": "8",
       "c": 2,
       "t": 0,
-      "mano": "m"
+      "mano": "i"
      },
      {
       "d": "8",
       "c": 4,
-      "t": 4,
-      "mano": "p",
-      "dedo": 1
+      "t": 4
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      },
      {
       "d": "8",
       "c": 4,
       "t": 6,
-      "mano": "p",
-      "dedo": 3
+      "dedo": 2
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      }
     ]
    ]
@@ -201,11 +178,10 @@
    "voces": [
     [
      {
-      "p": true,
       "d": "2",
       "c": 1,
       "t": 2,
-      "mano": "a",
+      "p": true,
       "dedo": 4
      }
     ],
@@ -214,40 +190,34 @@
       "d": "8",
       "c": 4,
       "t": 1,
-      "mano": "p",
       "dedo": 1
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      },
      {
       "d": "8",
       "c": 3,
       "t": 2,
-      "mano": "i",
       "dedo": 3
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      },
      {
       "d": "8",
       "c": 5,
       "t": 2,
-      "mano": "p",
       "dedo": 2
      },
      {
       "d": "8",
       "c": 2,
-      "t": 0,
-      "mano": "m"
+      "t": 0
      }
     ]
    ]
@@ -259,22 +229,21 @@
       "d": "4",
       "c": 1,
       "t": 12,
-      "mano": "a",
-      "dedo": 4
+      "dedo": 4,
+      "mano": "a"
      },
      {
       "d": "4",
       "c": 1,
       "t": 11,
-      "mano": "a",
-      "dedo": 4
+      "dedo": 4,
+      "mano": "a"
      },
      {
       "d": "4",
       "c": 1,
       "t": 9,
-      "mano": "a",
-      "dedo": 3
+      "dedo": 4
      }
     ],
     [
@@ -282,42 +251,40 @@
       "d": "8",
       "c": 4,
       "t": 11,
-      "mano": "p",
-      "dedo": 3
+      "dedo": 3,
+      "mano": "p"
      },
      {
       "d": "8",
       "c": 3,
       "t": 9,
-      "mano": "i",
-      "dedo": 1
+      "dedo": 1,
+      "mano": "i"
      },
      {
       "d": "8",
       "c": 4,
       "t": 9,
-      "mano": "p",
-      "dedo": 1
+      "dedo": 1,
+      "mano": "p"
      },
      {
       "d": "8",
       "c": 3,
       "t": 9,
-      "mano": "i",
-      "dedo": 1
+      "dedo": 1,
+      "mano": "i"
      },
      {
       "d": "8",
       "c": 4,
       "t": 7,
-      "mano": "p",
       "dedo": 1
      },
      {
       "d": "8",
       "c": 2,
       "t": 7,
-      "mano": "m",
       "dedo": 1
      }
     ]
@@ -330,78 +297,69 @@
       "d": "8",
       "c": 1,
       "t": 7,
-      "mano": "a",
       "dedo": 1
      },
      {
       "d": "8",
       "c": 2,
       "t": 9,
-      "mano": "m",
-      "dedo": 3
+      "dedo": 4
      },
      {
       "d": "8",
       "c": 4,
       "t": 11,
-      "mano": "p",
-      "dedo": 2
-     },
-     {
-      "d": "8",
-      "c": 3,
-      "t": 9,
-      "mano": "i",
-      "dedo": 1
-     },
-     {
-      "d": "8",
-      "c": 3,
-      "t": 11,
-      "mano": "i",
-      "dedo": 3
-     },
-     {
-      "d": "8",
-      "c": 2,
-      "t": 10,
-      "mano": "m",
-      "dedo": 1
-     }
-    ],
-    [
-     {
-      "d": "4",
-      "c": 4,
-      "t": 9,
-      "mano": "p",
-      "dedo": 2
-     },
-     {
-      "d": "2",
-      "c": 4,
-      "t": 11,
-      "mano": "p",
-      "dedo": 2
-     }
-    ]
-   ]
-  },
-  {
-   "voces": [
-    [
-     {
-      "d": "8",
-      "c": 1,
-      "t": 4,
-      "mano": "a",
-      "dedo": 3
+      "dedo": 3,
+      "mano": "p"
      },
      {
       "d": "8",
       "c": 1,
       "t": 0,
       "mano": "a"
+     },
+     {
+      "d": "8",
+      "c": 3,
+      "t": 11,
+      "dedo": 4,
+      "mano": "i"
+     },
+     {
+      "d": "8",
+      "c": 2,
+      "t": 10,
+      "dedo": 2,
+      "mano": "m"
+     }
+    ],
+    [
+     {
+      "d": "4",
+      "c": 4,
+      "t": 9
+     },
+     {
+      "d": "2",
+      "c": 4,
+      "t": 11
+     }
+    ]
+   ]
+  },
+  {
+   "voces": [
+    [
+     {
+      "d": "8",
+      "c": 2,
+      "t": 9,
+      "dedo": 2
+     },
+     {
+      "d": "8",
+      "c": 1,
+      "t": 0
      },
      {
       "d": "8",
@@ -415,21 +373,20 @@
         "t": 3
        }
       ],
-      "mano": "p"
+      "dedos": [
+       null,
+       2
+      ]
      },
      {
       "d": "8",
       "c": 1,
-      "t": 2,
-      "mano": "a",
-      "dedo": 1
+      "t": 2
      },
      {
       "d": "8",
       "c": 5,
-      "t": 2,
-      "mano": "p",
-      "dedo": 1
+      "t": 2
      },
      {
       "d": "8",
@@ -443,15 +400,17 @@
         "t": 2
        }
       ],
-      "mano": "p"
+      "dedos": [
+       4,
+       null
+      ]
      }
     ],
     [
      {
       "d": "4",
-      "c": 2,
-      "t": 0,
-      "mano": "m"
+      "c": 4,
+      "t": 9
      },
      {
       "d": "2",
@@ -475,7 +434,6 @@
         "t": 1
        }
       ],
-      "mano": "p",
       "dedos": [
        0,
        1
@@ -491,14 +449,12 @@
       "d": "4",
       "c": 4,
       "t": 2,
-      "mano": "p",
       "dedo": 2
      },
      {
       "d": "4",
       "c": 6,
-      "t": 0,
-      "mano": "p"
+      "t": 0
      },
      {
       "d": "4",
@@ -508,5 +464,8 @@
    ]
   }
  ],
- "digitacion": "mixta"
+ "digitacion": "tutorial",
+ "digitacionFuente": "Pablo Romero Luis, «Lágrima de Tárrega. Tutorial guitarra [partitura + TAB]» (YouTube): las cuerdas, los trastes y los dedos que dice en su clase",
+ "dedosParciales": true,
+ "sinManoDerecha": true
 }

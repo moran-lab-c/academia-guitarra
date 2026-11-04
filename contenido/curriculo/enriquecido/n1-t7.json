@@ -1312,6 +1312,39 @@
      ]
     },
     {
+     "tipo": "video",
+     "alLado": true,
+     "id": "lsDPu-7kVZ8",
+     "titulo": "Pablo Romero Luis: *Lágrima*, tutorial en español",
+     "nota": "Dice cada dedo de las dos manos, las cejillas y cómo darle intención a cada frase. La partitura y la tablatura salen en pantalla.",
+     "capitulos": [
+      [
+       52,
+       "Oírla entera"
+      ],
+      [
+       168,
+       "Compases 1-4"
+      ],
+      [
+       315,
+       "Compases 5-8"
+      ],
+      [
+       523,
+       "La parte B"
+      ],
+      [
+       654,
+       "El final de la B"
+      ],
+      [
+       725,
+       "Cómo interpretarla"
+      ]
+     ]
+    },
+    {
      "tipo": "concepto",
      "titulo": "El becuadro",
      "md": "Si tu edición no cambia la armadura, verás **becuadros (♮)** en notas que antes llevaban sostenido. El becuadro **anula** la alteración: Sol♯ pasa a ser Sol natural."
@@ -1328,7 +1361,7 @@
      "tipo": "pasos",
      "titulo": "Cómo prepararla",
      "items": [
-      "Alier marca dos: la cejilla en el II en el {c:9}, y en el VII en el {c:12}.",
+      "Pablo pone la cejilla en el II en el {c:12}, sobre el acorde de Si7: el dedo 1 pisa el Si del bajo y el Fa♯ de arriba, y el 3 el Re♯.",
       "Mira qué acorde pide y cómo es la nota anterior.",
       "Practica solo el paso: lo de antes y la cejilla, repetido y muy despacio.",
       "Sal antes de tiempo: el dedo tiene que llegar plano al traste."
@@ -1393,7 +1426,7 @@
       12
      ],
      "notas": [
-      "El {c:9} lleva un arrastre del sol al do con el dedo 2. La app lo muestra como dos notas; hazlo resbalando.",
+      "El {c:9} lleva un arrastre del Sol al Do con el dedo 2. La app lo muestra como dos notas: resbala con el 2 y, como dice Pablo, que el Do se oiga al llegar.",
       "En el {c:10}, el mi al aire sigue sonando sobre las terceras."
      ]
     },

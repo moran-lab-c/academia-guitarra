@@ -58,7 +58,7 @@ export default function aprender({ id }, { repaso = false } = {}) {
         h('div', { class: 'partes__puntos' }, partes.map((p, n) => h('button', { type: 'button', class: `partes__p${n === parte ? ' es-actual' : n < parte ? ' es-pasada' : ''}`, title: p.titulo, 'aria-label': p.titulo ?? `Parte ${n + 1}`, onclick: irParte(n) })))),
       partes.length > 0 ? [
         parte === 0 && etiquetaDe(def, paso) && h('div', { class: 'rotulo' }, etiquetaDe(def, paso)),
-        partes.length > 1 && partes[parte].titulo && h('h2', { class: 'parte-titulo' }, partes[parte].titulo),
+        partes.length > 1 && partes[parte].titulo && tituloParte(partes[parte].titulo, entra),
         bloquesDelPaso(partes[parte].bloques, id, ind, parte),
       ] : contenido(e, ind),
       paso.porVerificar && !def?.verificado && h('p', { class: 'pequeno ocre' }, `Por verificar: ${paso.porVerificar}.`),
@@ -72,6 +72,11 @@ export default function aprender({ id }, { repaso = false } = {}) {
 
 // Las pantallas de un paso enriquecido: { pantallas: […] } o, si es corto, una sola con sus { bloques }. En un repaso, sin
 // calentar, basta su versión corta: por eso no se usan ahí.
+// El título de cada pantalla: al llegar, sus letras suben una a una, como en los títulos cinéticos.
+const tituloParte = (texto, entra) => (!entra ? h('h2', { class: 'parte-titulo' }, texto)
+  : h('h2', { class: 'parte-titulo tc--anima', 'aria-label': texto }, h('span', { class: 'tc-linea', 'aria-hidden': 'true' },
+    texto.split(' ').flatMap((pal, i, l) => [h('span', { class: 'tc-pal' }, [...pal].map((c, k) => h('span', { class: 'tc-l', style: `--d:${Math.round(60 + (l.slice(0, i).join('').length + k) * 22)}ms` }, c))), i < l.length - 1 && ' ']))));
+
 const pantallasDe = def => (!def ? [] : def.pantallas ?? [{ bloques: def.bloques }]);
 const etiquetaDe = (def, paso) => def.etiqueta ?? ETIQUETA[paso.tipo] ?? paso.tipo;
 

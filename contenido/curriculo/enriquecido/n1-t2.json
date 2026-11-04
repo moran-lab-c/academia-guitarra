@@ -854,31 +854,32 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "**Fernando Sor** nació en Barcelona en 1778 y murió en París en 1839. Fue uno de los grandes guitarristas de su tiempo, y además de obras de concierto escribió mucha música para enseñar."
+     "md": "El ***Minueto en Sol*** es una de las piezas más conocidas de la música: seguro que la has oído alguna vez. Durante mucho tiempo se creyó que era de **Johann Sebastian Bach**, porque está en el cuaderno de música que Bach regaló en 1725 a su mujer, **Ana Magdalena**."
     },
     {
      "tipo": "concepto",
-     "titulo": "Música para aprender a leer",
-     "md": "Sus lecciones del **op. 60**, publicadas como *Introduction à l'étude de la guitare*, se ordenan de fácil a difícil. La primera está pensada para tocar y leer a la vez sin dificultades técnicas. **Op.** significa *opus*, obra: es el número con el que se cataloga."
+     "titulo": "En realidad es de Petzold",
+     "md": "En los años setenta se descubrió que el minueto lo compuso **Christian Petzold**, un organista de Dresde amigo de la familia. Bach lo copió en el cuaderno para que Ana Magdalena y sus hijos aprendieran a tocar. Por eso lo verás escrito de las dos formas: «Bach» y «Petzold»."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "Qué es un minueto",
+     "md": "Un **minueto** es un baile de salón elegante, en **tres tiempos**: un-dos-tres, un-dos-tres, con el primero algo más marcado. Se bailaba con pasos pequeños, así que la música va tranquila y sin prisas, nunca a golpes."
     },
     {
      "tipo": "texto",
-     "md": "Por eso es tu primera obra: no porque sea impresionante, sino porque te permite leer **música de verdad** desde el principio, en lugar de ejercicios. Lo que aprendas con ella (leer las figuras y cuidar la melodía) se usará en todas las demás."
+     "md": "Es tu primera obra leída. Tiene dos voces, como casi toda la música para guitarra: la **melodía** arriba, que toca la mano derecha con i y m, y un **bajo** sencillo debajo, que toca el pulgar. Tú atiendes sobre todo a la melodía; el bajo la acompaña."
     },
     {
      "tipo": "reaparece",
      "items": [
       {
        "paso": "n1.t3.l5.p1",
-       "texto": "otro andante de Sor, ya con melodía y bajo."
+       "texto": "otra obra con melodía y bajo."
       },
       {
        "paso": "n1.t10.l1.p1",
        "texto": "cómo leer una obra entera por tu cuenta."
-      },
-      {
-       "paso": "n1.t13.l1.p1",
-       "texto": "Sor en su época."
       }
      ]
     }
@@ -891,97 +892,167 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o1-sor-op-60-n-1",
-       "md": "Tu primera obra leída: **qué aprendes** es a seguir una partitura real de principio a fin y a tocar la melodía apoyando."
+       "id": "o1-bach-petzold-minueto-en-sol",
+       "md": "Tu primera obra leída: **qué aprendes** es a seguir una partitura real de principio a fin, a tocar la melodía apoyando y a dejar que el bajo la acompañe."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-sor-op60-1.json",
-       "titulo": "Sor, op. 60 n.º 1: la obra entera",
+       "fuente": "notacion/obra-petzold-minueto.json",
+       "titulo": "Bach (Petzold), Minueto en Sol: la obra entera",
        "principal": "ambas",
        "motivo": "Es una obra para leer: partitura y tablatura juntas.",
        "bpms": [
         60,
-        112
+        104
        ],
        "notas": [
-        "Tiene dos partes de ocho compases, y cada una se repite. Los dedos de las dos manos son los que enseña Ross en el vídeo.",
-        "Fíjate en el {c:8} y el {c:16}: los dos acaban en un acorde y un silencio. Ahí termina cada parte.",
-        "El tempo de ♩=112 sale de grabaciones reales, que van más o menos de 100 a 125. Es la meta, no el principio."
+        "Tiene dos partes de dieciséis compases, y cada una se repite: lo marcan las barras con dos puntos del {c:16} y el {c:32}.",
+        "Los números de colores encima de la tablatura son los dedos de la mano izquierda, los del tutorial de Sky Guitar. El vídeo no marca la mano derecha: el pulgar toca los bajos, y i y m se turnan en la melodía.",
+        "El tempo de ♩=104 sale de grabaciones reales (entre 90 y 125). Es la meta, no el principio."
        ]
       },
       {
        "tipo": "video",
        "alLado": true,
-       "id": "LN7xxd_SDq4",
-       "titulo": "Ross the Music Teacher: la lección, línea a línea",
-       "nota": "Está en inglés: se abre con los subtítulos puestos. Ross enseña primero la mano izquierda y luego la derecha de cada línea, con los dedos escritos en la partitura.",
+       "id": "BSsjSPnEZR8",
+       "titulo": "Sky Guitar: el minueto a tempo y despacio",
+       "nota": "Primero la toca a tempo y después despacio, con la partitura y la tablatura señalando cada nota y la mano izquierda en primer plano. No habla.",
        "capitulos": [
         [
-         41,
-         "Oírla entera"
+         0,
+         "A tempo"
         ],
         [
-         122,
-         "Línea 1: izquierda"
+         120,
+         "Despacio: primera parte"
         ],
         [
-         231,
-         "Línea 1: derecha"
-        ],
-        [
-         281,
-         "Línea 2: izquierda"
-        ],
-        [
-         346,
-         "Línea 2: derecha"
-        ],
-        [
-         380,
-         "Línea 3: izquierda"
-        ],
-        [
-         456,
-         "Línea 3: derecha"
-        ],
-        [
-         501,
-         "Línea 4: izquierda"
-        ],
-        [
-         552,
-         "Línea 4: derecha"
-        ],
-        [
-         580,
-         "Cómo está construida"
+         255,
+         "Despacio: segunda parte"
         ]
        ]
+      },
+      {
+       "tipo": "video",
+       "id": "8GK--RtiH54",
+       "titulo": "GuitarTutos: la primera parte explicada en español",
+       "nota": "Gilberto explica dónde va cada dedo de las dos manos en los dieciséis primeros compases, con la misma digitación de la izquierda.",
+       "capitulos": [
+        [
+         49,
+         "Consejos de postura"
+        ],
+        [
+         144,
+         "Compases 1-4"
+        ],
+        [
+         315,
+         "Compases 5-8"
+        ],
+        [
+         573,
+         "Compases 9-12"
+        ],
+        [
+         689,
+         "Compases 13-16"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Cómo se lee: dos voces a la vez",
+       "md": "Las notas con la plica hacia arriba son la **melodía**; las de la plica hacia abajo, el **bajo**. Cuando una nota del bajo coincide con una de la melodía, se tocan **juntas**: el pulgar y el dedo de arriba a la vez, como un pellizco. En el {c:1}, por ejemplo, el Re de arriba y el Sol grave suenan juntos, y luego la melodía sigue sola mientras el Sol se queda sonando."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "G",
+        "inicio": "Los dos primeros compases, despacio.",
+        "notas": [
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 4,
+          "con": [
+           {
+            "c": 6,
+            "t": 3,
+            "dedo": 3
+           }
+          ],
+          "texto": "Re (dedo 4) y Sol grave (dedo 3), juntos"
+         },
+         {
+          "c": 3,
+          "t": 0
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "con": [
+           {
+            "c": 5,
+            "t": 0
+           }
+          ],
+          "texto": "Si y La grave, juntos"
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 4,
+          "con": [
+           {
+            "c": 5,
+            "t": 2,
+            "dedo": 2
+           }
+          ],
+          "texto": "Re (dedo 4) y Si grave (dedo 2): el bajo dura todo el compás"
+         },
+         {
+          "c": 3,
+          "t": 0
+         },
+         {
+          "c": 3,
+          "t": 0
+         }
+        ],
+        "final": "Fíjate: el dedo 4 del Re vuelve al mismo sitio. Déjalo cerca del traste mientras tanto."
+       }
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "El adorno del {c:3}",
+       "md": "En el {c:3}, el {c:5}, el {c:11} y el {c:13} hay un **mordente** escrito: Do-Si-Do muy rápido. Se hace con un solo ataque de la mano derecha y la izquierda haciendo el resto con **ligados**: pisas Do, tiras del dedo para que suene Si y lo vuelves a poner. Al principio tócalo como tres notas lentas; la velocidad llega sola."
       },
       {
        "tipo": "pasos",
        "titulo": "Mira la partitura sin tocar",
        "items": [
-        "¿Qué compás tiene? Mira los dos números del principio y cuenta un compás en voz alta.",
-        "¿Hay signos de repetición? Son dos puntos junto a una barra.",
-        "Pasa la vista por las notas y di el nombre de las que reconozcas.",
-        "Marca con lápiz las que no conozcas y búscalas en la tabla."
+        "¿Qué compás tiene? Mira los dos números del principio y cuenta un compás en voz alta: un-dos-tres.",
+        "Busca las barras con dos puntos: ahí se repite.",
+        "Pasa la vista por la melodía y di el nombre de las notas que reconozcas.",
+        "Las que aún no conoces, tócalas por tablatura: no hace falta saberlas todas para empezar."
        ]
-      },
-      {
-       "tipo": "concepto",
-       "titulo": "Cómo se toca: una voz que parece sola",
-       "md": "Aunque se escribe nota a nota, aquí hay un **bajo** y una **melodía**. No levantes los dedos de la izquierda hasta que tengas que usarlos: si dejas sonar las notas, salen acordes (lo verás muy claro desde el {c:9}). Piensa en dos pulsos por compás, no en cuatro, y haz crecer cada frase de cuatro compases hacia su final."
-      },
-      {
-       "tipo": "concepto",
-       "titulo": "Por qué estos dedos de la derecha",
-       "md": "**p** toca los bajos, y **i** y **m** se alternan arriba: nunca el mismo dedo dos veces seguidas. **a** aparece donde hay un salto de cuerda ({c:4}, {c:10} y {c:11}), porque así la mano no tiene que moverse. Otros profesores lo digitan distinto (en el {c:1}, por ejemplo, a-m-i) y también vale, siempre que alternes."
-      },
-      {
-       "tipo": "texto",
-       "md": "Fuente: Mutopia Project, CC BY-SA 2.5, según el facsímil de la obra."
       }
      ]
     },
@@ -990,15 +1061,15 @@
      "bloques": [
       {
        "tipo": "ejercicio",
-       "que": "Tocar la lección leyendo, con la melodía apoyando.",
+       "que": "Tocar el minueto leyendo, con la melodía apoyando y el bajo con el pulgar.",
        "porque": "Reúne lo de este tramo: leer notas, contar las figuras y cuidar el sonido.",
-       "atencion": "Mira la partitura, no la mano. Si la mano lo necesita, mírala solo en los cambios de cuerda.",
-       "empieza": "Muy lento, ♩ = 50 o menos, y en trozos de dos compases.",
-       "sube": "Te sale un trozo tres veces seguidas: une el siguiente. Súbelo al final, y solo con la obra entera."
+       "atencion": "Mira la partitura, no la mano. Las notas del bajo que duran mucho (las blancas) se dejan sonar: no levantes ese dedo.",
+       "empieza": "Muy lento, ♩ = 50 o menos, y de cuatro en cuatro compases, primero solo la melodía y después con el bajo.",
+       "sube": "Te sale un trozo tres veces seguidas: une el siguiente. Cuando tengas una parte entera, sube de 6 en 6 hasta ♩ = 104."
       },
       {
        "tipo": "metronomo",
-       "clave": "o1-sor-op-60-n-1",
+       "clave": "o1-bach-petzold-minueto-en-sol",
        "bpm": 50
       },
       {
@@ -1011,15 +1082,20 @@
         {
          "error": "Memorizas y dejas de mirar.",
          "arreglo": "Es natural. Cuando te pase, tapa una parte o empieza desde otro compás para seguir leyendo."
+        },
+        {
+         "error": "El bajo se corta antes de tiempo.",
+         "arreglo": "Mantén pisado el dedo del bajo hasta que llegue el siguiente. Mira el {c:2}: el Si grave dura los tres tiempos."
         }
        ]
       },
       {
        "tipo": "bien",
        "items": [
-        "La tocas entera sin parar, mirando la partitura.",
+        "Lo tocas entero sin parar, mirando la partitura.",
         "Sabes qué nota estás tocando en cada momento.",
-        "Las notas largas duran lo que dicen y el sonido es igual en i y en m."
+        "Los bajos duran lo que dicen y la melodía suena por encima.",
+        "Se nota el un-dos-tres del minueto, sin golpes."
        ]
       },
       {
@@ -1175,7 +1251,7 @@
        "items": [
         {
          "paso": "n1.t13.l4.p3",
-         "texto": "usarás el color en una repetición de Sor."
+         "texto": "usarás el color en una repetición."
         }
        ]
       }

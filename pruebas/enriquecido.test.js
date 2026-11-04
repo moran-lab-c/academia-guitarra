@@ -49,10 +49,11 @@ test('lo que se puede oír tiene audio y la tablatura enseña a tocar', () => {
     const j = notaciones.get(b.fuente);
     for (const m of j.compases) for (const n of m.voces.flat()) {
       if (n.acorde) { assert.ok(b.fuente.includes('obra-') || n.rotulo || m.voces.flat().some(x => x.rotulo), `${b.fuente}: acorde sin nombre`); continue; }
-      if (n.t > 0) assert.ok(n.dedo, `${b.fuente}: nota en el traste ${n.t} sin dedo`);
+      if (n.t > 0 && !j.dedosParciales) assert.ok(n.dedo, `${b.fuente}: nota en el traste ${n.t} sin dedo`);
     }
     // Cada nota pulsada lleva su dedo de la derecha; la que llega por un ligado no se pulsa.
-    if (!b.fuente.includes('lec-')) j.compases.forEach(m => m.voces.forEach(v => v.forEach((n, i) => { if (!n.s && !v[i - 1]?.lig) assert.ok(n.mano, `${b.fuente}: nota sin mano derecha`); })));
+    // Salvo en una obra cuyo tutorial no marca la mano derecha: ahí no se inventa.
+    if (!b.fuente.includes('lec-') && !j.sinManoDerecha) j.compases.forEach(m => m.voces.forEach(v => v.forEach((n, i) => { if (!n.s && !v[i - 1]?.lig) assert.ok(n.mano, `${b.fuente}: nota sin mano derecha`); })));
   }
 });
 

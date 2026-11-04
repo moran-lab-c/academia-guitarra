@@ -38,6 +38,17 @@
 .paso-entra > :nth-child(3) { animation-delay: .12s; }
 .paso-entra > :nth-child(4) { animation-delay: .18s; }
 .paso-entra > :nth-child(n+5) { animation-delay: .24s; }
+/* Dentro, cada bloque entra a su turno, y lo importante (las negritas) se subraya con un trazo que se dibuja. */
+.paso-entra .bloques > * { animation: tc-aparecer .45s var(--curva) backwards; }
+.paso-entra .bloques > :nth-child(1) { animation-delay: .2s; }
+.paso-entra .bloques > :nth-child(2) { animation-delay: .32s; }
+.paso-entra .bloques > :nth-child(3) { animation-delay: .44s; }
+.paso-entra .bloques > :nth-child(4) { animation-delay: .56s; }
+.paso-entra .bloques > :nth-child(n+5) { animation-delay: .68s; }
+.paso-cuerpo .bloques :is(p, li, dd, td) > strong { background: linear-gradient(var(--subrayado), var(--subrayado)) left bottom / 100% 2px no-repeat; --subrayado: color-mix(in srgb, var(--verde) 55%, transparent); }
+.paso-entra .bloques :is(p, li, dd, td) > strong { animation: subrayar .7s var(--curva-trazo) .9s backwards; }
+@keyframes subrayar { from { background-size: 0 2px; } }
+.parte-titulo.tc--anima .tc-l { animation-duration: 560ms; }
 .paso-texto { font-size: 18px; line-height: 1.55; max-width: 66ch; margin: 0; }
 .guia { background: var(--sup-1); border-left: 3px solid var(--ocre); border-radius: var(--r-2); padding: 14px 18px; }
 .guia__tipo { color: var(--ocre); margin-bottom: 6px; }

@@ -66,7 +66,7 @@ function notacion(b, pasoId, raiz) {
   });
   const cuerpo = () => [
     selectorFormato(item, formatoPara(item, c, {}), item.id),
-    b.leyenda !== false && h('p', { class: 'pequeno suave bloque-leyenda' }, b.detalle ? `${b.detalle} · ` : '', 'Sobre la tablatura, el dedo de la mano izquierda, en su color. Debajo, p, i, m o a: la mano derecha.'),
+    b.leyenda !== false && h('p', { class: 'pequeno suave bloque-leyenda' }, b.detalle ? `${b.detalle} · ` : '', 'Sobre la tablatura, el dedo de la mano izquierda, en su color. Debajo, cuando la fuente la da, la mano derecha: p, i, m o a.'),
     h('div', { class: 'fila' }, botones),
     b.notas?.length && h('ul', { class: 'bloque-notas' }, b.notas.map(x => h('li', null, md(x, raiz)))),
   ];

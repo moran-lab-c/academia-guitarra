@@ -338,8 +338,8 @@
     {
      "id": "n1.t2",
      "numero": 2,
-     "titulo": "Sor, op. 60 n.º 1",
-     "trabaja": "Apoyando y tirando; las notas de la 1.ª y 2.ª cuerda; figuras; Sor; color; pulso",
+     "titulo": "Bach, *Minueto en Sol*",
+     "trabaja": "Apoyando y tirando; las notas de la 1.ª y 2.ª cuerda; figuras; el minueto; color; pulso",
      "lecciones": [
       {
        "id": "n1.t2.l1",
@@ -447,19 +447,18 @@
         {
          "id": "n1.t2.l4.p1",
          "tipo": "Contexto",
-         "texto": "Fernando Sor (Barcelona, 1778 - París, 1839) escribió sus lecciones op. 60 para aprender leyendo."
+         "texto": "El *Minueto en Sol* está en el cuaderno de Ana Magdalena Bach (1725); hoy se sabe que lo compuso Christian Petzold."
         },
         {
          "id": "n1.t2.l4.p2",
          "tipo": "Obra",
-         "texto": "**Sor, op. 60 n.º 1**, con la melodía apoyando",
+         "texto": "**Bach (Petzold), *Minueto en Sol***, con la melodía apoyando · Las notas que aún no se han visto van por tablatura.",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "porVerificar": "que no pida notas aún no vistas; si las pide, se dan por tablatura",
-         "obra": "o1-sor-op-60-n-1"
+         "obra": "o1-bach-petzold-minueto-en-sol"
         }
        ]
       },
@@ -522,8 +521,8 @@
     {
      "id": "n1.t3",
      "numero": 3,
-     "titulo": "Sor, *Andante* op. 31 n.º 1",
-     "trabaja": "Dos planos; bajos y dos voces; tono y semitono; Do mayor; puntillo; ¿sube o baja?; cuerda al aire para cambiar",
+     "titulo": "*Greensleeves*",
+     "trabaja": "Dos planos; bajos y dos voces; tono y semitono; Do mayor; puntillo; ¿sube o baja?; dejar sonar el bajo",
      "lecciones": [
       {
        "id": "n1.t3.l1",
@@ -673,19 +672,18 @@
         {
          "id": "n1.t3.l5.p1",
          "tipo": "Obra",
-         "texto": "**Sor, *Andante* op. 31 n.º 1**",
+         "texto": "***Greensleeves***",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "obra": "o1-sor-andante-op-31-n-1"
+         "obra": "o1-greensleeves"
         },
         {
          "id": "n1.t3.l5.p2",
          "tipo": "Digitación",
-         "texto": "Por qué Sor usa aquí cuerdas al aire: dan tiempo a la mano izquierda para cambiar sin cortar la melodía",
-         "porVerificar": "los compases"
+         "texto": "Dejar sonar el bajo: el dedo no se levanta hasta el bajo siguiente, y los dedos que se repiten no saltan."
         },
         {
          "id": "n1.t3.l5.p3",
@@ -13281,41 +13279,40 @@
  ],
  "obras": [
   {
-   "id": "o1-sor-op-60-n-1",
+   "id": "o1-bach-petzold-minueto-en-sol",
    "nivel": 1,
-   "compositor": "Sor",
-   "titulo": "op. 60 n.º 1",
+   "compositor": "Bach (Petzold)",
+   "titulo": "Minueto en Sol",
    "tipo": "lectura",
    "tipoTexto": "Lectura",
-   "tecnica": "Primera lectura; apoyando",
-   "teoria": "Notas de la 1.ª y 2.ª cuerda; figuras",
-   "epoca": "Clasicismo",
+   "tecnica": "Primera lectura; apoyando; melodía y bajo",
+   "teoria": "Notas de la 1.ª a la 3.ª cuerda; figuras; el minueto",
+   "epoca": "Barroco",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n1.t2",
      "numero": 2,
-     "titulo": "Sor, op. 60 n.º 1"
+     "titulo": "Bach, *Minueto en Sol*"
     }
-   ],
-   "ficha": "obra:sor.op60-1"
+   ]
   },
   {
-   "id": "o1-sor-andante-op-31-n-1",
+   "id": "o1-greensleeves",
    "nivel": 1,
-   "compositor": "Sor",
-   "titulo": "Andante op. 31 n.º 1",
+   "compositor": null,
+   "titulo": "Greensleeves",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
    "tecnica": "Melodía y bajo; dos voces escritas",
-   "teoria": "Tono y semitono; la frase",
-   "epoca": "Clasicismo",
+   "teoria": "Puntillo; modo dórico; la frase",
+   "epoca": "Renacimiento",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n1.t3",
      "numero": 3,
-     "titulo": "Sor, *Andante* op. 31 n.º 1"
+     "titulo": "*Greensleeves*"
     }
    ]
   },

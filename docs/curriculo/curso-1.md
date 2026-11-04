@@ -68,8 +68,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 ## Repertorio del nivel
 | Obra | Papel | Tramo |
 |---|---|---|
-| Sor, op. 60 n.º 1 | Lectura | 2 |
-| Sor, *Andante* op. 31 n.º 1 | Aplicación: melodía y bajo | 3 |
+| Bach (Petzold), *Minueto en Sol* | Lectura | 2 |
+| *Greensleeves* | Aplicación: melodía y bajo | 3 |
 | Tárrega, *Lágrima* | Troncal: por partes y de memoria | 5, 7, 8 |
 | Giuliani, op. 1, parte 4, n.º 3 | Aplicación: el arpegio en una pieza | 6 |
 | Su *Estudio en Mi menor* | Conocida: análisis, armónicos y memoria | 1, 6 |
@@ -85,8 +85,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | Tramo | Música | Qué se trabaja |
 |---|---|---|
 | 1 | Antes de empezar | Postura, uñas, afinar; lo que ya sabe; el primer pentagrama; cómo estudiar |
-| 2 | Sor, op. 60 n.º 1 | Apoyando y tirando; las notas de la 1.ª y 2.ª cuerda; figuras; Sor; color; pulso |
-| 3 | Sor, *Andante* op. 31 n.º 1 | Dos planos; bajos y dos voces; tono y semitono; Do mayor; puntillo; ¿sube o baja?; cuerda al aire para cambiar |
+| 2 | Bach, *Minueto en Sol* | Apoyando y tirando; las notas de la 1.ª y 2.ª cuerda; figuras; el minueto; color; pulso |
+| 3 | *Greensleeves* | Dos planos; bajos y dos voces; tono y semitono; Do mayor; puntillo; ¿sube o baja?; dejar sonar el bajo |
 | 4 | Mi mayor: Mi–La–Si7–Mi | Escala y triada; funciones; el tritono; arpegio de Giuliani; dedo común; I-IV-V en Do y Sol; improvisar; calidad de la triada |
 | 5 | *Lágrima*, parte A | Dedo guía y posiciones; montar la A; la frase; cantar la melodía; diapasón |
 | 6 | Giuliani op. 1 y su *Estudio en Mi menor* | Nota destacada; inversiones; armónicos XII, VII y V; corcheas en 3/4; funciones en menor |
@@ -135,7 +135,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 1. Explicación · Lento y limpio. Por frases. Parar antes de cansarse. Lo que sale bien hoy se comprueba otro día.
 2. Esto te sirve para… · Por eso la academia trae repasos sin avisar.
 
-## Tramo 2 · Sor, op. 60 n.º 1
+## Tramo 2 · Bach, *Minueto en Sol*
 **L2.1 · Apoyando** {MD, Sonido}
 1. Cómo se hace · El dedo atraviesa la cuerda y se apoya en la vecina.
 2. Ejercicio · **E-N1-01 Notas largas apoyando** · T · ⏱.
@@ -150,8 +150,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 2. Ejercicio · **E-N1-02 Preparar y soltar** · T · ⏱.
 
 **L2.4 · La obra** {Historia, Repertorio, Lectura}
-1. Contexto · Fernando Sor (Barcelona, 1778 - París, 1839) escribió sus lecciones op. 60 para aprender leyendo.
-2. Obra · **Sor, op. 60 n.º 1**, con la melodía apoyando · 𝄞 principal y T a un toque · ⏱ · **[Por verificar]** que no pida notas aún no vistas; si las pide, se dan por tablatura.
+1. Contexto · El *Minueto en Sol* está en el cuaderno de Ana Magdalena Bach (1725); hoy se sabe que lo compuso Christian Petzold.
+2. Obra · **Bach (Petzold), *Minueto en Sol***, con la melodía apoyando · 𝄞 principal y T a un toque · ⏱ · Las notas que aún no se han visto van por tablatura.
 
 **L2.5 · Color y pulso** {Recursos, Musicalidad, Oído, Solfeo}
 1. Explicación · Tasto, normal y ponticello; p, mf, f, crescendo y diminuendo, y sus signos.
@@ -160,7 +160,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 4. Solfeo · Ecos: la app canta dos compases en Do, de la tónica a la dominante, y él los repite · ♪.
 5. Comprobación del tramo · Una nota larga con buen sonido; cuatro compases leídos; dos preguntas de notas · ✎.
 
-## Tramo 3 · Sor, *Andante* op. 31 n.º 1
+## Tramo 3 · *Greensleeves*
 **L3.1 · Dos planos** {MD, Polifonía, Musicalidad}
 1. Explicación · La melodía acompañada: lo que canta y lo que acompaña.
 2. Cómo se hace · Melodía apoyando con *m* o *a*, bajo tirando con *p*, a la vez.
@@ -182,8 +182,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 3. Oído · ¿Sube o baja? · ✎ · ♪.
 
 **L3.5 · La obra** {Repertorio, Digitación, Análisis, Musicalidad}
-1. Obra · **Sor, *Andante* op. 31 n.º 1** · 𝄞 + T · ⏱.
-2. Digitación · Por qué Sor usa aquí cuerdas al aire: dan tiempo a la mano izquierda para cambiar sin cortar la melodía · **[Por verificar]** los compases.
+1. Obra · ***Greensleeves*** · 𝄞 + T · ⏱.
+2. Digitación · Dejar sonar el bajo: el dedo no se levanta hasta el bajo siguiente, y los dedos que se repiten no saltan.
 3. Análisis · Dónde respira la frase · 𝄞 con marcas.
 4. Comprobación del tramo · El ejercicio de los dos planos y la obra sin parar.
 

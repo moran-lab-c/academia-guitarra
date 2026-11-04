@@ -53,8 +53,8 @@ El programa de cierre (de 10 a 30 minutos) sale de ahí. Si se tocara todo lo li
 ## 3. Nivel 1
 | Obra | Fuentes | Tipo | Técnica y competencia | Teoría, lectura y música | Época · derechos |
 |---|---|---|---|---|---|
-| Sor, op. 60 n.º 1 | RCM Prep. | Lectura | Primera lectura; apoyando | Notas de la 1.ª y 2.ª cuerda; figuras | Clasicismo · DP |
-| Sor, *Andante* op. 31 n.º 1 | RCM 2 | Aplicación | Melodía y bajo; dos voces escritas | Tono y semitono; la frase | Clasicismo · DP |
+| Bach (Petzold), *Minueto en Sol* | Tutorial de Sky Guitar | Lectura | Primera lectura; apoyando; melodía y bajo | Notas de la 1.ª a la 3.ª cuerda; figuras; el minueto | Barroco · DP |
+| *Greensleeves* | Tutorial de Pablo Romero Luis | Aplicación | Melodía y bajo; dos voces escritas | Puntillo; modo dórico; la frase | Renacimiento · DP |
 | Tárrega, *Lágrima* | RCM 4 · EPM 1 | Troncal (o equivalente) | Melodía acompañada; dedo guía; media cejilla; memoria | Mi mayor y menor; homónimo; ABA | Romanticismo · DP |
 | Giuliani, op. 1, parte 4, n.º 3 | RCM 3 | Aplicación | El arpegio en una pieza | Inversiones | Clasicismo · DP |
 | Su *Estudio en Mi menor* | Suya | Conocida | Nota destacada; armónicos; memoria | Cadencias; inversiones | Suya |

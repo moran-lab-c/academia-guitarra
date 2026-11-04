@@ -82,6 +82,39 @@
      ]
     },
     {
+     "tipo": "video",
+     "alLado": true,
+     "id": "lsDPu-7kVZ8",
+     "titulo": "Pablo Romero Luis: *Lágrima*, tutorial en español",
+     "nota": "Dice cada dedo de las dos manos, las cejillas y cómo darle intención a cada frase. La partitura y la tablatura salen en pantalla.",
+     "capitulos": [
+      [
+       52,
+       "Oírla entera"
+      ],
+      [
+       168,
+       "Compases 1-4"
+      ],
+      [
+       315,
+       "Compases 5-8"
+      ],
+      [
+       523,
+       "La parte B"
+      ],
+      [
+       654,
+       "El final de la B"
+      ],
+      [
+       725,
+       "Cómo interpretarla"
+      ]
+     ]
+    },
+    {
      "tipo": "lista",
      "titulo": "Tres escuchas, con un objetivo cada una",
      "items": [
@@ -835,7 +868,7 @@
       8
      ],
      "notas": [
-      "{c:5}: cejilla en el IX y luego en el VII. {c:7}: cejilla en el II. Alier las marca: no son opcionales aquí.",
+      "{c:5}: cejilla en el IX y luego en el VII. {c:7}: cejilla en el II. Las marcan la edición de Alier y Pablo en su clase: no son opcionales aquí.",
       "El {c:8} cierra: mi, sol♯, mi y el bajo mi. Es el final de la obra, *Fin*, cuando vuelvas de la B."
      ]
     },

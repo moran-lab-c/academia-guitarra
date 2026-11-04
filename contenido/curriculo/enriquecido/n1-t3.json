@@ -272,7 +272,7 @@
      "items": [
       {
        "paso": "n1.t3.l5.p1",
-       "texto": "lo aplicas al *Andante* de Sor."
+       "texto": "lo aplicas a *Greensleeves*."
       },
       {
        "paso": "n1.t6.l1.p1",
@@ -1366,52 +1366,136 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o1-sor-andante-op-31-n-1",
-       "md": "Tu primera obra con **melodía y bajo a la vez**. Es lo que acabas de practicar, ahora escrito en dos voces."
+       "id": "o1-greensleeves",
+       "md": "Una de las melodías más conocidas de la historia: ***Greensleeves***, «mangas verdes», una canción inglesa del siglo XVI. Es tu primera obra con **melodía y bajo a la vez**, lo que acabas de practicar."
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "De dónde viene",
+       "md": "Es una canción popular inglesa del **Renacimiento**, de hacia 1580. La leyenda dice que la escribió el rey Enrique VIII, pero no es verdad: es anónima. Se ha cantado, tocado y versionado durante más de cuatro siglos, y por algo será, como dice Pablo en su clase."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-sor-op31-1.json",
-       "titulo": "Sor, op. 31 n.º 1: la obra entera",
+       "fuente": "notacion/obra-greensleeves.json",
+       "titulo": "Greensleeves: la obra entera",
        "principal": "ambas",
        "motivo": "Melodía y bajo escritos en dos voces: partitura y tablatura juntas.",
        "bpms": [
-        60,
-        112
+        78,
+        100
        ],
        "notas": [
-        "La A son los {c:1-16} y la B, los {c:17-32}; cada una se repite. El primer sol es una anacrusa, una nota que entra antes del primer compás.",
-        "En el {c:3} aparece la tensión: sol, fa, re sobre el bajo re. En el {c:11} sube un cromatismo: sol, fa♯, fa."
+        "Es la versión de Pablo Romero Luis, con sus dos tempos de estudio: ♩=78 para aprender y ♩=100 para tocarla.",
+        "El La del principio es una **anacrusa**: una nota que entra antes del primer compás, como el «y» antes de empezar a cantar.",
+        "Los números de colores son los dedos que Pablo dice en su clase. Los que no dice, en primera posición: cada dedo en su traste (el 1 en el traste 1, el 2 en el 2…)."
        ]
       },
       {
-       "tipo": "tabla",
-       "cabecera": [
-        "Qué mirar",
-        "Qué te dice"
-       ],
-       "filas": [
+       "tipo": "video",
+       "alLado": true,
+       "id": "53fzP5fXBY8",
+       "titulo": "Pablo Romero Luis: Greensleeves, tutorial en español",
+       "nota": "Explica nota a nota con qué dedo va cada una, por qué el dedo 4 en el Re y qué es lo más difícil: dejar sonar los bajos.",
+       "capitulos": [
         [
-         "Los dos números del principio",
-         "El compás: cuéntalo en voz alta"
+         0,
+         "El dicho «mangas verdes»"
         ],
         [
-         "Las plicas",
-         "Hacia arriba, melodía; hacia abajo, bajo"
+         134,
+         "La clase: primera parte"
         ],
         [
-         "Los bajos",
-         "Con líneas adicionales: La, Si y Do de la 5.ª, y Mi, Fa y Sol de la 6.ª"
+         224,
+         "Segunda parte"
         ],
         [
-         "Los números pequeños junto a las notas, si los hay",
-         "El dedo de la mano izquierda"
+         263,
+         "Con el acorde de Sol"
+        ],
+        [
+         310,
+         "Lo más difícil"
         ]
        ]
       },
       {
-       "tipo": "texto",
-       "md": "Fuente: edición de F. Sor, op. 31, *Leçon I*, de dominio público (IMSLP). Los dedos son los de la edición; los que faltan y la mano derecha, propuesta de la academia."
+       "tipo": "video",
+       "id": "NO6OGmZ8yvA",
+       "titulo": "Pablo Romero Luis: guía de estudio con partitura y tablatura",
+       "nota": "La obra entera con la partitura y la tablatura, primero a ♩=100 y después más lenta, a ♩=78: tócala encima.",
+       "capitulos": [
+        [
+         0,
+         "A ♩=100"
+        ],
+        [
+         70,
+         "Más lenta, ♩=78"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Por qué suena antigua",
+       "md": "Pablo la toca en **modo dórico**: con Fa♯ en lugar de Fa. Por eso la armadura lleva un sostenido aunque la obra esté en La. Otros la tocan con Fa natural; los dos se oyen en grabaciones. Cuando aprendas los modos, entenderás por qué el Fa♯ le da ese aire antiguo."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "G",
+        "inicio": "Los dos primeros compases, despacio, con los dedos de Pablo.",
+        "notas": [
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "texto": "La, con el dedo 2: la anacrusa"
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "con": [
+           {
+            "c": 5,
+            "t": 0
+           }
+          ],
+          "texto": "Do y La grave, juntos. El La grave sigue sonando"
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 4,
+          "texto": "Re con el dedo 4: así no tienes que saltar al volver al Do"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "con": [
+           {
+            "c": 5,
+            "t": 3
+           }
+          ],
+          "texto": "Mi y Do grave, juntos"
+         },
+         {
+          "c": 1,
+          "t": 2
+         },
+         {
+          "c": 1,
+          "t": 0
+         }
+        ],
+        "final": "Fíjate en el Re con el 4: el dedo 1 se queda en el Do mientras tanto."
+       }
       }
      ]
     },
@@ -1433,13 +1517,13 @@
        "que": "Montar la obra por capas.",
        "porque": "Cada capa es más sencilla que el conjunto. Así no aprendes los errores que aparecen cuando intentas hacer todo a la vez.",
        "atencion": "La melodía delante y el bajo como una sombra.",
-       "empieza": "Con el tempo al que no tengas que parar, como ♩ = 50.",
-       "sube": "El trozo sale tres veces seguidas."
+       "empieza": "Con el tempo al que no tengas que parar: ♩ = 60, y después el lento de Pablo, ♩ = 78.",
+       "sube": "El trozo sale tres veces seguidas; al final, ♩ = 100."
       },
       {
        "tipo": "metronomo",
-       "clave": "o1-sor-andante-op-31-n-1",
-       "bpm": 50
+       "clave": "o1-greensleeves",
+       "bpm": 60
       },
       {
        "tipo": "bien",
@@ -1470,59 +1554,95 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "Hay una idea de digitación que verás en muchas obras: **usar una cuerda al aire para ganar tiempo**. Mientras la cuerda suena sola, la mano izquierda queda libre y puede ir al sitio siguiente sin cortar nada."
+     "md": "Pablo lo dice claro en su clase: lo más difícil de esta obra es que **los bajos se queden sonando**. El bajo es una blanca con puntillo: dura los tres tiempos del compás. Si levantas el dedo antes, se corta, y la melodía se queda sola, sin suelo."
     },
     {
      "tipo": "concepto",
-     "titulo": "Por qué funciona",
-     "md": "Una nota pisada se corta si levantas el dedo. Una cuerda al aire sigue sonando aunque la mano se mueva. Por eso, lo más inteligente es hacer los cambios justo cuando suena una cuerda al aire."
+     "titulo": "La regla",
+     "md": "Un dedo que pisa un bajo **no se levanta** hasta que llega el bajo siguiente. Si el bajo es una cuerda al aire (La, Mi), no hay dedo que vigilar, pero tampoco puedes tocar esa cuerda con la mano sin querer, porque la apagarías."
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "G",
+      "inicio": "El {c:3}: el Do grave aguanta todo el compás.",
+      "notas": [
+       {
+        "c": 1,
+        "t": 0,
+        "con": [
+         {
+          "c": 5,
+          "t": 3
+         }
+        ],
+        "texto": "Mi arriba y Do grave: el dedo del Do se queda puesto"
+       },
+       {
+        "c": 1,
+        "t": 2,
+        "texto": "Fa♯ (el Do grave sigue sonando)"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "texto": "Mi (el Do grave aún suena)"
+       },
+       {
+        "c": 2,
+        "t": 3,
+        "dedo": 4,
+        "con": [
+         {
+          "c": 6,
+          "t": 3,
+          "dedo": 3
+         }
+        ],
+        "texto": "Re y Sol grave: ahora sí cambia el bajo, dedos 4 y 3"
+       }
+      ],
+      "final": "Mientras dura el bajo, su dedo no se mueve."
+     }
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "El otro sitio difícil",
+     "md": "Sol♯, Fa♯, Sol♯, La, en el {c:15} y el {c:31}. Pablo propone el **dedo 1 en el Sol♯ y el 4 en el Fa♯**: son los dos dedos más cerca para esa postura, sin estirar. Practícalo despacio, solo esas cuatro notas, hasta que no tengas que mirar."
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/tec-al-aire-cambio.json",
-     "titulo": "Ejemplo escrito para la academia: no es de Sor",
-     "principal": "tablatura",
-     "motivo": "Es una digitación: tablatura.",
+     "fuente": "notacion/obra-greensleeves.json",
+     "titulo": "Los compases difíciles",
+     "principal": "ambas",
+     "motivo": "Para practicar solo ese trozo.",
      "bpms": [
       50,
-      66
+      78
      ],
-     "notas": [
-      "En el {c:1}, mientras suena el Mi al aire, el dedo 3 tiene tiempo de pasar de la 5.ª a la 6.ª cuerda.",
-      "Compruébalo: el bajo cambia en el {c:2}, y la melodía no se ha cortado."
+     "compases": [
+      14,
+      16
      ]
     },
     {
      "tipo": "bien",
      "items": [
-      "La melodía no se corta cuando la mano cambia de sitio.",
-      "Sabes decir qué cuerda al aire te da tiempo para el cambio."
+      "El bajo dura los tres tiempos: lo oyes hasta el siguiente.",
+      "Sol♯-Fa♯-Sol♯ sale sin estirar, con el 1 y el 4."
      ]
-    },
-    {
-     "tipo": "notacion",
-     "fuente": "notacion/obra-sor-op31-1.json",
-     "titulo": "Los primeros compases de la obra",
-     "principal": "ambas",
-     "motivo": "Para buscar la idea en la partitura.",
-     "bpms": [
-      60
-     ],
-     "compases": [
-      0,
-      8
-     ]
-    },
-    {
-     "tipo": "texto",
-     "md": "Búscalo en la obra: en el {c:1}, el bajo do queda sonando mientras la melodía pasa de mi a do. Mira en la partitura qué cuerdas al aire aparecen justo antes de que cambie el bajo."
     },
     {
      "tipo": "reaparece",
      "items": [
       {
        "paso": "n1.t4.l4.p1",
-       "texto": "cuando no hay cuerda al aire: el dedo común."
+       "texto": "el dedo común al cambiar de acorde."
       },
       {
        "paso": "n1.t5.l2.p1",
@@ -1650,19 +1770,19 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-sor-op31-1.json",
+     "fuente": "notacion/obra-greensleeves.json",
      "titulo": "Busca las respiraciones aquí",
      "principal": "ambas",
      "motivo": "Para marcar las frases.",
      "bpms": [
-      60
+      78
      ],
      "compases": [
-      0,
-      8
+      1,
+      9
      ],
      "notas": [
-      "Escúchalo: la frase llega al {c:4} y se abre otra. Otra pausa llega en el {c:8}."
+      "Canta la melodía: la primera frase llega al {c:5} y la segunda termina en el {c:9}, donde la música descansa en Mi."
      ]
     },
     {
@@ -1708,7 +1828,7 @@
      "tipo": "lista",
      "titulo": "2. La obra",
      "items": [
-      "El *Andante* de Sor entero, sin parar."
+      "*Greensleeves* entera, sin parar, a ♩ = 78 por lo menos."
      ]
     },
     {
