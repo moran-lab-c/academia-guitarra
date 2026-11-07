@@ -101,7 +101,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 **L1.4 · La obra** {Repertorio, Digitación, Historia, Estudio, Solfeo}
 1. Contexto · Uno de los estudios de Sor que Segovia eligió para su selección de veinte **[Consenso]**.
 2. Obra · **Sor, op. 35 n.º 22** · 𝄞 + T · ⏱.
-3. Digitación · Por qué la melodía se queda en la misma cuerda aunque obligue a cambiar de posición: el mismo color de principio a fin de la frase **[Por verificar]** en la edición.
+3. Digitación · Las posturas de Pablo Romero Luis: la cejilla en el II, el Si en la 3.ª cuerda y el dedo 3 que se queda de un compás a otro, el «dedo ancla».
 4. Consejo del profesor · Estudiar sin la guitarra: leer la partitura y cantar la melodía antes de tocarla.
 
 **L1.5 · La frase que pregunta y responde** {Teoría, Análisis, Musicalidad}
@@ -133,7 +133,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 
 **L2.4 · Cómo está hecha** {Teoría, Análisis, Digitación}
 1. Análisis · Mi menor y Mi mayor: el homónimo, como en *Lágrima* y el *Romance*. Forma ternaria: A-B-A.
-2. Digitación · Los portamentos que pide Tárrega: con qué dedo se sale y con cuál se llega, y por qué el deslizamiento es parte de la música **[Por verificar]** en la edición.
+2. Digitación · Los portamentos de la obra (c. 7-8, 11 y 14): con qué dedo se sale y con cuál se llega, y por qué el deslizamiento es parte de la música.
 
 **L2.5 · Rubato y textura** {Musicalidad, Oído, Interpretación}
 1. Explicación · El rubato de la mazurca: estirar y devolver sin perder el pulso.

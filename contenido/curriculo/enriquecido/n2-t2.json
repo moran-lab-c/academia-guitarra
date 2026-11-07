@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t2",
- "nota": "Curso 2. El Romance es de autor discutido y aquí sale de Mutopia. La digitación y las cejillas son propuesta; la mano derecha a-m-i y los tresillos, de la tradición de la obra.",
+ "nota": "Curso 2. El Romance es de autor discutido y aquí sale de Mutopia. La digitación y las cejillas son propuesta; la mano derecha a-m-i y los tresillos, de la tradición de la obra. Romance: versión y dedos de Pablo Romero Luis (05-06/11/2026), con sus vídeos.",
  "pasos": {
   "n2.t2.l1.p1": {
    "pantallas": [
@@ -285,7 +285,7 @@
      "items": [
       "Es una melodía con arpegio en tresillos, con estructura de dos partes: una en menor y otra en mayor.",
       "Es de las primeras «grandes» obras con las que se estudia la cejilla.",
-      "Las ediciones difieren en detalles: esta es la de Mutopia, según manuscrito, y puede no coincidir nota a nota con la que tengas."
+      "Las versiones difieren en detalles: esta es la de Pablo Romero Luis, que avisa de que los compases 14, 19-20 y 29-30 cambian de unas a otras. Puede no coincidir nota a nota con la que tengas."
      ]
     },
     {
@@ -386,17 +386,68 @@
        "motivo": "Para tocar: la tablatura enseña la cuerda y el dedo.",
        "bpms": [
         48,
-        66
+        84
        ],
        "notas": [
         "Los {c:1-2} son una misma idea: Si, Si, Si, Si, La, Sol.",
         "Fíjate en el {c:4}: tras bajar hasta Mi, la melodía sube Mi-Sol-Si: un salto de más de una octava entre el {c:4} y el {c:5}.",
         "Del {c:5} al {c:6} la melodía está en el traste 12: la mano sube sin dejar de tocar el arpegio.",
-        "El {c:7} es tu primera cejilla: el V. Va en la lección siguiente."
+        "El {c:7} es tu primera cejilla: el V. Va en la lección siguiente.",
+        "Los dedos de colores son los que dice Pablo en su clase; los demás no los dice y no se ponen. Las cejillas, como en su partitura.",
+        "Pablo Romero Luis lo toca a ♩ ≈ 84 en su demostración, y la primera parte de su guía, a ♩ ≈ 52. Para aprender, ♩ = 48."
        ],
        "compases": [
         1,
         8
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "_ppJ8QQfxMg",
+       "titulo": "Pablo Romero Luis: *Romance*, primera parte, tutorial en español",
+       "nota": "El a-m-i con el pulgar, la melodía sola y después con el arpegio, y las dos cejillas: la media del V y la entera del VII, la que en broma llama «la parte favorita de todos los guitarristas».",
+       "capitulos": [
+        [
+         50,
+         "Cómo suena"
+        ],
+        [
+         90,
+         "La técnica: a-m-i y pulgar"
+        ],
+        [
+         152,
+         "La melodía, compás a compás"
+        ],
+        [
+         301,
+         "Media cejilla en el V"
+        ],
+        [
+         334,
+         "Cejilla en el VII"
+        ],
+        [
+         470,
+         "El final"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "Iu5MuEcYsTo",
+       "titulo": "Pablo Romero Luis: guía de estudio del *Romance*",
+       "nota": "La obra entera con la partitura y la tablatura en pantalla, para tocar encima.",
+       "capitulos": [
+        [
+         9,
+         "Primera parte"
+        ],
+        [
+         66,
+         "Segunda parte"
+        ]
        ]
       }
      ]
@@ -453,7 +504,7 @@
        "motivo": "Sigue con la tablatura.",
        "bpms": [
         48,
-        66
+        84
        ],
        "notas": [
         "El {c:9-10} es Si7 con cejilla en el VII: Si en la 6.ª cuerda, melodía en la 1.ª. Es un salto grande de mano.",
@@ -1081,7 +1132,7 @@
       60
      ],
      "notas": [
-      "La primera, {c:7}: cejilla en el V, sobre La menor.",
+      "La primera, {c:7}: media cejilla en el V, sobre La menor.",
       "La segunda, {c:9}: cejilla en el VII, sobre Si7, con el bajo en la 6.ª.",
       "Antes de cada una tienes una nota al aire o un cambio más simple: ese es el momento de mover el brazo."
      ],
@@ -1102,8 +1153,8 @@
     },
     {
      "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Son las cejillas de la digitación que aquí se propone, y las que usa la mayoría de versiones. Tu edición puede indicar el traste o la extensión de otra manera."
+     "tipoGuia": "Consejo del profesor",
+     "md": "Son las cejillas que dice Pablo Romero Luis en su primera clase: «media cejilla cinco» y «cejilla siete, cejilla entera». Y avisa: «bienvenido al club de los que hemos sufrido con la cejilla siete»."
     },
     {
      "tipo": "bien",
@@ -1127,7 +1178,7 @@
      "motivo": "Partitura y tablatura: ya puedes leer parte de ella.",
      "bpms": [
       48,
-      66
+      84
      ],
      "compases": [
       1,

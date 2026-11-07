@@ -1,6 +1,6 @@
 {
  "tramo": "n3.t3",
- "nota": "Curso 3. Bach, Bourrée BWV 996: MIDI de una edición en IMSLP, sin cambiar notas, en Mi menor. Dedos: propuesta.",
+ "nota": "Curso 3. Bach, Bourrée BWV 996: MIDI de una edición en IMSLP, sin cambiar notas, en Mi menor. Dedos y cuerdas de la clase de Alex Salas, que sigue la transcripción de Jerry Snyder (07/11/2026); tempo de su versión, ♩ ≈ 92.",
  "pasos": {
   "n3.t3.l1.p1": {
    "bloques": [
@@ -248,11 +248,6 @@
        "¿Hace falta cambiar de cuerda?"
       ]
      ]
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Los dedos de esta obra son calculados por la academia para no cortar voces; hay que probarlos con la mano y, si no van, buscar otros."
     }
    ]
   },
@@ -911,13 +906,13 @@
        "motivo": "Partitura principal: las duraciones importan.",
        "bpms": [
         50,
-        72
+        92
        ],
        "notas": [
         "{c:0} anacrusa: empieza antes del compás.",
         "{c:1-4} dos ideas: el bajo baja, arriba responde.",
         "{c:5-8} lleva a Sol.",
-        "Fuente: IMSLP, edición con MIDI de la Suite. Sin cambiar notas; dedos, propuesta."
+        "Los dedos y las cuerdas son los de Alex Salas, que toca con la digitación de la transcripción de Jerry Snyder. En el {c:2}, el Mi en la 2.ª (traste 5) y el Re con el mismo 4, deslizando: así el bajo sigue sonando."
        ],
        "compases": [
         0,
@@ -937,11 +932,13 @@
        "motivo": "Sigue en partitura.",
        "bpms": [
         50,
-        72
+        92
        ],
        "notas": [
         "{c:9-16} una zona de modulaciones: Do, La m, Si.",
-        "{c:17-23} vuelve a Mi menor."
+        "{c:17-23} vuelve a Mi menor.",
+        "Cejillas, como las dice Alex: al final del {c:16}, **cejilla entera en el VII** con el 1 (el Si grave y el Fa♯ de la 2.ª); en la segunda mitad del {c:18}, en el III; en el {c:22}, en el II.",
+        "{c:14-15}: el 3 sube y baja por la 2.ª y la 3.ª cuerda; Alex: «nos recorremos». En el {c:21}, el Mi con el 3 (la partitura pone 2: lo cambia él, más cómodo) y el mismo 3 resbala al Fa♯."
        ],
        "compases": [
         8,
@@ -961,7 +958,32 @@
        "motivo": "Partitura y tablatura.",
        "bpms": [
         50,
-        100
+        92
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "B4YLVFMDl-I",
+       "titulo": "Alex Salas: la *Bourrée* de Bach, clase en español",
+       "nota": "La toca entera al principio y después la explica compás a compás, con la partitura en pantalla: notas, cuerdas, dedos y cejillas.",
+       "capitulos": [
+        [
+         0,
+         "La obra, entera"
+        ],
+        [
+         150,
+         "Primera parte"
+        ],
+        [
+         427,
+         "Segunda parte"
+        ],
+        [
+         697,
+         "La cejilla del VII"
+        ]
        ]
       },
       {
@@ -969,8 +991,8 @@
        "que": "Toda, con cada parte repetida.",
        "porque": "Es la obra troncal.",
        "atencion": "Corcheas iguales, dos pulsos de blanca.",
-       "empieza": "Blanca = 50.",
-       "sube": "Blanca = 72."
+       "empieza": "♩ = 50.",
+       "sube": "♩ ≈ 92, el tempo de Alex Salas (blanca ≈ 46)."
       },
       {
        "tipo": "metronomo",
@@ -1072,7 +1094,7 @@
      "principal": "ambas",
      "bpms": [
       50,
-      100
+      92
      ]
     },
     {

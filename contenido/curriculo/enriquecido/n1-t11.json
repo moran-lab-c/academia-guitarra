@@ -1,6 +1,6 @@
 {
  "tramo": "n1.t11",
- "nota": "Primera aparición de ostinato, rasgueado y acompañar. Brouwer tiene derechos: no se transcribe, hace falta su edición. La canción es Estrellita (Ah! vous dirai-je, maman), popular y de dominio público.",
+ "nota": "Primera aparición de ostinato, rasgueado y acompañar. Brouwer tiene derechos: no se transcribe, hace falta su edición. La fórmula de la derecha, comprobada en el tutorial de Alex Salas; vídeos en lugar de partitura (05/11/2026). La canción es Estrellita (Ah! vous dirai-je, maman), popular y de dominio público.",
  "pasos": {
   "n1.t11.l1.p1": {
    "bloques": [
@@ -161,15 +161,98 @@
        "md": "Esta obra tiene derechos de autor y no se puede reproducir aquí. Necesitas la edición publicada: consíguela o pídela a tu profesor. Por eso, la academia no incluye sus notas ni su tablatura."
       },
       {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "Qué fórmula de mano derecha trabaja exactamente este estudio está por comprobar con la edición. Compruébalo tú en los primeros compases."
+       "tipo": "concepto",
+       "titulo": "La fórmula",
+       "md": "Es un **arpegio que baja**: el pulgar toca el bajo y *a*, *m* e *i* bajan de la 1.ª a la 3.ª cuerda, en semicorcheas y en 3/4. Lo difícil, como avisa Alex Salas en su tutorial, es que el grupo de cuatro **no siempre empieza por el pulgar**: a veces empieza por la *a*, y los dedos se atascan. Practícalo con metrónomo, muy lento."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "La fórmula, en cuerdas al aire",
+        "trastes": [
+         0,
+         4
+        ],
+        "ms": 650,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: el bajo, en la 5.ª."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "a",
+          "texto": "a: la 1.ª."
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "m",
+          "texto": "m: la 2.ª."
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "i",
+          "texto": "i: la 3.ª. El arpegio baja."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "a",
+          "texto": "Otra vez desde arriba, ahora sin bajo: a…"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 4,
+          "t": 0,
+          "mano": "p",
+          "texto": "…y el pulgar cierra en la 4.ª."
+         }
+        ],
+        "final": "Así lo toca Alex Salas, muy lento, antes de poner la izquierda. No son las notas de la obra: es el movimiento de la derecha."
+       }
+      },
+      {
+       "tipo": "video",
+       "id": "TEXY8Yr6XtY",
+       "titulo": "Alex Salas: el Estudio n.º 6 de Brouwer, tutorial en español",
+       "nota": "Explica el arpegio de la derecha con metrónomo y después la obra nota a nota. Úsalo junto a tu edición.",
+       "capitulos": [
+        [
+         163,
+         "El arpegio de la derecha"
+        ],
+        [
+         514,
+         "Nota a nota"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "vintgMb-LlY",
+       "titulo": "Guitarbn: el mismo estudio, con partitura y tablatura",
+       "nota": "Más corto y en 4K: la obra tocada, con la partitura y la tablatura en pantalla."
       },
       {
        "tipo": "pasos",
        "titulo": "Antes de tocar",
        "items": [
-        "Mira qué dedos pide la mano derecha en el primer compás.",
+        "Mira en tu edición qué dedos pide la mano derecha en el primer compás: deben ser los de la animación.",
         "Busca si esa fórmula se mantiene.",
         "Pon en tu mano izquierda los acordes de cada compás, sin arpegiar.",
         "Practica la fórmula de la derecha sola, en cuerdas al aire."
@@ -186,7 +269,7 @@
        "porque": "En una pieza así no te puedes esconder: si la fórmula cojea, se oye en cada compás.",
        "atencion": "Mantén el pulso sin acelerar. Si un cambio de mano izquierda te hace perder el ritmo, ahí es donde hay que estudiar.",
        "empieza": "♩ = 50, o el que permita no parar.",
-       "sube": "Tres veces sin perder el pulso."
+       "sube": "Tres veces sin perder el pulso. En las grabaciones va entre ♩ = 97 y 120 (Pablo Romero Luis, a 120)."
       },
       {
        "tipo": "metronomo",
@@ -211,9 +294,10 @@
      "md": "En una pieza hecha con un dibujo repetido, entenderla es saber **qué cambia y qué se queda**. Si no, parece siempre lo mismo."
     },
     {
-     "tipo": "concepto",
-     "titulo": "Dónde escucharlo",
-     "md": "[Buscar el *Estudio sencillo* n.º 6 de Brouwer en YouTube](https://www.youtube.com/results?search_query=Brouwer+Estudio+Sencillo+6+guitarra)."
+     "tipo": "video",
+     "id": "a7XWCgEaf2g",
+     "titulo": "Pablo Romero Luis toca el Estudio n.º 6",
+     "nota": "Escúchalo con la tabla de abajo delante: qué se repite y qué cambia."
     },
     {
      "tipo": "tabla",

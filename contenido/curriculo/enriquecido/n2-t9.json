@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t9",
- "nota": "Curso 2. Giuliani op. 51 n.º 10 sale de Mutopia. La digitación y el arpegio de op. 1 son propuesta.",
+ "nota": "Curso 2. Carcassi op. 60 n.º 2 en lugar de Giuliani op. 51 n.º 10, poco conocido y con digitación propuesta (06/11/2026): notas de la partitura de Pablo Romero Luis, su mano derecha y los dedos que dice. El estudio de Aguado es el del Nivel 1, con la digitación de Pep Guitar.",
  "pasos": {
   "n2.t9.l1.p1": {
    "bloques": [
@@ -11,17 +11,17 @@
     },
     {
      "tipo": "texto",
-     "md": "Vuelves a tu Giuliani del Nivel 1, *op. 1*, con otra mirada: trabaja los compases donde cambia el acorde."
+     "md": "Vuelves al *Estudio en La menor* de Aguado, del Nivel 1, con otra mirada: el acorde cambia cada medio compás. Trabaja esos cambios."
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-giuliani-op1-3.json",
-     "titulo": "Giuliani, op. 1: arpegios de la colección",
+     "fuente": "notacion/obra-aguado-leccion-19.json",
+     "titulo": "Aguado, *Estudio en La menor*: el acorde que cambia",
      "principal": "ambas",
      "motivo": "Una que ya conoces.",
      "bpms": [
       50,
-      72
+      80
      ]
     },
     {
@@ -528,27 +528,125 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-giuliani-op-51-n-10",
-       "md": "**Por qué está aquí:** arpegio con cambio de acorde en 6/8. **Qué escuchar:** la línea alta sobre un arpegio en *p*. **Dificultad:** media."
+       "id": "o2-carcassi-op-60-n-2",
+       "md": "**Por qué está aquí:** es el estudio del arpegio que cambia de acorde. Pablo Romero Luis lo resume así: Carcassi quiere que practiques el arpegio de la mano derecha **con todos los dedos** y **las posturas de los acordes**. **Qué escuchar:** la armonía, que cambia cada medio compás. **Dificultad:** media: la derecha no cambia; la izquierda viaja hasta el traste 13."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-giuliani-op51-10.json",
-       "titulo": "Giuliani, op. 51 n.º 10",
+       "fuente": "notacion/obra-carcassi-op60-2.json",
+       "titulo": "Carcassi, *Estudio op. 60 n.º 2*",
        "principal": "ambas",
        "motivo": "Partitura y tablatura.",
        "bpms": [
-        60,
-        96
+        72,
+        104
        ],
        "notas": [
-        "Andantino en Do, 6/8. Mira la anacrusa: empieza con Sol antes del {c:1}.",
-        "{c:1-8} primera frase, con el bajo arpegiado.",
-        "{c:15-16} los bajos caminan. Oye Sol, La, Si, Do, Re.",
-        "{c:17-27} hacia el final: dinámica ascendente y Do final con acorde.",
-        "Fuente: Mutopia, sobre Richault, CC BY-SA 4.0. Digitación propuesta.",
-        "Por verificar: en el {c:1} y el {c:19} un bajo difiere en un semitono de otra edición cotejada."
+        "Notas y posiciones: las de la partitura de Pablo Romero Luis. La mano derecha y los dedos de la izquierda, los que dice en su clase; donde no los dice, no se ponen.",
+        "Cada medio compás es igual: el bajo, tres notas de arpegio y la de arriba cuatro veces. En la partitura el bajo es una blanca; aquí se escribe donde se toca. Déjalo sonar.",
+        "Tres partes, como explica Pablo: {c:1-8}, {c:9-16} y {c:17-24}, que vuelve al principio. La primera parte se suele repetir.",
+        "En el {c:2}, media cejilla en el V (o dedos 1, 2 y 3), y después 3, 4 y 1: «te recomiendo encarecidamente tres, cuatro y uno».",
+        "En el {c:9} cambia el sitio: el arpegio empieza en la 4.ª y la nota que se repite está en la 2.ª. El Re, con el 4: «el 99,999 % de mis alumnos quiere hacerlo con el 3».",
+        "Los {c:15-16} son de los que dan problemas: practícalos aparte. En el {c:16}, el Sol♯ en la 4.ª con el 2 y la mano derecha más abierta.",
+        "En el {c:20}, media cejilla en el X, y el 13 con el dedo 4. Truco de Pablo para el salto siguiente: el índice de la cejilla, sobre la 3.ª, sirve de referencia.",
+        "Pablo lo toca a ♩ ≈ 104 en su demostración, y en la clase, a ♩ ≈ 72. Para aprender, ♩ = 72 o menos."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "YbC0CxDG3OY",
+       "titulo": "Pablo Romero Luis: Carcassi, *Estudio n.º 2*, tutorial en español",
+       "nota": "El arpegio, y después línea a línea, con los dedos de la izquierda y los sitios que dan problemas.",
+       "capitulos": [
+        [
+         120,
+         "El arpegio de la mano derecha"
+        ],
+        [
+         189,
+         "Primera parte"
+        ],
+        [
+         603,
+         "Segunda parte"
+        ],
+        [
+         806,
+         "Tercera parte"
+        ],
+        [
+         934,
+         "Final"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "Ca3Y9Hh51LQ",
+       "titulo": "Pablo Romero Luis: el estudio, a tempo",
+       "nota": "Su versión entera, para escucharla y tocar encima."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El arpegio de todo el estudio",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 450,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: el bajo, La, en la 5.ª."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "mano": "i",
+          "texto": "i en la 3.ª…"
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "mano": "m",
+          "texto": "…m en la 2.ª…"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "a",
+          "texto": "…a en la 1.ª."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m",
+          "texto": "Y la misma nota cuatro veces: m, i, m, i."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "i"
+         }
+        ],
+        "final": "Pulgar, índice, medio, anular, medio, índice, medio, índice: Pablo lo mantiene en todo el estudio."
+       }
       }
      ]
     },
@@ -556,37 +654,38 @@
      "titulo": "Practicar",
      "bloques": [
       {
+       "tipo": "pasos",
+       "titulo": "Como lo enseña Pablo",
+       "items": [
+        "Primero la mano derecha sola, con las cuerdas al aire: p-i-m-a-m-i-m-i. Las cuatro notas repetidas, a la misma velocidad que las otras: «tiene que ser todo igual».",
+        "De la mano izquierda, pon solo lo que se usa: en el {c:1}, solo el La y el Do.",
+        "Cada línea, también en plaqué: los cuatro acordes de cada línea, tocados a la vez, para aprender las posturas.",
+        "Poco a poco: de dos en dos compases. «Cuanto más lento vayamos al principio, más rápido vamos a aprenderla»."
+       ]
+      },
+      {
        "tipo": "ejercicio",
-       "que": "Por frases: ocho compases cada vez.",
-       "porque": "Es el estudio de aplicación de este tramo.",
-       "atencion": "Anticipa los cambios de acorde. Las notas de *p* no deben ganar a la melodía.",
-       "empieza": "Corchea = 60.",
-       "sube": "Corchea = 96."
+       "que": "El estudio, de dos en dos compases.",
+       "porque": "Es el estudio de aplicación de este tramo: el arpegio no cambia, y toda la atención va a la mano izquierda.",
+       "atencion": "Anticipa el acorde siguiente durante las cuatro notas repetidas: ahí la izquierda tiene tiempo.",
+       "empieza": "♩ = 72.",
+       "sube": "♩ = 104, como Pablo."
       },
       {
        "tipo": "metronomo",
-       "bpm": 60,
-       "clave": "o2-giuliani-op-51-n-10"
+       "bpm": 72,
+       "clave": "o2-carcassi-op-60-n-2"
       },
       {
        "tipo": "errores",
        "items": [
         {
-         "error": "El bajo tapa la melodía.",
-         "arreglo": "Toca el bajo con el mínimo sonido y sube después."
+         "error": "Las cuatro notas repetidas se aceleran.",
+         "arreglo": "Pablo avisa: es lo típico. Todas son semicorcheas; cuéntalas con el metrónomo."
         },
         {
-         "error": "El 6/8 suena a 3/4.",
-         "arreglo": "Dos pulsos, cada uno de tres corcheas: marca dos con el pie."
-        }
-       ]
-      },
-      {
-       "tipo": "reaparece",
-       "items": [
-        {
-         "paso": "n1.t12.l1.p1",
-         "texto": "el 6/8."
+         "error": "La mano izquierda llega tarde al cambio.",
+         "arreglo": "Practica la línea en plaqué: los acordes seguidos, sin arpegiar."
         }
        ]
       }
@@ -602,13 +701,17 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-giuliani-op51-10.json",
+     "fuente": "notacion/obra-carcassi-op60-2.json",
      "titulo": "El estudio",
      "principal": "ambas",
      "bpms": [
-      60,
-      96
+      72,
+      104
      ]
+    },
+    {
+     "tipo": "texto",
+     "md": "Escucha la armonía mientras tocas: en los {c:7-8}, un **ii-V-I en La menor** (Si semidisminuido con el bajo en Re, Mi7 y La menor); y en los {c:11-12}, el **La7** que lleva al Re menor: es la dominante de Re menor, como el Re7 que lleva a Sol en Do mayor."
     },
     {
      "tipo": "progresion",

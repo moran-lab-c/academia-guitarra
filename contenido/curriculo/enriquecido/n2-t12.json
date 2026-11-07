@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t12",
- "nota": "Curso 2. Brouwer VII tiene derechos: no se transcribe ni una nota. Trabajo: su mundo, oído, y un ostinato propio. Partitura con él, hay que comprarla.",
+ "nota": "Curso 2. Brouwer VII tiene derechos: no se transcribe ni una nota. Lo que trabaja, comprobado en los tutoriales en español de Alex Salas y Rafael Elizondo (06/11/2026); vídeos en lugar de partitura. Trabajo propio: un ostinato. Partitura con él, hay que comprarla.",
  "pasos": {
   "n2.t12.l1.p1": {
    "bloques": [
@@ -150,7 +150,7 @@
      "tipo": "reaparece",
      "items": [
       {
-       "paso": "n1.t12.l3.p1",
+       "paso": "n1.t11.l2.p1",
        "texto": "el Estudio VI, en el Nivel 1."
       }
      ]
@@ -165,33 +165,95 @@
       {
        "tipo": "obra",
        "id": "o2-brouwer-estudio-sencillo-vii",
-       "md": "**Por qué está aquí:** el siglo XX en el recital. **Qué escuchar:** dónde cae el acento, y si coincide con el compás. **Papel:** aplicación, con edición propia."
+       "md": "**Por qué está aquí:** el siglo XX en el recital. **Qué escuchar:** los ligados que caen en la cuerda al aire y los cambios bruscos de volumen. **Papel:** aplicación, con edición propia."
       },
       {
-       "tipo": "texto",
-       "md": "Escucha el *Estudio VII* y responde a cuatro preguntas, en papel. Es la manera de saber qué trabajar antes de ponerse con la partitura."
+       "tipo": "concepto",
+       "titulo": "Lo que trabaja",
+       "md": "Como explica Alex Salas, esta vez **no hay varias voces: es una sola línea**, y Brouwer pide tocarla «lo más rápido posible». Está en **12/8**, cuatro grupos de tres corcheas, y en algunos compases pasa a **9/8**: cambia dónde caen los acentos. Casi todo son **ligados**, y muchos bajan a una **cuerda al aire**: «probablemente este estudio esté hecho para eso». Y las **dinámicas** mandan: crecer mucho, *pianísimo* de golpe, notas *sforzando* y un pasaje en *ponticello*."
       },
       {
        "tipo": "lista",
-       "titulo": "Búscalo",
+       "titulo": "Dos consejos de Rafael Elizondo",
        "items": [
-        "[Estudios sencillos de Brouwer](https://www.youtube.com/results?search_query=Brouwer+Estudios+sencillos+VII+guitar), varias versiones."
+        "Mano derecha: en la nota larga, el pulgar; en la corta, el índice.",
+        "El silencio del bajo se hace con las dos manos: el pulgar tapa la cuerda y el dedo 1 de la izquierda también."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "gCYz3HfBy60",
+       "titulo": "Alex Salas: Brouwer, *Estudio sencillo* n.º 7, tutorial en español",
+       "nota": "Frase a frase: el motivo del principio, la escala sobre el traste 4, las dinámicas y el *ponticello*.",
+       "capitulos": [
+        [
+         0,
+         "El estudio entero"
+        ],
+        [
+         57,
+         "El tutorial"
+        ],
+        [
+         180,
+         "El motivo del principio"
+        ],
+        [
+         346,
+         "La escala del traste 4"
+        ],
+        [
+         521,
+         "La dinámica"
+        ],
+        [
+         573,
+         "La frase en la 6.ª"
+        ],
+        [
+         690,
+         "Pianísimo súbito"
+        ],
+        [
+         712,
+         "Ligados a la cuerda al aire"
+        ],
+        [
+         846,
+         "El ponticello"
+        ],
+        [
+         882,
+         "El final"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "YVORKkbXRCw",
+       "titulo": "Rafael Elizondo: preparación al Estudio 7, en español",
+       "nota": "La digitación compás a compás: dónde va cada dedo y cómo se hacen los silencios."
+      },
+      {
+       "tipo": "video",
+       "id": "QuAcbNQBifE",
+       "titulo": "This is Classical Guitar: el estudio y su lección",
+       "nota": "Otra versión, para comparar."
+      },
+      {
+       "tipo": "texto",
+       "md": "Escucha el *Estudio VII* y responde a cuatro preguntas, en papel. Es la manera de saber qué trabajar antes de ponerte con la partitura."
       },
       {
        "tipo": "lista",
        "titulo": "Preguntas",
        "items": [
-        "¿Hay un patrón repetido? ¿De cuántos pulsos?",
-        "¿La mano izquierda se mueve mucho, o poco?",
-        "¿Dónde caen los acentos? ¿Son regulares?",
-        "¿Dónde suena más fuerte?"
+        "¿Hay un motivo que se repite? ¿Cuántas veces?",
+        "¿Qué notas se ligan? ¿Hacia dónde?",
+        "¿Dónde caen los acentos? ¿Cambian en algún compás?",
+        "¿Dónde suena más fuerte, y dónde de golpe más suave?"
        ]
-      },
-      {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "Falta su edición para decir compases y lo que trabaja. Cuando la tengas, lo que se oye se puede comparar con lo que está escrito."
       }
      ]
     },

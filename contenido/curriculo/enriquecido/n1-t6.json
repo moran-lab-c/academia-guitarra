@@ -1,6 +1,6 @@
 {
  "tramo": "n1.t6",
- "nota": "Primera aparición de nota destacada, inversión, cadencia y armónicos. Los datos del Estudio en Mi menor salen de su propia transcripción (08 - Guitarra/Clásica). Giuliani sigue fuera de la app.",
+ "nota": "Primera aparición de nota destacada, inversión, cadencia, armónicos y semicorchea. Los datos del Estudio en Mi menor salen de su propia transcripción (08 - Guitarra/Clásica). El Estudio en La menor de Aguado (Lección 19) sustituye a Giuliani op. 1 por orden suya (05/11/2026): notas de Pep Guitar cotejadas con GuitarTutos; dedos de Pep.",
  "pasos": {
   "n1.t6.l1.p1": {
    "bloques": [
@@ -201,6 +201,66 @@
      "notas": [
       "El signo > sobre una nota es un **acento**: tócala con más presencia que las demás. En el {c:1}, La m; en el {c:2}, Mi."
      ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "El arpegio, con la a destacada",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "Am",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "p"
+       },
+       {
+        "c": 3,
+        "t": 2,
+        "dedo": 3,
+        "mano": "i"
+       },
+       {
+        "c": 2,
+        "t": 1,
+        "dedo": 1,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "a"
+       },
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "p"
+       },
+       {
+        "c": 3,
+        "t": 2,
+        "dedo": 3,
+        "mano": "i"
+       },
+       {
+        "c": 2,
+        "t": 1,
+        "dedo": 1,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "a"
+       }
+      ],
+      "final": "La a, la más aguda, sale un poco más fuerte; las demás, suaves."
+     }
     },
     {
      "tipo": "metronomo",
@@ -716,7 +776,12 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "Ya conoces las corcheas. Ahora, seis en cada compás: es el ritmo de la mayoría de los arpegios de este tramo y de la parte B de *Lágrima*."
+     "md": "En el estudio de este tramo, cada pulso se reparte en **cuatro notas iguales**. Hasta ahora lo más rápido eran dos por pulso: las corcheas. Cuatro por pulso son **semicorcheas**."
+    },
+    {
+     "tipo": "concepto",
+     "titulo": "La semicorchea",
+     "md": "La **semicorchea** dura un cuarto de tiempo: caben cuatro en una negra y dos en una corchea. Se escribe con dos corchetes, o con **dos barras** cuando van en grupo. En 2/4 hay dos pulsos por compás, así que caben ocho."
     },
     {
      "tipo": "tabla",
@@ -724,65 +789,208 @@
       "Pulso",
       "1",
       "",
+      "",
+      "",
       "2",
       "",
-      "3",
+      "",
       ""
      ],
      "filas": [
       [
        "Se dice",
        "**1**",
+       "e",
        "y",
+       "a",
        "**2**",
+       "e",
        "y",
-       "**3**",
-       "y"
+       "a"
       ]
      ]
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ritmo",
+      "titulo": "De una a cuatro notas por pulso",
+      "tiempos": 2,
+      "por": 60,
+      "figuras": [
+       {
+        "d": 1,
+        "fuerte": true,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "1",
+        "nombre": "Negra: una nota por pulso."
+       },
+       {
+        "d": 1,
+        "fuerte": true,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "2",
+        "nombre": "Otra negra."
+       },
+       {
+        "d": 0.5,
+        "fuerte": true,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "1",
+        "nombre": "Corcheas: dos por pulso."
+       },
+       {
+        "d": 0.5,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "y",
+        "nombre": "y"
+       },
+       {
+        "d": 0.5,
+        "fuerte": true,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "2",
+        "nombre": "dos"
+       },
+       {
+        "d": 0.5,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "y",
+        "nombre": "y"
+       },
+       {
+        "d": 0.25,
+        "fuerte": true,
+        "nota": [
+         3,
+         2
+        ],
+        "etiqueta": "1",
+        "nombre": "Semicorcheas: cuatro por pulso. Uno…"
+       },
+       {
+        "d": 0.25,
+        "nota": [
+         2,
+         1
+        ],
+        "etiqueta": "e",
+        "nombre": "e"
+       },
+       {
+        "d": 0.25,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "y",
+        "nombre": "y"
+       },
+       {
+        "d": 0.25,
+        "nota": [
+         2,
+         1
+        ],
+        "etiqueta": "a",
+        "nombre": "a"
+       },
+       {
+        "d": 0.25,
+        "fuerte": true,
+        "nota": [
+         3,
+         2
+        ],
+        "etiqueta": "2",
+        "nombre": "Dos…"
+       },
+       {
+        "d": 0.25,
+        "nota": [
+         2,
+         1
+        ],
+        "etiqueta": "e",
+        "nombre": "e"
+       },
+       {
+        "d": 0.25,
+        "nota": [
+         1,
+         0
+        ],
+        "etiqueta": "y",
+        "nombre": "y"
+       },
+       {
+        "d": 0.25,
+        "nota": [
+         2,
+         1
+        ],
+        "etiqueta": "a",
+        "nombre": "a: es el principio del estudio de Aguado."
+       }
+      ]
+     }
+    },
+    {
      "tipo": "notacion",
-     "fuente": "notacion/rit-corcheas-3-4.json",
-     "titulo": "Corcheas en 3/4",
+     "fuente": "notacion/rit-semicorcheas-2-4.json",
+     "titulo": "Semicorcheas en 2/4",
      "principal": "ambas",
      "motivo": "Aquí importa contar.",
      "bpms": [
-      50,
-      72
+      40,
+      60
      ],
      "notas": [
-      "En el {c:1}, negras; en el {c:2}, corcheas, y en el {c:3}, un arpegio: *p* siempre en el «1»."
+      "En el {c:1}, negras; en el {c:2}, corcheas; en el {c:3}, semicorcheas, y en el {c:4}, el primer compás del estudio de Aguado: el pulgar cae siempre en el «1» y en el «2»."
      ]
     },
     {
      "tipo": "ejercicio",
-     "que": "Contar en voz alta «1 y 2 y 3 y» mientras tocas.",
-     "porque": "Si cuentas por tiempos, el arpegio deja de correr: las corcheas se reparten igual.",
-     "atencion": "Es fácil acelerar al final del compás. Las «y» duran lo mismo que los números.",
-     "empieza": "♩ = 50.",
-     "sube": "Cuentas sin parar a ♩ = 72."
+     "que": "Contar en voz alta «1 e y a 2 e y a» mientras tocas cuatro notas por pulso.",
+     "porque": "El estudio de Aguado es todo así: si las cuatro notas no duran lo mismo, el arpegio cojea.",
+     "atencion": "La «a» tiende a adelantarse y pegarse al pulso siguiente. Las cuatro duran exactamente lo mismo.",
+     "empieza": "♩ = 40.",
+     "sube": "Cuentas sin parar a ♩ = 60."
     },
     {
      "tipo": "metronomo",
-     "bpm": 50
+     "bpm": 40
     },
     {
      "tipo": "elige",
-     "enunciado": "Escucha este compás en 3/4. ¿En qué nota cae el «2»?",
+     "enunciado": "Escucha este compás en 2/4. ¿En qué nota cae el «2»?",
      "audio": {
       "notas": [
        [
-        6,
-        0
-       ],
-       [
         3,
-        1
+        2
        ],
        [
         2,
-        0
+        1
        ],
        [
         1,
@@ -790,23 +998,48 @@
        ],
        [
         2,
-        0
+        1
        ],
        [
         3,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
         1
        ]
       ],
-      "duracion": 0.4
+      "duracion": 0.3
      },
      "opciones": [
-      "En la segunda nota",
       "En la tercera nota",
-      "En la cuarta nota"
+      "En la quinta nota",
+      "En la séptima nota"
      ],
      "correcta": 1,
-     "porque": "Nota 1 = «1», nota 2 = «y», nota 3 = «2».",
-     "pista": "Cuenta: 1, y, 2…"
+     "porque": "Cuatro notas por pulso: 1, e, y, a… La quinta es el «2».",
+     "pista": "Cuenta: 1 e y a…"
+    },
+    {
+     "tipo": "reaparece",
+     "items": [
+      {
+       "paso": "n1.t9.l5.p1",
+       "texto": "la semicorchea en el trémolo."
+      },
+      {
+       "paso": "n1.t12.l4.p4",
+       "texto": "puntillo y semicorcheas."
+      }
+     ]
     }
    ]
   },
@@ -817,36 +1050,321 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o1-giuliani-op-1-parte-4-n-3",
-       "md": "**Qué aprendes:** el arpegio dentro de una pieza. Hasta ahora eran fórmulas; aquí, música."
-      },
-      {
-       "tipo": "notacion",
-       "fuente": "notacion/obra-giuliani-op1-3.json",
-       "titulo": "Giuliani, op. 1, parte 4, n.º 3",
-       "principal": "ambas",
-       "motivo": "Para leer y tocar: partitura y tablatura juntas.",
-       "bpms": [
-        40,
-        60
-       ],
-       "notas": [
-        "Empieza con una corchea sola, la anacrusa. Dedos y mano derecha son una propuesta de la academia."
-       ]
+       "id": "o1-aguado-estudio-en-la-menor",
+       "md": "El ***Estudio en La menor*** de Dionisio Aguado es una de las piezas con las que más guitarristas aprenden el arpegio dentro de una obra. Es una sola fórmula de principio a fin, **p-i-m-i**, sobre acordes que cambian cada medio compás: el pulgar lleva el bajo y *i* y *m* se quedan en la 2.ª y la 1.ª cuerda."
       },
       {
        "tipo": "concepto",
        "titulo": "De dónde sale",
-       "md": "Es uno de los doce estudios de la cuarta parte del *Studio per la chitarra*, op. 1, de Mauro Giuliani: la misma obra de las fórmulas que has practicado. Partitura en [IMSLP, Giuliani, op. 1](https://imslp.org/wiki/Studio_per_la_chitarra,_Op.1_%28Giuliani,_Mauro%29)."
+       "md": "Dionisio Aguado (Madrid, 1784-1849) fue, con su amigo Fernando Sor, el gran guitarrista español del Clasicismo. Este estudio es la **Lección 19** de su *Nuevo método para guitarra* (1843): está escrita para aprender el arpegio y las posiciones de la izquierda, pero, como dice Pep, «es chulota de tocar»."
       },
       {
-       "tipo": "pasos",
-       "titulo": "Antes de tocar",
+       "tipo": "notacion",
+       "fuente": "notacion/obra-aguado-leccion-19.json",
+       "titulo": "Aguado, *Estudio en La menor*: la obra entera",
+       "principal": "ambas",
+       "motivo": "Para leer y tocar: partitura y tablatura juntas.",
+       "bpms": [
+        50,
+        80
+       ],
+       "notas": [
+        "Cada grupo de cuatro es **p-i-m-i**: el pulgar en el bajo, *i* en la 2.ª cuerda, *m* en la 1.ª y otra vez *i*.",
+        "Los números de colores son los dedos que dice Pep Guitar en su clase; el Mi del {c:11}, el de GuitarTutos.",
+        "Las barras con dos puntos son **repeticiones**: los compases 1-8 se tocan dos veces, y los 9-16 también.",
+        "Pep lo toca a ♩ = 80, y GuitarTutos, a un tempo parecido. Para aprender, ♩ = 50."
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "kfho6dYMCnk",
+       "titulo": "Pep Guitar: la Lección 19 de Aguado, tutorial en español",
+       "nota": "Explica el p-i-m-i con un ejercicio y monta la obra compás a compás, diciendo cada dedo. La partitura y la tablatura van debajo.",
+       "capitulos": [
+        [
+         70,
+         "La pieza entera"
+        ],
+        [
+         123,
+         "El arpegio p-i-m-i y su ejercicio"
+        ],
+        [
+         282,
+         "Primera frase, compás a compás"
+        ],
+        [
+         747,
+         "Segunda frase"
+        ],
+        [
+         1081,
+         "Cómo la toca él"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "qjF1yBTOwbU",
+       "titulo": "GuitarTutos: el mismo estudio, con las dos manos de cerca",
+       "nota": "Gilberto, en español y con la tablatura: se ven muy bien la mano derecha y cada posición. En el compás 5 pone el anular en el Do♯; Pep, el dedo 2. Valen los dos.",
+       "capitulos": [
+        [
+         55,
+         "La mano derecha: p-i-m-i"
+        ],
+        [
+         194,
+         "Compases 1-4"
+        ],
+        [
+         377,
+         "Compases 5-8"
+        ],
+        [
+         627,
+         "Compases 9-12"
+        ],
+        [
+         805,
+         "Compases 13-16"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "Compás 1 y final del 4: el pulgar cambia de cuerda",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 800,
+        "notas": [
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "p",
+          "texto": "p: el La de la 3.ª cuerda, con el dedo 2. Es el bajo."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i",
+          "texto": "i: el Do de la 2.ª, con el dedo 1."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m",
+          "texto": "m: el Mi de la 1.ª, al aire."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i",
+          "texto": "i otra vez: p-i-m-i."
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "Final del compás 4: el pulgar baja a la 5.ª, el La grave."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i"
+         }
+        ],
+        "final": "La izquierda no se ha movido; solo el pulgar ha cambiado de cuerda."
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "La mano izquierda",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "Con la derecha resuelta, la obra es una sucesión de **posiciones** de la izquierda, una por cada medio compás. Estas son las de Pep:"
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Compás",
+        "Dedos"
+       ],
+       "filas": [
+        [
+         "1, 4, 8, 9 y 16",
+         "La menor: el 2 en el La (3.ª, traste 2) y el 1 en el Do (2.ª, traste 1)."
+        ],
+        [
+         "2",
+         "Mi: el 1 sube al Sol♯ (3.ª, traste 1); después, el 2 al Mi (4.ª, traste 2)."
+        ],
+        [
+         "3",
+         "El 1 y el 2 se quedan; el 4 en el Si (3.ª, traste 4) y el 3 en el Re (2.ª, traste 3)."
+        ],
+        [
+         "5",
+         "Después de La menor, el 2 baja al Do♯ (2.ª, traste 2); lo demás, al aire."
+        ],
+        [
+         "6",
+         "El 3 en el Fa (4.ª, traste 3), el 4 en el Re (2.ª, traste 3) y el 1 en el Fa (1.ª, traste 1); después se levanta el 3."
+        ],
+        [
+         "7",
+         "El 3 en el Mi (4.ª, traste 2) y el 2 en el Do (2.ª, traste 1); después, el 1 en el Sol♯."
+        ],
+        [
+         "10 y 12",
+         "Sol séptima: el 1 en el Fa (1.ª, traste 1); después, el 3 en el Sol (6.ª, traste 3)."
+        ],
+        [
+         "11",
+         "Do mayor: el 3 en el Do (5.ª, traste 3) y el 1 en el Do (2.ª, traste 1); después, el 2 en el Mi (4.ª, traste 2)."
+        ],
+        [
+         "13",
+         "Do mayor; después, el 2 en el Si (5.ª, traste 2) y el 4 en el Re (2.ª, traste 3)."
+        ],
+        [
+         "14",
+         "Solo el 1 en el Do (2.ª, traste 1), con el La al aire; después, el 3 en el Do de la 5.ª."
+        ],
+        [
+         "15",
+         "El 1 en el Fa (1.ª, traste 1), con el Re al aire; después, el 2 en el Mi (4.ª, traste 2) y el 4 en el Re (2.ª, traste 3)."
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Mueve solo lo que tiene que moverse",
+       "md": "Del compás 2 al 3, el 1 y el 2 **no se levantan**: el 4 y el 3 se plantan encima. Menos movimiento es menos ruido, y el cambio llega a tiempo. Busca lo mismo en cada cambio: qué dedo puede quedarse."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "Compases 2 y 3: los dedos que se quedan",
+        "trastes": [
+         0,
+         5
+        ],
+        "clave": "Am",
+        "ms": 800,
+        "notas": [
+         {
+          "c": 3,
+          "t": 1,
+          "dedo": 1,
+          "mano": "p",
+          "texto": "Compás 2: el 1 sube al Sol♯ de la 3.ª cuerda."
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 4,
+          "t": 2,
+          "dedo": 2,
+          "mano": "p",
+          "texto": "El 2 pisa el Mi de la 4.ª, y el pulgar lo toca."
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 3,
+          "t": 4,
+          "dedo": 4,
+          "mano": "p",
+          "texto": "Compás 3: el 1 y el 2 se quedan; el 4 se planta en el Si…"
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 3,
+          "mano": "i",
+          "texto": "…y el 3 en el Re de la 2.ª."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 3,
+          "mano": "i"
+         }
+        ],
+        "final": "Del compás 2 al 3 solo se mueven dos dedos. Pisa cerca del traste: es la posición más dura de la primera parte."
+       }
+      },
+      {
+       "tipo": "errores",
        "items": [
-        "¿Qué compás y qué armadura tiene?",
-        "Busca la fórmula de la mano derecha en los primeros compases: ¿se parece a alguna de las que ya tocas?",
-        "Toca los acordes **plaqué**, es decir, todas las notas de cada compás a la vez. Así entiendes la armonía y preparas la mano izquierda.",
-        "Mira los bajos. ¿Hay inversiones?"
+        {
+         "error": "El pulgar se equivoca de cuerda en los cambios de bajo.",
+         "arreglo": "Antes de cada compás, di en voz alta la cuerda del pulgar: 3.ª, 4.ª, 5.ª o 6.ª."
+        },
+        {
+         "error": "El arpegio se para en cada cambio de acorde.",
+         "arreglo": "Toca la posición nueva plaqué, todas las notas a la vez, hasta que la mano la encuentre sola. Luego, arpegiada."
+        },
+        {
+         "error": "El compás 3 suena apagado.",
+         "arreglo": "Pisa cerca del traste, como insiste Pep: es la posición que pide más fuerza."
+        }
        ]
       }
      ]
@@ -856,23 +1374,182 @@
      "bloques": [
       {
        "tipo": "ejercicio",
-       "que": "Montar el estudio por compases, primero plaqué y luego arpegiado.",
-       "porque": "Si los acordes salen limpios, la mano derecha puede centrarse en la fórmula.",
-       "atencion": "Los dedos de la izquierda se quedan puestos mientras dura el acorde. Es lo que hace que el arpegio resuene.",
-       "empieza": "♩ = 48 en corcheas.",
-       "sube": "Tres veces sin parar. Después, busca qué nota puede cantar."
+       "que": "El p-i-m-i al aire: *i* y *m* fijos en la 2.ª y la 1.ª cuerda, y el pulgar bajando de la 3.ª a la 6.ª y volviendo, un grupo en cada cuerda.",
+       "porque": "Lo proponen los dos tutoriales: el estudio entero es esto, con acordes.",
+       "atencion": "Que el pulgar cambie de cuerda sin que *i* y *m* se muevan.",
+       "empieza": "♩ = 50, cuatro notas por pulso.",
+       "sube": "Sale sin mirar la mano derecha a ♩ = 80."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El ejercicio de los dos tutoriales",
+        "trastes": [
+         0,
+         4
+        ],
+        "ms": 650,
+        "notas": [
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "p",
+          "texto": "p en la 3.ª cuerda"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 4,
+          "t": 0,
+          "mano": "p",
+          "texto": "p en la 4.ª cuerda"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p en la 5.ª cuerda"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 6,
+          "t": 0,
+          "mano": "p",
+          "texto": "p en la 6.ª cuerda"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p en la 5.ª cuerda"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 4,
+          "t": 0,
+          "mano": "p",
+          "texto": "p en la 4.ª cuerda"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         }
+        ],
+        "final": "i y m no se mueven de la 2.ª y la 1.ª: solo viaja el pulgar."
+       }
+      },
+      {
+       "tipo": "pasos",
+       "titulo": "Montar el estudio",
+       "items": [
+        "**El arpegio solo**, al aire, hasta que salga sin pensar.",
+        "**Las posiciones**, plaqué: todas las notas de cada medio compás a la vez.",
+        "**Medio compás a medio compás**, arpegiado y muy lento.",
+        "**Cada frase entera**: los compases 1-8 y después los 9-16. Al final, con las repeticiones."
+       ]
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "Montar el estudio por medios compases, primero plaqué y luego arpegiado.",
+       "porque": "Cada medio compás es una posición: si llega a tiempo, el arpegio no se para.",
+       "atencion": "Marca un poco el bajo, como pide Pep: es la nota destacada de este estudio, con el pulgar. Sube el volumen en las tensiones de los compases 5 y 13, y termina suave.",
+       "empieza": "♩ = 50.",
+       "sube": "Tres veces sin parar; al final, ♩ = 80, el tempo de Pep."
       },
       {
        "tipo": "metronomo",
-       "clave": "o1-giuliani-op-1-parte-4-n-3",
-       "bpm": 48
+       "clave": "o1-aguado-estudio-en-la-menor",
+       "bpm": 50
       },
       {
        "tipo": "bien",
        "items": [
-        "Tocas la pieza entera sin cortar el arpegio.",
-        "Las notas de cada acorde siguen sonando hasta el cambio.",
-        "Sabes cómo se llama cada acorde."
+        "Tocas la obra entera sin cortar el arpegio.",
+        "El pulgar acierta la cuerda del bajo en cada cambio.",
+        "Las notas de cada posición siguen sonando hasta el cambio."
        ]
       },
       {
@@ -931,7 +1608,7 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-giuliani-op1-3.json",
+     "fuente": "notacion/obra-aguado-leccion-19.json",
      "titulo": "Los cuatro primeros compases",
      "principal": "partitura",
      "motivo": "El objetivo es leer: partitura.",
@@ -939,7 +1616,7 @@
       40
      ],
      "compases": [
-      0,
+      1,
       4
      ]
     },
@@ -955,7 +1632,7 @@
     },
     {
      "tipo": "metronomo",
-     "clave": "o1-giuliani-op-1-parte-4-n-3",
+     "clave": "o1-aguado-estudio-en-la-menor",
      "bpm": 40
     },
     {
@@ -1661,9 +2338,9 @@
       },
       {
        "tipo": "lista",
-       "titulo": "2. El estudio de Giuliani",
+       "titulo": "2. El estudio de Aguado",
        "items": [
-        "Entero, sin parar, con las notas de cada acorde resonando."
+        "Entero, con las repeticiones y sin parar, con el pulgar en su cuerda en cada cambio."
        ]
       },
       {
@@ -1671,7 +2348,7 @@
        "titulo": "Marca lo que ya te sale",
        "items": [
         "La nota destacada forma una línea.",
-        "El estudio de Giuliani, entero y sin cortes."
+        "El estudio de Aguado, entero y sin cortes."
        ]
       }
      ]

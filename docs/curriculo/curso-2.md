@@ -28,14 +28,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | Posiciones y diapasón | 1.ª posición; subir con guía | Posiciones II-VII; la misma nota en tres sitios; octavas | Encuentra una nota en tres sitios |
 | Trémolo | Primer contacto | Con bajo que cambia; una melodía corta en trémolo | Una melodía de ocho compases en trémolo, lenta y regular |
 | Armónicos y otros recursos | Naturales en XII, VII y V | Naturales en IV, IX y XIX; afinar con armónicos; vibrato; glissando; pizzicato | Vibrato en una nota larga cuando la frase lo pide |
-| Polifonía | Melodía y bajo | Dos voces independientes (Dowland, Petzold) | Ninguna voz se corta antes de tiempo |
+| Polifonía | Melodía y bajo | Dos voces independientes (*Packington's Pound*, Petzold) | Ninguna voz se corta antes de tiempo |
 | Lectura y primera vista | 1.ª posición | Posiciones II y V; bemoles; acordes escritos; dos obras leídas enteras | Primera vista de 8 compases en 1.ª posición, como el grado 4 del ABRSM **[Estimación]** |
 | Tablatura | Con ritmo; cifra de Sanz | Traducir de tablatura a partitura y al revés; la tablatura de laúd (¿Sabías que…?) | Pasa cuatro compases de un sistema a otro |
 | Ritmo | Hasta la semicorchea; 6/8; hemiolia | Tresillo; 3/8 y 2/2; síncopa completa; silencios a contratiempo | Tresillos y corcheas mezclados sin acelerar |
 | Solfeo | Cantar 1-3-5; ecos | Cantar los intervalos de la escala; cantar seis notas leídas; dictado rítmico | Canta una línea corta leída |
 | Teoría | Escalas, triadas, armaduras hasta cuatro | Círculo de quintas; todas las armaduras; intervalos aumentados y disminuidos; enarmonía; las cuatro triadas; cuatriadas; inversiones y cifrado; términos de tempo | La teoría de un grado 5 del ABRSM |
 | Armonía | I-IV-V7-I; cadencias | ii-V-I; V/V; I-vi-IV-V; transportar con formas móviles; armonizar una melodía | Armoniza una melodía de ocho compases |
-| Análisis | Frases; ABA | La forma sonatina; la variación; la modulación a la dominante | Explica la forma de la *Sonatina* de Giuliani |
+| Análisis | Frases; ABA | La forma sonatina; la variación; la modulación a la dominante | Explica la forma de un estudio clásico con vuelta (A-B-A) |
 | Oído | 3.ª, 4.ª, 5.ª y 8.ª; calidad de la triada | Añade las 6.ª; intervalos a la vez; el V7; I-IV-I o I-V-I; estilo y época | Reconoce las 6.ª, el V7 y si la música va al IV o al V; dice de qué época es una obra |
 | Musicalidad | Frase; dinámica básica | Legato y staccato; acentos; rubato básico; color con intención | Un crescendo largo que llega a su sitio |
 | Interpretación y memoria | Una obra de memoria | Dos de memoria; grabarse y escucharse | Recital con dos obras de memoria |
@@ -44,7 +44,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | Cómo estudiar | Lento, por frases | Tres pasadas limpias antes de subir el tempo; lo difícil primero | Usa el metrónomo para medir, no para empujar |
 | Creatividad | Improvisar sobre I-IV-V | Variar una melodía | Tres variaciones reconocibles de una melodía |
 | Tocar con otros | Sobre una pista | Un dúo con su propia grabación | Toca su voz sin perder la del otro |
-| Historia y estilo | Cinco épocas, por encima | Aguado; Dowland y el laúd; el Clasicismo de Giuliani; Tárrega; Brouwer | Distingue al oído una obra clásica de una romántica |
+| Historia y estilo | Cinco épocas, por encima | Carulli; el laúd isabelino; el Clasicismo de Giuliani y Carcassi; Tárrega; Brouwer | Distingue al oído una obra clásica de una romántica |
 
 ## Cómo progresa dentro del nivel
 - **Técnica:** cejilla y Carlevaro (T1) → melodía en *a* (T2) → traslados y vibrato (T3) → a-m-i (T4) → posición V y séptimas (T5) → ligados de tres (T6) → una melodía en trémolo (T8) → arpegios que cambian de acorde (T9) → séptima disminuida (T10) → armónicos y extensiones (T11) → pizzicato y rasgueado (T12).
@@ -55,16 +55,16 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 ## Repertorio del nivel
 | Obra | Papel | Tramo |
 |---|---|---|
-| Aguado, *Contradanza* op. 8 n.º 5 | Aplicación: cejilla y síncopa en una danza | 1 |
+| Carulli, *Estudio n.º 6* | Aplicación: dobles notas sobre el bajo, con formas que se mueven | 1 |
 | Anónimo, *Romance* | Troncal | 2-3 |
-| Giuliani, *Sonatina* op. 71, I | Troncal: la forma sonatina | 4 |
+| Carcassi, op. 60 n.º 3 | Aplicación: arpegio continuo sobre el bajo; la forma con vuelta | 4 |
 | Carcassi, op. 60 n.º 7 | Aplicación: estudio | 5 |
-| Dowland, *My Lord Willoughby's Welcome Home* | Troncal: Renacimiento, dos voces y variación | 6 |
-| Petzold, *Minueto* BWV Anh. 114 | Lectura: Barroco | 7 |
+| Anónimo, *Packington's Pound* | Troncal: Renacimiento, dos voces y variación | 6 |
+| Petzold, *Minueto en Sol menor* BWV Anh. 115 | Lectura: Barroco | 7 |
 | Sor, op. 44 n.º 2 | Lectura | 7 |
 | Tárrega, *Preludio n.º 1* | Aplicación: un preludio romántico breve | 8 |
-| Giuliani, op. 51 n.º 10 | Aplicación: arpegio | 9 |
-| Sor, op. 35 n.º 8 | Aplicación: Clasicismo y modulación | 10 |
+| Carcassi, op. 60 n.º 2 | Aplicación: arpegio | 9 |
+| Sor, op. 35 n.º 17 | Aplicación: Clasicismo y modulación | 10 |
 | Coste, op. 38 n.º 1 | Aplicación: estudio romántico | 11 |
 | Brouwer, *Estudio sencillo* VII | Aplicación: siglo XX | 12 |
 | **Alternativas** | Giuliani op. 48 n.º 1; Coste, *La chasse*; M. D. Pujol, *Preludio* (*Suite del Plata n.º 1*); Tárrega, *Sueño* (la mazurka; está en Mater Salvatoris, 1.º de Profesionales); Brouwer, *Estudios sencillos* X y XI | |
@@ -72,23 +72,23 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 ## Mapa de tramos
 | Tramo | Música | Qué se trabaja |
 |---|---|---|
-| 1 | Aguado, *Contradanza* | Cejilla en todos los trastes; formas móviles; Carlevaro 1-5; síncopa y 2/2; las sextas al oído |
+| 1 | Carulli, *Estudio n.º 6* | Cejilla en todos los trastes; formas móviles; Carlevaro 1-5; síncopa y 2/2; las sextas al oído |
 | 2 | *Romance*, la parte en Mi menor | Tresillo; melodía en *a*; posición II; círculo de quintas; intervalos a la vez; cantar la melodía |
 | 3 | *Romance*, la parte en Mi mayor | Traslados; vibrato; homónimo; rubato; memoria; tablatura ↔ partitura |
-| 4 | Giuliani, *Sonatina* op. 71 | Forma sonatina; a-m-i; staccato; I-IV-I o I-V-I; estilo y época |
+| 4 | Carcassi, op. 60 n.º 3 | Forma sonatina y forma con vuelta; a-m-i; staccato; I-IV-I o I-V-I; estilo y época |
 | 5 | Carcassi, op. 60 n.º 7 | Posición V; Fa y Si♭ mayor; cuatriadas; séptima de dominante; Carlevaro 6-10 |
-| 6 | Dowland, *Willoughby* | Dos voces; variación; ligados de tres; la tablatura de laúd; variar una melodía |
-| 7 | Petzold, *Minueto*, y Sor, op. 44 n.º 2 | Dos obras leídas enteras; articulación barroca; forma binaria; un dúo |
+| 6 | Anónimo, *Packington's Pound* | Dos voces; variación; ligados de tres; la tablatura de laúd; variar una melodía |
+| 7 | Petzold, *Minueto en Sol menor*, y Sor, op. 44 n.º 2 | Dos obras leídas enteras; articulación barroca; forma binaria; un dúo |
 | 8 | Tárrega, *Preludio n.º 1*, y el trémolo | Trémolo con bajo que cambia; una melodía en trémolo; el V7 al oído; cantar la melodía |
-| 9 | Giuliani, op. 51 n.º 10 | Arpegio con cambio de acorde; ii-V-I y V/V; décimas y octavas; dictado rítmico; Carlevaro 11-15 |
-| 10 | Sor, op. 35 n.º 8 | Si y Sol menor; aumentados y disminuidos; séptima disminuida; modulación; cantar notas leídas |
+| 9 | Carcassi, op. 60 n.º 2 | Arpegio con cambio de acorde; ii-V-I y V/V; décimas y octavas; dictado rítmico; Carlevaro 11-15 |
+| 10 | Sor, op. 35 n.º 17 | Si y Sol menor; aumentados y disminuidos; séptima disminuida; modulación; cantar notas leídas |
 | 11 | Coste, op. 38 n.º 1 | Armónicos IV, IX y XIX; glissando; extensiones; Fa♯ menor; color con intención |
 | 12 | Brouwer, *Estudio sencillo* VII | El siglo XX; pizzicato; rasgueado clásico; acentos; armonizar una melodía |
 | 13 | Cierre del nivel 2 | Recital y prueba corta |
 
 ---
 
-## Tramo 1 · Aguado, *Contradanza* op. 8 n.º 5
+## Tramo 1 · Carulli, *Estudio n.º 6*
 **L1.1 · Lo que traes del nivel 1** {Repertorio, Memoria, Trémolo}
 1. Repaso · *Lágrima* de memoria, sin calentar.
 2. Repaso · El trémolo del nivel 1 (E-N1-15), con el bajo alternando · T · ⏱.
@@ -113,15 +113,15 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 1. Ritmo · La síncopa y el contratiempo · 𝄞 · ⏱.
 2. Ritmo · 2/2: dos pulsos de blanca · ⏱.
 
-**L1.6 · La obra** {Historia, Repertorio, Cejilla, Digitación}
-1. Contexto · Dionisio Aguado (Madrid, 1784-1849), amigo de Sor; la contradanza, danza de salón.
-2. Obra · **Aguado, *Contradanza* op. 8 n.º 5** · 𝄞 + T · ⏱.
-3. Aplicación · Las cejillas de la obra: cuáles son completas y cuáles bastan parciales **[Por verificar]**.
+**L1.6 · La obra** {Historia, Repertorio, Digitación}
+1. Contexto · Ferdinando Carulli (Nápoles, 1770 - París, 1841), guitarrista del Clasicismo y autor de un método que se sigue usando.
+2. Obra · **Carulli, *Estudio n.º 6***: dos partes, en La menor y en Do mayor · 𝄞 + T · ⏱.
+3. Aplicación · La misma postura en otra cuerda: el Si-Re y el Mi-Sol con los dedos 2 y 4, como enseña Pablo Romero Luis.
 
 **L1.7 · Las sextas al oído; cómo estudiar** {Oído, Estudio}
 1. Oído · 6.ª mayor y menor, melódicas · ✎ · ♪.
 2. Explicación · Tres pasadas limpias seguidas antes de subir el tempo; el metrónomo mide, no empuja.
-3. Comprobación del tramo · Cuatro acordes con cejilla limpios; la contradanza con la síncopa en su sitio.
+3. Comprobación del tramo · Cuatro acordes con cejilla limpios; el estudio entero, con el bajo en su sitio.
 
 ## Tramo 2 · *Romance*, la parte en Mi menor
 **L2.1 · El tresillo** {Ritmo}
@@ -150,7 +150,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 3. Solfeo · Cantar la melodía del *Romance* con la app tocando los tresillos · ♪.
 
 **L2.7 · Terminar la parte en Mi menor** {Repertorio, Musicalidad, Cejilla}
-1. Aplicación · La cejilla de esta parte: dónde se prepara · **[Por verificar]** traste y compás.
+1. Aplicación · Las cejillas de esta parte, media en el V y entera en el VII: dónde se preparan.
 2. Obra · La parte en Mi menor entera; pasa al atril.
 3. Fíjate en… · Una melodía larga sobre tresillos continuos: el crescendo largo.
 4. Comprobación del tramo · Esta parte sin parar, con la melodía arriba.
@@ -179,14 +179,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 1. Tablatura · Escribir en el pentagrama dos compases que conoce en tablatura, y al revés · ✎.
 2. Comprobación del tramo · El *Romance* entero; de memoria, si puede.
 
-## Tramo 4 · Giuliani, *Sonatina* op. 71, primer movimiento
+## Tramo 4 · Carcassi, op. 60 n.º 3
 **L4.1 · El Clasicismo** {Historia, Oído}
-1. Contexto · Mauro Giuliani en Viena, hacia 1810-1820. La Rioja pone en 1.º de Profesionales el «Maestoso» de su *Sonatina* op. 71 **[Dato]**; cuál de las tres del opus, **[Por verificar]**.
+1. Contexto · Matteo Carcassi (Florencia, 1792 - París, 1853), guitarrista en el París de Sor, y sus *25 estudios melódicos y progresivos* op. 60, la continuación de su método.
 2. Oído · ¿De qué época es? Dos fragmentos: uno clásico y otro romántico · ✎ · ♪.
 
 **L4.2 · La forma sonatina** {Teoría, Análisis}
 1. Explicación · Un tema, un segundo tema en otra tonalidad y la vuelta: la forma sonata en pequeño.
-2. Análisis · Dónde está cada parte en el movimiento · 𝄞 · **[Por verificar]** con la edición.
+2. Análisis · El estudio no es una sonatina, pero hace el mismo viaje: A (sale de La y acaba en Mi), B (se aleja) y A otra vez (vuelve y acaba en La) · 𝄞.
 
 **L4.3 · Escalas con a-m-i y staccato** {MD, Escalas, Musicalidad, Sonido}
 1. Ejercicio · **E-N2-02 Escala con cambio de posición**: Re mayor, dos octavas, con i-m y con a-m-i · T + 𝄞 · ⏱.
@@ -200,9 +200,9 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 1. Oído · I-IV-I o I-V-I · ✎ · ♪.
 
 **L4.6 · La obra** {Repertorio, Musicalidad, Interpretación}
-1. Obra · **Giuliani, *Sonatina* op. 71, I** · 𝄞 + T · ⏱.
+1. Obra · **Carcassi, op. 60 n.º 3**: arpegio continuo del bajo y las tres primeras cuerdas; cejillas en el II, V, VII y IX · 𝄞 + T · ⏱.
 2. Fíjate en… · El carácter clásico: claridad, frases iguales, poco rubato.
-3. Comprobación del tramo · El movimiento entero; dos preguntas de forma · ✎.
+3. Comprobación del tramo · El estudio entero, con sus repeticiones; tres preguntas de forma · ✎.
 
 ## Tramo 5 · Carcassi, op. 60 n.º 7
 **L5.1 · La posición V** {Posiciones, Lectura, Diapasón}
@@ -224,14 +224,14 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 2. Ejercicio · **E-N2-09 Carlevaro, fórmulas 6-10** · T · ⏱.
 
 **L5.5 · El estudio** {Repertorio, Estudio}
-1. Obra · **Carcassi, op. 60 n.º 7** · 𝄞 + T · ⏱ · **[Por verificar]** lo que trabaja.
+1. Obra · **Carcassi, op. 60 n.º 7**: trémolo p-a-m-i, arpegios, acordes plaqué, ligados descendentes y media cejilla en el III · 𝄞 + T · ⏱.
 2. Consejo del profesor · Estudiar primero el compás más difícil, en trozos de dos tiempos.
 3. Comprobación del tramo · Cuatro compases leídos en la V; el estudio.
 
-## Tramo 6 · Dowland, *My Lord Willoughby's Welcome Home*
+## Tramo 6 · Anónimo, *Packington's Pound*
 **L6.1 · El laúd isabelino** {Historia, Tablatura}
-1. Contexto · John Dowland y el laúd.
-2. ¿Sabías que…? · Dowland escribía en tablatura de laúd con letras en vez de números: la «a» es la cuerda al aire.
+1. Contexto · El laúd en la Inglaterra de Isabel I y *Packington's Pound*, una melodía anónima muy popular entonces.
+2. ¿Sabías que…? · Los laudistas ingleses, como Dowland, escribían en tablatura con letras en vez de números: la «a» es la cuerda al aire.
 3. Escucha · Laúd y guitarra · ♪.
 
 **L6.2 · Ligados de tres notas** {MI, Ligados}
@@ -248,18 +248,18 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 2. Ejercicio · **E-N2-07 Variar una melodía**: cambiar el ritmo, adornar y cambiar el registro de una melodía de cuatro compases.
 
 **L6.5 · La obra** {Repertorio, Musicalidad}
-1. Obra · El tema y las variaciones · 𝄞 + T · ⏱ · **[Por verificar]** la afinación de la 3.ª que pide la edición.
+1. Obra · **Anónimo, *Packington's Pound***: el tema y sus variaciones · 𝄞 + T · ⏱.
 2. Comprobación del tramo · La obra sin cortar las voces.
 
-## Tramo 7 · Petzold, *Minueto*, y Sor, op. 44 n.º 2
+## Tramo 7 · Petzold, *Minueto en Sol menor*, y Sor, op. 44 n.º 2
 **L7.1 · El minueto** {Historia, Musicalidad, Análisis, Ritmo, ~Ligados}
-1. Contexto · Un minueto del cuaderno de Anna Magdalena Bach; durante años se atribuyó a Bach, pero es de Christian Petzold.
+1. Contexto · La pareja del *Minueto en Sol* del nivel 1: van seguidos en el cuaderno de Anna Magdalena Bach, y los dos son de Christian Petzold.
 2. Explicación · La forma binaria: dos partes que se repiten.
 3. Fíjate en… · La articulación barroca: notas un poco separadas, no todo ligado.
 4. Explicación · Los adornos del Barroco: el mordente que ya sabe y la apoyatura, una nota de fuera que se apoya en el tiempo y resuelve en la real.
 
 **L7.2 · Leer una obra entera** {Lectura, Repertorio}
-1. Obra · **Petzold, *Minueto* BWV Anh. 114**, desde la partitura · 𝄞 · ⏱.
+1. Obra · **Petzold, *Minueto en Sol menor* BWV Anh. 115**, desde la partitura · 𝄞 · ⏱.
 2. Obra · **Sor, op. 44 n.º 2**, desde la partitura · 𝄞 · ⏱.
 
 **L7.3 · Tocar a dúo** {Conjunto, Musicalidad, Polifonía}
@@ -283,10 +283,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 **L8.4 · El V7 y la obra** {Oído, Repertorio, Historia}
 1. Oído · ¿Es una séptima de dominante? · ✎ · ♪.
 2. Contexto · Tárrega escribió preludios breves para guitarra; La Rioja pone el n.º 1 en 1.º de Profesionales y Mater Salvatoris, en 2.º **[Dato]**.
-3. Obra · **Tárrega, *Preludio n.º 1*** · 𝄞 + T · ⏱ · **[Por verificar]** su tonalidad y lo que pide.
+3. Obra · **Tárrega, *Preludio n.º 1***: Re menor con la 6.ª en Re; melodía sobre acordes y cejillas de un momento · 𝄞 + T · ⏱.
 4. Comprobación del tramo · La melodía en trémolo a un tempo lento y regular; el preludio.
 
-## Tramo 9 · Giuliani, op. 51 n.º 10
+## Tramo 9 · Carcassi, op. 60 n.º 2
 **L9.1 · Arpegios que cambian de acorde** {MD, Arpegios, MI, Digitación}
 1. Ejercicio · Giuliani op. 1, la selección del nivel 2 · T · ⏱.
 2. Cómo se hace · Anticipar los dedos del acorde siguiente durante las últimas notas del anterior.
@@ -302,10 +302,10 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 
 **L9.4 · El estudio** {Repertorio, Ritmo}
 1. Ritmo · Dictado rítmico de dos compases · ✎.
-2. Obra · **Giuliani, op. 51 n.º 10** · 𝄞 + T · ⏱.
+2. Obra · **Carcassi, op. 60 n.º 2**: el mismo arpegio de principio a fin, con el acorde que cambia cada medio compás · 𝄞 + T · ⏱.
 3. Comprobación del tramo · El estudio; una progresión ii-V-I con cejilla.
 
-## Tramo 10 · Sor, op. 35 n.º 8
+## Tramo 10 · Sor, op. 35 n.º 17
 **L10.1 · Si menor y Sol menor** {Escalas, Posiciones}
 1. Ejercicio · Si menor y Sol menor (armónica y melódica), dos octavas con cambio de posición · T + 𝄞 · ⏱.
 
@@ -319,8 +319,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 3. Oído · ¿Disminuida o de dominante? · ✎ · ♪.
 
 **L10.4 · La obra** {Repertorio, Análisis, Musicalidad}
-1. Obra · **Sor, op. 35 n.º 8** · 𝄞 + T · ⏱.
-2. Análisis · La forma y la modulación a la dominante · 𝄞 · **[Por verificar]**.
+1. Obra · **Sor, op. 35 n.º 17** (el n.º 6 de los estudios de Sor de Segovia): melodía con acompañamiento a dos voces · 𝄞 + T · ⏱.
+2. Análisis · La forma y la modulación a la dominante: A en Re, A que acaba en La, B que pasa por Re menor y A otra vez · 𝄞.
 3. Teoría · Términos de tempo (allegretto, andante…) · ✎.
 
 **L10.5 · Cantar lo que se lee** {Solfeo, Lectura}
@@ -356,7 +356,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 
 **L12.2 · La obra** {Repertorio, Historia, Musicalidad, Ritmo}
 1. Contexto · Brouwer otra vez: La Rioja pone los estudios VII, X y XI en 1.º de Profesionales **[Dato]**.
-2. Obra · **Brouwer, *Estudio sencillo* VII** · edición publicada (con derechos) · ⏱ · **[Por verificar]** lo que trabaja.
+2. Obra · **Brouwer, *Estudio sencillo* VII**: una sola línea en 12/8 que a veces pasa a 9/8, con ligados a cuerdas al aire, dinámicas muy marcadas y *ponticello* · edición publicada (con derechos) · ⏱.
 3. Fíjate en… · Los acentos: dónde cae el peso de cada compás.
 
 **L12.3 · Armonizar una melodía** {Armonía, Creatividad, Conjunto}
@@ -369,8 +369,8 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 
 ## Tramo 13 · Cierre del nivel 2
 **L13.1 · El recital** {!Repertorio, !Interpretación, !Memoria, !Musicalidad, !Polifonía, !Sonido}
-1. Obra · Dowland o Petzold (Renacimiento o Barroco).
-2. Obra · Giuliani, Sor o Aguado (Clasicismo).
+1. Obra · Una del Renacimiento o del Barroco: la danza inglesa o el minueto.
+2. Obra · Una del Clasicismo, de los estudios del nivel.
 3. Obra · El *Romance*, Tárrega o Coste (Romanticismo).
 4. Obra · Brouwer (siglo XX), opcional.
 5. Dos de memoria; grabarse y escucharse: dos cosas buenas y una que mejorar.

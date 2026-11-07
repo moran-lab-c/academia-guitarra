@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t1",
- "nota": "Curso 2. Cejilla completa y formas móviles. La Contradanza se transcribe de la edición de Richault; lo dudoso se dice en el paso.",
+ "nota": "Curso 2. Cejilla completa y formas móviles. La  Estudio n.º 6 de Carulli en lugar de la Contradanza de Aguado (06/11/2026): notas, dedos y mano derecha de Sky Guitar, cotejados con Pablo Romero Luis.",
  "pasos": {
   "n2.t1.l1.p1": {
    "bloques": [
@@ -149,7 +149,7 @@
     {
      "tipo": "guia",
      "tipoGuia": "Guía",
-     "md": "La primera obra es una danza: la *Contradanza* de Aguado. Empezamos por lo que más le pide a la mano izquierda, la cejilla entera."
+     "md": "La primera obra es el *Estudio n.º 6* de Carulli, el que Pablo Romero Luis llama «Da alas». Antes, lo que más le pide a la mano izquierda este nivel: la cejilla entera."
     }
    ]
   },
@@ -1015,7 +1015,7 @@
         },
         {
          "paso": "n2.t1.l6.p2",
-         "texto": "la *Contradanza* está llena de esto."
+         "texto": "muchas danzas de salón están llenas de esto."
         }
        ]
       }
@@ -1104,38 +1104,38 @@
      ],
      "correcta": 1,
      "porque": "El pulso es la blanca: dos apoyos por compás."
-    },
-    {
-     "tipo": "reaparece",
-     "items": [
-      {
-       "paso": "n2.t4.l6.p1",
-       "texto": "la *Sonatina* de Giuliani va en 2/2."
-      }
-     ]
     }
    ]
   },
   "n2.t1.l6.p1": {
    "bloques": [
     {
-     "tipo": "concepto",
-     "titulo": "Dionisio Aguado",
-     "md": "Nacido en Madrid (1784-1849), vivió años en París y compartió casa y amistad con Fernando Sor. Dejó uno de los grandes métodos de guitarra de su siglo. Inventó además un soporte, el *trípode*, para que el instrumento no vibrara contra el cuerpo."
+     "tipo": "texto",
+     "md": "**Ferdinando Carulli** (Nápoles, 1770 - París, 1841) fue uno de los guitarristas del Clasicismo que vivieron en París, como Sor. Su método para guitarra se sigue usando, y de ahí salen muchos estudios que se tocan en los conservatorios."
     },
     {
      "tipo": "concepto",
-     "titulo": "Una danza de salón",
-     "md": "La **contradanza** se bailaba en grupo en los salones de principios del XIX: varias parejas, figuras que se repiten y mucho compás marcado. De ahí vienen el acompañamiento a contratiempo y las frases cuadradas, de ocho compases."
+     "titulo": "Un estudio que «da alas»",
+     "md": "Pablo Romero Luis lo llama así porque, dice, a sus alumnos les ha dado siempre energía: «te va a hacer sentir un guitarrista de verdad». Es largo para este nivel, pero está hecho de pocas cosas que se repiten."
     },
     {
-     "tipo": "lista",
-     "titulo": "Qué vas a oír",
-     "items": [
-      "Un tema en Mi menor con acordes a contratiempo.",
-      "Un contraste en una segunda sección, con frases más cantadas.",
-      "Un trío en Mi mayor, con otro carácter.",
-      "Tras el trío, *Da Capo*: se vuelve al principio y se acaba en «Fin»."
+     "tipo": "tabla",
+     "cabecera": [
+      "Sección",
+      "Partes",
+      "Tonalidad"
+     ],
+     "filas": [
+      [
+       "Primera",
+       "A, B y otra vez A (c. 1-25)",
+       "La menor"
+      ],
+      [
+       "Segunda",
+       "C, D y otra vez C (c. 25-49)",
+       "Do mayor"
+      ]
      ]
     }
    ]
@@ -1143,74 +1143,183 @@
   "n2.t1.l6.p2": {
    "pantallas": [
     {
-     "titulo": "La obra",
+     "titulo": "Qué aprendes con ella",
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-aguado-contradanza-op-8-n-5",
-       "md": "**Por qué está aquí:** es una danza con síncopa y con acordes que piden cejilla parcial. **Qué escuchar:** el contratiempo debajo de la melodía larga. **Dificultad:** media; es para aplicar, no para llevar al recital."
+       "id": "o2-carulli-estudio-n-6",
+       "md": "El ***Estudio n.º 6*** de Carulli es de los estudios que más se tocan en los conservatorios. **Qué aprendes:** dos notas a la vez sobre un bajo que va y viene, escalas cortas con *i* y *m*, y posturas de la izquierda que se repiten en otro sitio."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-aguado-contradanza.json",
-       "titulo": "Aguado, *Contradanza* op. 8 n.º 5",
+       "fuente": "notacion/obra-carulli-estudio-6.json",
+       "titulo": "Carulli, *Estudio n.º 6*: la obra entera",
        "principal": "ambas",
-       "motivo": "Obra para aplicar: partitura y tablatura.",
+       "motivo": "Partitura y tablatura juntas.",
        "bpms": [
         50,
-        66
+        80
        ],
        "notas": [
-        "Mira el {c:2}: la melodía, Mi, se queda; debajo entra el acorde **a contratiempo**.",
-        "En el {c:7} la voz sube por la escala menor melódica: Re♯, Do♯, Re♯, hasta Mi.",
-        "El {c:9-16} es la segunda sección. Las apoyaturas de {c:9}, {c:13} y {c:15} van dibujadas pequeñas; en la tablatura, su traste.",
-        "El {c:25-40} es el trío, en Mi mayor."
+        "Notas, dedos y mano derecha: los de la lección de Sky Guitar. En la segunda parte, la melodía con *m* y el Sol al aire con *i*, como dice Pablo Romero Luis.",
+        "Empieza con medio compás, La-Si-Do-Re. En el {c:25} se juntan el final de la primera sección y el principio de la segunda.",
+        "Sky Guitar lo toca a ♩ = 50 en su versión lenta. Para aprender, ♩ = 50 o menos."
        ]
       },
       {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "Transcrita a ojo de la edición de Richault. Los compases {c:13}, {c:29} y {c:37-39} son los de lectura menos segura: si algo no te suena, confía antes en tu oído y en tu profesor. La numeración «n.º 5» del currículo se ha tomado como la quinta pieza del cuaderno."
+       "tipo": "video",
+       "alLado": true,
+       "id": "24NzOR2I2Ag",
+       "titulo": "Pablo Romero Luis: el *Estudio n.º 6* de Carulli, tutorial en español",
+       "nota": "Parte a parte, con los dedos y los fallos más comunes: los bajos del principio y el compás de antes del Mi mayor, «el que todo el mundo para».",
+       "capitulos": [
+        [
+         51,
+         "La estructura"
+        ],
+        [
+         104,
+         "Parte A"
+        ],
+        [
+         224,
+         "Parte B"
+        ],
+        [
+         382,
+         "Parte C"
+        ],
+        [
+         521,
+         "Parte D"
+        ],
+        [
+         609,
+         "Cómo interpretarlo"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "YVWd1E7BmIM",
+       "titulo": "Sky Guitar: la misma obra, con tablatura",
+       "nota": "A tempo y en versión lenta, con la partitura y la tablatura en pantalla: es la fuente de los dedos de la academia."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El principio: la escala y la primera doble nota",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 700,
+        "notas": [
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i",
+          "texto": "La, con el dedo 2: una escalita con i y m."
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "m",
+          "texto": "Si."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i",
+          "texto": "Do, con el 1."
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 3,
+          "mano": "m",
+          "texto": "Re, con el 3."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i",
+          "con": [
+           {
+            "c": 1,
+            "t": 0,
+            "mano": "m"
+           }
+          ],
+          "texto": "Do y Mi a la vez: i y m juntos."
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "Y el bajo, La, con el pulgar."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "i",
+          "con": [
+           {
+            "c": 1,
+            "t": 0,
+            "mano": "m"
+           }
+          ]
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p"
+         }
+        ],
+        "final": "Doble nota, bajo, doble nota, bajo: así es casi toda la primera parte."
+       }
       }
      ]
     },
     {
-     "titulo": "Cómo se monta",
+     "titulo": "Cómo se trabaja",
      "bloques": [
       {
        "tipo": "pasos",
-       "titulo": "Por partes",
+       "titulo": "Como lo enseña Pablo",
        "items": [
-        "Solo la melodía, con el pulso marcado con el pie.",
-        "Solo los acordes a contratiempo, sin melodía: «nada, acorde, acorde, acorde».",
-        "Junta dos compases, muy lento.",
-        "Repite con cuatro compases, y sigue por frases de ocho."
+        "De ocho en ocho compases: A, B, C y D.",
+        "Primero cada doble nota sola, sin el bajo.",
+        "Después con el bajo, despacio: «uno de los fallos más comunes es equivocarte en los bajos».",
+        "Cuando ya salga, dinámicas y colores: más *ponticello* o más *tasto*, sin mucho *rubato*."
        ]
       },
       {
        "tipo": "ejercicio",
-       "que": "La primera sección, compases 1 a 8, hasta que los acordes entren en su sitio sin mirar.",
-       "porque": "Es el modelo del resto.",
-       "atencion": "El Mi largo del compás 2 tiene que seguir sonando mientras tocas los acordes: no levantes el dedo ni apagues.",
+       "que": "El estudio entero, parte a parte.",
+       "porque": "Reúne la doble nota, la escala con *i* y *m* y el bajo que alterna: lo que pide la música del Clasicismo.",
+       "atencion": "El bajo dura lo que dura: no lo cortes al tocar la doble nota siguiente.",
        "empieza": "♩ = 50.",
-       "sube": "Tres pasadas limpias a una velocidad en que el pulso no se mueve."
+       "sube": "Cuando lo tengas cogido, Pablo anima a tocarlo más rápido: «es más fácil de lo que parece»."
       },
       {
        "tipo": "metronomo",
-       "bpm": 50,
-       "clave": "o2-aguado-contradanza-op-8-n-5"
+       "clave": "o2-carulli-estudio-n-6",
+       "bpm": 50
       },
       {
-       "tipo": "errores",
+       "tipo": "bien",
        "items": [
-        {
-         "error": "El acorde a contratiempo cae en el pulso.",
-         "arreglo": "Toca la melodía sola y di «y» donde va el acorde. Luego añádelo."
-        },
-        {
-         "error": "La melodía larga se corta al tocar el acorde.",
-         "arreglo": "El dedo que pisa la melodía no se mueve; *a* no la vuelve a tocar."
-        }
+        "Las cuatro partes, sin parar.",
+        "Los bajos, en su sitio.",
+        "Las dobles notas suenan juntas, no una detrás de otra."
        ]
       }
      ]
@@ -1221,44 +1330,90 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "No toda cejilla tiene que ser de seis cuerdas. **Una cejilla parcial** pisa solo las cuerdas que suenan: cansa menos y deja libres los dedos. La pregunta útil, ante cualquier acorde de una obra: **¿qué cuerdas suenan de verdad aquí?**"
+     "md": "En la segunda parte hay una postura que vuelve una y otra vez: **Si y Re**, con el bajo, y su «amiga» **Mi y Sol**, que es la misma forma una cuerda más arriba. Pablo insiste en ponerlas con los **dedos 2 y 4**."
     },
     {
-     "tipo": "pasos",
-     "titulo": "Cómo decidir",
-     "items": [
-      "Mira qué notas del acorde se tocan en ese compás.",
-      "Cuenta las cuerdas que necesitas.",
-      "Si son tres o cuatro agudas, media cejilla basta.",
-      "Si el bajo está en la 6.ª, hace falta entera."
-     ]
+     "tipo": "concepto",
+     "titulo": "Por qué 2 y 4",
+     "md": "Con 1-3 o 1-4 parece más fácil al principio, pero el 2-4 deja **libres los dedos que hacen falta después** y permite tocarlo con agilidad. Es la idea de las formas móviles de este tramo: la misma postura, en otro sitio."
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-aguado-contradanza.json",
-     "titulo": "Dónde mirar: el trío",
+     "fuente": "notacion/obra-carulli-estudio-6.json",
+     "titulo": "La postura que vuelve",
      "principal": "ambas",
-     "motivo": "Para ver las cuerdas de cada acorde.",
+     "motivo": "Para ver el 2 y el 4.",
+     "bpms": [
+      50
+     ],
      "compases": [
-      25,
-      32
+      26,
+      29
      ]
     },
     {
-     "tipo": "elige",
-     "enunciado": "Un acorde solo usa las cuerdas 1, 2 y 3 en un mismo traste. ¿Qué cejilla pones?",
-     "opciones": [
-      "Entera, por seguridad",
-      "Parcial, de tres cuerdas",
-      "Ninguna, con tres dedos"
-     ],
-     "correcta": 1,
-     "porque": "Tres cuerdas en un traste: una cejilla parcial es lo más económico. Tres dedos también funcionan a veces, pero bloquean la mano."
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Si-Re y Mi-Sol: la misma forma",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "C",
+      "ms": 800,
+      "notas": [
+       {
+        "c": 2,
+        "t": 3,
+        "dedo": 4,
+        "mano": "m",
+        "con": [
+         {
+          "c": 5,
+          "t": 2,
+          "dedo": 2,
+          "mano": "p"
+         }
+        ],
+        "texto": "Re con el 4 y el bajo Si con el 2."
+       },
+       {
+        "c": 3,
+        "t": 0,
+        "mano": "i",
+        "texto": "El Sol al aire, con i."
+       },
+       {
+        "c": 1,
+        "t": 3,
+        "dedo": 4,
+        "mano": "m",
+        "con": [
+         {
+          "c": 4,
+          "t": 2,
+          "dedo": 2,
+          "mano": "p"
+         }
+        ],
+        "texto": "Sol con el 4 y Mi con el 2: la misma forma, una cuerda más arriba."
+       },
+       {
+        "c": 3,
+        "t": 0,
+        "mano": "i"
+       }
+      ],
+      "final": "La mano no cambia de forma: solo de cuerdas."
+     }
     },
     {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Las cejillas de esta obra son propuesta de la academia. La edición antigua no las indica, y hay más de una solución."
+     "tipo": "bien",
+     "items": [
+      "Pones Si-Re y Mi-Sol con 2 y 4 sin pensarlo.",
+      "El Sol al aire sigue sonando entre medias."
+     ]
     }
    ]
   },
@@ -1440,8 +1595,8 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-aguado-contradanza.json",
-     "titulo": "La *Contradanza*: primera sección",
+     "fuente": "notacion/obra-carulli-estudio-6.json",
+     "titulo": "Carulli, *Estudio n.º 6*: primera parte",
      "principal": "ambas",
      "bpms": [
       50,
@@ -1449,14 +1604,14 @@
      ],
      "compases": [
       1,
-      8
+      9
      ]
     },
     {
      "tipo": "bien",
      "items": [
       "Cuatro acordes con cejilla seguidos, limpios.",
-      "La *Contradanza* con la síncopa en su sitio, sin que los acordes caigan en el pulso.",
+      "El estudio, con los bajos en su sitio y las dobles notas juntas.",
       "Sabes qué acorde sale de una forma en cualquier traste."
      ]
     },

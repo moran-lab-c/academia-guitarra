@@ -372,6 +372,13 @@
         "{c:32-43} vuelve, y cierra.",
         "Fuente: IMSLP, edición de Stefan Nesyba, 2017 (CC BY-NC-SA). Transcrita a ojo; simplificada a dos voces en algunos acordes."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "DYxn94E2-Fw",
+       "titulo": "William Ghezzi: *Pavana III* de Milán",
+       "nota": "Para oírla entera: el pulso de blanca y las voces que entran."
       }
      ]
     },
@@ -441,9 +448,14 @@
        ],
        "notas": [
         "Allegro en La mayor, 3/4. Dos partes de 8 y de 17 compases.",
-        "{c:4-5} *i* y *m* juntos, *a* arriba.",
-        "Fuente: IMSLP, revisión de Edson Lopes, 1994. Transcrita a ojo. Dedos recalculados: propuesta."
+        "Fuente: IMSLP, revisión de Edson Lopes, 1994, con sus dedos y sus cejillas: C2 es cejilla en el II, y ₵2, media cejilla. La única mano derecha que marca es la del {c:5}: *i* y *m* en el acorde, *a* en el Mi."
        ]
+      },
+      {
+       "tipo": "video",
+       "id": "z8blTID4lZY",
+       "titulo": "Alex Salas: *Mrs. Winter's Jump*, clase en español",
+       "nota": "Después de leerla, no antes: para comprobar cómo suena y cotejar lo que has leído."
       }
      ]
     },

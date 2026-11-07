@@ -47,7 +47,7 @@ export function fuenteDe(item, parte = null) {
 export function notacionDibujada(item, parte, vista) {
   const src = fuenteDe(item, parte);
   if (!src) return h('p', { class: 'partitura__estado' }, 'Este contenido no tiene notación propia en la app.');
-  const contenedor = h('div', { class: 'partitura', 'data-vista': vista, 'aria-label': `${vista === 'ambas' ? 'Partitura y tablatura' : vista === 'partitura' ? 'Partitura' : 'Tablatura'} de ${item.titulo ?? item.nombre ?? ''}`, role: 'img' });
+  const contenedor = h('div', { class: 'partitura', 'data-vista': vista, 'aria-label': `${vista === 'ambas' ? 'Partitura y tablatura' : vista === 'partitura' ? 'Partitura' : 'Tablatura'} de ${(item.titulo ?? item.nombre ?? '').replaceAll('*', '')}`, role: 'img' });
   const pintar = ancho => {
     const clave = `${src.fuente}|${src.compases?.join('-') ?? ''}|${vista}|${ancho}`;
     const hecho = cacheSVG.get(clave);
@@ -221,8 +221,10 @@ export function dibujar(VF, plan, vista, ancho) {
         if (tab && x.n.dedos) x.n.dedos.filter(Boolean).forEach((d, k) => { ctx.setFont('Archivo, sans-serif', 11, 'bold'); ctx.setFillStyle(COLOR_DEDO[d] ?? '#1D1D1B'); ctx.fillText(String(d), xn + k * 8, tab.getYForLine(0) - (dosFilas && x.v === 0 ? 20 : 7)); });
         if (x.n.rotulo) { ctx.setFont('Archivo, sans-serif', 13, 'bold'); ctx.setFillStyle('#1D1D1B'); ctx.fillText(x.n.rotulo, xn, (stave ?? tab).getYForLine(0) - (stave ? 30 : dosFilas ? 34 : 22)); }
         if (plan.conteo && x.v === 0 && tab) {
-          const pulso = x.n.inicio, entero = Number.isInteger(pulso);
-          if (entero || Number.isInteger(pulso * 2)) { ctx.setFont('Courier Prime, monospace', 11, 'normal'); ctx.setFillStyle('#4A4A47'); ctx.fillText(entero ? String(pulso + 1) : 'y', xn, tab.getYForLine(5) + (conPartitura ? 42 : 76)); }
+          // En x/4, 1 e y a: la negra y sus cuartos. En x/8 (6/8, 3/8) se cuenta por corcheas, 1 a 6, y la semicorchea es «y».
+          const porCorchea = plan.compas.den === 8, pulso = porCorchea ? x.n.inicio * 2 : x.n.inicio, resto = pulso - Math.floor(pulso);
+          const dice = (porCorchea ? { 0: String(Math.floor(pulso) + 1), 0.5: 'y' } : { 0: String(Math.floor(pulso) + 1), 0.25: 'e', 0.5: 'y', 0.75: 'a' })[resto];
+          if (dice) { ctx.setFont('Courier Prime, monospace', 11, 'normal'); ctx.setFillStyle('#4A4A47'); ctx.fillText(dice, xn, tab.getYForLine(5) + (conPartitura ? 42 : 76)); }
         }
         ctx.restore();
       }

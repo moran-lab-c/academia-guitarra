@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t3",
- "nota": "Curso 2. Parte en Mi mayor del Romance. El camino al revés de Lágrima. Digitaciones y vibrato propuestos.",
+ "nota": "Curso 2. Parte en Mi mayor del Romance. El camino al revés de Lágrima. Digitaciones y vibrato propuestos. Romance: versión y dedos de Pablo Romero Luis (05-06/11/2026), con sus vídeos.",
  "pasos": {
   "n2.t3.l1.p1": {
    "bloques": [
@@ -343,13 +343,51 @@
      "notas": [
       "{c:17-18} se queda en primera posición: dedo 1 en la 3.ª y 4 en la melodía.",
       "{c:21} salto al VII: se suelta en el aire, durante la 3.ª nota del tresillo anterior.",
-      "{c:23-24} estás en VII, y a Si le llega el dedo 1; a Do♯, el 4.",
+      "{c:23-24} sigues en el VII, ya sin cejilla: a Si le llega el dedo 1, y el 4 pisa la nota de arriba.",
       "{c:25} deslizamiento o salto al IX: el traste 12 te espera.",
-      "{c:27-28} bajas al V: el dedo 1 hace de guía por la 1.ª."
+      "{c:27-28} bajas al V: el dedo 1 hace de guía por la 1.ª.",
+      "Los dedos de colores son los que dice Pablo en su clase; los demás no los dice y no se ponen. Las cejillas, como en su partitura."
      ],
      "compases": [
       17,
       32
+     ]
+    },
+    {
+     "tipo": "video",
+     "alLado": true,
+     "id": "iHNJit_D-MI",
+     "titulo": "Pablo Romero Luis: *Romance*, segunda parte, tutorial en español",
+     "nota": "Postura a postura, con un esquema de cada una y los dedos. Avisa: «tiene muchas más cejillas»; la más difícil es la del compás 19.",
+     "capitulos": [
+      [
+       113,
+       "Compases 17-18"
+      ],
+      [
+       189,
+       "La postura más difícil (c. 19-20)"
+      ],
+      [
+       376,
+       "Cejilla en el VII (c. 21-22)"
+      ],
+      [
+       430,
+       "Sin cejilla (c. 23-24)"
+      ],
+      [
+       503,
+       "Media cejilla en el IX (c. 25-26)"
+      ],
+      [
+       544,
+       "Media cejilla en el V (c. 27-28)"
+      ],
+      [
+       588,
+       "La vuelta y el final"
+      ]
      ]
     },
     {
@@ -381,11 +419,6 @@
        "Salto"
       ]
      ]
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "La digitación es la habitual y es propuesta de la academia. La edición que usamos no la trae."
     }
    ]
   },
@@ -443,7 +476,7 @@
       48
      ],
      "notas": [
-      "{c:23-26}: la melodía en la cejilla, traste 7 y 12, es donde mejor se oye.",
+      "{c:23-26}: la melodía arriba, del traste 7 al 12, es donde mejor se oye.",
       "{c:27}: Do♯, otra nota expuesta."
      ],
      "compases": [
@@ -565,11 +598,11 @@
        "motivo": "Por frases.",
        "bpms": [
         48,
-        66
+        84
        ],
        "notas": [
         "{c:17-20} empieza como en menor, pero con Sol♯: se oye la luz.",
-        "{c:21-24} cejilla en el VII y Do♯.",
+        "{c:21-24} el VII: primero con cejilla y después sin ella, con el Do♯ arriba.",
         "{c:25-28} el punto alto de la obra. Mi en el 12.",
         "{c:29-32} cierra: bajo, Si y Mi."
        ],
@@ -591,8 +624,17 @@
        "motivo": "Con repeticiones: cada parte, dos veces.",
        "bpms": [
         48,
-        72
+        84
+       ],
+       "notas": [
+        "Pablo Romero Luis lo toca a ♩ ≈ 84 en su demostración, y la primera parte de su guía, a ♩ ≈ 52. Para aprender, ♩ = 48."
        ]
+      },
+      {
+       "tipo": "video",
+       "id": "sWOfRv7EJZc",
+       "titulo": "Pablo Romero Luis: tres trucos para que el *Romance* suene mejor",
+       "nota": "Para cuando ya la tengas entera: pequeños ajustes de cómo tocarla, sin ir más rápido."
       },
       {
        "tipo": "ejercicio",
@@ -818,7 +860,7 @@
      "motivo": "Toca con esta o sin ella.",
      "bpms": [
       48,
-      72
+      84
      ]
     },
     {

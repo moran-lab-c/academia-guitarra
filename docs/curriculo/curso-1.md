@@ -57,7 +57,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | Cómo estudiar | Repite hasta que sale | Lento y limpio; por frases; comprobar otro día | Estudia una frase nueva sin ayuda |
 | Creatividad | — | Improvisar una melodía sobre I-IV-V; acompañar una canción | Improvisa frases que suenan a pregunta y respuesta |
 | Tocar con otros | — | Sobre una pista; acompañar una melodía grabada | Mantiene el pulso de la pista |
-| Historia y estilo | — | La vihuela y la *Romanesca*; Sanz; Sor y Giuliani; Tárrega; Brouwer | Sitúa cada obra en su época |
+| Historia y estilo | — | La vihuela y la *Romanesca*; Sanz; Sor, Aguado y Giuliani; Tárrega; Brouwer | Sitúa cada obra en su época |
 
 ## Cómo progresa dentro del nivel
 - **Técnica:** sonido (T2) → dos planos (T3) → arpegio clásico (T4) → dedo guía (T5) → nota destacada y armónicos (T6) → media cejilla (T7) → alternancia, cruces y primer trémolo (T9) → ligados (T10) → rasgueado (T11) → mordente y apagar voces (T12) → cejilla completa (T13).
@@ -71,7 +71,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | Bach (Petzold), *Minueto en Sol* | Lectura | 2 |
 | *Greensleeves* | Aplicación: melodía y bajo | 3 |
 | Tárrega, *Lágrima* | Troncal: por partes y de memoria | 5, 7, 8 |
-| Giuliani, op. 1, parte 4, n.º 3 | Aplicación: el arpegio en una pieza | 6 |
+| Aguado, *Estudio en La menor* | Aplicación: el arpegio en una pieza | 6 |
 | Su *Estudio en Mi menor* | Conocida: análisis, armónicos y memoria | 1, 6 |
 | Tárrega, *Estudio en Do* | Aplicación: alternancia y cruces | 9 |
 | Sor, *Andante* op. 44 n.º 1 | Lectura: la primera obra leída entera | 10 |
@@ -79,6 +79,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | Anónimo, *Romanesca* | Aplicación: Renacimiento | 12 |
 | Sanz, *Españoleta* | Troncal: Barroco | 12 |
 | Sor, *Andante* op. 31 n.º 4 | Troncal: Clasicismo | 13 |
+| Giuliani, *Allegro* op. 50 n.º 13 | Aplicación: el arpegio clásico, rápido | 13 |
 | **Alternativas** | Dowland, *Mrs. Winter's Jump*; Giuliani op. 50 n.º 17 (pasan a lectura en el nivel 3) | |
 
 ## Mapa de tramos
@@ -89,7 +90,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 | 3 | *Greensleeves* | Dos planos; bajos y dos voces; tono y semitono; Do mayor; puntillo; ¿sube o baja?; dejar sonar el bajo |
 | 4 | Mi mayor: Mi–La–Si7–Mi | Escala y triada; funciones; el tritono; arpegio de Giuliani; dedo común; I-IV-V en Do y Sol; improvisar; calidad de la triada |
 | 5 | *Lágrima*, parte A | Dedo guía y posiciones; montar la A; la frase; cantar la melodía; diapasón |
-| 6 | Giuliani op. 1 y su *Estudio en Mi menor* | Nota destacada; inversiones; armónicos XII, VII y V; corcheas en 3/4; funciones en menor |
+| 6 | Aguado, *Estudio en La menor*, y su *Estudio en Mi menor* | Nota destacada; inversiones; armónicos XII, VII y V; semicorcheas en 2/4; funciones en menor |
 | 7 | Mi menor y la parte B de *Lágrima* | Tres menores; relativo y homónimo; media cejilla; leer sostenidos; mayor o menor |
 | 8 | *Lágrima* entera | A-B-A; memoria; cantar y contar la B; el vibrato al oído |
 | 9 | Tárrega, *Estudio en Do* | Alternancia y cruces; cromática; Do y Sol mayor; intervalos; primera vista; el primer trémolo |
@@ -251,7 +252,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 4. Diapasón · Las notas de la melodía de la A: en qué cuerda y traste están.
 5. Comprobación del tramo · La A sin parar, con la melodía arriba.
 
-## Tramo 6 · Giuliani op. 1, parte 4, n.º 3, y su *Estudio en Mi menor*
+## Tramo 6 · Aguado, *Estudio en La menor*, y su *Estudio en Mi menor*
 **L6.1 · La nota que canta** {MD, Arpegios, Sonido}
 1. Cómo se hace · Más peso en un dedo dentro del arpegio.
 2. Ejercicio · **E-N1-09 Nota destacada** · T + 𝄞 · ⏱.
@@ -263,19 +264,19 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 3. Análisis · Su *Estudio en Mi menor*: los acordes y la cadencia Mi–Re♯–Do♯–Re♯–Mi de cada bloque de ocho compases · T.
 
 **L6.3 · Las obras** {Repertorio, Ritmo, Lectura}
-1. Ritmo · Corcheas en 3/4: «1 y 2 y 3 y» · ⏱.
-2. Obra · **Giuliani op. 1, parte 4, n.º 3** · 𝄞 + T · ⏱.
+1. Ritmo · Semicorcheas en 2/4: «1 e y a 2 e y a» · ⏱.
+2. Obra · **Aguado, *Estudio en La menor*** (*Lección 19* de su *Nuevo método*), con el arpegio p-i-m-i · 𝄞 + T · ⏱.
 3. Obra conocida · Su *Estudio en Mi menor*, con la nota destacada.
-4. Lectura · Los cuatro primeros compases del estudio de Giuliani, desde la partitura, despacio · 𝄞.
+4. Lectura · Los cuatro primeros compases del estudio de Aguado, desde la partitura, despacio · 𝄞.
 
 **L6.4 · Los armónicos naturales** {Recursos, Diapasón}
 1. Cómo se hace · Rozar la cuerda encima del traste y soltar al pulsar: XII, VII y V.
 2. Diapasón · Qué nota suena en cada traste: la octava en el XII; la 5.ª, una octava más arriba, en el VII; dos octavas en el V · ✎.
-3. Aplicación · Los armónicos de los compases 67 y 69 de su estudio.
+3. Aplicación · Los armónicos de los compases 67 y 69 de su *Estudio en Mi menor*.
 
 **L6.5 · Las funciones en menor** {Oído, Armonía}
 1. Oído · ¿I, IV o V? en Mi menor · ✎.
-2. Comprobación del tramo · Arpegio con nota destacada; una pregunta de inversiones; el estudio de Giuliani.
+2. Comprobación del tramo · Arpegio con nota destacada; una pregunta de inversiones; el estudio de Aguado.
 
 ## Tramo 7 · Mi menor y la parte B de *Lágrima*
 **L7.1 · Las tres menores** {Teoría, Escalas}
@@ -383,7 +384,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 2. Explicación · El ostinato: un dibujo que se repite mientras algo cambia encima o debajo.
 
 **L11.2 · El estudio** {Repertorio, MD, Arpegios}
-1. Obra · **Brouwer, *Estudio sencillo* VI** · edición publicada (con derechos) · ⏱ · **[Por verificar]** qué fórmula de mano derecha trabaja.
+1. Obra · **Brouwer, *Estudio sencillo* VI** · edición publicada (con derechos) · ⏱ · El arpegio que baja: el pulgar en el bajo y a-m-i de la 1.ª a la 3.ª cuerda, en semicorcheas (comprobado en el tutorial de Alex Salas).
 2. Fíjate en… · Qué cambia y qué se queda en cada sección.
 
 **L11.3 · Rasguear para acompañar** {MD, Acordes}
@@ -428,7 +429,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 **L12.6 · La *Españoleta*** {Repertorio, Armonía, Musicalidad, Oído}
 1. Obra · **Sanz, *Españoleta***, primera mitad y entera; pasa al atril · T + 𝄞 · ⏱.
 2. Explicación · Cadencias perfecta, plagal y semicadencia.
-3. Aplicación · La hemiolia antes de la cadencia, y las cadencias de la obra · 𝄞.
+3. Aplicación · Las cadencias de la obra: dónde termina cada frase y si es conclusiva o suspensiva · 𝄞.
 4. Oído · Conclusiva o suspensiva · ✎.
 5. Fíjate en… · El carácter de una danza: el pulso que se baila.
 6. Comprobación del tramo · La *Españoleta* entera.
@@ -449,10 +450,11 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 4. Consejo del profesor · Si duele la base del pulgar, sobra fuerza. En el nivel 2 baja a los trastes difíciles.
 
 **L13.4 · La obra** {Repertorio, Musicalidad, Lectura, Recursos}
-1. Obra · **Sor, *Andante* op. 31 n.º 4** · 𝄞 + T · ⏱ · **[Por verificar]** su tonalidad en la edición elegida.
+1. Obra · **Sor, *Andante* op. 31 n.º 4**, en Re mayor (edición Simrock) · 𝄞 + T · ⏱.
 2. Análisis · La forma y la tónica-dominante · 𝄞.
 3. Fíjate en… · La articulación clásica: frases que preguntan y responden. Y el color de la repetición: puede ir más cerca de la boca, en tasto.
 4. Primera vista · Ocho compases en La mayor · 𝄞.
+5. Obra · **Giuliani, *Allegro* op. 50 n.º 13** (*La mariposa*): el arpegio clásico, rápido y ligero · 𝄞 + T · ⏱.
 
 **L13.5 · Repetir de oído y el trémolo, otra vez** {Oído, Solfeo, Trémolo}
 1. Oído · La app toca dos veces una melodía corta en La mayor; él la canta y después la toca · ♪.
@@ -467,7 +469,7 @@ Anexo del [[CURRICULO-MAESTRO]] (versión 3.1). **Aprobado. para su revisión.**
 **L14.2 · El recital** {!Repertorio, !Interpretación, !Musicalidad, !Memoria, !Sonido, !Postura, !MD, !Polifonía}
 1. Obra · *Lágrima*, de memoria (o la obra equivalente que él elija).
 2. Obra · La *Españoleta* o la *Romanesca* (o Dowland, *Mrs. Winter's Jump*).
-3. Obra · Sor op. 31 n.º 4, o Brouwer (o Giuliani op. 50 n.º 17).
+3. Obra · Sor op. 31 n.º 4, o Brouwer, o Giuliani, *La mariposa* n.º 13.
 4. Grabarse, opcional.
 
 **L14.3 · La prueba corta** {!Escalas, !Arpegios, !Cejilla, !Lectura, !Oído, !Teoría, !Armonía, !Acordes}

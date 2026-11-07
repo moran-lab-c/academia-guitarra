@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t5",
- "nota": "Curso 2. Carcassi sale de Mutopia. Lo que trabaja se ha descrito mirando la propia partitura. Las cuatriadas abiertas son formas habituales.",
+ "nota": "Curso 2. Carcassi sale de Mutopia, cotejado con las dos clases de Pablo Romero Luis (06/11/2026): sus cuerdas, sus dedos dichos y su mano derecha. Las cuatriadas abiertas son formas habituales.",
  "pasos": {
   "n2.t5.l1.p1": {
    "bloques": [
@@ -712,22 +712,165 @@
        "principal": "ambas",
        "motivo": "Partitura y tablatura.",
        "bpms": [
-        50,
-        80
+        40,
+        72
        ],
        "notas": [
         "Allegro en La menor, dos partes. Cada grupo de cuatro semicorcheas empieza con el bajo: {c:1}.",
         "El {c:9} pasa a Do mayor: oye el cambio de luz.",
         "El {c:16-20} es la zona de los ligados: Fa-Mi, Sol♯-Mi, Si-Mi.",
         "El {c:23} pisa bemol: ahí está la sorpresa, Si♭.",
-        "Fuente: Mutopia, dominio público. Digitación y mano derecha: propuesta de la academia."
+        "Dedos y mano derecha: los que dice Pablo Romero Luis en sus dos clases; donde no dice nada, no se ponen. En los {c:17-19} van sus cuerdas, en primera posición.",
+        "Pablo lo toca a tres velocidades: ♩ ≈ 40, ≈ 72 y una rápida. Para aprender, ♩ = 40."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "ETF4VEyemnM",
+       "titulo": "Pablo Romero Luis: Carcassi, estudio 7, primera clase",
+       "nota": "Explica las tres técnicas del estudio —trémolo, arpegios y acordes plaqué— y monta los primeros compases diciendo los dedos.",
+       "capitulos": [
+        [
+         72,
+         "El trémolo p-a-m-i"
+        ],
+        [
+         121,
+         "Compás 1"
+        ],
+        [
+         149,
+         "Los arpegios"
+        ],
+        [
+         175,
+         "Practicarlo en plaqué"
+        ],
+        [
+         290,
+         "La parte en Do mayor"
+        ],
+        [
+         332,
+         "La sección de trémolos"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "L5MUoxTT3ZA",
+       "titulo": "Pablo Romero Luis: Carcassi, estudio 7, segunda clase",
+       "nota": "Del compás 15 al final: los ligados, la posición IV, la vuelta al principio y la media cejilla en el III, «la parte más odiada de todos mis alumnos».",
+       "capitulos": [
+        [
+         113,
+         "Compases 15-16"
+        ],
+        [
+         162,
+         "Los ligados"
+        ],
+        [
+         225,
+         "Posición IV y vuelta a la I"
+        ],
+        [
+         437,
+         "La vuelta: compás 21"
+        ],
+        [
+         457,
+         "Media cejilla en el III"
+        ],
+        [
+         593,
+         "Compás 25 y final"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "VRYDGY-hJeU",
+       "titulo": "Pablo Romero Luis: el estudio entero, a tres velocidades",
+       "nota": "Para tocar encima: lenta, media y rápida."
       }
      ]
     },
     {
      "titulo": "Lo que trabaja",
      "bloques": [
+      {
+       "tipo": "concepto",
+       "titulo": "Tres técnicas en un estudio",
+       "md": "Pablo lo resume así: **trémolo**, **arpegios** y **acordes plaqué**. El trémolo es *p-a-m-i*: el pulgar en el bajo y *a*, *m* e *i* repitiendo la misma nota. Los arpegios son *p-i-a-i* cuando la nota de arriba está en la 1.ª cuerda, y *p-i-m-i* cuando son dos cuerdas seguidas. Y cualquier compás se puede estudiar en **plaqué**: todas las notas de cada grupo a la vez."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El compás 1: trémolo con el dedo 2 fijo",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 600,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: el La grave, al aire."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "a",
+          "texto": "a, m, i: el La de la 3.ª, con el dedo 2. No se levanta en todo el compás."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         },
+         {
+          "c": 5,
+          "t": 3,
+          "dedo": 3,
+          "mano": "p",
+          "texto": "p: el Do, con el dedo 3."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "a"
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         }
+        ],
+        "final": "El bajo es una melodía —La, Do, Fa, Mi— en negras: déjalo sonar, como canta Pablo."
+       }
+      },
       {
        "tipo": "lista",
        "titulo": "Cómo es por dentro",
@@ -742,12 +885,12 @@
        "que": "Primera parte, ocho compases.",
        "porque": "Es un estudio: cada cosa, aislada, y luego junta.",
        "atencion": "El bajo lleva la melodía. *p* tiene que salir lleno; las notas repetidas, igual de suaves.",
-       "empieza": "♩ = 50.",
-       "sube": "Cuando esté limpio; el allegro llegará mucho después."
+       "empieza": "♩ = 40, la velocidad lenta de Pablo.",
+       "sube": "Cuando esté limpio: después, ♩ = 72."
       },
       {
        "tipo": "metronomo",
-       "bpm": 50,
+       "bpm": 40,
        "clave": "o2-carcassi-op-60-n-7"
       }
      ]
@@ -818,8 +961,8 @@
      "titulo": "El estudio",
      "principal": "ambas",
      "bpms": [
-      50,
-      80
+      40,
+      72
      ]
     },
     {

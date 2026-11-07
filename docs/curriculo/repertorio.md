@@ -56,7 +56,7 @@ El programa de cierre (de 10 a 30 minutos) sale de ahí. Si se tocara todo lo li
 | Bach (Petzold), *Minueto en Sol* | Tutorial de Sky Guitar | Lectura | Primera lectura; apoyando; melodía y bajo | Notas de la 1.ª a la 3.ª cuerda; figuras; el minueto | Barroco · DP |
 | *Greensleeves* | Tutorial de Pablo Romero Luis | Aplicación | Melodía y bajo; dos voces escritas | Puntillo; modo dórico; la frase | Renacimiento · DP |
 | Tárrega, *Lágrima* | RCM 4 · EPM 1 | Troncal (o equivalente) | Melodía acompañada; dedo guía; media cejilla; memoria | Mi mayor y menor; homónimo; ABA | Romanticismo · DP |
-| Giuliani, op. 1, parte 4, n.º 3 | RCM 3 | Aplicación | El arpegio en una pieza | Inversiones | Clasicismo · DP |
+| Aguado, *Estudio en La menor* | Tutoriales de GuitarTutos y Pep Guitar | Aplicación | El arpegio p-i-m-i en una pieza | Inversiones; semicorcheas | Clasicismo · DP |
 | Su *Estudio en Mi menor* | Suya | Conocida | Nota destacada; armónicos; memoria | Cadencias; inversiones | Suya |
 | Tárrega, *Estudio en Do* | RCM 3 | Aplicación | Alternancia y cruces | Intervalos; Do y Sol mayor | Romanticismo · DP |
 | Sor, *Andante* op. 44 n.º 1 | RCM 2 | Lectura | La primera obra leída entera | Fa mayor; primer bemol | Clasicismo · DP |
@@ -64,23 +64,24 @@ El programa de cierre (de 10 a 30 minutos) sale de ahí. Si se tocara todo lo li
 | Anónimo, *Romanesca* | LR EE 4 | Aplicación | Apagar voces | Un bajo que se repite; la romanesca | Renacimiento · DP |
 | Sanz, *Españoleta* | RCM 2 y 3 · LR EP 1 | Troncal | Danza barroca; mordente; hemiolia | Cadencias; 6/8; la cifra | Barroco · original DP |
 | Sor, *Andante* op. 31 n.º 4 | RCM 4 | Troncal | Estilo clásico | Forma; tónica y dominante | Clasicismo · DP |
+| Giuliani, *Allegro* op. 50 n.º 13 | Tutorial de Pablo Romero Luis | Aplicación | Arpegio p-i-m-i-a-i-m-i; pulgar e índice | La menor; Mi7 | Clasicismo · DP |
 | *Alternativas* | Dowland, *Mrs. Winter's Jump*; Giuliani op. 50 n.º 17 (RCM 4) | Alternativa | | | DP |
 
 ## 4. Nivel 2
 | Obra | Fuentes | Tipo | Técnica y competencia | Teoría, lectura y música | Época · derechos |
 |---|---|---|---|---|---|
-| Aguado, *Contradanza* op. 8 n.º 5 | RCM 5 | Aplicación | Cejilla en una danza; síncopa | Formas móviles; 2/2 | Clasicismo · DP |
+| Carulli, *Estudio n.º 6* | Tutoriales de Sky Guitar y Pablo Romero Luis | Aplicación | Dobles notas sobre el bajo; la misma postura en otra cuerda | La menor y Do mayor; A-B-A y C-D-C | Clasicismo · DP |
 | Anónimo, *Romance* | RCM 5 | Troncal | Melodía en *a*; tresillos; traslados; vibrato | Homónimo; círculo de quintas | Romanticismo · DP |
-| Giuliani, *Sonatina* op. 71, I | LR EP 1 | Troncal | a-m-i; staccato | Forma sonatina; estilo | Clasicismo · DP · **[Por verificar]** cuál de las tres |
-| Carcassi, op. 60 n.º 7 | RCM 5 | Aplicación | Estudio **[Por verificar]** lo que trabaja | Armaduras con bemoles | Clasicismo · DP |
-| Dowland, *Willoughby* | RCM 5 · EPM 1-2 | Troncal | Dos voces; pulgar con melodía; ligados | Variación | Renacimiento · DP |
-| Petzold, *Minueto* BWV Anh. 114 | RCM 5 | Lectura | Una obra leída; un dúo | Binaria; articulación | Barroco · DP |
-| Sor, op. 44 n.º 2 | RCM 2 · LR EE 2 | Lectura | Una obra leída | — | Clasicismo · DP |
-| Tárrega, *Preludio n.º 1* | LR EP 1 · EPM 2 | Aplicación | Preludio breve **[Por verificar]** | El V7 | Romanticismo · DP |
-| Giuliani, op. 51 n.º 10 | RCM 5 | Aplicación | Arpegio con cambio de acorde | ii-V-I; V/V | Clasicismo · DP |
-| Sor, op. 35 n.º 8 | RCM 5 · LR EP 1 | Aplicación | Clasicismo | Modulación **[Por verificar]** | Clasicismo · DP |
+| Carcassi, op. 60 n.º 3 | Tutoriales de Sky Guitar y Alex Salas | Aplicación | Arpegio continuo sobre el bajo; cejillas en el II, V, VII y IX | La mayor; la forma con vuelta; la modulación a la dominante | Clasicismo · DP |
+| Carcassi, op. 60 n.º 7 | RCM 5 · tutorial de Pablo Romero Luis | Aplicación | Trémolo p-a-m-i, arpegios y ligados descendentes | Armaduras con bemoles | Clasicismo · DP |
+| Anónimo, *Packington's Pound* | Tutoriales de Elite Guitarist y This is Classical Guitar | Troncal | Dos voces; el bajo que se sostiene | Variación: la misma música adornada | Renacimiento · DP |
+| Petzold, *Minueto en Sol menor* BWV Anh. 115 | Tutorial de Sky Guitar | Lectura | Una obra leída; un dúo; adornos | Binaria; el relativo mayor; articulación | Barroco · DP |
+| Sor, op. 44 n.º 2 | RCM 2 · LR EE 2 · tablatura de Guitar Notes | Lectura | Una obra leída | — | Clasicismo · DP |
+| Tárrega, *Preludio n.º 1* | LR EP 1 · EPM 2 · clase de Rafael Elizondo | Aplicación | Melodía sobre acordes; ligados descendentes; cejillas de un momento; 6.ª en Re | Re menor; el V7 | Romanticismo · DP |
+| Carcassi, op. 60 n.º 2 | Tutorial de Pablo Romero Luis | Aplicación | Arpegio p-i-m-a-m-i-m-i con cambio de acorde; posiciones hasta la X | La menor; dominantes secundarias; ii-V-I en menor | Clasicismo · DP |
+| Sor, op. 35 n.º 17 | Grado 5 · lección de Sky Guitar | Aplicación | Melodía y acompañamiento a dos voces; posición II | Re mayor; modulación a la dominante; el homónimo menor | Clasicismo · DP |
 | Coste, op. 38 n.º 1 | LR EP 1 · RCM 6 | Aplicación | Armónicos; glissando; extensiones | Color con intención | Romanticismo · DP |
-| Brouwer, *Estudio sencillo* VII | LR EP 1 · EPM 1 | Aplicación | **[Por verificar]** lo que trabaja | Acentos | Siglo XX · con derechos |
+| Brouwer, *Estudio sencillo* VII | LR EP 1 · EPM 1 · tutoriales de Alex Salas y Rafael Elizondo | Aplicación | Ligados a cuerdas al aire; dinámicas; *ponticello* | 12/8 y 9/8; acentos | Siglo XX · con derechos |
 | *Alternativas* | Tárrega, *Sueño* (la mazurka; EPM 1); Giuliani op. 48 n.º 1; Coste, *La chasse*; M. D. Pujol, *Preludio*; Brouwer X y XI | Alternativa | | | |
 
 **Corrección:** *Sueño* aparecía en la V3 como obra de trémolo. En EPM 1 figura «*Sueño* (Mazurka)», y el estudio de trémolo es otra obra del mismo nombre.
@@ -88,8 +89,8 @@ El programa de cierre (de 10 a 30 minutos) sale de ahí. Si se tocara todo lo li
 ## 5. Nivel 3
 | Obra | Fuentes | Tipo | Técnica y competencia | Teoría, lectura y música | Época · derechos |
 |---|---|---|---|---|---|
-| Sor, op. 35 n.º 22 | RCM 6 | Aplicación | Arpegio con melodía en cejilla | Si menor; antecedente y consecuente | Clasicismo · DP |
-| Tárrega, *Adelita* | RCM 6 · LR EP 2 · EPM 1-3 | Troncal | Portamento; posición IX; rubato | Homónimo; ternaria | Romanticismo · DP |
+| Sor, op. 35 n.º 22 | RCM 6 · lección de Sky Guitar y tutorial de Pablo Romero Luis | Aplicación | Arpegio con melodía en cejilla | Si menor; antecedente y consecuente | Clasicismo · DP |
+| Tárrega, *Adelita* | RCM 6 · LR EP 2 · EPM 1-3 · lección de Sky Guitar y clases de Pablo Romero Luis | Troncal | Portamento; posición IX; rubato | Homónimo; ternaria | Romanticismo · DP |
 | Bach, *Bourrée* BWV 996 | RCM 6 · EPM 1 y 3 | Troncal | Contrapunto; trino | Modulación; dominantes secundarias | Barroco · DP |
 | Sanz, *Canarios* | RCM 7 · LR EP 2 | Aplicación | Rasgueado barroco; campanela; ráfagas | Una progresión de danza | Barroco · DP |
 | Milán, *Pavana III* | RCM 6 | Aplicación | La vihuela y su cifra | Modos, primer vistazo | Renacimiento · DP |

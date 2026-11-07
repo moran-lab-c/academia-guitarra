@@ -112,6 +112,62 @@
      ]
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Apoyando, i y m alternando",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "C",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 2,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 2,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 2,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 2,
+        "t": 0,
+        "mano": "m"
+       }
+      ],
+      "final": "Cada dedo atraviesa la cuerda y se queda apoyado en la de al lado."
+     }
+    },
+    {
      "tipo": "metronomo",
      "bpm": 60
     },

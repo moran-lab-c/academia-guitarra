@@ -501,8 +501,20 @@
         "Re mayor, 6/8, anacrusa. Son variaciones breves sobre un mismo bajo.",
         "{c:1-8} primera idea.",
         "Los adornos de la edición se han escrito como notas: los oirás muy rápidos.",
-        "Fuente: IMSLP, edición con MIDI, sobre 1674. Dedos y mano derecha, propuesta. Primeros 96 compases."
+        "Fuente: IMSLP, edición con MIDI, sobre 1674. Sin dedos: las clases de YouTube enseñan otros arreglos (el de Yepes, con la 6.ª en Re, o el de Ken Phang), y aquí no se inventan. La tablatura pone las cuerdas."
        ]
+      },
+      {
+       "tipo": "video",
+       "id": "xshFy0RqmxI",
+       "titulo": "Alex Salas: *Canarios*, clase en español (parte 1)",
+       "nota": "Ojo: enseña el arreglo de Narciso Yepes, con la 6.ª cuerda en Re y acordes rasgueados; la melodía es la misma, las notas no siempre. Sirve para los ligados y los rasgueos."
+      },
+      {
+       "tipo": "video",
+       "id": "LFoot2sahUo",
+       "titulo": "Alex Salas: *Canarios*, parte 2",
+       "nota": "El resto del arreglo de Yepes."
       }
      ]
     },

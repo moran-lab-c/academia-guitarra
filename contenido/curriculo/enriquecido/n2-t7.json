@@ -1,18 +1,22 @@
 {
  "tramo": "n2.t7",
- "nota": "Curso 2. Petzold y Sor, dos obras para leer. La primera, con MIDI de IMSLP; la segunda, de Mutopia.",
+ "nota": "Curso 2. El Minueto en Sol menor de Petzold (la pareja del Minueto en Sol, que ya está en el Curso 1), en la versión para guitarra de Sky Guitar, con sus dedos; Sor op. 44 n.º 2 cotejado con Guitar Notes y completado (40 compases). 06/11/2026.",
  "pasos": {
   "n2.t7.l1.p1": {
    "bloques": [
     {
      "tipo": "concepto",
-     "titulo": "Una atribución equivocada",
-     "md": "Durante siglos se dijo que este minueto, el más famoso del Barroco, era de Bach. Está en el **cuaderno de Anna Magdalena Bach**, una libreta familiar de 1725 donde su mujer copiaba música para aprender y enseñar. En los años 70 del siglo XX se demostró que era de **Christian Petzold** (1677-1733), organista de Dresde. Moraleja: lo que parece seguro a veces no lo es."
+     "titulo": "La pareja del Minueto en Sol",
+     "md": "En el nivel 1 tocaste el *Minueto en Sol*. En el **cuaderno de Anna Magdalena Bach**, la libreta familiar de 1725 donde su mujer copiaba música para aprender y enseñar, justo después va otro: el ***Minueto en Sol menor***. Durante siglos se dijeron de Bach; en los años 70 del siglo XX se demostró que los dos son de **Christian Petzold** (1677-1733), organista de Dresde."
     },
     {
      "tipo": "concepto",
      "titulo": "El minueto",
      "md": "Danza francesa en 3/4, en parejas, con pasos pequeños y elegantes. Pasó del baile a la música de cámara, y la forma se quedó aunque ya nadie bailara."
+    },
+    {
+     "tipo": "texto",
+     "md": "El original está en Sol menor. La versión para guitarra lo pasa a **Mi menor**, una tonalidad cómoda en la guitarra: Mi, Sol y Si, las notas de su acorde, son cuerdas al aire."
     }
    ]
   },
@@ -21,7 +25,7 @@
     {
      "tipo": "concepto",
      "titulo": "La forma binaria",
-     "md": "Dos partes, **A** y **B**, y cada una se repite: AABB. A sale de la tónica y acaba en otra parte; B vuelve y termina en la tónica. Es la abuela de la sonata: en pequeño, el mismo viaje."
+     "md": "Dos partes, **A** y **B**, y cada una se repite: AABB. A sale de la tónica y acaba en otra tonalidad; B vuelve y termina en la tónica. Es la abuela de la sonata: en pequeño, el mismo viaje."
     },
     {
      "tipo": "tabla",
@@ -34,28 +38,29 @@
       [
        "**A**",
        "1-16",
-       "De Sol a Sol, y se repite"
+       "Sale de Mi menor y acaba en Sol mayor, su relativo. Se repite"
       ],
       [
        "**B**",
        "17-32",
-       "Sale a Re, Mi menor; vuelve a Sol"
+       "Sale de Sol y vuelve a Mi menor. Se repite"
       ]
      ]
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-petzold-minueto.json",
+     "fuente": "notacion/obra-petzold-minueto-sol-menor.json",
      "titulo": "Mira las dos partes",
      "principal": "partitura",
      "motivo": "Se lee en partitura.",
      "bpms": [
-      80,
-      96
+      46,
+      88
      ],
      "notas": [
-      "El {c:16} acaba A: reposa. El {c:32} acaba B: reposa.",
-      "En el {c:17} empieza B: lo oirás como un cambio de luz."
+      "El {c:16} acaba A en Sol mayor: reposa, pero lejos de casa.",
+      "En el {c:25}, el Sol♯ del bajo anuncia la vuelta: la música se encamina a Mi menor.",
+      "El {c:32} acaba B en Mi menor: ahora sí, en casa."
      ]
     }
    ]
@@ -71,9 +76,24 @@
      "tipo": "pasos",
      "titulo": "Cómo se hace",
      "items": [
-      "Toca el compás 1 sin arrastrar las corcheas.",
+      "Toca el {c:3} sin arrastrar las corcheas: Mi, Fa♯, Sol, La.",
       "Suelta un poco el dedo izquierdo entre nota y nota.",
-      "Da peso al 1 y aligera el 2 y el 3."
+      "Da peso al 1 y aligera el 2 y el 3.",
+      "En el {c:2}, los dos Si llevan punto: staccato, más cortos todavía."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-petzold-minueto-sol-menor.json",
+     "titulo": "Los compases 1-4",
+     "principal": "partitura",
+     "motivo": "Se lee en partitura.",
+     "bpms": [
+      46
+     ],
+     "compases": [
+      1,
+      4
      ]
     },
     {
@@ -83,8 +103,16 @@
        "etiqueta": "Ligado",
        "notas": [
         [
-         2,
-         3
+         1,
+         0
+        ],
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         4
         ],
         [
          3,
@@ -97,14 +125,6 @@
         [
          2,
          0
-        ],
-        [
-         2,
-         1
-        ],
-        [
-         2,
-         3
         ]
        ],
        "duracion": 0.5
@@ -113,8 +133,17 @@
        "etiqueta": "Un poco separado",
        "notas": [
         [
-         2,
-         3
+         1,
+         0
+        ],
+        [],
+        [
+         4,
+         2
+        ],
+        [
+         4,
+         4
         ],
         [],
         [
@@ -129,15 +158,6 @@
         [
          2,
          0
-        ],
-        [
-         2,
-         1
-        ],
-        [],
-        [
-         2,
-         3
         ]
        ],
        "duracion": 0.3
@@ -183,6 +203,25 @@
      ]
     },
     {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-petzold-minueto-sol-menor.json",
+     "titulo": "Los adornos del minueto",
+     "principal": "ambas",
+     "motivo": "Las notas pequeñas son los adornos.",
+     "bpms": [
+      46
+     ],
+     "compases": [
+      8,
+      9
+     ],
+     "notas": [
+      "En el {c:8}, la nota pequeña, Sol, va justo antes del Fa♯: un adorno rápido.",
+      "En el {c:9}, el acorde se arpegia (de grave a agudo, la línea ondulada de la partitura de Sky Guitar) y las tres notas pequeñas, Sol-Fa♯-Sol, ligadas al Fa♯, son un trino corto: empieza por la nota de arriba, como en el Barroco. Sky los toca con los dedos 3 y 1.",
+      "En el {c:15} hay otro trino corto, Si-La-Si, que Sky toca con *m-i-m*; después, el La y el Re del bajo, juntos, con *p*."
+     ]
+    },
+    {
      "tipo": "pasos",
      "titulo": "Cómo se hace",
      "items": [
@@ -209,24 +248,25 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-petzold-minueto-bwv-anh-114",
-       "md": "**Por qué está aquí:** es la obra de lectura: primera lectura entera de Barroco. **Qué escuchar:** la melodía de arriba conversa con un bajo sencillo. **Dificultad:** baja; precisamente por eso se lee, no se memoriza."
+       "id": "o2-petzold-minueto-en-sol-menor-bwv-anh-115",
+       "md": "**Por qué está aquí:** es la obra de lectura del Barroco, con dos voces y adornos. **Qué escuchar:** la melodía arriba y un bajo que también camina. **Dificultad:** media: hay que leer dos voces y un cambio a la posición II."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-petzold-minueto.json",
-       "titulo": "Petzold, *Minueto* BWV Anh. 114",
+       "fuente": "notacion/obra-petzold-minueto-sol-menor.json",
+       "titulo": "Petzold, *Minueto en Sol menor* BWV Anh. 115",
        "principal": "partitura",
        "motivo": "El objetivo es leer: partitura. La tablatura, para comprobar.",
        "bpms": [
-        60,
-        96
+        46,
+        88
        ],
        "notas": [
-        "{c:1-2} la idea: Re, y luego la escala. Ya la oíste en mil sitios.",
-        "{c:9} responde el principio con otro final.",
-        "{c:25-32} cierre: desde el bajo también se oye la melodía.",
-        "Fuente: edición con MIDI en IMSLP. Pasada a guitarra sin cambiar notas; digitación y mano derecha, propuesta de la academia."
+        "Notas y dedos de las dos voces: los de la versión para guitarra de Sky Guitar.",
+        "El {c:1-4} es la idea: Sol, Fa♯, Mi, y la respuesta.",
+        "En el {c:13} aparece un Sol♯ en el bajo, y en el {c:15} un Sol natural: mira las alteraciones accidentales.",
+        "En los {c:25-26}, la posición II: el dedo 1 en el traste 2.",
+        "Sky Guitar lo toca a ♩ ≈ 88 y, en su versión lenta, a ♩ ≈ 46, con las repeticiones. Para leer, ♩ = 46 o menos."
        ]
       }
      ]
@@ -238,16 +278,16 @@
        "tipo": "pasos",
        "titulo": "Sin guitarra primero",
        "items": [
-        "Mira la armadura: un sostenido. Sol mayor.",
-        "Lee las notas de los ocho primeros compases, en voz alta.",
+        "Mira la armadura: un sostenido. Puede ser Sol mayor o Mi menor: empieza y acaba en Mi, así que es **Mi menor**.",
+        "Lee las notas de los ocho primeros compases, en voz alta: primero la voz de arriba, luego la de abajo.",
         "Toca sin mirar la mano. Si te pierdes, no pares.",
         "Sigue. Hoy no se memoriza: se lee."
        ]
       },
       {
        "tipo": "metronomo",
-       "bpm": 60,
-       "clave": "o2-petzold-minueto-bwv-anh-114"
+       "bpm": 46,
+       "clave": "o2-petzold-minueto-en-sol-menor-bwv-anh-115"
       },
       {
        "tipo": "errores",
@@ -256,6 +296,22 @@
          "error": "Lo memorizas a la tercera vez.",
          "arreglo": "No pasa nada: empieza por otro sitio o tápate el compás anterior. El objetivo de hoy es leer."
         }
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "mEj94wceIWQ",
+       "titulo": "Sky Guitar: el minueto, con partitura y tablatura",
+       "nota": "Escúchalo **después** de leerlo: primero a tempo y luego lento, con la partitura en pantalla. Es la fuente de los dedos.",
+       "capitulos": [
+        [
+         0,
+         "A tempo"
+        ],
+        [
+         144,
+         "Lento, con tablatura"
+        ]
        ]
       }
      ]
@@ -279,19 +335,20 @@
        "principal": "partitura",
        "motivo": "Se lee.",
        "bpms": [
-        60,
-        84
+        50,
+        90
        ],
        "notas": [
         "{c:1-4} un arpegio: Do, Sol, Mi, Do, sobre un bajo que se queda.",
         "{c:17-24} el centro: se va hacia Sol.",
-        "{c:25-32} vuelve la idea del principio.",
-        "Fuente: Mutopia. Dos voces y dedos, según su edición. La mano derecha, propuesta."
+        "{c:25-40} vuelve el principio, entero.",
+        "Dedos de la izquierda: los de la partitura de Guitar Notes. La mano derecha no la marca: alterna *i* y *m* y el pulgar en los bajos.",
+        "Guitar Notes lo toca a ♩ ≈ 90 y, despacio, a ♩ ≈ 50. Para leer, ♩ = 50."
        ]
       },
       {
        "tipo": "metronomo",
-       "bpm": 60,
+       "bpm": 50,
        "clave": "o2-sor-op-44-n-2"
       },
       {
@@ -302,6 +359,22 @@
        "tipo": "bien",
        "items": [
         "Las dos obras enteras, leídas sin parar."
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "ahiohd1Q5uw",
+       "titulo": "Guitar Notes: Sor, op. 44 n.º 2, con partitura y tablatura",
+       "nota": "Para escucharlo **después** de leerlo, a tempo y despacio. Es la fuente de los dedos.",
+       "capitulos": [
+        [
+         0,
+         "A tempo"
+        ],
+        [
+         60,
+         "Despacio"
+        ]
        ]
       }
      ]
@@ -334,13 +407,13 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-petzold-minueto.json",
+     "fuente": "notacion/obra-petzold-minueto-sol-menor.json",
      "titulo": "Suena el minueto",
      "principal": "ambas",
      "motivo": "Déjala sonar y toca encima.",
      "bpms": [
-      60,
-      80
+      46,
+      60
      ],
      "compases": [
       1,
@@ -362,7 +435,7 @@
      "que": "El minueto a dos voces con tu propia grabación.",
      "porque": "Es lo que pide el nivel: tocar tu voz sin perder la del otro.",
      "atencion": "No mires la mano. Escucha.",
-     "empieza": "♩ = 60."
+     "empieza": "♩ = 46."
     },
     {
      "tipo": "bien",
@@ -380,12 +453,12 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-petzold-minueto.json",
-     "titulo": "*Minueto*",
+     "fuente": "notacion/obra-petzold-minueto-sol-menor.json",
+     "titulo": "*Minueto en Sol menor*",
      "principal": "ambas",
      "bpms": [
-      60,
-      96
+      46,
+      88
      ]
     },
     {

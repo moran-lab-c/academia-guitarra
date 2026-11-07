@@ -192,9 +192,8 @@
      ]
     },
     {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Las cejillas de esta obra se han calculado como propuesta: la edición con MIDI no las indica."
+     "tipo": "texto",
+     "md": "La edición no indica cejillas ni dedos, y la app no se los inventa: decidirlas con estas preguntas es el ejercicio."
     }
    ]
   },
@@ -367,8 +366,15 @@
        "notas": [
         "{c:1-4} entra la voz alta, con otra debajo.",
         "{c:10-20} se dialogan.",
-        "Fuente: IMSLP, edición con MIDI (n.º 582254), sobre el Delphín. El programa dibuja dos voces: la tercera está en la de abajo. Dedos propuestos."
+        "Fuente: IMSLP, edición con MIDI (n.º 582254), sobre el Delphín. El programa dibuja dos voces: la tercera está en la de abajo. Sin dedos: las clases de YouTube enseñan otras versiones."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "h-HD9ScFlD0",
+       "titulo": "This is Classical Guitar: *Canción del Emperador*, tocada y explicada",
+       "nota": "En inglés, en 4K: la interpretación y cómo hacer que cada voz se oiga por separado."
       }
      ]
     },

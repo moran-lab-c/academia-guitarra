@@ -1,22 +1,22 @@
 {
  "tramo": "n2.t6",
- "nota": "Curso 2. La pieza de Dowland se integra en la primera guitarra de un arreglo a dúo de IMSLP, compases 1-32. El original es tablatura de laúd.",
+ "nota": "Curso 2. Packington's Pound en lugar del Willoughby de Dowland (06/11/2026, decisión de David): notas de la partitura y tablatura de Sean Robert; dedos de la izquierda de Elite Guitarist y mano derecha de This is Classical Guitar; tempos medidos en sus grabaciones.",
  "pasos": {
   "n2.t6.l1.p1": {
    "bloques": [
     {
      "tipo": "concepto",
-     "titulo": "John Dowland",
-     "md": "Inglés (1563-1626), el gran laudista de su tiempo. Trabajó en Dinamarca y en la corte inglesa, y escribió canciones y danzas de una melancolía famosa: una de sus piezas se llama *Semper Dowland, semper dolens*, «siempre Dowland, siempre doliente»."
+     "titulo": "El laúd en la Inglaterra de Isabel I",
+     "md": "A finales del siglo XVI, en Inglaterra, el instrumento de moda era **el laúd**. John Dowland (1563-1626) fue el gran laudista de su tiempo, pero también se tocaban muchas melodías populares que todo el mundo conocía y que cada laudista arreglaba a su manera."
     },
     {
      "tipo": "concepto",
      "titulo": "El laúd",
-     "md": "Instrumento de cuerdas pulsadas, con la parte de atrás abombada y más cuerdas que la guitarra, muchas de ellas dobles. **La música para laúd se escribía en tablatura**: la guitarra clásica la toma prestada adaptando la afinación. La de la guitarra de hoy es prima lejana, no hija."
+     "md": "Instrumento de cuerdas pulsadas, con la parte de atrás abombada y más cuerdas que la guitarra, muchas de ellas dobles. **La música para laúd se escribía en tablatura**: la guitarra clásica la toma prestada adaptando la afinación. La guitarra de hoy es prima lejana del laúd, no hija."
     },
     {
      "tipo": "texto",
-     "md": "*My Lord Willoughby's Welcome Home* es una balada popular de la época sobre un héroe de guerra, Lord Willoughby. Dowland hizo con ella una pieza para laúd que varía la melodía; también William Byrd escribió variaciones sobre el mismo tema."
+     "md": "*Packington's Pound* es una de esas melodías. No se sabe quién la compuso. Como cuenta Elite Guitarist, entonces era «tan conocida como *Greensleeves*». La versión de este tramo sale del libro de laúd de Matthew Holmes, un músico de Cambridge que copió cientos de piezas de la época."
     }
    ]
   },
@@ -25,7 +25,7 @@
     {
      "tipo": "concepto",
      "titulo": "Letras en vez de números",
-     "md": "Esto te va a sonar. **Dowland escribía en tablatura**, igual que tú, pero con letras: **a** es la cuerda al aire, **b** el primer traste, **c** el segundo, y así. Cada línea es una cuerda; el ritmo va encima. Es la tablatura francesa, y se leía con la cuerda aguda arriba."
+     "md": "Esto te va a sonar. **Los laudistas ingleses escribían en tablatura**, igual que tú, pero con letras: **a** es la cuerda al aire, **b** el primer traste, **c** el segundo, y así. Cada línea es una cuerda; el ritmo va encima. Es la tablatura francesa, y se leía con la cuerda aguda arriba."
     },
     {
      "tipo": "tabla",
@@ -100,28 +100,32 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "Escucha la misma pieza en dos instrumentos. El laúd es más corto de sonido y más íntimo; la guitarra tiene más cuerpo. Fíjate en el bajo: en el laúd conversa con la melodía, no la acompaña."
+     "md": "Escucha la misma pieza en dos instrumentos. El laúd es más corto de sonido y más íntimo; la guitarra tiene más cuerpo. Fíjate en el bajo: va por debajo de la melodía, con su propio camino."
     },
     {
-     "tipo": "lista",
-     "titulo": "Búscalos",
-     "items": [
-      "Laúd: [Paul O'Dette](https://www.youtube.com/results?search_query=Paul+O+Dette+Dowland+Lord+Willoughby+Welcome+Home+lute) o [Hopkinson Smith](https://www.youtube.com/results?search_query=Hopkinson+Smith+Dowland+Willoughby+lute).",
-      "Guitarra: [Julian Bream](https://www.youtube.com/results?search_query=Julian+Bream+Dowland+Lord+Willoughby+Welcome+Home+guitar)."
-     ]
+     "tipo": "video",
+     "id": "cZiiCu4GHw8",
+     "titulo": "*Packington's Pound* en laúd",
+     "nota": "Luthval, en un laúd renacentista."
+    },
+    {
+     "tipo": "video",
+     "id": "wbWzEA256fM",
+     "titulo": "*Packington's Pound* en guitarra",
+     "nota": "Phil McKelliget: la misma melodía en la guitarra clásica."
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-dowland-willoughby.json",
-     "titulo": "Con muestras de guitarra, para tenerla en el oído",
+     "fuente": "notacion/obra-packington.json",
+     "titulo": "El tema, para tenerlo en el oído",
      "principal": "ambas",
      "bpms": [
-      60,
-      76
+      45,
+      66
      ],
      "compases": [
       1,
-      8
+      4
      ]
     }
    ]
@@ -226,21 +230,22 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-dowland-willoughby.json",
-     "titulo": "Dos voces en los primeros compases",
+     "fuente": "notacion/obra-packington.json",
+     "titulo": "Dos voces en el tema",
      "principal": "ambas",
      "motivo": "Hay que ver las plicas: las de arriba, una voz; las de abajo, otra.",
      "bpms": [
-      50,
-      70
-     ],
-     "notas": [
-      "En el {c:5} el bajo camina: La, Mi. En el {c:6} responde: La, Mi, La.",
-      "Sigue la voz de abajo con el dedo."
+      45,
+      66
      ],
      "compases": [
       1,
-      8
+      4
+     ],
+     "notas": [
+      "En el {c:1}, arriba, la melodía: La, Si, Do, Si. Abajo, el acorde de La menor y después un bajo que baja: Mi, Mi grave.",
+      "En el {c:3}, la melodía baja de Mi a Sol mientras el bajo da dos notas largas: Do y Sol.",
+      "Sigue la voz de abajo con el dedo."
      ]
     },
     {
@@ -248,11 +253,11 @@
      "que": "Canta la voz de arriba mientras tocas la de abajo. Luego al revés.",
      "porque": "Si no la puedes cantar, no la estás oyendo.",
      "atencion": "Toca cada voz por separado primero.",
-     "empieza": "♩ = 50."
+     "empieza": "♩. = 30 (en el metrónomo, ♩ = 45)."
     },
     {
      "tipo": "metronomo",
-     "bpm": 50
+     "bpm": 45
     }
    ]
   },
@@ -351,20 +356,31 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-dowland-willoughby.json",
+     "fuente": "notacion/obra-packington.json",
      "titulo": "Busca la voz larga",
      "principal": "ambas",
      "bpms": [
-      50,
+      45,
       66
      ],
-     "notas": [
-      "{c:4} y {c:8}: acordes donde todo debe seguir sonando.",
-      "En el {c:12}, la voz de arriba tiene redonda y la de abajo se mueve: ese dedo no se levanta."
-     ],
      "compases": [
-      4,
-      12
+      3,
+      4
+     ],
+     "notas": [
+      "En el {c:3}, el dedo 3 pisa el Do del bajo durante medio compás y después el Sol. Elite Guitarist insiste: el 3 no se mueve, para que el bajo suene todo el tiempo mientras arriba se mueve la melodía.",
+      "Para el Sol, el 3 va a la 6.ª y el meñique al Re de la 2.ª, en el mismo traste: si cuesta, pon primero el meñique y después el 3.",
+      "En el {c:4}, los acordes de La menor y Mi se dejan sonar enteros."
+     ]
+    },
+    {
+     "tipo": "pasos",
+     "titulo": "El ejercicio de Elite Guitarist",
+     "items": [
+      "Deja el dedo 3 apoyado en la 3.ª cuerda, sin tocarla.",
+      "Con el 3 quieto, toca Do y Re en la 2.ª con el 1 y el 4.",
+      "Después, el 3 en la 4.ª cuerda; luego, en la 5.ª: cuanto más lejos, más se estira el meñique.",
+      "Es lo que pide el {c:3}: el bajo sonando y los otros dedos libres."
      ]
     },
     {
@@ -405,21 +421,26 @@
      ]
     },
     {
+     "tipo": "texto",
+     "md": "En el Renacimiento era lo normal. Elite Guitarist lo compara con el jazz: había una melodía y unos acordes, y cada músico los adornaba a su manera. En *Packington's Pound*, la segunda vez de cada parte es la misma música **rota en escalas cortas**."
+    },
+    {
      "tipo": "notacion",
-     "fuente": "notacion/obra-dowland-willoughby.json",
-     "titulo": "Compara los compases 9-16 y 17-24",
+     "fuente": "notacion/obra-packington.json",
+     "titulo": "Compara los compases 1-4 y 5-8",
      "principal": "ambas",
      "motivo": "Cuenta las notas por tiempo.",
      "bpms": [
-      60
-     ],
-     "notas": [
-      "El {c:9-16} tiene la melodía sencilla.",
-      "El {c:17-24} es el mismo plan armónico, con más notas: corcheas."
+      45
      ],
      "compases": [
-      9,
-      24
+      1,
+      8
+     ],
+     "notas": [
+      "El {c:1-4} es el tema: La menor y Mi, dos veces; Do y Sol; y la cadencia en La menor.",
+      "El {c:5-8} es el mismo plan, con semicorcheas: el La del {c:1} se convierte en La-Sol♯-La-Si.",
+      "En la segunda parte pasa lo mismo: el {c:17-20} varía el {c:13-16}."
      ]
     },
     {
@@ -432,11 +453,6 @@
      ],
      "correcta": 0,
      "porque": "Más notas por tiempo sobre los mismos acordes: variación rítmica."
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "Las divisiones en cuatro secciones son las de la edición a dúo usada. La versión para laúd de Dowland se ordena en secciones y variaciones que conviene cotejar."
     }
    ]
   },
@@ -493,28 +509,160 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-dowland-willoughby",
-       "md": "**Por qué está aquí:** es la entrada al Renacimiento y a las dos voces reales. **Qué escuchar:** el bajo como segunda melodía. **Dificultad:** alta para sostener voces; lenta, sí se puede."
+       "id": "o2-anonimo-packington-s-pound",
+       "md": "**Por qué está aquí:** es la entrada al Renacimiento: una melodía con su bajo y la misma música, variada. **Qué escuchar:** el bajo que sigue sonando debajo de la melodía. **Dificultad:** media, por sostener el bajo y por las semicorcheas de las variaciones."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-dowland-willoughby.json",
-       "titulo": "*My Lord Willoughby's Welcome Home*",
+       "fuente": "notacion/obra-packington.json",
+       "titulo": "*Packington's Pound*",
        "principal": "ambas",
        "motivo": "Dos voces: partitura y tablatura.",
        "bpms": [
-        50,
-        76
+        45,
+        66
        ],
        "notas": [
-        "{c:1-8} el tema. {c:9-16} la segunda parte. {c:17-24} una variación con más movimiento. {c:25-32} otra, con escalas.",
-        "Fuente: primera guitarra de un arreglo a dúo en IMSLP. Digitación propuesta."
+        "Notas y cuerdas: las de la partitura y tablatura de Sean Robert. Dedos de la izquierda: los que dice Elite Guitarist en su clase de los {c:1-8}; en la segunda parte van solo donde se repite el mismo pasaje. Mano derecha: la que dice This is Classical Guitar en el {c:1} y en los {c:9-12}; en lo demás, alterna los dedos.",
+        "Dos partes, cada una con su variación: {c:1-4} el tema y {c:5-8} su variación; {c:9-16} la segunda parte y {c:17-20} la variación de su final.",
+        "En el {c:1}, This is Classical Guitar toca el Sol♯ con *p*: puede parecer raro en la 3.ª cuerda, pero así el pulgar lleva siempre la voz de abajo.",
+        "En los {c:9-12}, los acordes de tres notas con *p-i-m*, y el Sol de arriba con *a*.",
+        "Está en 6/8: se siente en dos, como explica This is Classical Guitar, con los apoyos en el 1 y el 4; no machaques cada nota.",
+        "Sean Robert la toca a ♩. ≈ 44, y Elite Guitarist y This is Classical Guitar, a ♩. ≈ 40. Los botones de sonido cuentan en negras (♩ = 66 es ♩. = 44). Para aprender, ♩. = 30."
        ]
       },
       {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "La afinación del laúd no es la de la guitarra: muchas ediciones para guitarra piden **bajar la 3.ª a Fa♯**. Este arreglo no lo pide. Si estudias con otra edición, comprueba qué dice. Además, los acordes de los {c:13-16} están leídos a ojo y simplificados a dos voces."
+       "tipo": "video",
+       "alLado": true,
+       "id": "bAVH6RSkQy8",
+       "titulo": "Elite Guitarist: *Packington's Pound*, clase (parte 1), en inglés",
+       "nota": "Compás a compás, con los dedos de la izquierda: las formas de La menor y Mi, el 3 que no se mueve y la variación. Es la primera de tres partes; las otras dos no son públicas.",
+       "capitulos": [
+        [
+         66,
+         "Los acordes de toda la obra"
+        ],
+        [
+         172,
+         "El tema, compás a compás"
+        ],
+        [
+         562,
+         "La variación"
+        ],
+        [
+         893,
+         "El ejercicio para el meñique"
+        ],
+        [
+         1036,
+         "El Sol con el 3 y el 4"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "wXzHr4-eM6s",
+       "titulo": "Sean Robert: la obra, con partitura y tablatura",
+       "nota": "La partitura avanza mientras toca: es la fuente de las notas de la academia."
+      },
+      {
+       "tipo": "video",
+       "id": "fjg8DoS4n-g",
+       "titulo": "This is Classical Guitar: clase, en inglés",
+       "nota": "La mano derecha de los acordes y cómo sentir el 6/8 en dos.",
+       "capitulos": [
+        [
+         0,
+         "La obra entera"
+        ],
+        [
+         125,
+         "Los dedos de la izquierda"
+        ],
+        [
+         210,
+         "La mano derecha"
+        ],
+        [
+         298,
+         "La obra, despacio y comentada"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El compás 1: La menor y Mi, con el 1 que salta",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 800,
+        "notas": [
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 3,
+          "mano": "m",
+          "con": [
+           {
+            "c": 4,
+            "t": 2,
+            "dedo": 2,
+            "mano": "i"
+           },
+           {
+            "c": 5,
+            "t": 0,
+            "mano": "p"
+           }
+          ],
+          "texto": "La forma de La menor sin el dedo 1: p, i y m a la vez."
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "a",
+          "texto": "Si, al aire, con a."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "m",
+          "texto": "El 1 completa el acorde: Do, con m."
+         },
+         {
+          "c": 3,
+          "t": 1,
+          "dedo": 1,
+          "mano": "p",
+          "con": [
+           {
+            "c": 2,
+            "t": 0,
+            "mano": "i"
+           }
+          ],
+          "texto": "El 1 salta al Sol♯: la forma de Mi. El 2 no se mueve de la 4.ª."
+         },
+         {
+          "c": 4,
+          "t": 2,
+          "dedo": 2,
+          "texto": "Mi en la 4.ª…"
+         },
+         {
+          "c": 6,
+          "t": 0,
+          "texto": "…y el Mi grave, al aire."
+         }
+        ],
+        "final": "La menor y Mi son la misma forma, una cuerda más abajo o más arriba: solo se mueve el dedo 1."
+       }
       }
      ]
     },
@@ -523,26 +671,26 @@
      "bloques": [
       {
        "tipo": "pasos",
-       "titulo": "Por voces",
+       "titulo": "Como lo enseñan",
        "items": [
-        "Solo la voz de arriba.",
-        "Solo la de abajo.",
-        "Las dos, muy lentas.",
-        "Sigue por secciones de ocho compases."
+        "Primero los acordes de la obra, como propone Elite Guitarist: La menor, Mi, La menor, Mi; y Do, Sol, La menor.",
+        "La melodía sola, cantándola: This is Classical Guitar insiste en darle forma antes de poner los acordes.",
+        "Las dos voces juntas, muy lentas, con los dedos del bajo quietos.",
+        "Las variaciones, cuando el tema ya salga: la misma música con más notas."
        ]
       },
       {
        "tipo": "ejercicio",
-       "que": "Sección por sección, las voces enteras.",
-       "porque": "Es el ejercicio de polifonía del nivel.",
-       "atencion": "En cada redonda, escucha que sigue sonando hasta el final.",
-       "empieza": "♩ = 50.",
-       "sube": "♩ = 76."
+       "que": "La obra entera, parte a parte.",
+       "porque": "Es la obra de polifonía de este nivel: dos voces y su variación.",
+       "atencion": "En el paso de La menor a Mi, que la melodía no se corte: el dedo 1 se queda en la cuerda todo lo posible.",
+       "empieza": "♩. = 30 (en el metrónomo, ♩ = 45).",
+       "sube": "♩. = 40-44, como en los vídeos."
       },
       {
        "tipo": "metronomo",
-       "bpm": 50,
-       "clave": "o2-dowland-willoughby"
+       "bpm": 45,
+       "clave": "o2-anonimo-packington-s-pound"
       }
      ]
     }
@@ -556,12 +704,12 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-dowland-willoughby.json",
+     "fuente": "notacion/obra-packington.json",
      "titulo": "La obra",
      "principal": "ambas",
      "bpms": [
-      50,
-      76
+      45,
+      66
      ]
     },
     {

@@ -1,6 +1,6 @@
 {
  "tramo": "n3.t1",
- "nota": "Curso 3. Sor op. 35 n.º 22 sale de Mutopia. Las tres voces de la fuente se dibujan en dos: la melodía es la primera corchea de cada grupo. Dedos de la app, propuesta.",
+ "nota": "Curso 3. Sor op. 35 n.º 22 sale de Mutopia. Las tres voces de la fuente se dibujan en dos: la melodía es la primera corchea de cada grupo. Dedos de la app, propuesta. Sor op. 35 n.º 22 (06/11/2026): notas, cuerdas y dedos de la lección de Sky Guitar; mano derecha de los c. 1-4, 7 y 16, de Pablo Romero Luis.",
  "pasos": {
   "n3.t1.l1.p1": {
    "bloques": [
@@ -306,12 +306,12 @@
      "principal": "ambas",
      "motivo": "Dos voces.",
      "bpms": [
-      50,
-      76
+      52,
+      100
      ],
      "notas": [
-      "Cada compás son seis corcheas. La primera de cada dos tiempos es la melodía.",
-      "La nota de bajo dura todo el compás."
+      "Cada compás son seis corcheas. La primera de cada dos es la melodía.",
+      "En los {c:1-2} el bajo, Si, dura los dos compases; en los demás, la nota grave entra en el segundo tiempo."
      ],
      "compases": [
       1,
@@ -399,16 +399,71 @@
        "principal": "ambas",
        "motivo": "Partitura y tablatura.",
        "bpms": [
-        50,
-        88
+        52,
+        100
        ],
        "notas": [
-        "{c:1-16} primera parte: Si menor y su relativo.",
-        "{c:17-24} segunda: ahí empieza Re.",
-        "{c:25-32} se va hacia colores más oscuros.",
-        "{c:33-48} vuelve, y cierra.",
-        "Fuente: Mutopia, sobre Simrock. Tres voces en dos: la melodía es la primera nota de cada grupo. Dedos propuestos."
+        "Notas, cuerdas y dedos: los de la lección de Sky Guitar. La mano derecha de los {c:1-4}, {c:7} y {c:16}, la que escribe Pablo Romero Luis: en el {c:1}, *m-i-p-i-m-i*, con *p* también en el bajo; en el {c:3}, «anular, medio, pulgar, medio, anular, índice».",
+        "{c:1-16} primera parte, en Si menor: el {c:8} se queda en Fa♯, la dominante, y el {c:16} cierra en Si.",
+        "{c:17-24} la idea otra vez, con otro final: el {c:24} vuelve a quedarse en Fa♯.",
+        "{c:25-32} se aleja: Si7, Mi menor, La7, Re… y vuelve por el Fa♯ del {c:32}.",
+        "{c:33-48} vuelve el principio, y cierra en Si menor.",
+        "Sky Guitar lo toca a ♩ ≈ 100 y, lento, a ♩ ≈ 52. Pablo marca ♩ = 108 y practica con el metrónomo a ♩ = 50: «cada golpe, dos notas»."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "-M7bZ8ywGts",
+       "titulo": "Pablo Romero Luis: *Estudio en Si menor* de Sor, tutorial en español",
+       "nota": "Las tres primeras frases (c. 1-24), con los dedos de las dos manos; la segunda clase no está en su canal; lo demás, con Sky Guitar.",
+       "capitulos": [
+        [
+         49,
+         "La demostración"
+        ],
+        [
+         133,
+         "Antes de empezar"
+        ],
+        [
+         234,
+         "Primera frase"
+        ],
+        [
+         543,
+         "Segunda frase"
+        ],
+        [
+         709,
+         "Tercera frase"
+        ],
+        [
+         897,
+         "Cómo interpretarlo"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "VR52_nOgEGo",
+       "titulo": "Sky Guitar: el estudio entero, con tablatura",
+       "nota": "A tempo y en versión lenta, con la partitura en pantalla: es la fuente de las notas y los dedos.",
+       "capitulos": [
+        [
+         0,
+         "A tempo"
+        ],
+        [
+         99,
+         "Lento, con tablatura"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "El dedo ancla",
+       "md": "Pablo insiste en un dedo: el **3**, en el Fa♯ de la 4.ª cuerda. «Estaba antes, está ahora y va a estar en el siguiente compás»: se queda puesto mientras los demás cambian, y así la mano no se pierde. Y la cejilla del II, al principio, «puedes no usarla, pero es mejor usarla»."
       }
      ]
     },
@@ -420,8 +475,8 @@
        "que": "Por frases de cuatro compases. Primero el bajo; luego la melodía; luego todo.",
        "porque": "Es un estudio de cantar sobre arpegio.",
        "atencion": "Primero la melodía suelta, con *a* o con *m*, y con los dedos que pisarás luego.",
-       "empieza": "♩ = 50.",
-       "sube": "♩ = 88."
+       "empieza": "♩ = 50, como Pablo: dos notas por golpe.",
+       "sube": "♩ = 100, como Sky."
       },
       {
        "tipo": "metronomo",
@@ -438,6 +493,10 @@
         {
          "error": "Se corta el bajo.",
          "arreglo": "El dedo que pisa el bajo se queda, aunque moleste."
+        },
+        {
+         "error": "Paras en cada barra de compás.",
+         "arreglo": "Pablo: las barras son orden y acento, no paradas. Si tienes que parar, para después de la primera nota del compás, no antes."
         }
        ]
       }
@@ -596,8 +655,8 @@
      "principal": "partitura",
      "motivo": "Análisis.",
      "bpms": [
-      60,
-      88
+      52,
+      100
      ],
      "notas": [
       "{c:1-8} primera frase.",
@@ -907,8 +966,8 @@
      "titulo": "El estudio",
      "principal": "ambas",
      "bpms": [
-      50,
-      88
+      52,
+      100
      ]
     },
     {

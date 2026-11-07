@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t8",
- "nota": "Curso 2. El Preludio de Tárrega sale del MIDI que trae su edición en IMSLP, cotejado con otra edición. Los armónicos finales se escriben pisados.",
+ "nota": "Curso 2. El Preludio de Tárrega: notas de la edición con MIDI de IMSLP, cotejadas con la original de Antich y Tena (06/11/2026); fuera los dedos que había propuesto la academia; en los c. 1-2, los de la edición original. Los armónicos finales se escriben pisados.",
  "pasos": {
   "n2.t8.l1.p1": {
    "bloques": [
@@ -332,7 +332,7 @@
     },
     {
      "tipo": "texto",
-     "md": "La edición que usamos fecha este en 1889. El programa de referencia lo coloca entre 1.º y 2.º de Profesionales: exige melodía sobre acordes, cejillas de un momento, y escuchar."
+     "md": "La edición original, de Antich y Tena (Valencia), está dedicada «a mi buen amigo D. Francisco Corell, Pbro.», un sacerdote: Rafael Elizondo le ve por eso un carácter solemne, casi religioso. Exige melodía sobre acordes, cejillas de un momento, y escuchar."
     },
     {
      "tipo": "guia",
@@ -374,16 +374,27 @@
        "motivo": "Partitura y tablatura.",
        "bpms": [
         50,
-        88
+        87
        ],
        "notas": [
-        "La edición pide ♩ = 88 y *Moderato*. Re menor con la 6.ª en Re.",
-        "{c:1-2} la melodía en lo alto: 4, con el dedo 4 en lo más alto; {c:3} baja en corcheas.",
-        "{c:6-8} cejillas de un momento: VI, VIII y I.",
-        "{c:17-18} *poco rit.* y *a tempo*.",
-        "{c:38-40} son **armónicos de octava**: el número entre paréntesis es lo que se pisa, y suena una octava más alto. La técnica se explica en el Nivel 3: si aún no la tienes, toca esas notas pisadas en la octava que suenan.",
-        "Fuente: IMSLP, edición con MIDI, cotejada con la revisión de Marieh. Digitación de la app, calculada: propuesta."
+        "La edición original pide *Moderato*, y Rafael Elizondo aconseja sentirlo en dos, no en cuatro: así sale más lento y más solemne. My Guitar lo toca a ♩ ≈ 87. Re menor, con la 6.ª en Re.",
+        "{c:1-2}: toda la melodía va por la 1.ª cuerda, como la escribe Tárrega: Re-Do con los dedos 4 y 2, y Si♭-La con el 4 y el 3, ligados; el Fa del bajo, en la 4.ª con el 1. Rafael: «es el ADN de la pieza».",
+        "En el resto, la tablatura pone las cuerdas; los dedos de Tárrega y sus cejillas de un momento (VI, VIII, I, V…) los explica Rafael Elizondo compás a compás en su clase, sobre la edición original.",
+        "{c:38-40} son **armónicos de octava** («ar. 8.os» en la edición): se pisa la nota escrita y suena una octava más alto. La técnica se explica en el Nivel 3: si aún no la tienes, toca esas notas pisadas."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "OuH7PUMjPPI",
+       "titulo": "Rafael Elizondo: *Preludio n.º 1* de Tárrega, clase en español",
+       "nota": "Una clase larga sobre la edición original: la escala del principio, los ligados, el bajo, cómo apagar las cuerdas graves y los dedos de Tárrega, compás a compás."
+      },
+      {
+       "tipo": "video",
+       "id": "tzwlyaRPsfg",
+       "titulo": "My Guitar: el preludio, con tablatura",
+       "nota": "Otra versión, para oírla entera."
       }
      ]
     },

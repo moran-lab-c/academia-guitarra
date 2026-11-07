@@ -1160,8 +1160,8 @@
     {
      "id": "n1.t6",
      "numero": 6,
-     "titulo": "Giuliani op. 1, parte 4, n.º 3, y su *Estudio en Mi menor*",
-     "trabaja": "Nota destacada; inversiones; armónicos XII, VII y V; corcheas en 3/4; funciones en menor",
+     "titulo": "Aguado, *Estudio en La menor*, y su *Estudio en Mi menor*",
+     "trabaja": "Nota destacada; inversiones; armónicos XII, VII y V; semicorcheas en 2/4; funciones en menor",
      "lecciones": [
       {
        "id": "n1.t6.l1",
@@ -1247,7 +1247,7 @@
         {
          "id": "n1.t6.l3.p1",
          "tipo": "Ritmo",
-         "texto": "Corcheas en 3/4: «1 y 2 y 3 y»",
+         "texto": "Semicorcheas en 2/4: «1 e y a 2 e y a»",
          "recursos": [
           "metronomo"
          ]
@@ -1255,13 +1255,13 @@
         {
          "id": "n1.t6.l3.p2",
          "tipo": "Obra",
-         "texto": "**Giuliani op. 1, parte 4, n.º 3**",
+         "texto": "**Aguado, *Estudio en La menor*** (*Lección 19* de su *Nuevo método*), con el arpegio p-i-m-i",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "obra": "o1-giuliani-op-1-parte-4-n-3"
+         "obra": "o1-aguado-estudio-en-la-menor"
         },
         {
          "id": "n1.t6.l3.p3",
@@ -1272,7 +1272,7 @@
         {
          "id": "n1.t6.l3.p4",
          "tipo": "Lectura",
-         "texto": "Los cuatro primeros compases del estudio de Giuliani, desde la partitura, despacio",
+         "texto": "Los cuatro primeros compases del estudio de Aguado, desde la partitura, despacio",
          "recursos": [
           "partitura"
          ]
@@ -1304,8 +1304,8 @@
         {
          "id": "n1.t6.l4.p3",
          "tipo": "Aplicación",
-         "texto": "Los armónicos de los compases 67 y 69 de tu estudio.",
-         "obra": "o1-giuliani-op-1-parte-4-n-3"
+         "texto": "Los armónicos de los compases 67 y 69 de tu *Estudio en Mi menor*.",
+         "obra": "o1-estudio-en-mi-menor"
         }
        ]
       },
@@ -1329,7 +1329,7 @@
         {
          "id": "n1.t6.l5.p2",
          "tipo": "Comprobación del tramo",
-         "texto": "Arpegio con nota destacada; una pregunta de inversiones; el estudio de Giuliani."
+         "texto": "Arpegio con nota destacada; una pregunta de inversiones; el estudio de Aguado."
         }
        ]
       }
@@ -2076,12 +2076,11 @@
         {
          "id": "n1.t11.l2.p1",
          "tipo": "Obra",
-         "texto": "**Brouwer, *Estudio sencillo* VI**",
+         "texto": "**Brouwer, *Estudio sencillo* VI** · El arpegio que baja: el pulgar en el bajo y a-m-i de la 1.ª a la 3.ª cuerda, en semicorcheas (comprobado en el tutorial de Alex Salas).",
          "recursos": [
           "metronomo"
          ],
          "edicion": "edición publicada (con derechos)",
-         "porVerificar": "qué fórmula de mano derecha trabaja",
          "obra": "o1-brouwer-estudio-sencillo-vi"
         },
         {
@@ -2415,7 +2414,7 @@
         {
          "id": "n1.t12.l6.p3",
          "tipo": "Aplicación",
-         "texto": "La hemiolia antes de la cadencia, y las cadencias de la obra",
+         "texto": "Las cadencias de la obra: dónde termina cada frase y si es conclusiva o suspensiva",
          "recursos": [
           "partitura"
          ],
@@ -2557,13 +2556,12 @@
         {
          "id": "n1.t13.l4.p1",
          "tipo": "Obra",
-         "texto": "**Sor, *Andante* op. 31 n.º 4**",
+         "texto": "**Sor, *Andante* op. 31 n.º 4**, en Re mayor (edición Simrock)",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "porVerificar": "su tonalidad en la edición elegida",
          "obra": "o1-sor-andante-op-31-n-4"
         },
         {
@@ -2586,6 +2584,17 @@
          "recursos": [
           "partitura"
          ]
+        },
+        {
+         "id": "n1.t13.l4.p5",
+         "tipo": "Obra",
+         "texto": "**Giuliani, *Allegro* op. 50 n.º 13** (*La mariposa*): el arpegio clásico, rápido y ligero",
+         "recursos": [
+          "partitura",
+          "tablatura",
+          "metronomo"
+         ],
+         "obra": "o1-giuliani-allegro-op-50-n-13"
         }
        ]
       },
@@ -2681,12 +2690,12 @@
          "id": "n1.t14.l2.p2",
          "tipo": "Obra",
          "texto": "La *Españoleta* o la *Romanesca* (o Dowland, *Mrs. Winter's Jump*).",
-         "obra": "o1-anonimo-romanesca"
+         "obra": "o1-sanz-espanoleta"
         },
         {
          "id": "n1.t14.l2.p3",
          "tipo": "Obra",
-         "texto": "Sor op. 31 n.º 4, o Brouwer (o Giuliani op. 50 n.º 17).",
+         "texto": "Sor op. 31 n.º 4, o Brouwer, o Giuliani, *La mariposa* n.º 13.",
          "obra": "o1-sor-andante-op-31-n-4"
         },
         {
@@ -2862,7 +2871,7 @@
     },
     {
      "area": "Análisis",
-     "sale": "Explica la forma de la *Sonatina* de Giuliani"
+     "sale": "Explica la forma de un estudio clásico con vuelta (A-B-A)"
     },
     {
      "area": "Oído",
@@ -2905,7 +2914,7 @@
     {
      "id": "n2.t1",
      "numero": 1,
-     "titulo": "Aguado, *Contradanza* op. 8 n.º 5",
+     "titulo": "Carulli, *Estudio n.º 6*",
      "trabaja": "Cejilla en todos los trastes; formas móviles; Carlevaro 1-5; síncopa y 2/2; las sextas al oído",
      "lecciones": [
       {
@@ -3084,32 +3093,30 @@
        "areas": [
         "Historia",
         "Repertorio",
-        "Cejilla",
         "Digitación"
        ],
        "pasos": [
         {
          "id": "n2.t1.l6.p1",
          "tipo": "Contexto",
-         "texto": "Dionisio Aguado (Madrid, 1784-1849), amigo de Sor; la contradanza, danza de salón."
+         "texto": "Ferdinando Carulli (Nápoles, 1770 - París, 1841), guitarrista del Clasicismo y autor de un método que se sigue usando."
         },
         {
          "id": "n2.t1.l6.p2",
          "tipo": "Obra",
-         "texto": "**Aguado, *Contradanza* op. 8 n.º 5**",
+         "texto": "**Carulli, *Estudio n.º 6***: dos partes, en La menor y en Do mayor",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "obra": "o2-aguado-contradanza-op-8-n-5"
+         "obra": "o2-carulli-estudio-n-6"
         },
         {
          "id": "n2.t1.l6.p3",
          "tipo": "Aplicación",
-         "texto": "Las cejillas de la obra: cuáles son completas y cuáles bastan parciales",
-         "porVerificar": "pendiente de comprobar en la partitura",
-         "obra": "o2-aguado-contradanza-op-8-n-5"
+         "texto": "La misma postura en otra cuerda: el Si-Re y el Mi-Sol con los dedos 2 y 4, como enseña Pablo Romero Luis.",
+         "obra": "o2-carulli-estudio-n-6"
         }
        ]
       },
@@ -3139,7 +3146,7 @@
         {
          "id": "n2.t1.l7.p3",
          "tipo": "Comprobación del tramo",
-         "texto": "Cuatro acordes con cejilla limpios; la contradanza con la síncopa en su sitio."
+         "texto": "Cuatro acordes con cejilla limpios; el estudio entero, con el bajo en su sitio."
         }
        ]
       }
@@ -3330,8 +3337,7 @@
         {
          "id": "n2.t2.l7.p1",
          "tipo": "Aplicación",
-         "texto": "La cejilla de esta parte: dónde se prepara",
-         "porVerificar": "traste y compás",
+         "texto": "Las cejillas de esta parte, media en el V y entera en el VII: dónde se preparan.",
          "obra": "o2-anonimo-romance"
         },
         {
@@ -3512,8 +3518,8 @@
     {
      "id": "n2.t4",
      "numero": 4,
-     "titulo": "Giuliani, *Sonatina* op. 71, primer movimiento",
-     "trabaja": "Forma sonatina; a-m-i; staccato; I-IV-I o I-V-I; estilo y época",
+     "titulo": "Carcassi, op. 60 n.º 3",
+     "trabaja": "Forma sonatina y forma con vuelta; a-m-i; staccato; I-IV-I o I-V-I; estilo y época",
      "lecciones": [
       {
        "id": "n2.t4.l1",
@@ -3527,8 +3533,7 @@
         {
          "id": "n2.t4.l1.p1",
          "tipo": "Contexto",
-         "texto": "Mauro Giuliani en Viena, hacia 1810-1820.º de Profesionales el «Maestoso» de su *Sonatina* op. 71; cuál de las tres del opus,",
-         "porVerificar": "pendiente de comprobar en la partitura"
+         "texto": "Matteo Carcassi (Florencia, 1792 - París, 1853), guitarrista en el París de Sor, y sus *25 estudios melódicos y progresivos* op. 60, la continuación de su método."
         },
         {
          "id": "n2.t4.l1.p2",
@@ -3558,11 +3563,10 @@
         {
          "id": "n2.t4.l2.p2",
          "tipo": "Análisis",
-         "texto": "Dónde está cada parte en el movimiento",
+         "texto": "El estudio no es una sonatina, pero hace el mismo viaje: A (sale de La y acaba en Mi), B (se aleja) y A otra vez (vuelve y acaba en La)",
          "recursos": [
           "partitura"
-         ],
-         "porVerificar": "con la edición"
+         ]
         }
        ]
       },
@@ -3656,13 +3660,13 @@
         {
          "id": "n2.t4.l6.p1",
          "tipo": "Obra",
-         "texto": "**Giuliani, *Sonatina* op. 71, I**",
+         "texto": "**Carcassi, op. 60 n.º 3**: arpegio continuo del bajo y las tres primeras cuerdas; cejillas en el II, V, VII y IX",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "obra": "o2-giuliani-sonatina-op-71-i"
+         "obra": "o2-carcassi-op-60-n-3"
         },
         {
          "id": "n2.t4.l6.p2",
@@ -3672,7 +3676,7 @@
         {
          "id": "n2.t4.l6.p3",
          "tipo": "Comprobación del tramo",
-         "texto": "El movimiento entero; dos preguntas de forma",
+         "texto": "El estudio entero, con sus repeticiones; tres preguntas de forma",
          "recursos": [
           "preguntas"
          ]
@@ -3830,13 +3834,12 @@
         {
          "id": "n2.t5.l5.p1",
          "tipo": "Obra",
-         "texto": "**Carcassi, op. 60 n.º 7**",
+         "texto": "**Carcassi, op. 60 n.º 7**: trémolo p-a-m-i, arpegios, acordes plaqué, ligados descendentes y media cejilla en el III",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "porVerificar": "lo que trabaja",
          "obra": "o2-carcassi-op-60-n-7"
         },
         {
@@ -3856,7 +3859,7 @@
     {
      "id": "n2.t6",
      "numero": 6,
-     "titulo": "Dowland, *My Lord Willoughby's Welcome Home*",
+     "titulo": "Anónimo, *Packington's Pound*",
      "trabaja": "Dos voces; variación; ligados de tres; la tablatura de laúd; variar una melodía",
      "lecciones": [
       {
@@ -3871,12 +3874,12 @@
         {
          "id": "n2.t6.l1.p1",
          "tipo": "Contexto",
-         "texto": "John Dowland y el laúd."
+         "texto": "El laúd en la Inglaterra de Isabel I y *Packington's Pound*, una melodía anónima muy popular entonces."
         },
         {
          "id": "n2.t6.l1.p2",
          "tipo": "¿Sabías que…?",
-         "texto": "Dowland escribía en tablatura de laúd con letras en vez de números: la «a» es la cuerda al aire."
+         "texto": "Los laudistas ingleses, como Dowland, escribían en tablatura con letras en vez de números: la «a» es la cuerda al aire."
         },
         {
          "id": "n2.t6.l1.p3",
@@ -3991,14 +3994,13 @@
         {
          "id": "n2.t6.l5.p1",
          "tipo": "Obra",
-         "texto": "El tema y las variaciones",
+         "texto": "**Anónimo, *Packington's Pound***: el tema y sus variaciones",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "porVerificar": "la afinación de la 3.ª que pide la edición",
-         "obra": "o2-dowland-willoughby"
+         "obra": "o2-anonimo-packington-s-pound"
         },
         {
          "id": "n2.t6.l5.p2",
@@ -4012,7 +4014,7 @@
     {
      "id": "n2.t7",
      "numero": 7,
-     "titulo": "Petzold, *Minueto*, y Sor, op. 44 n.º 2",
+     "titulo": "Petzold, *Minueto en Sol menor*, y Sor, op. 44 n.º 2",
      "trabaja": "Dos obras leídas enteras; articulación barroca; forma binaria; un dúo",
      "lecciones": [
       {
@@ -4030,7 +4032,7 @@
         {
          "id": "n2.t7.l1.p1",
          "tipo": "Contexto",
-         "texto": "Un minueto del cuaderno de Anna Magdalena Bach; durante años se atribuyó a Bach, pero es de Christian Petzold."
+         "texto": "La pareja del *Minueto en Sol* del nivel 1: van seguidos en el cuaderno de Anna Magdalena Bach, y los dos son de Christian Petzold."
         },
         {
          "id": "n2.t7.l1.p2",
@@ -4061,12 +4063,12 @@
         {
          "id": "n2.t7.l2.p1",
          "tipo": "Obra",
-         "texto": "**Petzold, *Minueto* BWV Anh. 114**, desde la partitura",
+         "texto": "**Petzold, *Minueto en Sol menor* BWV Anh. 115**, desde la partitura",
          "recursos": [
           "partitura",
           "metronomo"
          ],
-         "obra": "o2-petzold-minueto-bwv-anh-114"
+         "obra": "o2-petzold-minueto-en-sol-menor-bwv-anh-115"
         },
         {
          "id": "n2.t7.l2.p2",
@@ -4227,13 +4229,12 @@
         {
          "id": "n2.t8.l4.p3",
          "tipo": "Obra",
-         "texto": "**Tárrega, *Preludio n.º 1***",
+         "texto": "**Tárrega, *Preludio n.º 1***: Re menor con la 6.ª en Re; melodía sobre acordes y cejillas de un momento",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "porVerificar": "su tonalidad y lo que pide",
          "obra": "o2-tarrega-preludio-n-1"
         },
         {
@@ -4248,7 +4249,7 @@
     {
      "id": "n2.t9",
      "numero": 9,
-     "titulo": "Giuliani, op. 51 n.º 10",
+     "titulo": "Carcassi, op. 60 n.º 2",
      "trabaja": "Arpegio con cambio de acorde; ii-V-I y V/V; décimas y octavas; dictado rítmico; Carlevaro 11-15",
      "lecciones": [
       {
@@ -4364,13 +4365,13 @@
         {
          "id": "n2.t9.l4.p2",
          "tipo": "Obra",
-         "texto": "**Giuliani, op. 51 n.º 10**",
+         "texto": "**Carcassi, op. 60 n.º 2**: el mismo arpegio de principio a fin, con el acorde que cambia cada medio compás",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "obra": "o2-giuliani-op-51-n-10"
+         "obra": "o2-carcassi-op-60-n-2"
         },
         {
          "id": "n2.t9.l4.p3",
@@ -4384,7 +4385,7 @@
     {
      "id": "n2.t10",
      "numero": 10,
-     "titulo": "Sor, op. 35 n.º 8",
+     "titulo": "Sor, op. 35 n.º 17",
      "trabaja": "Si y Sol menor; aumentados y disminuidos; séptima disminuida; modulación; cantar notas leídas",
      "lecciones": [
       {
@@ -4478,22 +4479,21 @@
         {
          "id": "n2.t10.l4.p1",
          "tipo": "Obra",
-         "texto": "**Sor, op. 35 n.º 8**",
+         "texto": "**Sor, op. 35 n.º 17** (el n.º 6 de los estudios de Sor de Segovia): melodía con acompañamiento a dos voces",
          "recursos": [
           "partitura",
           "tablatura",
           "metronomo"
          ],
-         "obra": "o2-sor-op-35-n-8"
+         "obra": "o2-sor-op-35-n-17"
         },
         {
          "id": "n2.t10.l4.p2",
          "tipo": "Análisis",
-         "texto": "La forma y la modulación a la dominante",
+         "texto": "La forma y la modulación a la dominante: A en Re, A que acaba en La, B que pasa por Re menor y A otra vez",
          "recursos": [
           "partitura"
-         ],
-         "porVerificar": "pendiente de comprobar en la partitura"
+         ]
         },
         {
          "id": "n2.t10.l4.p3",
@@ -4721,12 +4721,11 @@
         {
          "id": "n2.t12.l2.p2",
          "tipo": "Obra",
-         "texto": "**Brouwer, *Estudio sencillo* VII**",
+         "texto": "**Brouwer, *Estudio sencillo* VII**: una sola línea en 12/8 que a veces pasa a 9/8, con ligados a cuerdas al aire, dinámicas muy marcadas y *ponticello*",
          "recursos": [
           "metronomo"
          ],
          "edicion": "edición publicada (con derechos)",
-         "porVerificar": "lo que trabaja",
          "obra": "o2-brouwer-estudio-sencillo-vii"
         },
         {
@@ -4811,12 +4810,12 @@
         {
          "id": "n2.t13.l1.p1",
          "tipo": "Obra",
-         "texto": "Dowland o Petzold (Renacimiento o Barroco)."
+         "texto": "Una del Renacimiento o del Barroco: la danza inglesa o el minueto."
         },
         {
          "id": "n2.t13.l1.p2",
          "tipo": "Obra",
-         "texto": "Giuliani, Sor o Aguado (Clasicismo)."
+         "texto": "Una del Clasicismo, de los estudios del nivel."
         },
         {
          "id": "n2.t13.l1.p3",
@@ -5164,8 +5163,7 @@
         {
          "id": "n3.t1.l4.p3",
          "tipo": "Digitación",
-         "texto": "Por qué la melodía se queda en la misma cuerda aunque obligue a cambiar de posición: el mismo color de principio a fin de la frase",
-         "porVerificar": "en la edición"
+         "texto": "Las posturas de Pablo Romero Luis: la cejilla en el II, el Si en la 3.ª cuerda y el dedo 3 que se queda de un compás a otro, el «dedo ancla»."
         },
         {
          "id": "n3.t1.l4.p4",
@@ -5379,8 +5377,7 @@
         {
          "id": "n3.t2.l4.p2",
          "tipo": "Digitación",
-         "texto": "Los portamentos que pide Tárrega: con qué dedo se sale y con cuál se llega, y por qué el deslizamiento es parte de la música",
-         "porVerificar": "en la edición"
+         "texto": "Los portamentos de la obra (c. 7-8, 11 y 14): con qué dedo se sale y con cuál se llega, y por qué el deslizamiento es parte de la música."
         }
        ]
       },
@@ -13352,21 +13349,21 @@
    "ficha": "obra:tarrega.lagrima"
   },
   {
-   "id": "o1-giuliani-op-1-parte-4-n-3",
+   "id": "o1-aguado-estudio-en-la-menor",
    "nivel": 1,
-   "compositor": "Giuliani",
-   "titulo": "op. 1, parte 4, n.º 3",
+   "compositor": "Aguado",
+   "titulo": "Estudio en La menor",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "El arpegio en una pieza",
-   "teoria": "Inversiones",
+   "tecnica": "El arpegio p-i-m-i en una pieza",
+   "teoria": "Inversiones; semicorcheas",
    "epoca": "Clasicismo",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n1.t6",
      "numero": 6,
-     "titulo": "Giuliani op. 1, parte 4, n.º 3, y su *Estudio en Mi menor*"
+     "titulo": "Aguado, *Estudio en La menor*, y su *Estudio en Mi menor*"
     }
    ]
   },
@@ -13385,7 +13382,7 @@
     {
      "id": "n1.t6",
      "numero": 6,
-     "titulo": "Giuliani op. 1, parte 4, n.º 3, y su *Estudio en Mi menor*"
+     "titulo": "Aguado, *Estudio en La menor*, y su *Estudio en Mi menor*"
     }
    ]
   },
@@ -13463,11 +13460,6 @@
      "id": "n1.t12",
      "numero": 12,
      "titulo": "La *Romanesca* y la *Españoleta*"
-    },
-    {
-     "id": "n1.t14",
-     "numero": 14,
-     "titulo": "Cierre del nivel 1"
     }
    ]
   },
@@ -13487,6 +13479,11 @@
      "id": "n1.t12",
      "numero": 12,
      "titulo": "La *Romanesca* y la *Españoleta*"
+    },
+    {
+     "id": "n1.t14",
+     "numero": 14,
+     "titulo": "Cierre del nivel 1"
     }
    ],
    "ficha": "obra:sanz.espanoleta"
@@ -13516,21 +13513,40 @@
    ]
   },
   {
-   "id": "o2-aguado-contradanza-op-8-n-5",
-   "nivel": 2,
-   "compositor": "Aguado",
-   "titulo": "Contradanza op. 8 n.º 5",
+   "id": "o1-giuliani-allegro-op-50-n-13",
+   "nivel": 1,
+   "compositor": "Giuliani",
+   "titulo": "Allegro op. 50 n.º 13",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "Cejilla en una danza; síncopa",
-   "teoria": "Formas móviles; 2/2",
+   "tecnica": "Arpegio p-i-m-i-a-i-m-i; pulgar e índice",
+   "teoria": "La menor; Mi7",
+   "epoca": "Clasicismo",
+   "derechos": "libre",
+   "tramos": [
+    {
+     "id": "n1.t13",
+     "numero": 13,
+     "titulo": "Sor, *Andante* op. 31 n.º 4"
+    }
+   ]
+  },
+  {
+   "id": "o2-carulli-estudio-n-6",
+   "nivel": 2,
+   "compositor": "Carulli",
+   "titulo": "Estudio n.º 6",
+   "tipo": "aplicacion",
+   "tipoTexto": "Aplicación",
+   "tecnica": "Dobles notas sobre el bajo; la misma postura en otra cuerda",
+   "teoria": "La menor y Do mayor; A-B-A y C-D-C",
    "epoca": "Clasicismo",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n2.t1",
      "numero": 1,
-     "titulo": "Aguado, *Contradanza* op. 8 n.º 5"
+     "titulo": "Carulli, *Estudio n.º 6*"
     }
    ]
   },
@@ -13564,22 +13580,21 @@
    ]
   },
   {
-   "id": "o2-giuliani-sonatina-op-71-i",
+   "id": "o2-carcassi-op-60-n-3",
    "nivel": 2,
-   "compositor": "Giuliani",
-   "titulo": "Sonatina op. 71, I",
-   "tipo": "troncal",
-   "tipoTexto": "Troncal",
-   "tecnica": "a-m-i; staccato",
-   "teoria": "Forma sonatina; estilo",
+   "compositor": "Carcassi",
+   "titulo": "op. 60 n.º 3",
+   "tipo": "aplicacion",
+   "tipoTexto": "Aplicación",
+   "tecnica": "Arpegio continuo sobre el bajo; cejillas en el II, V, VII y IX",
+   "teoria": "La mayor; la forma con vuelta; la modulación a la dominante",
    "epoca": "Clasicismo",
    "derechos": "libre",
-   "porVerificar": true,
    "tramos": [
     {
      "id": "n2.t4",
      "numero": 4,
-     "titulo": "Giuliani, *Sonatina* op. 71, primer movimiento"
+     "titulo": "Carcassi, op. 60 n.º 3"
     }
    ]
   },
@@ -13590,11 +13605,10 @@
    "titulo": "op. 60 n.º 7",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "Estudio  lo que trabaja",
+   "tecnica": "Trémolo p-a-m-i, arpegios y ligados descendentes",
    "teoria": "Armaduras con bemoles",
    "epoca": "Clasicismo",
    "derechos": "libre",
-   "porVerificar": true,
    "tramos": [
     {
      "id": "n2.t5",
@@ -13604,40 +13618,40 @@
    ]
   },
   {
-   "id": "o2-dowland-willoughby",
+   "id": "o2-anonimo-packington-s-pound",
    "nivel": 2,
-   "compositor": "Dowland",
-   "titulo": "Willoughby",
+   "compositor": "Anónimo",
+   "titulo": "Packington's Pound",
    "tipo": "troncal",
    "tipoTexto": "Troncal",
-   "tecnica": "Dos voces; pulgar con melodía; ligados",
-   "teoria": "Variación",
+   "tecnica": "Dos voces; el bajo que se sostiene",
+   "teoria": "Variación: la misma música adornada",
    "epoca": "Renacimiento",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n2.t6",
      "numero": 6,
-     "titulo": "Dowland, *My Lord Willoughby's Welcome Home*"
+     "titulo": "Anónimo, *Packington's Pound*"
     }
    ]
   },
   {
-   "id": "o2-petzold-minueto-bwv-anh-114",
+   "id": "o2-petzold-minueto-en-sol-menor-bwv-anh-115",
    "nivel": 2,
    "compositor": "Petzold",
-   "titulo": "Minueto BWV Anh. 114",
+   "titulo": "Minueto en Sol menor BWV Anh. 115",
    "tipo": "lectura",
    "tipoTexto": "Lectura",
-   "tecnica": "Una obra leída; un dúo",
-   "teoria": "Binaria; articulación",
+   "tecnica": "Una obra leída; un dúo; adornos",
+   "teoria": "Binaria; el relativo mayor; articulación",
    "epoca": "Barroco",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n2.t7",
      "numero": 7,
-     "titulo": "Petzold, *Minueto*, y Sor, op. 44 n.º 2"
+     "titulo": "Petzold, *Minueto en Sol menor*, y Sor, op. 44 n.º 2"
     }
    ]
   },
@@ -13655,7 +13669,7 @@
     {
      "id": "n2.t7",
      "numero": 7,
-     "titulo": "Petzold, *Minueto*, y Sor, op. 44 n.º 2"
+     "titulo": "Petzold, *Minueto en Sol menor*, y Sor, op. 44 n.º 2"
     }
    ]
   },
@@ -13666,11 +13680,10 @@
    "titulo": "Preludio n.º 1",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "Preludio breve",
-   "teoria": "El V7",
+   "tecnica": "Melodía sobre acordes; ligados descendentes; cejillas de un momento; 6.ª en Re",
+   "teoria": "Re menor; el V7",
    "epoca": "Romanticismo",
    "derechos": "libre",
-   "porVerificar": true,
    "tramos": [
     {
      "id": "n2.t8",
@@ -13680,41 +13693,40 @@
    ]
   },
   {
-   "id": "o2-giuliani-op-51-n-10",
+   "id": "o2-carcassi-op-60-n-2",
    "nivel": 2,
-   "compositor": "Giuliani",
-   "titulo": "op. 51 n.º 10",
+   "compositor": "Carcassi",
+   "titulo": "op. 60 n.º 2",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "Arpegio con cambio de acorde",
-   "teoria": "ii-V-I; V/V",
+   "tecnica": "Arpegio p-i-m-a-m-i-m-i con cambio de acorde; posiciones hasta la X",
+   "teoria": "La menor; dominantes secundarias; ii-V-I en menor",
    "epoca": "Clasicismo",
    "derechos": "libre",
    "tramos": [
     {
      "id": "n2.t9",
      "numero": 9,
-     "titulo": "Giuliani, op. 51 n.º 10"
+     "titulo": "Carcassi, op. 60 n.º 2"
     }
    ]
   },
   {
-   "id": "o2-sor-op-35-n-8",
+   "id": "o2-sor-op-35-n-17",
    "nivel": 2,
    "compositor": "Sor",
-   "titulo": "op. 35 n.º 8",
+   "titulo": "op. 35 n.º 17",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "Clasicismo",
-   "teoria": "Modulación",
+   "tecnica": "Melodía y acompañamiento a dos voces; posición II",
+   "teoria": "Re mayor; modulación a la dominante; el homónimo menor",
    "epoca": "Clasicismo",
    "derechos": "libre",
-   "porVerificar": true,
    "tramos": [
     {
      "id": "n2.t10",
      "numero": 10,
-     "titulo": "Sor, op. 35 n.º 8"
+     "titulo": "Sor, op. 35 n.º 17"
     }
    ]
   },
@@ -13744,11 +13756,10 @@
    "titulo": "Estudio sencillo VII",
    "tipo": "aplicacion",
    "tipoTexto": "Aplicación",
-   "tecnica": "lo que trabaja",
-   "teoria": "Acentos",
+   "tecnica": "Ligados a cuerdas al aire; dinámicas; *ponticello*",
+   "teoria": "12/8 y 9/8; acentos",
    "epoca": "Siglo XX",
    "derechos": "con-derechos",
-   "porVerificar": true,
    "tramos": [
     {
      "id": "n2.t12",

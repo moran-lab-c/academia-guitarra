@@ -1,23 +1,22 @@
 {
  "tramo": "n2.t4",
- "nota": "Curso 2. La Sonatina se integra por su tema y su primera vuelta (21 compases), releídos de la primera edición. El resto no se puede leer con seguridad en el único escaneo disponible. Según esa edición, este movimiento es un tema con variaciones.",
+ "nota": "Curso 2. Carcassi, op. 60 n.º 3, en lugar de la Sonatina op. 71 de Giuliani (06/11/2026, decisión de David): notas, dedos y cejillas de la lección de Sky Guitar, cotejados con el tutorial en español de Alex Salas; tempos medidos en sus grabaciones.",
  "pasos": {
   "n2.t4.l1.p1": {
    "bloques": [
     {
      "tipo": "concepto",
-     "titulo": "Mauro Giuliani en Viena",
-     "md": "Italiano (1781-1829), se instaló en Viena en 1806 y allí fue una estrella: tocó para Beethoven y con el círculo de Hummel. La Viena de Haydn y Mozart seguía viva; en ese mundo cuenta **la proporción**: frases iguales, preguntas y respuestas, armonía sencilla y clara."
+     "titulo": "Matteo Carcassi",
+     "md": "Italiano (Florencia, 1792 - París, 1853), se instaló en París, donde la guitarra estaba de moda y también triunfaban Sor y Aguado. Escribió un **método** para guitarra que se sigue usando, y como continuación, sus ***25 estudios melódicos y progresivos* op. 60**: cada uno trabaja una cosa, y van de más fácil a más difícil."
     },
     {
      "tipo": "concepto",
-     "titulo": "La *Sonatina*",
-     "md": "Es una sonata pequeña, pensada para principiantes: la edición dice «di una facilità progressiva, ad uso di principianti». El opus 71 tiene tres. La primera, en Do, empieza con un «Maestoso»: es el movimiento de este tramo, y lleva después un Minueto."
+     "titulo": "Un lenguaje clásico",
+     "md": "Los estudios se publicaron ya en tiempos de Chopin, pero Carcassi escribe como Giuliani y Sor: **la proporción** manda. Frases de igual tamaño, que preguntan y responden, y una armonía clara que sale de casa y vuelve."
     },
     {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "El programa de referencia cita el «Maestoso» de la *Sonatina* op. 71 sin decir cuál de las tres. La n.º 1 lleva ese nombre en la edición que hemos consultado, así que aquí se usa esa."
+     "tipo": "texto",
+     "md": "El de este tramo es el **n.º 3**. Alex Salas lo llama «uno de los estudios más conocidos» de Carcassi y dice que es «de los que todos nos aprendemos al principio»."
     }
    ]
   },
@@ -53,20 +52,24 @@
       ],
       [
        "**Ejemplos**",
-       "Giuliani, Sor",
+       "Giuliani, Sor, Carcassi",
        "Tárrega, Coste"
       ]
      ]
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-giuliani-op71-1.json",
-     "titulo": "Fragmento clásico: Giuliani",
+     "fuente": "notacion/obra-carcassi-op60-3.json",
+     "titulo": "Fragmento clásico: Carcassi",
      "principal": "ambas",
-     "motivo": "Escucha su equilibrio.",
+     "motivo": "Escucha su equilibrio: ocho compases que salen de La y llegan a Mi.",
      "bpms": [
       60,
       72
+     ],
+     "compases": [
+      1,
+      8
      ]
     },
     {
@@ -157,57 +160,122 @@
         "Tocas distinto la vuelta: ya no es sorpresa, es llegada.",
         "Este mapa vale para Sor, Giuliani y casi todo el Clasicismo."
        ]
+      },
+      {
+       "tipo": "texto",
+       "md": "El estudio de este tramo **no es una sonatina**: no tiene segundo tema. Pero hace el mismo viaje, en pequeño. En el paso siguiente lo vas a ver."
       }
      ]
     }
    ]
   },
   "n2.t4.l2.p2": {
-   "bloques": [
+   "pantallas": [
     {
-     "tipo": "texto",
-     "md": "Vas a buscar el mapa en la partitura real."
-    },
-    {
-     "tipo": "notacion",
-     "fuente": "notacion/obra-giuliani-op71-1.json",
-     "titulo": "El tema 1",
-     "principal": "partitura",
-     "motivo": "El objetivo es analizar: partitura.",
-     "bpms": [
-      60,
-      72
-     ],
-     "notas": [
-      "El {c:1-4} es la pregunta y el {c:5-8} empieza a responder.",
-      "Desde el {c:13} vuelve con el acompañamiento más movido."
+     "titulo": "El mapa del estudio",
+     "bloques": [
+      {
+       "tipo": "texto",
+       "md": "El estudio tiene 24 compases, en **tres partes de ocho**. La mano derecha hace lo mismo todo el rato; lo que cambia, y da la forma, es **la armonía**: a dónde va."
+      },
+      {
+       "tipo": "tabla",
+       "cabecera": [
+        "Parte",
+        "Compases",
+        "Qué pasa",
+        "Tonalidad"
+       ],
+       "filas": [
+        [
+         "**A**",
+         "1-8",
+         "El tema: sale de casa y acaba en el acorde de Mi",
+         "La mayor → Mi (V)"
+        ],
+        [
+         "**B**",
+         "9-16",
+         "Sobre un bajo Mi que no se mueve; después pasa por Fa♯ menor y sube hasta el Do♯ del compás 16, el punto de más tensión",
+         "Se aleja"
+        ],
+        [
+         "**A**",
+         "17-24",
+         "Vuelve el principio y una cadencia lo cierra en casa",
+         "La mayor (I)"
+        ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Se llama forma con vuelta",
+       "md": "Primera parte que acaba fuera, una parte que se aleja y **la vuelta del principio**. Es el mismo viaje que la forma sonatina —salir de casa, estar fuera, volver—, sin segundo tema. Las dos partes se repiten: la primera, del compás 1 al 8; la segunda, del 9 al final."
+      }
      ]
     },
     {
-     "tipo": "pasos",
-     "titulo": "Búscalo en la edición",
-     "items": [
-      "Abre [la primera edición de Mechetti en IMSLP](https://imslp.org/wiki/3_Guitar_Sonatinas,_Op.71_%28Giuliani,_Mauro%29), páginas 2 y 3.",
-      "Busca el primer sitio donde el tema en Do cambia a Sol: el Fa♯ te lo dice.",
-      "Busca el sitio donde vuelve el tema del principio.",
-      "Marca los tres puntos a lápiz."
+     "titulo": "Búscalo en la partitura",
+     "bloques": [
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-carcassi-op60-3.json",
+       "titulo": "El final de A: llegar a Mi",
+       "principal": "partitura",
+       "motivo": "El objetivo es analizar: partitura.",
+       "bpms": [
+        60
+       ],
+       "compases": [
+        7,
+        8
+       ],
+       "notas": [
+        "En el {c:7}, el bajo Si y el Re♯ preparan Mi: es el acorde que lleva a la dominante.",
+        "El {c:8} acaba en Mi mayor. Para volver a La, hace falta la segunda parte."
+       ]
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-carcassi-op60-3.json",
+       "titulo": "La vuelta",
+       "principal": "partitura",
+       "motivo": "El compás 17 es el 1 otra vez.",
+       "bpms": [
+        60
+       ],
+       "compases": [
+        16,
+        17
+       ],
+       "notas": [
+        "El {c:16} rompe el arpegio: es el clímax.",
+        "Y en el {c:17} vuelve el principio, igual nota por nota."
+       ]
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "La primera parte está en La mayor y acaba en un acorde de Mi mayor. ¿Qué es Mi respecto a La?",
+       "opciones": [
+        "La dominante (V)",
+        "La subdominante (IV)",
+        "La tónica (I)"
+       ],
+       "correcta": 0,
+       "porque": "La, Si, Do♯, Re, **Mi**: el quinto grado. Por eso la primera parte se queda en el aire."
+      },
+      {
+       "tipo": "elige",
+       "enunciado": "¿Qué le falta a este estudio para ser una forma sonatina?",
+       "opciones": [
+        "Un segundo tema",
+        "Una vuelta al principio",
+        "Salir de la tónica"
+       ],
+       "correcta": 0,
+       "porque": "Sale de la tónica y vuelve, como la sonatina, pero todo es un mismo tema."
+      }
      ]
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "**Una duda seria.** El currículo presenta aquí la forma sonatina, pero en la primera edición este «Maestoso» parece un **tema con variaciones**: el mismo plan vuelve con tresillos y después con semicorcheas, y un catálogo comercial lo describe igual. Aquí se enseña la forma sonatina porque volverá en Sor y en Clementi, pero no se afirma que este movimiento la siga. Compruébalo con tu profesor. Si es así, busca en la edición dónde vuelve el tema y qué cambia."
-    },
-    {
-     "tipo": "elige",
-     "enunciado": "Vuelve el primer tema tras una parte en la dominante. ¿Qué parte es?",
-     "opciones": [
-      "Exposición",
-      "Reexposición",
-      "Coda"
-     ],
-     "correcta": 1,
-     "porque": "Lo que vuelve es la reexposición: la vuelta a casa."
     }
    ]
   },
@@ -590,31 +658,169 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-giuliani-sonatina-op-71-i",
-       "md": "**Por qué está aquí:** es la primera sonatina del programa; lo que aprendas de ella sirve para Sor y para todo el Clasicismo. **Qué escuchar:** dos frases iguales que preguntan y responden. **Dificultad:** media, por el pulso firme y los puntillos."
+       "id": "o2-carcassi-op-60-n-3",
+       "md": "**Por qué está aquí:** es de los estudios más conocidos de Carcassi. **Qué aprendes:** un arpegio que no para —el bajo y las tres primeras cuerdas— mientras la izquierda pone acordes y se mueve por las cejillas del II, el V, el VII y el IX; y a oír a dónde va la armonía. **Dificultad:** media: la derecha repite lo mismo; lo difícil es la izquierda."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-giuliani-op71-1.json",
-       "titulo": "*Sonatina* op. 71, I: el tema",
+       "fuente": "notacion/obra-carcassi-op60-3.json",
+       "titulo": "Carcassi, *Estudio op. 60 n.º 3*: la obra entera",
        "principal": "ambas",
-       "motivo": "Partitura y tablatura para la parte transcrita.",
+       "motivo": "Partitura y tablatura juntas.",
        "bpms": [
-        60,
+        40,
         72
        ],
        "notas": [
-        "Anacrusa y {c:1}: empieza con un apoyo, como todo este estilo.",
-        "El {c:2} salta a Sol: el punto alto, en el tercer tiempo.",
-        "El {c:4} cierra con corchea con puntillo y semicorchea: no los hagas iguales.",
-        "El {c:9-10} deja un silencio y repite la idea un tono más abajo.",
-        "El {c:17-20} mueve el bajo en corcheas."
+        "Notas, dedos y cejillas: los de la lección de Sky Guitar, cotejados con el tutorial en español de Alex Salas. Ninguno de los dos dice los dedos de la derecha nota a nota: cuentan el arpegio por cuerdas.",
+        "Cada tiempo es un **tresillo**, como en el *Romance*: tres corcheas en una negra. Debajo de la tablatura se cuenta solo el pulso: 1, 2, 3, 4.",
+        "En la partitura original, el bajo es una nota larga; aquí se escribe donde se toca. **Déjalo sonar** debajo del arpegio.",
+        "En el {c:2} se mueve toda la mano. Alex Salas avisa de que es de lo que más le cuesta: estudia el cambio del {c:1} al {c:2} por separado.",
+        "En el {c:10}, la cejilla del II tiene que llegar hasta la 4.ª cuerda, porque el Mi del último tiempo se toca con ella.",
+        "El {c:16} rompe el arpegio: es el clímax. Alex recomienda frenar un poco y tocarlo más fuerte, para que la vuelta del {c:17} se sienta como reposo.",
+        "Las dos partes se repiten, como dice Alex: del {c:1} al {c:8}, y del {c:9} al final.",
+        "Sky Guitar lo toca a ♩ ≈ 72 y, en su versión lenta, a ♩ ≈ 40; Alex Salas, a ♩ ≈ 60. Para aprender, ♩ = 40."
        ]
       },
       {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "**Están transcritos 21 compases**, leídos a ojo de un escaneo con el pentagrama muy gastado: conviene cotejarlos. Las variaciones siguientes no se han pasado a la app, porque no se pueden leer con seguridad y no hay otra edición libre a la vista. Se estudian en [la primera edición de Mechetti en IMSLP](https://imslp.org/wiki/3_Guitar_Sonatinas,_Op.71_%28Giuliani,_Mauro%29)."
+       "tipo": "video",
+       "alLado": true,
+       "id": "UxrgNa1glVA",
+       "titulo": "Alex Salas: Carcassi, *Estudio op. 60 n.º 3*, tutorial en español",
+       "nota": "Compás a compás: el arpegio de la derecha, los acordes de la izquierda y dónde va cada cejilla.",
+       "capitulos": [
+        [
+         0,
+         "El estudio entero"
+        ],
+        [
+         122,
+         "El arpegio de la derecha"
+        ],
+        [
+         225,
+         "Los primeros acordes"
+        ],
+        [
+         275,
+         "El cambio difícil del compás 2"
+        ],
+        [
+         370,
+         "La cejilla del V"
+        ],
+        [
+         487,
+         "La segunda parte"
+        ],
+        [
+         688,
+         "El clímax"
+        ],
+        [
+         774,
+         "La vuelta"
+        ],
+        [
+         884,
+         "La cadencia final"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "KESkHUP_5gg",
+       "titulo": "Sky Guitar: la misma obra, con tablatura",
+       "nota": "A tempo y en versión lenta, con la partitura y la tablatura en pantalla: es la fuente de los dedos de la academia.",
+       "capitulos": [
+        [
+         0,
+         "A tempo"
+        ],
+        [
+         92,
+         "Lento, con tablatura"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El compás 1: el arpegio que no para",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "A",
+        "ms": 650,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "texto": "El bajo, La, al aire."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 1,
+          "texto": "La 3.ª cuerda, con el dedo 1…"
+         },
+         {
+          "c": 2,
+          "t": 2,
+          "dedo": 2,
+          "texto": "…la 2.ª, con el 2…"
+         },
+         {
+          "c": 1,
+          "t": 2,
+          "dedo": 3,
+          "texto": "…y la 1.ª: el Fa♯, con el 3."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "texto": "Se quita el 3: suena el Mi al aire."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "texto": "Otra vez el bajo, y medio arpegio: 3.ª y 2.ª."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 1
+         },
+         {
+          "c": 2,
+          "t": 2,
+          "dedo": 2
+         }
+        ],
+        "final": "Bajo, 3, 2, 1, 3, 2, 1, 3, 2, bajo, 3, 2: así cuenta Alex Salas el arpegio de todo el estudio."
+       }
       }
      ]
     },
@@ -625,35 +831,96 @@
        "tipo": "pasos",
        "titulo": "Por partes",
        "items": [
-        "Solo el bajo, con el metrónomo en blancas: dos pulsos por compás.",
-        "Solo la melodía.",
-        "Juntos, muy lento, sintiendo dos pulsos y no cuatro.",
-        "Sigue en la edición, de frase en frase."
+        "Primero la derecha sola, con las cuerdas al aire: bajo, 3.ª, 2.ª, 1.ª… Alex lo practica así, con el metrónomo.",
+        "Después, compás a compás: pon el acorde entero antes de tocar y deja quietos los dedos que no cambian.",
+        "El paso del compás 1 al 2, solo, hasta que la mano vaya ligera.",
+        "Cada parte, despacio y entera; después, las dos con sus repeticiones."
        ]
       },
       {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "Del compás 1 al 2: toda la mano se mueve",
+        "trastes": [
+         0,
+         5
+        ],
+        "clave": "A",
+        "ms": 900,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "con": [
+           {
+            "c": 3,
+            "t": 2,
+            "dedo": 1
+           },
+           {
+            "c": 2,
+            "t": 2,
+            "dedo": 2
+           },
+           {
+            "c": 1,
+            "t": 2,
+            "dedo": 3
+           }
+          ],
+          "texto": "El compás 1: el bajo al aire y los dedos 1, 2 y 3 en el traste 2."
+         },
+         {
+          "c": 6,
+          "t": 4,
+          "dedo": 3,
+          "con": [
+           {
+            "c": 3,
+            "t": 4,
+            "dedo": 4
+           },
+           {
+            "c": 2,
+            "t": 3,
+            "dedo": 2
+           },
+           {
+            "c": 1,
+            "t": 2,
+            "dedo": 1
+           }
+          ],
+          "texto": "El compás 2: el 3 al Sol♯ de la 6.ª, el 4 a la 3.ª, el 2 a la 2.ª y el 1 al Fa♯."
+         }
+        ],
+        "final": "Alex: «trata de no forzar tanto el movimiento; realmente es un movimiento muy ligerito»."
+       }
+      },
+      {
        "tipo": "ejercicio",
-       "que": "El tema, y lo que hayas alcanzado de la edición, con el pulso de blanca firme.",
-       "porque": "Es la obra troncal del Clasicismo en este nivel.",
-       "atencion": "Lo que manda es el pulso. Si un compás cuesta, baja el metrónomo; no estires el compás.",
-       "empieza": "Blanca = 48.",
-       "sube": "Blanca = 72."
+       "que": "El estudio entero, parte a parte.",
+       "porque": "La derecha aprende a repetir un arpegio sin pensar, y la izquierda, a moverse por las cejillas con el bajo sonando.",
+       "atencion": "El bajo sigue sonando mientras la derecha arpegia: no lo apagues.",
+       "empieza": "♩ = 40, la versión lenta de Sky.",
+       "sube": "♩ = 60, como Alex; después, ♩ = 72."
       },
       {
        "tipo": "metronomo",
-       "bpm": 96,
-       "clave": "o2-giuliani-sonatina-op-71-i"
+       "clave": "o2-carcassi-op-60-n-3",
+       "bpm": 40
       },
       {
        "tipo": "errores",
        "items": [
         {
-         "error": "Los puntillos salen como dos corcheas.",
-         "arreglo": "Cuenta la semicorchea, «1-e-y-a»; el puntillo llega hasta la «a»."
+         "error": "Levantas toda la mano en cada tiempo.",
+         "arreglo": "Casi cada compás es un acorde que se mantiene: solo se mueve lo que cambia, como el 3 que se quita para que suene el Mi."
         },
         {
-         "error": "Aceleras en lo fácil.",
-         "arreglo": "Lo clásico se nota enseguida. Graba y escucha contra el metrónomo."
+         "error": "El bajo llega tarde al cambiar de acorde.",
+         "arreglo": "Alex: «sobre todo que el bajo caiga». Prepara el dedo del bajo antes que los demás."
         }
        ]
       }
@@ -666,25 +933,29 @@
     {
      "tipo": "concepto",
      "titulo": "El carácter clásico",
-     "md": "**Claridad:** cada nota en su sitio, sin difuminar. **Frases iguales:** dos que se responden, con un final que se nota. **Poco rubato:** el pulso aguanta, y lo expresivo se hace con dinámica y articulación. Si al tocar Giuliani te sale como el *Romance*, sobra romanticismo."
+     "md": "**Claridad:** cada nota en su sitio, sin difuminar. **Frases iguales:** dos que se responden, con un final que se nota. **Poco rubato:** el pulso aguanta, y lo expresivo se hace con dinámica y articulación. Si al tocar Carcassi te sale como el *Romance*, sobra romanticismo."
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-giuliani-op71-1.json",
+     "fuente": "notacion/obra-carcassi-op60-3.json",
      "titulo": "Tócalo así",
      "principal": "ambas",
      "bpms": [
       60,
       72
+     ],
+     "compases": [
+      1,
+      8
      ]
     },
     {
      "tipo": "lista",
      "titulo": "Cómo se consigue",
      "items": [
-      "El final de cada frase se aligera.",
+      "El final de cada parte se nota: el {c:8} se queda en el aire y el {c:24} llega a casa.",
       "El bajo no pesa; acompaña.",
-      "Las notas largas no llevan vibrato; como mucho, en el punto alto."
+      "Lo único que se estira es el clímax del {c:16}, como dice Alex."
      ]
     },
     {
@@ -699,13 +970,24 @@
    "bloques": [
     {
      "tipo": "texto",
-     "md": "Comprobación. La obra, y dos preguntas sobre la forma sonatina como modelo, sea o no la de este movimiento."
+     "md": "Comprobación. El estudio entero, con sus repeticiones, y tres preguntas de forma."
     },
     {
      "tipo": "bien",
      "items": [
-      "El movimiento, o lo que lleves de él, a pulso firme."
+      "El estudio entero, con las repeticiones, sin parar y con el bajo sonando."
      ]
+    },
+    {
+     "tipo": "elige",
+     "enunciado": "En el estudio de Carcassi, ¿qué parte vuelve en el compás 17?",
+     "opciones": [
+      "La A, la del principio",
+      "La B",
+      "Una parte nueva"
+     ],
+     "correcta": 0,
+     "porque": "El compás 17 es el 1 otra vez: es la vuelta, y por eso acaba en La."
     },
     {
      "tipo": "elige",

@@ -1,6 +1,6 @@
 {
  "tramo": "n1.t13",
- "nota": "Primera aparición de Clasicismo, forma binaria y ternaria, cejilla completa y repetir de oído. Sor op. 31 n.º 4 sigue fuera de la app: tonalidad, compases y forma, por verificar.",
+ "nota": "Primera aparición de Clasicismo, forma binaria y ternaria, cejilla completa y repetir de oído. Sor op. 31 n.º 4, en Re mayor, de la edición Simrock, con los dedos de la edición; sin tutorial en español, el vídeo es el de My Guitar. Giuliani op. 50 n.º 13 (La mariposa) añadido el 05/11/2026 por orden suya, junto a Sor: notas, mano derecha y dedos del tutorial de Pablo Romero Luis.",
  "pasos": {
   "n1.t13.l1.p1": {
    "bloques": [
@@ -484,7 +484,7 @@
       {
        "tipo": "obra",
        "id": "o1-sor-andante-op-31-n-4",
-       "md": "**Qué aprendes:** el estilo clásico, con frases que preguntan y responden. Es una de las obras posibles de tu recital."
+       "md": "El ***Andante* op. 31 n.º 4** de Fernando Sor es una de sus *Veinticuatro lecciones progresivas*, y es habitual en los exámenes de guitarra. **Qué aprendes:** el estilo clásico, con frases que preguntan y responden, y tres planos a la vez: melodía, acompañamiento y bajo. Es una de las obras posibles de tu recital."
       },
       {
        "tipo": "notacion",
@@ -497,8 +497,17 @@
         76
        ],
        "notas": [
-        "Está en Re mayor, en 2/4, según la edición Simrock (IMSLP). Dedos de la edición; los que faltan y la mano derecha, propuesta de la academia."
+        "Está en Re mayor y en 2/4, según la edición Simrock (IMSLP). Los dedos de la izquierda son los de la edición.",
+        "No hay tutorial en español de esta obra, y el de al lado no marca la mano derecha: la eliges tú, con lo que ya sabes de los planos (el bajo con *p*, la melodía con *m* o *a*).",
+        "Tiene tres planos; la app los dibuja en dos voces, con todas las notas de la fuente."
        ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "-yxx7WO3Iak",
+       "titulo": "My Guitar: Sor, op. 31 n.º 4, con tablatura",
+       "nota": "En inglés: la toca a tempo y después en una versión lenta, con la partitura y la tablatura debajo. Sirve para oírla y seguirla."
       },
       {
        "tipo": "pasos",
@@ -932,6 +941,62 @@
      ]
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Trémolo con el bajo alternando",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "C",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 6,
+        "t": 0,
+        "mano": "p"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "a"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "i"
+       }
+      ],
+      "final": "p-a-m-i, y el pulgar cambia de la 5.ª a la 6.ª."
+     }
+    },
+    {
      "tipo": "metronomo",
      "bpm": 44
     },
@@ -1001,6 +1066,249 @@
       {
        "paso": "n1.t13.l3.p2",
        "texto": "si falla la cejilla."
+      }
+     ]
+    }
+   ]
+  },
+  "n1.t13.l4.p5": {
+   "pantallas": [
+    {
+     "titulo": "Qué aprendes con ella",
+     "bloques": [
+      {
+       "tipo": "obra",
+       "id": "o1-giuliani-allegro-op-50-n-13",
+       "md": "El ***Allegro* op. 50 n.º 13** de Mauro Giuliani es una de sus *Mariposas* (*Le papillon*), y de las piezas clásicas más tocadas al empezar. Pablo Romero Luis cuenta que fue la que le hizo ver, de pequeño, lo bien que podía sonar la guitarra. **Qué aprendes:** el arpegio clásico, rápido y ligero, y el pulgar alternando con el índice."
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Dos técnicas, nada más",
+       "md": "Toda la obra sale de dos movimientos de la derecha. El **arpegio p-i-m-i-a-i-m-i**: el pulgar en el bajo, *i* en la 3.ª cuerda, *m* en la 2.ª y *a* en la 1.ª. Y el **pulgar con el índice**, alternando: el pulgar baja por las cuerdas graves y el índice se queda en la 3.ª. Pablo avisa: el índice no apoya, y la muñeca, quieta."
+      },
+      {
+       "tipo": "notacion",
+       "fuente": "notacion/obra-giuliani-op50-13.json",
+       "titulo": "Giuliani, *Allegro* op. 50 n.º 13: la obra entera",
+       "principal": "ambas",
+       "motivo": "Partitura y tablatura juntas.",
+       "bpms": [
+        40,
+        76
+       ],
+       "notas": [
+        "Está escrita como la escribe Pablo: en 4/4 y en semicorcheas.",
+        "Los {c:5-6} repiten los {c:1-2}. Del {c:7} al {c:10}, solo arpegios: Pablo va diciendo los acordes.",
+        "Los dedos de colores son los que dice Pablo; los demás no los dice y no se ponen.",
+        "Pablo la toca a ♩ ≈ 76 en su demostración. Para aprender, ♩ = 40."
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "J0DQD5G_CgY",
+       "titulo": "Pablo Romero Luis: *La mariposa* n.º 13, tutorial en español",
+       "nota": "Primero las dos técnicas de la derecha, después la obra compás a compás, y al final la toca despacio para que toques con él.",
+       "capitulos": [
+        [
+         53,
+         "Cómo suena"
+        ],
+        [
+         92,
+         "El arpegio de la derecha"
+        ],
+        [
+         164,
+         "Pulgar e índice"
+        ],
+        [
+         207,
+         "La obra, compás a compás"
+        ],
+        [
+         492,
+         "Toca conmigo, despacio"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El arpegio de la obra",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 600,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: el La grave."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i",
+          "texto": "i: el La de la 3.ª, con el dedo 2."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "m",
+          "texto": "m: el Do de la 2.ª, con el dedo 1."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "a",
+          "texto": "a: el Mi de arriba."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i",
+          "texto": "p-i-m-i-a-i-m-i: el índice vuelve siempre a la 3.ª."
+         }
+        ],
+        "final": "Pablo: «no hagas todo con un dedo». Con cuatro dedos, al principio cuesta, pero luego da velocidad y control."
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Cómo se trabaja",
+     "bloques": [
+      {
+       "tipo": "pasos",
+       "titulo": "Como lo enseña Pablo",
+       "items": [
+        "El arpegio solo, en cuerdas al aire, hasta que salga mientras hablas.",
+        "Pulgar e índice: el pulgar de la 6.ª a la 2.ª, y el índice en medio, sin apoyar.",
+        "Los compases 1 a 4, uno a uno. En el 4 llega la posición más difícil, Mi7: el Re con el dedo 4.",
+        "Del 7 al 10, los acordes: La menor con el bajo en Mi, La sus2 (quitar el dedo 1), Mi con el Sol♯ y el final que alterna La menor y Mi."
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "Pulgar e índice, final del compás 1",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "Am",
+        "ms": 550,
+        "notas": [
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: La."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i",
+          "texto": "i: siempre la 3.ª."
+         },
+         {
+          "c": 5,
+          "t": 2,
+          "mano": "p",
+          "texto": "p: Si."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         },
+         {
+          "c": 5,
+          "t": 3,
+          "dedo": 3,
+          "mano": "p",
+          "texto": "p: Do, con el dedo 3."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         },
+         {
+          "c": 5,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: La otra vez."
+         },
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         }
+        ],
+        "final": "El bajo hace una pequeña melodía —La, Si, Do, La— y el índice repite el La de arriba."
+       }
+      },
+      {
+       "tipo": "ejercicio",
+       "que": "La obra entera, con las dos técnicas.",
+       "porque": "Es el arpegio clásico rápido: lo que después pedirán las obras de los niveles siguientes.",
+       "atencion": "La muñeca quieta y el índice sin apoyar.",
+       "empieza": "♩ = 40.",
+       "sube": "Tres veces sin parar; al final, ♩ = 76, el tempo de Pablo."
+      },
+      {
+       "tipo": "metronomo",
+       "clave": "o1-giuliani-allegro-op-50-n-13",
+       "bpm": 40
+      },
+      {
+       "tipo": "bien",
+       "items": [
+        "La obra entera, sin parar.",
+        "Usas los cuatro dedos de la derecha, no uno solo.",
+        "La posición de Mi7 llega a tiempo."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t6.l3.p2",
+         "texto": "el p-i-m-i de Aguado."
+        }
+       ]
       }
      ]
     }

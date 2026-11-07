@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t11",
- "nota": "Curso 2. Coste, op. 38 n.º 1, entero: notas del MIDI de una tablatura independiente, cotejado por muestreo con la reedición de IMSLP.",
+ "nota": "Curso 2. Coste, op. 38 n.º 1, entero, con la digitación de la reedición alemana de IMSLP (n.º 30857), leída compás a compás el 07/11/2026; corregidas cinco notas o duraciones que no coincidían con ella.",
  "pasos": {
   "n2.t11.l1.p1": {
    "pantallas": [
@@ -458,17 +458,20 @@
         112
        ],
        "notas": [
-        "*Allegretto*, ♩ = 112 en la edición. La menor, 2/4. El primer compás empieza con un silencio.",
-        "{c:1-8} *p* en el bajo y acordes a contratiempo.",
-        "{c:9-12} acordes en cejilla: V, III y I.",
-        "{c:29-30} el pasaje rápido, con ligados.",
-        "{c:43-44} cierra en La."
+        "*Allegretto*, ♩ = 112 en la edición. La menor, 2/4. Los dedos, las posiciones y las cuerdas son los que trae impresos la edición; donde no pone nada, no se pone.",
+        "{c:1-3}: el bajo baja por la 4.ª cuerda (La, Sol♯, Sol, Fa) con el **dedo 3 de guía**: se desliza sin levantarlo. En el {c:5-6}, lo mismo en la 6.ª con el 2.",
+        "{c:9-11}: acordes en V, III y I, con el dedo 1 en el bajo y arriba: cejillas de un momento.",
+        "{c:21-23}: la parte alta, en VII, VI y IV. En el {c:22}, el Si con el 3 en el traste 9: **extensión**.",
+        "{c:29}: el primer Si (traste 7, dedo 4) sube arrastrando hasta el Re del traste 10: es el **glissando**. Después, los ligados de {c:29-30}.",
+        "{c:31}: vuelve el principio, *p*. {c:43-44} cierra en La."
        ]
       },
       {
-       "tipo": "guia",
-       "tipoGuia": "Por verificar",
-       "md": "Las notas salen del MIDI de una tablatura independiente, y se han cotejado por muestreo con [la edición en IMSLP](https://imslp.org/wiki/25_%C3%89tudes,_Op.38_%28Coste,_Napol%C3%A9on%29), no compás a compás. Los dedos son propuesta: los de la edición, en ella."
+       "tipo": "video",
+       "alLado": true,
+       "id": "1C0An98nUhI",
+       "titulo": "Carlo Fierens: el estudio, analizado y tocado entero",
+       "nota": "En italiano: el análisis de la armonía y, al final, la versión completa, para oír el carácter."
       }
      ]
     },

@@ -258,7 +258,14 @@ function enlazarObras(niveles, lista) {
   const conObra = new Set(['Obra', 'Obra conocida', 'Aplicación', 'Repaso', 'Digitación']);
   for (const n of niveles) {
     const delNivel = lista.filter(o => o.nivel === n.numero && o.tipo !== 'alternativa' || o.nivel === n.numero && /Sor|Aguado|Händel|Turina/.test(o.compositor ?? ''));
-    const buscar = texto => { const x = NORMAL(texto); return delNivel.find(o => nombres(o).some(k => x.includes(k))) ?? null; };
+    // Si el paso nombra varias obras, manda la que aparece antes en el texto.
+    const buscar = texto => {
+      const x = NORMAL(texto);
+      const sitio = o => Math.min(...nombres(o).map(k => x.indexOf(k)).filter(i => i >= 0));
+      // A igual sitio («Carcassi, op. 60 n.º 3» y «n.º 7» empiezan igual), gana el nombre más largo que coincide.
+      const largo = o => Math.max(...nombres(o).filter(k => x.indexOf(k) === sitio(o)).map(k => k.length));
+      return delNivel.filter(o => nombres(o).some(k => x.includes(k))).sort((a, b) => sitio(a) - sitio(b) || largo(b) - largo(a))[0] ?? null;
+    };
     for (const t of n.tramos) {
       const delTramo = buscar(t.titulo);
       for (const l of t.lecciones) {

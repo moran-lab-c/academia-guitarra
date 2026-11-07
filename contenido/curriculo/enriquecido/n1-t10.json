@@ -1,6 +1,6 @@
 {
  "tramo": "n1.t10",
- "nota": "Primera aparición de la armadura con bemol, las sextas, ligado frente a ligadura y la presión justa. Sor op. 44 sigue fuera de la app. La digitación de las sextas es una propuesta de la academia.",
+ "nota": "Primera aparición de la armadura con bemol, las sextas, ligado frente a ligadura y la presión justa. Sor op. 44 n.º 1 se queda en la revisión del 05/11/2026: es la obra de lectura, y una obra conocida se tocaría de oído. Su grabación va al final, para escucharla después de leerla. La digitación de las sextas es una propuesta de la academia.",
  "pasos": {
   "n1.t10.l1.p1": {
    "bloques": [
@@ -152,7 +152,7 @@
        ],
        "notas": [
         "Sor avisa arriba: no levantes el dedo que pisa una cuerda hasta que lo necesites en otro sitio.",
-        "Fuente: primera edición, París (IMSLP), dominio público. Dedos del original; los que faltan y la mano derecha, propuesta de la academia."
+        "Fuente: primera edición, París (IMSLP), dominio público. Los dedos son los que trae impresos Sor; sin mano derecha: la eliges tú."
        ]
       },
       {
@@ -204,6 +204,12 @@
         "Sabes decir qué nota estás tocando.",
         "Respetas repeticiones y figuras."
        ]
+      },
+      {
+       "tipo": "video",
+       "id": "rIy6jbg8OZs",
+       "titulo": "Para escuchar cuando ya la hayas leído",
+       "nota": "Una interpretación de examen (grado 2 del Trinity College). Escúchala solo al final: si la oyes antes, la tocarás de oído en lugar de leerla. Compara: ¿suena como tú la habías leído?"
       },
       {
        "tipo": "reaparece",
@@ -421,6 +427,108 @@
      ]
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Fa mayor, subiendo",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "F",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 6,
+        "t": 1,
+        "dedo": 1,
+        "mano": "i"
+       },
+       {
+        "c": 6,
+        "t": 3,
+        "dedo": 3,
+        "mano": "m"
+       },
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 5,
+        "t": 1,
+        "dedo": 1,
+        "mano": "m"
+       },
+       {
+        "c": 5,
+        "t": 3,
+        "dedo": 3,
+        "mano": "i"
+       },
+       {
+        "c": 4,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 4,
+        "t": 2,
+        "dedo": 2,
+        "mano": "i"
+       },
+       {
+        "c": 4,
+        "t": 3,
+        "dedo": 3,
+        "mano": "m"
+       },
+       {
+        "c": 3,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 3,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       },
+       {
+        "c": 3,
+        "t": 3,
+        "dedo": 3,
+        "mano": "i"
+       },
+       {
+        "c": 2,
+        "t": 1,
+        "dedo": 1,
+        "mano": "m"
+       },
+       {
+        "c": 2,
+        "t": 3,
+        "dedo": 3,
+        "mano": "i"
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 1,
+        "t": 1,
+        "dedo": 1,
+        "mano": "i"
+       }
+      ],
+      "final": "Las quince notas de las dos octavas, con sus dedos."
+     }
+    },
+    {
      "tipo": "metronomo",
      "bpm": 50
     },
@@ -511,6 +619,132 @@
       "Juntas: {c:1-2}. Separadas: {c:3-4}.",
       "Salvo la primera, todas van por la 3.ª y la 1.ª cuerda."
      ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "Las sextas de Fa mayor",
+      "trastes": [
+       0,
+       11
+      ],
+      "clave": "F",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 2,
+        "t": 3,
+        "dedo": 4,
+        "mano": "m",
+        "con": [
+         {
+          "c": 4,
+          "t": 3,
+          "dedo": 3,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 0,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 1,
+        "dedo": 1,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 2,
+          "dedo": 2,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 3,
+        "dedo": 4,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 3,
+          "dedo": 3,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 5,
+        "dedo": 3,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 5,
+          "dedo": 1,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 6,
+        "dedo": 3,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 7,
+          "dedo": 4,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 8,
+        "dedo": 2,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 9,
+          "dedo": 4,
+          "mano": "i"
+         }
+        ]
+       },
+       {
+        "c": 1,
+        "t": 10,
+        "dedo": 3,
+        "mano": "m",
+        "con": [
+         {
+          "c": 3,
+          "t": 10,
+          "dedo": 4,
+          "mano": "i"
+         }
+        ]
+       }
+      ],
+      "final": "Dos notas a la vez, seis letras de distancia: casi siempre por la 3.ª y la 1.ª cuerda."
+     }
     },
     {
      "tipo": "metronomo",

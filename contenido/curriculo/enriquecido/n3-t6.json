@@ -130,9 +130,16 @@
        ]
       },
       {
+       "tipo": "video",
+       "alLado": true,
+       "id": "htrHaDa779E",
+       "titulo": "This is Classical Guitar: el *Nocturno* de Mertz, tocado y explicado",
+       "nota": "En inglés: la toca entera al principio y después explica las tres voces (bajo, acompañamiento y melodía) y el carácter de cada parte."
+      },
+      {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "Las notas salen del MIDI de una tablatura independiente sobre la edición de Haslinger, cotejado por muestreo con [la edición en IMSLP](https://imslp.org/wiki/3_Nocturnes,_Op.4_%28Mertz,_Johann_Kaspar%29). Los adornos rápidos pueden estar escritos como notas. Los dedos son propuesta."
+       "md": "Las notas salen del MIDI de una tablatura independiente sobre la edición de Haslinger, cotejado por muestreo con [la edición en IMSLP](https://imslp.org/wiki/3_Nocturnes,_Op.4_%28Mertz,_Johann_Kaspar%29). Los adornos rápidos pueden estar escritos como notas. Sin dedos: ninguna clase los enseña en pantalla, y la app no los inventa; la tablatura pone las cuerdas."
       }
      ]
     },

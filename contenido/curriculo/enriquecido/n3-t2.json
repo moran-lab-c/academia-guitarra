@@ -1,6 +1,6 @@
 {
  "tramo": "n3.t2",
- "nota": "Curso 3. Adelita sale de Mutopia (Boije). Las voces se reparten en dos. Los portamentos no van dibujados: los enseña el paso.",
+ "nota": "Curso 3. Adelita (06/11/2026): notas, cuerdas, dedos y cejillas de la lección de Sky Guitar, cotejados con las dos clases de Pablo Romero Luis; donde discrepan (c. 4), lo que tocan Pablo y la edición. Antes salía de Mutopia, con un Do en el c. 1 donde los dos tutoriales tocan Si.",
  "pasos": {
   "n3.t2.l1.p1": {
    "bloques": [
@@ -197,12 +197,12 @@
      "titulo": "Las notas largas",
      "principal": "ambas",
      "bpms": [
-      60,
-      70
+      40,
+      75
      ],
      "notas": [
-      "{c:1} Do, larga, en el traste 8: vibrato.",
-      "{c:3} sube y vuelve."
+      "{c:1}: el Si del traste 7, largo, con vibrato. Y con acento, como avisa Pablo: es una mazurca, y el acento cae en el segundo tiempo.",
+      "{c:2}: el Fa♯ de la 2.ª, también largo y con acento."
      ],
      "compases": [
       1,
@@ -244,14 +244,71 @@
        "principal": "ambas",
        "motivo": "Partitura y tablatura.",
        "bpms": [
-        50,
-        70
+        40,
+        75
        ],
        "notas": [
-        "Lento. {c:1-8}: Mi menor. *Fine* en el {c:8}.",
-        "{c:9-16}: Mi mayor, con los sostenidos delante. *D.C. al Fine*: se vuelve al principio y se acaba en el {c:8}.",
-        "{c:4}, {c:11}, {c:12} y {c:14}: las apoyaturas van dibujadas pequeñas; en la tablatura, sus trastes pequeños junto a la nota.",
-        "Fuente: Mutopia (Boije), CC BY-SA 2.5. Voces en dos. Dedos: propuesta; en la edición hay cejillas VII, IV, IX y II."
+        "Notas, cuerdas, dedos y cejillas: los de la lección de Sky Guitar, que son los que dice Pablo Romero Luis en sus dos clases. En el {c:4}, el Fa♯ con mordente de Pablo y de la edición.",
+        "{c:1-8}: Mi menor. *Fine* en el {c:8}. {c:9-16}: Mi mayor, con los sostenidos delante. *D.C. al Fine*: se vuelve al principio y se acaba en el {c:8}.",
+        "{c:3} y {c:7}: cejilla en el VII. Pablo: pon antes la cejilla y el dedo 2 en la 3.ª, traste 8; el Do va con el 3. En los {c:9-11}, media cejilla en el IV «desde la cuerda 3»; en el {c:12}, cejilla entera en el VII.",
+        "{c:4}, {c:11}, {c:12} y {c:14}: las notas de adorno van dibujadas pequeñas. El del {c:4} es un mordente: «tocas el Fa, martilleas el Sol y tiras otra vez al Fa».",
+        "Mano derecha: Pablo alterna *i* y *m*, con la melodía apoyando y el acompañamiento tirando.",
+        "Sky Guitar la toca a ♩ ≈ 75 y, lenta, a ♩ ≈ 40, con las repeticiones. Para aprender, ♩ = 40."
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "4eREBNsMBlA",
+       "titulo": "Pablo Romero Luis: *Adelita*, primera clase, en español",
+       "nota": "La primera parte, compás a compás: el traste 12, los ligados, la cejilla del VII, el mordente y el portamento del final.",
+       "capitulos": [
+        [
+         127,
+         "La mazurca y su acento"
+        ],
+        [
+         203,
+         "Compás 1"
+        ],
+        [
+         329,
+         "Compás 2"
+        ],
+        [
+         433,
+         "Compás 3: la cejilla del VII"
+        ],
+        [
+         551,
+         "Compás 4: el mordente"
+        ],
+        [
+         671,
+         "Compases 5-8 y el portamento"
+        ]
+       ]
+      },
+      {
+       "tipo": "video",
+       "id": "YAPiqHHCSDM",
+       "titulo": "Pablo Romero Luis: *Adelita*, segunda clase",
+       "nota": "La parte en Mi mayor."
+      },
+      {
+       "tipo": "video",
+       "id": "UDZ3RBtM7p0",
+       "titulo": "Sky Guitar: *Adelita*, con partitura y tablatura",
+       "nota": "A tempo y en versión lenta: es la fuente de las notas y los dedos.",
+       "capitulos": [
+        [
+         0,
+         "A tempo"
+        ],
+        [
+         110,
+         "Lento, con tablatura"
+        ]
        ]
       }
      ]
@@ -482,24 +539,20 @@
     {
      "tipo": "notacion",
      "fuente": "notacion/obra-tarrega-adelita.json",
-     "titulo": "Dónde pueden ir",
+     "titulo": "Dónde van los portamentos",
      "principal": "ambas",
      "bpms": [
       60
      ],
      "notas": [
-      "{c:4}: de 2-3 a 3 y a B: la edición usa el 2 en la 2.ª.",
-      "{c:12}: bajada de A a F#, con el 4."
+      "{c:7-8}: el dedo 3 se queda en la 2.ª y se arrastra del traste 8 al 5, y suena el arrastre. Pablo: «que suene el llevarlo».",
+      "{c:11}: el Si sube arrastrando hasta el Mi del traste 12, con el dedo 4.",
+      "{c:14}: lo mismo en la 3.ª cuerda, del traste 4 al 13."
      ],
      "compases": [
-      4,
-      12
+      7,
+      14
      ]
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "La fuente de Mutopia lleva digitación y líneas de portamento, simplificadas aquí. Conviene mirarlas en una edición de Tárrega."
     }
    ]
   },
@@ -574,8 +627,8 @@
      "titulo": "Fragmento, para el oído",
      "principal": "ambas",
      "bpms": [
-      50,
-      70
+      40,
+      75
      ],
      "compases": [
       1,
@@ -607,15 +660,15 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-dowland-willoughby.json",
+     "fuente": "notacion/obra-petzold-minueto.json",
      "titulo": "Fragmento 2",
      "principal": "ambas",
      "bpms": [
       60
      ],
      "compases": [
-      5,
-      7
+      1,
+      4
      ]
     },
     {
@@ -644,7 +697,7 @@
     },
     {
      "tipo": "elige",
-     "enunciado": "Fragmento 2: Dowland.",
+     "enunciado": "Fragmento 2: el *Minueto* de Petzold.",
      "opciones": [
       "Melodía acompañada",
       "Polifonía",
@@ -678,8 +731,8 @@
      "titulo": "*Adelita*",
      "principal": "ambas",
      "bpms": [
-      50,
-      70
+      40,
+      75
      ]
     },
     {

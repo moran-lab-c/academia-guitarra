@@ -1,6 +1,6 @@
 {
   "tramo": "n1.t12",
-  "nota": "Primera aparición de vihuela, guitarra barroca, cifra, bajo que se repite, 6/8, hemiolia, apagar voces, mordente y tipos de cadencia. Romanesca y Españoleta siguen fuera de la app; edición, compases y detalles de la cifra de Sanz, por verificar.",
+  "nota": "Primera aparición de vihuela, guitarra barroca, cifra, bajo que se repite, 6/8, hemiolia, apagar voces, mordente y tipos de cadencia. Detalles de la cifra de Sanz, por verificar. La Españoleta es, desde el 05/11/2026, la versión en La menor y 3/4 que enseñan los tutoriales (PulsandoCuerdas, cotejada con Alex Salas); la de Apke, en Re menor y 6/8, no la enseñaba ninguno.",
   "pasos": {
     "n1.t12.l1.p1": {
       "bloques": [
@@ -124,9 +124,10 @@
           "md": "Suena más ligera y brillante que tu guitarra: eso son los cinco órdenes. Es música para bailar."
         },
         {
-          "tipo": "concepto",
-          "titulo": "Dónde escucharla",
-          "md": "[Buscar *Españoleta* de Sanz en guitarra barroca, en YouTube](https://www.youtube.com/results?search_query=Sanz+Espa%C3%B1oleta+guitarra+barroca). Busca una versión con instrumento barroco y, después, otra en guitarra moderna."
+          "tipo": "video",
+          "id": "of2hGuM_pks",
+          "titulo": "La *Españoleta* en guitarra barroca",
+          "nota": "Dmitry Cherevko, con una guitarra barroca de cinco órdenes. Después, compárala con la versión de tu guitarra en el Tramo 12."
         },
         {
           "tipo": "lista",
@@ -482,6 +483,13 @@
               ]
             },
             {
+              "tipo": "video",
+              "alLado": true,
+              "id": "5yukNVVkwLg",
+              "titulo": "La *Romanesca* de Sor, tocada",
+              "nota": "Una interpretación de esta misma versión, en 4K. No hay tutorial de ella: los dedos son los de la edición de Fortea."
+            },
+            {
               "tipo": "guia",
               "tipoGuia": "Por verificar",
               "md": "El currículo pide una *Romanesca* anónima, y **no hemos encontrado una edición fiable de esa pieza**. La versión de arriba viene de una edición de Sor, e IMSLP advierte que es muy probablemente una falsificación de Fétis: no sigue el bajo renacentista explicado antes. Se conserva para practicar dos voces, no como la romanesca histórica. Debajo tienes el inicio de una romanesca auténtica, de Mudarra (1546): ahí sí se oye el bajo. Es más difícil, y queda para que lo decida tu profesor."
@@ -592,6 +600,81 @@
           "bpms": [
             50
           ]
+        },
+        {
+          "tipo": "mastil",
+          "escena": {
+            "tipo": "ejercicio",
+            "titulo": "Dónde se apaga el bajo",
+            "trastes": [
+              0,
+              4
+            ],
+            "clave": "D",
+            "ms": 700,
+            "notas": [
+              {
+                "c": 1,
+                "t": 2,
+                "dedo": 2,
+                "mano": "a",
+                "con": [
+                  {
+                    "c": 4,
+                    "t": 0,
+                    "mano": "p"
+                  }
+                ]
+              },
+              {
+                "c": 1,
+                "t": 0,
+                "mano": "a"
+              },
+              {
+                "c": 2,
+                "t": 3,
+                "dedo": 3,
+                "mano": "m"
+              },
+              {
+                "c": 1,
+                "t": 0,
+                "mano": "a"
+              },
+              {
+                "c": 2,
+                "t": 2,
+                "dedo": 2,
+                "mano": "m",
+                "con": [
+                  {
+                    "c": 5,
+                    "t": 0,
+                    "mano": "p"
+                  }
+                ]
+              },
+              {
+                "c": 2,
+                "t": 3,
+                "dedo": 3,
+                "mano": "m"
+              },
+              {
+                "c": 1,
+                "t": 0,
+                "mano": "a"
+              },
+              {
+                "c": 2,
+                "t": 2,
+                "dedo": 2,
+                "mano": "m"
+              }
+            ],
+            "final": "El bajo dura lo que está escrito: después, se apaga."
+          }
         },
         {
           "tipo": "metronomo",
@@ -1281,6 +1364,64 @@
           ]
         },
         {
+          "tipo": "mastil",
+          "escena": {
+            "tipo": "ejercicio",
+            "titulo": "El mordente",
+            "trastes": [
+              0,
+              4
+            ],
+            "clave": "D",
+            "ms": 700,
+            "notas": [
+              {
+                "c": 2,
+                "t": 3,
+                "dedo": 3,
+                "mano": "m"
+              },
+              {
+                "c": 2,
+                "t": 2,
+                "dedo": 2
+              },
+              {
+                "c": 2,
+                "t": 3,
+                "dedo": 3
+              },
+              {
+                "c": 1,
+                "t": 0,
+                "mano": "a"
+              },
+              {
+                "c": 1,
+                "t": 2,
+                "dedo": 2,
+                "mano": "a"
+              },
+              {
+                "c": 1,
+                "t": 0,
+                "mano": "a"
+              },
+              {
+                "c": 1,
+                "t": 2,
+                "dedo": 2,
+                "mano": "a"
+              },
+              {
+                "c": 1,
+                "t": 0
+              }
+            ],
+            "final": "Ida y vuelta muy rápida: pulsar, ligar abajo y volver a ligar arriba."
+          }
+        },
+        {
           "tipo": "metronomo",
           "bpm": 50
         },
@@ -1301,7 +1442,7 @@
             {
               "tipo": "obra",
               "id": "o1-sanz-espanoleta",
-              "md": "**Qué aprendes:** una danza barroca, con su hemiolia, su mordente y sus cadencias. Es una de las tres piezas posibles de tu recital."
+              "md": "La ***Españoleta*** de Gaspar Sanz es de las piezas barrocas más conocidas de la guitarra. **Qué aprendes:** una danza antigua con melodía y bajo, sus cadencias y su pulso de baile. Es una de las tres piezas posibles de tu recital."
             },
             {
               "tipo": "notacion",
@@ -1311,21 +1452,109 @@
               "motivo": "Partitura y tablatura juntas.",
               "bpms": [
                 60,
-                80
+                116
               ],
               "notas": [
-                "Versión de Stefan Apke (CC BY-SA 4.0), con sus dedos. Mano derecha: propuesta de la academia.",
-                "Los adornos: Apke marca mordentes sobre el primer tiempo del {c:2} y sobre otras notas largas, y trinos en los {c:17} y {c:21}. Añádelos cuando el pulso sea firme.",
-                "El grupo rápido del {c:13} es un tresillo: en la app está escrito aproximado."
+                "Es la versión en La menor que enseñan los tutoriales, leída en la partitura de PulsandoCuerdas, con sus dedos de las dos manos.",
+                "Empieza con un silencio y dos notas, La y Si, que llevan al {c:2}.",
+                "Los {c:26-39} repiten los {c:2-15}; el {c:40} cierra con el acorde de La menor.",
+                "PulsandoCuerdas la marca a ♩ = 116; en otras grabaciones va a unos 100. Para aprender, ♩ = 60."
               ]
+            },
+            {
+              "tipo": "video",
+              "alLado": true,
+              "id": "EHUTa89hqFk",
+              "titulo": "Alex Salas: la *Españoleta*, tutorial en español",
+              "nota": "Explica la obra frase a frase, nota a nota, con el puntillo y los bajos.",
+              "capitulos": [
+                [
+                  56,
+                  "Compases 1-5"
+                ],
+                [
+                  208,
+                  "Compases 6-10"
+                ],
+                [
+                  311,
+                  "Compases 11-16"
+                ],
+                [
+                  479,
+                  "Compases 17-25"
+                ]
+              ]
+            },
+            {
+              "tipo": "video",
+              "id": "9BBKHrsN9hI",
+              "titulo": "PulsandoCuerdas: la misma versión, con partitura y tablatura",
+              "nota": "La obra tocada con la partitura y la tablatura en pantalla, con los dedos de las dos manos: es la fuente de la que está sacada la de la academia."
+            },
+            {
+              "tipo": "mastil",
+              "escena": {
+                "tipo": "ejercicio",
+                "titulo": "El principio: compases 1 y 2",
+                "trastes": [
+                  0,
+                  4
+                ],
+                "clave": "Am",
+                "ms": 800,
+                "notas": [
+                  {
+                    "c": 3,
+                    "t": 2,
+                    "dedo": 2,
+                    "mano": "m",
+                    "texto": "Después del silencio: La, en la 3.ª, con el dedo 2."
+                  },
+                  {
+                    "c": 2,
+                    "t": 0,
+                    "mano": "a",
+                    "texto": "Si, la 2.ª al aire."
+                  },
+                  {
+                    "c": 2,
+                    "t": 1,
+                    "dedo": 1,
+                    "mano": "m",
+                    "con": [
+                      {
+                        "c": 5,
+                        "t": 0,
+                        "mano": "p"
+                      }
+                    ],
+                    "texto": "Compás 2: Do con el dedo 1, y a la vez el La grave con el pulgar. Es una nota con puntillo: dura más."
+                  },
+                  {
+                    "c": 2,
+                    "t": 0,
+                    "mano": "i",
+                    "texto": "Si, corto."
+                  },
+                  {
+                    "c": 2,
+                    "t": 1,
+                    "dedo": 1,
+                    "mano": "m",
+                    "texto": "Y otra vez Do. El bajo sigue sonando debajo."
+                  }
+                ],
+                "final": "Larga, corta, normal: ese ritmo con puntillo vuelve en casi toda la obra."
+              }
             },
             {
               "tipo": "pasos",
               "titulo": "Antes de tocar",
               "items": [
-                "¿Compás y armadura? Si es ternario, cuenta cómo se agrupa.",
-                "¿Dónde hay adornos? Márcalos.",
-                "¿Dónde hay cadencias? Busca las notas largas y los finales de frase."
+                "¿Compás y armadura? 3/4 y sin alteraciones: La menor.",
+                "Busca el ritmo largo-corto (negra con puntillo y corchea): está en casi todos los compases.",
+                "¿Dónde terminan las frases? Busca las notas largas."
               ]
             }
           ]
@@ -1337,30 +1566,30 @@
               "tipo": "pasos",
               "titulo": "Por capas",
               "items": [
-                "Toca la primera mitad **sin adornos**.",
-                "Cuando salga con el pulso firme, añade los mordentes, uno a uno.",
-                "Haz lo mismo con la segunda mitad.",
-                "Únelas y deja que pase al atril."
+                "Toca la primera mitad (hasta el compás 25) solo con la melodía.",
+                "Añade los bajos con el pulgar: la melodía delante, el bajo detrás.",
+                "Cuando salga con el pulso firme, sigue con la vuelta, que repite el principio.",
+                "Únelo todo y deja que pase al atril."
               ]
             },
             {
               "tipo": "ejercicio",
               "que": "La obra entera, con el pulso de una danza.",
               "porque": "Es tu obra troncal del Barroco. Reúne todo lo de este tramo.",
-              "atencion": "Primero el pulso, después el adorno. Si un mordente te hace frenar, quítalo y vuelve a ponerlo más tarde.",
-              "empieza": "♩ = 50, o más lento.",
-              "sube": "Se podría bailar."
+              "atencion": "Primero el pulso. Esta versión no escribe adornos; en el Barroco se añadían. Cuando el pulso sea firme, prueba un mordente en alguna nota larga, y quítalo si te hace frenar.",
+              "empieza": "♩ = 60, o más lento.",
+              "sube": "Se podría bailar. Al final, ♩ = 100."
             },
             {
               "tipo": "metronomo",
               "clave": "o1-sanz-espanoleta",
-              "bpm": 50
+              "bpm": 60
             },
             {
               "tipo": "bien",
               "items": [
                 "La primera mitad y la obra entera, sin parar.",
-                "Los mordentes no frenan el pulso.",
+                "La melodía se oye por encima del bajo.",
                 "Las voces duran lo que dicen."
               ]
             }
@@ -1494,10 +1723,9 @@
           "tipo": "pasos",
           "titulo": "Búscalo en tu partitura",
           "items": [
-            "Marca el final de cada frase.",
-            "Pon nombre al último acorde: ¿I o V?",
-            "En cada cadencia, mira si antes de llegar cambia el agrupamiento: ¿tres grupos de dos? Es la hemiolia.",
-            "Da palmas en ese compás con sus acentos reales y después tócalo."
+            "Marca el final de cada frase: una nota o un acorde largos.",
+            "Mira el bajo de ese compás y del anterior.",
+            "Decide: ¿descansa (conclusiva) o se queda abierta (suspensiva)?"
           ]
         },
         {
@@ -1509,26 +1737,56 @@
           "bpms": [
             60
           ],
-          "notas": [
-            "Las frases terminan en los {c:4}, {c:8}, {c:12} y {c:16}, con el acorde largo."
+          "compases": [
+            1,
+            25
           ]
         },
         {
-          "tipo": "notacion",
-          "plegado": true,
-          "fuente": "notacion/rit-hemiolia.json",
-          "titulo": "Recuerda la hemiolia",
-          "principal": "ambas",
-          "motivo": "Importa ver el cambio de agrupamiento.",
-          "bpms": [
-            80
+          "tipo": "tabla",
+          "cabecera": [
+            "Termina en",
+            "Acorde",
+            "Cómo suena"
+          ],
+          "filas": [
+            [
+              "Compás 8",
+              "Do, después de Sol",
+              "Conclusiva: una cadencia perfecta, en Do mayor"
+            ],
+            [
+              "Compás 12",
+              "Sol",
+              "Suspensiva: se queda en el aire"
+            ],
+            [
+              "Compás 16",
+              "La menor, después de Mi",
+              "Conclusiva: perfecta, en La menor"
+            ],
+            [
+              "Compás 20",
+              "Mi",
+              "Suspensiva: una semicadencia"
+            ],
+            [
+              "Compás 24",
+              "La menor, después de Mi",
+              "Conclusiva: el final de la primera mitad"
+            ]
           ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Pregunta y respuesta",
+          "md": "Después de cada frase que se queda abierta viene otra que la cierra: la del {c:12} se resuelve en el {c:16}, y la del {c:20}, en el {c:24}. Es como una pregunta y su respuesta. Las suspensivas piden seguir; las conclusivas dejan descansar."
         },
         {
           "tipo": "bien",
           "items": [
-            "Sabes dónde está cada cadencia y de qué tipo es.",
-            "La hemiolia suena a paso cambiado, no a error."
+            "Sabes dónde termina cada frase.",
+            "Distingues las conclusivas de las suspensivas."
           ]
         }
       ]
@@ -1607,11 +1865,17 @@
           "tipo": "pasos",
           "titulo": "Compruébalo",
           "items": [
-            "Oye de nuevo una [versión barroca](https://www.youtube.com/results?search_query=Sanz+Espa%C3%B1oleta+guitarra+barroca).",
+            "Oye la versión en guitarra barroca de abajo.",
             "Marca el pulso con el pie.",
             "Tócala a la vez, moviendo el pie.",
             "Si el pie se para, has perdido la danza."
           ]
+        },
+        {
+          "tipo": "video",
+          "id": "zRUYoZSEbho",
+          "titulo": "Brandon Acker toca *Españoletas* en guitarra barroca",
+          "nota": "Una versión más larga, con variaciones: fíjate en cómo marca el pulso de la danza."
         },
         {
           "tipo": "bien",
@@ -1642,30 +1906,26 @@
           "titulo": "Marca lo que ya te sale",
           "items": [
             "La *Españoleta* entera, sin parar.",
-            "El pulso se mantiene en mordentes y cadencias.",
-            "Se oye la hemiolia antes de la cadencia.",
+            "El pulso se mantiene en las notas largas y en las cadencias.",
+            "Las frases preguntan y responden.",
             "Suena a danza."
           ]
         },
         {
           "tipo": "metronomo",
           "clave": "o1-sanz-espanoleta",
-          "bpm": 54
+          "bpm": 80
         },
         {
           "tipo": "reaparece",
           "items": [
             {
-              "paso": "n1.t12.l5.p2",
-              "texto": "si fallan los mordentes."
-            },
-            {
-              "paso": "n1.t12.l4.p5",
-              "texto": "si falla la hemiolia."
-            },
-            {
               "paso": "n1.t14.l2.p2",
               "texto": "el recital."
+            },
+            {
+              "paso": "n1.t12.l6.p3",
+              "texto": "si no encuentras las cadencias."
             }
           ]
         }

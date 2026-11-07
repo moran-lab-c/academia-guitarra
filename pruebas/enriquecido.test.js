@@ -51,9 +51,15 @@ test('lo que se puede oír tiene audio y la tablatura enseña a tocar', () => {
       if (n.acorde) { assert.ok(b.fuente.includes('obra-') || n.rotulo || m.voces.flat().some(x => x.rotulo), `${b.fuente}: acorde sin nombre`); continue; }
       if (n.t > 0 && !j.dedosParciales) assert.ok(n.dedo, `${b.fuente}: nota en el traste ${n.t} sin dedo`);
     }
-    // Cada nota pulsada lleva su dedo de la derecha; la que llega por un ligado no se pulsa.
-    // Salvo en una obra cuyo tutorial no marca la mano derecha: ahí no se inventa.
-    if (!b.fuente.includes('lec-') && !j.sinManoDerecha) j.compases.forEach(m => m.voces.forEach(v => v.forEach((n, i) => { if (!n.s && !v[i - 1]?.lig) assert.ok(n.mano, `${b.fuente}: nota sin mano derecha`); })));
+    // Cada nota pulsada lleva su dedo de la derecha; la que llega por un ligado o una ligadura (también de un compás a otro) no se pulsa.
+    // Salvo en una obra cuyo tutorial no marca la mano derecha, o solo en parte (manoParcial): ahí no se inventa.
+    if (!b.fuente.includes('lec-') && !j.sinManoDerecha && !j.manoParcial) {
+      const antes = [];
+      j.compases.forEach(m => m.voces.forEach((v, k) => v.forEach(n => {
+        if (!n.s && !antes[k]?.lig && !antes[k]?.tie) assert.ok(n.mano, `${b.fuente}: nota sin mano derecha`);
+        antes[k] = n;
+      })));
+    }
   }
 });
 
@@ -185,18 +191,17 @@ test('los adornos suenan antes de su nota, no ocupan compás, y cada obra dice d
   for (const [f, n] of notaciones) if (f.includes('/obra-')) assert.ok(['edicion', 'tutorial', 'mixta', 'propuesta'].includes(n.digitacion), `${f}: sin origen de la digitación`);
 });
 
-test('las obras antes parciales ya están enteras, salvo la Sonatina, que lo dice', () => {
+test('las obras antes parciales ya están enteras', () => {
   assert.equal(notaciones.get('notacion/obra-coste-op38-1.json').compases.length, 44);
   assert.equal(notaciones.get('notacion/obra-mertz-nocturno-1.json').compases.length, 47);
   assert.equal(notaciones.get('notacion/obra-giuliani-op100-12.json').compases.length, 46);
-  assert.ok(notaciones.get('notacion/obra-giuliani-op71-1.json').parcial);
 });
 
 test('una anacrusa no deja un hueco antes del compás 1', () => {
-  const j = notaciones.get('notacion/obra-sor-op35-8.json');
+  const j = notaciones.get('notacion/obra-sor-op35-17.json');
   const { eventos } = eventosDeNotacion(j);
-  assert.ok(Math.abs(eventos[0].t - 1) < 1e-6, 'el 3/8 dura 1,5 negras y la anacrusa 0,5');
-  assert.ok(eventos.filter(e => e.compas === 1).every(e => e.t >= 1.5 - 1e-6));
+  assert.ok(Math.abs(eventos[0].t - 3.5) < 1e-6, 'el 4/4 dura 4 negras y la anacrusa 0,5');
+  assert.ok(eventos.filter(e => e.compas === 1).every(e => e.t >= 4 - 1e-6));
 });
 
 test('los enlaces de una obra son seguros y ningún paso cita un compás de una obra sin transcribir', () => {

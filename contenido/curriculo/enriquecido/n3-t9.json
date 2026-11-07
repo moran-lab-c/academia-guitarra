@@ -334,9 +334,16 @@
        ]
       },
       {
+       "tipo": "video",
+       "alLado": true,
+       "id": "YSuixw0Wu64",
+       "titulo": "Giovanni de Fazio: Giuliani, op. 100 n.º 12 (*Grazioso*)",
+       "nota": "Para oírlo entero."
+      },
+      {
        "tipo": "guia",
        "tipoGuia": "Por verificar",
-       "md": "Leído a ojo de [la edición Gitarrefreund](https://imslp.org/wiki/24_Studies_for_the_Guitar,_Op.100_%28Giuliani,_Mauro%29), comprobando la armonía de cada compás. Algunos bajos con líneas adicionales (Fa♯, Sol) se han decidido por la armonía y los dedos de la edición: {c:3}, {c:6} y {c:31}. La edición pide cejillas I, II, III, IV y V; los dedos de la app son propuesta."
+       "md": "Leído a ojo de [la edición Gitarrefreund](https://imslp.org/wiki/24_Studies_for_the_Guitar,_Op.100_%28Giuliani,_Mauro%29), comprobando la armonía de cada compás. Algunos bajos con líneas adicionales (Fa♯, Sol) se han decidido por la armonía y los dedos de la edición: {c:3}, {c:6} y {c:31}. La edición marca las posiciones (I a V, que la app escribe encima de cada compás; «– III» quiere decir que se cambia a mitad de compás) y algunos dedos, casi todos del bajo: son los que se ven en la tablatura."
       }
      ]
     },
@@ -384,7 +391,7 @@
         "Sol menor, 3/8. Dos bemoles.",
         "{c:1-4} primero acordes sobre un bajo que baja: Sol, Do, La, Fa♯.",
         "{c:8} pequeña cadencia.",
-        "Fuente: Mutopia, CC BY 3.0. Dedos y mano derecha: propuesta.",
+        "Fuente: Mutopia, CC BY 3.0. Sin dedos: es para leer.",
         "Por verificar: en el {c:7} y el {c:17} esta fuente da Mi♭ y otra edición cotejada, Mi natural."
        ]
       }

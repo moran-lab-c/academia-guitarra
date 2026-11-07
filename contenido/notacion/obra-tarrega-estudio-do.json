@@ -2,7 +2,7 @@
  "titulo": "Tárrega, Estudio en Do",
  "compas": "12/8",
  "armadura": "C",
- "fuente": "Edición de Jonathan Richter (richterguitar.com), de libre descarga, sobre una obra de dominio público atribuida a Tárrega. Dedos y fórmula de mano derecha: los de esa edición. La fuente escribe 4/4 con tresillos; aquí se escribe 12/8, que suena igual.",
+ "fuente": "Edición de Jonathan Richter (richterguitar.com), de libre descarga, sobre una obra de dominio público atribuida a Tárrega, cotejada compás a compás con la tablatura del tutorial de GuitarTutos y con la partitura de «Etude in C Major (Francisco Tárrega). Notes. Tabs.» (YouTube). En los compases 7 y 13 la edición pone La (1.ª cuerda, traste 5); los dos tutoriales tocan Sol (traste 3), y aquí va Sol. La fuente escribe 4/4 con tresillos; aquí se escribe 12/8, que suena igual.",
  "compases": [
   {
    "voces": [
@@ -633,7 +633,7 @@
      {
       "d": "8",
       "c": 1,
-      "t": 5,
+      "t": 3,
       "dedo": 4,
       "mano": "a"
      },
@@ -1179,7 +1179,7 @@
      {
       "d": "8",
       "c": 1,
-      "t": 5,
+      "t": 3,
       "dedo": 4,
       "mano": "a"
      },
@@ -1510,5 +1510,6 @@
    ]
   }
  ],
- "digitacion": "mixta"
+ "digitacion": "tutorial",
+ "digitacionFuente": "GuitarTutos, «Otra sencilla pieza para mejorar: Estudio en do mayor (F. Tárrega)» (YouTube): la fórmula de la derecha y los dedos que dice; los demás, de la edición de Jonathan Richter, que coincide con él en todos los que dice"
 }

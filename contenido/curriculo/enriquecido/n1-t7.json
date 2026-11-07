@@ -539,6 +539,67 @@
      ]
     },
     {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "La menor, la primera forma",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "Am",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 5,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       },
+       {
+        "c": 5,
+        "t": 3,
+        "dedo": 3,
+        "mano": "i"
+       },
+       {
+        "c": 4,
+        "t": 0,
+        "mano": "m"
+       },
+       {
+        "c": 4,
+        "t": 2,
+        "dedo": 2,
+        "mano": "i"
+       },
+       {
+        "c": 4,
+        "t": 3,
+        "dedo": 3,
+        "mano": "m"
+       },
+       {
+        "c": 3,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 3,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       }
+      ],
+      "final": "Después vienen las otras dos: cambian solo el Fa y el Sol."
+     }
+    },
+    {
      "tipo": "metronomo",
      "bpm": 50
     },

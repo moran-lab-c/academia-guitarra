@@ -20,11 +20,11 @@
        "filas": [
         [
          "**Renacimiento o Barroco**",
-         "Dowland, Petzold"
+         "*Packington's Pound*, Petzold"
         ],
         [
          "**Clasicismo**",
-         "Giuliani, Sor, Aguado"
+         "Carulli, Carcassi, Sor"
         ],
         [
          "**Romanticismo**",
@@ -47,12 +47,12 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-dowland-willoughby",
+       "id": "o2-anonimo-packington-s-pound",
        "md": "Dos voces y variación."
       },
       {
        "tipo": "obra",
-       "id": "o2-petzold-minueto-bwv-anh-114",
+       "id": "o2-petzold-minueto-en-sol-menor-bwv-anh-115",
        "md": "Si eliges algo que se ha leído, tócalo con más cuidado que cuando lo leías."
       },
       {
@@ -74,18 +74,23 @@
     },
     {
      "tipo": "obra",
-     "id": "o2-giuliani-sonatina-op-71-i",
-     "md": "El tema, o más, con la edición."
+     "id": "o2-carcassi-op-60-n-3",
+     "md": "El estudio de Carcassi, con el bajo sonando y la vuelta del compás 17."
     },
     {
      "tipo": "obra",
-     "id": "o2-sor-op-35-n-8",
+     "id": "o2-sor-op-35-n-17",
      "md": "Modulación clara."
     },
     {
      "tipo": "obra",
-     "id": "o2-aguado-contradanza-op-8-n-5",
-     "md": "Danza; cuida el contratiempo."
+     "id": "o2-carulli-estudio-n-6",
+     "md": "El estudio de Carulli; cuida los bajos."
+    },
+    {
+     "tipo": "obra",
+     "id": "o2-carcassi-op-60-n-2",
+     "md": "El arpegio que no cambia, con la armonía que sí."
     },
     {
      "tipo": "bien",
@@ -396,7 +401,7 @@
     },
     {
      "tipo": "texto",
-     "md": "Última pregunta, de oído y de memoria: ¿esa obra es clásica o romántica? Ponte Giuliani y Tárrega; tú dices cuál es cuál."
+     "md": "Última pregunta, de oído y de memoria: ¿esa obra es clásica o romántica? Ponte Sor y Tárrega; tú dices cuál es cuál."
     },
     {
      "tipo": "elige",

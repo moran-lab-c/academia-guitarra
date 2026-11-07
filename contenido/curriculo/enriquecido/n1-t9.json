@@ -1,6 +1,6 @@
 {
  "tramo": "n1.t9",
- "nota": "Primera aparición de alternancia con cruces, semicorchea, cromática, intervalos con calidad y trémolo. El Estudio en Do no está localizado con seguridad: por verificar qué edición usar.",
+ "nota": "Primera aparición de alternancia con cruces, cromática, intervalos con calidad y trémolo. Estudio en Do: edición de Jonathan Richter cotejada con dos tutoriales (en los compases 7 y 13, Sol como ellos); vídeo y dedos de GuitarTutos (05/11/2026).",
  "pasos": {
   "n1.t9.l1.p1": {
    "pantallas": [
@@ -569,6 +569,100 @@
        "notas": [
         "Sol: {c:1-2}. La: {c:3-4}. Mi m: {c:5-6}."
        ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "El arpegio de Sol, dos octavas",
+        "trastes": [
+         0,
+         4
+        ],
+        "clave": "C",
+        "ms": 700,
+        "notas": [
+         {
+          "c": 6,
+          "t": 3,
+          "dedo": 3,
+          "mano": "p"
+         },
+         {
+          "c": 5,
+          "t": 2,
+          "dedo": 2,
+          "mano": "p"
+         },
+         {
+          "c": 4,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 3,
+          "mano": "m"
+         },
+         {
+          "c": 1,
+          "t": 3,
+          "dedo": 4,
+          "mano": "a"
+         },
+         {
+          "c": 1,
+          "t": 3,
+          "dedo": 4,
+          "mano": "a"
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 3,
+          "mano": "m"
+         },
+         {
+          "c": 2,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "m"
+         },
+         {
+          "c": 4,
+          "t": 0,
+          "mano": "i"
+         },
+         {
+          "c": 5,
+          "t": 2,
+          "dedo": 2,
+          "mano": "p"
+         },
+         {
+          "c": 6,
+          "t": 3,
+          "dedo": 3,
+          "mano": "p"
+         }
+        ],
+        "final": "Solo las notas del acorde, una a una, sin que se solapen."
+       }
       },
       {
        "tipo": "metronomo",
@@ -1249,7 +1343,12 @@
       {
        "tipo": "obra",
        "id": "o1-tarrega-estudio-en-do",
-       "md": "**Qué aprendes:** a usar la alternancia y los cruces en una obra, con el sonido clásico."
+       "md": "El ***Estudio en Do*** de Tárrega es de las obras de Tárrega que más se tocan al empezar. Es un arpegio con una fórmula fija, **p-i-m-a-m-i, a-m-i, a-m-i**, y una melodía que canta la *a* en la 1.ª cuerda."
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "Por qué está en este tramo",
+       "md": "Aquí no hay alternancia: **cada dedo de la derecha tiene su cuerda** (*i* la 3.ª, *m* la 2.ª, *a* la 1.ª), así que la mano nunca se cruza. Lo que trabaja es el **a-m-i**: los mismos tres dedos, en el mismo orden, que el trémolo que empiezas al final del tramo. Y la melodía en la *a*, como la nota destacada del Tramo 6."
       },
       {
        "tipo": "notacion",
@@ -1262,29 +1361,265 @@
         112
        ],
        "notas": [
-        "La fórmula de la derecha es p-i-m-a-m-i-a-m-i-a-m-i. Dedos y fórmula: edición de Jonathan Richter. Se atribuye a Tárrega; no se conoce el manuscrito.",
-        "La edición escribe 4/4 con tresillos; aquí va en 12/8, que suena igual. Tiene dos partes, {c:1-8} y {c:9-16}, y cada una se repite."
+        "Cada compás es la misma fórmula: **p-i-m-a-m-i**, **a-m-i**, **a-m-i**. Solo cambian el bajo y la nota de la *a*.",
+        "Los dedos de colores son los que dice GuitarTutos; los que no dice, de la edición de Jonathan Richter. Donde Gilberto dice un dedo, la edición pone el mismo.",
+        "La edición escribe 4/4 con **tresillos**: tres notas por pulso. Aquí va en 12/8, que suena igual. Tiene dos partes, {c:1-8} y {c:9-16}, y cada una se repite.",
+        "GuitarTutos lo pone a ♩ = 90; en las grabaciones va entre ♩ = 100 y 112. Para aprender, ♩ = 60 o menos."
        ]
       },
       {
+       "tipo": "video",
+       "alLado": true,
+       "id": "6AzNLCBBrQI",
+       "titulo": "GuitarTutos: Estudio en Do de Tárrega, tutorial en español",
+       "nota": "Gilberto explica la fórmula de la derecha y monta la obra compás a compás, diciendo los dedos de la izquierda. Con la tablatura debajo.",
+       "capitulos": [
+        [
+         73,
+         "La fórmula de la derecha"
+        ],
+        [
+         264,
+         "Compases 1-4"
+        ],
+        [
+         467,
+         "Compases 5-8"
+        ],
+        [
+         722,
+         "Compases 9-12"
+        ],
+        [
+         945,
+         "Compases 13-16"
+        ],
+        [
+         1199,
+         "El metrónomo y los tresillos"
+        ]
+       ]
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "Compás 1: la fórmula entera",
+        "trastes": [
+         0,
+         4
+        ],
+        "ms": 750,
+        "notas": [
+         {
+          "c": 5,
+          "t": 3,
+          "dedo": 3,
+          "mano": "p",
+          "texto": "p: el Do grave, 5.ª cuerda, con el dedo 3."
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "i",
+          "texto": "i: la 3.ª, al aire."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "m",
+          "texto": "m: el Do de la 2.ª, con el dedo 1."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "a",
+          "texto": "a: la 1.ª, al aire. Es la melodía."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "i",
+          "texto": "p-i-m-a-m-i: el primer pulso y medio."
+         },
+         {
+          "c": 1,
+          "t": 3,
+          "dedo": 4,
+          "mano": "a",
+          "texto": "Ahora a-m-i: el meñique pisa el Sol y la a lo canta."
+         },
+         {
+          "c": 2,
+          "t": 1,
+          "dedo": 1,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 0,
+          "mano": "i"
+         }
+        ],
+        "final": "Después, el meñique se levanta y otro a-m-i con la 1.ª al aire. Cada dedo de la derecha tiene su cuerda: i en la 3.ª, m en la 2.ª, a en la 1.ª."
+       }
+      }
+     ]
+    },
+    {
+     "titulo": "Las dos manos",
+     "bloques": [
+      {
        "tipo": "tabla",
        "cabecera": [
-        "Qué mirar",
-        "Qué te dice"
+        "Compás",
+        "Lo que hay que saber"
        ],
        "filas": [
         [
-         "Compás y armadura",
-         "Do mayor: sin alteraciones"
+         "1, 2 y 4",
+         "Do mayor. El meñique entra y sale del Sol (1.ª, traste 3)."
         ],
         [
-         "Dónde cambia de cuerda",
-         "Marca a lápiz los cruces"
+         "3 y 15",
+         "El bajo, Sol en la 6.ª: con el índice o con el medio, como te sea más cómodo. Arriba, la melodía baja: La, Sol, Fa."
         ],
         [
-         "Las letras i, m, a, si las hay",
-         "La digitación de la derecha"
+         "5",
+         "El medio en el Si (3.ª, traste 4) y el índice en el Re (2.ª, traste 3)."
+        ],
+        [
+         "6",
+         "Una **cejilla pequeña** en el traste 5, sobre las tres primeras cuerdas; la *a* sube al Do del traste 8."
+        ],
+        [
+         "7",
+         "Re séptima: anular en la 1.ª, índice en la 2.ª y medio en la 3.ª; el meñique añade el Sol."
+        ],
+        [
+         "8",
+         "Sol: el bajo y el Sol de arriba, los dos en el traste 3. Termina con un bajo solo."
+        ],
+        [
+         "9 y 14",
+         "Anular en el Sol grave (6.ª, traste 3) e índice arriba. En el 14, el índice baja un poco para pisar también el Fa de la 1.ª."
+        ],
+        [
+         "10",
+         "Do mayor; en el primer a-m-i, el índice se tumba y pisa también el Fa de la 1.ª (traste 1)."
+        ],
+        [
+         "11",
+         "El meñique pasa del traste 2 al 3 en la 1.ª: de Fa♯ a Sol."
+        ],
+        [
+         "13",
+         "Fa: una cejilla en el traste 1 y el medio en la 3.ª; el meñique añade el Sol."
+        ],
+        [
+         "16",
+         "Do mayor y un último bajo en la 5.ª."
         ]
+       ]
+      },
+      {
+       "tipo": "concepto",
+       "titulo": "La cejilla pequeña",
+       "md": "En el compás 6 el dedo 1 se tumba sobre **tres cuerdas a la vez**, en el mismo traste. Es una media cejilla todavía más corta. No aprietes con el pulgar: el peso del brazo hace casi todo. La verás a fondo en el Tramo 7."
+      },
+      {
+       "tipo": "mastil",
+       "escena": {
+        "tipo": "ejercicio",
+        "titulo": "Compás 5: la melodía sube al Sol♯",
+        "trastes": [
+         0,
+         5
+        ],
+        "ms": 750,
+        "notas": [
+         {
+          "c": 6,
+          "t": 0,
+          "mano": "p",
+          "texto": "p: el Mi grave, al aire."
+         },
+         {
+          "c": 3,
+          "t": 4,
+          "dedo": 2,
+          "mano": "i",
+          "texto": "i: el Si de la 3.ª, con el medio (dedo 2)."
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 1,
+          "mano": "m",
+          "texto": "m: el Re de la 2.ª, con el índice (dedo 1)."
+         },
+         {
+          "c": 1,
+          "t": 0,
+          "mano": "a"
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 1,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 4,
+          "dedo": 2,
+          "mano": "i"
+         },
+         {
+          "c": 1,
+          "t": 4,
+          "dedo": 3,
+          "mano": "a",
+          "texto": "El 3 pisa el Sol♯ de la 1.ª: la melodía sube."
+         },
+         {
+          "c": 2,
+          "t": 3,
+          "dedo": 1,
+          "mano": "m"
+         },
+         {
+          "c": 3,
+          "t": 4,
+          "dedo": 2,
+          "mano": "i"
+         }
+        ],
+        "final": "Los dedos 2 y 1 no se mueven en todo el compás: solo entra y sale el 3."
+       }
+      },
+      {
+       "tipo": "errores",
+       "items": [
+        {
+         "error": "La *a* suena más floja que *m* e *i*.",
+         "arreglo": "Es lo normal al principio: es el dedo más débil. Tócala con un poco más de intención, como la nota destacada del Tramo 6."
+        },
+        {
+         "error": "Los tresillos salen desiguales, con una nota más larga.",
+         "arreglo": "Pon el metrónomo y di «ta-ta-ta» en cada clic, como hace Gilberto: tres notas iguales por pulso."
+        },
+        {
+         "error": "Al cambiar de acorde se corta el sonido.",
+         "arreglo": "Mira qué dedos se pueden quedar puestos. En el compás 5, por ejemplo, el 2 y el 1 no se mueven."
+        }
        ]
       }
      ]
@@ -1293,23 +1628,30 @@
      "titulo": "Cómo se trabaja",
      "bloques": [
       {
+       "tipo": "ejercicio",
+       "que": "La fórmula sola, con la izquierda quieta: el pulgar en la 6.ª, la 5.ª o la 4.ª, y encima p-i-m-a-m-i, a-m-i, a-m-i.",
+       "porque": "Es lo que propone GuitarTutos antes de tocar la obra: si la fórmula sale sola, la obra es poner acordes.",
+       "atencion": "Tres notas iguales por pulso. La *a* no se queda corta.",
+       "empieza": "♩ = 50.",
+       "sube": "Sale sin pensar en qué dedo va."
+      },
+      {
        "tipo": "pasos",
        "titulo": "Por trozos",
        "items": [
-        "Lee sin tocar: nombres y ritmo.",
-        "Marca los cambios de cuerda y decide con qué dedo vas a empezar.",
-        "Toca dos compases muy lento, con el dedo marcado.",
-        "Une.",
-        "Sube el tempo cuando salga sin fallos."
+        "La fórmula sola, al aire.",
+        "Los acordes de cada compás, plaqué, para que la izquierda los encuentre.",
+        "De cuatro en cuatro compases, como en el tutorial, muy lento.",
+        "Cada parte con su repetición. Al final, la obra entera."
        ]
       },
       {
        "tipo": "ejercicio",
-       "que": "La obra entera, con alternancia y sin cortes.",
-       "porque": "Es el resultado de la escalera de cruces.",
-       "atencion": "Si en un punto te tropiezas siempre, comprueba si estás haciendo un cruce y prueba a empezar por el otro dedo.",
+       "que": "La obra entera, sin cortes en la fórmula.",
+       "porque": "Es el a-m-i del trémolo, ya dentro de una obra.",
+       "atencion": "La melodía va en la *a*: que se oiga por encima de *m* y de *i*. Si un cambio de acorde te frena siempre, practica solo ese paso.",
        "empieza": "♩ = 50, o más lento.",
-       "sube": "Tres veces sin parar."
+       "sube": "Tres veces sin parar; al final, ♩ = 90, el tempo de GuitarTutos."
       },
       {
        "tipo": "metronomo",
@@ -1320,8 +1662,17 @@
        "tipo": "bien",
        "items": [
         "La obra entera, sin parar.",
-        "El sonido no cambia en los cambios de cuerda.",
-        "Lees sin mirar la mano."
+        "Las tres notas de cada pulso duran lo mismo.",
+        "La melodía de la *a* se oye por encima."
+       ]
+      },
+      {
+       "tipo": "reaparece",
+       "items": [
+        {
+         "paso": "n1.t9.l5.p2",
+         "texto": "el a-m-i, ahora en una sola cuerda: el trémolo."
+        }
        ]
       }
      ]
@@ -1448,7 +1799,7 @@
     {
      "tipo": "concepto",
      "titulo": "La semicorchea",
-     "md": "La **semicorchea** dura un cuarto de tiempo: cuatro caben en una negra. Tiene dos corchetes o dos barras. Se cuenta **1-e-y-a**, o como te resulte más cómodo."
+     "md": "Ya la conoces del estudio de Aguado: cuatro notas por pulso, «1-e-y-a». El trémolo va igual: el bajo cae en el «1», y las tres notas repetidas, en la «e», la «y» y la «a»."
     },
     {
      "tipo": "reaparece",
@@ -1627,6 +1978,85 @@
      "notas": [
       "Cada arco une dos notas: la primera se pulsa; la segunda, no."
      ]
+    },
+    {
+     "tipo": "mastil",
+     "escena": {
+      "tipo": "ejercicio",
+      "titulo": "La cromática con ligados",
+      "trastes": [
+       0,
+       4
+      ],
+      "clave": "C",
+      "ms": 700,
+      "notas": [
+       {
+        "c": 6,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 6,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 6,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       },
+       {
+        "c": 6,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 5,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 5,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 5,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       },
+       {
+        "c": 5,
+        "t": 3,
+        "dedo": 3
+       },
+       {
+        "c": 4,
+        "t": 0,
+        "mano": "i"
+       },
+       {
+        "c": 4,
+        "t": 1,
+        "dedo": 1
+       },
+       {
+        "c": 4,
+        "t": 2,
+        "dedo": 2,
+        "mano": "m"
+       },
+       {
+        "c": 4,
+        "t": 3,
+        "dedo": 3
+       }
+      ],
+      "final": "En cada pareja, la derecha pulsa la primera; la segunda la hace sonar el dedo que cae."
+     }
     },
     {
      "tipo": "metronomo",

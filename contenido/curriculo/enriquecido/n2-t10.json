@@ -1,6 +1,6 @@
 {
  "tramo": "n2.t10",
- "nota": "Curso 2. Sor op. 35 n.º 8 sale de Mutopia sobre Simrock (Boije 481-2). Corregida una nota: el primer Mi del compás 2 estaba una octava alta, según la pauta de los demás.",
+ "nota": "Curso 2. Sor op. 35 n.º 17 (Segovia n.º 6) en lugar del op. 35 n.º 8, poco conocido y con digitación propuesta (06/11/2026): notas y dedos de las dos voces de la lección de Sky Guitar; tempos medidos en su grabación.",
  "pasos": {
   "n2.t10.l1.p1": {
    "pantallas": [
@@ -444,27 +444,44 @@
      "bloques": [
       {
        "tipo": "obra",
-       "id": "o2-sor-op-35-n-8",
-       "md": "**Por qué está aquí:** un estudio breve con varias partes, para oír modulación real. **Qué escuchar:** el La♯ del {c:9}, señal de que la música se va a Si. **Dificultad:** media."
+       "id": "o2-sor-op-35-n-17",
+       "md": "**Por qué está aquí:** es uno de los estudios de Sor más tocados: Segovia lo eligió para su colección, donde es el n.º 6. **Qué escuchar:** una melodía arriba, que canta, y debajo un acompañamiento en corcheas que la sostiene. **Dificultad:** media: dos voces a la vez, y la de abajo, con sus silencios."
       },
       {
        "tipo": "notacion",
-       "fuente": "notacion/obra-sor-op35-8.json",
-       "titulo": "Sor, op. 35 n.º 8",
+       "fuente": "notacion/obra-sor-op35-17.json",
+       "titulo": "Sor, *Estudio op. 35 n.º 17*",
        "principal": "ambas",
-       "motivo": "Partitura y tablatura.",
+       "motivo": "Partitura y tablatura: dos voces.",
        "bpms": [
-        60,
-        108
+        50,
+        90
        ],
        "notas": [
-        "Allegretto en 3/8, en Mi mayor. Empieza con anacrusa.",
-        "{c:1-8} tema: arpegio y notas altas.",
-        "{c:9-16} se va hacia **Si mayor**.",
-        "{c:17-24} vuelve el tema, en Mi.",
-        "{c:25-40} sección en **La mayor**: fíjate en el tresillo de {c:33}.",
-        "{c:41-64} vuelve lo primero y cierra.",
-        "Fuente: Mutopia (Simrock, Boije 481-2), CC BY-SA 3.0. Dedos de Sor; la mano derecha, propuesta. Corregida una nota del {c:2}: véase el aviso del tramo."
+        "Notas y dedos de las dos voces: los de la partitura de Sky Guitar. No marca la mano derecha.",
+        "Empieza con una corchea, La, antes del {c:1}.",
+        "Arriba, casi siempre, una negra con puntillo y una corchea. Abajo, un silencio, el bajo y una nota del acorde: la melodía se apoya en el tiempo y el acompañamiento entra después.",
+        "En los {c:2} y {c:4}, la posición II.",
+        "En el {c:21}, un ligado ascendente en el bajo: Re al aire y Fa con el 3.",
+        "En los {c:29-30}, ligados descendentes rápidos en la melodía.",
+        "Sky Guitar lo toca a ♩ ≈ 90 y, en su versión lenta, a ♩ ≈ 50. Para aprender, ♩ = 50."
+       ]
+      },
+      {
+       "tipo": "video",
+       "alLado": true,
+       "id": "yD-KsEBQSSg",
+       "titulo": "Sky Guitar: Sor, op. 35 n.º 17, con partitura y tablatura",
+       "nota": "A tempo y en versión lenta, con la partitura en pantalla: es la fuente de las notas y los dedos.",
+       "capitulos": [
+        [
+         0,
+         "A tempo"
+        ],
+        [
+         102,
+         "Lento, con tablatura"
+        ]
        ]
       }
      ]
@@ -474,28 +491,37 @@
      "bloques": [
       {
        "tipo": "pasos",
-       "titulo": "Por secciones",
+       "titulo": "Por voces",
        "items": [
-        "Sección a sección, con repetición.",
-        "Une la vuelta del {c:16} al {c:17}.",
-        "Haz notar el cambio de carácter en {c:25}."
+        "La melodía sola, cantándola.",
+        "El acompañamiento solo: silencio, bajo, nota; que el silencio se oiga.",
+        "Las dos juntas, muy despacio, de cuatro en cuatro compases.",
+        "Une la vuelta del {c:24} al {c:25}: vuelve el principio."
        ]
       },
       {
+       "tipo": "ejercicio",
+       "que": "El estudio, de cuatro en cuatro compases.",
+       "porque": "Es la obra de este tramo: dos voces y una modulación que se oye.",
+       "atencion": "La melodía dura lo que dice: la negra con puntillo sigue sonando mientras entra el acompañamiento.",
+       "empieza": "♩ = 50.",
+       "sube": "♩ = 90, como Sky."
+      },
+      {
        "tipo": "metronomo",
-       "bpm": 60,
-       "clave": "o2-sor-op-35-n-8"
+       "bpm": 50,
+       "clave": "o2-sor-op-35-n-17"
       },
       {
        "tipo": "errores",
        "items": [
         {
-         "error": "El tresillo de {c:33} se te escapa.",
-         "arreglo": "Aíslalo: un compás, tres pulsos de corchea."
+         "error": "El acompañamiento tapa la melodía.",
+         "arreglo": "Toca la voz de abajo más suave: la melodía es la que canta."
         },
         {
-         "error": "Corres en el arpegio de Mi.",
-         "arreglo": "Cuenta 3/8 con pulso de corchea, no de negra."
+         "error": "Cortas la negra con puntillo.",
+         "arreglo": "Deja el dedo puesto hasta la nota siguiente de la melodía."
         }
        ]
       }
@@ -508,42 +534,82 @@
     {
      "tipo": "concepto",
      "titulo": "Modular a la dominante",
-     "md": "**Modular** es cambiar de tonalidad dentro de una pieza. El signo es una alteración nueva, que vuelve: en Mi mayor, el **La♯** es la sensible de Si: la música se está yendo a la dominante, y tiene un punto de llegada en {c:16}. Es el viaje de siempre."
+     "md": "**Modular** es cambiar de tonalidad dentro de una pieza. La señal es una alteración nueva que se repite: en Re mayor, el **Sol♯** es la sensible de La, y la música se va a **la dominante**. Es el viaje de siempre: salir de casa y volver."
+    },
+    {
+     "tipo": "tabla",
+     "cabecera": [
+      "Parte",
+      "Compases",
+      "Qué pasa"
+     ],
+     "filas": [
+      [
+       "**A**",
+       "1-8",
+       "El tema, en Re mayor; acaba en Re"
+      ],
+      [
+       "**A**",
+       "9-16",
+       "El tema otra vez, que se va a La mayor, la dominante"
+      ],
+      [
+       "**B**",
+       "17-24",
+       "Se aleja: aparecen el Fa natural y el Si♭ de **Re menor**, el homónimo; acaba en La"
+      ],
+      [
+       "**A**",
+       "25-32",
+       "Vuelve el principio y acaba en Re"
+      ]
+     ]
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-sor-op35-8.json",
+     "fuente": "notacion/obra-sor-op35-17.json",
      "titulo": "Mira el viaje",
      "principal": "ambas",
      "bpms": [
-      60,
-      84
-     ],
-     "notas": [
-      "{c:9-12} aparece La♯, y el acorde de Fa♯: es el V de Si.",
-      "{c:16} cierra en Si: reposa en la dominante.",
-      "{c:17} vuelve Mi, como si nada."
+      50,
+      90
      ],
      "compases": [
-      8,
-      18
+      11,
+      16
+     ],
+     "notas": [
+      "En el {c:11} aparece el Sol♯ en el acompañamiento, y en el {c:16} la música reposa en La: la dominante."
+     ]
+    },
+    {
+     "tipo": "notacion",
+     "fuente": "notacion/obra-sor-op35-17.json",
+     "titulo": "Y el color menor",
+     "principal": "ambas",
+     "bpms": [
+      50,
+      90
+     ],
+     "compases": [
+      19,
+      22
+     ],
+     "notas": [
+      "En el {c:19}, un Si♭: el acorde de Sol menor. En los {c:21-22}, el Fa natural de Re menor. Es el homónimo: la misma tónica, Re, en menor."
      ]
     },
     {
      "tipo": "elige",
-     "enunciado": "Si en una pieza en Mi mayor aparece insistente el La♯, ¿a dónde se va?",
+     "enunciado": "Si en una pieza en Re mayor aparece insistente el Sol♯, ¿a dónde se va?",
      "opciones": [
+      "A Sol",
       "A La",
-      "A Si",
-      "A Do♯ m"
+      "A Si menor"
      ],
      "correcta": 1,
-     "porque": "La♯ es la sensible de Si: lleva a la dominante."
-    },
-    {
-     "tipo": "guia",
-     "tipoGuia": "Por verificar",
-     "md": "La forma se ha deducido leyendo la partitura. Sor no etiqueta las partes."
+     "porque": "Sol♯ es la sensible de La: lleva a la dominante."
     }
    ]
   },
@@ -729,12 +795,12 @@
     },
     {
      "tipo": "notacion",
-     "fuente": "notacion/obra-sor-op35-8.json",
+     "fuente": "notacion/obra-sor-op35-17.json",
      "titulo": "La obra",
      "principal": "ambas",
      "bpms": [
-      60,
-      108
+      50,
+      90
      ]
     },
     {
